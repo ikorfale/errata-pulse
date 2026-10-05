@@ -1,6 +1,6 @@
 {
  "date": "2026-10-05",
- "collected_at": 1791200143,
+ "collected_at": 1791203118,
  "signals": [
   {
    "family": "energy",
@@ -12,7 +12,133 @@
    "anomaly": false,
    "unit": "ships/day",
    "note": "tankers 1.3/day",
-   "source": "IMF PortWatch"
+   "source": "IMF PortWatch",
+   "series": [
+    [
+     "2026-08-29",
+     3
+    ],
+    [
+     "2026-08-30",
+     6
+    ],
+    [
+     "2026-08-31",
+     3
+    ],
+    [
+     "2026-09-01",
+     4
+    ],
+    [
+     "2026-09-02",
+     3
+    ],
+    [
+     "2026-09-03",
+     2
+    ],
+    [
+     "2026-09-04",
+     2
+    ],
+    [
+     "2026-09-05",
+     2
+    ],
+    [
+     "2026-09-06",
+     6
+    ],
+    [
+     "2026-09-07",
+     5
+    ],
+    [
+     "2026-09-08",
+     6
+    ],
+    [
+     "2026-09-09",
+     3
+    ],
+    [
+     "2026-09-10",
+     5
+    ],
+    [
+     "2026-09-11",
+     8
+    ],
+    [
+     "2026-09-12",
+     2
+    ],
+    [
+     "2026-09-13",
+     8
+    ],
+    [
+     "2026-09-14",
+     2
+    ],
+    [
+     "2026-09-15",
+     2
+    ],
+    [
+     "2026-09-16",
+     1
+    ],
+    [
+     "2026-09-17",
+     3
+    ],
+    [
+     "2026-09-18",
+     7
+    ],
+    [
+     "2026-09-19",
+     6
+    ],
+    [
+     "2026-09-20",
+     1
+    ],
+    [
+     "2026-09-21",
+     2
+    ],
+    [
+     "2026-09-22",
+     3
+    ],
+    [
+     "2026-09-23",
+     4
+    ],
+    [
+     "2026-09-24",
+     5
+    ],
+    [
+     "2026-09-25",
+     3
+    ],
+    [
+     "2026-09-26",
+     4
+    ],
+    [
+     "2026-09-27",
+     1
+    ]
+   ],
+   "series_kind": "daily n_total (ships/day, all vessel types), not smoothed",
+   "component": "energy",
+   "means": "Fewer ships through a chokepoint may mean war risk, attacks, insurance withdrawal or a blockade pushing traffic away.",
+   "not_proves": "It does not prove an attack or a closure: weather, seasonality, AIS gaps and the few-day data lag also move it."
   },
   {
    "family": "energy",
@@ -24,7 +150,133 @@
    "anomaly": false,
    "unit": "ships/day",
    "note": "tankers 9.4/day",
-   "source": "IMF PortWatch"
+   "source": "IMF PortWatch",
+   "series": [
+    [
+     "2026-08-29",
+     20
+    ],
+    [
+     "2026-08-30",
+     29
+    ],
+    [
+     "2026-08-31",
+     24
+    ],
+    [
+     "2026-09-01",
+     19
+    ],
+    [
+     "2026-09-02",
+     38
+    ],
+    [
+     "2026-09-03",
+     24
+    ],
+    [
+     "2026-09-04",
+     32
+    ],
+    [
+     "2026-09-05",
+     18
+    ],
+    [
+     "2026-09-06",
+     23
+    ],
+    [
+     "2026-09-07",
+     34
+    ],
+    [
+     "2026-09-08",
+     22
+    ],
+    [
+     "2026-09-09",
+     35
+    ],
+    [
+     "2026-09-10",
+     27
+    ],
+    [
+     "2026-09-11",
+     22
+    ],
+    [
+     "2026-09-12",
+     20
+    ],
+    [
+     "2026-09-13",
+     31
+    ],
+    [
+     "2026-09-14",
+     25
+    ],
+    [
+     "2026-09-15",
+     24
+    ],
+    [
+     "2026-09-16",
+     19
+    ],
+    [
+     "2026-09-17",
+     27
+    ],
+    [
+     "2026-09-18",
+     27
+    ],
+    [
+     "2026-09-19",
+     25
+    ],
+    [
+     "2026-09-20",
+     26
+    ],
+    [
+     "2026-09-21",
+     27
+    ],
+    [
+     "2026-09-22",
+     22
+    ],
+    [
+     "2026-09-23",
+     25
+    ],
+    [
+     "2026-09-24",
+     31
+    ],
+    [
+     "2026-09-25",
+     29
+    ],
+    [
+     "2026-09-26",
+     29
+    ],
+    [
+     "2026-09-27",
+     27
+    ]
+   ],
+   "series_kind": "daily n_total (ships/day, all vessel types), not smoothed",
+   "component": "energy",
+   "means": "Fewer ships through a chokepoint may mean war risk, attacks, insurance withdrawal or a blockade pushing traffic away.",
+   "not_proves": "It does not prove an attack or a closure: weather, seasonality, AIS gaps and the few-day data lag also move it."
   },
   {
    "family": "energy",
@@ -36,7 +288,133 @@
    "anomaly": false,
    "unit": "ships/day",
    "note": "tankers 15.0/day",
-   "source": "IMF PortWatch"
+   "source": "IMF PortWatch",
+   "series": [
+    [
+     "2026-08-29",
+     38
+    ],
+    [
+     "2026-08-30",
+     53
+    ],
+    [
+     "2026-08-31",
+     30
+    ],
+    [
+     "2026-09-01",
+     51
+    ],
+    [
+     "2026-09-02",
+     41
+    ],
+    [
+     "2026-09-03",
+     41
+    ],
+    [
+     "2026-09-04",
+     56
+    ],
+    [
+     "2026-09-05",
+     42
+    ],
+    [
+     "2026-09-06",
+     30
+    ],
+    [
+     "2026-09-07",
+     39
+    ],
+    [
+     "2026-09-08",
+     43
+    ],
+    [
+     "2026-09-09",
+     37
+    ],
+    [
+     "2026-09-10",
+     37
+    ],
+    [
+     "2026-09-11",
+     48
+    ],
+    [
+     "2026-09-12",
+     40
+    ],
+    [
+     "2026-09-13",
+     21
+    ],
+    [
+     "2026-09-14",
+     51
+    ],
+    [
+     "2026-09-15",
+     32
+    ],
+    [
+     "2026-09-16",
+     37
+    ],
+    [
+     "2026-09-17",
+     37
+    ],
+    [
+     "2026-09-18",
+     51
+    ],
+    [
+     "2026-09-19",
+     43
+    ],
+    [
+     "2026-09-20",
+     42
+    ],
+    [
+     "2026-09-21",
+     38
+    ],
+    [
+     "2026-09-22",
+     47
+    ],
+    [
+     "2026-09-23",
+     32
+    ],
+    [
+     "2026-09-24",
+     41
+    ],
+    [
+     "2026-09-25",
+     37
+    ],
+    [
+     "2026-09-26",
+     48
+    ],
+    [
+     "2026-09-27",
+     37
+    ]
+   ],
+   "series_kind": "daily n_total (ships/day, all vessel types), not smoothed",
+   "component": "energy",
+   "means": "Fewer ships through a chokepoint may mean war risk, attacks, insurance withdrawal or a blockade pushing traffic away.",
+   "not_proves": "It does not prove an attack or a closure: weather, seasonality, AIS gaps and the few-day data lag also move it."
   },
   {
    "family": "energy",
@@ -48,7 +426,133 @@
    "anomaly": false,
    "unit": "ships/day",
    "note": "tankers 11.7/day",
-   "source": "IMF PortWatch"
+   "source": "IMF PortWatch",
+   "series": [
+    [
+     "2026-08-29",
+     60
+    ],
+    [
+     "2026-08-30",
+     47
+    ],
+    [
+     "2026-08-31",
+     49
+    ],
+    [
+     "2026-09-01",
+     39
+    ],
+    [
+     "2026-09-02",
+     57
+    ],
+    [
+     "2026-09-03",
+     49
+    ],
+    [
+     "2026-09-04",
+     63
+    ],
+    [
+     "2026-09-05",
+     52
+    ],
+    [
+     "2026-09-06",
+     63
+    ],
+    [
+     "2026-09-07",
+     40
+    ],
+    [
+     "2026-09-08",
+     43
+    ],
+    [
+     "2026-09-09",
+     56
+    ],
+    [
+     "2026-09-10",
+     51
+    ],
+    [
+     "2026-09-11",
+     69
+    ],
+    [
+     "2026-09-12",
+     56
+    ],
+    [
+     "2026-09-13",
+     51
+    ],
+    [
+     "2026-09-14",
+     60
+    ],
+    [
+     "2026-09-15",
+     36
+    ],
+    [
+     "2026-09-16",
+     49
+    ],
+    [
+     "2026-09-17",
+     61
+    ],
+    [
+     "2026-09-18",
+     58
+    ],
+    [
+     "2026-09-19",
+     54
+    ],
+    [
+     "2026-09-20",
+     62
+    ],
+    [
+     "2026-09-21",
+     45
+    ],
+    [
+     "2026-09-22",
+     49
+    ],
+    [
+     "2026-09-23",
+     50
+    ],
+    [
+     "2026-09-24",
+     45
+    ],
+    [
+     "2026-09-25",
+     60
+    ],
+    [
+     "2026-09-26",
+     52
+    ],
+    [
+     "2026-09-27",
+     46
+    ]
+   ],
+   "series_kind": "daily n_total (ships/day, all vessel types), not smoothed",
+   "component": "energy",
+   "means": "Fewer ships through a chokepoint may mean war risk, attacks, insurance withdrawal or a blockade pushing traffic away.",
+   "not_proves": "It does not prove an attack or a closure: weather, seasonality, AIS gaps and the few-day data lag also move it."
   },
   {
    "family": "energy",
@@ -60,7 +564,133 @@
    "anomaly": null,
    "unit": "ships/day",
    "note": "tankers 0.0/day",
-   "source": "IMF PortWatch"
+   "source": "IMF PortWatch",
+   "series": [
+    [
+     "2026-08-29",
+     0
+    ],
+    [
+     "2026-08-30",
+     0
+    ],
+    [
+     "2026-08-31",
+     0
+    ],
+    [
+     "2026-09-01",
+     0
+    ],
+    [
+     "2026-09-02",
+     1
+    ],
+    [
+     "2026-09-03",
+     0
+    ],
+    [
+     "2026-09-04",
+     0
+    ],
+    [
+     "2026-09-05",
+     0
+    ],
+    [
+     "2026-09-06",
+     0
+    ],
+    [
+     "2026-09-07",
+     0
+    ],
+    [
+     "2026-09-08",
+     0
+    ],
+    [
+     "2026-09-09",
+     0
+    ],
+    [
+     "2026-09-10",
+     0
+    ],
+    [
+     "2026-09-11",
+     0
+    ],
+    [
+     "2026-09-12",
+     0
+    ],
+    [
+     "2026-09-13",
+     0
+    ],
+    [
+     "2026-09-14",
+     0
+    ],
+    [
+     "2026-09-15",
+     0
+    ],
+    [
+     "2026-09-16",
+     0
+    ],
+    [
+     "2026-09-17",
+     0
+    ],
+    [
+     "2026-09-18",
+     0
+    ],
+    [
+     "2026-09-19",
+     0
+    ],
+    [
+     "2026-09-20",
+     0
+    ],
+    [
+     "2026-09-21",
+     0
+    ],
+    [
+     "2026-09-22",
+     0
+    ],
+    [
+     "2026-09-23",
+     0
+    ],
+    [
+     "2026-09-24",
+     0
+    ],
+    [
+     "2026-09-25",
+     0
+    ],
+    [
+     "2026-09-26",
+     0
+    ],
+    [
+     "2026-09-27",
+     0
+    ]
+   ],
+   "series_kind": "daily n_total (ships/day, all vessel types), not smoothed",
+   "component": "military",
+   "means": "A drop in Kerch Strait traffic may mean strikes, closures or security restrictions in the Black Sea war zone.",
+   "not_proves": "It does not prove an attack: closures for weather and AIS switched off by ships also move it."
   },
   {
    "family": "energy",
@@ -72,7 +702,133 @@
    "anomaly": false,
    "unit": "ships/day",
    "note": "tankers 46.0/day",
-   "source": "IMF PortWatch"
+   "source": "IMF PortWatch",
+   "series": [
+    [
+     "2026-08-29",
+     273
+    ],
+    [
+     "2026-08-30",
+     318
+    ],
+    [
+     "2026-08-31",
+     255
+    ],
+    [
+     "2026-09-01",
+     263
+    ],
+    [
+     "2026-09-02",
+     215
+    ],
+    [
+     "2026-09-03",
+     230
+    ],
+    [
+     "2026-09-04",
+     256
+    ],
+    [
+     "2026-09-05",
+     230
+    ],
+    [
+     "2026-09-06",
+     260
+    ],
+    [
+     "2026-09-07",
+     235
+    ],
+    [
+     "2026-09-08",
+     270
+    ],
+    [
+     "2026-09-09",
+     224
+    ],
+    [
+     "2026-09-10",
+     218
+    ],
+    [
+     "2026-09-11",
+     187
+    ],
+    [
+     "2026-09-12",
+     246
+    ],
+    [
+     "2026-09-13",
+     226
+    ],
+    [
+     "2026-09-14",
+     202
+    ],
+    [
+     "2026-09-15",
+     217
+    ],
+    [
+     "2026-09-16",
+     208
+    ],
+    [
+     "2026-09-17",
+     240
+    ],
+    [
+     "2026-09-18",
+     241
+    ],
+    [
+     "2026-09-19",
+     221
+    ],
+    [
+     "2026-09-20",
+     230
+    ],
+    [
+     "2026-09-21",
+     225
+    ],
+    [
+     "2026-09-22",
+     223
+    ],
+    [
+     "2026-09-23",
+     217
+    ],
+    [
+     "2026-09-24",
+     253
+    ],
+    [
+     "2026-09-25",
+     234
+    ],
+    [
+     "2026-09-26",
+     249
+    ],
+    [
+     "2026-09-27",
+     225
+    ]
+   ],
+   "series_kind": "daily n_total (ships/day, all vessel types), not smoothed",
+   "component": "military",
+   "means": "A drop in Taiwan Strait traffic may mean exercises, exclusion zones or ships avoiding a military risk.",
+   "not_proves": "It does not prove a blockade: weather, AIS gaps and routing choices move it too."
   },
   {
    "family": "energy",
@@ -84,7 +840,133 @@
    "anomaly": false,
    "unit": "ships/day",
    "note": "tankers 70.0/day",
-   "source": "IMF PortWatch"
+   "source": "IMF PortWatch",
+   "series": [
+    [
+     "2026-08-29",
+     206
+    ],
+    [
+     "2026-08-30",
+     219
+    ],
+    [
+     "2026-08-31",
+     223
+    ],
+    [
+     "2026-09-01",
+     209
+    ],
+    [
+     "2026-09-02",
+     204
+    ],
+    [
+     "2026-09-03",
+     237
+    ],
+    [
+     "2026-09-04",
+     183
+    ],
+    [
+     "2026-09-05",
+     190
+    ],
+    [
+     "2026-09-06",
+     196
+    ],
+    [
+     "2026-09-07",
+     244
+    ],
+    [
+     "2026-09-08",
+     240
+    ],
+    [
+     "2026-09-09",
+     212
+    ],
+    [
+     "2026-09-10",
+     195
+    ],
+    [
+     "2026-09-11",
+     235
+    ],
+    [
+     "2026-09-12",
+     230
+    ],
+    [
+     "2026-09-13",
+     215
+    ],
+    [
+     "2026-09-14",
+     224
+    ],
+    [
+     "2026-09-15",
+     234
+    ],
+    [
+     "2026-09-16",
+     208
+    ],
+    [
+     "2026-09-17",
+     239
+    ],
+    [
+     "2026-09-18",
+     256
+    ],
+    [
+     "2026-09-19",
+     217
+    ],
+    [
+     "2026-09-20",
+     230
+    ],
+    [
+     "2026-09-21",
+     220
+    ],
+    [
+     "2026-09-22",
+     220
+    ],
+    [
+     "2026-09-23",
+     211
+    ],
+    [
+     "2026-09-24",
+     240
+    ],
+    [
+     "2026-09-25",
+     211
+    ],
+    [
+     "2026-09-26",
+     222
+    ],
+    [
+     "2026-09-27",
+     201
+    ]
+   ],
+   "series_kind": "daily n_total (ships/day, all vessel types), not smoothed",
+   "component": "energy",
+   "means": "Fewer ships through a chokepoint may mean war risk, attacks, insurance withdrawal or a blockade pushing traffic away.",
+   "not_proves": "It does not prove an attack or a closure: weather, seasonality, AIS gaps and the few-day data lag also move it."
   },
   {
    "family": "energy",
@@ -96,7 +978,133 @@
    "anomaly": false,
    "unit": "ships/day",
    "note": "tankers 11.7/day",
-   "source": "IMF PortWatch"
+   "source": "IMF PortWatch",
+   "series": [
+    [
+     "2026-08-29",
+     30
+    ],
+    [
+     "2026-08-30",
+     31
+    ],
+    [
+     "2026-08-31",
+     29
+    ],
+    [
+     "2026-09-01",
+     31
+    ],
+    [
+     "2026-09-02",
+     30
+    ],
+    [
+     "2026-09-03",
+     30
+    ],
+    [
+     "2026-09-04",
+     30
+    ],
+    [
+     "2026-09-05",
+     34
+    ],
+    [
+     "2026-09-06",
+     26
+    ],
+    [
+     "2026-09-07",
+     27
+    ],
+    [
+     "2026-09-08",
+     30
+    ],
+    [
+     "2026-09-09",
+     31
+    ],
+    [
+     "2026-09-10",
+     34
+    ],
+    [
+     "2026-09-11",
+     28
+    ],
+    [
+     "2026-09-12",
+     29
+    ],
+    [
+     "2026-09-13",
+     29
+    ],
+    [
+     "2026-09-14",
+     23
+    ],
+    [
+     "2026-09-15",
+     25
+    ],
+    [
+     "2026-09-16",
+     25
+    ],
+    [
+     "2026-09-17",
+     28
+    ],
+    [
+     "2026-09-18",
+     27
+    ],
+    [
+     "2026-09-19",
+     28
+    ],
+    [
+     "2026-09-20",
+     27
+    ],
+    [
+     "2026-09-21",
+     25
+    ],
+    [
+     "2026-09-22",
+     32
+    ],
+    [
+     "2026-09-23",
+     27
+    ],
+    [
+     "2026-09-24",
+     26
+    ],
+    [
+     "2026-09-25",
+     24
+    ],
+    [
+     "2026-09-26",
+     25
+    ],
+    [
+     "2026-09-27",
+     30
+    ]
+   ],
+   "series_kind": "daily n_total (ships/day, all vessel types), not smoothed",
+   "component": "energy",
+   "means": "Fewer ships through a chokepoint may mean war risk, attacks, insurance withdrawal or a blockade pushing traffic away.",
+   "not_proves": "It does not prove an attack or a closure: weather, seasonality, AIS gaps and the few-day data lag also move it."
   },
   {
    "family": "energy",
@@ -108,7 +1116,133 @@
    "anomaly": false,
    "unit": "ships/day",
    "note": "tankers 19.9/day",
-   "source": "IMF PortWatch"
+   "source": "IMF PortWatch",
+   "series": [
+    [
+     "2026-08-29",
+     89
+    ],
+    [
+     "2026-08-30",
+     88
+    ],
+    [
+     "2026-08-31",
+     82
+    ],
+    [
+     "2026-09-01",
+     100
+    ],
+    [
+     "2026-09-02",
+     90
+    ],
+    [
+     "2026-09-03",
+     77
+    ],
+    [
+     "2026-09-04",
+     58
+    ],
+    [
+     "2026-09-05",
+     63
+    ],
+    [
+     "2026-09-06",
+     80
+    ],
+    [
+     "2026-09-07",
+     120
+    ],
+    [
+     "2026-09-08",
+     87
+    ],
+    [
+     "2026-09-09",
+     98
+    ],
+    [
+     "2026-09-10",
+     96
+    ],
+    [
+     "2026-09-11",
+     82
+    ],
+    [
+     "2026-09-12",
+     69
+    ],
+    [
+     "2026-09-13",
+     82
+    ],
+    [
+     "2026-09-14",
+     101
+    ],
+    [
+     "2026-09-15",
+     101
+    ],
+    [
+     "2026-09-16",
+     77
+    ],
+    [
+     "2026-09-17",
+     86
+    ],
+    [
+     "2026-09-18",
+     84
+    ],
+    [
+     "2026-09-19",
+     86
+    ],
+    [
+     "2026-09-20",
+     85
+    ],
+    [
+     "2026-09-21",
+     84
+    ],
+    [
+     "2026-09-22",
+     78
+    ],
+    [
+     "2026-09-23",
+     91
+    ],
+    [
+     "2026-09-24",
+     95
+    ],
+    [
+     "2026-09-25",
+     103
+    ],
+    [
+     "2026-09-26",
+     91
+    ],
+    [
+     "2026-09-27",
+     75
+    ]
+   ],
+   "series_kind": "daily n_total (ships/day, all vessel types), not smoothed",
+   "component": "energy",
+   "means": "More ships around the Cape usually means traffic rerouted away from the Red Sea and Suez.",
+   "not_proves": "It does not prove a new incident: rerouting decisions lag events and also follow freight rates."
   },
   {
    "family": "anxiety",
@@ -120,7 +1254,133 @@
    "anomaly": false,
    "unit": "views/day",
    "note": "",
-   "source": "Wikimedia pageviews"
+   "source": "Wikimedia pageviews",
+   "series": [
+    [
+     "2026-09-05",
+     253
+    ],
+    [
+     "2026-09-06",
+     237
+    ],
+    [
+     "2026-09-07",
+     318
+    ],
+    [
+     "2026-09-08",
+     425
+    ],
+    [
+     "2026-09-09",
+     571
+    ],
+    [
+     "2026-09-10",
+     488
+    ],
+    [
+     "2026-09-11",
+     396
+    ],
+    [
+     "2026-09-12",
+     414
+    ],
+    [
+     "2026-09-13",
+     483
+    ],
+    [
+     "2026-09-14",
+     494
+    ],
+    [
+     "2026-09-15",
+     437
+    ],
+    [
+     "2026-09-16",
+     418
+    ],
+    [
+     "2026-09-17",
+     414
+    ],
+    [
+     "2026-09-18",
+     367
+    ],
+    [
+     "2026-09-19",
+     347
+    ],
+    [
+     "2026-09-20",
+     317
+    ],
+    [
+     "2026-09-21",
+     409
+    ],
+    [
+     "2026-09-22",
+     390
+    ],
+    [
+     "2026-09-23",
+     406
+    ],
+    [
+     "2026-09-24",
+     450
+    ],
+    [
+     "2026-09-25",
+     352
+    ],
+    [
+     "2026-09-26",
+     303
+    ],
+    [
+     "2026-09-27",
+     333
+    ],
+    [
+     "2026-09-28",
+     370
+    ],
+    [
+     "2026-09-29",
+     399
+    ],
+    [
+     "2026-09-30",
+     327
+    ],
+    [
+     "2026-10-01",
+     270
+    ],
+    [
+     "2026-10-02",
+     250
+    ],
+    [
+     "2026-10-03",
+     256
+    ],
+    [
+     "2026-10-04",
+     333
+    ]
+   ],
+   "series_kind": "daily views (user agents, all access)",
+   "component": "restraint",
+   "means": "A jump in readers of a survival or war article means public anxiety is rising before or after news.",
+   "not_proves": "It does not prove any real danger: a film, a meme, school homework or a bot can drive page views."
   },
   {
    "family": "anxiety",
@@ -132,7 +1392,133 @@
    "anomaly": false,
    "unit": "views/day",
    "note": "",
-   "source": "Wikimedia pageviews"
+   "source": "Wikimedia pageviews",
+   "series": [
+    [
+     "2026-09-05",
+     133
+    ],
+    [
+     "2026-09-06",
+     155
+    ],
+    [
+     "2026-09-07",
+     159
+    ],
+    [
+     "2026-09-08",
+     123
+    ],
+    [
+     "2026-09-09",
+     162
+    ],
+    [
+     "2026-09-10",
+     171
+    ],
+    [
+     "2026-09-11",
+     139
+    ],
+    [
+     "2026-09-12",
+     128
+    ],
+    [
+     "2026-09-13",
+     154
+    ],
+    [
+     "2026-09-14",
+     168
+    ],
+    [
+     "2026-09-15",
+     163
+    ],
+    [
+     "2026-09-16",
+     154
+    ],
+    [
+     "2026-09-17",
+     130
+    ],
+    [
+     "2026-09-18",
+     147
+    ],
+    [
+     "2026-09-19",
+     159
+    ],
+    [
+     "2026-09-20",
+     177
+    ],
+    [
+     "2026-09-21",
+     167
+    ],
+    [
+     "2026-09-22",
+     164
+    ],
+    [
+     "2026-09-23",
+     158
+    ],
+    [
+     "2026-09-24",
+     137
+    ],
+    [
+     "2026-09-25",
+     138
+    ],
+    [
+     "2026-09-26",
+     112
+    ],
+    [
+     "2026-09-27",
+     142
+    ],
+    [
+     "2026-09-28",
+     170
+    ],
+    [
+     "2026-09-29",
+     154
+    ],
+    [
+     "2026-09-30",
+     130
+    ],
+    [
+     "2026-10-01",
+     133
+    ],
+    [
+     "2026-10-02",
+     138
+    ],
+    [
+     "2026-10-03",
+     127
+    ],
+    [
+     "2026-10-04",
+     140
+    ]
+   ],
+   "series_kind": "daily views (user agents, all access)",
+   "component": "restraint",
+   "means": "A jump in readers of a survival or war article means public anxiety is rising before or after news.",
+   "not_proves": "It does not prove any real danger: a film, a meme, school homework or a bot can drive page views."
   },
   {
    "family": "anxiety",
@@ -144,7 +1530,133 @@
    "anomaly": false,
    "unit": "views/day",
    "note": "",
-   "source": "Wikimedia pageviews"
+   "source": "Wikimedia pageviews",
+   "series": [
+    [
+     "2026-09-05",
+     420
+    ],
+    [
+     "2026-09-06",
+     434
+    ],
+    [
+     "2026-09-07",
+     429
+    ],
+    [
+     "2026-09-08",
+     493
+    ],
+    [
+     "2026-09-09",
+     501
+    ],
+    [
+     "2026-09-10",
+     487
+    ],
+    [
+     "2026-09-11",
+     516
+    ],
+    [
+     "2026-09-12",
+     471
+    ],
+    [
+     "2026-09-13",
+     419
+    ],
+    [
+     "2026-09-14",
+     443
+    ],
+    [
+     "2026-09-15",
+     453
+    ],
+    [
+     "2026-09-16",
+     489
+    ],
+    [
+     "2026-09-17",
+     469
+    ],
+    [
+     "2026-09-18",
+     513
+    ],
+    [
+     "2026-09-19",
+     431
+    ],
+    [
+     "2026-09-20",
+     492
+    ],
+    [
+     "2026-09-21",
+     482
+    ],
+    [
+     "2026-09-22",
+     484
+    ],
+    [
+     "2026-09-23",
+     470
+    ],
+    [
+     "2026-09-24",
+     487
+    ],
+    [
+     "2026-09-25",
+     459
+    ],
+    [
+     "2026-09-26",
+     437
+    ],
+    [
+     "2026-09-27",
+     532
+    ],
+    [
+     "2026-09-28",
+     493
+    ],
+    [
+     "2026-09-29",
+     479
+    ],
+    [
+     "2026-09-30",
+     442
+    ],
+    [
+     "2026-10-01",
+     473
+    ],
+    [
+     "2026-10-02",
+     501
+    ],
+    [
+     "2026-10-03",
+     419
+    ],
+    [
+     "2026-10-04",
+     488
+    ]
+   ],
+   "series_kind": "daily views (user agents, all access)",
+   "component": "restraint",
+   "means": "A jump in readers of a survival or war article means public anxiety is rising before or after news.",
+   "not_proves": "It does not prove any real danger: a film, a meme, school homework or a bot can drive page views."
   },
   {
    "family": "anxiety",
@@ -156,7 +1668,133 @@
    "anomaly": false,
    "unit": "views/day",
    "note": "",
-   "source": "Wikimedia pageviews"
+   "source": "Wikimedia pageviews",
+   "series": [
+    [
+     "2026-09-05",
+     1328
+    ],
+    [
+     "2026-09-06",
+     1409
+    ],
+    [
+     "2026-09-07",
+     1446
+    ],
+    [
+     "2026-09-08",
+     1542
+    ],
+    [
+     "2026-09-09",
+     1485
+    ],
+    [
+     "2026-09-10",
+     1439
+    ],
+    [
+     "2026-09-11",
+     1543
+    ],
+    [
+     "2026-09-12",
+     1376
+    ],
+    [
+     "2026-09-13",
+     1383
+    ],
+    [
+     "2026-09-14",
+     1557
+    ],
+    [
+     "2026-09-15",
+     1451
+    ],
+    [
+     "2026-09-16",
+     1494
+    ],
+    [
+     "2026-09-17",
+     1560
+    ],
+    [
+     "2026-09-18",
+     1818
+    ],
+    [
+     "2026-09-19",
+     2512
+    ],
+    [
+     "2026-09-20",
+     4460
+    ],
+    [
+     "2026-09-21",
+     4234
+    ],
+    [
+     "2026-09-22",
+     3318
+    ],
+    [
+     "2026-09-23",
+     2491
+    ],
+    [
+     "2026-09-24",
+     2074
+    ],
+    [
+     "2026-09-25",
+     1764
+    ],
+    [
+     "2026-09-26",
+     1517
+    ],
+    [
+     "2026-09-27",
+     1766
+    ],
+    [
+     "2026-09-28",
+     1735
+    ],
+    [
+     "2026-09-29",
+     1530
+    ],
+    [
+     "2026-09-30",
+     1368
+    ],
+    [
+     "2026-10-01",
+     1504
+    ],
+    [
+     "2026-10-02",
+     1405
+    ],
+    [
+     "2026-10-03",
+     1337
+    ],
+    [
+     "2026-10-04",
+     1430
+    ]
+   ],
+   "series_kind": "daily views (user agents, all access)",
+   "component": "restraint",
+   "means": "A jump in readers of a survival or war article means public anxiety is rising before or after news.",
+   "not_proves": "It does not prove any real danger: a film, a meme, school homework or a bot can drive page views."
   },
   {
    "family": "anxiety",
@@ -168,7 +1806,133 @@
    "anomaly": false,
    "unit": "views/day",
    "note": "",
-   "source": "Wikimedia pageviews"
+   "source": "Wikimedia pageviews",
+   "series": [
+    [
+     "2026-09-05",
+     878
+    ],
+    [
+     "2026-09-06",
+     908
+    ],
+    [
+     "2026-09-07",
+     901
+    ],
+    [
+     "2026-09-08",
+     958
+    ],
+    [
+     "2026-09-09",
+     938
+    ],
+    [
+     "2026-09-10",
+     840
+    ],
+    [
+     "2026-09-11",
+     879
+    ],
+    [
+     "2026-09-12",
+     877
+    ],
+    [
+     "2026-09-13",
+     919
+    ],
+    [
+     "2026-09-14",
+     832
+    ],
+    [
+     "2026-09-15",
+     793
+    ],
+    [
+     "2026-09-16",
+     907
+    ],
+    [
+     "2026-09-17",
+     842
+    ],
+    [
+     "2026-09-18",
+     926
+    ],
+    [
+     "2026-09-19",
+     851
+    ],
+    [
+     "2026-09-20",
+     1081
+    ],
+    [
+     "2026-09-21",
+     899
+    ],
+    [
+     "2026-09-22",
+     947
+    ],
+    [
+     "2026-09-23",
+     866
+    ],
+    [
+     "2026-09-24",
+     901
+    ],
+    [
+     "2026-09-25",
+     942
+    ],
+    [
+     "2026-09-26",
+     871
+    ],
+    [
+     "2026-09-27",
+     995
+    ],
+    [
+     "2026-09-28",
+     965
+    ],
+    [
+     "2026-09-29",
+     871
+    ],
+    [
+     "2026-09-30",
+     842
+    ],
+    [
+     "2026-10-01",
+     830
+    ],
+    [
+     "2026-10-02",
+     942
+    ],
+    [
+     "2026-10-03",
+     855
+    ],
+    [
+     "2026-10-04",
+     915
+    ]
+   ],
+   "series_kind": "daily views (user agents, all access)",
+   "component": "restraint",
+   "means": "A jump in readers of a survival or war article means public anxiety is rising before or after news.",
+   "not_proves": "It does not prove any real danger: a film, a meme, school homework or a bot can drive page views."
   },
   {
    "family": "anxiety",
@@ -180,7 +1944,133 @@
    "anomaly": false,
    "unit": "views/day",
    "note": "",
-   "source": "Wikimedia pageviews"
+   "source": "Wikimedia pageviews",
+   "series": [
+    [
+     "2026-09-05",
+     510
+    ],
+    [
+     "2026-09-06",
+     573
+    ],
+    [
+     "2026-09-07",
+     477
+    ],
+    [
+     "2026-09-08",
+     528
+    ],
+    [
+     "2026-09-09",
+     494
+    ],
+    [
+     "2026-09-10",
+     538
+    ],
+    [
+     "2026-09-11",
+     565
+    ],
+    [
+     "2026-09-12",
+     521
+    ],
+    [
+     "2026-09-13",
+     503
+    ],
+    [
+     "2026-09-14",
+     582
+    ],
+    [
+     "2026-09-15",
+     573
+    ],
+    [
+     "2026-09-16",
+     543
+    ],
+    [
+     "2026-09-17",
+     629
+    ],
+    [
+     "2026-09-18",
+     578
+    ],
+    [
+     "2026-09-19",
+     622
+    ],
+    [
+     "2026-09-20",
+     885
+    ],
+    [
+     "2026-09-21",
+     1209
+    ],
+    [
+     "2026-09-22",
+     847
+    ],
+    [
+     "2026-09-23",
+     1081
+    ],
+    [
+     "2026-09-24",
+     1255
+    ],
+    [
+     "2026-09-25",
+     1523
+    ],
+    [
+     "2026-09-26",
+     1779
+    ],
+    [
+     "2026-09-27",
+     1240
+    ],
+    [
+     "2026-09-28",
+     1098
+    ],
+    [
+     "2026-09-29",
+     867
+    ],
+    [
+     "2026-09-30",
+     701
+    ],
+    [
+     "2026-10-01",
+     725
+    ],
+    [
+     "2026-10-02",
+     734
+    ],
+    [
+     "2026-10-03",
+     657
+    ],
+    [
+     "2026-10-04",
+     683
+    ]
+   ],
+   "series_kind": "daily views (user agents, all access)",
+   "component": "restraint",
+   "means": "A jump in readers of a survival or war article means public anxiety is rising before or after news.",
+   "not_proves": "It does not prove any real danger: a film, a meme, school homework or a bot can drive page views."
   },
   {
    "family": "anxiety",
@@ -192,7 +2082,133 @@
    "anomaly": false,
    "unit": "views/day",
    "note": "",
-   "source": "Wikimedia pageviews"
+   "source": "Wikimedia pageviews",
+   "series": [
+    [
+     "2026-09-05",
+     226
+    ],
+    [
+     "2026-09-06",
+     269
+    ],
+    [
+     "2026-09-07",
+     216
+    ],
+    [
+     "2026-09-08",
+     320
+    ],
+    [
+     "2026-09-09",
+     291
+    ],
+    [
+     "2026-09-10",
+     283
+    ],
+    [
+     "2026-09-11",
+     253
+    ],
+    [
+     "2026-09-12",
+     217
+    ],
+    [
+     "2026-09-13",
+     227
+    ],
+    [
+     "2026-09-14",
+     228
+    ],
+    [
+     "2026-09-15",
+     269
+    ],
+    [
+     "2026-09-16",
+     265
+    ],
+    [
+     "2026-09-17",
+     226
+    ],
+    [
+     "2026-09-18",
+     227
+    ],
+    [
+     "2026-09-19",
+     219
+    ],
+    [
+     "2026-09-20",
+     194
+    ],
+    [
+     "2026-09-21",
+     235
+    ],
+    [
+     "2026-09-22",
+     244
+    ],
+    [
+     "2026-09-23",
+     277
+    ],
+    [
+     "2026-09-24",
+     232
+    ],
+    [
+     "2026-09-25",
+     209
+    ],
+    [
+     "2026-09-26",
+     210
+    ],
+    [
+     "2026-09-27",
+     206
+    ],
+    [
+     "2026-09-28",
+     257
+    ],
+    [
+     "2026-09-29",
+     206
+    ],
+    [
+     "2026-09-30",
+     233
+    ],
+    [
+     "2026-10-01",
+     235
+    ],
+    [
+     "2026-10-02",
+     228
+    ],
+    [
+     "2026-10-03",
+     191
+    ],
+    [
+     "2026-10-04",
+     216
+    ]
+   ],
+   "series_kind": "daily views (user agents, all access)",
+   "component": "restraint",
+   "means": "A jump in readers of a survival or war article means public anxiety is rising before or after news.",
+   "not_proves": "It does not prove any real danger: a film, a meme, school homework or a bot can drive page views."
   },
   {
    "family": "anxiety",
@@ -204,7 +2220,133 @@
    "anomaly": false,
    "unit": "views/day",
    "note": "",
-   "source": "Wikimedia pageviews"
+   "source": "Wikimedia pageviews",
+   "series": [
+    [
+     "2026-09-05",
+     89
+    ],
+    [
+     "2026-09-06",
+     86
+    ],
+    [
+     "2026-09-07",
+     101
+    ],
+    [
+     "2026-09-08",
+     100
+    ],
+    [
+     "2026-09-09",
+     94
+    ],
+    [
+     "2026-09-10",
+     77
+    ],
+    [
+     "2026-09-11",
+     87
+    ],
+    [
+     "2026-09-12",
+     72
+    ],
+    [
+     "2026-09-13",
+     74
+    ],
+    [
+     "2026-09-14",
+     91
+    ],
+    [
+     "2026-09-15",
+     92
+    ],
+    [
+     "2026-09-16",
+     102
+    ],
+    [
+     "2026-09-17",
+     81
+    ],
+    [
+     "2026-09-18",
+     84
+    ],
+    [
+     "2026-09-19",
+     84
+    ],
+    [
+     "2026-09-20",
+     91
+    ],
+    [
+     "2026-09-21",
+     134
+    ],
+    [
+     "2026-09-22",
+     97
+    ],
+    [
+     "2026-09-23",
+     115
+    ],
+    [
+     "2026-09-24",
+     103
+    ],
+    [
+     "2026-09-25",
+     103
+    ],
+    [
+     "2026-09-26",
+     77
+    ],
+    [
+     "2026-09-27",
+     98
+    ],
+    [
+     "2026-09-28",
+     121
+    ],
+    [
+     "2026-09-29",
+     93
+    ],
+    [
+     "2026-09-30",
+     102
+    ],
+    [
+     "2026-10-01",
+     107
+    ],
+    [
+     "2026-10-02",
+     72
+    ],
+    [
+     "2026-10-03",
+     87
+    ],
+    [
+     "2026-10-04",
+     67
+    ]
+   ],
+   "series_kind": "daily views (user agents, all access)",
+   "component": "restraint",
+   "means": "A jump in readers of a survival or war article means public anxiety is rising before or after news.",
+   "not_proves": "It does not prove any real danger: a film, a meme, school homework or a bot can drive page views."
   },
   {
    "family": "anxiety",
@@ -216,7 +2358,133 @@
    "anomaly": false,
    "unit": "views/day",
    "note": "",
-   "source": "Wikimedia pageviews"
+   "source": "Wikimedia pageviews",
+   "series": [
+    [
+     "2026-09-05",
+     491
+    ],
+    [
+     "2026-09-06",
+     613
+    ],
+    [
+     "2026-09-07",
+     547
+    ],
+    [
+     "2026-09-08",
+     566
+    ],
+    [
+     "2026-09-09",
+     642
+    ],
+    [
+     "2026-09-10",
+     630
+    ],
+    [
+     "2026-09-11",
+     730
+    ],
+    [
+     "2026-09-12",
+     594
+    ],
+    [
+     "2026-09-13",
+     652
+    ],
+    [
+     "2026-09-14",
+     656
+    ],
+    [
+     "2026-09-15",
+     698
+    ],
+    [
+     "2026-09-16",
+     677
+    ],
+    [
+     "2026-09-17",
+     594
+    ],
+    [
+     "2026-09-18",
+     585
+    ],
+    [
+     "2026-09-19",
+     534
+    ],
+    [
+     "2026-09-20",
+     576
+    ],
+    [
+     "2026-09-21",
+     700
+    ],
+    [
+     "2026-09-22",
+     591
+    ],
+    [
+     "2026-09-23",
+     610
+    ],
+    [
+     "2026-09-24",
+     574
+    ],
+    [
+     "2026-09-25",
+     616
+    ],
+    [
+     "2026-09-26",
+     702
+    ],
+    [
+     "2026-09-27",
+     586
+    ],
+    [
+     "2026-09-28",
+     618
+    ],
+    [
+     "2026-09-29",
+     607
+    ],
+    [
+     "2026-09-30",
+     487
+    ],
+    [
+     "2026-10-01",
+     520
+    ],
+    [
+     "2026-10-02",
+     480
+    ],
+    [
+     "2026-10-03",
+     477
+    ],
+    [
+     "2026-10-04",
+     464
+    ]
+   ],
+   "series_kind": "daily views (user agents, all access)",
+   "component": "restraint",
+   "means": "A jump in readers of a survival or war article means public anxiety is rising before or after news.",
+   "not_proves": "It does not prove any real danger: a film, a meme, school homework or a bot can drive page views."
   },
   {
    "family": "anxiety",
@@ -228,7 +2496,133 @@
    "anomaly": false,
    "unit": "views/day",
    "note": "",
-   "source": "Wikimedia pageviews"
+   "source": "Wikimedia pageviews",
+   "series": [
+    [
+     "2026-09-05",
+     22
+    ],
+    [
+     "2026-09-06",
+     10
+    ],
+    [
+     "2026-09-07",
+     14
+    ],
+    [
+     "2026-09-08",
+     23
+    ],
+    [
+     "2026-09-09",
+     16
+    ],
+    [
+     "2026-09-10",
+     23
+    ],
+    [
+     "2026-09-11",
+     23
+    ],
+    [
+     "2026-09-12",
+     8
+    ],
+    [
+     "2026-09-13",
+     15
+    ],
+    [
+     "2026-09-14",
+     15
+    ],
+    [
+     "2026-09-15",
+     17
+    ],
+    [
+     "2026-09-16",
+     32
+    ],
+    [
+     "2026-09-17",
+     18
+    ],
+    [
+     "2026-09-18",
+     24
+    ],
+    [
+     "2026-09-19",
+     16
+    ],
+    [
+     "2026-09-20",
+     19
+    ],
+    [
+     "2026-09-21",
+     23
+    ],
+    [
+     "2026-09-22",
+     22
+    ],
+    [
+     "2026-09-23",
+     20
+    ],
+    [
+     "2026-09-24",
+     20
+    ],
+    [
+     "2026-09-25",
+     10
+    ],
+    [
+     "2026-09-26",
+     20
+    ],
+    [
+     "2026-09-27",
+     19
+    ],
+    [
+     "2026-09-28",
+     20
+    ],
+    [
+     "2026-09-29",
+     19
+    ],
+    [
+     "2026-09-30",
+     26
+    ],
+    [
+     "2026-10-01",
+     13
+    ],
+    [
+     "2026-10-02",
+     22
+    ],
+    [
+     "2026-10-03",
+     29
+    ],
+    [
+     "2026-10-04",
+     21
+    ]
+   ],
+   "series_kind": "daily views (user agents, all access)",
+   "component": "restraint",
+   "means": "A jump in readers of a survival or war article means public anxiety is rising before or after news.",
+   "not_proves": "It does not prove any real danger: a film, a meme, school homework or a bot can drive page views."
   },
   {
    "family": "anxiety",
@@ -240,7 +2634,133 @@
    "anomaly": false,
    "unit": "views/day",
    "note": "",
-   "source": "Wikimedia pageviews"
+   "source": "Wikimedia pageviews",
+   "series": [
+    [
+     "2026-09-02",
+     4
+    ],
+    [
+     "2026-09-03",
+     1
+    ],
+    [
+     "2026-09-05",
+     1
+    ],
+    [
+     "2026-09-06",
+     0
+    ],
+    [
+     "2026-09-07",
+     1
+    ],
+    [
+     "2026-09-08",
+     2
+    ],
+    [
+     "2026-09-09",
+     0
+    ],
+    [
+     "2026-09-10",
+     0
+    ],
+    [
+     "2026-09-11",
+     1
+    ],
+    [
+     "2026-09-12",
+     1
+    ],
+    [
+     "2026-09-13",
+     0
+    ],
+    [
+     "2026-09-14",
+     5
+    ],
+    [
+     "2026-09-15",
+     4
+    ],
+    [
+     "2026-09-16",
+     0
+    ],
+    [
+     "2026-09-17",
+     2
+    ],
+    [
+     "2026-09-18",
+     2
+    ],
+    [
+     "2026-09-19",
+     0
+    ],
+    [
+     "2026-09-20",
+     5
+    ],
+    [
+     "2026-09-22",
+     2
+    ],
+    [
+     "2026-09-23",
+     4
+    ],
+    [
+     "2026-09-24",
+     4
+    ],
+    [
+     "2026-09-26",
+     1
+    ],
+    [
+     "2026-09-27",
+     2
+    ],
+    [
+     "2026-09-28",
+     1
+    ],
+    [
+     "2026-09-29",
+     0
+    ],
+    [
+     "2026-09-30",
+     1
+    ],
+    [
+     "2026-10-01",
+     1
+    ],
+    [
+     "2026-10-02",
+     1
+    ],
+    [
+     "2026-10-03",
+     1
+    ],
+    [
+     "2026-10-04",
+     0
+    ]
+   ],
+   "series_kind": "daily views (user agents, all access)",
+   "component": "restraint",
+   "means": "A jump in readers of a survival or war article means public anxiety is rising before or after news.",
+   "not_proves": "It does not prove any real danger: a film, a meme, school homework or a bot can drive page views."
   },
   {
    "family": "anxiety",
@@ -252,7 +2772,133 @@
    "anomaly": false,
    "unit": "views/day",
    "note": "",
-   "source": "Wikimedia pageviews"
+   "source": "Wikimedia pageviews",
+   "series": [
+    [
+     "2026-09-05",
+     210
+    ],
+    [
+     "2026-09-06",
+     176
+    ],
+    [
+     "2026-09-07",
+     142
+    ],
+    [
+     "2026-09-08",
+     146
+    ],
+    [
+     "2026-09-09",
+     185
+    ],
+    [
+     "2026-09-10",
+     260
+    ],
+    [
+     "2026-09-11",
+     308
+    ],
+    [
+     "2026-09-12",
+     222
+    ],
+    [
+     "2026-09-13",
+     136
+    ],
+    [
+     "2026-09-14",
+     166
+    ],
+    [
+     "2026-09-15",
+     144
+    ],
+    [
+     "2026-09-16",
+     147
+    ],
+    [
+     "2026-09-17",
+     138
+    ],
+    [
+     "2026-09-18",
+     202
+    ],
+    [
+     "2026-09-19",
+     117
+    ],
+    [
+     "2026-09-20",
+     148
+    ],
+    [
+     "2026-09-21",
+     235
+    ],
+    [
+     "2026-09-22",
+     241
+    ],
+    [
+     "2026-09-23",
+     160
+    ],
+    [
+     "2026-09-24",
+     143
+    ],
+    [
+     "2026-09-25",
+     168
+    ],
+    [
+     "2026-09-26",
+     115
+    ],
+    [
+     "2026-09-27",
+     161
+    ],
+    [
+     "2026-09-28",
+     160
+    ],
+    [
+     "2026-09-29",
+     163
+    ],
+    [
+     "2026-09-30",
+     116
+    ],
+    [
+     "2026-10-01",
+     135
+    ],
+    [
+     "2026-10-02",
+     145
+    ],
+    [
+     "2026-10-03",
+     102
+    ],
+    [
+     "2026-10-04",
+     105
+    ]
+   ],
+   "series_kind": "daily views (user agents, all access)",
+   "component": "restraint",
+   "means": "A jump in readers of a survival or war article means public anxiety is rising before or after news.",
+   "not_proves": "It does not prove any real danger: a film, a meme, school homework or a bot can drive page views."
   },
   {
    "family": "anxiety",
@@ -264,7 +2910,133 @@
    "anomaly": false,
    "unit": "views/day",
    "note": "",
-   "source": "Wikimedia pageviews"
+   "source": "Wikimedia pageviews",
+   "series": [
+    [
+     "2026-09-05",
+     25
+    ],
+    [
+     "2026-09-06",
+     36
+    ],
+    [
+     "2026-09-07",
+     33
+    ],
+    [
+     "2026-09-08",
+     32
+    ],
+    [
+     "2026-09-09",
+     36
+    ],
+    [
+     "2026-09-10",
+     37
+    ],
+    [
+     "2026-09-11",
+     47
+    ],
+    [
+     "2026-09-12",
+     30
+    ],
+    [
+     "2026-09-13",
+     35
+    ],
+    [
+     "2026-09-14",
+     31
+    ],
+    [
+     "2026-09-15",
+     39
+    ],
+    [
+     "2026-09-16",
+     30
+    ],
+    [
+     "2026-09-17",
+     29
+    ],
+    [
+     "2026-09-18",
+     30
+    ],
+    [
+     "2026-09-19",
+     44
+    ],
+    [
+     "2026-09-20",
+     40
+    ],
+    [
+     "2026-09-21",
+     40
+    ],
+    [
+     "2026-09-22",
+     44
+    ],
+    [
+     "2026-09-23",
+     28
+    ],
+    [
+     "2026-09-24",
+     38
+    ],
+    [
+     "2026-09-25",
+     27
+    ],
+    [
+     "2026-09-26",
+     73
+    ],
+    [
+     "2026-09-27",
+     48
+    ],
+    [
+     "2026-09-28",
+     61
+    ],
+    [
+     "2026-09-29",
+     58
+    ],
+    [
+     "2026-09-30",
+     43
+    ],
+    [
+     "2026-10-01",
+     38
+    ],
+    [
+     "2026-10-02",
+     39
+    ],
+    [
+     "2026-10-03",
+     43
+    ],
+    [
+     "2026-10-04",
+     32
+    ]
+   ],
+   "series_kind": "daily views (user agents, all access)",
+   "component": "restraint",
+   "means": "A jump in readers of a survival or war article means public anxiety is rising before or after news.",
+   "not_proves": "It does not prove any real danger: a film, a meme, school homework or a bot can drive page views."
   },
   {
    "family": "anxiety",
@@ -276,7 +3048,133 @@
    "anomaly": false,
    "unit": "views/day",
    "note": "",
-   "source": "Wikimedia pageviews"
+   "source": "Wikimedia pageviews",
+   "series": [
+    [
+     "2026-09-05",
+     55
+    ],
+    [
+     "2026-09-06",
+     62
+    ],
+    [
+     "2026-09-07",
+     56
+    ],
+    [
+     "2026-09-08",
+     47
+    ],
+    [
+     "2026-09-09",
+     46
+    ],
+    [
+     "2026-09-10",
+     70
+    ],
+    [
+     "2026-09-11",
+     59
+    ],
+    [
+     "2026-09-12",
+     56
+    ],
+    [
+     "2026-09-13",
+     54
+    ],
+    [
+     "2026-09-14",
+     49
+    ],
+    [
+     "2026-09-15",
+     41
+    ],
+    [
+     "2026-09-16",
+     48
+    ],
+    [
+     "2026-09-17",
+     66
+    ],
+    [
+     "2026-09-18",
+     51
+    ],
+    [
+     "2026-09-19",
+     42
+    ],
+    [
+     "2026-09-20",
+     48
+    ],
+    [
+     "2026-09-21",
+     45
+    ],
+    [
+     "2026-09-22",
+     44
+    ],
+    [
+     "2026-09-23",
+     45
+    ],
+    [
+     "2026-09-24",
+     35
+    ],
+    [
+     "2026-09-25",
+     38
+    ],
+    [
+     "2026-09-26",
+     38
+    ],
+    [
+     "2026-09-27",
+     33
+    ],
+    [
+     "2026-09-28",
+     37
+    ],
+    [
+     "2026-09-29",
+     29
+    ],
+    [
+     "2026-09-30",
+     28
+    ],
+    [
+     "2026-10-01",
+     44
+    ],
+    [
+     "2026-10-02",
+     30
+    ],
+    [
+     "2026-10-03",
+     58
+    ],
+    [
+     "2026-10-04",
+     30
+    ]
+   ],
+   "series_kind": "daily views (user agents, all access)",
+   "component": "restraint",
+   "means": "A jump in readers of a survival or war article means public anxiety is rising before or after news.",
+   "not_proves": "It does not prove any real danger: a film, a meme, school homework or a bot can drive page views."
   },
   {
    "family": "anxiety",
@@ -288,7 +3186,133 @@
    "anomaly": false,
    "unit": "views/day",
    "note": "",
-   "source": "Wikimedia pageviews"
+   "source": "Wikimedia pageviews",
+   "series": [
+    [
+     "2026-09-05",
+     266
+    ],
+    [
+     "2026-09-06",
+     328
+    ],
+    [
+     "2026-09-07",
+     290
+    ],
+    [
+     "2026-09-08",
+     309
+    ],
+    [
+     "2026-09-09",
+     327
+    ],
+    [
+     "2026-09-10",
+     282
+    ],
+    [
+     "2026-09-11",
+     310
+    ],
+    [
+     "2026-09-12",
+     320
+    ],
+    [
+     "2026-09-13",
+     334
+    ],
+    [
+     "2026-09-14",
+     313
+    ],
+    [
+     "2026-09-15",
+     334
+    ],
+    [
+     "2026-09-16",
+     427
+    ],
+    [
+     "2026-09-17",
+     397
+    ],
+    [
+     "2026-09-18",
+     380
+    ],
+    [
+     "2026-09-19",
+     381
+    ],
+    [
+     "2026-09-20",
+     435
+    ],
+    [
+     "2026-09-21",
+     367
+    ],
+    [
+     "2026-09-22",
+     345
+    ],
+    [
+     "2026-09-23",
+     340
+    ],
+    [
+     "2026-09-24",
+     291
+    ],
+    [
+     "2026-09-25",
+     316
+    ],
+    [
+     "2026-09-26",
+     355
+    ],
+    [
+     "2026-09-27",
+     363
+    ],
+    [
+     "2026-09-28",
+     376
+    ],
+    [
+     "2026-09-29",
+     310
+    ],
+    [
+     "2026-09-30",
+     306
+    ],
+    [
+     "2026-10-01",
+     340
+    ],
+    [
+     "2026-10-02",
+     324
+    ],
+    [
+     "2026-10-03",
+     341
+    ],
+    [
+     "2026-10-04",
+     291
+    ]
+   ],
+   "series_kind": "daily views (user agents, all access)",
+   "component": "restraint",
+   "means": "A jump in readers of a survival or war article means public anxiety is rising before or after news.",
+   "not_proves": "It does not prove any real danger: a film, a meme, school homework or a bot can drive page views."
   },
   {
    "family": "anxiety",
@@ -300,7 +3324,133 @@
    "anomaly": false,
    "unit": "views/day",
    "note": "",
-   "source": "Wikimedia pageviews"
+   "source": "Wikimedia pageviews",
+   "series": [
+    [
+     "2026-09-05",
+     107
+    ],
+    [
+     "2026-09-06",
+     117
+    ],
+    [
+     "2026-09-07",
+     125
+    ],
+    [
+     "2026-09-08",
+     125
+    ],
+    [
+     "2026-09-09",
+     130
+    ],
+    [
+     "2026-09-10",
+     126
+    ],
+    [
+     "2026-09-11",
+     114
+    ],
+    [
+     "2026-09-12",
+     113
+    ],
+    [
+     "2026-09-13",
+     115
+    ],
+    [
+     "2026-09-14",
+     119
+    ],
+    [
+     "2026-09-15",
+     127
+    ],
+    [
+     "2026-09-16",
+     119
+    ],
+    [
+     "2026-09-17",
+     96
+    ],
+    [
+     "2026-09-18",
+     121
+    ],
+    [
+     "2026-09-19",
+     122
+    ],
+    [
+     "2026-09-20",
+     125
+    ],
+    [
+     "2026-09-21",
+     105
+    ],
+    [
+     "2026-09-22",
+     128
+    ],
+    [
+     "2026-09-23",
+     111
+    ],
+    [
+     "2026-09-24",
+     109
+    ],
+    [
+     "2026-09-25",
+     97
+    ],
+    [
+     "2026-09-26",
+     531
+    ],
+    [
+     "2026-09-27",
+     201
+    ],
+    [
+     "2026-09-28",
+     127
+    ],
+    [
+     "2026-09-29",
+     105
+    ],
+    [
+     "2026-09-30",
+     101
+    ],
+    [
+     "2026-10-01",
+     119
+    ],
+    [
+     "2026-10-02",
+     134
+    ],
+    [
+     "2026-10-03",
+     125
+    ],
+    [
+     "2026-10-04",
+     130
+    ]
+   ],
+   "series_kind": "daily views (user agents, all access)",
+   "component": "restraint",
+   "means": "A jump in readers of a survival or war article means public anxiety is rising before or after news.",
+   "not_proves": "It does not prove any real danger: a film, a meme, school homework or a bot can drive page views."
   },
   {
    "family": "anxiety",
@@ -312,7 +3462,133 @@
    "anomaly": false,
    "unit": "views/day",
    "note": "",
-   "source": "Wikimedia pageviews"
+   "source": "Wikimedia pageviews",
+   "series": [
+    [
+     "2026-09-05",
+     12
+    ],
+    [
+     "2026-09-06",
+     9
+    ],
+    [
+     "2026-09-07",
+     18
+    ],
+    [
+     "2026-09-08",
+     22
+    ],
+    [
+     "2026-09-09",
+     24
+    ],
+    [
+     "2026-09-10",
+     24
+    ],
+    [
+     "2026-09-11",
+     25
+    ],
+    [
+     "2026-09-12",
+     11
+    ],
+    [
+     "2026-09-13",
+     16
+    ],
+    [
+     "2026-09-14",
+     15
+    ],
+    [
+     "2026-09-15",
+     8
+    ],
+    [
+     "2026-09-16",
+     21
+    ],
+    [
+     "2026-09-17",
+     26
+    ],
+    [
+     "2026-09-18",
+     8
+    ],
+    [
+     "2026-09-19",
+     13
+    ],
+    [
+     "2026-09-20",
+     17
+    ],
+    [
+     "2026-09-21",
+     22
+    ],
+    [
+     "2026-09-22",
+     13
+    ],
+    [
+     "2026-09-23",
+     19
+    ],
+    [
+     "2026-09-24",
+     16
+    ],
+    [
+     "2026-09-25",
+     17
+    ],
+    [
+     "2026-09-26",
+     16
+    ],
+    [
+     "2026-09-27",
+     8
+    ],
+    [
+     "2026-09-28",
+     16
+    ],
+    [
+     "2026-09-29",
+     15
+    ],
+    [
+     "2026-09-30",
+     16
+    ],
+    [
+     "2026-10-01",
+     18
+    ],
+    [
+     "2026-10-02",
+     22
+    ],
+    [
+     "2026-10-03",
+     7
+    ],
+    [
+     "2026-10-04",
+     12
+    ]
+   ],
+   "series_kind": "daily views (user agents, all access)",
+   "component": "restraint",
+   "means": "A jump in readers of a survival or war article means public anxiety is rising before or after news.",
+   "not_proves": "It does not prove any real danger: a film, a meme, school homework or a bot can drive page views."
   },
   {
    "family": "anxiety",
@@ -324,19 +3600,271 @@
    "anomaly": false,
    "unit": "views/day",
    "note": "",
-   "source": "Wikimedia pageviews"
+   "source": "Wikimedia pageviews",
+   "series": [
+    [
+     "2026-09-05",
+     16
+    ],
+    [
+     "2026-09-06",
+     13
+    ],
+    [
+     "2026-09-07",
+     17
+    ],
+    [
+     "2026-09-08",
+     66
+    ],
+    [
+     "2026-09-09",
+     24
+    ],
+    [
+     "2026-09-10",
+     41
+    ],
+    [
+     "2026-09-11",
+     29
+    ],
+    [
+     "2026-09-12",
+     23
+    ],
+    [
+     "2026-09-13",
+     14
+    ],
+    [
+     "2026-09-14",
+     22
+    ],
+    [
+     "2026-09-15",
+     20
+    ],
+    [
+     "2026-09-16",
+     32
+    ],
+    [
+     "2026-09-17",
+     17
+    ],
+    [
+     "2026-09-18",
+     18
+    ],
+    [
+     "2026-09-19",
+     11
+    ],
+    [
+     "2026-09-20",
+     13
+    ],
+    [
+     "2026-09-21",
+     16
+    ],
+    [
+     "2026-09-22",
+     26
+    ],
+    [
+     "2026-09-23",
+     15
+    ],
+    [
+     "2026-09-24",
+     17
+    ],
+    [
+     "2026-09-25",
+     23
+    ],
+    [
+     "2026-09-26",
+     24
+    ],
+    [
+     "2026-09-27",
+     13
+    ],
+    [
+     "2026-09-28",
+     15
+    ],
+    [
+     "2026-09-29",
+     29
+    ],
+    [
+     "2026-09-30",
+     10
+    ],
+    [
+     "2026-10-01",
+     11
+    ],
+    [
+     "2026-10-02",
+     10
+    ],
+    [
+     "2026-10-03",
+     12
+    ],
+    [
+     "2026-10-04",
+     17
+    ]
+   ],
+   "series_kind": "daily views (user agents, all access)",
+   "component": "restraint",
+   "means": "A jump in readers of a survival or war article means public anxiety is rising before or after news.",
+   "not_proves": "It does not prove any real danger: a film, a meme, school homework or a bot can drive page views."
   },
   {
    "family": "anxiety",
-   "id": "wiki:he:ממ\"ד",
-   "label": "Wikipedia (he) \"ממ\"ד\": daily readers, last 3 days",
+   "id": "wiki:he:מרחב_מוגן_דירתי",
+   "label": "Wikipedia (he) \"מרחב מוגן דירתי\": daily readers, last 3 days",
    "value": 0,
-   "baseline": 1.0,
+   "baseline": 1,
    "ratio": null,
    "anomaly": false,
    "unit": "views/day",
    "note": "",
-   "source": "Wikimedia pageviews"
+   "source": "Wikimedia pageviews",
+   "series": [
+    [
+     "2026-09-04",
+     0
+    ],
+    [
+     "2026-09-05",
+     2
+    ],
+    [
+     "2026-09-06",
+     1
+    ],
+    [
+     "2026-09-07",
+     0
+    ],
+    [
+     "2026-09-08",
+     0
+    ],
+    [
+     "2026-09-09",
+     0
+    ],
+    [
+     "2026-09-10",
+     1
+    ],
+    [
+     "2026-09-11",
+     1
+    ],
+    [
+     "2026-09-12",
+     2
+    ],
+    [
+     "2026-09-13",
+     1
+    ],
+    [
+     "2026-09-14",
+     1
+    ],
+    [
+     "2026-09-15",
+     1
+    ],
+    [
+     "2026-09-16",
+     3
+    ],
+    [
+     "2026-09-17",
+     1
+    ],
+    [
+     "2026-09-18",
+     0
+    ],
+    [
+     "2026-09-19",
+     1
+    ],
+    [
+     "2026-09-20",
+     1
+    ],
+    [
+     "2026-09-21",
+     2
+    ],
+    [
+     "2026-09-22",
+     1
+    ],
+    [
+     "2026-09-23",
+     1
+    ],
+    [
+     "2026-09-24",
+     0
+    ],
+    [
+     "2026-09-25",
+     1
+    ],
+    [
+     "2026-09-26",
+     0
+    ],
+    [
+     "2026-09-27",
+     0
+    ],
+    [
+     "2026-09-28",
+     0
+    ],
+    [
+     "2026-09-29",
+     1
+    ],
+    [
+     "2026-10-01",
+     0
+    ],
+    [
+     "2026-10-02",
+     0
+    ],
+    [
+     "2026-10-03",
+     0
+    ],
+    [
+     "2026-10-04",
+     0
+    ]
+   ],
+   "series_kind": "daily views (user agents, all access)",
+   "component": "restraint",
+   "means": "A jump in readers of a survival or war article means public anxiety is rising before or after news.",
+   "not_proves": "It does not prove any real danger: a film, a meme, school homework or a bot can drive page views."
   },
   {
    "family": "anxiety",
@@ -348,7 +3876,133 @@
    "anomaly": false,
    "unit": "views/day",
    "note": "",
-   "source": "Wikimedia pageviews"
+   "source": "Wikimedia pageviews",
+   "series": [
+    [
+     "2026-09-05",
+     88
+    ],
+    [
+     "2026-09-06",
+     78
+    ],
+    [
+     "2026-09-07",
+     80
+    ],
+    [
+     "2026-09-08",
+     99
+    ],
+    [
+     "2026-09-09",
+     185
+    ],
+    [
+     "2026-09-10",
+     111
+    ],
+    [
+     "2026-09-11",
+     115
+    ],
+    [
+     "2026-09-12",
+     91
+    ],
+    [
+     "2026-09-13",
+     95
+    ],
+    [
+     "2026-09-14",
+     85
+    ],
+    [
+     "2026-09-15",
+     90
+    ],
+    [
+     "2026-09-16",
+     102
+    ],
+    [
+     "2026-09-17",
+     115
+    ],
+    [
+     "2026-09-18",
+     123
+    ],
+    [
+     "2026-09-19",
+     473
+    ],
+    [
+     "2026-09-20",
+     445
+    ],
+    [
+     "2026-09-21",
+     334
+    ],
+    [
+     "2026-09-22",
+     210
+    ],
+    [
+     "2026-09-23",
+     105
+    ],
+    [
+     "2026-09-24",
+     119
+    ],
+    [
+     "2026-09-25",
+     125
+    ],
+    [
+     "2026-09-26",
+     89
+    ],
+    [
+     "2026-09-27",
+     77
+    ],
+    [
+     "2026-09-28",
+     96
+    ],
+    [
+     "2026-09-29",
+     118
+    ],
+    [
+     "2026-09-30",
+     107
+    ],
+    [
+     "2026-10-01",
+     132
+    ],
+    [
+     "2026-10-02",
+     156
+    ],
+    [
+     "2026-10-03",
+     111
+    ],
+    [
+     "2026-10-04",
+     86
+    ]
+   ],
+   "series_kind": "daily views (user agents, all access)",
+   "component": "restraint",
+   "means": "A jump in readers of a survival or war article means public anxiety is rising before or after news.",
+   "not_proves": "It does not prove any real danger: a film, a meme, school homework or a bot can drive page views."
   },
   {
    "family": "anxiety",
@@ -360,7 +4014,133 @@
    "anomaly": false,
    "unit": "views/day",
    "note": "",
-   "source": "Wikimedia pageviews"
+   "source": "Wikimedia pageviews",
+   "series": [
+    [
+     "2026-09-05",
+     5
+    ],
+    [
+     "2026-09-06",
+     7
+    ],
+    [
+     "2026-09-07",
+     7
+    ],
+    [
+     "2026-09-08",
+     7
+    ],
+    [
+     "2026-09-09",
+     9
+    ],
+    [
+     "2026-09-10",
+     8
+    ],
+    [
+     "2026-09-11",
+     7
+    ],
+    [
+     "2026-09-12",
+     10
+    ],
+    [
+     "2026-09-13",
+     9
+    ],
+    [
+     "2026-09-14",
+     7
+    ],
+    [
+     "2026-09-15",
+     7
+    ],
+    [
+     "2026-09-16",
+     4
+    ],
+    [
+     "2026-09-17",
+     8
+    ],
+    [
+     "2026-09-18",
+     8
+    ],
+    [
+     "2026-09-19",
+     12
+    ],
+    [
+     "2026-09-20",
+     10
+    ],
+    [
+     "2026-09-21",
+     17
+    ],
+    [
+     "2026-09-22",
+     12
+    ],
+    [
+     "2026-09-23",
+     6
+    ],
+    [
+     "2026-09-24",
+     6
+    ],
+    [
+     "2026-09-25",
+     1
+    ],
+    [
+     "2026-09-26",
+     7
+    ],
+    [
+     "2026-09-27",
+     10
+    ],
+    [
+     "2026-09-28",
+     6
+    ],
+    [
+     "2026-09-29",
+     7
+    ],
+    [
+     "2026-09-30",
+     7
+    ],
+    [
+     "2026-10-01",
+     6
+    ],
+    [
+     "2026-10-02",
+     4
+    ],
+    [
+     "2026-10-03",
+     10
+    ],
+    [
+     "2026-10-04",
+     10
+    ]
+   ],
+   "series_kind": "daily views (user agents, all access)",
+   "component": "restraint",
+   "means": "A jump in readers of a survival or war article means public anxiety is rising before or after news.",
+   "not_proves": "It does not prove any real danger: a film, a meme, school homework or a bot can drive page views."
   },
   {
    "family": "anxiety",
@@ -372,7 +4152,133 @@
    "anomaly": false,
    "unit": "views/day",
    "note": "",
-   "source": "Wikimedia pageviews"
+   "source": "Wikimedia pageviews",
+   "series": [
+    [
+     "2026-09-05",
+     75
+    ],
+    [
+     "2026-09-06",
+     78
+    ],
+    [
+     "2026-09-07",
+     117
+    ],
+    [
+     "2026-09-08",
+     94
+    ],
+    [
+     "2026-09-09",
+     125
+    ],
+    [
+     "2026-09-10",
+     106
+    ],
+    [
+     "2026-09-11",
+     99
+    ],
+    [
+     "2026-09-12",
+     104
+    ],
+    [
+     "2026-09-13",
+     123
+    ],
+    [
+     "2026-09-14",
+     131
+    ],
+    [
+     "2026-09-15",
+     109
+    ],
+    [
+     "2026-09-16",
+     143
+    ],
+    [
+     "2026-09-17",
+     95
+    ],
+    [
+     "2026-09-18",
+     129
+    ],
+    [
+     "2026-09-19",
+     143
+    ],
+    [
+     "2026-09-20",
+     121
+    ],
+    [
+     "2026-09-21",
+     94
+    ],
+    [
+     "2026-09-22",
+     92
+    ],
+    [
+     "2026-09-23",
+     97
+    ],
+    [
+     "2026-09-24",
+     120
+    ],
+    [
+     "2026-09-25",
+     225
+    ],
+    [
+     "2026-09-26",
+     152
+    ],
+    [
+     "2026-09-27",
+     153
+    ],
+    [
+     "2026-09-28",
+     142
+    ],
+    [
+     "2026-09-29",
+     143
+    ],
+    [
+     "2026-09-30",
+     117
+    ],
+    [
+     "2026-10-01",
+     94
+    ],
+    [
+     "2026-10-02",
+     131
+    ],
+    [
+     "2026-10-03",
+     133
+    ],
+    [
+     "2026-10-04",
+     119
+    ]
+   ],
+   "series_kind": "daily views (user agents, all access)",
+   "component": "restraint",
+   "means": "A jump in readers of a survival or war article means public anxiety is rising before or after news.",
+   "not_proves": "It does not prove any real danger: a film, a meme, school homework or a bot can drive page views."
   },
   {
    "family": "anxiety",
@@ -384,79 +4290,133 @@
    "anomaly": false,
    "unit": "views/day",
    "note": "",
-   "source": "Wikimedia pageviews"
-  },
-  {
-   "family": "procurement",
-   "id": "news:\"body bags\" (order OR shortage OR stockpile)",
-   "label": "News share mentioning \"body bags\" (order OR shortage OR stockpile) (last 3 days vs 4 weeks)",
-   "value": 0.001,
-   "baseline": 0.0013,
-   "ratio": 0.77,
-   "anomaly": false,
-   "unit": "% of news",
-   "note": "",
-   "source": "GDELT"
-  },
-  {
-   "family": "military",
-   "id": "news:\"war risk premium\"",
-   "label": "News share mentioning \"war risk premium\" (last 3 days vs 4 weeks)",
-   "value": 0,
-   "baseline": 0.0001,
-   "ratio": null,
-   "anomaly": false,
-   "unit": "% of news",
-   "note": "",
-   "source": "GDELT"
-  },
-  {
-   "family": "control",
-   "id": "news:\"state of emergency\" extended",
-   "label": "News share mentioning \"state of emergency\" extended (last 3 days vs 4 weeks)",
-   "value": 0.0051,
-   "baseline": 0.0083,
-   "ratio": 0.61,
-   "anomaly": false,
-   "unit": "% of news",
-   "note": "",
-   "source": "GDELT"
-  },
-  {
-   "family": "control",
-   "id": "news:\"martial law\" extended",
-   "label": "News share mentioning \"martial law\" extended (last 3 days vs 4 weeks)",
-   "value": 0.0013,
-   "baseline": 0.0013,
-   "ratio": 1.0,
-   "anomaly": false,
-   "unit": "% of news",
-   "note": "",
-   "source": "GDELT"
-  },
-  {
-   "family": "energy",
-   "id": "news:\"rolling blackouts\"",
-   "label": "News share mentioning \"rolling blackouts\" (last 3 days vs 4 weeks)",
-   "value": 0.0012,
-   "baseline": 0.0022,
-   "ratio": 0.55,
-   "anomaly": false,
-   "unit": "% of news",
-   "note": "",
-   "source": "GDELT"
-  },
-  {
-   "family": "energy",
-   "id": "news:refinery (drone strike OR fire OR attack)",
-   "label": "News share mentioning refinery (drone strike OR fire OR attack) (last 3 days vs 4 weeks)",
-   "value": 0.1457,
-   "baseline": 0.1233,
-   "ratio": 1.18,
-   "anomaly": false,
-   "unit": "% of news",
-   "note": "",
-   "source": "GDELT"
+   "source": "Wikimedia pageviews",
+   "series": [
+    [
+     "2026-09-05",
+     39
+    ],
+    [
+     "2026-09-06",
+     34
+    ],
+    [
+     "2026-09-07",
+     47
+    ],
+    [
+     "2026-09-08",
+     48
+    ],
+    [
+     "2026-09-09",
+     63
+    ],
+    [
+     "2026-09-10",
+     48
+    ],
+    [
+     "2026-09-11",
+     43
+    ],
+    [
+     "2026-09-12",
+     20
+    ],
+    [
+     "2026-09-13",
+     43
+    ],
+    [
+     "2026-09-14",
+     77
+    ],
+    [
+     "2026-09-15",
+     46
+    ],
+    [
+     "2026-09-16",
+     97
+    ],
+    [
+     "2026-09-17",
+     81
+    ],
+    [
+     "2026-09-18",
+     55
+    ],
+    [
+     "2026-09-19",
+     34
+    ],
+    [
+     "2026-09-20",
+     44
+    ],
+    [
+     "2026-09-21",
+     64
+    ],
+    [
+     "2026-09-22",
+     50
+    ],
+    [
+     "2026-09-23",
+     60
+    ],
+    [
+     "2026-09-24",
+     65
+    ],
+    [
+     "2026-09-25",
+     40
+    ],
+    [
+     "2026-09-26",
+     27
+    ],
+    [
+     "2026-09-27",
+     29
+    ],
+    [
+     "2026-09-28",
+     50
+    ],
+    [
+     "2026-09-29",
+     47
+    ],
+    [
+     "2026-09-30",
+     51
+    ],
+    [
+     "2026-10-01",
+     54
+    ],
+    [
+     "2026-10-02",
+     39
+    ],
+    [
+     "2026-10-03",
+     30
+    ],
+    [
+     "2026-10-04",
+     43
+    ]
+   ],
+   "series_kind": "daily views (user agents, all access)",
+   "component": "restraint",
+   "means": "A jump in readers of a survival or war article means public anxiety is rising before or after news.",
+   "not_proves": "It does not prove any real danger: a film, a meme, school homework or a bot can drive page views."
   },
   {
    "family": "control",
@@ -468,13 +4428,16 @@
    "anomaly": null,
    "unit": "countries",
    "note": "Benin, Burkina Faso, Burundi, Cape Verde, Central African Republic, China, Congo, Federated States Of Micronesia, Haiti, Iraq, Lesotho, Lithuania, Malta, New Zealand, Nigeria",
-   "source": "IODA (Georgia Tech)"
+   "source": "IODA (Georgia Tech)",
+   "component": "institutions",
+   "means": "More countries with large internet outages may mean shutdowns, attacks on networks or grid failures.",
+   "not_proves": "It does not tell the cause: cable cuts, power cuts and censorship all look alike here."
   },
   {
    "family": "military",
    "id": "advisories:level4",
    "label": "US \"Do Not Travel\" (Level 4) countries",
-   "value": 24,
+   "value": 23,
    "baseline": null,
    "ratio": null,
    "anomaly": false,
@@ -497,7 +4460,6 @@
     "Libya",
     "Mali",
     "Niger",
-    "North Korea",
     "Russia",
     "Somalia",
     "South Sudan",
@@ -506,7 +4468,10 @@
     "Uganda",
     "Ukraine",
     "Yemen"
-   ]
+   ],
+   "component": "military",
+   "means": "A new country on the US Level 4 list means the US government sees a sharp rise in danger there.",
+   "not_proves": "It does not prove danger: advisories are political and change slowly."
   },
   {
    "family": "military",
@@ -518,36 +4483,718 @@
    "anomaly": false,
    "unit": "events",
    "note": "",
-   "source": "USGS"
+   "source": "USGS",
+   "component": "military",
+   "means": "A shallow quake near a nuclear test site could be a nuclear or large conventional test.",
+   "not_proves": "It does not prove a test: natural quakes happen there; only CTBTO or seismologists can tell."
   },
   {
    "family": "energy",
    "id": "food:fao-ffpi",
-   "label": "FAO Food Price Index (Mar-18)",
-   "value": 172.8,
-   "baseline": 171.6,
-   "ratio": 1.01,
+   "label": "FAO Food Price Index (2026-09)",
+   "value": 136.0,
+   "baseline": 128.6,
+   "ratio": 1.06,
    "anomaly": false,
    "unit": "index",
    "note": "baseline = same month a year ago",
-   "source": "FAO"
+   "source": "FAO",
+   "component": "economy",
+   "means": "Higher world food prices raise the risk of unrest in import-dependent poor countries.",
+   "not_proves": "It does not prove unrest: prices follow harvests, weather and currencies."
+  },
+  {
+   "family": "energy",
+   "id": "fires:refineries:European Russia",
+   "label": "Satellite fire detections near major refineries/oil terminals, European Russia (last 3 days)",
+   "value": 2.3,
+   "baseline": 4.4,
+   "ratio": 0.52,
+   "anomaly": false,
+   "unit": "detections/day",
+   "note": "13 sites, data to 2026-10-04",
+   "source": "NASA FIRMS (VIIRS S-NPP NRT)",
+   "series": [
+    [
+     "2026-09-05",
+     7
+    ],
+    [
+     "2026-09-06",
+     3
+    ],
+    [
+     "2026-09-07",
+     2
+    ],
+    [
+     "2026-09-08",
+     3
+    ],
+    [
+     "2026-09-09",
+     1
+    ],
+    [
+     "2026-09-10",
+     7
+    ],
+    [
+     "2026-09-11",
+     11
+    ],
+    [
+     "2026-09-12",
+     2
+    ],
+    [
+     "2026-09-13",
+     3
+    ],
+    [
+     "2026-09-14",
+     4
+    ],
+    [
+     "2026-09-15",
+     1
+    ],
+    [
+     "2026-09-16",
+     6
+    ],
+    [
+     "2026-09-17",
+     4
+    ],
+    [
+     "2026-09-18",
+     2
+    ],
+    [
+     "2026-09-19",
+     6
+    ],
+    [
+     "2026-09-20",
+     7
+    ],
+    [
+     "2026-09-21",
+     5
+    ],
+    [
+     "2026-09-22",
+     8
+    ],
+    [
+     "2026-09-23",
+     4
+    ],
+    [
+     "2026-09-24",
+     6
+    ],
+    [
+     "2026-09-25",
+     3
+    ],
+    [
+     "2026-09-26",
+     9
+    ],
+    [
+     "2026-09-27",
+     7
+    ],
+    [
+     "2026-09-28",
+     0
+    ],
+    [
+     "2026-09-29",
+     0
+    ],
+    [
+     "2026-09-30",
+     6
+    ],
+    [
+     "2026-10-01",
+     3
+    ],
+    [
+     "2026-10-02",
+     7
+    ],
+    [
+     "2026-10-03",
+     0
+    ],
+    [
+     "2026-10-04",
+     0
+    ]
+   ],
+   "series_kind": "daily count of VIIRS fire detections within ~15 km of the sites (incl. routine gas flares)",
+   "component": "energy",
+   "means": "More satellite fire detections near big refineries may mean strikes, sabotage or accidents at energy sites.",
+   "not_proves": "It does not prove an attack or the site hit: gas flaring, field burning and accidents also show as fires."
+  },
+  {
+   "family": "energy",
+   "id": "fires:refineries:Persian Gulf",
+   "label": "Satellite fire detections near major refineries/oil terminals, Persian Gulf (last 3 days)",
+   "value": 21.3,
+   "baseline": 21.7,
+   "ratio": 0.98,
+   "anomaly": false,
+   "unit": "detections/day",
+   "note": "6 sites, data to 2026-10-04",
+   "source": "NASA FIRMS (VIIRS S-NPP NRT)",
+   "series": [
+    [
+     "2026-09-05",
+     21
+    ],
+    [
+     "2026-09-06",
+     24
+    ],
+    [
+     "2026-09-07",
+     21
+    ],
+    [
+     "2026-09-08",
+     28
+    ],
+    [
+     "2026-09-09",
+     11
+    ],
+    [
+     "2026-09-10",
+     20
+    ],
+    [
+     "2026-09-11",
+     23
+    ],
+    [
+     "2026-09-12",
+     33
+    ],
+    [
+     "2026-09-13",
+     23
+    ],
+    [
+     "2026-09-14",
+     20
+    ],
+    [
+     "2026-09-15",
+     25
+    ],
+    [
+     "2026-09-16",
+     19
+    ],
+    [
+     "2026-09-17",
+     23
+    ],
+    [
+     "2026-09-18",
+     20
+    ],
+    [
+     "2026-09-19",
+     22
+    ],
+    [
+     "2026-09-20",
+     17
+    ],
+    [
+     "2026-09-21",
+     28
+    ],
+    [
+     "2026-09-22",
+     20
+    ],
+    [
+     "2026-09-23",
+     22
+    ],
+    [
+     "2026-09-24",
+     19
+    ],
+    [
+     "2026-09-25",
+     24
+    ],
+    [
+     "2026-09-26",
+     26
+    ],
+    [
+     "2026-09-27",
+     20
+    ],
+    [
+     "2026-09-28",
+     32
+    ],
+    [
+     "2026-09-29",
+     15
+    ],
+    [
+     "2026-09-30",
+     13
+    ],
+    [
+     "2026-10-01",
+     18
+    ],
+    [
+     "2026-10-02",
+     24
+    ],
+    [
+     "2026-10-03",
+     22
+    ],
+    [
+     "2026-10-04",
+     18
+    ]
+   ],
+   "series_kind": "daily count of VIIRS fire detections within ~15 km of the sites (incl. routine gas flares)",
+   "component": "energy",
+   "means": "More satellite fire detections near big refineries may mean strikes, sabotage or accidents at energy sites.",
+   "not_proves": "It does not prove an attack or the site hit: gas flaring, field burning and accidents also show as fires."
+  },
+  {
+   "family": "energy",
+   "id": "oil:brent-spot",
+   "label": "Brent spot price (2026-09-29)",
+   "value": 113.96,
+   "baseline": 105.3,
+   "ratio": 1.08,
+   "anomaly": false,
+   "unit": "$/bbl",
+   "note": "baseline = median of the previous 30 trading days",
+   "source": "US EIA",
+   "series": [
+    [
+     "2026-08-18",
+     95.29
+    ],
+    [
+     "2026-08-19",
+     92.37
+    ],
+    [
+     "2026-08-20",
+     94.0
+    ],
+    [
+     "2026-08-21",
+     96.92
+    ],
+    [
+     "2026-08-24",
+     92.71
+    ],
+    [
+     "2026-08-25",
+     88.24
+    ],
+    [
+     "2026-08-26",
+     87.77
+    ],
+    [
+     "2026-08-27",
+     90.18
+    ],
+    [
+     "2026-08-28",
+     89.75
+    ],
+    [
+     "2026-09-01",
+     96.02
+    ],
+    [
+     "2026-09-02",
+     97.59
+    ],
+    [
+     "2026-09-03",
+     100.52
+    ],
+    [
+     "2026-09-04",
+     102.24
+    ],
+    [
+     "2026-09-07",
+     104.47
+    ],
+    [
+     "2026-09-08",
+     106.12
+    ],
+    [
+     "2026-09-09",
+     109.51
+    ],
+    [
+     "2026-09-10",
+     120.98
+    ],
+    [
+     "2026-09-11",
+     118.06
+    ],
+    [
+     "2026-09-14",
+     121.25
+    ],
+    [
+     "2026-09-15",
+     130.8
+    ],
+    [
+     "2026-09-16",
+     127.84
+    ],
+    [
+     "2026-09-17",
+     121.18
+    ],
+    [
+     "2026-09-18",
+     119.66
+    ],
+    [
+     "2026-09-21",
+     116.15
+    ],
+    [
+     "2026-09-22",
+     114.89
+    ],
+    [
+     "2026-09-23",
+     117.45
+    ],
+    [
+     "2026-09-24",
+     120.92
+    ],
+    [
+     "2026-09-25",
+     116.01
+    ],
+    [
+     "2026-09-28",
+     119.97
+    ],
+    [
+     "2026-09-29",
+     113.96
+    ]
+   ],
+   "series_kind": "daily spot price FOB, $/bbl (trading days)",
+   "component": "economy",
+   "means": "A Brent price far above its recent level means markets price a supply risk.",
+   "not_proves": "It does not prove a physical shortage: speculation, OPEC decisions and the dollar move it too."
+  },
+  {
+   "family": "energy",
+   "id": "oil:stocks:WCESTUS1",
+   "label": "US commercial crude stocks (ex SPR), week to 2026-09-25",
+   "value": 427320.0,
+   "baseline": 423749.0,
+   "ratio": 1.01,
+   "anomaly": false,
+   "unit": "thousand bbl",
+   "note": "baseline = median of the previous 12 weeks; a fall is the warning",
+   "source": "US EIA",
+   "series": [
+    [
+     "2026-03-06",
+     443103.0
+    ],
+    [
+     "2026-03-13",
+     449259.0
+    ],
+    [
+     "2026-03-20",
+     456185.0
+    ],
+    [
+     "2026-03-27",
+     461636.0
+    ],
+    [
+     "2026-04-03",
+     464717.0
+    ],
+    [
+     "2026-04-10",
+     463804.0
+    ],
+    [
+     "2026-04-17",
+     465729.0
+    ],
+    [
+     "2026-04-24",
+     459495.0
+    ],
+    [
+     "2026-05-01",
+     457182.0
+    ],
+    [
+     "2026-05-08",
+     452876.0
+    ],
+    [
+     "2026-05-15",
+     445013.0
+    ],
+    [
+     "2026-05-22",
+     441686.0
+    ],
+    [
+     "2026-05-29",
+     433712.0
+    ],
+    [
+     "2026-06-05",
+     426485.0
+    ],
+    [
+     "2026-06-12",
+     418222.0
+    ],
+    [
+     "2026-06-19",
+     412134.0
+    ],
+    [
+     "2026-06-26",
+     408359.0
+    ],
+    [
+     "2026-07-03",
+     411357.0
+    ],
+    [
+     "2026-07-10",
+     409665.0
+    ],
+    [
+     "2026-07-17",
+     411675.0
+    ],
+    [
+     "2026-07-24",
+     404508.0
+    ],
+    [
+     "2026-07-31",
+     406987.0
+    ],
+    [
+     "2026-08-07",
+     424410.0
+    ],
+    [
+     "2026-08-14",
+     428815.0
+    ],
+    [
+     "2026-08-21",
+     428910.0
+    ],
+    [
+     "2026-08-28",
+     424460.0
+    ],
+    [
+     "2026-09-04",
+     424069.0
+    ],
+    [
+     "2026-09-11",
+     423429.0
+    ],
+    [
+     "2026-09-18",
+     426398.0
+    ],
+    [
+     "2026-09-25",
+     427320.0
+    ]
+   ],
+   "series_kind": "weekly ending stocks, thousand barrels (one point per week, not daily)",
+   "component": "energy",
+   "means": "Falling US crude or diesel stocks mean a tighter buffer against supply shocks.",
+   "not_proves": "It does not prove a crisis: stocks move with the season, refinery runs and exports."
+  },
+  {
+   "family": "energy",
+   "id": "oil:stocks:WDISTUS1",
+   "label": "US distillate (diesel) stocks, week to 2026-09-25",
+   "value": 105180.0,
+   "baseline": 107154.0,
+   "ratio": 0.98,
+   "anomaly": false,
+   "unit": "thousand bbl",
+   "note": "baseline = median of the previous 12 weeks; a fall is the warning",
+   "source": "US EIA",
+   "series": [
+    [
+     "2026-03-06",
+     119431.0
+    ],
+    [
+     "2026-03-13",
+     116904.0
+    ],
+    [
+     "2026-03-20",
+     119936.0
+    ],
+    [
+     "2026-03-27",
+     117825.0
+    ],
+    [
+     "2026-04-03",
+     114681.0
+    ],
+    [
+     "2026-04-10",
+     111559.0
+    ],
+    [
+     "2026-04-17",
+     108132.0
+    ],
+    [
+     "2026-04-24",
+     103638.0
+    ],
+    [
+     "2026-05-01",
+     102344.0
+    ],
+    [
+     "2026-05-08",
+     102534.0
+    ],
+    [
+     "2026-05-15",
+     102906.0
+    ],
+    [
+     "2026-05-22",
+     100799.0
+    ],
+    [
+     "2026-05-29",
+     102301.0
+    ],
+    [
+     "2026-06-05",
+     102101.0
+    ],
+    [
+     "2026-06-12",
+     103052.0
+    ],
+    [
+     "2026-06-19",
+     106116.0
+    ],
+    [
+     "2026-06-26",
+     108599.0
+    ],
+    [
+     "2026-07-03",
+     103619.0
+    ],
+    [
+     "2026-07-10",
+     108175.0
+    ],
+    [
+     "2026-07-17",
+     109570.0
+    ],
+    [
+     "2026-07-24",
+     110632.0
+    ],
+    [
+     "2026-07-31",
+     107159.0
+    ],
+    [
+     "2026-08-07",
+     107149.0
+    ],
+    [
+     "2026-08-14",
+     105619.0
+    ],
+    [
+     "2026-08-21",
+     103391.0
+    ],
+    [
+     "2026-08-28",
+     104187.0
+    ],
+    [
+     "2026-09-04",
+     106274.0
+    ],
+    [
+     "2026-09-11",
+     107859.0
+    ],
+    [
+     "2026-09-18",
+     107431.0
+    ],
+    [
+     "2026-09-25",
+     105180.0
+    ]
+   ],
+   "series_kind": "weekly ending stocks, thousand barrels (one point per week, not daily)",
+   "component": "energy",
+   "means": "Falling US crude or diesel stocks mean a tighter buffer against supply shocks.",
+   "not_proves": "It does not prove a crisis: stocks move with the season, refinery runs and exports."
   }
  ],
  "errors": [
-  "gdelt \"Toyota Hilux\" (army OR militi: HTTPError",
-  "gdelt tourniquets (shortage OR order: HTTPError",
-  "gdelt \"potassium iodide\" (stock OR d: HTTPError",
-  "gdelt \"satellite phones\" (ban OR sei: HTTPError",
-  "gdelt \"field hospital\" (deployed OR : HTTPError",
-  "gdelt \"blood donation\" (urgent OR ap: HTTPError",
-  "gdelt \"ordered departure\" embassy: HTTPError",
-  "gdelt \"airspace closed\": HTTPError",
-  "gdelt \"GPS jamming\": HTTPError",
-  "gdelt reservists (called up OR mobil: HTTPError",
-  "gdelt \"internet shutdown\": HTTPError",
-  "gdelt \"exit ban\" OR \"banned from lea: HTTPError",
-  "gdelt \"VPN\" (ban OR blocked): HTTPError",
-  "gdelt \"fuel rationing\": HTTPError",
-  "gdelt \"undersea cable\" (cut OR damag: HTTPError"
+  "gdelt: skipped (PULSE_NO_GDELT set)"
  ]
 }
