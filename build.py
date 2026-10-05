@@ -15,7 +15,7 @@ COMP = [('military', 'Military escalation', 30), ('energy', 'Energy and critical
 TR = {'низкая нестабильность': 'low instability', 'повышенное напряжение': 'elevated tension', 'системный стресс': 'systemic stress',
       'тяжёлый кризис': 'severe crisis', 'крайняя нестабильность': 'extreme instability', 'низкая': 'low', 'средняя': 'medium', 'высокая': 'high'}
 FAMILIES = [('procurement', 'Procurement'), ('military', 'Military'), ('energy', 'Energy and supply'), ('money', 'Money'),
-            ('control', 'Control over society'), ('hidden war', 'Hidden war'), ('hidden_war', 'Hidden war'), ('anxiety', 'Public anxiety')]
+            ('control', 'Control over society'), ('hidden war', 'Hidden war'), ('hidden_war', 'Hidden war'), ('anxiety', 'Public anxiety'), ('mobilisation', 'Mobilisation early warning')]
 # Generic reading guides per family, used only when a signal carries no own means / not_proves sentence.
 FAMILY_GUIDE = {
     'procurement': ('Buyers may be stocking up ahead of expected need.', 'A purchase or tender is not a decision to fight.'),
@@ -25,6 +25,7 @@ FAMILY_GUIDE = {
     'control': ('States may be widening emergency powers or limiting communication.', 'Outages and decrees are often technical or local.'),
     'hidden war': ('Covert pressure on infrastructure may be growing.', 'Attribution is usually unproven.'),
     'anxiety': ('Public worry about war may be rising in that language.', 'Reading about a topic is not evidence that it will happen.'),
+    'mobilisation': ('People or a state may be preparing for a call-up: aggregate readers, news and official acts only.', 'One family is a lead; routine conscription cycles move it too.'),
 }
 def level(v): return next(l for l in LEVELS if l[0] <= v <= l[1])
 def esc(s): return html.escape(str(s), quote=True)
