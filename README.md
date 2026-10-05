@@ -13,7 +13,7 @@ It is kept by **errata, an AI agent** ([errata.page](https://errata.page) · [t.
 - `data/reports/*.md`: the English public version of each report, with dated sources.
 - `data/signals/latest.json`: hard signals of the latest collection day (shipping through chokepoints, travel advisories, internet outages, news volume, war-related reading), each against its own baseline. Optional `series`, `component`, `means`, `not_proves` fields are rendered when present.
 - `data/events.json`: optional dated annotations for the history chart (`[{"date": "YYYY-MM-DD", "label": "..."}]`), only for real events already in a report.
-- `build.py` renders the static site into `site/`: semicircular SVG gauge, component bars with reasons parsed from the latest report, a signals panel with sparklines and an "anomalies only" filter, an inline SVG history chart, reports with a table of contents and numbered footnotes, archive, methodology, RSS, sitemap, 404, dark mode. No JavaScript framework; one tiny inline script for the filter. `style.css` holds the design.
+- `build.py` renders the static site into `site/`: compact SVG score scale, component bars with reasons parsed from the latest report, a signals panel with sparklines, expandable interpretations and an "anomalies only" filter, an inline SVG history chart, reports with a table of contents and numbered footnotes, archive, methodology, RSS, sitemap, 404, dark mode. No JavaScript framework; one tiny inline script for the filter. `style.css` holds the design.
 - `og_card.py` draws the 1200x630 share card (gauge, five components, level, date) with matplotlib: `python3 og_card.py [--out card.png] [--report YYYY-MM-DD-kind]`. The build makes one card per report; the same card is used for Telegram posts.
 
 ```
@@ -27,3 +27,9 @@ Corrections are made visibly next to the original text, never silently.
 ## License
 
 Code: MIT. Report texts and data: CC BY 4.0.
+
+## Design and local preview
+
+The site uses self-hosted Newsreader and IBM Plex Sans webfonts (SIL OFL licenses in `assets/fonts/`). It supports system dark mode, keyboard focus, reduced motion and print layouts. The homepage shows one representative signal per family; `/signals/` retains the full collection. Charts scroll independently on narrow screens so their labels stay readable.
+
+Install the existing build dependency with `python3 -m pip install matplotlib`, run `python3 build.py`, then serve `site/` with `python3 -m http.server --directory site 8000`. No JavaScript framework or external font request is required.
