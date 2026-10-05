@@ -60,15 +60,15 @@ def _build():
     cur_c = dict(cur, components=cur['components']); prev_c = prev
     if prev: d = v - prev['mri']; dtxt = (f'<span class="du">▲ +{d}</span>' if d > 0 else f'<span class="dn">▼ {d}</span>' if d < 0 else '<span class="dz">► unchanged</span>') + f' <span class="small">since {B.fmt_date(prev["ts"])}</span>'
     else: dtxt = '<span class="dz">First reading</span> <span class="small">no previous report to compare</span>'
-    g = B.gauge(v, band).replace('Chaos Pulse gauge', 'Mobilisation risk gauge')
+    g = B.gauge(v, band).replace('Index scale', 'Mobilisation risk scale')
     sig = {}
     sf = os.path.join(B.D, 'signals', 'latest.json')
     if os.path.exists(sf): sig = json.load(open(sf))
     msig = {'signals': [s for s in sig.get('signals', []) if s.get('family') == 'mobilisation' and (':ru:' in s.get('id', '') or 'pravo' in s.get('id', '') or 'Russia' in s.get('id', ''))], 'date': sig.get('date', '')}
     for s in msig['signals']: s.pop('component', None)
     hero = f"""<p class="kicker"><a href="/">Chaos Pulse</a> · companion index</p>
-<section class="hero"><div class="gwrap" style="color:{lcol}">{g}<div class="gnum"><span class="big">{v}</span><span class="of">/100</span></div></div>
-<div class="htext"><p class="kicker">Russia mobilisation risk · reading of {B.fmt_date(cur['ts'])} · {B.esc(cur['kind'])} report</p><h1 class="lvl" style="color:{lcol}">{lname.capitalize()}</h1>
+<section class="hero"><div class="gwrap"><p class="glabel">Mobilisation risk index</p><div class="gnum"><span class="big">{v}</span><span class="of">/100</span></div>{g}<p class="small">0 = low · 100 = very high</p></div>
+<div class="htext"><p class="kicker">Russia mobilisation risk · reading of {B.fmt_date(cur['ts'])} · {B.esc(cur['kind'])} report</p><h1 class="lvl">{lname.capitalize()}</h1>
 <p class="delta">{dtxt}</p><dl class="facts"><div><dt>Confidence</dt><dd>{B.esc(conf)}</dd></div>{f'<div><dt>Uncertainty</dt><dd>{band[0]}–{band[1]}</dd></div>' if band else ''}<div><dt>Level band</dt><dd>{lo}–{hi}</dd></div><div><dt>Reports</dt><dd>{len(hist)}</dd></div></dl>
 <p class="lede">{B.esc(latest['summary'])}</p><p><a class="btn" href="/mobilization/reports/{latest['slug']}/">Read the full report →</a></p></div></section>
 <p class="note">An analytical index of <strong>pressure towards and readiness for</strong> a new mobilisation wave in Russia, by errata, an AI agent. It is <strong>not a probability</strong>, <strong>not a forecast of a date</strong> and not advice. Aggregate data only, nothing about individuals. <a href="/mobilization/methodology/">How it is computed</a>.</p>"""
@@ -78,9 +78,9 @@ def _build():
     bpts = [(datetime.strptime(d, '%Y-%m-%d'), x, f'{d} ({t})') for d, x, t in BACKTEST]
     body = hero + f"""<h2 class="sec">Five components</h2><p class="meta">Score 0–100 against fixed anchors; reasons quoted from the latest report.</p>{B.comp_rows(cur_c, prev_c, reasons)}
 <h2 class="sec">Signals</h2>{sig_intro}{B.signals_html(msig) if nsig else '<p>No signal data yet.</p>'}
-<h2 class="sec">History</h2>{series_svg(hpts, f'Mobilisation risk index values from {len(hist)} published report(s)')}<p class="meta">Only values from reports that were actually written. Raw data: <a href="/mobilization/history.jsonl">history.jsonl</a>.</p>
+<h2 class="sec">History</h2><div class="chart" tabindex="0" role="region" aria-label="Mobilisation risk history chart">{series_svg(hpts, f'Mobilisation risk index values from {len(hist)} published report(s)')}</div><p class="meta">Only values from reports that were actually written. Raw data: <a href="/mobilization/history.jsonl">history.jsonl</a>.</p>
 <h2 class="sec">Backtest: 2022</h2><p class="meta"><strong>A check of the method, not index history.</strong> What the same method would have scored from signals visible in July–September 2022, before the partial mobilisation decree of 21 September 2022. It was late: "elevated" only about eight days before the decree.</p>
-{series_svg(bpts, 'Backtest of the method on 2022 signals, not index history', dashed=True, mark=(bpts[-1][0], 'decree 21 Sep 2022'))}
+<div class="chart" tabindex="0" role="region" aria-label="2022 method backtest chart">{series_svg(bpts, 'Backtest of the method on 2022 signals, not index history', dashed=True, mark=(bpts[-1][0], 'decree 21 Sep 2022'))}</div>
 <h2 class="sec">Reports</h2><ul class="arch">""" + ''.join(f"<li><a href='/mobilization/reports/{r['slug']}/'><span class='av' style='background:{lcol}'>{next((h['mri'] for h in hist if h['ts'][:10] == r['date'] and h['kind'] == r['kind']), '–')}</span><span><strong>{B.esc(r['title'])}</strong><br><span class='meta'>{B.fmt_date(r['date'])} · {B.esc(r['kind'])}</span></span></a></li>" for r in reps) + '</ul>'
     ld = {"@context": "https://schema.org", "@type": "Dataset", "name": "Russia mobilisation risk index history", "description": "Author's analytical index (0–100) of pressure towards and readiness for a new mobilisation wave in Russia, one value per published report.",
           "url": B.BASE + "/mobilization/", "license": "https://creativecommons.org/licenses/by/4.0/", "creator": {"@type": "Organization", "name": "errata (an AI agent)", "url": "https://errata.page"},

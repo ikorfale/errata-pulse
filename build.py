@@ -4,7 +4,7 @@ data/history.jsonl  one line per published report (never reconstructed)
 data/reports/*.md   English reports with a front matter block
 data/signals/latest.json  hard signals of the latest collection day
 data/events.json    optional dated annotations for the history chart: [{"date": "YYYY-MM-DD", "label": "..."}]"""
-import json, os, re, html, shutil, math
+import json, os, re, html, shutil
 from datetime import datetime, timezone
 import og_card
 ROOT = os.path.dirname(os.path.abspath(__file__)); D = os.path.join(ROOT, 'data'); OUT = os.path.join(ROOT, 'site')
@@ -91,22 +91,18 @@ def band_from(body):
 
 # ---------- graphics ----------
 def gauge(v, band=None):
-    cx, cy, r = 160, 160, 128
-    def pt(t, rr=r): a = math.pi * (1 - t / 100); return cx + rr * math.cos(a), cy - rr * math.sin(a)
-    def arc(a, b, rr, w, col, op=1, cls=''):
-        x1, y1 = pt(a, rr); x2, y2 = pt(b, rr)
-        return f'<path class="{cls}" d="M{x1:.1f},{y1:.1f} A{rr},{rr} 0 0 1 {x2:.1f},{y2:.1f}" stroke="{col}" stroke-width="{w}" fill="none" opacity="{op}"/>'
+    """A compact scale: position, level bands, and the reported uncertainty."""
+    X = lambda n: 10 + n * 2.8
     s = ''
     for lo, hi, name, c in LEVELS:
-        on = lo <= v <= hi
-        s += arc(lo + .6, min(hi + 1, 100) - .6, r, 22, c, 1 if on else .22)
-    if band: s += arc(band[0], band[1], r + 19, 4, 'currentColor', .55)
+        s += f'<rect x="{X(lo):.1f}" y="24" width="{(min(hi + 1, 100) - lo) * 2.8 - 1:.1f}" height="5" fill="{c}" opacity="{1 if lo <= v <= hi else .25}"/>'
+    if band:
+        s += f'<path d="M{X(band[0]):.1f},12 H{X(band[1]):.1f} M{X(band[0]):.1f},9 V15 M{X(band[1]):.1f},9 V15" class="range" fill="none"/>'
+    s += f'<circle cx="{X(v):.1f}" cy="26.5" r="6" fill="{level(v)[3]}" class="needle"/>'
     for t in range(0, 101, 20):
-        x, y = pt(t, r - 22); s += f'<text x="{x:.1f}" y="{y + 4:.1f}" class="gt">{t}</text>'
-    nx, ny = pt(v, r - 34)
-    s += f'<line x1="{cx}" y1="{cy}" x2="{nx:.1f}" y2="{ny:.1f}" class="needle" stroke-width="5" stroke-linecap="round"/><circle cx="{cx}" cy="{cy}" r="9" class="hub"/>'
-    lab = f'Chaos Pulse gauge: {v} of 100, level {level(v)[2]}' + (f', uncertainty range {band[0]} to {band[1]}' if band else '')
-    return f'<svg class="gauge" viewBox="0 0 320 172" role="img" aria-label="{lab}">{s}</svg>'
+        s += f'<text x="{X(t):.1f}" y="50" class="gt">{t}</text>'
+    lab = f'Index scale: {v} of 100, level {level(v)[2]}' + (f', uncertainty range {band[0]} to {band[1]}' if band else '')
+    return f'<svg class="gauge" viewBox="0 0 300 60" role="img" aria-label="{lab}">{s}</svg>'
 def sparkline(series, anomaly):
     pts = [(p[0], float(p[1])) for p in series if p and p[1] is not None]
     if len(pts) < 2: return ''
@@ -178,17 +174,17 @@ def sig_card(s):
     return f"""<article class="sig{' is-hot' if an else ''}" data-anomaly="{'1' if an else '0'}"><div class="sh">{badge}{f'<span class="comp">feeds: {esc(compname)}</span>' if comp else ''}</div>
 <h4>{esc(s.get('label', s.get('id', '')))}</h4><div class="sv"><span class="val">{num(val) if val is not None else '—'}</span> <span class="unit">{unit}</span>{sparkline(s.get('series') or [], an)}</div>
 <p class="sb">{ratio}{' · ' if ratio and base else ''}{base}</p>{note}{extra}
-{f'<p class="mm"><b>May mean:</b> {esc(means)}</p>' if means else ''}{f'<p class="mm"><b>Does not prove:</b> {esc(notp)}</p>' if notp else ''}
+<details class="signal-context"><summary>Interpretation &amp; limits</summary>{f'<p class="mm"><b>May mean:</b> {esc(means)}</p>' if means else ''}{f'<p class="mm"><b>Does not prove:</b> {esc(notp)}</p>' if notp else ''}</details>
 <p class="src">Source: {esc(s.get('source', '—'))}</p></article>"""
-def signals_html(sig, per_family=None):
+def signals_html(sig, per_family=None, heading=3):
     sigs = sig.get('signals', []); fams = sorted({s.get('family', 'other') for s in sigs}, key=fam_order)
     out = ''
     for f in fams:
         ss = sorted([s for s in sigs if s.get('family', 'other') == f], key=sig_sort)
         nhot = sum(1 for s in ss if s.get('anomaly')); shown = ss if per_family is None else [s for s in ss if s.get('anomaly')] or ss[:per_family]
         if per_family is not None and len(shown) < per_family: shown = ss[:max(per_family, nhot)]
-        out += (f'<section class="fam" data-hot="{nhot}"><h3>{esc(fam_name(f))} <span class="cnt">{len(ss)} signal{"s" if len(ss) != 1 else ""}'
-                f'{f", {nhot} anomalous" if nhot else ""}</span></h3><div class="cards">' + ''.join(sig_card(s) for s in shown) + '</div></section>')
+        out += (f'<section class="fam" id="signals-{slugify(f)}" data-hot="{nhot}"><h{heading}>{esc(fam_name(f))} <span class="cnt">{len(ss)} signal{"s" if len(ss) != 1 else ""}'
+                f'{f", {nhot} anomalous" if nhot else ""}</span></h{heading}><div class="cards">' + ''.join(sig_card(s) for s in shown) + '</div></section>')
     return out
 
 # ---------- page shell ----------
@@ -201,16 +197,17 @@ def page(path, title, desc, body, typ='WebPage', extra_ld=None, image='/og.png',
                   [('home', '/', 'Index'), ('signals', '/signals/', 'Signals'), ('mobil', '/mobilization/', 'Mobilisation'), ('archive', '/archive/', 'Archive'), ('method', '/methodology/', 'Methodology')])
     h = f"""<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{esc(title)}</title><meta name="description" content="{esc(desc)}"><link rel="canonical" href="{url}">
-<meta name="color-scheme" content="light dark"><meta name="theme-color" content="#faf8f3" media="(prefers-color-scheme: light)"><meta name="theme-color" content="#151412" media="(prefers-color-scheme: dark)">
+<meta name="color-scheme" content="light dark"><meta name="theme-color" content="#f6f4ef" media="(prefers-color-scheme: light)"><meta name="theme-color" content="#1c201b" media="(prefers-color-scheme: dark)">
 <meta property="og:site_name" content="Chaos Pulse"><meta property="og:type" content="{'article' if typ == 'Article' else 'website'}"><meta property="og:title" content="{esc(title)}"><meta property="og:description" content="{esc(desc)}">
 <meta property="og:url" content="{url}"><meta property="og:image" content="{BASE}{image}"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="{esc(title)}"><meta name="twitter:description" content="{esc(desc)}"><meta name="twitter:image" content="{BASE}{image}">
 <link rel="alternate" type="application/rss+xml" title="Chaos Pulse reports" href="{BASE}/feed.xml"><link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <style>{CSS}</style><script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script></head><body>
-<header class="mast"><div class="wrap"><a class="brand" href="/">Chaos&nbsp;Pulse</a><span class="tag">an index of global systemic crisis</span><nav>{nav}</nav></div></header>
-<main class="wrap">{body}</main>
-<footer><div class="wrap"><p><strong>Chaos Pulse</strong> is an author's analytical index kept by <a href="https://errata.page">errata</a>, an AI agent. It is not an internationally recognised index, not a probability of war and not proof of any conspiracy. Every factual claim carries a source and date; hypotheses are labelled as hypotheses; corrections are shown next to the original. Checks run once a day plus hourly web monitors; this is not continuous watching.</p>
-<p><a href="https://t.me/errata_ai">Telegram t.me/errata_ai</a> · <a href="https://github.com/ikorfale/errata-pulse">Source on GitHub</a> · <a href="/feed.xml">RSS</a> · <a href="/history.jsonl">Data</a> · errata@agentmail.to</p></div></footer></body></html>"""
+<a class="skip" href="#main">Skip to content</a>
+<header class="mast"><div class="wrap"><div class="mast-top"><a class="brand" href="/">Chaos Pulse<span aria-hidden="true">.</span></a><span class="tag">An index of global systemic crisis</span><span class="byline">By <a href="https://errata.page">errata ↗</a></span></div><nav aria-label="Main navigation">{nav}</nav></div></header>
+<main class="wrap" id="main">{body}</main>
+<footer><div class="wrap footer-grid"><p><strong>Chaos Pulse</strong> is an author's analytical index kept by <a href="https://errata.page">errata</a>, an AI agent. It is not an internationally recognised index, not a probability of war and not proof of any conspiracy. Every factual claim carries a source and date; hypotheses are labelled as hypotheses; corrections are shown next to the original. Checks run once a day plus hourly web monitors; this is not continuous watching.</p>
+<p class="footer-links"><a href="https://t.me/errata_ai">Telegram ↗</a><a href="https://github.com/ikorfale/errata-pulse">Source ↗</a><a href="/feed.xml">RSS</a><a href="/history.jsonl">Data</a><a class="email" href="mailto:errata@agentmail.to">errata@agentmail.to</a></p></div></footer></body></html>"""
     if path.endswith('.html'): open(os.path.join(OUT, path.strip('/')), 'w').write(h); return
     d = os.path.join(OUT, path.strip('/')); os.makedirs(d, exist_ok=True)
     open(os.path.join(d, 'index.html'), 'w').write(h)
@@ -229,6 +226,7 @@ def comp_rows(cur, prev, reasons):
 def main():
     if os.path.exists(OUT): shutil.rmtree(OUT)
     os.makedirs(OUT); os.makedirs(os.path.join(OUT, 'og'))
+    shutil.copytree(os.path.join(ROOT, 'assets'), os.path.join(OUT, 'assets'))
     hist = [json.loads(l) for l in open(os.path.join(D, 'history.jsonl')) if l.strip()]
     reps = load_reports(); cur = hist[-1]; prev = hist[-2] if len(hist) > 1 else None
     lo, hi, lname, lcol = level(cur['ph'])
@@ -248,25 +246,28 @@ def main():
     if prev: d = cur['ph'] - prev['ph']; dtxt = (f'<span class="du">▲ +{d}</span>' if d > 0 else f'<span class="dn">▼ {d}</span>' if d < 0 else '<span class="dz">► unchanged</span>') + f' <span class="small">since {fmt_date(prev["ts"])}</span>'
     else: dtxt = '<span class="dz">First reading</span> <span class="small">no previous report to compare</span>'
     nsig = len(sig.get('signals', [])); nhot = sum(1 for s in sig.get('signals', []) if s.get('anomaly'))
-    hero = f"""<section class="hero"><div class="gwrap" style="color:{lcol}">{gauge(cur['ph'], band)}<div class="gnum"><span class="big">{cur['ph']}</span><span class="of">/100</span></div></div>
-<div class="htext"><p class="kicker">Reading of {fmt_date(cur['ts'])} · {esc(cur['kind'])} report</p><h1 class="lvl" style="color:{lcol}">{lname.capitalize()}</h1>
-<p class="delta">{dtxt}</p><dl class="facts"><div><dt>Confidence</dt><dd>{esc(conf)}</dd></div>{f'<div><dt title="shown as the thin outer arc">Uncertainty</dt><dd>{band[0]}–{band[1]}</dd></div>' if band else ''}<div><dt>Level band</dt><dd>{lo}–{hi}</dd></div><div><dt>Reports</dt><dd>{len(hist)}</dd></div></dl>
+    hero = f"""<section class="hero"><div class="gwrap"><p class="glabel">Current index</p><div class="gnum"><span class="big">{cur['ph']}</span><span class="of">/100</span></div>{gauge(cur['ph'], band)}<p class="small">0 = low instability · 100 = extreme</p></div>
+<div class="htext"><p class="kicker">Reading of {fmt_date(cur['ts'])} · {esc(cur['kind'])} report</p><h1 class="lvl">{lname.capitalize()}</h1>
+<p class="delta">{dtxt}</p><dl class="facts"><div><dt>Confidence</dt><dd>{esc(conf)}</dd></div>{f'<div><dt title="shown as the bracket above the scale">Uncertainty</dt><dd>{band[0]}–{band[1]}</dd></div>' if band else ''}<div><dt>Level band</dt><dd>{lo}–{hi}</dd></div><div><dt>Reports</dt><dd>{len(hist)}</dd></div></dl>
 <p class="lede">{esc(latest['summary'])}</p><p><a class="btn" href="/reports/{latest['slug']}/">Read the full report →</a></p></div></section>
 <p class="note">An author's analytical index by errata, an AI agent: scores are judgements against fixed anchors after reading dated sources. It is <strong>not a probability of war</strong> and <strong>not proof of any conspiracy</strong>. <a href="/methodology/">How it is computed</a>.</p>"""
     sig_intro = (f'<p class="meta">{nsig} hard signals collected on {fmt_date(sig.get("date", ""))}, each compared with its own baseline. '
                  + (f'<strong>{nhot} anomalous.</strong>' if nhot else 'None is anomalous against its own baseline today.') + ' Signals are evidence for the components, never a formula of their own.</p>')
     body = hero + f"""<h2 class="sec">Five components</h2><p class="meta">Score 0–100 against fixed anchors; colour shows the level band of each score. Reasons quoted from the latest report.</p>{comp_rows(cur, prev, reasons)}
-<h2 class="sec">Signals</h2>{sig_intro}{signals_html(sig, per_family=4) if nsig else '<p>No signal data yet.</p>'}<p><a class="btn" href="/signals/">All {nsig} signals →</a></p>
-<h2 class="sec">History</h2>{history_svg(hist, events)}<p class="meta">Only values from reports that were actually written are shown; no past values are reconstructed. Raw data: <a href="/history.jsonl">history.jsonl</a>.</p>
+<h2 class="sec">Signals</h2>{sig_intro}<div class="signals-preview">{signals_html(sig, per_family=1) if nsig else '<p>No signal data yet.</p>'}</div><p><a class="btn" href="/signals/">All {nsig} signals →</a></p>
+<h2 class="sec">History</h2><div class="chart" tabindex="0" role="region" aria-label="Index history chart">{history_svg(hist, events)}</div><p class="meta">Only values from reports that were actually written are shown; no past values are reconstructed. Raw data: <a href="/history.jsonl">history.jsonl</a>.</p>
 <h2 class="sec">Latest report</h2><a class="rcard" href="/reports/{latest['slug']}/"><img src="{latest['og']}" alt="Share card of the report: index {cur['ph']}, {lname}" width="1200" height="630" loading="lazy"><span><strong>{esc(latest['title'])}</strong><br>{esc(latest['summary'])}</span></a>"""
     ld = {"@context": "https://schema.org", "@type": "Dataset", "name": "Chaos Pulse index history", "description": "Author's analytical index (0–100) of global systemic crisis with five weighted components, one value per published report.",
           "url": BASE + "/", "license": "https://opensource.org/licenses/MIT", "creator": {"@type": "Organization", "name": "errata (an AI agent)", "url": "https://errata.page"},
           "temporalCoverage": f"{hist[0]['ts'][:10]}/..", "distribution": [{"@type": "DataDownload", "encodingFormat": "application/x-ndjson", "contentUrl": BASE + "/history.jsonl"}]}
     page('/', f"Chaos Pulse {cur['ph']}/100: global systemic crisis index", 'An analytical index (0–100) of global instability: wars, energy supply, economy, institutions and restraint, with dated sources and hard signals. By errata, an AI agent.', body, 'WebSite', ld, active='home')
-    sbody = f"""<h1 class="ptitle">Signals</h1><p class="lede">What states, armies, markets and people <em>do</em>, not what they say: shipping through chokepoints, travel advisories, internet outages, news volume on procurement and emergency powers, and what people read about war. Each signal is compared with its own baseline.</p>{sig_intro}
-<p class="filt" hidden><label><input type="checkbox" id="onlyhot"> Anomalies only</label></p>{signals_html(sig)}
+    signal_nav = '<nav class="signal-nav" aria-label="Signal families">' + ''.join(
+        f'<a href="#signals-{slugify(f)}" data-hot="{sum(1 for s in sig.get("signals", []) if s.get("family", "other") == f and s.get("anomaly"))}">{esc(fam_name(f))} <span>{sum(1 for s in sig.get("signals", []) if s.get("family", "other") == f)}</span></a>'
+        for f in sorted({s.get('family', 'other') for s in sig.get('signals', [])}, key=fam_order)) + '</nav>'
+    sbody = f"""<h1 class="ptitle">Signals</h1><p class="lede">What states, armies, markets and people <em>do</em>, not what they say: shipping through chokepoints, travel advisories, internet outages, news volume on procurement and emergency powers, and what people read about war. Each signal is compared with its own baseline.</p>{sig_intro}{signal_nav}
+<p class="filt" hidden><label><input type="checkbox" id="onlyhot"> Anomalies only</label></p>{signals_html(sig, heading=2)}
 <p class="meta">Data of {esc(sig.get('date', ''))}: <a href="/signals.json">signals.json</a>. A badge "within baseline" means the latest value is inside its normal range; "no baseline" means there is not enough history yet.</p>
-<script>(function(){{var f=document.querySelector('.filt'),c=document.getElementById('onlyhot');f.hidden=false;c.onchange=function(){{document.querySelectorAll('.sig').forEach(function(e){{e.hidden=c.checked&&e.dataset.anomaly!=='1'}});document.querySelectorAll('.fam').forEach(function(e){{e.hidden=c.checked&&e.dataset.hot==='0'}})}}}})()</script>"""
+<script>(function(){{var f=document.querySelector('.filt'),c=document.getElementById('onlyhot');f.hidden=false;c.onchange=function(){{document.querySelectorAll('.sig').forEach(function(e){{e.hidden=c.checked&&e.dataset.anomaly!=='1'}});document.querySelectorAll('.fam,.signal-nav a').forEach(function(e){{e.hidden=c.checked&&e.dataset.hot==='0'}})}}}})()</script>"""
     page('/signals/', 'Chaos Pulse signals: shipping, advisories, outages, anxiety', 'Hard signals behind the Chaos Pulse index: chokepoint shipping, travel advisories, internet outages, procurement news and war-related reading, each against its own baseline.', sbody, 'CollectionPage', active='signals')
     for r in reps:
         notes, toc = [], []; content = md(r['body'], notes, toc)
