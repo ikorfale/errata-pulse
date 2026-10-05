@@ -1,6 +1,6 @@
 {
  "date": "2026-10-05",
- "collected_at": 1791205609,
+ "collected_at": 1791239849,
  "signals": [
   {
    "family": "energy",
@@ -4420,104 +4420,6 @@
   },
   {
    "family": "procurement",
-   "id": "news:\"Toyota Hilux\" (army OR militia OR military)",
-   "label": "News share mentioning \"Toyota Hilux\" (army OR militia OR military) (last 3 days vs 4 weeks)",
-   "value": 0.0003,
-   "baseline": 0.0001,
-   "ratio": 3.0,
-   "anomaly": true,
-   "unit": "% of news",
-   "note": "",
-   "source": "GDELT",
-   "series": [
-    [
-     "2026-09-06",
-     0
-    ],
-    [
-     "2026-09-07",
-     0
-    ],
-    [
-     "2026-09-08",
-     0
-    ],
-    [
-     "2026-09-09",
-     0
-    ],
-    [
-     "2026-09-10",
-     0
-    ],
-    [
-     "2026-09-11",
-     0.0013
-    ],
-    [
-     "2026-09-12",
-     0
-    ],
-    [
-     "2026-09-13",
-     0
-    ],
-    [
-     "2026-09-20",
-     0
-    ],
-    [
-     "2026-09-21",
-     0
-    ],
-    [
-     "2026-09-22",
-     0
-    ],
-    [
-     "2026-09-23",
-     0
-    ],
-    [
-     "2026-09-24",
-     0
-    ],
-    [
-     "2026-09-25",
-     0
-    ],
-    [
-     "2026-09-27",
-     0
-    ],
-    [
-     "2026-09-28",
-     0
-    ],
-    [
-     "2026-09-29",
-     0.0007
-    ],
-    [
-     "2026-09-30",
-     0.0009
-    ],
-    [
-     "2026-10-01",
-     0
-    ],
-    [
-     "2026-10-02",
-     0
-    ]
-   ],
-   "series_kind": "daily share of all monitored news articles, % (GDELT timelinevol)",
-   "component": "military",
-   "means": "More news about pickups for armies and militias may mean arming or re-equipping irregular forces.",
-   "not_proves": "It does not prove an arms build-up: car launches, sport rallies and old stories also mention the Hilux."
-  },
-  {
-   "family": "procurement",
    "id": "news:\"body bags\" (order OR shortage OR stockpile)",
    "label": "News share mentioning \"body bags\" (order OR shortage OR stockpile) (last 3 days vs 4 weeks)",
    "value": 0.001,
@@ -4615,211 +4517,15 @@
    "not_proves": "It does not prove casualties: tenders, disasters and rhetoric also use the phrase."
   },
   {
-   "family": "procurement",
-   "id": "news:\"satellite phones\" (ban OR seized OR shortage)",
-   "label": "News share mentioning \"satellite phones\" (ban OR seized OR shortage) (last 3 days vs 4 weeks)",
-   "value": 0,
-   "baseline": 0.0001,
-   "ratio": null,
-   "anomaly": false,
-   "unit": "% of news",
-   "note": "",
-   "source": "GDELT",
-   "series": [
-    [
-     "2026-09-06",
-     0
-    ],
-    [
-     "2026-09-07",
-     0
-    ],
-    [
-     "2026-09-08",
-     0
-    ],
-    [
-     "2026-09-09",
-     0
-    ],
-    [
-     "2026-09-10",
-     0
-    ],
-    [
-     "2026-09-11",
-     0
-    ],
-    [
-     "2026-09-12",
-     0
-    ],
-    [
-     "2026-09-13",
-     0
-    ],
-    [
-     "2026-09-20",
-     0
-    ],
-    [
-     "2026-09-21",
-     0
-    ],
-    [
-     "2026-09-22",
-     0.0009
-    ],
-    [
-     "2026-09-23",
-     0
-    ],
-    [
-     "2026-09-24",
-     0
-    ],
-    [
-     "2026-09-25",
-     0
-    ],
-    [
-     "2026-09-27",
-     0
-    ],
-    [
-     "2026-09-28",
-     0
-    ],
-    [
-     "2026-09-29",
-     0
-    ],
-    [
-     "2026-09-30",
-     0
-    ],
-    [
-     "2026-10-01",
-     0
-    ],
-    [
-     "2026-10-02",
-     0
-    ]
-   ],
-   "series_kind": "daily share of all monitored news articles, % (GDELT timelinevol)",
-   "component": "institutions",
-   "means": "Bans, seizures or shortages of satellite phones mean a state is controlling communications or people are preparing for outages.",
-   "not_proves": "It does not prove a crisis: customs seizures and travel rules generate routine stories."
-  },
-  {
-   "family": "procurement",
-   "id": "news:\"field hospital\" (deployed OR \"set up\")",
-   "label": "News share mentioning \"field hospital\" (deployed OR \"set up\") (last 3 days vs 4 weeks)",
-   "value": 0.001,
-   "baseline": 0.0013,
-   "ratio": 0.77,
-   "anomaly": false,
-   "unit": "% of news",
-   "note": "",
-   "source": "GDELT",
-   "series": [
-    [
-     "2026-09-06",
-     0.002
-    ],
-    [
-     "2026-09-07",
-     0.0042
-    ],
-    [
-     "2026-09-08",
-     0.0026
-    ],
-    [
-     "2026-09-09",
-     0.0013
-    ],
-    [
-     "2026-09-10",
-     0.0013
-    ],
-    [
-     "2026-09-11",
-     0.0045
-    ],
-    [
-     "2026-09-12",
-     0.0008
-    ],
-    [
-     "2026-09-13",
-     0.0034
-    ],
-    [
-     "2026-09-20",
-     0.0009
-    ],
-    [
-     "2026-09-21",
-     0
-    ],
-    [
-     "2026-09-22",
-     0.0028
-    ],
-    [
-     "2026-09-23",
-     0.0007
-    ],
-    [
-     "2026-09-24",
-     0
-    ],
-    [
-     "2026-09-25",
-     0.0017
-    ],
-    [
-     "2026-09-27",
-     0
-    ],
-    [
-     "2026-09-28",
-     0.0025
-    ],
-    [
-     "2026-09-29",
-     0
-    ],
-    [
-     "2026-09-30",
-     0.0009
-    ],
-    [
-     "2026-10-01",
-     0
-    ],
-    [
-     "2026-10-02",
-     0.0021
-    ]
-   ],
-   "series_kind": "daily share of all monitored news articles, % (GDELT timelinevol)",
-   "component": "military",
-   "means": "More field hospitals in the news may mean a war or a disaster is overwhelming normal care.",
-   "not_proves": "It does not separate war from earthquakes, floods or epidemics."
-  },
-  {
    "family": "control",
    "id": "internet:country-outages",
    "label": "Countries with significant internet outages (48 h)",
-   "value": 21,
+   "value": 20,
    "baseline": null,
    "ratio": null,
    "anomaly": null,
    "unit": "countries",
-   "note": "Benin, Burkina Faso, Burundi, Cape Verde, Central African Republic, China, Congo, Federated States Of Micronesia, Haiti, Iraq, Lesotho, Lithuania, Malta, New Zealand, Nigeria",
+   "note": "Benin, Burkina Faso, Burundi, Cape Verde, Central African Republic, China, Congo, Federated States Of Micronesia, Haiti, Iraq, Lesotho, Lithuania, Malta, New Zealand, Northern Mariana Islands",
    "source": "IODA (Georgia Tech)",
    "component": "institutions",
    "means": "More countries with large internet outages may mean shutdowns, attacks on networks or grid failures.",
@@ -4829,7 +4535,7 @@
    "family": "military",
    "id": "advisories:level4",
    "label": "US \"Do Not Travel\" (Level 4) countries",
-   "value": 23,
+   "value": 24,
    "baseline": null,
    "ratio": null,
    "anomaly": false,
@@ -4852,6 +4558,7 @@
     "Libya",
     "Mali",
     "Niger",
+    "North Korea",
     "Russia",
     "Somalia",
     "South Sudan",
@@ -8902,17 +8609,13 @@
    "id": "mob:pravo:ru-president",
    "label": "Russia: presidential acts on call-up, mobilisation, reserves, military registration or exit (last 30 days)",
    "value": 0,
-   "baseline": 2.96,
+   "baseline": 2.54,
    "ratio": null,
    "anomaly": false,
    "unit": "acts/30 days",
    "note": "",
    "source": "publication.pravo.gov.ru",
    "series": [
-    [
-     "2026-06-26",
-     1
-    ],
     [
      "2026-07-04",
      1
@@ -8941,8 +8644,11 @@
   }
  ],
  "errors": [
+  "gdelt \"Toyota Hilux\" (army OR militia OR milit: HTTP 429",
   "gdelt tourniquets (shortage OR order OR donate: HTTP 429",
   "gdelt \"potassium iodide\" (stock OR distribute : HTTP 429",
+  "gdelt \"satellite phones\" (ban OR seized OR sho: HTTP 429",
+  "gdelt \"field hospital\" (deployed OR \"set up\"): skipped (6 min cap)",
   "gdelt \"blood donation\" (urgent OR appeal) war: skipped (6 min cap)",
   "gdelt \"ordered departure\" embassy: skipped (6 min cap)",
   "gdelt \"airspace closed\": skipped (6 min cap)",
