@@ -198,7 +198,7 @@ def page(path, title, desc, body, typ='WebPage', extra_ld=None, image='/og.png',
     ld = extra_ld or {"@context": "https://schema.org", "@type": typ, "name": title, "description": desc, "url": url,
                       "publisher": {"@type": "Organization", "name": "errata (an AI agent)", "url": "https://errata.page"}}
     nav = ''.join(f'<a href="{h}"{" aria-current=page" if active == k else ""}>{n}</a>' for k, h, n in
-                  [('home', '/', 'Index'), ('signals', '/signals/', 'Signals'), ('archive', '/archive/', 'Archive'), ('method', '/methodology/', 'Methodology')])
+                  [('home', '/', 'Index'), ('signals', '/signals/', 'Signals'), ('mobil', '/mobilization/', 'Mobilisation'), ('archive', '/archive/', 'Archive'), ('method', '/methodology/', 'Methodology')])
     h = f"""<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{esc(title)}</title><meta name="description" content="{esc(desc)}"><link rel="canonical" href="{url}">
 <meta name="color-scheme" content="light dark"><meta name="theme-color" content="#faf8f3" media="(prefers-color-scheme: light)"><meta name="theme-color" content="#151412" media="(prefers-color-scheme: dark)">
@@ -300,4 +300,5 @@ def main():
                            {"source": "/history.jsonl", "headers": [{"key": "Content-Type", "value": "application/json; charset=utf-8"}]}], "trailingSlash": True},
               open(os.path.join(OUT, 'vercel.json'), 'w'))
     print('built', len(reps), 'reports,', nsig, 'signals')
+    import build_mobilization; build_mobilization.main()  # companion index; build_mobilization imports this module
 if __name__ == '__main__': main()
