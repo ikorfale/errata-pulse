@@ -60,14 +60,14 @@ def _build():
     cur_c = dict(cur, components=cur['components']); prev_c = prev
     if prev: d = v - prev['mri']; dtxt = (f'<span class="du">▲ +{d}</span>' if d > 0 else f'<span class="dn">▼ {d}</span>' if d < 0 else '<span class="dz">► unchanged</span>') + f' <span class="small">since {B.fmt_date(prev["ts"])}</span>'
     else: dtxt = '<span class="dz">First reading</span> <span class="small">no previous report to compare</span>'
-    g = B.gauge(v, band).replace('Index scale', 'Mobilisation risk scale')
+    g = B.gauge(v, band).replace('Index gauge', 'Mobilisation risk gauge')
     sig = {}
     sf = os.path.join(B.D, 'signals', 'latest.json')
     if os.path.exists(sf): sig = json.load(open(sf))
     msig = {'signals': [s for s in sig.get('signals', []) if s.get('family') == 'mobilisation' and (':ru:' in s.get('id', '') or 'pravo' in s.get('id', '') or 'Russia' in s.get('id', ''))], 'date': sig.get('date', '')}
     for s in msig['signals']: s.pop('component', None)
     hero = f"""<p class="kicker"><a href="/">Chaos Pulse</a> · companion index</p>
-<section class="hero"><div class="gwrap"><p class="glabel">Mobilisation risk index</p><div class="gnum"><span class="big">{v}</span><span class="of">/100</span></div>{g}<p class="small">0 = low · 100 = very high</p></div>
+<section class="hero"><div class="gwrap"><p class="glabel">Mobilisation risk index</p><div class="gbox">{g}<div class="gnum"><span class="big">{v}</span><span class="of">/100</span></div></div><p class="small">0 = low · 100 = very high</p></div>
 <div class="htext"><p class="kicker">Russia mobilisation risk · reading of {B.fmt_date(cur['ts'])} · {B.esc(cur['kind'])} report</p><h1 class="lvl">{lname.capitalize()}</h1>
 <p class="delta">{dtxt}</p><dl class="facts"><div><dt>Confidence</dt><dd>{B.esc(conf)}</dd></div>{f'<div><dt>Uncertainty</dt><dd>{band[0]}–{band[1]}</dd></div>' if band else ''}<div><dt>Level band</dt><dd>{lo}–{hi}</dd></div><div><dt>Reports</dt><dd>{len(hist)}</dd></div></dl>
 <p class="lede">{B.esc(latest['summary'])}</p><p><a class="btn" href="/mobilization/reports/{latest['slug']}/">Read the full report →</a></p></div></section>

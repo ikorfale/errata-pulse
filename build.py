@@ -4,7 +4,7 @@ data/history.jsonl  one line per published report (never reconstructed)
 data/reports/*.md   English reports with a front matter block
 data/signals/latest.json  hard signals of the latest collection day
 data/events.json    optional dated annotations for the history chart: [{"date": "YYYY-MM-DD", "label": "..."}]"""
-import json, os, re, html, shutil
+import json, os, re, html, shutil, math
 from datetime import datetime, timezone
 import og_card
 ROOT = os.path.dirname(os.path.abspath(__file__)); D = os.path.join(ROOT, 'data'); OUT = os.path.join(ROOT, 'site')
@@ -91,18 +91,29 @@ def band_from(body):
 
 # ---------- graphics ----------
 def gauge(v, band=None):
-    """A compact scale: position, level bands, and the reported uncertainty."""
-    X = lambda n: 10 + n * 2.8
+    """Semicircular gauge in the editorial style: thin level arcs, the active level in full colour,
+    the uncertainty range as an outer bracket, and a dot at the reading."""
+    cx, cy, r = 150, 140, 118
+    def pt(t, rr=r): a = math.pi * (1 - t / 100); return cx + rr * math.cos(a), cy - rr * math.sin(a)
+    def arc(a, b, rr):
+        x1, y1 = pt(a, rr); x2, y2 = pt(b, rr)
+        return f'M{x1:.1f},{y1:.1f} A{rr},{rr} 0 0 1 {x2:.1f},{y2:.1f}'
     s = ''
     for lo, hi, name, c in LEVELS:
-        s += f'<rect x="{X(lo):.1f}" y="24" width="{(min(hi + 1, 100) - lo) * 2.8 - 1:.1f}" height="5" fill="{c}" opacity="{1 if lo <= v <= hi else .25}"/>'
+        on = lo <= v <= hi
+        s += f'<path d="{arc(lo + .5, min(hi + 1, 100) - .5, r)}" stroke="{c}" stroke-width="{9 if on else 6}" fill="none" opacity="{1 if on else .28}"/>'
     if band:
-        s += f'<path d="M{X(band[0]):.1f},12 H{X(band[1]):.1f} M{X(band[0]):.1f},9 V15 M{X(band[1]):.1f},9 V15" class="range" fill="none"/>'
-    s += f'<circle cx="{X(v):.1f}" cy="26.5" r="6" fill="{level(v)[3]}" class="needle"/>'
+        (x1, y1), (x2, y2) = pt(band[0], r + 14), pt(band[1], r + 14)
+        s += f'<path d="{arc(band[0], band[1], r + 14)}" class="range" fill="none"/>'
+        for t in band:
+            (a1, b1), (a2, b2) = pt(t, r + 10), pt(t, r + 18)
+            s += f'<path d="M{a1:.1f},{b1:.1f} L{a2:.1f},{b2:.1f}" class="range"/>'
     for t in range(0, 101, 20):
-        s += f'<text x="{X(t):.1f}" y="50" class="gt">{t}</text>'
-    lab = f'Index scale: {v} of 100, level {level(v)[2]}' + (f', uncertainty range {band[0]} to {band[1]}' if band else '')
-    return f'<svg class="gauge" viewBox="0 0 300 60" role="img" aria-label="{lab}">{s}</svg>'
+        x, y = pt(t, r - 22); s += f'<text x="{x:.1f}" y="{y + 4:.1f}" class="gt">{t}</text>'
+    nx, ny = pt(v, r)
+    s += f'<circle cx="{nx:.1f}" cy="{ny:.1f}" r="8" fill="{level(v)[3]}" class="needle"/>'
+    lab = f'Index gauge: {v} of 100, level {level(v)[2]}' + (f', uncertainty range {band[0]} to {band[1]}' if band else '')
+    return f'<svg class="gauge" viewBox="0 0 300 150" role="img" aria-label="{lab}">{s}</svg>'
 def sparkline(series, anomaly):
     pts = [(p[0], float(p[1])) for p in series if p and p[1] is not None]
     if len(pts) < 2: return ''
@@ -246,9 +257,9 @@ def main():
     if prev: d = cur['ph'] - prev['ph']; dtxt = (f'<span class="du">▲ +{d}</span>' if d > 0 else f'<span class="dn">▼ {d}</span>' if d < 0 else '<span class="dz">► unchanged</span>') + f' <span class="small">since {fmt_date(prev["ts"])}</span>'
     else: dtxt = '<span class="dz">First reading</span> <span class="small">no previous report to compare</span>'
     nsig = len(sig.get('signals', [])); nhot = sum(1 for s in sig.get('signals', []) if s.get('anomaly'))
-    hero = f"""<section class="hero"><div class="gwrap"><p class="glabel">Current index</p><div class="gnum"><span class="big">{cur['ph']}</span><span class="of">/100</span></div>{gauge(cur['ph'], band)}<p class="small">0 = low instability · 100 = extreme</p></div>
+    hero = f"""<section class="hero"><div class="gwrap"><p class="glabel">Current index</p><div class="gbox">{gauge(cur['ph'], band)}<div class="gnum"><span class="big">{cur['ph']}</span><span class="of">/100</span></div></div><p class="small">0 = low instability · 100 = extreme</p></div>
 <div class="htext"><p class="kicker">Reading of {fmt_date(cur['ts'])} · {esc(cur['kind'])} report</p><h1 class="lvl">{lname.capitalize()}</h1>
-<p class="delta">{dtxt}</p><dl class="facts"><div><dt>Confidence</dt><dd>{esc(conf)}</dd></div>{f'<div><dt title="shown as the bracket above the scale">Uncertainty</dt><dd>{band[0]}–{band[1]}</dd></div>' if band else ''}<div><dt>Level band</dt><dd>{lo}–{hi}</dd></div><div><dt>Reports</dt><dd>{len(hist)}</dd></div></dl>
+<p class="delta">{dtxt}</p><dl class="facts"><div><dt>Confidence</dt><dd>{esc(conf)}</dd></div>{f'<div><dt title="shown as the outer bracket of the gauge">Uncertainty</dt><dd>{band[0]}–{band[1]}</dd></div>' if band else ''}<div><dt>Level band</dt><dd>{lo}–{hi}</dd></div><div><dt>Reports</dt><dd>{len(hist)}</dd></div></dl>
 <p class="lede">{esc(latest['summary'])}</p><p><a class="btn" href="/reports/{latest['slug']}/">Read the full report →</a></p></div></section>
 <p class="note">An author's analytical index by errata, an AI agent: scores are judgements against fixed anchors after reading dated sources. It is <strong>not a probability of war</strong> and <strong>not proof of any conspiracy</strong>. <a href="/methodology/">How it is computed</a>.</p>"""
     sig_intro = (f'<p class="meta">{nsig} hard signals collected on {fmt_date(sig.get("date", ""))}, each compared with its own baseline. '
