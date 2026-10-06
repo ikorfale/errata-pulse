@@ -28,6 +28,33 @@ FAMILY_GUIDE = {
     'mobilisation': ('People or a state may be preparing for a call-up: aggregate readers, news and official acts only.', 'One family is a lead; routine conscription cycles move it too.'),
 }
 def level(v): return next(l for l in LEVELS if l[0] <= v <= l[1])
+# Plain-language reading of a value against its own baseline. Status: calm / normal / above / anomaly / none.
+STATUS = {'calm': 'Calm', 'normal': 'Normal', 'above': 'Above normal', 'anomaly': 'Anomaly', 'none': 'No baseline yet'}
+LOW_IS_WORSE = ('transit:', 'oil:stocks:')   # fewer ships through a strait, smaller fuel stocks: the worrying direction is down
+def status_of(ratio, anomaly=None, low_is_worse=False):
+    if anomaly: return 'anomaly'
+    if not isinstance(ratio, (int, float)) or ratio <= 0: return 'none'
+    w = 1 / ratio if low_is_worse else ratio
+    return 'calm' if w < 0.8 else 'normal' if w <= 1.2 else 'above'
+def plain(ratio, anomaly=None, low_is_worse=False, what='usual'):
+    """One sentence a reader without training understands: '23% below usual: calmer than normal'."""
+    st = status_of(ratio, anomaly, low_is_worse)
+    if st == 'none': return st, 'Not enough history yet to say what is usual.'
+    if ratio >= 1.5: amt = f'{ratio:.1f}× the {what} level'
+    elif ratio >= 1.005: amt = f'{round((ratio - 1) * 100)}% above {what}'
+    elif ratio > 0.995: amt = f'the same as {what}'
+    else: amt = f'{round((1 - ratio) * 100)}% below {what}'
+    tail = {'calm': 'calmer than normal', 'normal': 'within the normal range', 'above': 'more tense than normal, not yet an anomaly', 'anomaly': 'far outside the normal range'}[st]
+    return st, f'{amt[0].upper() + amt[1:]}: {tail}.'
+def pill(st): return f'<span class="pill p-{st}">{STATUS[st]}</span>'
+TERMS = {'baseline': 'The usual level of this signal: the median of its own recent history (usually the last 30 days).',
+         'anomaly': 'A value far outside its own usual range, by a rule fixed in advance. It is a lead to check, not an event.',
+         'component': 'One of the five parts of the index, each scored 0–100 against fixed anchors.',
+         'confidence': 'How sure the author is of the score, given the quality and agreement of the sources.',
+         'uncertainty': 'The range the index could plausibly be in, given what is unknown; drawn as the outer bracket of the gauge.',
+         'level band': 'The named range the score falls into; colours go from green (low) to deep red (extreme).',
+         'norm': "A channel group's usual share of posts on a topic: the median of its last 14 days."}
+def term(word, key=None): return f'<abbr class="term" title="{esc(TERMS[key or word.lower()])}" tabindex="0">{word}</abbr>'
 def esc(s): return html.escape(str(s), quote=True)
 def fmt_date(d):
     try: return datetime.strptime(d[:10], '%Y-%m-%d').strftime('%-d %B %Y')
@@ -172,8 +199,11 @@ def sig_card(s):
     an = s.get('anomaly'); fam = s.get('family', '')
     badge = ('<span class="badge hot">Anomaly</span>' if an else '<span class="badge">Within baseline</span>' if an is False else '<span class="badge na">No baseline</span>')
     r = s.get('ratio'); val = s.get('value')
-    ratio = f'<span class="ratio{" up" if r and r > 1 else ""}">×{r:.2f}</span> of baseline' if isinstance(r, (int, float)) else ''
-    base = f'baseline {num(s["baseline"])}' if s.get('baseline') not in (None, '') else ''
+    st, phrase = plain(r, an, str(s.get('id', '')).startswith(LOW_IS_WORSE))
+    if st == 'none' and an is False and not isinstance(r, (int, float)): st, phrase = 'normal', 'No alarm by its own rule; too little history for a percentage.'
+    badge = pill(st)
+    ratio = f'<span class="plain">{esc(phrase)}</span>'
+    base = f'usual level ({term("baseline")}): {num(s["baseline"])}' if s.get('baseline') not in (None, '') else ''
     unit = esc(s.get('unit', '') or '')
     if isinstance(val, list): val = len(val)
     means, notp = s.get('means'), s.get('not_proves')
@@ -185,7 +215,7 @@ def sig_card(s):
     note = f'<p class="sn">{esc(s["note"])}</p>' if s.get('note') else ''
     return f"""<article class="sig{' is-hot' if an else ''}" data-anomaly="{'1' if an else '0'}"><div class="sh">{badge}{f'<span class="comp">feeds: {esc(compname)}</span>' if comp else ''}</div>
 <h4>{esc(s.get('label', s.get('id', '')))}</h4><div class="sv"><span class="val">{num(val) if val is not None else '—'}</span> <span class="unit">{unit}</span>{sparkline(s.get('series') or [], an)}</div>
-<p class="sb">{ratio}{' · ' if ratio and base else ''}{base}</p>{note}{extra}
+<p class="sb">{ratio}</p>{f'<p class="sn">{base}</p>' if base else ''}{note}{extra}
 <details class="signal-context"><summary>Interpretation &amp; limits</summary>{f'<p class="mm"><b>May mean:</b> {esc(means)}</p>' if means else ''}{f'<p class="mm"><b>Does not prove:</b> {esc(notp)}</p>' if notp else ''}</details>
 <p class="src">Source: {esc(s.get('source', '—'))}</p></article>"""
 def signals_html(sig, per_family=None, heading=3):
@@ -206,7 +236,7 @@ def page(path, title, desc, body, typ='WebPage', extra_ld=None, image='/og.png',
     ld = extra_ld or {"@context": "https://schema.org", "@type": typ, "name": title, "description": desc, "url": url,
                       "publisher": {"@type": "Organization", "name": "errata (an AI agent)", "url": "https://errata.page"}}
     nav = ''.join(f'<a href="{h}"{" aria-current=page" if active == k else ""}>{n}</a>' for k, h, n in
-                  [('home', '/', 'Index'), ('signals', '/signals/', 'Signals'), ('mobil', '/mobilization/', 'Mobilisation'), ('archive', '/archive/', 'Archive'), ('method', '/methodology/', 'Methodology')])
+                  [('home', '/', 'Index'), ('signals', '/signals/', 'Signals'), ('mobil', '/mobilization/', 'Mobilisation'), ('telegram', '/telegram/', 'Telegram'), ('archive', '/archive/', 'Archive'), ('method', '/methodology/', 'Methodology')])
     h = f"""<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{esc(title)}</title><meta name="description" content="{esc(desc)}"><link rel="canonical" href="{url}">
 <meta name="color-scheme" content="light dark"><meta name="theme-color" content="#f6f4ef" media="(prefers-color-scheme: light)"><meta name="theme-color" content="#1c201b" media="(prefers-color-scheme: dark)">
@@ -257,6 +287,7 @@ def main():
     conf = TR.get(cur['confidence'], cur['confidence'])
     if prev: d = cur['ph'] - prev['ph']; dtxt = (f'<span class="du">▲ +{d}</span>' if d > 0 else f'<span class="dn">▼ {d}</span>' if d < 0 else '<span class="dz">► unchanged</span>') + f' <span class="small">since {fmt_date(prev["ts"])}</span>'
     else: dtxt = '<span class="dz">First reading</span> <span class="small">no previous report to compare</span>'
+    import build_telegram
     nsig = len(sig.get('signals', [])); nhot = sum(1 for s in sig.get('signals', []) if s.get('anomaly'))
     hero = f"""<section class="hero"><div class="gwrap"><p class="glabel">Current index</p><div class="gbox">{gauge(cur['ph'], band)}<div class="gnum"><span class="big">{cur['ph']}</span><span class="of">/100</span></div></div><p class="small">0 = low instability · 100 = extreme</p></div>
 <div class="htext"><p class="kicker">Reading of {fmt_date(cur['ts'])} · {esc(cur['kind'])} report</p><h1 class="lvl">{lname.capitalize()}</h1>
@@ -266,7 +297,7 @@ def main():
     sig_intro = (f'<p class="meta">{nsig} hard signals collected on {fmt_date(sig.get("date", ""))}, each compared with its own baseline. '
                  + (f'<strong>{nhot} anomalous.</strong>' if nhot else 'None is anomalous against its own baseline today.') + ' Signals are evidence for the components, never a formula of their own.</p>')
     body = hero + f"""<h2 class="sec">Five components</h2><p class="meta">Score 0–100 against fixed anchors; colour shows the level band of each score. Reasons quoted from the latest report.</p>{comp_rows(cur, prev, reasons)}
-<h2 class="sec">Signals</h2>{sig_intro}<div class="signals-preview">{signals_html(sig, per_family=1) if nsig else '<p>No signal data yet.</p>'}</div><p><a class="btn" href="/signals/">All {nsig} signals →</a></p>
+<h2 class="sec">Signals</h2>{sig_intro}<div class="signals-preview">{signals_html(sig, per_family=1) if nsig else '<p>No signal data yet.</p>'}</div><p><a class="btn" href="/signals/">All {nsig} signals →</a></p>{build_telegram.home_block()}
 <h2 class="sec">History</h2><div class="chart" tabindex="0" role="region" aria-label="Index history chart">{history_svg(hist, events)}</div><p class="meta">Only values from reports that were actually written are shown; no past values are reconstructed. Raw data: <a href="/history.jsonl">history.jsonl</a>.</p>
 <h2 class="sec">Latest report</h2><a class="rcard" href="/reports/{latest['slug']}/"><img src="{latest['og']}" alt="Share card of the report: index {cur['ph']}, {lname}" width="1200" height="630" loading="lazy"><span><strong>{esc(latest['title'])}</strong><br>{esc(latest['summary'])}</span></a>"""
     ld = {"@context": "https://schema.org", "@type": "Dataset", "name": "Chaos Pulse index history", "description": "Author's analytical index (0–100) of global systemic crisis with five weighted components, one value per published report.",
@@ -313,5 +344,6 @@ def main():
                            {"source": "/history.jsonl", "headers": [{"key": "Content-Type", "value": "application/json; charset=utf-8"}]}], "trailingSlash": True},
               open(os.path.join(OUT, 'vercel.json'), 'w'))
     print('built', len(reps), 'reports,', nsig, 'signals')
+    os.makedirs(os.path.join(OUT, 'telegram'), exist_ok=True); build_telegram.main()
     import build_mobilization; build_mobilization.main()  # companion index; build_mobilization imports this module
 if __name__ == '__main__': main()

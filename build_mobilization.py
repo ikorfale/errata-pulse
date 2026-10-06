@@ -8,6 +8,7 @@ The 2022 backtest is a method check, drawn on its own chart and never mixed into
 import json, os
 from datetime import datetime, timedelta
 import build as B
+import build_telegram
 MD = os.path.join(B.D, 'mobilization')
 LEVELS = [(0, 19, 'low', '#3f7d4e'), (20, 39, 'moderate', '#a8861c'), (40, 59, 'elevated', '#c4641c'),
           (60, 79, 'high', '#b3261e'), (80, 100, 'very high', '#6e0f14')]
@@ -77,7 +78,7 @@ def _build():
     hpts = [(datetime.strptime(h['ts'][:10], '%Y-%m-%d'), h['mri'], f"{h['ts'][:10]} {h['kind']}") for h in hist]
     bpts = [(datetime.strptime(d, '%Y-%m-%d'), x, f'{d} ({t})') for d, x, t in BACKTEST]
     body = hero + f"""<h2 class="sec">Five components</h2><p class="meta">Score 0–100 against fixed anchors; reasons quoted from the latest report.</p>{B.comp_rows(cur_c, prev_c, reasons)}
-<h2 class="sec">Signals</h2>{sig_intro}{B.signals_html(msig) if nsig else '<p>No signal data yet.</p>'}
+<h2 class="sec">Signals</h2>{sig_intro}{B.signals_html(msig) if nsig else '<p>No signal data yet.</p>'}{build_telegram.mobil_block()}
 <h2 class="sec">History</h2><div class="chart" tabindex="0" role="region" aria-label="Mobilisation risk history chart">{series_svg(hpts, f'Mobilisation risk index values from {len(hist)} published report(s)')}</div><p class="meta">Only values from reports that were actually written. Raw data: <a href="/mobilization/history.jsonl">history.jsonl</a>.</p>
 <h2 class="sec">Backtest: 2022</h2><p class="meta"><strong>A check of the method, not index history.</strong> What the same method would have scored from signals visible in July–September 2022, before the partial mobilisation decree of 21 September 2022. It was late: "elevated" only about eight days before the decree.</p>
 <div class="chart" tabindex="0" role="region" aria-label="2022 method backtest chart">{series_svg(bpts, 'Backtest of the method on 2022 signals, not index history', dashed=True, mark=(bpts[-1][0], 'decree 21 Sep 2022'))}</div>
