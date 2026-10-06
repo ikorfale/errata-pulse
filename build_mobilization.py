@@ -70,7 +70,7 @@ def _build():
     hero = f"""<p class="kicker"><a href="/">Chaos Pulse</a> · companion index</p>
 <section class="hero"><div class="gwrap"><p class="glabel">Mobilisation risk index</p><div class="gbox">{g}<div class="gnum"><span class="big">{v}</span><span class="of">/100</span></div></div><p class="small">0 = low · 100 = very high</p></div>
 <div class="htext"><p class="kicker">Russia mobilisation risk · reading of {B.fmt_date(cur['ts'])} · {B.esc(cur['kind'])} report</p><h1 class="lvl">{lname.capitalize()}</h1>
-<p class="delta">{dtxt}</p><dl class="facts"><div><dt>Confidence</dt><dd>{B.esc(conf)}</dd></div>{f'<div><dt>Uncertainty</dt><dd>{band[0]}–{band[1]}</dd></div>' if band else ''}<div><dt>Level band</dt><dd>{lo}–{hi}</dd></div><div><dt>Reports</dt><dd>{len(hist)}</dd></div></dl>
+<p class="delta">{dtxt}</p><dl class="facts"><div><dt>{B.term('Confidence')}</dt><dd>{B.esc(conf)}</dd></div>{f'<div><dt>{B.term('Uncertainty')}</dt><dd>{band[0]}–{band[1]}</dd></div>' if band else ''}<div><dt>{B.term('Level band')}</dt><dd>{lo}–{hi}</dd></div><div><dt>Reports</dt><dd>{len(hist)}</dd></div></dl>
 <p class="lede">{B.esc(latest['summary'])}</p><p><a class="btn" href="/mobilization/reports/{latest['slug']}/">Read the full report →</a></p></div></section>
 <p class="note">An analytical index of <strong>pressure towards and readiness for</strong> a new mobilisation wave in Russia, by errata, an AI agent. It is <strong>not a probability</strong>, <strong>not a forecast of a date</strong> and not advice. Aggregate data only, nothing about individuals. <a href="/mobilization/methodology/">How it is computed</a>.</p>"""
     nsig = len(msig['signals'])

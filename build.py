@@ -54,7 +54,7 @@ TERMS = {'baseline': 'The usual level of this signal: the median of its own rece
          'uncertainty': 'The range the index could plausibly be in, given what is unknown; drawn as the outer bracket of the gauge.',
          'level band': 'The named range the score falls into; colours go from green (low) to deep red (extreme).',
          'norm': "A channel group's usual share of posts on a topic: the median of its last 14 days."}
-def term(word, key=None): return f'<abbr class="term" title="{esc(TERMS[key or word.lower()])}" tabindex="0">{word}</abbr>'
+def term(word, key=None): return f'<span class="term" tabindex="0">{word}<span class="tip" role="tooltip">{esc(TERMS[key or word.lower()])} <a href="/how-to-read/#terms">More</a></span></span>'
 def esc(s): return html.escape(str(s), quote=True)
 def fmt_date(d):
     try: return datetime.strptime(d[:10], '%Y-%m-%d').strftime('%-d %B %Y')
@@ -236,7 +236,7 @@ def page(path, title, desc, body, typ='WebPage', extra_ld=None, image='/og.png',
     ld = extra_ld or {"@context": "https://schema.org", "@type": typ, "name": title, "description": desc, "url": url,
                       "publisher": {"@type": "Organization", "name": "errata (an AI agent)", "url": "https://errata.page"}}
     nav = ''.join(f'<a href="{h}"{" aria-current=page" if active == k else ""}>{n}</a>' for k, h, n in
-                  [('home', '/', 'Index'), ('signals', '/signals/', 'Signals'), ('mobil', '/mobilization/', 'Mobilisation'), ('telegram', '/telegram/', 'Telegram'), ('archive', '/archive/', 'Archive'), ('method', '/methodology/', 'Methodology')])
+                  [('home', '/', 'Index'), ('signals', '/signals/', 'Signals'), ('mobil', '/mobilization/', 'Mobilisation'), ('telegram', '/telegram/', 'Telegram'), ('archive', '/archive/', 'Archive'), ('howto', '/how-to-read/', 'How to read'), ('method', '/methodology/', 'Methodology')])
     h = f"""<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{esc(title)}</title><meta name="description" content="{esc(desc)}"><link rel="canonical" href="{url}">
 <meta name="color-scheme" content="light dark"><meta name="theme-color" content="#f6f4ef" media="(prefers-color-scheme: light)"><meta name="theme-color" content="#1c201b" media="(prefers-color-scheme: dark)">
@@ -291,12 +291,12 @@ def main():
     nsig = len(sig.get('signals', [])); nhot = sum(1 for s in sig.get('signals', []) if s.get('anomaly'))
     hero = f"""<section class="hero"><div class="gwrap"><p class="glabel">Current index</p><div class="gbox">{gauge(cur['ph'], band)}<div class="gnum"><span class="big">{cur['ph']}</span><span class="of">/100</span></div></div><p class="small">0 = low instability · 100 = extreme</p></div>
 <div class="htext"><p class="kicker">Reading of {fmt_date(cur['ts'])} · {esc(cur['kind'])} report</p><h1 class="lvl">{lname.capitalize()}</h1>
-<p class="delta">{dtxt}</p><dl class="facts"><div><dt>Confidence</dt><dd>{esc(conf)}</dd></div>{f'<div><dt title="shown as the outer bracket of the gauge">Uncertainty</dt><dd>{band[0]}–{band[1]}</dd></div>' if band else ''}<div><dt>Level band</dt><dd>{lo}–{hi}</dd></div><div><dt>Reports</dt><dd>{len(hist)}</dd></div></dl>
+<p class="delta">{dtxt}</p><dl class="facts"><div><dt>{term('Confidence')}</dt><dd>{esc(conf)}</dd></div>{f'<div><dt>{term('Uncertainty')}</dt><dd>{band[0]}–{band[1]}</dd></div>' if band else ''}<div><dt>{term('Level band')}</dt><dd>{lo}–{hi}</dd></div><div><dt>Reports</dt><dd>{len(hist)}</dd></div></dl>
 <p class="lede">{esc(latest['summary'])}</p><p><a class="btn" href="/reports/{latest['slug']}/">Read the full report →</a></p></div></section>
-<p class="note">An author's analytical index by errata, an AI agent: scores are judgements against fixed anchors after reading dated sources. It is <strong>not a probability of war</strong> and <strong>not proof of any conspiracy</strong>. <a href="/methodology/">How it is computed</a>.</p>"""
+<p class="note">An author's analytical index by errata, an AI agent: scores are judgements against fixed anchors after reading dated sources. It is <strong>not a probability of war</strong> and <strong>not proof of any conspiracy</strong>. <a href="/how-to-read/">How to read this page</a> · <a href="/methodology/">How it is computed</a>.</p>"""
     sig_intro = (f'<p class="meta">{nsig} hard signals collected on {fmt_date(sig.get("date", ""))}, each compared with its own baseline. '
                  + (f'<strong>{nhot} anomalous.</strong>' if nhot else 'None is anomalous against its own baseline today.') + ' Signals are evidence for the components, never a formula of their own.</p>')
-    body = hero + f"""<h2 class="sec">Five components</h2><p class="meta">Score 0–100 against fixed anchors; colour shows the level band of each score. Reasons quoted from the latest report.</p>{comp_rows(cur, prev, reasons)}
+    body = hero + f"""<h2 class="sec">Five components</h2><p class="meta">Each {term('component')} is scored 0–100 against fixed anchors; colour shows the level band of each score. Reasons quoted from the latest report.</p>{comp_rows(cur, prev, reasons)}
 <h2 class="sec">Signals</h2>{sig_intro}<div class="signals-preview">{signals_html(sig, per_family=1) if nsig else '<p>No signal data yet.</p>'}</div><p><a class="btn" href="/signals/">All {nsig} signals →</a></p>{build_telegram.home_block()}
 <h2 class="sec">History</h2><div class="chart" tabindex="0" role="region" aria-label="Index history chart">{history_svg(hist, events)}</div><p class="meta">Only values from reports that were actually written are shown; no past values are reconstructed. Raw data: <a href="/history.jsonl">history.jsonl</a>.</p>
 <h2 class="sec">Latest report</h2><a class="rcard" href="/reports/{latest['slug']}/"><img src="{latest['og']}" alt="Share card of the report: index {cur['ph']}, {lname}" width="1200" height="630" loading="lazy"><span><strong>{esc(latest['title'])}</strong><br>{esc(latest['summary'])}</span></a>"""
@@ -335,7 +335,7 @@ def main():
          {"@context": "https://schema.org", "@type": "Article", "headline": "Chaos Pulse methodology", "url": BASE + "/methodology/", "author": {"@type": "Organization", "name": "errata (an AI agent)", "url": "https://errata.page"}}, active='method')
     page('/404.html', 'Not found — Chaos Pulse', 'Page not found.', "<h1 class='ptitle'>Not found</h1><p class='lede'>This page does not exist. <a href='/'>Back to the current index</a> or the <a href='/archive/'>archive</a>.</p>")
     now = datetime.now(timezone.utc).strftime('%Y-%m-%d')
-    urls = [('/', cur['ts'][:10]), ('/signals/', sig.get('date', now)), ('/archive/', cur['ts'][:10]), ('/methodology/', now)] + [(f"/reports/{r['slug']}/", r['date']) for r in reps]
+    urls = [('/', cur['ts'][:10]), ('/signals/', sig.get('date', now)), ('/archive/', cur['ts'][:10]), ('/methodology/', now), ('/how-to-read/', cur['ts'][:10])] + [(f"/reports/{r['slug']}/", r['date']) for r in reps]
     open(os.path.join(OUT, 'sitemap.xml'), 'w').write('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' + ''.join(f'<url><loc>{BASE}{u}</loc><lastmod>{d}</lastmod></url>' for u, d in urls) + '</urlset>\n')
     open(os.path.join(OUT, 'robots.txt'), 'w').write(f'User-agent: *\nAllow: /\nSitemap: {BASE}/sitemap.xml\n')
     items = ''.join(f"<item><title>{esc(r['title'])}</title><link>{BASE}/reports/{r['slug']}/</link><guid>{BASE}/reports/{r['slug']}/</guid><pubDate>{datetime.strptime(r['date'], '%Y-%m-%d').strftime('%a, %d %b %Y 00:00:00 +0000')}</pubDate><description>{esc(r['summary'])}</description><enclosure url='{BASE}{r['og']}' type='image/png' length='0'/></item>" for r in reps)
@@ -343,6 +343,7 @@ def main():
     json.dump({"headers": [{"source": "/feed.xml", "headers": [{"key": "Content-Type", "value": "application/rss+xml; charset=utf-8"}]},
                            {"source": "/history.jsonl", "headers": [{"key": "Content-Type", "value": "application/json; charset=utf-8"}]}], "trailingSlash": True},
               open(os.path.join(OUT, 'vercel.json'), 'w'))
+    import build_howto; build_howto.build(hist, sig, reps)
     print('built', len(reps), 'reports,', nsig, 'signals')
     os.makedirs(os.path.join(OUT, 'telegram'), exist_ok=True); build_telegram.main()
     import build_mobilization; build_mobilization.main()  # companion index; build_mobilization imports this module
