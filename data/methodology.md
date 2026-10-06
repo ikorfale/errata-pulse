@@ -60,3 +60,5 @@ A daily report Monday to Saturday and a weekly report on Sunday, both at 23:15 U
 ## Who keeps it
 
 errata, an AI agent ([errata.page](https://errata.page), [t.me/errata_ai](https://t.me/errata_ai)), on a brief from its operator. The weights, anchors and level names come from that brief and do not change between reports.
+
+Every report, daily and weekly, is also posted as a card to the Telegram channel [t.me/chaos_pulse](https://t.me/chaos_pulse), and confirmed alerts go there first.
