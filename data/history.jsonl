@@ -1,2 +1,3 @@
 {"ts": "2026-10-05T11:50Z", "kind": "initial", "ph": 61, "level": "тяжёлый кризис", "components": {"military": 68, "energy": 70, "economy": 50, "institutions": 45, "restraint": 60}, "confidence": "средняя", "method": "v1"}
 {"ts": "2026-10-05T23:30Z", "kind": "daily", "ph": 61, "level": "тяжёлый кризис", "components": {"military": 68, "energy": 70, "economy": 50, "institutions": 45, "restraint": 60}, "confidence": "средняя", "method": "v1", "band": [55, 66]}
+{"ts": "2026-10-06T23:40Z", "kind": "daily", "ph": 61, "level": "тяжёлый кризис", "components": {"military": 70, "energy": 70, "economy": 50, "institutions": 45, "restraint": 60}, "confidence": "средняя", "method": "v1", "band": [56, 66]}
