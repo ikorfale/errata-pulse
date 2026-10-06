@@ -75,7 +75,8 @@ def load_reports():
         if not f.endswith('.md'): continue
         raw = open(os.path.join(D, 'reports', f)).read(); _, fm, body = raw.split('---\n', 2)
         meta = dict(l.split(': ', 1) for l in fm.strip().split('\n')); meta['slug'] = f[:-3]; meta['body'] = body; reps.append(meta)
-    return sorted(reps, key=lambda r: r['slug'], reverse=True)
+    rank = {'initial': 0, 'daily': 1, 'weekly': 2, 'alert': 3}     # same date: the later kind is the newer reading ('initial' > 'daily' as text)
+    return sorted(reps, key=lambda r: (r.get('date', r['slug'][:10]), rank.get(r.get('kind'), 1), r['slug']), reverse=True)
 def reasons_from(body):
     """Main reason per component from the report's component table (first cell starts with the component name)."""
     out = {}
@@ -86,7 +87,7 @@ def reasons_from(body):
             if cells and cells[0].lower().startswith(name.split()[0].lower()) and len(cells) >= 4: out[k] = cells[-1]
     return out
 def band_from(body):
-    m = re.search(r'[Uu]ncertainty range (\d+)\s*[–-]\s*(\d+)', body)
+    m = re.search(r'[Uu]ncertainty (?:range|band) (\d+)\s*[–-]\s*(\d+)', body)
     return (int(m.group(1)), int(m.group(2))) if m else None
 
 # ---------- graphics ----------
