@@ -1,47 +1,19 @@
 {
- "date": "2026-10-05",
- "collected_at": 1791239849,
+ "date": "2026-10-06",
+ "collected_at": 1791325866,
  "signals": [
   {
    "family": "energy",
    "id": "transit:Strait of Hormuz",
-   "label": "Strait of Hormuz: ships per day (7-day avg, data to 2026-09-27)",
-   "value": 3.1,
+   "label": "Strait of Hormuz: ships per day (7-day avg, data to 2026-10-04)",
+   "value": 2.7,
    "baseline": 3,
-   "ratio": 1.03,
+   "ratio": 0.9,
    "anomaly": false,
    "unit": "ships/day",
-   "note": "tankers 1.3/day",
+   "note": "tankers 0.9/day",
    "source": "IMF PortWatch",
    "series": [
-    [
-     "2026-08-29",
-     3
-    ],
-    [
-     "2026-08-30",
-     6
-    ],
-    [
-     "2026-08-31",
-     3
-    ],
-    [
-     "2026-09-01",
-     4
-    ],
-    [
-     "2026-09-02",
-     3
-    ],
-    [
-     "2026-09-03",
-     2
-    ],
-    [
-     "2026-09-04",
-     2
-    ],
     [
      "2026-09-05",
      2
@@ -133,6 +105,34 @@
     [
      "2026-09-27",
      1
+    ],
+    [
+     "2026-09-28",
+     4
+    ],
+    [
+     "2026-09-29",
+     1
+    ],
+    [
+     "2026-09-30",
+     4
+    ],
+    [
+     "2026-10-01",
+     0
+    ],
+    [
+     "2026-10-02",
+     4
+    ],
+    [
+     "2026-10-03",
+     2
+    ],
+    [
+     "2026-10-04",
+     4
     ]
    ],
    "series_kind": "daily n_total (ships/day, all vessel types), not smoothed",
@@ -143,43 +143,15 @@
   {
    "family": "energy",
    "id": "transit:Bab el-Mandeb Strait",
-   "label": "Bab el-Mandeb Strait: ships per day (7-day avg, data to 2026-09-27)",
-   "value": 27.1,
-   "baseline": 25,
-   "ratio": 1.08,
+   "label": "Bab el-Mandeb Strait: ships per day (7-day avg, data to 2026-10-04)",
+   "value": 29.6,
+   "baseline": 26,
+   "ratio": 1.14,
    "anomaly": false,
    "unit": "ships/day",
-   "note": "tankers 9.4/day",
+   "note": "tankers 9.0/day",
    "source": "IMF PortWatch",
    "series": [
-    [
-     "2026-08-29",
-     20
-    ],
-    [
-     "2026-08-30",
-     29
-    ],
-    [
-     "2026-08-31",
-     24
-    ],
-    [
-     "2026-09-01",
-     19
-    ],
-    [
-     "2026-09-02",
-     38
-    ],
-    [
-     "2026-09-03",
-     24
-    ],
-    [
-     "2026-09-04",
-     32
-    ],
     [
      "2026-09-05",
      18
@@ -271,6 +243,34 @@
     [
      "2026-09-27",
      27
+    ],
+    [
+     "2026-09-28",
+     30
+    ],
+    [
+     "2026-09-29",
+     37
+    ],
+    [
+     "2026-09-30",
+     22
+    ],
+    [
+     "2026-10-01",
+     28
+    ],
+    [
+     "2026-10-02",
+     26
+    ],
+    [
+     "2026-10-03",
+     30
+    ],
+    [
+     "2026-10-04",
+     34
     ]
    ],
    "series_kind": "daily n_total (ships/day, all vessel types), not smoothed",
@@ -281,43 +281,15 @@
   {
    "family": "energy",
    "id": "transit:Suez Canal",
-   "label": "Suez Canal: ships per day (7-day avg, data to 2026-09-27)",
-   "value": 40,
+   "label": "Suez Canal: ships per day (7-day avg, data to 2026-10-04)",
+   "value": 43.1,
    "baseline": 41,
-   "ratio": 0.98,
+   "ratio": 1.05,
    "anomaly": false,
    "unit": "ships/day",
-   "note": "tankers 15.0/day",
+   "note": "tankers 15.6/day",
    "source": "IMF PortWatch",
    "series": [
-    [
-     "2026-08-29",
-     38
-    ],
-    [
-     "2026-08-30",
-     53
-    ],
-    [
-     "2026-08-31",
-     30
-    ],
-    [
-     "2026-09-01",
-     51
-    ],
-    [
-     "2026-09-02",
-     41
-    ],
-    [
-     "2026-09-03",
-     41
-    ],
-    [
-     "2026-09-04",
-     56
-    ],
     [
      "2026-09-05",
      42
@@ -409,6 +381,34 @@
     [
      "2026-09-27",
      37
+    ],
+    [
+     "2026-09-28",
+     28
+    ],
+    [
+     "2026-09-29",
+     40
+    ],
+    [
+     "2026-09-30",
+     45
+    ],
+    [
+     "2026-10-01",
+     55
+    ],
+    [
+     "2026-10-02",
+     42
+    ],
+    [
+     "2026-10-03",
+     46
+    ],
+    [
+     "2026-10-04",
+     46
     ]
    ],
    "series_kind": "daily n_total (ships/day, all vessel types), not smoothed",
@@ -419,43 +419,15 @@
   {
    "family": "energy",
    "id": "transit:Bosporus Strait",
-   "label": "Bosporus Strait: ships per day (7-day avg, data to 2026-09-27)",
-   "value": 49.6,
-   "baseline": 56,
-   "ratio": 0.89,
-   "anomaly": false,
+   "label": "Bosporus Strait: ships per day (7-day avg, data to 2026-10-04)",
+   "value": 38.6,
+   "baseline": 51,
+   "ratio": 0.76,
+   "anomaly": true,
    "unit": "ships/day",
-   "note": "tankers 11.7/day",
+   "note": "tankers 12.1/day",
    "source": "IMF PortWatch",
    "series": [
-    [
-     "2026-08-29",
-     60
-    ],
-    [
-     "2026-08-30",
-     47
-    ],
-    [
-     "2026-08-31",
-     49
-    ],
-    [
-     "2026-09-01",
-     39
-    ],
-    [
-     "2026-09-02",
-     57
-    ],
-    [
-     "2026-09-03",
-     49
-    ],
-    [
-     "2026-09-04",
-     63
-    ],
     [
      "2026-09-05",
      52
@@ -547,6 +519,34 @@
     [
      "2026-09-27",
      46
+    ],
+    [
+     "2026-09-28",
+     36
+    ],
+    [
+     "2026-09-29",
+     32
+    ],
+    [
+     "2026-09-30",
+     41
+    ],
+    [
+     "2026-10-01",
+     38
+    ],
+    [
+     "2026-10-02",
+     26
+    ],
+    [
+     "2026-10-03",
+     25
+    ],
+    [
+     "2026-10-04",
+     72
     ]
    ],
    "series_kind": "daily n_total (ships/day, all vessel types), not smoothed",
@@ -557,7 +557,7 @@
   {
    "family": "energy",
    "id": "transit:Kerch Strait",
-   "label": "Kerch Strait: ships per day (7-day avg, data to 2026-09-27)",
+   "label": "Kerch Strait: ships per day (7-day avg, data to 2026-10-04)",
    "value": 0,
    "baseline": 0.0,
    "ratio": null,
@@ -566,34 +566,6 @@
    "note": "tankers 0.0/day",
    "source": "IMF PortWatch",
    "series": [
-    [
-     "2026-08-29",
-     0
-    ],
-    [
-     "2026-08-30",
-     0
-    ],
-    [
-     "2026-08-31",
-     0
-    ],
-    [
-     "2026-09-01",
-     0
-    ],
-    [
-     "2026-09-02",
-     1
-    ],
-    [
-     "2026-09-03",
-     0
-    ],
-    [
-     "2026-09-04",
-     0
-    ],
     [
      "2026-09-05",
      0
@@ -685,6 +657,34 @@
     [
      "2026-09-27",
      0
+    ],
+    [
+     "2026-09-28",
+     0
+    ],
+    [
+     "2026-09-29",
+     0
+    ],
+    [
+     "2026-09-30",
+     0
+    ],
+    [
+     "2026-10-01",
+     0
+    ],
+    [
+     "2026-10-02",
+     0
+    ],
+    [
+     "2026-10-03",
+     0
+    ],
+    [
+     "2026-10-04",
+     0
     ]
    ],
    "series_kind": "daily n_total (ships/day, all vessel types), not smoothed",
@@ -695,43 +695,15 @@
   {
    "family": "energy",
    "id": "transit:Taiwan Strait",
-   "label": "Taiwan Strait: ships per day (7-day avg, data to 2026-09-27)",
-   "value": 232.3,
+   "label": "Taiwan Strait: ships per day (7-day avg, data to 2026-10-04)",
+   "value": 233,
    "baseline": 230,
    "ratio": 1.01,
    "anomaly": false,
    "unit": "ships/day",
-   "note": "tankers 46.0/day",
+   "note": "tankers 51.7/day",
    "source": "IMF PortWatch",
    "series": [
-    [
-     "2026-08-29",
-     273
-    ],
-    [
-     "2026-08-30",
-     318
-    ],
-    [
-     "2026-08-31",
-     255
-    ],
-    [
-     "2026-09-01",
-     263
-    ],
-    [
-     "2026-09-02",
-     215
-    ],
-    [
-     "2026-09-03",
-     230
-    ],
-    [
-     "2026-09-04",
-     256
-    ],
     [
      "2026-09-05",
      230
@@ -823,6 +795,34 @@
     [
      "2026-09-27",
      225
+    ],
+    [
+     "2026-09-28",
+     234
+    ],
+    [
+     "2026-09-29",
+     243
+    ],
+    [
+     "2026-09-30",
+     237
+    ],
+    [
+     "2026-10-01",
+     247
+    ],
+    [
+     "2026-10-02",
+     221
+    ],
+    [
+     "2026-10-03",
+     216
+    ],
+    [
+     "2026-10-04",
+     233
     ]
    ],
    "series_kind": "daily n_total (ships/day, all vessel types), not smoothed",
@@ -833,43 +833,15 @@
   {
    "family": "energy",
    "id": "transit:Malacca Strait",
-   "label": "Malacca Strait: ships per day (7-day avg, data to 2026-09-27)",
-   "value": 217.9,
-   "baseline": 212,
+   "label": "Malacca Strait: ships per day (7-day avg, data to 2026-10-04)",
+   "value": 226.3,
+   "baseline": 220,
    "ratio": 1.03,
    "anomaly": false,
    "unit": "ships/day",
-   "note": "tankers 70.0/day",
+   "note": "tankers 73.4/day",
    "source": "IMF PortWatch",
    "series": [
-    [
-     "2026-08-29",
-     206
-    ],
-    [
-     "2026-08-30",
-     219
-    ],
-    [
-     "2026-08-31",
-     223
-    ],
-    [
-     "2026-09-01",
-     209
-    ],
-    [
-     "2026-09-02",
-     204
-    ],
-    [
-     "2026-09-03",
-     237
-    ],
-    [
-     "2026-09-04",
-     183
-    ],
     [
      "2026-09-05",
      190
@@ -961,6 +933,34 @@
     [
      "2026-09-27",
      201
+    ],
+    [
+     "2026-09-28",
+     208
+    ],
+    [
+     "2026-09-29",
+     241
+    ],
+    [
+     "2026-09-30",
+     208
+    ],
+    [
+     "2026-10-01",
+     240
+    ],
+    [
+     "2026-10-02",
+     233
+    ],
+    [
+     "2026-10-03",
+     245
+    ],
+    [
+     "2026-10-04",
+     209
     ]
    ],
    "series_kind": "daily n_total (ships/day, all vessel types), not smoothed",
@@ -971,43 +971,15 @@
   {
    "family": "energy",
    "id": "transit:Panama Canal",
-   "label": "Panama Canal: ships per day (7-day avg, data to 2026-09-27)",
-   "value": 27,
-   "baseline": 29,
-   "ratio": 0.93,
+   "label": "Panama Canal: ships per day (7-day avg, data to 2026-10-04)",
+   "value": 27.1,
+   "baseline": 28,
+   "ratio": 0.97,
    "anomaly": false,
    "unit": "ships/day",
-   "note": "tankers 11.7/day",
+   "note": "tankers 12.4/day",
    "source": "IMF PortWatch",
    "series": [
-    [
-     "2026-08-29",
-     30
-    ],
-    [
-     "2026-08-30",
-     31
-    ],
-    [
-     "2026-08-31",
-     29
-    ],
-    [
-     "2026-09-01",
-     31
-    ],
-    [
-     "2026-09-02",
-     30
-    ],
-    [
-     "2026-09-03",
-     30
-    ],
-    [
-     "2026-09-04",
-     30
-    ],
     [
      "2026-09-05",
      34
@@ -1099,6 +1071,34 @@
     [
      "2026-09-27",
      30
+    ],
+    [
+     "2026-09-28",
+     30
+    ],
+    [
+     "2026-09-29",
+     28
+    ],
+    [
+     "2026-09-30",
+     25
+    ],
+    [
+     "2026-10-01",
+     24
+    ],
+    [
+     "2026-10-02",
+     28
+    ],
+    [
+     "2026-10-03",
+     26
+    ],
+    [
+     "2026-10-04",
+     29
     ]
    ],
    "series_kind": "daily n_total (ships/day, all vessel types), not smoothed",
@@ -1109,43 +1109,15 @@
   {
    "family": "energy",
    "id": "transit:Cape of Good Hope",
-   "label": "Cape of Good Hope: ships per day (7-day avg, data to 2026-09-27)",
-   "value": 88.1,
+   "label": "Cape of Good Hope: ships per day (7-day avg, data to 2026-10-04)",
+   "value": 87.7,
    "baseline": 86,
    "ratio": 1.02,
    "anomaly": false,
    "unit": "ships/day",
-   "note": "tankers 19.9/day",
+   "note": "tankers 18.7/day",
    "source": "IMF PortWatch",
    "series": [
-    [
-     "2026-08-29",
-     89
-    ],
-    [
-     "2026-08-30",
-     88
-    ],
-    [
-     "2026-08-31",
-     82
-    ],
-    [
-     "2026-09-01",
-     100
-    ],
-    [
-     "2026-09-02",
-     90
-    ],
-    [
-     "2026-09-03",
-     77
-    ],
-    [
-     "2026-09-04",
-     58
-    ],
     [
      "2026-09-05",
      63
@@ -1237,6 +1209,34 @@
     [
      "2026-09-27",
      75
+    ],
+    [
+     "2026-09-28",
+     91
+    ],
+    [
+     "2026-09-29",
+     65
+    ],
+    [
+     "2026-09-30",
+     89
+    ],
+    [
+     "2026-10-01",
+     95
+    ],
+    [
+     "2026-10-02",
+     99
+    ],
+    [
+     "2026-10-03",
+     76
+    ],
+    [
+     "2026-10-04",
+     99
     ]
    ],
    "series_kind": "daily n_total (ships/day, all vessel types), not smoothed",
@@ -1248,18 +1248,14 @@
    "family": "anxiety",
    "id": "wiki:en:Potassium_iodide",
    "label": "Wikipedia (en) \"Potassium iodide\": daily readers, last 3 days",
-   "value": 280,
+   "value": 317,
    "baseline": 322.5,
-   "ratio": 0.87,
+   "ratio": 0.98,
    "anomaly": false,
    "unit": "views/day",
    "note": "",
    "source": "Wikimedia pageviews",
    "series": [
-    [
-     "2026-09-05",
-     253
-    ],
     [
      "2026-09-06",
      237
@@ -1375,6 +1371,10 @@
     [
      "2026-10-04",
      333
+    ],
+    [
+     "2026-10-05",
+     362
     ]
    ],
    "series_kind": "daily views (user agents, all access)",
@@ -1386,18 +1386,14 @@
    "family": "anxiety",
    "id": "wiki:en:Fallout_shelter",
    "label": "Wikipedia (en) \"Fallout shelter\": daily readers, last 3 days",
-   "value": 135,
+   "value": 144,
    "baseline": 154.0,
-   "ratio": 0.88,
+   "ratio": 0.94,
    "anomaly": false,
    "unit": "views/day",
    "note": "",
    "source": "Wikimedia pageviews",
    "series": [
-    [
-     "2026-09-05",
-     133
-    ],
     [
      "2026-09-06",
      155
@@ -1513,6 +1509,10 @@
     [
      "2026-10-04",
      140
+    ],
+    [
+     "2026-10-05",
+     166
     ]
    ],
    "series_kind": "daily views (user agents, all access)",
@@ -1524,18 +1524,14 @@
    "family": "anxiety",
    "id": "wiki:en:Nuclear_warfare",
    "label": "Wikipedia (en) \"Nuclear warfare\": daily readers, last 3 days",
-   "value": 469,
+   "value": 455,
    "baseline": 476.0,
-   "ratio": 0.99,
+   "ratio": 0.96,
    "anomaly": false,
    "unit": "views/day",
    "note": "",
    "source": "Wikimedia pageviews",
    "series": [
-    [
-     "2026-09-05",
-     420
-    ],
     [
      "2026-09-06",
      434
@@ -1651,6 +1647,10 @@
     [
      "2026-10-04",
      488
+    ],
+    [
+     "2026-10-05",
+     457
     ]
    ],
    "series_kind": "daily views (user agents, all access)",
@@ -1662,7 +1662,7 @@
    "family": "anxiety",
    "id": "wiki:en:World_War_III",
    "label": "Wikipedia (en) \"World War III\": daily readers, last 3 days",
-   "value": 1391,
+   "value": 1394,
    "baseline": 1523.5,
    "ratio": 0.91,
    "anomaly": false,
@@ -1670,10 +1670,6 @@
    "note": "",
    "source": "Wikimedia pageviews",
    "series": [
-    [
-     "2026-09-05",
-     1328
-    ],
     [
      "2026-09-06",
      1409
@@ -1789,6 +1785,10 @@
     [
      "2026-10-04",
      1430
+    ],
+    [
+     "2026-10-05",
+     1415
     ]
    ],
    "series_kind": "daily views (user agents, all access)",
@@ -1800,18 +1800,14 @@
    "family": "anxiety",
    "id": "wiki:en:Conscription",
    "label": "Wikipedia (en) \"Conscription\": daily readers, last 3 days",
-   "value": 904,
+   "value": 854,
    "baseline": 899.0,
-   "ratio": 1.01,
+   "ratio": 0.95,
    "anomaly": false,
    "unit": "views/day",
    "note": "",
    "source": "Wikimedia pageviews",
    "series": [
-    [
-     "2026-09-05",
-     878
-    ],
     [
      "2026-09-06",
      908
@@ -1927,6 +1923,10 @@
     [
      "2026-10-04",
      915
+    ],
+    [
+     "2026-10-05",
+     791
     ]
    ],
    "series_kind": "daily views (user agents, all access)",
@@ -1938,18 +1938,14 @@
    "family": "anxiety",
    "id": "wiki:en:Martial_law",
    "label": "Wikipedia (en) \"Martial law\": daily readers, last 3 days",
-   "value": 691,
+   "value": 682,
    "baseline": 610.5,
-   "ratio": 1.13,
+   "ratio": 1.12,
    "anomaly": false,
    "unit": "views/day",
    "note": "",
    "source": "Wikimedia pageviews",
    "series": [
-    [
-     "2026-09-05",
-     510
-    ],
     [
      "2026-09-06",
      573
@@ -2065,6 +2061,10 @@
     [
      "2026-10-04",
      683
+    ],
+    [
+     "2026-10-05",
+     706
     ]
    ],
    "series_kind": "daily views (user agents, all access)",
@@ -2076,18 +2076,14 @@
    "family": "anxiety",
    "id": "wiki:en:Gas_mask",
    "label": "Wikipedia (en) \"Gas mask\": daily readers, last 3 days",
-   "value": 212,
-   "baseline": 227.5,
-   "ratio": 0.93,
+   "value": 230,
+   "baseline": 228.0,
+   "ratio": 1.01,
    "anomaly": false,
    "unit": "views/day",
    "note": "",
    "source": "Wikimedia pageviews",
    "series": [
-    [
-     "2026-09-05",
-     226
-    ],
     [
      "2026-09-06",
      269
@@ -2203,6 +2199,10 @@
     [
      "2026-10-04",
      216
+    ],
+    [
+     "2026-10-05",
+     283
     ]
    ],
    "series_kind": "daily views (user agents, all access)",
@@ -2214,18 +2214,14 @@
    "family": "anxiety",
    "id": "wiki:en:Air_raid_shelter",
    "label": "Wikipedia (en) \"Air raid shelter\": daily readers, last 3 days",
-   "value": 75,
-   "baseline": 91.0,
-   "ratio": 0.82,
+   "value": 81,
+   "baseline": 90.0,
+   "ratio": 0.9,
    "anomaly": false,
    "unit": "views/day",
    "note": "",
    "source": "Wikimedia pageviews",
    "series": [
-    [
-     "2026-09-05",
-     89
-    ],
     [
      "2026-09-06",
      86
@@ -2341,6 +2337,10 @@
     [
      "2026-10-04",
      67
+    ],
+    [
+     "2026-10-05",
+     89
     ]
    ],
    "series_kind": "daily views (user agents, all access)",
@@ -2352,18 +2352,14 @@
    "family": "anxiety",
    "id": "wiki:en:Electromagnetic_pulse",
    "label": "Wikipedia (en) \"Electromagnetic pulse\": daily readers, last 3 days",
-   "value": 474,
-   "baseline": 592.5,
-   "ratio": 0.8,
+   "value": 481,
+   "baseline": 588.5,
+   "ratio": 0.82,
    "anomaly": false,
    "unit": "views/day",
    "note": "",
    "source": "Wikimedia pageviews",
    "series": [
-    [
-     "2026-09-05",
-     491
-    ],
     [
      "2026-09-06",
      613
@@ -2479,6 +2475,10 @@
     [
      "2026-10-04",
      464
+    ],
+    [
+     "2026-10-05",
+     502
     ]
    ],
    "series_kind": "daily views (user agents, all access)",
@@ -2490,18 +2490,14 @@
    "family": "anxiety",
    "id": "wiki:en:Bug-out_bag",
    "label": "Wikipedia (en) \"Bug-out bag\": daily readers, last 3 days",
-   "value": 24,
+   "value": 22,
    "baseline": 19.0,
-   "ratio": 1.26,
+   "ratio": 1.16,
    "anomaly": false,
    "unit": "views/day",
    "note": "",
    "source": "Wikimedia pageviews",
    "series": [
-    [
-     "2026-09-05",
-     22
-    ],
     [
      "2026-09-06",
      10
@@ -2617,6 +2613,10 @@
     [
      "2026-10-04",
      21
+    ],
+    [
+     "2026-10-05",
+     16
     ]
    ],
    "series_kind": "daily views (user agents, all access)",
@@ -2636,10 +2636,6 @@
    "note": "",
    "source": "Wikimedia pageviews",
    "series": [
-    [
-     "2026-09-02",
-     4
-    ],
     [
      "2026-09-03",
      1
@@ -2755,6 +2751,10 @@
     [
      "2026-10-04",
      0
+    ],
+    [
+     "2026-10-05",
+     1
     ]
    ],
    "series_kind": "daily views (user agents, all access)",
@@ -2766,18 +2766,14 @@
    "family": "anxiety",
    "id": "wiki:ru:Мобилизация",
    "label": "Wikipedia (ru) \"Мобилизация\": daily readers, last 3 days",
-   "value": 117,
+   "value": 105,
    "baseline": 175.5,
-   "ratio": 0.67,
+   "ratio": 0.6,
    "anomaly": false,
    "unit": "views/day",
    "note": "",
    "source": "Wikimedia pageviews",
    "series": [
-    [
-     "2026-09-05",
-     210
-    ],
     [
      "2026-09-06",
      176
@@ -2893,6 +2889,10 @@
     [
      "2026-10-04",
      105
+    ],
+    [
+     "2026-10-05",
+     108
     ]
    ],
    "series_kind": "daily views (user agents, all access)",
@@ -2905,17 +2905,13 @@
    "id": "wiki:ru:Военное_положение",
    "label": "Wikipedia (ru) \"Военное положение\": daily readers, last 3 days",
    "value": 38,
-   "baseline": 39.5,
-   "ratio": 0.96,
+   "baseline": 39.0,
+   "ratio": 0.97,
    "anomaly": false,
    "unit": "views/day",
    "note": "",
    "source": "Wikimedia pageviews",
    "series": [
-    [
-     "2026-09-05",
-     25
-    ],
     [
      "2026-09-06",
      36
@@ -3031,6 +3027,10 @@
     [
      "2026-10-04",
      32
+    ],
+    [
+     "2026-10-05",
+     38
     ]
    ],
    "series_kind": "daily views (user agents, all access)",
@@ -3042,18 +3042,14 @@
    "family": "anxiety",
    "id": "wiki:ru:Бомбоубежище",
    "label": "Wikipedia (ru) \"Бомбоубежище\": daily readers, last 3 days",
-   "value": 39,
-   "baseline": 48.5,
-   "ratio": 0.8,
+   "value": 38,
+   "baseline": 48.0,
+   "ratio": 0.79,
    "anomaly": false,
    "unit": "views/day",
    "note": "",
    "source": "Wikimedia pageviews",
    "series": [
-    [
-     "2026-09-05",
-     55
-    ],
     [
      "2026-09-06",
      62
@@ -3169,6 +3165,10 @@
     [
      "2026-10-04",
      30
+    ],
+    [
+     "2026-10-05",
+     26
     ]
    ],
    "series_kind": "daily views (user agents, all access)",
@@ -3180,18 +3180,14 @@
    "family": "anxiety",
    "id": "wiki:ru:Третья_мировая_война",
    "label": "Wikipedia (ru) \"Третья мировая война\": daily readers, last 3 days",
-   "value": 319,
-   "baseline": 323.0,
-   "ratio": 0.99,
+   "value": 294,
+   "baseline": 325.0,
+   "ratio": 0.9,
    "anomaly": false,
    "unit": "views/day",
    "note": "",
    "source": "Wikimedia pageviews",
    "series": [
-    [
-     "2026-09-05",
-     266
-    ],
     [
      "2026-09-06",
      328
@@ -3307,6 +3303,10 @@
     [
      "2026-10-04",
      291
+    ],
+    [
+     "2026-10-05",
+     249
     ]
    ],
    "series_kind": "daily views (user agents, all access)",
@@ -3318,18 +3318,14 @@
    "family": "anxiety",
    "id": "wiki:ru:Ядерная_война",
    "label": "Wikipedia (ru) \"Ядерная война\": daily readers, last 3 days",
-   "value": 130,
+   "value": 121,
    "baseline": 119.0,
-   "ratio": 1.09,
+   "ratio": 1.02,
    "anomaly": false,
    "unit": "views/day",
    "note": "",
    "source": "Wikimedia pageviews",
    "series": [
-    [
-     "2026-09-05",
-     107
-    ],
     [
      "2026-09-06",
      117
@@ -3445,6 +3441,10 @@
     [
      "2026-10-04",
      130
+    ],
+    [
+     "2026-10-05",
+     107
     ]
    ],
    "series_kind": "daily views (user agents, all access)",
@@ -3456,18 +3456,14 @@
    "family": "anxiety",
    "id": "wiki:uk:Воєнний_стан",
    "label": "Wikipedia (uk) \"Воєнний стан\": daily readers, last 3 days",
-   "value": 14,
+   "value": 10,
    "baseline": 16.5,
-   "ratio": 0.85,
+   "ratio": 0.61,
    "anomaly": false,
    "unit": "views/day",
    "note": "",
    "source": "Wikimedia pageviews",
    "series": [
-    [
-     "2026-09-05",
-     12
-    ],
     [
      "2026-09-06",
      9
@@ -3583,6 +3579,10 @@
     [
      "2026-10-04",
      12
+    ],
+    [
+     "2026-10-05",
+     12
     ]
    ],
    "series_kind": "daily views (user agents, all access)",
@@ -3594,18 +3594,14 @@
    "family": "anxiety",
    "id": "wiki:uk:Мобілізація",
    "label": "Wikipedia (uk) \"Мобілізація\": daily readers, last 3 days",
-   "value": 13,
-   "baseline": 23.5,
-   "ratio": 0.55,
+   "value": 14,
+   "baseline": 23.0,
+   "ratio": 0.61,
    "anomaly": false,
    "unit": "views/day",
    "note": "",
    "source": "Wikimedia pageviews",
    "series": [
-    [
-     "2026-09-05",
-     16
-    ],
     [
      "2026-09-06",
      13
@@ -3721,6 +3717,10 @@
     [
      "2026-10-04",
      17
+    ],
+    [
+     "2026-10-05",
+     14
     ]
    ],
    "series_kind": "daily views (user agents, all access)",
@@ -3740,10 +3740,6 @@
    "note": "",
    "source": "Wikimedia pageviews",
    "series": [
-    [
-     "2026-09-04",
-     0
-    ],
     [
      "2026-09-05",
      2
@@ -3859,6 +3855,10 @@
     [
      "2026-10-04",
      0
+    ],
+    [
+     "2026-10-05",
+     0
     ]
    ],
    "series_kind": "daily views (user agents, all access)",
@@ -3870,18 +3870,14 @@
    "family": "anxiety",
    "id": "wiki:fa:جنگ_جهانی_سوم",
    "label": "Wikipedia (fa) \"جنگ جهانی سوم\": daily readers, last 3 days",
-   "value": 118,
+   "value": 107,
    "baseline": 102.5,
-   "ratio": 1.15,
+   "ratio": 1.04,
    "anomaly": false,
    "unit": "views/day",
    "note": "",
    "source": "Wikimedia pageviews",
    "series": [
-    [
-     "2026-09-05",
-     88
-    ],
     [
      "2026-09-06",
      78
@@ -3997,6 +3993,10 @@
     [
      "2026-10-04",
      86
+    ],
+    [
+     "2026-10-05",
+     124
     ]
    ],
    "series_kind": "daily views (user agents, all access)",
@@ -4008,18 +4008,14 @@
    "family": "anxiety",
    "id": "wiki:zh:第三次世界大战",
    "label": "Wikipedia (zh) \"第三次世界大战\": daily readers, last 3 days",
-   "value": 8,
+   "value": 9,
    "baseline": 7.0,
-   "ratio": 1.14,
+   "ratio": 1.29,
    "anomaly": false,
    "unit": "views/day",
    "note": "",
    "source": "Wikimedia pageviews",
    "series": [
-    [
-     "2026-09-05",
-     5
-    ],
     [
      "2026-09-06",
      7
@@ -4135,6 +4131,10 @@
     [
      "2026-10-04",
      10
+    ],
+    [
+     "2026-10-05",
+     7
     ]
    ],
    "series_kind": "daily views (user agents, all access)",
@@ -4146,18 +4146,14 @@
    "family": "anxiety",
    "id": "wiki:de:Wehrpflicht",
    "label": "Wikipedia (de) \"Wehrpflicht\": daily readers, last 3 days",
-   "value": 128,
-   "baseline": 106.0,
-   "ratio": 1.21,
+   "value": 114,
+   "baseline": 107.5,
+   "ratio": 1.06,
    "anomaly": false,
    "unit": "views/day",
    "note": "",
    "source": "Wikimedia pageviews",
    "series": [
-    [
-     "2026-09-05",
-     75
-    ],
     [
      "2026-09-06",
      78
@@ -4273,6 +4269,10 @@
     [
      "2026-10-04",
      119
+    ],
+    [
+     "2026-10-05",
+     89
     ]
    ],
    "series_kind": "daily views (user agents, all access)",
@@ -4284,18 +4284,14 @@
    "family": "anxiety",
    "id": "wiki:de:Kaliumiodid",
    "label": "Wikipedia (de) \"Kaliumiodid\": daily readers, last 3 days",
-   "value": 37,
+   "value": 44,
    "baseline": 47.0,
-   "ratio": 0.79,
+   "ratio": 0.94,
    "anomaly": false,
    "unit": "views/day",
    "note": "",
    "source": "Wikimedia pageviews",
    "series": [
-    [
-     "2026-09-05",
-     39
-    ],
     [
      "2026-09-06",
      34
@@ -4411,6 +4407,10 @@
     [
      "2026-10-04",
      43
+    ],
+    [
+     "2026-10-05",
+     58
     ]
    ],
    "series_kind": "daily views (user agents, all access)",
@@ -4419,113 +4419,1947 @@
    "not_proves": "It does not prove any real danger: a film, a meme, school homework or a bot can drive page views."
   },
   {
-   "family": "procurement",
-   "id": "news:\"body bags\" (order OR shortage OR stockpile)",
-   "label": "News share mentioning \"body bags\" (order OR shortage OR stockpile) (last 3 days vs 4 weeks)",
-   "value": 0.001,
-   "baseline": 0.0013,
-   "ratio": 0.77,
+   "family": "military",
+   "id": "gkg:ARMEDCONFLICT",
+   "label": "News share tagged \"armed conflict\" (GDELT themes, last 3 days vs before)",
+   "value": 12.143,
+   "baseline": 11.955,
+   "ratio": 1.02,
    "anomaly": false,
    "unit": "% of news",
-   "note": "",
-   "source": "GDELT",
+   "note": "2507 of 21445 sampled documents in the last 3 days; machine-tagged themes, one 15-min file per 3 h",
+   "source": "GDELT 2.0 GKG",
    "series": [
     [
-     "2026-09-06",
-     0.003
-    ],
-    [
      "2026-09-07",
-     0.0008
+     9.8126
     ],
     [
      "2026-09-08",
-     0
+     11.7258
     ],
     [
      "2026-09-09",
-     0.0006
+     10.7497
     ],
     [
      "2026-09-10",
-     0.0006
+     12.2951
     ],
     [
      "2026-09-11",
-     0.0026
+     17.0757
     ],
     [
      "2026-09-12",
-     0.0025
+     16.0256
     ],
     [
      "2026-09-13",
-     0.0034
+     13.3257
+    ],
+    [
+     "2026-09-14",
+     11.1607
+    ],
+    [
+     "2026-09-15",
+     10.6727
+    ],
+    [
+     "2026-09-16",
+     12.614
+    ],
+    [
+     "2026-09-17",
+     11.1962
+    ],
+    [
+     "2026-09-18",
+     11.6229
+    ],
+    [
+     "2026-09-19",
+     12.2195
     ],
     [
      "2026-09-20",
-     0.0038
+     15.0812
     ],
     [
      "2026-09-21",
-     0.0009
+     11.6834
     ],
     [
      "2026-09-22",
-     0
+     11.7599
     ],
     [
      "2026-09-23",
-     0.0013
+     12.5491
     ],
     [
      "2026-09-24",
-     0.0032
+     12.67
     ],
     [
      "2026-09-25",
-     0.0017
+     11.3342
+    ],
+    [
+     "2026-09-26",
+     12.4782
     ],
     [
      "2026-09-27",
-     0
+     15.5353
     ],
     [
      "2026-09-28",
-     0.0008
+     11.672
     ],
     [
      "2026-09-29",
-     0.0022
+     9.8432
     ],
     [
      "2026-09-30",
-     0.0018
+     11.7707
     ],
     [
      "2026-10-01",
-     0.0011
+     12.2861
     ],
     [
      "2026-10-02",
-     0
+     11.955
+    ],
+    [
+     "2026-10-03",
+     13.663
+    ],
+    [
+     "2026-10-04",
+     14.2615
+    ],
+    [
+     "2026-10-05",
+     11.1518
+    ],
+    [
+     "2026-10-06",
+     11.0165
     ]
    ],
-   "series_kind": "daily share of all monitored news articles, % (GDELT timelinevol)",
+   "series_kind": "daily share of sampled GDELT documents with the theme, %",
    "component": "military",
-   "means": "More news about body bag orders or shortages may mean an army expects or suffers heavy losses.",
-   "not_proves": "It does not prove casualties: tenders, disasters and rhetoric also use the phrase."
+   "means": "",
+   "not_proves": ""
+  },
+  {
+   "family": "military",
+   "id": "gkg:DRONES",
+   "label": "News share tagged \"drones\" (GDELT themes, last 3 days vs before)",
+   "value": 2.008,
+   "baseline": 2.066,
+   "ratio": 0.97,
+   "anomaly": false,
+   "unit": "% of news",
+   "note": "420 of 21445 sampled documents in the last 3 days; machine-tagged themes, one 15-min file per 3 h",
+   "source": "GDELT 2.0 GKG",
+   "series": [
+    [
+     "2026-09-07",
+     2.3425
+    ],
+    [
+     "2026-09-08",
+     2.2923
+    ],
+    [
+     "2026-09-09",
+     1.7968
+    ],
+    [
+     "2026-09-10",
+     1.6499
+    ],
+    [
+     "2026-09-11",
+     1.651
+    ],
+    [
+     "2026-09-12",
+     2.9977
+    ],
+    [
+     "2026-09-13",
+     3.7358
+    ],
+    [
+     "2026-09-14",
+     3.2366
+    ],
+    [
+     "2026-09-15",
+     2.0664
+    ],
+    [
+     "2026-09-16",
+     2.572
+    ],
+    [
+     "2026-09-17",
+     2.0415
+    ],
+    [
+     "2026-09-18",
+     2.7408
+    ],
+    [
+     "2026-09-19",
+     2.0932
+    ],
+    [
+     "2026-09-20",
+     3.6068
+    ],
+    [
+     "2026-09-21",
+     2.9523
+    ],
+    [
+     "2026-09-22",
+     2.2152
+    ],
+    [
+     "2026-09-23",
+     1.9523
+    ],
+    [
+     "2026-09-24",
+     1.7498
+    ],
+    [
+     "2026-09-25",
+     1.4483
+    ],
+    [
+     "2026-09-26",
+     1.9957
+    ],
+    [
+     "2026-09-27",
+     2.3918
+    ],
+    [
+     "2026-09-28",
+     1.5038
+    ],
+    [
+     "2026-09-29",
+     1.0817
+    ],
+    [
+     "2026-09-30",
+     1.5904
+    ],
+    [
+     "2026-10-01",
+     1.4739
+    ],
+    [
+     "2026-10-02",
+     1.5363
+    ],
+    [
+     "2026-10-03",
+     2.1704
+    ],
+    [
+     "2026-10-04",
+     2.3769
+    ],
+    [
+     "2026-10-05",
+     1.4129
+    ],
+    [
+     "2026-10-06",
+     2.2352
+    ]
+   ],
+   "series_kind": "daily share of sampled GDELT documents with the theme, %",
+   "component": "military",
+   "means": "",
+   "not_proves": ""
+  },
+  {
+   "family": "military",
+   "id": "gkg:BLOCKADE",
+   "label": "News share tagged \"blockades\" (GDELT themes, last 3 days vs before)",
+   "value": 0.629,
+   "baseline": 0.833,
+   "ratio": 0.76,
+   "anomaly": false,
+   "unit": "% of news",
+   "note": "141 of 21445 sampled documents in the last 3 days; machine-tagged themes, one 15-min file per 3 h",
+   "source": "GDELT 2.0 GKG",
+   "series": [
+    [
+     "2026-09-07",
+     0.5466
+    ],
+    [
+     "2026-09-08",
+     1.069
+    ],
+    [
+     "2026-09-09",
+     0.8571
+    ],
+    [
+     "2026-09-10",
+     0.5359
+    ],
+    [
+     "2026-09-11",
+     0.8594
+    ],
+    [
+     "2026-09-12",
+     1.7345
+    ],
+    [
+     "2026-09-13",
+     1.0706
+    ],
+    [
+     "2026-09-14",
+     0.8185
+    ],
+    [
+     "2026-09-15",
+     0.6155
+    ],
+    [
+     "2026-09-16",
+     0.5328
+    ],
+    [
+     "2026-09-17",
+     0.4253
+    ],
+    [
+     "2026-09-18",
+     0.7165
+    ],
+    [
+     "2026-09-19",
+     0.6789
+    ],
+    [
+     "2026-09-20",
+     0.7382
+    ],
+    [
+     "2026-09-21",
+     0.892
+    ],
+    [
+     "2026-09-22",
+     0.7452
+    ],
+    [
+     "2026-09-23",
+     0.946
+    ],
+    [
+     "2026-09-24",
+     0.8327
+    ],
+    [
+     "2026-09-25",
+     1.2508
+    ],
+    [
+     "2026-09-26",
+     1.5307
+    ],
+    [
+     "2026-09-27",
+     1.2984
+    ],
+    [
+     "2026-09-28",
+     1.2889
+    ],
+    [
+     "2026-09-29",
+     0.9519
+    ],
+    [
+     "2026-09-30",
+     1.2054
+    ],
+    [
+     "2026-10-01",
+     0.5737
+    ],
+    [
+     "2026-10-02",
+     0.4436
+    ],
+    [
+     "2026-10-03",
+     0.5159
+    ],
+    [
+     "2026-10-04",
+     0.5336
+    ],
+    [
+     "2026-10-05",
+     0.5551
+    ],
+    [
+     "2026-10-06",
+     0.7983
+    ]
+   ],
+   "series_kind": "daily share of sampled GDELT documents with the theme, %",
+   "component": "military",
+   "means": "",
+   "not_proves": ""
+  },
+  {
+   "family": "military",
+   "id": "gkg:WMD",
+   "label": "News share tagged \"weapons of mass destruction\" (GDELT themes, last 3 days vs before)",
+   "value": 0.439,
+   "baseline": 0.633,
+   "ratio": 0.69,
+   "anomaly": false,
+   "unit": "% of news",
+   "note": "90 of 21445 sampled documents in the last 3 days; machine-tagged themes, one 15-min file per 3 h",
+   "source": "GDELT 2.0 GKG",
+   "series": [
+    [
+     "2026-09-07",
+     0.6767
+    ],
+    [
+     "2026-09-08",
+     0.3857
+    ],
+    [
+     "2026-09-09",
+     0.3098
+    ],
+    [
+     "2026-09-10",
+     0.62
+    ],
+    [
+     "2026-09-11",
+     1.0064
+    ],
+    [
+     "2026-09-12",
+     1.3198
+    ],
+    [
+     "2026-09-13",
+     1.0251
+    ],
+    [
+     "2026-09-14",
+     0.8805
+    ],
+    [
+     "2026-09-15",
+     0.6705
+    ],
+    [
+     "2026-09-16",
+     0.8198
+    ],
+    [
+     "2026-09-17",
+     0.3615
+    ],
+    [
+     "2026-09-18",
+     0.4663
+    ],
+    [
+     "2026-09-19",
+     0.6977
+    ],
+    [
+     "2026-09-20",
+     0.464
+    ],
+    [
+     "2026-09-21",
+     0.3266
+    ],
+    [
+     "2026-09-22",
+     0.9187
+    ],
+    [
+     "2026-09-23",
+     0.6139
+    ],
+    [
+     "2026-09-24",
+     0.6324
+    ],
+    [
+     "2026-09-25",
+     0.8997
+    ],
+    [
+     "2026-09-26",
+     1.1626
+    ],
+    [
+     "2026-09-27",
+     0.82
+    ],
+    [
+     "2026-09-28",
+     0.6325
+    ],
+    [
+     "2026-09-29",
+     0.5408
+    ],
+    [
+     "2026-09-30",
+     0.6686
+    ],
+    [
+     "2026-10-01",
+     0.5935
+    ],
+    [
+     "2026-10-02",
+     0.5518
+    ],
+    [
+     "2026-10-03",
+     0.2846
+    ],
+    [
+     "2026-10-04",
+     0.5578
+    ],
+    [
+     "2026-10-05",
+     0.2901
+    ],
+    [
+     "2026-10-06",
+     0.4683
+    ]
+   ],
+   "series_kind": "daily share of sampled GDELT documents with the theme, %",
+   "component": "military",
+   "means": "",
+   "not_proves": ""
+  },
+  {
+   "family": "military",
+   "id": "gkg:EVACUATION",
+   "label": "News share tagged \"evacuations\" (GDELT themes, last 3 days vs before)",
+   "value": 0.78,
+   "baseline": 0.717,
+   "ratio": 1.09,
+   "anomaly": false,
+   "unit": "% of news",
+   "note": "160 of 21445 sampled documents in the last 3 days; machine-tagged themes, one 15-min file per 3 h",
+   "source": "GDELT 2.0 GKG",
+   "series": [
+    [
+     "2026-09-07",
+     0.9891
+    ],
+    [
+     "2026-09-08",
+     0.4959
+    ],
+    [
+     "2026-09-09",
+     1.1875
+    ],
+    [
+     "2026-09-10",
+     0.6305
+    ],
+    [
+     "2026-09-11",
+     0.9612
+    ],
+    [
+     "2026-09-12",
+     0.6599
+    ],
+    [
+     "2026-09-13",
+     0.9567
+    ],
+    [
+     "2026-09-14",
+     0.8929
+    ],
+    [
+     "2026-09-15",
+     0.5386
+    ],
+    [
+     "2026-09-16",
+     0.7173
+    ],
+    [
+     "2026-09-17",
+     0.3721
+    ],
+    [
+     "2026-09-18",
+     0.6028
+    ],
+    [
+     "2026-09-19",
+     0.4714
+    ],
+    [
+     "2026-09-20",
+     0.7382
+    ],
+    [
+     "2026-09-21",
+     0.3015
+    ],
+    [
+     "2026-09-22",
+     0.6329
+    ],
+    [
+     "2026-09-23",
+     0.8252
+    ],
+    [
+     "2026-09-24",
+     0.5481
+    ],
+    [
+     "2026-09-25",
+     0.5815
+    ],
+    [
+     "2026-09-26",
+     1.1626
+    ],
+    [
+     "2026-09-27",
+     3.4396
+    ],
+    [
+     "2026-09-28",
+     2.9478
+    ],
+    [
+     "2026-09-29",
+     1.4062
+    ],
+    [
+     "2026-09-30",
+     0.7597
+    ],
+    [
+     "2026-10-01",
+     0.643
+    ],
+    [
+     "2026-10-02",
+     0.5518
+    ],
+    [
+     "2026-10-03",
+     0.9251
+    ],
+    [
+     "2026-10-04",
+     0.9459
+    ],
+    [
+     "2026-10-05",
+     0.6812
+    ],
+    [
+     "2026-10-06",
+     0.7131
+    ]
+   ],
+   "series_kind": "daily share of sampled GDELT documents with the theme, %",
+   "component": "military",
+   "means": "",
+   "not_proves": ""
+  },
+  {
+   "family": "energy",
+   "id": "gkg:FUELPRICES",
+   "label": "News share tagged \"fuel prices\" (GDELT themes, last 3 days vs before)",
+   "value": 1.738,
+   "baseline": 1.637,
+   "ratio": 1.06,
+   "anomaly": false,
+   "unit": "% of news",
+   "note": "377 of 21445 sampled documents in the last 3 days; machine-tagged themes, one 15-min file per 3 h",
+   "source": "GDELT 2.0 GKG",
+   "series": [
+    [
+     "2026-09-07",
+     1.0151
+    ],
+    [
+     "2026-09-08",
+     1.3776
+    ],
+    [
+     "2026-09-09",
+     1.3218
+    ],
+    [
+     "2026-09-10",
+     1.2926
+    ],
+    [
+     "2026-09-11",
+     2.0129
+    ],
+    [
+     "2026-09-12",
+     1.7157
+    ],
+    [
+     "2026-09-13",
+     1.1162
+    ],
+    [
+     "2026-09-14",
+     1.9097
+    ],
+    [
+     "2026-09-15",
+     1.5278
+    ],
+    [
+     "2026-09-16",
+     2.3978
+    ],
+    [
+     "2026-09-17",
+     2.0521
+    ],
+    [
+     "2026-09-18",
+     1.6377
+    ],
+    [
+     "2026-09-19",
+     1.6783
+    ],
+    [
+     "2026-09-20",
+     1.7718
+    ],
+    [
+     "2026-09-21",
+     1.206
+    ],
+    [
+     "2026-09-22",
+     1.3067
+    ],
+    [
+     "2026-09-23",
+     1.7611
+    ],
+    [
+     "2026-09-24",
+     1.7076
+    ],
+    [
+     "2026-09-25",
+     1.3496
+    ],
+    [
+     "2026-09-26",
+     1.1432
+    ],
+    [
+     "2026-09-27",
+     2.2096
+    ],
+    [
+     "2026-09-28",
+     1.3247
+    ],
+    [
+     "2026-09-29",
+     1.3737
+    ],
+    [
+     "2026-09-30",
+     2.0462
+    ],
+    [
+     "2026-10-01",
+     1.5827
+    ],
+    [
+     "2026-10-02",
+     2.1422
+    ],
+    [
+     "2026-10-03",
+     1.6367
+    ],
+    [
+     "2026-10-04",
+     1.7948
+    ],
+    [
+     "2026-10-05",
+     1.2363
+    ],
+    [
+     "2026-10-06",
+     2.182
+    ]
+   ],
+   "series_kind": "daily share of sampled GDELT documents with the theme, %",
+   "component": "energy",
+   "means": "",
+   "not_proves": ""
+  },
+  {
+   "family": "energy",
+   "id": "gkg:SHORTAGE",
+   "label": "News share tagged \"shortages\" (GDELT themes, last 3 days vs before)",
+   "value": 1.659,
+   "baseline": 1.653,
+   "ratio": 1.0,
+   "anomaly": false,
+   "unit": "% of news",
+   "note": "365 of 21445 sampled documents in the last 3 days; machine-tagged themes, one 15-min file per 3 h",
+   "source": "GDELT 2.0 GKG",
+   "series": [
+    [
+     "2026-09-07",
+     1.9261
+    ],
+    [
+     "2026-09-08",
+     1.6531
+    ],
+    [
+     "2026-09-09",
+     1.5903
+    ],
+    [
+     "2026-09-10",
+     1.4922
+    ],
+    [
+     "2026-09-11",
+     1.3005
+    ],
+    [
+     "2026-09-12",
+     1.546
+    ],
+    [
+     "2026-09-13",
+     2.6196
+    ],
+    [
+     "2026-09-14",
+     2.1453
+    ],
+    [
+     "2026-09-15",
+     1.5168
+    ],
+    [
+     "2026-09-16",
+     1.5575
+    ],
+    [
+     "2026-09-17",
+     1.4567
+    ],
+    [
+     "2026-09-18",
+     1.4216
+    ],
+    [
+     "2026-09-19",
+     1.5086
+    ],
+    [
+     "2026-09-20",
+     0.907
+    ],
+    [
+     "2026-09-21",
+     1.6583
+    ],
+    [
+     "2026-09-22",
+     1.7762
+    ],
+    [
+     "2026-09-23",
+     1.8114
+    ],
+    [
+     "2026-09-24",
+     2.066
+    ],
+    [
+     "2026-09-25",
+     1.6348
+    ],
+    [
+     "2026-09-26",
+     2.2864
+    ],
+    [
+     "2026-09-27",
+     2.8246
+    ],
+    [
+     "2026-09-28",
+     1.8737
+    ],
+    [
+     "2026-09-29",
+     1.709
+    ],
+    [
+     "2026-09-30",
+     1.3067
+    ],
+    [
+     "2026-10-01",
+     1.6817
+    ],
+    [
+     "2026-10-02",
+     2.2828
+    ],
+    [
+     "2026-10-03",
+     1.5656
+    ],
+    [
+     "2026-10-04",
+     1.5523
+    ],
+    [
+     "2026-10-05",
+     1.4129
+    ],
+    [
+     "2026-10-06",
+     2.0117
+    ]
+   ],
+   "series_kind": "daily share of sampled GDELT documents with the theme, %",
+   "component": "energy",
+   "means": "",
+   "not_proves": ""
+  },
+  {
+   "family": "energy",
+   "id": "gkg:POWER_OUTAGE",
+   "label": "News share tagged \"power outages\" (GDELT themes, last 3 days vs before)",
+   "value": 0.174,
+   "baseline": 0.341,
+   "ratio": 0.51,
+   "anomaly": false,
+   "unit": "% of news",
+   "note": "33 of 21445 sampled documents in the last 3 days; machine-tagged themes, one 15-min file per 3 h",
+   "source": "GDELT 2.0 GKG",
+   "series": [
+    [
+     "2026-09-07",
+     0.4945
+    ],
+    [
+     "2026-09-08",
+     0.3637
+    ],
+    [
+     "2026-09-09",
+     0.3408
+    ],
+    [
+     "2026-09-10",
+     0.3993
+    ],
+    [
+     "2026-09-11",
+     0.2601
+    ],
+    [
+     "2026-09-12",
+     0.3205
+    ],
+    [
+     "2026-09-13",
+     0.2733
+    ],
+    [
+     "2026-09-14",
+     0.1736
+    ],
+    [
+     "2026-09-15",
+     0.1429
+    ],
+    [
+     "2026-09-16",
+     0.1947
+    ],
+    [
+     "2026-09-17",
+     0.117
+    ],
+    [
+     "2026-09-18",
+     0.2161
+    ],
+    [
+     "2026-09-19",
+     0.5846
+    ],
+    [
+     "2026-09-20",
+     0.4008
+    ],
+    [
+     "2026-09-21",
+     0.3015
+    ],
+    [
+     "2026-09-22",
+     0.3471
+    ],
+    [
+     "2026-09-23",
+     0.3925
+    ],
+    [
+     "2026-09-24",
+     0.3689
+    ],
+    [
+     "2026-09-25",
+     0.6583
+    ],
+    [
+     "2026-09-26",
+     1.1238
+    ],
+    [
+     "2026-09-27",
+     1.7995
+    ],
+    [
+     "2026-09-28",
+     0.5251
+    ],
+    [
+     "2026-09-29",
+     0.292
+    ],
+    [
+     "2026-09-30",
+     0.2532
+    ],
+    [
+     "2026-10-01",
+     0.2275
+    ],
+    [
+     "2026-10-02",
+     0.3895
+    ],
+    [
+     "2026-10-03",
+     0.1423
+    ],
+    [
+     "2026-10-04",
+     0.2911
+    ],
+    [
+     "2026-10-05",
+     0.0505
+    ],
+    [
+     "2026-10-06",
+     0.1809
+    ]
+   ],
+   "series_kind": "daily share of sampled GDELT documents with the theme, %",
+   "component": "energy",
+   "means": "",
+   "not_proves": ""
+  },
+  {
+   "family": "control",
+   "id": "gkg:MEDIA_CENSORSHIP+INTERNET_CENSORSHIP",
+   "label": "News share tagged \"censorship\" (GDELT themes, last 3 days vs before)",
+   "value": 0.4,
+   "baseline": 0.387,
+   "ratio": 1.03,
+   "anomaly": false,
+   "unit": "% of news",
+   "note": "90 of 21445 sampled documents in the last 3 days; machine-tagged themes, one 15-min file per 3 h",
+   "source": "GDELT 2.0 GKG",
+   "series": [
+    [
+     "2026-09-07",
+     0.3123
+    ],
+    [
+     "2026-09-08",
+     0.2535
+    ],
+    [
+     "2026-09-09",
+     0.4647
+    ],
+    [
+     "2026-09-10",
+     0.3468
+    ],
+    [
+     "2026-09-11",
+     0.3166
+    ],
+    [
+     "2026-09-12",
+     0.4525
+    ],
+    [
+     "2026-09-13",
+     0.3872
+    ],
+    [
+     "2026-09-14",
+     0.3348
+    ],
+    [
+     "2026-09-15",
+     0.3188
+    ],
+    [
+     "2026-09-16",
+     0.2357
+    ],
+    [
+     "2026-09-17",
+     0.2764
+    ],
+    [
+     "2026-09-18",
+     0.6596
+    ],
+    [
+     "2026-09-19",
+     1.2069
+    ],
+    [
+     "2026-09-20",
+     0.6117
+    ],
+    [
+     "2026-09-21",
+     1.7714
+    ],
+    [
+     "2026-09-22",
+     1.1127
+    ],
+    [
+     "2026-09-23",
+     0.9057
+    ],
+    [
+     "2026-09-24",
+     1.3492
+    ],
+    [
+     "2026-09-25",
+     0.8119
+    ],
+    [
+     "2026-09-26",
+     0.62
+    ],
+    [
+     "2026-09-27",
+     0.3872
+    ],
+    [
+     "2026-09-28",
+     0.2864
+    ],
+    [
+     "2026-09-29",
+     0.2704
+    ],
+    [
+     "2026-09-30",
+     0.4153
+    ],
+    [
+     "2026-10-01",
+     0.4748
+    ],
+    [
+     "2026-10-02",
+     0.357
+    ],
+    [
+     "2026-10-03",
+     0.2313
+    ],
+    [
+     "2026-10-04",
+     0.2911
+    ],
+    [
+     "2026-10-05",
+     0.5046
+    ],
+    [
+     "2026-10-06",
+     0.4045
+    ]
+   ],
+   "series_kind": "daily share of sampled GDELT documents with the theme, %",
+   "component": "institutions",
+   "means": "",
+   "not_proves": ""
+  },
+  {
+   "family": "control",
+   "id": "gkg:UNREST_CRACKDOWN",
+   "label": "News share tagged \"crackdowns\" (GDELT themes, last 3 days vs before)",
+   "value": 0.579,
+   "baseline": 0.666,
+   "ratio": 0.87,
+   "anomaly": false,
+   "unit": "% of news",
+   "note": "137 of 21445 sampled documents in the last 3 days; machine-tagged themes, one 15-min file per 3 h",
+   "source": "GDELT 2.0 GKG",
+   "series": [
+    [
+     "2026-09-07",
+     0.5986
+    ],
+    [
+     "2026-09-08",
+     0.7604
+    ],
+    [
+     "2026-09-09",
+     0.6196
+    ],
+    [
+     "2026-09-10",
+     0.5885
+    ],
+    [
+     "2026-09-11",
+     0.7124
+    ],
+    [
+     "2026-09-12",
+     0.6787
+    ],
+    [
+     "2026-09-13",
+     0.4784
+    ],
+    [
+     "2026-09-14",
+     0.5332
+    ],
+    [
+     "2026-09-15",
+     0.3737
+    ],
+    [
+     "2026-09-16",
+     0.83
+    ],
+    [
+     "2026-09-17",
+     1.0633
+    ],
+    [
+     "2026-09-18",
+     1.1714
+    ],
+    [
+     "2026-09-19",
+     0.4714
+    ],
+    [
+     "2026-09-20",
+     0.8226
+    ],
+    [
+     "2026-09-21",
+     0.6658
+    ],
+    [
+     "2026-09-22",
+     0.7758
+    ],
+    [
+     "2026-09-23",
+     1.0164
+    ],
+    [
+     "2026-09-24",
+     0.6641
+    ],
+    [
+     "2026-09-25",
+     0.5047
+    ],
+    [
+     "2026-09-26",
+     0.4844
+    ],
+    [
+     "2026-09-27",
+     0.5011
+    ],
+    [
+     "2026-09-28",
+     0.6087
+    ],
+    [
+     "2026-09-29",
+     0.4976
+    ],
+    [
+     "2026-09-30",
+     0.7496
+    ],
+    [
+     "2026-10-01",
+     1.4245
+    ],
+    [
+     "2026-10-02",
+     0.8114
+    ],
+    [
+     "2026-10-03",
+     0.9251
+    ],
+    [
+     "2026-10-04",
+     0.2668
+    ],
+    [
+     "2026-10-05",
+     0.82
+    ],
+    [
+     "2026-10-06",
+     0.6493
+    ]
+   ],
+   "series_kind": "daily share of sampled GDELT documents with the theme, %",
+   "component": "institutions",
+   "means": "",
+   "not_proves": ""
+  },
+  {
+   "family": "control",
+   "id": "gkg:STATE_OF_EMERGENCY+CURFEW",
+   "label": "News share tagged \"states of emergency and curfews\" (GDELT themes, last 3 days vs before)",
+   "value": 0.141,
+   "baseline": 0.097,
+   "ratio": 1.45,
+   "anomaly": false,
+   "unit": "% of news",
+   "note": "26 of 21445 sampled documents in the last 3 days; machine-tagged themes, one 15-min file per 3 h",
+   "source": "GDELT 2.0 GKG",
+   "series": [
+    [
+     "2026-09-07",
+     0.1301
+    ],
+    [
+     "2026-09-08",
+     0.0441
+    ],
+    [
+     "2026-09-09",
+     0.0929
+    ],
+    [
+     "2026-09-10",
+     0.0946
+    ],
+    [
+     "2026-09-11",
+     0.0679
+    ],
+    [
+     "2026-09-12",
+     0.3582
+    ],
+    [
+     "2026-09-13",
+     0.0
+    ],
+    [
+     "2026-09-14",
+     0.0992
+    ],
+    [
+     "2026-09-15",
+     0.044
+    ],
+    [
+     "2026-09-16",
+     0.0
+    ],
+    [
+     "2026-09-17",
+     0.0532
+    ],
+    [
+     "2026-09-18",
+     0.1365
+    ],
+    [
+     "2026-09-19",
+     0.0754
+    ],
+    [
+     "2026-09-20",
+     0.0422
+    ],
+    [
+     "2026-09-21",
+     0.1005
+    ],
+    [
+     "2026-09-22",
+     0.1123
+    ],
+    [
+     "2026-09-23",
+     0.2818
+    ],
+    [
+     "2026-09-24",
+     0.0632
+    ],
+    [
+     "2026-09-25",
+     0.1865
+    ],
+    [
+     "2026-09-26",
+     0.3875
+    ],
+    [
+     "2026-09-27",
+     0.7062
+    ],
+    [
+     "2026-09-28",
+     0.0716
+    ],
+    [
+     "2026-09-29",
+     0.0973
+    ],
+    [
+     "2026-09-30",
+     0.1216
+    ],
+    [
+     "2026-10-01",
+     0.1583
+    ],
+    [
+     "2026-10-02",
+     0.0649
+    ],
+    [
+     "2026-10-03",
+     0.1423
+    ],
+    [
+     "2026-10-04",
+     0.2425
+    ],
+    [
+     "2026-10-05",
+     0.0631
+    ],
+    [
+     "2026-10-06",
+     0.1171
+    ]
+   ],
+   "series_kind": "daily share of sampled GDELT documents with the theme, %",
+   "component": "institutions",
+   "means": "",
+   "not_proves": ""
+  },
+  {
+   "family": "hidden war",
+   "id": "gkg:CYBER_ATTACK",
+   "label": "News share tagged \"cyber attacks\" (GDELT themes, last 3 days vs before)",
+   "value": 1.375,
+   "baseline": 1.635,
+   "ratio": 0.84,
+   "anomaly": false,
+   "unit": "% of news",
+   "note": "313 of 21445 sampled documents in the last 3 days; machine-tagged themes, one 15-min file per 3 h",
+   "source": "GDELT 2.0 GKG",
+   "series": [
+    [
+     "2026-09-07",
+     1.5096
+    ],
+    [
+     "2026-09-08",
+     1.4216
+    ],
+    [
+     "2026-09-09",
+     1.8691
+    ],
+    [
+     "2026-09-10",
+     1.3661
+    ],
+    [
+     "2026-09-11",
+     1.6849
+    ],
+    [
+     "2026-09-12",
+     1.6968
+    ],
+    [
+     "2026-09-13",
+     2.0046
+    ],
+    [
+     "2026-09-14",
+     2.5298
+    ],
+    [
+     "2026-09-15",
+     1.8795
+    ],
+    [
+     "2026-09-16",
+     1.4346
+    ],
+    [
+     "2026-09-17",
+     1.7331
+    ],
+    [
+     "2026-09-18",
+     1.5694
+    ],
+    [
+     "2026-09-19",
+     1.452
+    ],
+    [
+     "2026-09-20",
+     1.4554
+    ],
+    [
+     "2026-09-21",
+     1.4322
+    ],
+    [
+     "2026-09-22",
+     1.2148
+    ],
+    [
+     "2026-09-23",
+     1.751
+    ],
+    [
+     "2026-09-24",
+     2.6879
+    ],
+    [
+     "2026-09-25",
+     1.4483
+    ],
+    [
+     "2026-09-26",
+     1.8407
+    ],
+    [
+     "2026-09-27",
+     2.4146
+    ],
+    [
+     "2026-09-28",
+     1.635
+    ],
+    [
+     "2026-09-29",
+     1.9362
+    ],
+    [
+     "2026-09-30",
+     2.0158
+    ],
+    [
+     "2026-10-01",
+     1.5432
+    ],
+    [
+     "2026-10-02",
+     1.3091
+    ],
+    [
+     "2026-10-03",
+     1.2987
+    ],
+    [
+     "2026-10-04",
+     1.0187
+    ],
+    [
+     "2026-10-05",
+     1.4255
+    ],
+    [
+     "2026-10-06",
+     1.6817
+    ]
+   ],
+   "series_kind": "daily share of sampled GDELT documents with the theme, %",
+   "component": "institutions",
+   "means": "",
+   "not_proves": ""
+  },
+  {
+   "family": "procurement",
+   "id": "gkg:MIL_SELF_IDENTIFIED_ARMS_DEAL",
+   "label": "News share tagged \"arms deals\" (GDELT themes, last 3 days vs before)",
+   "value": 0.291,
+   "baseline": 0.052,
+   "ratio": 5.6,
+   "anomaly": true,
+   "unit": "% of news",
+   "note": "47 of 21445 sampled documents in the last 3 days; machine-tagged themes, one 15-min file per 3 h",
+   "source": "GDELT 2.0 GKG",
+   "series": [
+    [
+     "2026-09-07",
+     0.0
+    ],
+    [
+     "2026-09-08",
+     0.0441
+    ],
+    [
+     "2026-09-09",
+     0.0516
+    ],
+    [
+     "2026-09-10",
+     0.0
+    ],
+    [
+     "2026-09-11",
+     0.0
+    ],
+    [
+     "2026-09-12",
+     0.0
+    ],
+    [
+     "2026-09-13",
+     0.205
+    ],
+    [
+     "2026-09-14",
+     0.0
+    ],
+    [
+     "2026-09-15",
+     0.0
+    ],
+    [
+     "2026-09-16",
+     0.2049
+    ],
+    [
+     "2026-09-17",
+     0.0851
+    ],
+    [
+     "2026-09-18",
+     0.1592
+    ],
+    [
+     "2026-09-19",
+     0.0377
+    ],
+    [
+     "2026-09-20",
+     0.0
+    ],
+    [
+     "2026-09-21",
+     0.0754
+    ],
+    [
+     "2026-09-22",
+     0.1531
+    ],
+    [
+     "2026-09-23",
+     0.2214
+    ],
+    [
+     "2026-09-24",
+     0.6851
+    ],
+    [
+     "2026-09-25",
+     0.1865
+    ],
+    [
+     "2026-09-26",
+     0.0388
+    ],
+    [
+     "2026-09-27",
+     0.1367
+    ],
+    [
+     "2026-09-28",
+     0.3938
+    ],
+    [
+     "2026-09-29",
+     0.2055
+    ],
+    [
+     "2026-09-30",
+     0.1621
+    ],
+    [
+     "2026-10-01",
+     0.0198
+    ],
+    [
+     "2026-10-02",
+     0.0
+    ],
+    [
+     "2026-10-03",
+     0.0
+    ],
+    [
+     "2026-10-04",
+     0.6064
+    ],
+    [
+     "2026-10-05",
+     0.2145
+    ],
+    [
+     "2026-10-06",
+     0.0532
+    ]
+   ],
+   "series_kind": "daily share of sampled GDELT documents with the theme, %",
+   "component": "military",
+   "means": "",
+   "not_proves": ""
+  },
+  {
+   "family": "procurement",
+   "id": "gkg:FOOD_SECURITY",
+   "label": "News share tagged \"food security\" (GDELT themes, last 3 days vs before)",
+   "value": 0.734,
+   "baseline": 0.925,
+   "ratio": 0.79,
+   "anomaly": false,
+   "unit": "% of news",
+   "note": "169 of 21445 sampled documents in the last 3 days; machine-tagged themes, one 15-min file per 3 h",
+   "source": "GDELT 2.0 GKG",
+   "series": [
+    [
+     "2026-09-07",
+     0.5986
+    ],
+    [
+     "2026-09-08",
+     0.7604
+    ],
+    [
+     "2026-09-09",
+     1.0739
+    ],
+    [
+     "2026-09-10",
+     1.0614
+    ],
+    [
+     "2026-09-11",
+     1.1308
+    ],
+    [
+     "2026-09-12",
+     1.7534
+    ],
+    [
+     "2026-09-13",
+     1.0934
+    ],
+    [
+     "2026-09-14",
+     1.0665
+    ],
+    [
+     "2026-09-15",
+     0.7364
+    ],
+    [
+     "2026-09-16",
+     1.4961
+    ],
+    [
+     "2026-09-17",
+     0.925
+    ],
+    [
+     "2026-09-18",
+     0.9439
+    ],
+    [
+     "2026-09-19",
+     0.528
+    ],
+    [
+     "2026-09-20",
+     0.5062
+    ],
+    [
+     "2026-09-21",
+     0.7538
+    ],
+    [
+     "2026-09-22",
+     1.0821
+    ],
+    [
+     "2026-09-23",
+     1.0063
+    ],
+    [
+     "2026-09-24",
+     1.1595
+    ],
+    [
+     "2026-09-25",
+     0.7132
+    ],
+    [
+     "2026-09-26",
+     0.7363
+    ],
+    [
+     "2026-09-27",
+     0.615
+    ],
+    [
+     "2026-09-28",
+     1.2412
+    ],
+    [
+     "2026-09-29",
+     0.6598
+    ],
+    [
+     "2026-09-30",
+     0.9319
+    ],
+    [
+     "2026-10-01",
+     0.6826
+    ],
+    [
+     "2026-10-02",
+     0.7141
+    ],
+    [
+     "2026-10-03",
+     0.765
+    ],
+    [
+     "2026-10-04",
+     0.4608
+    ],
+    [
+     "2026-10-05",
+     0.9209
+    ],
+    [
+     "2026-10-06",
+     0.8196
+    ]
+   ],
+   "series_kind": "daily share of sampled GDELT documents with the theme, %",
+   "component": "military",
+   "means": "",
+   "not_proves": ""
   },
   {
    "family": "control",
    "id": "internet:country-outages",
    "label": "Countries with significant internet outages (48 h)",
-   "value": 20,
+   "value": 17,
    "baseline": null,
    "ratio": null,
    "anomaly": null,
    "unit": "countries",
-   "note": "Benin, Burkina Faso, Burundi, Cape Verde, Central African Republic, China, Congo, Federated States Of Micronesia, Haiti, Iraq, Lesotho, Lithuania, Malta, New Zealand, Northern Mariana Islands",
+   "note": "Burkina Faso, Cape Verde, China, Congo, Faroe Islands, Federated States Of Micronesia, Iraq, Lithuania, Malta, New Zealand, Northern Mariana Islands, Sao Tome And Principe, Seychelles, Sierra Leone, Thailand",
    "source": "IODA (Georgia Tech)",
    "component": "institutions",
    "means": "More countries with large internet outages may mean shutdowns, attacks on networks or grid failures.",
@@ -4606,18 +6440,14 @@
    "family": "energy",
    "id": "fires:refineries:European Russia",
    "label": "Satellite fire detections near major refineries/oil terminals, European Russia (last 3 days)",
-   "value": 2.3,
+   "value": 0,
    "baseline": 4.4,
-   "ratio": 0.52,
+   "ratio": null,
    "anomaly": false,
    "unit": "detections/day",
-   "note": "13 sites, data to 2026-10-04",
+   "note": "13 sites, data to 2026-10-05",
    "source": "NASA FIRMS (VIIRS S-NPP NRT)",
    "series": [
-    [
-     "2026-09-05",
-     7
-    ],
     [
      "2026-09-06",
      3
@@ -4733,6 +6563,10 @@
     [
      "2026-10-04",
      0
+    ],
+    [
+     "2026-10-05",
+     0
     ]
    ],
    "series_kind": "daily count of VIIRS fire detections within ~15 km of the sites (incl. routine gas flares)",
@@ -4744,18 +6578,14 @@
    "family": "energy",
    "id": "fires:refineries:Persian Gulf",
    "label": "Satellite fire detections near major refineries/oil terminals, Persian Gulf (last 3 days)",
-   "value": 21.3,
-   "baseline": 21.7,
-   "ratio": 0.98,
+   "value": 18,
+   "baseline": 21.9,
+   "ratio": 0.82,
    "anomaly": false,
    "unit": "detections/day",
-   "note": "6 sites, data to 2026-10-04",
+   "note": "6 sites, data to 2026-10-05",
    "source": "NASA FIRMS (VIIRS S-NPP NRT)",
    "series": [
-    [
-     "2026-09-05",
-     21
-    ],
     [
      "2026-09-06",
      24
@@ -4871,6 +6701,10 @@
     [
      "2026-10-04",
      18
+    ],
+    [
+     "2026-10-05",
+     14
     ]
    ],
    "series_kind": "daily count of VIIRS fire detections within ~15 km of the sites (incl. routine gas flares)",
@@ -5296,18 +7130,14 @@
    "family": "mobilisation",
    "id": "mob:wiki:ru:Эмиграция_из_России",
    "label": "Wikipedia (ru) \"Эмиграция из России\": daily readers, last 3 days",
-   "value": 52,
-   "baseline": 68.5,
-   "ratio": 0.76,
+   "value": 53,
+   "baseline": 68.0,
+   "ratio": 0.78,
    "anomaly": false,
    "unit": "views/day",
    "note": "",
    "source": "Wikimedia pageviews",
    "series": [
-    [
-     "2026-09-05",
-     68
-    ],
     [
      "2026-09-06",
      83
@@ -5423,6 +7253,10 @@
     [
      "2026-10-04",
      46
+    ],
+    [
+     "2026-10-05",
+     52
     ]
    ],
    "series_kind": "daily views (user agents, all access)",
@@ -5435,17 +7269,13 @@
    "id": "mob:wiki:ru:Верхний_Ларс",
    "label": "Wikipedia (ru) \"Верхний Ларс\": daily readers, last 3 days",
    "value": 84,
-   "baseline": 118.0,
-   "ratio": 0.71,
+   "baseline": 115.0,
+   "ratio": 0.73,
    "anomaly": false,
    "unit": "views/day",
    "note": "",
    "source": "Wikimedia pageviews",
    "series": [
-    [
-     "2026-09-05",
-     104
-    ],
     [
      "2026-09-06",
      120
@@ -5561,6 +7391,10 @@
     [
      "2026-10-04",
      92
+    ],
+    [
+     "2026-10-05",
+     70
     ]
    ],
    "series_kind": "daily views (user agents, all access)",
@@ -5580,10 +7414,6 @@
    "note": "",
    "source": "Wikimedia pageviews",
    "series": [
-    [
-     "2026-09-05",
-     2
-    ],
     [
      "2026-09-06",
      5
@@ -5699,6 +7529,10 @@
     [
      "2026-10-04",
      2
+    ],
+    [
+     "2026-10-05",
+     3
     ]
    ],
    "series_kind": "daily views (user agents, all access)",
@@ -5711,17 +7545,13 @@
    "id": "mob:wiki:ru:Повестка",
    "label": "Wikipedia (ru) \"Повестка\": daily readers, last 3 days",
    "value": 19,
-   "baseline": 31.5,
-   "ratio": 0.6,
+   "baseline": 28.5,
+   "ratio": 0.67,
    "anomaly": false,
    "unit": "views/day",
    "note": "",
    "source": "Wikimedia pageviews",
    "series": [
-    [
-     "2026-09-05",
-     23
-    ],
     [
      "2026-09-06",
      15
@@ -5837,6 +7667,10 @@
     [
      "2026-10-04",
      18
+    ],
+    [
+     "2026-10-05",
+     22
     ]
    ],
    "series_kind": "daily views (user agents, all access)",
@@ -5848,18 +7682,14 @@
    "family": "mobilisation",
    "id": "mob:wiki:ru:Альтернативная_гражданская_служба",
    "label": "Wikipedia (ru) \"Альтернативная гражданская служба\": daily readers, last 3 days",
-   "value": 18,
+   "value": 23,
    "baseline": 23.5,
-   "ratio": 0.77,
+   "ratio": 0.98,
    "anomaly": false,
    "unit": "views/day",
    "note": "",
    "source": "Wikimedia pageviews",
    "series": [
-    [
-     "2026-09-05",
-     24
-    ],
     [
      "2026-09-06",
      19
@@ -5975,6 +7805,10 @@
     [
      "2026-10-04",
      16
+    ],
+    [
+     "2026-10-05",
+     27
     ]
    ],
    "series_kind": "daily views (user agents, all access)",
@@ -5986,18 +7820,14 @@
    "family": "mobilisation",
    "id": "mob:wiki:ru:Мобилизация_в_России_(с_2022)",
    "label": "Wikipedia (ru) \"Мобилизация в России (с 2022)\": daily readers, last 3 days",
-   "value": 250,
-   "baseline": 452.5,
-   "ratio": 0.55,
+   "value": 232,
+   "baseline": 441.5,
+   "ratio": 0.53,
    "anomaly": false,
    "unit": "views/day",
    "note": "",
    "source": "Wikimedia pageviews",
    "series": [
-    [
-     "2026-09-05",
-     335
-    ],
     [
      "2026-09-06",
      356
@@ -6113,6 +7943,10 @@
     [
      "2026-10-04",
      239
+    ],
+    [
+     "2026-10-05",
+     229
     ]
    ],
    "series_kind": "daily views (user agents, all access)",
@@ -6124,18 +7958,14 @@
    "family": "mobilisation",
    "id": "mob:wiki:ru:Реестр_повесток",
    "label": "Wikipedia (ru) \"Реестр повесток\": daily readers, last 3 days",
-   "value": 129,
-   "baseline": 211.5,
-   "ratio": 0.61,
+   "value": 131,
+   "baseline": 209.0,
+   "ratio": 0.63,
    "anomaly": false,
    "unit": "views/day",
    "note": "",
    "source": "Wikimedia pageviews",
    "series": [
-    [
-     "2026-09-05",
-     149
-    ],
     [
      "2026-09-06",
      245
@@ -6251,6 +8081,10 @@
     [
      "2026-10-04",
      122
+    ],
+    [
+     "2026-10-05",
+     153
     ]
    ],
    "series_kind": "daily views (user agents, all access)",
@@ -6263,17 +8097,13 @@
    "id": "mob:wiki:ru:Военный_комиссариат",
    "label": "Wikipedia (ru) \"Военный комиссариат\": daily readers, last 3 days",
    "value": 59,
-   "baseline": 62.5,
-   "ratio": 0.94,
+   "baseline": 62.0,
+   "ratio": 0.95,
    "anomaly": false,
    "unit": "views/day",
    "note": "",
    "source": "Wikimedia pageviews",
    "series": [
-    [
-     "2026-09-05",
-     53
-    ],
     [
      "2026-09-06",
      63
@@ -6389,6 +8219,10 @@
     [
      "2026-10-04",
      64
+    ],
+    [
+     "2026-10-05",
+     53
     ]
    ],
    "series_kind": "daily views (user agents, all access)",
@@ -6408,10 +8242,6 @@
    "note": "",
    "source": "Wikimedia pageviews",
    "series": [
-    [
-     "2026-08-31",
-     1
-    ],
     [
      "2026-09-01",
      0
@@ -6527,6 +8357,10 @@
     [
      "2026-10-04",
      0
+    ],
+    [
+     "2026-10-05",
+     0
     ]
    ],
    "series_kind": "daily views (user agents, all access)",
@@ -6538,18 +8372,14 @@
    "family": "mobilisation",
    "id": "mob:wiki:uk:Мобілізація_в_Україні",
    "label": "Wikipedia (uk) \"Мобілізація в Україні\": daily readers, last 3 days",
-   "value": 7,
-   "baseline": 16.5,
-   "ratio": 0.42,
+   "value": 6,
+   "baseline": 16.0,
+   "ratio": 0.38,
    "anomaly": false,
    "unit": "views/day",
    "note": "",
    "source": "Wikimedia pageviews",
    "series": [
-    [
-     "2026-09-05",
-     10
-    ],
     [
      "2026-09-06",
      5
@@ -6665,6 +8495,10 @@
     [
      "2026-10-04",
      7
+    ],
+    [
+     "2026-10-05",
+     5
     ]
    ],
    "series_kind": "daily views (user agents, all access)",
@@ -6676,18 +8510,14 @@
    "family": "mobilisation",
    "id": "mob:wiki:en:Conscription_in_Russia",
    "label": "Wikipedia (en) \"Conscription in Russia\": daily readers, last 3 days",
-   "value": 158,
-   "baseline": 154.0,
-   "ratio": 1.03,
+   "value": 143,
+   "baseline": 157.5,
+   "ratio": 0.91,
    "anomaly": false,
    "unit": "views/day",
    "note": "",
    "source": "Wikimedia pageviews",
    "series": [
-    [
-     "2026-09-05",
-     197
-    ],
     [
      "2026-09-06",
      180
@@ -6803,6 +8633,10 @@
     [
      "2026-10-04",
      168
+    ],
+    [
+     "2026-10-05",
+     133
     ]
    ],
    "series_kind": "daily views (user agents, all access)",
@@ -6814,18 +8648,14 @@
    "family": "mobilisation",
    "id": "mob:wiki:en:Conscription_in_Ukraine",
    "label": "Wikipedia (en) \"Conscription in Ukraine\": daily readers, last 3 days",
-   "value": 229,
+   "value": 132,
    "baseline": 129.0,
-   "ratio": 1.78,
+   "ratio": 1.02,
    "anomaly": false,
    "unit": "views/day",
    "note": "",
    "source": "Wikimedia pageviews",
    "series": [
-    [
-     "2026-09-05",
-     119
-    ],
     [
      "2026-09-06",
      135
@@ -6941,6 +8771,10 @@
     [
      "2026-10-04",
      142
+    ],
+    [
+     "2026-10-05",
+     90
     ]
    ],
    "series_kind": "daily views (user agents, all access)",
@@ -6952,18 +8786,14 @@
    "family": "mobilisation",
    "id": "mob:wiki:en:Conscription_in_Israel",
    "label": "Wikipedia (en) \"Conscription in Israel\": daily readers, last 3 days",
-   "value": 281,
-   "baseline": 238.0,
-   "ratio": 1.18,
+   "value": 249,
+   "baseline": 238.5,
+   "ratio": 1.04,
    "anomaly": false,
    "unit": "views/day",
    "note": "",
    "source": "Wikimedia pageviews",
    "series": [
-    [
-     "2026-09-05",
-     252
-    ],
     [
      "2026-09-06",
      230
@@ -7079,6 +8909,10 @@
     [
      "2026-10-04",
      271
+    ],
+    [
+     "2026-10-05",
+     230
     ]
    ],
    "series_kind": "daily views (user agents, all access)",
@@ -7090,18 +8924,14 @@
    "family": "mobilisation",
    "id": "mob:wiki:en:Conscription_in_Taiwan",
    "label": "Wikipedia (en) \"Conscription in Taiwan\": daily readers, last 3 days",
-   "value": 51,
+   "value": 40,
    "baseline": 52.5,
-   "ratio": 0.97,
+   "ratio": 0.76,
    "anomaly": false,
    "unit": "views/day",
    "note": "",
    "source": "Wikimedia pageviews",
    "series": [
-    [
-     "2026-09-05",
-     67
-    ],
     [
      "2026-09-06",
      74
@@ -7217,6 +9047,10 @@
     [
      "2026-10-04",
      42
+    ],
+    [
+     "2026-10-05",
+     39
     ]
    ],
    "series_kind": "daily views (user agents, all access)",
@@ -7228,18 +9062,14 @@
    "family": "mobilisation",
    "id": "mob:wiki:en:Conscription_in_Germany",
    "label": "Wikipedia (en) \"Conscription in Germany\": daily readers, last 3 days",
-   "value": 94,
-   "baseline": 87.5,
-   "ratio": 1.07,
+   "value": 88,
+   "baseline": 88.0,
+   "ratio": 1.0,
    "anomaly": false,
    "unit": "views/day",
    "note": "",
    "source": "Wikimedia pageviews",
    "series": [
-    [
-     "2026-09-05",
-     74
-    ],
     [
      "2026-09-06",
      162
@@ -7355,6 +9185,10 @@
     [
      "2026-10-04",
      77
+    ],
+    [
+     "2026-10-05",
+     90
     ]
    ],
    "series_kind": "daily views (user agents, all access)",
@@ -7366,18 +9200,14 @@
    "family": "mobilisation",
    "id": "mob:wiki:en:Conscientious_objector",
    "label": "Wikipedia (en) \"Conscientious objector\": daily readers, last 3 days",
-   "value": 532,
+   "value": 545,
    "baseline": 563.0,
-   "ratio": 0.94,
+   "ratio": 0.97,
    "anomaly": false,
    "unit": "views/day",
    "note": "",
    "source": "Wikimedia pageviews",
    "series": [
-    [
-     "2026-09-05",
-     550
-    ],
     [
      "2026-09-06",
      605
@@ -7493,6 +9323,10 @@
     [
      "2026-10-04",
      521
+    ],
+    [
+     "2026-10-05",
+     558
     ]
    ],
    "series_kind": "daily views (user agents, all access)",
@@ -7504,18 +9338,14 @@
    "family": "mobilisation",
    "id": "mob:wiki:he:צו_8",
    "label": "Wikipedia (he) \"צו 8\": daily readers, last 3 days",
-   "value": 7,
+   "value": 8,
    "baseline": 5.0,
-   "ratio": 1.4,
+   "ratio": 1.6,
    "anomaly": false,
    "unit": "views/day",
    "note": "",
    "source": "Wikimedia pageviews",
    "series": [
-    [
-     "2026-09-05",
-     1
-    ],
     [
      "2026-09-06",
      2
@@ -7631,6 +9461,10 @@
     [
      "2026-10-04",
      9
+    ],
+    [
+     "2026-10-05",
+     16
     ]
    ],
    "series_kind": "daily views (user agents, all access)",
@@ -7642,18 +9476,14 @@
    "family": "mobilisation",
    "id": "mob:wiki:he:שירות_המילואים_בישראל",
    "label": "Wikipedia (he) \"שירות המילואים בישראל\": daily readers, last 3 days",
-   "value": 23,
+   "value": 26,
    "baseline": 29.0,
-   "ratio": 0.79,
+   "ratio": 0.9,
    "anomaly": false,
    "unit": "views/day",
    "note": "",
    "source": "Wikimedia pageviews",
    "series": [
-    [
-     "2026-09-05",
-     27
-    ],
     [
      "2026-09-06",
      21
@@ -7769,6 +9599,10 @@
     [
      "2026-10-04",
      34
+    ],
+    [
+     "2026-10-05",
+     27
     ]
    ],
    "series_kind": "daily views (user agents, all access)",
@@ -7780,18 +9614,14 @@
    "family": "mobilisation",
    "id": "mob:wiki:de:Wehrdienst",
    "label": "Wikipedia (de) \"Wehrdienst\": daily readers, last 3 days",
-   "value": 52,
+   "value": 57,
    "baseline": 57.0,
-   "ratio": 0.91,
+   "ratio": 1.0,
    "anomaly": false,
    "unit": "views/day",
    "note": "",
    "source": "Wikimedia pageviews",
    "series": [
-    [
-     "2026-09-05",
-     60
-    ],
     [
      "2026-09-06",
      66
@@ -7907,6 +9737,10 @@
     [
      "2026-10-04",
      49
+    ],
+    [
+     "2026-10-05",
+     57
     ]
    ],
    "series_kind": "daily views (user agents, all access)",
@@ -7918,18 +9752,14 @@
    "family": "mobilisation",
    "id": "mob:wiki:de:Musterung",
    "label": "Wikipedia (de) \"Musterung\": daily readers, last 3 days",
-   "value": 21,
-   "baseline": 35.5,
-   "ratio": 0.59,
+   "value": 23,
+   "baseline": 34.5,
+   "ratio": 0.67,
    "anomaly": false,
    "unit": "views/day",
    "note": "",
    "source": "Wikimedia pageviews",
    "series": [
-    [
-     "2026-09-05",
-     28
-    ],
     [
      "2026-09-06",
      28
@@ -8045,6 +9875,10 @@
     [
      "2026-10-04",
      19
+    ],
+    [
+     "2026-10-05",
+     27
     ]
    ],
    "series_kind": "daily views (user agents, all access)",
@@ -8064,10 +9898,6 @@
    "note": "",
    "source": "Wikimedia pageviews",
    "series": [
-    [
-     "2026-09-05",
-     43
-    ],
     [
      "2026-09-06",
      47
@@ -8183,6 +10013,10 @@
     [
      "2026-10-04",
      24
+    ],
+    [
+     "2026-10-05",
+     42
     ]
    ],
    "series_kind": "daily views (user agents, all access)",
@@ -8194,18 +10028,14 @@
    "family": "mobilisation",
    "id": "mob:wiki:zh:後備軍事動員",
    "label": "Wikipedia (zh) \"後備軍事動員\": daily readers, last 3 days",
-   "value": 10,
+   "value": 12,
    "baseline": 8.0,
-   "ratio": 1.25,
+   "ratio": 1.5,
    "anomaly": false,
    "unit": "views/day",
    "note": "",
    "source": "Wikimedia pageviews",
    "series": [
-    [
-     "2026-09-05",
-     7
-    ],
     [
      "2026-09-06",
      11
@@ -8321,6 +10151,10 @@
     [
      "2026-10-04",
      13
+    ],
+    [
+     "2026-10-05",
+     12
     ]
    ],
    "series_kind": "daily views (user agents, all access)",
@@ -8332,18 +10166,14 @@
    "family": "mobilisation",
    "id": "mob:wiki:zh:民役",
    "label": "Wikipedia (zh) \"民役\": daily readers, last 3 days",
-   "value": 3,
+   "value": 2,
    "baseline": 4.0,
-   "ratio": 0.75,
+   "ratio": 0.5,
    "anomaly": false,
    "unit": "views/day",
    "note": "",
    "source": "Wikimedia pageviews",
    "series": [
-    [
-     "2026-09-05",
-     1
-    ],
     [
      "2026-09-06",
      1
@@ -8459,6 +10289,10 @@
     [
      "2026-10-04",
      3
+    ],
+    [
+     "2026-10-05",
+     2
     ]
    ],
    "series_kind": "daily views (user agents, all access)",
@@ -8470,18 +10304,14 @@
    "family": "mobilisation",
    "id": "mob:wiki:fa:خدمت_نظامی",
    "label": "Wikipedia (fa) \"خدمت نظامی\": daily readers, last 3 days",
-   "value": 83,
+   "value": 81,
    "baseline": 48.0,
-   "ratio": 1.73,
+   "ratio": 1.69,
    "anomaly": false,
    "unit": "views/day",
    "note": "",
    "source": "Wikimedia pageviews",
    "series": [
-    [
-     "2026-09-05",
-     40
-    ],
     [
      "2026-09-06",
      59
@@ -8597,6 +10427,10 @@
     [
      "2026-10-04",
      118
+    ],
+    [
+     "2026-10-05",
+     53
     ]
    ],
    "series_kind": "daily views (user agents, all access)",
@@ -8609,7 +10443,7 @@
    "id": "mob:pravo:ru-president",
    "label": "Russia: presidential acts on call-up, mobilisation, reserves, military registration or exit (last 30 days)",
    "value": 0,
-   "baseline": 2.54,
+   "baseline": 2.5,
    "ratio": null,
    "anomaly": false,
    "unit": "acts/30 days",
@@ -8641,32 +10475,691 @@
    "component": "military",
    "means": "More official acts on call-up, reserves, military registration or exit rules means the state is changing how it raises soldiers.",
    "not_proves": "It does not prove mobilisation: the routine call-up decrees come every spring (late March) and autumn (late September), and many acts are technical."
+  },
+  {
+   "family": "mobilisation",
+   "id": "mob:vac_total",
+   "label": "Russia: open contract-service vacancies on the official job portal (Работа России)",
+   "value": 1676,
+   "baseline": null,
+   "ratio": null,
+   "anomaly": false,
+   "unit": "vacancies",
+   "note": "top regions: Калужская область 207, Мурманская область 179, Костромская область 179, Кабардино-Балкарская Республика 129, Новосибирская область 107",
+   "source": "Работа России open data (opendata.trudvsem.ru)",
+   "series": [
+    [
+     "2026-10-07",
+     1676
+    ]
+   ],
+   "series_kind": "daily value",
+   "component": "military",
+   "means": "More ads for contract soldiers means the state needs more men than volunteers bring in.",
+   "not_proves": "Ads are re-posted and padded; a count is not recruits, and a fall can mean a new channel, not less need.",
+   "date": "2026-10-07"
+  },
+  {
+   "family": "mobilisation",
+   "id": "mob:vac_new7",
+   "label": "Russia: contract-service vacancies posted in the last 7 days",
+   "value": 25,
+   "baseline": null,
+   "ratio": null,
+   "anomaly": false,
+   "unit": "vacancies",
+   "note": "",
+   "source": "Работа России open data (opendata.trudvsem.ru)",
+   "series": [
+    [
+     "2026-10-07",
+     25
+    ]
+   ],
+   "series_kind": "daily value",
+   "component": "military",
+   "means": "A surge of new ads is a recruiting push, often before or instead of coercion.",
+   "not_proves": "Regional campaigns are seasonal and budget-driven.",
+   "date": "2026-10-07"
+  },
+  {
+   "family": "mobilisation",
+   "id": "mob:vac_pay_median",
+   "label": "Russia: median advertised monthly pay for contract service",
+   "value": 210000,
+   "baseline": null,
+   "ratio": null,
+   "anomaly": false,
+   "unit": "₽/month",
+   "note": "127 regional centres/cities (contractarmy.ru table, recruiter-maintained, unverified): regional sign-up payout median 2.10M RUB, max 4.1M (Санкт-Петербург 4.1M, Магадан 3.6M, Махачкала 3.5M); 74 at 2M+; newest act date cited 2026-10-01",
+   "source": "Работа России open data (opendata.trudvsem.ru)",
+   "series": [
+    [
+     "2026-10-07",
+     210000
+    ]
+   ],
+   "series_kind": "daily value",
+   "component": "military",
+   "means": "Rising pay means volunteers are getting scarcer at the old price.",
+   "not_proves": "Ads show the headline, not what is paid; inflation lifts all wages.",
+   "date": "2026-10-07"
+  },
+  {
+   "family": "mobilisation",
+   "id": "mob:reg_hits",
+   "label": "Russian regions: new acts on contract payouts, call-up, military registration or mobilisation tasks (since last run)",
+   "value": 9,
+   "baseline": null,
+   "ratio": null,
+   "anomaly": false,
+   "unit": "acts",
+   "note": "2026-10-07 Приказ Министерства социального благополучия и семейной политики Камчатского края от 01.10.2026 № 81-Н \"О внесении изменений в приказ Министерства социального благополучия и семейной политики Камчатского края от 22.01.20; 2026-10-07 Постановление Правительства Смоленской области от 05.10.2026 № 591 \"О внесении изменений в Порядок предоставления дополнительной меры социальной поддержки граждан, заключивших контракт о прохождении военной службы с Мини; 2026-10-07 Распоряжение правительства Еврейской автономной области от 02.10.2026 № 395-рп \"О внесении изменений в распоряжение правительства Еврейской автономной области от 18.05.2022 № 131-рп \"О выплате на территории Еврейской авт; 2026-10-06 Постановление Правительства Амурской области от 02.10.2026 № 685 \"Об утверждении Правил предоставления субсидии индивидуальному предпринимателю в целях возмещения части затрат, связанных с ремонтом и оборудованием нежило; 2026-10-06 Закон Брянской области от 29.09.2026 № 84-З \"О внесении изменений в Закон Брянской области \"О дополнительной мере социальной поддержки военнослужащих, лиц, заключивших контракт о пребывании в добровольческом формировании",
+   "source": "publication.pravo.gov.ru (regions)",
+   "series": [
+    [
+     "2026-10-07",
+     9
+    ]
+   ],
+   "series_kind": "daily value",
+   "component": "military",
+   "means": "Regions raising payouts or issuing mobilisation tasks is the state reaching for men at the regional level.",
+   "not_proves": "Many acts are routine budget amendments; read the titles.",
+   "date": "2026-10-07",
+   "items": [
+    "2026-10-07 Приказ Министерства социального благополучия и семейной политики Камчатского края от 01.10.2026 № 81-Н \"О внесении изменений в приказ Министерства социального благополучия и семейной политики Камчатского края от 22.01.20",
+    "2026-10-07 Постановление Правительства Смоленской области от 05.10.2026 № 591 \"О внесении изменений в Порядок предоставления дополнительной меры социальной поддержки граждан, заключивших контракт о прохождении военной службы с Мини",
+    "2026-10-07 Распоряжение правительства Еврейской автономной области от 02.10.2026 № 395-рп \"О внесении изменений в распоряжение правительства Еврейской автономной области от 18.05.2022 № 131-рп \"О выплате на территории Еврейской авт",
+    "2026-10-06 Постановление Правительства Амурской области от 02.10.2026 № 685 \"Об утверждении Правил предоставления субсидии индивидуальному предпринимателю в целях возмещения части затрат, связанных с ремонтом и оборудованием нежило",
+    "2026-10-06 Закон Брянской области от 29.09.2026 № 84-З \"О внесении изменений в Закон Брянской области \"О дополнительной мере социальной поддержки военнослужащих, лиц, заключивших контракт о пребывании в добровольческом формировании",
+    "2026-10-06 Постановление Правительства Калининградской области от 02.10.2026 № 343-п \"О внесении изменений в порядок и условия предоставления дополнительной меры социальной поддержки в 2026 – 2028 годах в виде социальной выплаты на",
+    "2026-10-06 Распоряжение министерства образования Кировской области от 30.09.2026 № 1181 \"Об утверждении Порядка и условий освобождения от платы, взимаемой с родителей (законных представителей) за присмотр и уход за ребенком участни",
+    "2026-10-06 Приказ министерства социальной политики Липецкой области от 05.10.2026 № 91-Н \"Об утверждении Порядка предоставления путевки на санаторно-курортное лечение беременной супруге участника специальной военной операции\"",
+    "2026-10-06 Приказ министерства социальной политики Липецкой области от 05.10.2026 № 90-Н \"О признании утратившим силу приказа управления социальной политики Липецкой области от 1 ноября 2022 года № 116-Н \"Об утверждении порядка пре"
+   ]
+  },
+  {
+   "family": "mobilisation",
+   "id": "mob:fed_hits",
+   "label": "Russian federal bodies: new acts on call-up, military registration or mobilisation (since last run)",
+   "value": 1,
+   "baseline": null,
+   "ratio": null,
+   "anomaly": false,
+   "unit": "acts",
+   "note": "2026-10-06 Приказ Федеральной службы безопасности Российской Федерации от 29.08.2026 № 325 \"Об утверждении Требований к уровню физической подготовки, предъявляемых к кандидатам для поступления на военную службу по контракту в орган",
+   "source": "publication.pravo.gov.ru (federal bodies)",
+   "series": [
+    [
+     "2026-10-07",
+     1
+    ]
+   ],
+   "series_kind": "daily value",
+   "component": "military",
+   "means": "Federal ministries changing call-up and registration rules prepares the machinery.",
+   "not_proves": "Ministries publish technical orders all year.",
+   "date": "2026-10-07",
+   "items": [
+    "2026-10-06 Приказ Федеральной службы безопасности Российской Федерации от 29.08.2026 № 325 \"Об утверждении Требований к уровню физической подготовки, предъявляемых к кандидатам для поступления на военную службу по контракту в орган"
+   ]
+  },
+  {
+   "family": "mobilisation",
+   "id": "mob:p2p_premium_pct",
+   "label": "Rouble: premium of P2P USDT over the official dollar rate (Bybit vs CBR)",
+   "value": -1.41,
+   "baseline": null,
+   "ratio": null,
+   "anomaly": false,
+   "unit": "%",
+   "note": "",
+   "source": "Bybit P2P offers vs Bank of Russia rate",
+   "series": [
+    [
+     "2026-10-07",
+     -1.41
+    ]
+   ],
+   "series_kind": "daily value",
+   "component": "society",
+   "means": "A rising premium means people pay extra to move money out of roubles: a classic sign of fear of leaving or of controls.",
+   "not_proves": "Crypto spreads also move with exchange rules, bank blocks and fees.",
+   "date": "2026-10-07"
+  },
+  {
+   "family": "mobilisation",
+   "id": "mob:usd_cbr",
+   "label": "Rouble: official dollar rate (CBR)",
+   "value": 85.71,
+   "baseline": null,
+   "ratio": null,
+   "anomaly": false,
+   "unit": "₽/$",
+   "note": "",
+   "source": "Bank of Russia (via cbr-xml-daily.ru)",
+   "series": [
+    [
+     "2026-10-07",
+     85.71
+    ]
+   ],
+   "series_kind": "daily value",
+   "component": "society",
+   "means": "A sharp fall of the rouble often accompanies capital flight and panic.",
+   "not_proves": "The rate is managed and moves with oil and policy rates.",
+   "date": "2026-10-07"
+  },
+  {
+   "family": "mobilisation",
+   "id": "mob:duma_news7",
+   "label": "State Duma official news: items on mobilisation, call-up, military registration, deferment, exit limits or contract service, last 7 days",
+   "value": 0,
+   "baseline": null,
+   "ratio": null,
+   "anomaly": false,
+   "unit": "news items",
+   "note": "none of 52 Duma news items in 7 days (duma.gov.ru/news)",
+   "source": "State Duma (duma.gov.ru news; API when current)",
+   "series": [
+    [
+     "2026-10-07",
+     0
+    ]
+   ],
+   "series_kind": "daily value",
+   "component": "institutions",
+   "means": "The Duma talking publicly about these laws (bills passed, introduced, explained) shows what it is preparing.",
+   "not_proves": "News is chosen by the Duma press service; one session day can produce several items on one law.",
+   "date": "2026-10-07"
+  },
+  {
+   "family": "mobilisation",
+   "id": "mob:ee_wait_cars_h",
+   "label": "Estonia-Russia border: longest daily waiting time for cars heading into Russia (Koidula/Luhamaa, GoSwift)",
+   "value": 132.0,
+   "baseline": null,
+   "ratio": null,
+   "anomaly": false,
+   "unit": "hours",
+   "note": "Estonia->Russia (GoSwift): Koidula 347 cars queued; Luhamaa first car slot in 39 d; Luhamaa 330 cars queued; max car wait 132 h on 2026-10-06",
+   "source": "Estonian border queue system (GoSwift, eestipiir.ee)",
+   "series": [
+    [
+     "2026-10-07",
+     132.0
+    ]
+   ],
+   "series_kind": "daily value",
+   "component": "society",
+   "means": "A sudden jump means the Russian side is processing travellers slowly or more people are crossing: friction at Russia's western land border.",
+   "not_proves": "Direction is into Russia, not out of it; holidays, Russian checks and staffing move it. Not a count of people leaving Russia. The site does not state the unit; hours is inferred.",
+   "date": "2026-10-07"
+  },
+  {
+   "family": "mobilisation",
+   "id": "mob:ee_wait_cars_h_7d",
+   "label": "Estonia-Russia border: 7-day mean of the daily maximum car waiting time (GoSwift)",
+   "value": 79.9,
+   "baseline": null,
+   "ratio": null,
+   "anomaly": false,
+   "unit": "hours",
+   "note": "Estonia->Russia (GoSwift): Koidula 347 cars queued; Luhamaa first car slot in 39 d; Luhamaa 330 cars queued; max car wait 132 h on 2026-10-06",
+   "source": "Estonian border queue system (GoSwift, eestipiir.ee)",
+   "series": [
+    [
+     "2026-10-07",
+     79.9
+    ]
+   ],
+   "series_kind": "daily value",
+   "component": "society",
+   "means": "A sustained rise in waiting time is a slower, steadier sign of tighter Russian border control or heavier traffic.",
+   "not_proves": "Seasonal travel and Russian processing capacity dominate; not specific to mobilisation.",
+   "date": "2026-10-07"
+  },
+  {
+   "family": "mobilisation",
+   "id": "mob:ee_first_slot_days",
+   "label": "Estonia-Russia border: days until the first free car reservation slot (GoSwift)",
+   "value": 39,
+   "baseline": null,
+   "ratio": null,
+   "anomaly": false,
+   "unit": "days",
+   "note": "Estonia->Russia (GoSwift): Koidula 347 cars queued; Luhamaa first car slot in 39 d; Luhamaa 330 cars queued; max car wait 132 h on 2026-10-06",
+   "source": "Estonian border queue system (GoSwift, eestipiir.ee)",
+   "series": [
+    [
+     "2026-10-07",
+     39
+    ]
+   ],
+   "series_kind": "daily value",
+   "component": "society",
+   "means": "When pre-booked slots run weeks ahead, demand to cross far exceeds what the Russian side lets through.",
+   "not_proves": "Slot horizons depend on how much capacity the system opens for booking.",
+   "date": "2026-10-07"
+  },
+  {
+   "family": "mobilisation",
+   "id": "mob:ee_cars_queue",
+   "label": "Estonia-Russia border: cars in the full GoSwift queue (live + booked)",
+   "value": 677,
+   "baseline": null,
+   "ratio": null,
+   "anomaly": false,
+   "unit": "vehicles",
+   "note": "Estonia->Russia (GoSwift): Koidula 347 cars queued; Luhamaa first car slot in 39 d; Luhamaa 330 cars queued; max car wait 132 h on 2026-10-06",
+   "source": "Estonian border queue system (GoSwift, eestipiir.ee)",
+   "series": [
+    [
+     "2026-10-07",
+     677
+    ]
+   ],
+   "series_kind": "daily value",
+   "component": "society",
+   "means": "More cars queued means more demand to cross into Russia or slower processing.",
+   "not_proves": "Booked queue includes reservations weeks ahead.",
+   "date": "2026-10-07"
+  },
+  {
+   "family": "mobilisation",
+   "id": "mob:ee_cross_cars_7d",
+   "label": "Estonia-Russia border: cars let through per day, 7-day mean (GoSwift)",
+   "value": 15.6,
+   "baseline": null,
+   "ratio": null,
+   "anomaly": false,
+   "unit": "vehicles/day",
+   "note": "Estonia->Russia (GoSwift): Koidula 347 cars queued; Luhamaa first car slot in 39 d; Luhamaa 330 cars queued; max car wait 132 h on 2026-10-06",
+   "source": "Estonian border queue system (GoSwift, eestipiir.ee)",
+   "series": [
+    [
+     "2026-10-07",
+     15.6
+    ]
+   ],
+   "series_kind": "daily value",
+   "component": "society",
+   "means": "A collapse in throughput with a growing queue means the Russian side is slowing or closing the crossing.",
+   "not_proves": "Low throughput can be a technical or staffing issue.",
+   "date": "2026-10-07"
+  },
+  {
+   "family": "mobilisation",
+   "id": "mob:ge_ru_visits_yoy_pct",
+   "label": "Georgia: visits by Russian citizens, latest quarter vs same quarter a year earlier (Geostat)",
+   "value": 5.1,
+   "baseline": null,
+   "ratio": null,
+   "anomaly": false,
+   "unit": "% y/y",
+   "note": "Georgia (Geostat): Russian citizens made 126.7k visits/month in 2026 Q2, +5.1% year on year (quarterly, published ~1 month after quarter end)",
+   "source": "Geostat (Georgia), quarterly",
+   "series": [
+    [
+     "2026-10-07",
+     5.1
+    ]
+   ],
+   "series_kind": "daily value",
+   "component": "society",
+   "means": "A strong year-on-year rise, as in late 2022, can mean men leaving Russia through Upper Lars.",
+   "not_proves": "Quarterly and survey-weighted; mostly tourism and family visits; arrives a month or more after the quarter.",
+   "date": "2026-10-07"
+  },
+  {
+   "family": "mobilisation",
+   "id": "mob:ge_ru_visits_k",
+   "label": "Georgia: visits by Russian citizens per month, latest quarter average (Geostat)",
+   "value": 126.7,
+   "baseline": null,
+   "ratio": null,
+   "anomaly": false,
+   "unit": "thousand/month",
+   "note": "Georgia (Geostat): Russian citizens made 126.7k visits/month in 2026 Q2, +5.1% year on year (quarterly, published ~1 month after quarter end)",
+   "source": "Geostat (Georgia), quarterly",
+   "series": [
+    [
+     "2026-10-07",
+     126.7
+    ]
+   ],
+   "series_kind": "daily value",
+   "component": "society",
+   "means": "The level of Russian arrivals in the main nearby visa-free destination.",
+   "not_proves": "Strongly seasonal (summer peak); compare year on year, not quarter on quarter.",
+   "date": "2026-10-07"
+  },
+  {
+   "family": "mobilisation",
+   "id": "mob:court_337_per_court",
+   "label": "Russian garrison courts (panel): new cases of unauthorised leaving of a unit (art. 337), last 28 days, per court",
+   "value": 10.94,
+   "baseline": null,
+   "ratio": null,
+   "anomaly": false,
+   "unit": "cases/court",
+   "note": "16/16 garrison courts, cases received 2026-09-09..2026-10-06: art.337 175, art.338 10; largest: moskovskygvs.msk 24, 235gvs.msk 22, gvs.ros 21",
+   "source": "garrison military courts (sudrf.ru), panel of courts without captcha",
+   "series": [
+    [
+     "2026-10-07",
+     10.94
+    ]
+   ],
+   "series_kind": "daily value",
+   "component": "military",
+   "means": "More soldiers prosecuted for leaving their units means the army holds men against their will and morale is eroding; a jump preceded and followed the 2022 mobilisation.",
+   "not_proves": "Court cards appear with delays and many cases are hidden or never opened (deserters are often sent back to the front instead); a panel of large courts, not all of Russia.",
+   "date": "2026-10-07"
+  },
+  {
+   "family": "mobilisation",
+   "id": "mob:court_337_28d",
+   "label": "Russian garrison courts (panel): new art. 337 cases received, last 28 days",
+   "value": 175,
+   "baseline": null,
+   "ratio": null,
+   "anomaly": false,
+   "unit": "cases",
+   "note": "16/16 garrison courts, cases received 2026-09-09..2026-10-06: art.337 175, art.338 10; largest: moskovskygvs.msk 24, 235gvs.msk 22, gvs.ros 21",
+   "source": "garrison military courts (sudrf.ru), panel of courts without captcha",
+   "series": [
+    [
+     "2026-10-07",
+     175
+    ]
+   ],
+   "series_kind": "daily value",
+   "component": "military",
+   "means": "The raw count behind the per-court figure.",
+   "not_proves": "Changes when panel courts fail to answer; prefer the per-court series.",
+   "date": "2026-10-07"
+  },
+  {
+   "family": "mobilisation",
+   "id": "mob:pay_reg_median",
+   "label": "Russian regions: median regional one-time payout for signing a military contract",
+   "value": 2100000,
+   "baseline": null,
+   "ratio": null,
+   "anomaly": false,
+   "unit": "₽",
+   "note": "127 regional centres/cities (contractarmy.ru table, recruiter-maintained, unverified): regional sign-up payout median 2.10M RUB, max 4.1M (Санкт-Петербург 4.1M, Магадан 3.6M, Махачкала 3.5M); 74 at 2M+; newest act date cited 2026-10-01",
+   "source": "contractarmy.ru regional table (recruiting site, not official)",
+   "series": [
+    [
+     "2026-10-07",
+     2100000
+    ]
+   ],
+   "series_kind": "daily value",
+   "component": "military",
+   "means": "Regions paying more to sign one man means volunteers are scarcer at the old price: the cost of avoiding mobilisation rises.",
+   "not_proves": "A recruiting site's table, not an official register; rows may be stale or include municipal top-ups. Inflation lifts all payouts.",
+   "date": "2026-10-07"
+  },
+  {
+   "family": "mobilisation",
+   "id": "mob:pay_reg_ge2m",
+   "label": "Russian regions: regional centres/cities paying 2 million roubles or more just for the regional sign-up bonus",
+   "value": 74,
+   "baseline": null,
+   "ratio": null,
+   "anomaly": false,
+   "unit": "regions",
+   "note": "127 regional centres/cities (contractarmy.ru table, recruiter-maintained, unverified): regional sign-up payout median 2.10M RUB, max 4.1M (Санкт-Петербург 4.1M, Магадан 3.6M, Махачкала 3.5M); 74 at 2M+; newest act date cited 2026-10-01",
+   "source": "contractarmy.ru regional table (recruiting site, not official)",
+   "series": [
+    [
+     "2026-10-07",
+     74
+    ]
+   ],
+   "series_kind": "daily value",
+   "component": "military",
+   "means": "More regions in the top bracket means a bidding war for recruits across the country.",
+   "not_proves": "Same table caveats; a falling count can mean budget strain rather than less need for men.",
+   "date": "2026-10-07"
+  },
+  {
+   "family": "mobilisation",
+   "id": "mob:pay_reg_max",
+   "label": "Russian regions: highest regional one-time payout for a military contract",
+   "value": 4100000,
+   "baseline": null,
+   "ratio": null,
+   "anomaly": false,
+   "unit": "₽",
+   "note": "127 regional centres/cities (contractarmy.ru table, recruiter-maintained, unverified): regional sign-up payout median 2.10M RUB, max 4.1M (Санкт-Петербург 4.1M, Магадан 3.6M, Махачкала 3.5M); 74 at 2M+; newest act date cited 2026-10-01",
+   "source": "contractarmy.ru regional table (recruiting site, not official)",
+   "series": [
+    [
+     "2026-10-07",
+     4100000
+    ]
+   ],
+   "series_kind": "daily value",
+   "component": "military",
+   "means": "The top of the market shows how far the most desperate or richest region goes.",
+   "not_proves": "One region's special track can set it.",
+   "date": "2026-10-07"
+  },
+  {
+   "family": "mobilisation",
+   "id": "mob:pay_reg_p25",
+   "label": "Russian regions: lower quartile of regional one-time payouts",
+   "value": 1000000,
+   "baseline": null,
+   "ratio": null,
+   "anomaly": false,
+   "unit": "₽",
+   "note": "127 regional centres/cities (contractarmy.ru table, recruiter-maintained, unverified): regional sign-up payout median 2.10M RUB, max 4.1M (Санкт-Петербург 4.1M, Магадан 3.6M, Махачкала 3.5M); 74 at 2M+; newest act date cited 2026-10-01",
+   "source": "contractarmy.ru regional table (recruiting site, not official)",
+   "series": [
+    [
+     "2026-10-07",
+     1000000
+    ]
+   ],
+   "series_kind": "daily value",
+   "component": "military",
+   "means": "When even the cheapest regions raise payouts, the pressure is national.",
+   "not_proves": "Same table caveats.",
+   "date": "2026-10-07"
+  },
+  {
+   "family": "mobilisation",
+   "id": "mob:tg_analysis-ru",
+   "label": "Telegram (analysis-ru): share of posts about mobilisation, last 24 h",
+   "value": 0.0,
+   "baseline": null,
+   "ratio": null,
+   "anomaly": false,
+   "unit": "% of posts",
+   "note": "",
+   "source": "public Telegram previews (t.me/s), tg_signals",
+   "series": [
+    [
+     "2026-10-07",
+     0.0
+    ]
+   ],
+   "series_kind": "daily value",
+   "component": "society",
+   "means": "When this group suddenly talks more about summons and call-up, something is moving.",
+   "not_proves": "Topic share follows news cycles; one viral story can lift it.",
+   "date": "2026-10-07"
+  },
+  {
+   "family": "mobilisation",
+   "id": "mob:tg_border-relocation",
+   "label": "Telegram (border-relocation): share of posts about mobilisation, last 24 h",
+   "value": 0.0,
+   "baseline": null,
+   "ratio": null,
+   "anomaly": false,
+   "unit": "% of posts",
+   "note": "",
+   "source": "public Telegram previews (t.me/s), tg_signals",
+   "series": [
+    [
+     "2026-10-07",
+     0.0
+    ]
+   ],
+   "series_kind": "daily value",
+   "component": "society",
+   "means": "When this group suddenly talks more about summons and call-up, something is moving.",
+   "not_proves": "Topic share follows news cycles; one viral story can lift it.",
+   "date": "2026-10-07"
+  },
+  {
+   "family": "mobilisation",
+   "id": "mob:tg_independent-ru",
+   "label": "Telegram (independent-ru): share of posts about mobilisation, last 24 h",
+   "value": 1.8,
+   "baseline": null,
+   "ratio": null,
+   "anomaly": false,
+   "unit": "% of posts",
+   "note": "",
+   "source": "public Telegram previews (t.me/s), tg_signals",
+   "series": [
+    [
+     "2026-10-07",
+     1.8
+    ]
+   ],
+   "series_kind": "daily value",
+   "component": "society",
+   "means": "When this group suddenly talks more about summons and call-up, something is moving.",
+   "not_proves": "Topic share follows news cycles; one viral story can lift it.",
+   "date": "2026-10-07"
+  },
+  {
+   "family": "mobilisation",
+   "id": "mob:tg_leaks-ru",
+   "label": "Telegram (leaks-ru): share of posts about mobilisation, last 24 h",
+   "value": 1.0,
+   "baseline": null,
+   "ratio": null,
+   "anomaly": false,
+   "unit": "% of posts",
+   "note": "",
+   "source": "public Telegram previews (t.me/s), tg_signals",
+   "series": [
+    [
+     "2026-10-07",
+     1.0
+    ]
+   ],
+   "series_kind": "daily value",
+   "component": "society",
+   "means": "When this group suddenly talks more about summons and call-up, something is moving.",
+   "not_proves": "Topic share follows news cycles; one viral story can lift it.",
+   "date": "2026-10-07"
+  },
+  {
+   "family": "mobilisation",
+   "id": "mob:tg_milblog-ru",
+   "label": "Telegram (milblog-ru): share of posts about mobilisation, last 24 h",
+   "value": 1.6,
+   "baseline": null,
+   "ratio": null,
+   "anomaly": false,
+   "unit": "% of posts",
+   "note": "",
+   "source": "public Telegram previews (t.me/s), tg_signals",
+   "series": [
+    [
+     "2026-10-07",
+     1.6
+    ]
+   ],
+   "series_kind": "daily value",
+   "component": "society",
+   "means": "When this group suddenly talks more about summons and call-up, something is moving.",
+   "not_proves": "Topic share follows news cycles; one viral story can lift it.",
+   "date": "2026-10-07"
+  },
+  {
+   "family": "mobilisation",
+   "id": "mob:tg_official-ru",
+   "label": "Telegram (official-ru): share of posts about mobilisation, last 24 h",
+   "value": 0.0,
+   "baseline": null,
+   "ratio": null,
+   "anomaly": false,
+   "unit": "% of posts",
+   "note": "",
+   "source": "public Telegram previews (t.me/s), tg_signals",
+   "series": [
+    [
+     "2026-10-07",
+     0.0
+    ]
+   ],
+   "series_kind": "daily value",
+   "component": "society",
+   "means": "When this group suddenly talks more about summons and call-up, something is moving.",
+   "not_proves": "Topic share follows news cycles; one viral story can lift it.",
+   "date": "2026-10-07"
+  },
+  {
+   "family": "mobilisation",
+   "id": "mob:tg_official-ru-regional",
+   "label": "Telegram (official-ru-regional): share of posts about mobilisation, last 24 h",
+   "value": 0.0,
+   "baseline": null,
+   "ratio": null,
+   "anomaly": false,
+   "unit": "% of posts",
+   "note": "",
+   "source": "public Telegram previews (t.me/s), tg_signals",
+   "series": [
+    [
+     "2026-10-07",
+     0.0
+    ]
+   ],
+   "series_kind": "daily value",
+   "component": "society",
+   "means": "When this group suddenly talks more about summons and call-up, something is moving.",
+   "not_proves": "Topic share follows news cycles; one viral story can lift it.",
+   "date": "2026-10-07"
+  },
+  {
+   "family": "mobilisation",
+   "id": "mob:tg_regional-ru",
+   "label": "Telegram (regional-ru): share of posts about mobilisation, last 24 h",
+   "value": 0.0,
+   "baseline": null,
+   "ratio": null,
+   "anomaly": false,
+   "unit": "% of posts",
+   "note": "",
+   "source": "public Telegram previews (t.me/s), tg_signals",
+   "series": [
+    [
+     "2026-10-07",
+     0.0
+    ]
+   ],
+   "series_kind": "daily value",
+   "component": "society",
+   "means": "When this group suddenly talks more about summons and call-up, something is moving.",
+   "not_proves": "Topic share follows news cycles; one viral story can lift it.",
+   "date": "2026-10-07"
   }
  ],
  "errors": [
-  "gdelt \"Toyota Hilux\" (army OR militia OR milit: HTTP 429",
-  "gdelt tourniquets (shortage OR order OR donate: HTTP 429",
-  "gdelt \"potassium iodide\" (stock OR distribute : HTTP 429",
-  "gdelt \"satellite phones\" (ban OR seized OR sho: HTTP 429",
-  "gdelt \"field hospital\" (deployed OR \"set up\"): skipped (6 min cap)",
-  "gdelt \"blood donation\" (urgent OR appeal) war: skipped (6 min cap)",
-  "gdelt \"ordered departure\" embassy: skipped (6 min cap)",
-  "gdelt \"airspace closed\": skipped (6 min cap)",
-  "gdelt \"GPS jamming\": skipped (6 min cap)",
-  "gdelt reservists (\"called up\" OR mobilized): skipped (6 min cap)",
-  "gdelt \"war risk premium\": skipped (6 min cap)",
-  "gdelt \"internet shutdown\": skipped (6 min cap)",
-  "gdelt \"state of emergency\" extended: skipped (6 min cap)",
-  "gdelt \"martial law\" extended: skipped (6 min cap)",
-  "gdelt (\"exit ban\" OR \"banned from leaving\"): skipped (6 min cap)",
-  "gdelt (\"VPN ban\" OR \"VPN blocked\" OR \"blocked : skipped (6 min cap)",
-  "gdelt \"fuel rationing\": skipped (6 min cap)",
-  "gdelt \"rolling blackouts\": skipped (6 min cap)",
-  "gdelt refinery (\"drone strike\" OR fire OR atta: skipped (6 min cap)",
-  "gdelt \"undersea cable\" (cut OR damaged): skipped (6 min cap)",
-  "gdelt (\"partial mobilization\" OR \"mobilisation: skipped (6 min cap)",
-  "gdelt (\"draft notices\" OR \"call-up papers\" OR : skipped (6 min cap)",
-  "gdelt \"Upper Lars\": skipped (6 min cap)",
-  "gdelt (\"draft evasion\" OR \"draft dodgers\" OR \": skipped (6 min cap)"
+  "mobil flights: no Travelpayouts key (travelpayouts.key absent), skipped",
+  "mobil duma-api: data stale, newest bill event 2025-02-14; API counts not used"
  ]
 }
