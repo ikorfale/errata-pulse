@@ -49,9 +49,9 @@ GROUPS = [  # (key, title, what it shows); order = weight of evidence, reading h
 ]
 def mgroup(x):
     i = str(x.get('id', ''))
-    if i.startswith(('mob:vac', 'mob:payout')): return 'demand'
+    if i.startswith(('mob:vac', 'mob:pay_')): return 'demand'
     if i.startswith(('mob:reg', 'mob:fed', 'mob:pravo', 'mob:duma', 'mob:court')): return 'law'
-    if i.startswith(('mob:p2p', 'mob:usd', 'mob:flight', 'mob:border')): return 'exit'
+    if i.startswith(('mob:p2p', 'mob:usd', 'mob:fl', 'mob:ee_', 'mob:ge_')): return 'exit'
     if i.startswith('mob:tg_'): return 'talk'
     return 'read'
 NON_RU = (':uk:', ':he:', ':de:', ':zh:', ':fa:', 'Ukraine', 'Israel', 'Taiwan', 'Germany', 'Conscientious')

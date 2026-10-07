@@ -10485,8 +10485,8 @@
    "ratio": null,
    "anomaly": false,
    "unit": "vacancies",
-   "note": "top regions: Калужская область 208, Мурманская область 179, Костромская область 179, Кабардино-Балкарская Республика 129, Новосибирская область 107",
-   "source": "errata mobil_signals",
+   "note": "top regions: Калужская область 207, Мурманская область 179, Костромская область 179, Кабардино-Балкарская Республика 129, Новосибирская область 107",
+   "source": "Работа России open data (opendata.trudvsem.ru)",
    "series": [
     [
      "2026-10-07",
@@ -10508,8 +10508,8 @@
    "ratio": null,
    "anomaly": false,
    "unit": "vacancies",
-   "note": "top regions: Калужская область 208, Мурманская область 179, Костромская область 179, Кабардино-Балкарская Республика 129, Новосибирская область 107",
-   "source": "errata mobil_signals",
+   "note": "",
+   "source": "Работа России open data (opendata.trudvsem.ru)",
    "series": [
     [
      "2026-10-07",
@@ -10531,8 +10531,8 @@
    "ratio": null,
    "anomaly": false,
    "unit": "₽/month",
-   "note": "top regions: Калужская область 208, Мурманская область 179, Костромская область 179, Кабардино-Балкарская Республика 129, Новосибирская область 107",
-   "source": "errata mobil_signals",
+   "note": "127 regional centres/cities (contractarmy.ru table, recruiter-maintained, unverified): regional sign-up payout median 2.10M RUB, max 4.1M (Санкт-Петербург 4.1M, Магадан 3.6M, Махачкала 3.5M); 74 at 2M+; newest act date cited 2026-10-01",
+   "source": "Работа России open data (opendata.trudvsem.ru)",
    "series": [
     [
      "2026-10-07",
@@ -10554,8 +10554,8 @@
    "ratio": null,
    "anomaly": false,
    "unit": "acts",
-   "note": "2026-10-07 Приказ Министерства социального благополучия и семейной политики Камчатского края от 01.10.2026 № 81-Н\n \"О внесении изменений в приказ Минис; 2026-10-07 Постановление Правительства Смоленской области  от 05.10.2026 № 591\n \"О внесении изменений в Порядок предоставления дополнительной меры соци; 2026-10-07 Распоряжение правительства Еврейской автономной области  от 02.10.2026 № 395-рп\n \"О внесении изменений в распоряжение правительства Еврейско; 2026-10-06 Постановление Правительства Амурской области от 02.10.2026 № 685\n \"Об утверждении Правил предоставления субсидии индивидуальному предпринима; 2026-10-06 Закон Брянской области от 29.09.2026 № 84-З\n \"О внесении изменений в Закон Брянской области \"О дополнительной мере социальной поддержки воен",
-   "source": "errata mobil_signals",
+   "note": "2026-10-07 Приказ Министерства социального благополучия и семейной политики Камчатского края от 01.10.2026 № 81-Н \"О внесении изменений в приказ Министерства социального благополучия и семейной политики Камчатского края от 22.01.20; 2026-10-07 Постановление Правительства Смоленской области от 05.10.2026 № 591 \"О внесении изменений в Порядок предоставления дополнительной меры социальной поддержки граждан, заключивших контракт о прохождении военной службы с Мини; 2026-10-07 Распоряжение правительства Еврейской автономной области от 02.10.2026 № 395-рп \"О внесении изменений в распоряжение правительства Еврейской автономной области от 18.05.2022 № 131-рп \"О выплате на территории Еврейской авт; 2026-10-06 Постановление Правительства Амурской области от 02.10.2026 № 685 \"Об утверждении Правил предоставления субсидии индивидуальному предпринимателю в целях возмещения части затрат, связанных с ремонтом и оборудованием нежило; 2026-10-06 Закон Брянской области от 29.09.2026 № 84-З \"О внесении изменений в Закон Брянской области \"О дополнительной мере социальной поддержки военнослужащих, лиц, заключивших контракт о пребывании в добровольческом формировании",
+   "source": "publication.pravo.gov.ru (regions)",
    "series": [
     [
      "2026-10-07",
@@ -10568,15 +10568,15 @@
    "not_proves": "Many acts are routine budget amendments; read the titles.",
    "date": "2026-10-07",
    "items": [
-    "2026-10-07 Приказ Министерства социального благополучия и семейной политики Камчатского края от 01.10.2026 № 81-Н\n \"О внесении изменений в приказ Минис",
-    "2026-10-07 Постановление Правительства Смоленской области  от 05.10.2026 № 591\n \"О внесении изменений в Порядок предоставления дополнительной меры соци",
-    "2026-10-07 Распоряжение правительства Еврейской автономной области  от 02.10.2026 № 395-рп\n \"О внесении изменений в распоряжение правительства Еврейско",
-    "2026-10-06 Постановление Правительства Амурской области от 02.10.2026 № 685\n \"Об утверждении Правил предоставления субсидии индивидуальному предпринима",
-    "2026-10-06 Закон Брянской области от 29.09.2026 № 84-З\n \"О внесении изменений в Закон Брянской области \"О дополнительной мере социальной поддержки воен",
-    "2026-10-06 Постановление Правительства Калининградской области от 02.10.2026 № 343-п\n \"О внесении изменений в порядок и условия предоставления дополнит",
-    "2026-10-06 Распоряжение министерства образования Кировской области от 30.09.2026 № 1181\n \"Об утверждении Порядка и условий освобождения от платы, взима",
-    "2026-10-06 Приказ министерства социальной политики Липецкой области от 05.10.2026 № 91-Н\n \"Об утверждении Порядка предоставления путевки на санаторно-к",
-    "2026-10-06 Приказ министерства социальной политики Липецкой области от 05.10.2026 № 90-Н\n \"О признании утратившим силу приказа управления социальной по"
+    "2026-10-07 Приказ Министерства социального благополучия и семейной политики Камчатского края от 01.10.2026 № 81-Н \"О внесении изменений в приказ Министерства социального благополучия и семейной политики Камчатского края от 22.01.20",
+    "2026-10-07 Постановление Правительства Смоленской области от 05.10.2026 № 591 \"О внесении изменений в Порядок предоставления дополнительной меры социальной поддержки граждан, заключивших контракт о прохождении военной службы с Мини",
+    "2026-10-07 Распоряжение правительства Еврейской автономной области от 02.10.2026 № 395-рп \"О внесении изменений в распоряжение правительства Еврейской автономной области от 18.05.2022 № 131-рп \"О выплате на территории Еврейской авт",
+    "2026-10-06 Постановление Правительства Амурской области от 02.10.2026 № 685 \"Об утверждении Правил предоставления субсидии индивидуальному предпринимателю в целях возмещения части затрат, связанных с ремонтом и оборудованием нежило",
+    "2026-10-06 Закон Брянской области от 29.09.2026 № 84-З \"О внесении изменений в Закон Брянской области \"О дополнительной мере социальной поддержки военнослужащих, лиц, заключивших контракт о пребывании в добровольческом формировании",
+    "2026-10-06 Постановление Правительства Калининградской области от 02.10.2026 № 343-п \"О внесении изменений в порядок и условия предоставления дополнительной меры социальной поддержки в 2026 – 2028 годах в виде социальной выплаты на",
+    "2026-10-06 Распоряжение министерства образования Кировской области от 30.09.2026 № 1181 \"Об утверждении Порядка и условий освобождения от платы, взимаемой с родителей (законных представителей) за присмотр и уход за ребенком участни",
+    "2026-10-06 Приказ министерства социальной политики Липецкой области от 05.10.2026 № 91-Н \"Об утверждении Порядка предоставления путевки на санаторно-курортное лечение беременной супруге участника специальной военной операции\"",
+    "2026-10-06 Приказ министерства социальной политики Липецкой области от 05.10.2026 № 90-Н \"О признании утратившим силу приказа управления социальной политики Липецкой области от 1 ноября 2022 года № 116-Н \"Об утверждении порядка пре"
    ]
   },
   {
@@ -10588,8 +10588,8 @@
    "ratio": null,
    "anomaly": false,
    "unit": "acts",
-   "note": "2026-10-06 Приказ Федеральной службы безопасности Российской Федерации от 29.08.2026 № 325\n \"Об утверждении Требований к уровню физической подготовки, ",
-   "source": "errata mobil_signals",
+   "note": "2026-10-06 Приказ Федеральной службы безопасности Российской Федерации от 29.08.2026 № 325 \"Об утверждении Требований к уровню физической подготовки, предъявляемых к кандидатам для поступления на военную службу по контракту в орган",
+   "source": "publication.pravo.gov.ru (federal bodies)",
    "series": [
     [
      "2026-10-07",
@@ -10602,7 +10602,7 @@
    "not_proves": "Ministries publish technical orders all year.",
    "date": "2026-10-07",
    "items": [
-    "2026-10-06 Приказ Федеральной службы безопасности Российской Федерации от 29.08.2026 № 325\n \"Об утверждении Требований к уровню физической подготовки, "
+    "2026-10-06 Приказ Федеральной службы безопасности Российской Федерации от 29.08.2026 № 325 \"Об утверждении Требований к уровню физической подготовки, предъявляемых к кандидатам для поступления на военную службу по контракту в орган"
    ]
   },
   {
@@ -10615,7 +10615,7 @@
    "anomaly": false,
    "unit": "%",
    "note": "",
-   "source": "errata mobil_signals",
+   "source": "Bybit P2P offers vs Bank of Russia rate",
    "series": [
     [
      "2026-10-07",
@@ -10638,7 +10638,7 @@
    "anomaly": false,
    "unit": "₽/$",
    "note": "",
-   "source": "errata mobil_signals",
+   "source": "Bank of Russia (via cbr-xml-daily.ru)",
    "series": [
     [
      "2026-10-07",
@@ -10653,6 +10653,328 @@
   },
   {
    "family": "mobilisation",
+   "id": "mob:duma_news7",
+   "label": "State Duma official news: items on mobilisation, call-up, military registration, deferment, exit limits or contract service, last 7 days",
+   "value": 0,
+   "baseline": null,
+   "ratio": null,
+   "anomaly": false,
+   "unit": "news items",
+   "note": "none of 52 Duma news items in 7 days (duma.gov.ru/news)",
+   "source": "State Duma (duma.gov.ru news; API when current)",
+   "series": [
+    [
+     "2026-10-07",
+     0
+    ]
+   ],
+   "series_kind": "daily value",
+   "component": "institutions",
+   "means": "The Duma talking publicly about these laws (bills passed, introduced, explained) shows what it is preparing.",
+   "not_proves": "News is chosen by the Duma press service; one session day can produce several items on one law.",
+   "date": "2026-10-07"
+  },
+  {
+   "family": "mobilisation",
+   "id": "mob:ee_wait_cars_h",
+   "label": "Estonia-Russia border: longest daily waiting time for cars heading into Russia (Koidula/Luhamaa, GoSwift)",
+   "value": 132.0,
+   "baseline": null,
+   "ratio": null,
+   "anomaly": false,
+   "unit": "hours",
+   "note": "Estonia->Russia (GoSwift): Koidula 347 cars queued; Luhamaa first car slot in 39 d; Luhamaa 330 cars queued; max car wait 132 h on 2026-10-06",
+   "source": "Estonian border queue system (GoSwift, eestipiir.ee)",
+   "series": [
+    [
+     "2026-10-07",
+     132.0
+    ]
+   ],
+   "series_kind": "daily value",
+   "component": "society",
+   "means": "A sudden jump means the Russian side is processing travellers slowly or more people are crossing: friction at Russia's western land border.",
+   "not_proves": "Direction is into Russia, not out of it; holidays, Russian checks and staffing move it. Not a count of people leaving Russia. The site does not state the unit; hours is inferred.",
+   "date": "2026-10-07"
+  },
+  {
+   "family": "mobilisation",
+   "id": "mob:ee_wait_cars_h_7d",
+   "label": "Estonia-Russia border: 7-day mean of the daily maximum car waiting time (GoSwift)",
+   "value": 79.9,
+   "baseline": null,
+   "ratio": null,
+   "anomaly": false,
+   "unit": "hours",
+   "note": "Estonia->Russia (GoSwift): Koidula 347 cars queued; Luhamaa first car slot in 39 d; Luhamaa 330 cars queued; max car wait 132 h on 2026-10-06",
+   "source": "Estonian border queue system (GoSwift, eestipiir.ee)",
+   "series": [
+    [
+     "2026-10-07",
+     79.9
+    ]
+   ],
+   "series_kind": "daily value",
+   "component": "society",
+   "means": "A sustained rise in waiting time is a slower, steadier sign of tighter Russian border control or heavier traffic.",
+   "not_proves": "Seasonal travel and Russian processing capacity dominate; not specific to mobilisation.",
+   "date": "2026-10-07"
+  },
+  {
+   "family": "mobilisation",
+   "id": "mob:ee_first_slot_days",
+   "label": "Estonia-Russia border: days until the first free car reservation slot (GoSwift)",
+   "value": 39,
+   "baseline": null,
+   "ratio": null,
+   "anomaly": false,
+   "unit": "days",
+   "note": "Estonia->Russia (GoSwift): Koidula 347 cars queued; Luhamaa first car slot in 39 d; Luhamaa 330 cars queued; max car wait 132 h on 2026-10-06",
+   "source": "Estonian border queue system (GoSwift, eestipiir.ee)",
+   "series": [
+    [
+     "2026-10-07",
+     39
+    ]
+   ],
+   "series_kind": "daily value",
+   "component": "society",
+   "means": "When pre-booked slots run weeks ahead, demand to cross far exceeds what the Russian side lets through.",
+   "not_proves": "Slot horizons depend on how much capacity the system opens for booking.",
+   "date": "2026-10-07"
+  },
+  {
+   "family": "mobilisation",
+   "id": "mob:ee_cars_queue",
+   "label": "Estonia-Russia border: cars in the full GoSwift queue (live + booked)",
+   "value": 677,
+   "baseline": null,
+   "ratio": null,
+   "anomaly": false,
+   "unit": "vehicles",
+   "note": "Estonia->Russia (GoSwift): Koidula 347 cars queued; Luhamaa first car slot in 39 d; Luhamaa 330 cars queued; max car wait 132 h on 2026-10-06",
+   "source": "Estonian border queue system (GoSwift, eestipiir.ee)",
+   "series": [
+    [
+     "2026-10-07",
+     677
+    ]
+   ],
+   "series_kind": "daily value",
+   "component": "society",
+   "means": "More cars queued means more demand to cross into Russia or slower processing.",
+   "not_proves": "Booked queue includes reservations weeks ahead.",
+   "date": "2026-10-07"
+  },
+  {
+   "family": "mobilisation",
+   "id": "mob:ee_cross_cars_7d",
+   "label": "Estonia-Russia border: cars let through per day, 7-day mean (GoSwift)",
+   "value": 15.6,
+   "baseline": null,
+   "ratio": null,
+   "anomaly": false,
+   "unit": "vehicles/day",
+   "note": "Estonia->Russia (GoSwift): Koidula 347 cars queued; Luhamaa first car slot in 39 d; Luhamaa 330 cars queued; max car wait 132 h on 2026-10-06",
+   "source": "Estonian border queue system (GoSwift, eestipiir.ee)",
+   "series": [
+    [
+     "2026-10-07",
+     15.6
+    ]
+   ],
+   "series_kind": "daily value",
+   "component": "society",
+   "means": "A collapse in throughput with a growing queue means the Russian side is slowing or closing the crossing.",
+   "not_proves": "Low throughput can be a technical or staffing issue.",
+   "date": "2026-10-07"
+  },
+  {
+   "family": "mobilisation",
+   "id": "mob:ge_ru_visits_yoy_pct",
+   "label": "Georgia: visits by Russian citizens, latest quarter vs same quarter a year earlier (Geostat)",
+   "value": 5.1,
+   "baseline": null,
+   "ratio": null,
+   "anomaly": false,
+   "unit": "% y/y",
+   "note": "Georgia (Geostat): Russian citizens made 126.7k visits/month in 2026 Q2, +5.1% year on year (quarterly, published ~1 month after quarter end)",
+   "source": "Geostat (Georgia), quarterly",
+   "series": [
+    [
+     "2026-10-07",
+     5.1
+    ]
+   ],
+   "series_kind": "daily value",
+   "component": "society",
+   "means": "A strong year-on-year rise, as in late 2022, can mean men leaving Russia through Upper Lars.",
+   "not_proves": "Quarterly and survey-weighted; mostly tourism and family visits; arrives a month or more after the quarter.",
+   "date": "2026-10-07"
+  },
+  {
+   "family": "mobilisation",
+   "id": "mob:ge_ru_visits_k",
+   "label": "Georgia: visits by Russian citizens per month, latest quarter average (Geostat)",
+   "value": 126.7,
+   "baseline": null,
+   "ratio": null,
+   "anomaly": false,
+   "unit": "thousand/month",
+   "note": "Georgia (Geostat): Russian citizens made 126.7k visits/month in 2026 Q2, +5.1% year on year (quarterly, published ~1 month after quarter end)",
+   "source": "Geostat (Georgia), quarterly",
+   "series": [
+    [
+     "2026-10-07",
+     126.7
+    ]
+   ],
+   "series_kind": "daily value",
+   "component": "society",
+   "means": "The level of Russian arrivals in the main nearby visa-free destination.",
+   "not_proves": "Strongly seasonal (summer peak); compare year on year, not quarter on quarter.",
+   "date": "2026-10-07"
+  },
+  {
+   "family": "mobilisation",
+   "id": "mob:court_337_per_court",
+   "label": "Russian garrison courts (panel): new cases of unauthorised leaving of a unit (art. 337), last 28 days, per court",
+   "value": 10.94,
+   "baseline": null,
+   "ratio": null,
+   "anomaly": false,
+   "unit": "cases/court",
+   "note": "16/16 garrison courts, cases received 2026-09-09..2026-10-06: art.337 175, art.338 10; largest: moskovskygvs.msk 24, 235gvs.msk 22, gvs.ros 21",
+   "source": "garrison military courts (sudrf.ru), panel of courts without captcha",
+   "series": [
+    [
+     "2026-10-07",
+     10.94
+    ]
+   ],
+   "series_kind": "daily value",
+   "component": "military",
+   "means": "More soldiers prosecuted for leaving their units means the army holds men against their will and morale is eroding; a jump preceded and followed the 2022 mobilisation.",
+   "not_proves": "Court cards appear with delays and many cases are hidden or never opened (deserters are often sent back to the front instead); a panel of large courts, not all of Russia.",
+   "date": "2026-10-07"
+  },
+  {
+   "family": "mobilisation",
+   "id": "mob:court_337_28d",
+   "label": "Russian garrison courts (panel): new art. 337 cases received, last 28 days",
+   "value": 175,
+   "baseline": null,
+   "ratio": null,
+   "anomaly": false,
+   "unit": "cases",
+   "note": "16/16 garrison courts, cases received 2026-09-09..2026-10-06: art.337 175, art.338 10; largest: moskovskygvs.msk 24, 235gvs.msk 22, gvs.ros 21",
+   "source": "garrison military courts (sudrf.ru), panel of courts without captcha",
+   "series": [
+    [
+     "2026-10-07",
+     175
+    ]
+   ],
+   "series_kind": "daily value",
+   "component": "military",
+   "means": "The raw count behind the per-court figure.",
+   "not_proves": "Changes when panel courts fail to answer; prefer the per-court series.",
+   "date": "2026-10-07"
+  },
+  {
+   "family": "mobilisation",
+   "id": "mob:pay_reg_median",
+   "label": "Russian regions: median regional one-time payout for signing a military contract",
+   "value": 2100000,
+   "baseline": null,
+   "ratio": null,
+   "anomaly": false,
+   "unit": "₽",
+   "note": "127 regional centres/cities (contractarmy.ru table, recruiter-maintained, unverified): regional sign-up payout median 2.10M RUB, max 4.1M (Санкт-Петербург 4.1M, Магадан 3.6M, Махачкала 3.5M); 74 at 2M+; newest act date cited 2026-10-01",
+   "source": "contractarmy.ru regional table (recruiting site, not official)",
+   "series": [
+    [
+     "2026-10-07",
+     2100000
+    ]
+   ],
+   "series_kind": "daily value",
+   "component": "military",
+   "means": "Regions paying more to sign one man means volunteers are scarcer at the old price: the cost of avoiding mobilisation rises.",
+   "not_proves": "A recruiting site's table, not an official register; rows may be stale or include municipal top-ups. Inflation lifts all payouts.",
+   "date": "2026-10-07"
+  },
+  {
+   "family": "mobilisation",
+   "id": "mob:pay_reg_ge2m",
+   "label": "Russian regions: regional centres/cities paying 2 million roubles or more just for the regional sign-up bonus",
+   "value": 74,
+   "baseline": null,
+   "ratio": null,
+   "anomaly": false,
+   "unit": "regions",
+   "note": "127 regional centres/cities (contractarmy.ru table, recruiter-maintained, unverified): regional sign-up payout median 2.10M RUB, max 4.1M (Санкт-Петербург 4.1M, Магадан 3.6M, Махачкала 3.5M); 74 at 2M+; newest act date cited 2026-10-01",
+   "source": "contractarmy.ru regional table (recruiting site, not official)",
+   "series": [
+    [
+     "2026-10-07",
+     74
+    ]
+   ],
+   "series_kind": "daily value",
+   "component": "military",
+   "means": "More regions in the top bracket means a bidding war for recruits across the country.",
+   "not_proves": "Same table caveats; a falling count can mean budget strain rather than less need for men.",
+   "date": "2026-10-07"
+  },
+  {
+   "family": "mobilisation",
+   "id": "mob:pay_reg_max",
+   "label": "Russian regions: highest regional one-time payout for a military contract",
+   "value": 4100000,
+   "baseline": null,
+   "ratio": null,
+   "anomaly": false,
+   "unit": "₽",
+   "note": "127 regional centres/cities (contractarmy.ru table, recruiter-maintained, unverified): regional sign-up payout median 2.10M RUB, max 4.1M (Санкт-Петербург 4.1M, Магадан 3.6M, Махачкала 3.5M); 74 at 2M+; newest act date cited 2026-10-01",
+   "source": "contractarmy.ru regional table (recruiting site, not official)",
+   "series": [
+    [
+     "2026-10-07",
+     4100000
+    ]
+   ],
+   "series_kind": "daily value",
+   "component": "military",
+   "means": "The top of the market shows how far the most desperate or richest region goes.",
+   "not_proves": "One region's special track can set it.",
+   "date": "2026-10-07"
+  },
+  {
+   "family": "mobilisation",
+   "id": "mob:pay_reg_p25",
+   "label": "Russian regions: lower quartile of regional one-time payouts",
+   "value": 1000000,
+   "baseline": null,
+   "ratio": null,
+   "anomaly": false,
+   "unit": "₽",
+   "note": "127 regional centres/cities (contractarmy.ru table, recruiter-maintained, unverified): regional sign-up payout median 2.10M RUB, max 4.1M (Санкт-Петербург 4.1M, Магадан 3.6M, Махачкала 3.5M); 74 at 2M+; newest act date cited 2026-10-01",
+   "source": "contractarmy.ru regional table (recruiting site, not official)",
+   "series": [
+    [
+     "2026-10-07",
+     1000000
+    ]
+   ],
+   "series_kind": "daily value",
+   "component": "military",
+   "means": "When even the cheapest regions raise payouts, the pressure is national.",
+   "not_proves": "Same table caveats.",
+   "date": "2026-10-07"
+  },
+  {
+   "family": "mobilisation",
    "id": "mob:tg_analysis-ru",
    "label": "Telegram (analysis-ru): share of posts about mobilisation, last 24 h",
    "value": 0.0,
@@ -10661,7 +10983,7 @@
    "anomaly": false,
    "unit": "% of posts",
    "note": "",
-   "source": "errata mobil_signals",
+   "source": "public Telegram previews (t.me/s), tg_signals",
    "series": [
     [
      "2026-10-07",
@@ -10684,7 +11006,7 @@
    "anomaly": false,
    "unit": "% of posts",
    "note": "",
-   "source": "errata mobil_signals",
+   "source": "public Telegram previews (t.me/s), tg_signals",
    "series": [
     [
      "2026-10-07",
@@ -10707,7 +11029,7 @@
    "anomaly": false,
    "unit": "% of posts",
    "note": "",
-   "source": "errata mobil_signals",
+   "source": "public Telegram previews (t.me/s), tg_signals",
    "series": [
     [
      "2026-10-07",
@@ -10730,7 +11052,7 @@
    "anomaly": false,
    "unit": "% of posts",
    "note": "",
-   "source": "errata mobil_signals",
+   "source": "public Telegram previews (t.me/s), tg_signals",
    "series": [
     [
      "2026-10-07",
@@ -10753,7 +11075,7 @@
    "anomaly": false,
    "unit": "% of posts",
    "note": "",
-   "source": "errata mobil_signals",
+   "source": "public Telegram previews (t.me/s), tg_signals",
    "series": [
     [
      "2026-10-07",
@@ -10776,7 +11098,7 @@
    "anomaly": false,
    "unit": "% of posts",
    "note": "",
-   "source": "errata mobil_signals",
+   "source": "public Telegram previews (t.me/s), tg_signals",
    "series": [
     [
      "2026-10-07",
@@ -10799,7 +11121,7 @@
    "anomaly": false,
    "unit": "% of posts",
    "note": "",
-   "source": "errata mobil_signals",
+   "source": "public Telegram previews (t.me/s), tg_signals",
    "series": [
     [
      "2026-10-07",
@@ -10822,7 +11144,7 @@
    "anomaly": false,
    "unit": "% of posts",
    "note": "",
-   "source": "errata mobil_signals",
+   "source": "public Telegram previews (t.me/s), tg_signals",
    "series": [
     [
      "2026-10-07",
@@ -10836,5 +11158,8 @@
    "date": "2026-10-07"
   }
  ],
- "errors": []
+ "errors": [
+  "mobil flights: no Travelpayouts key (travelpayouts.key absent), skipped",
+  "mobil duma-api: data stale, newest bill event 2025-02-14; API counts not used"
+ ]
 }
