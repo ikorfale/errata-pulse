@@ -1,0 +1,18 @@
+window: 58 h, hits: 16, ledger events labelled: 24
+recall, in scope of a query: 13/17 = 76%  [95% 53%, 90%]
+recall, all material events incl. query gaps: 13/19 = 68%
+  Europe            2/2
+  Middle East       10/12
+  Russia/Black Sea  1/5
+missed:
+  iran-reviews-us-reply-1004     [ceasefire] Iran-US exchange via mediators, AFP
+  mecca-pact-activation-1005     [clash] Turkey+Pakistan defence pledge = new states entering
+  volodarskaya-lpds-1006         [energy] Transneft fuel node fire after drone strike
+  sochi-tanker-fire-1006         [energy] tanker burning off Sochi (claimed)
+  black-sea-bulgaria-eez-1006    [gap] 2 cargo ships hit in Bulgarian EEZ, AP+Reuters
+  black-sea-romania-eez-1005     [gap] grain ship sunk in Romanian EEZ, AP
+hits: new 13, backlog 2, duplicate 1; met the operator-alert threshold: 0 of 16
+hits per day: 6.6
+latency hit 6: 4.6 h after UKMTO event time
+latency hit 15: 9.8 h after UNN 14:21 Kyiv time
+__END__
