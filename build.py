@@ -207,6 +207,38 @@ def comp_multiples(hist, comps=None):
     return f'<div class="smgrid">{out}</div>'
 
 # ---------- signals ----------
+def heatmap_svg(sig, days=30):
+    """30 days x every signal with a series: how far each day sits from that signal's own median, in robust units
+    (|x - median| / (1.4826 * MAD), capped at 3). Warm = the direction the signal reads as worse, cool = calmer."""
+    rows = []
+    for s in sorted(sig.get('signals', []), key=lambda s: (fam_order(s.get('family', 'other')), str(s.get('label', '')))):
+        pts = [(p[0], float(p[1])) for p in (s.get('series') or []) if p and isinstance(p[1], (int, float)) and not isinstance(p[1], bool)]
+        if len(pts) < 14: continue
+        v = sorted(x for _, x in pts); med = v[len(v) // 2] if len(v) % 2 else (v[len(v) // 2 - 1] + v[len(v) // 2]) / 2
+        dev = sorted(abs(x - med) for x in v); mad = 1.4826 * (dev[len(dev) // 2] if len(dev) % 2 else (dev[len(dev) // 2 - 1] + dev[len(dev) // 2]) / 2)
+        if mad == 0: mad = (sum(dev) / len(dev)) or 1
+        sign = -1 if str(s.get('id', '')).startswith(LOW_IS_WORSE) else 1
+        rows.append((s.get('family', 'other'), s.get('label', s.get('id', '')), {d: max(-3, min(3, sign * (x - med) / mad)) for d, x in pts}))
+    if not rows: return ''
+    dates = sorted({d for _, _, z in rows for d in z})[-days:]
+    LW, CW, RH, FH = 300, 14, 13, 24; W = LW + CW * len(dates) + 8; y = 22; out = []
+    for i, d in enumerate(dates):
+        if i % 7 == len(dates) % 7 or i == len(dates) - 1:
+            out.append(f'<text class="ax" x="{LW + i * CW + CW / 2:.0f}" y="14" text-anchor="middle">{d[8:10]}.{d[5:7]}</text>')
+    fam = None
+    for f, lab, z in rows:
+        if f != fam:
+            fam = f; y += 6; out.append(f'<text class="hmfam" x="0" y="{y + 12}">{esc(fam_name(f))}</text>'); y += FH - 6
+        short = re.sub(r'^News share tagged ', 'News: ', re.sub(r'^Wikipedia \((\w+)\) ', r'\1 wiki ', re.split(r' \(GDELT|: daily read| \(7-day|: ships per day', lab)[0]))
+        short = short if len(short) <= 46 else short[:45] + '…'
+        out.append(f'<text class="hmlab" x="{LW - 8}" y="{y + RH - 3}" text-anchor="end"><title>{esc(lab)}</title>{esc(short)}</text>')
+        for i, d in enumerate(dates):
+            if d not in z: out.append(f'<rect class="hmna" x="{LW + i * CW}" y="{y}" width="{CW - 1}" height="{RH - 1}"/>'); continue
+            v = z[d]; cls = 'hmw' if v > 0 else 'hmc'; op = min(abs(v) / 3, 1)
+            out.append(f'<rect class="{cls}" x="{LW + i * CW}" y="{y}" width="{CW - 1}" height="{RH - 1}" fill-opacity="{0.08 + 0.92 * op:.2f}"><title>{esc(lab)}, {d}: {v:+.1f} robust units from its median</title></rect>')
+        y += RH
+    return (f'<svg class="heatmap" viewBox="0 0 {W} {y + 6}" role="img" aria-label="Heatmap: {len(rows)} signals over {len(dates)} days, {dates[0]} to {dates[-1]}, each day against the signal\'s own median">'
+            + ''.join(out) + '</svg>')
 def fam_name(f): return dict(FAMILIES).get(f, f.replace('_', ' ').capitalize())
 def fam_order(f):
     keys = [k for k, _ in FAMILIES]; return keys.index(f) if f in keys else len(keys)
@@ -331,7 +363,7 @@ def main():
         f'<a href="#signals-{slugify(f)}" data-hot="{sum(1 for s in sig.get("signals", []) if s.get("family", "other") == f and s.get("anomaly"))}">{esc(fam_name(f))} <span>{sum(1 for s in sig.get("signals", []) if s.get("family", "other") == f)}</span></a>'
         for f in sorted({s.get('family', 'other') for s in sig.get('signals', [])}, key=fam_order)) + '</nav>'
     sbody = f"""<h1 class="ptitle">Signals</h1><p class="lede">What states, armies, markets and people <em>do</em>, not what they say: shipping through chokepoints, travel advisories, internet outages, news volume on procurement and emergency powers, and what people read about war. Each signal is compared with its own baseline.</p>{sig_intro}{signal_nav}
-<p class="filt" hidden><label><input type="checkbox" id="onlyhot"> Anomalies only</label></p>{signals_html(sig, heading=2)}
+<h2 class="sec" id="heatmap">Thirty days at a glance</h2><p class="meta">One row per signal with at least 14 days of history, one column per day. Colour shows how far that day sits from the signal's own median: <span class="hmkey hmw"></span> towards the worrying direction, <span class="hmkey hmc"></span> towards calm, darker = further (capped at 3 robust units, median absolute deviation based). Grey = no data. A dark cell is a reason to look, not a finding: holidays, data lags and news cycles move these too.</p><div class="chart" tabindex="0" role="region" aria-label="Signals heatmap">{heatmap_svg(sig)}</div><p class="filt" hidden><label><input type="checkbox" id="onlyhot"> Anomalies only</label></p>{signals_html(sig, heading=2)}
 <p class="meta">Data of {esc(sig.get('date', ''))}: <a href="/signals.json">signals.json</a>. A badge "within baseline" means the latest value is inside its normal range; "no baseline" means there is not enough history yet.</p>
 <script>(function(){{var f=document.querySelector('.filt'),c=document.getElementById('onlyhot');f.hidden=false;c.onchange=function(){{document.querySelectorAll('.sig').forEach(function(e){{e.hidden=c.checked&&e.dataset.anomaly!=='1'}});document.querySelectorAll('.fam,.signal-nav a').forEach(function(e){{e.hidden=c.checked&&e.dataset.hot==='0'}})}}}})()</script>"""
     page('/signals/', 'Chaos Pulse signals: shipping, advisories, outages, anxiety', 'Hard signals behind the Chaos Pulse index: chokepoint shipping, travel advisories, internet outages, procurement news and war-related reading, each against its own baseline.', sbody, 'CollectionPage', active='signals')
