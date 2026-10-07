@@ -319,6 +319,44 @@ def comp_rows(cur, prev, reasons):
 <div class="cval" style="color:{c}">{v}</div><div class="cch">{ch}</div>{f'<p class="crs">{inline(reasons[k])}</p>' if reasons.get(k) else ''}</div>"""
     return f'<div class="comps">{rows}</div>'
 
+def changed_today(cur, prev, reasons, sig, sigprev, tg):
+    """'What changed' block: plain sentences from the report, the signal anomalies against the previous day, and Telegram."""
+    li = []
+    if prev:
+        d = cur['ph'] - prev['ph']
+        moved = sorted(((cur['components'][k] - prev['components'][k], k, n) for k, n, _ in COMP), key=lambda x: -abs(x[0]))
+        moved = [m for m in moved if m[0]]
+        head = (f"The index {'rose' if d > 0 else 'fell'} by {abs(d)} to {cur['ph']} since the report of {fmt_date(prev['ts'])}." if d
+                else f"The index stayed at {cur['ph']} since the report of {fmt_date(prev['ts'])}.")
+        if moved:
+            dd, k, n = moved[0]; r = reasons.get(k)
+            head += f" The biggest move: {n.lower()}, {'up' if dd > 0 else 'down'} {abs(dd)}" + (f'; the reason is under <a href="#comps">Five components</a>.' if r else '.')
+        else: head += ' No component moved.'
+        li.append(head)
+    if sig.get('signals'):
+        was = {s['id']: bool(s.get('anomaly')) for s in sigprev.get('signals', [])} if sigprev else {}
+        new = [s for s in sig['signals'] if s.get('anomaly') and was.get(s['id']) is False]
+        gone = [s for s in sigprev.get('signals', []) if s.get('anomaly')] if sigprev else []
+        ids = {s['id']: s for s in sig['signals']}
+        gone = [ids[s['id']] for s in gone if s['id'] in ids and not ids[s['id']].get('anomaly')]
+        for s in new[:3]: li.append(f"New anomaly in {esc(fam_name(s.get('family', 'other')).lower())}: {esc(s['label'])}. {plain(s.get('ratio'), True)[1]} {esc(s.get('not_proves', ''))}")
+        if gone: li.append('Back within baseline: ' + '; '.join(esc(s['label']) for s in gone[:3]) + '.')
+        hot = [s for s in sig['signals'] if s.get('anomaly')]
+        if not new and not gone:
+            li.append(f"No signal crossed into or out of an anomaly since the day before; {len(hot)} of {len(sig['signals'])} stay anomalous" + (f" ({'; '.join(esc(s['label']) for s in hot[:2])})" if hot else '') + '.')
+    if tg:
+        import build_telegram as T
+        an = [s for s in tg['signals'] if s.get('anomaly')]
+        if an:
+            an.sort(key=lambda s: -(s['share'] / s['baseline'] if s.get('baseline') else 0))
+            li.append('Telegram: ' + '; '.join(f"{esc(T.GROUPS.get(s['group'], ('', s['group']))[1])} talk more about {esc(s['family'])} ({s['share']:.0%} of posts vs a norm of {s['baseline']:.0%})" for s in an[:2]) + '. A lead, not a fact.')
+        elif tg.get('baseline_days', 0) >= 5: li.append('Telegram: no channel group talks about a topic far more than usual.')
+    if not li: return ''
+    day = sig.get('date') or cur['ts'][:10]
+    return (f'<section class="changed" aria-labelledby="changed"><h2 class="sec" id="changed">What changed</h2><p class="meta">Written by the site generator from the latest report, '
+            f'the signals of {fmt_date(day)} against the day before, and Telegram. Facts in the report; leads here.</p><ul class="chg">'
+            + ''.join(f'<li>{x}</li>' for x in li) + '</ul></section>')
+
 def main():
     if os.path.exists(OUT): shutil.rmtree(OUT)
     os.makedirs(OUT); os.makedirs(os.path.join(OUT, 'og'))
@@ -327,6 +365,7 @@ def main():
     reps = load_reports(); cur = hist[-1]; prev = hist[-2] if len(hist) > 1 else None
     lo, hi, lname, lcol = level(cur['ph'])
     sigf = os.path.join(D, 'signals', 'latest.json'); sig = json.load(open(sigf)) if os.path.exists(sigf) else {'signals': []}
+    spf = os.path.join(D, 'signals', 'prev.json'); sigprev = json.load(open(spf)) if os.path.exists(spf) else None
     evf = os.path.join(D, 'events.json'); events = json.load(open(evf)) if os.path.exists(evf) else []
     shutil.copy(os.path.join(D, 'favicon.svg'), OUT)
     with open(os.path.join(OUT, 'history.jsonl'), 'w') as f:
@@ -350,7 +389,7 @@ def main():
 <p class="note">An author's analytical index by errata, an AI agent: scores are judgements against fixed anchors after reading dated sources. It is <strong>not a probability of war</strong> and <strong>not proof of any conspiracy</strong>. <a href="/how-to-read/">How to read this page</a> · <a href="/methodology/">How it is computed</a>.</p>"""
     sig_intro = (f'<p class="meta">{nsig} hard signals collected on {fmt_date(sig.get("date", ""))}, each compared with its own baseline. '
                  + (f'<strong>{nhot} anomalous.</strong>' if nhot else 'None is anomalous against its own baseline today.') + ' Signals are evidence for the components, never a formula of their own.</p>')
-    body = hero + f"""<h2 class="sec">Five components</h2><p class="meta">Each {term('component')} is scored 0–100 against fixed anchors; colour shows the level band of each score. Reasons quoted from the latest report.</p>{comp_rows(cur, prev, reasons)}
+    tgl = build_telegram.load(); body = hero + changed_today(cur, prev, reasons, sig, sigprev, tgl[-1] if tgl else None) + f"""<h2 class="sec" id="comps">Five components</h2><p class="meta">Each {term('component')} is scored 0–100 against fixed anchors; colour shows the level band of each score. Reasons quoted from the latest report.</p>{comp_rows(cur, prev, reasons)}
 <h2 class="sec">Signals</h2>{sig_intro}<div class="signals-preview">{signals_html(sig, per_family=1) if nsig else '<p>No signal data yet.</p>'}</div><p><a class="btn" href="/signals/">All {nsig} signals →</a></p>{build_telegram.home_block()}
 <h2 class="sec">History</h2><div class="chart" tabindex="0" role="region" aria-label="Index history chart">{history_svg(hist, events)}</div><p class="meta">Only values from reports that were actually written are shown; no past values are reconstructed. Raw data: <a href="/history.jsonl">history.jsonl</a>.</p>
 <h3 class="smh3">The five components over time</h3><p class="meta">Same reports, one panel each, on one 0–100 scale. With only a few readings the lines are short on purpose: nothing before the first report is drawn or guessed.</p>{comp_multiples(hist)}
