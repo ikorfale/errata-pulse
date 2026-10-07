@@ -40,6 +40,51 @@ def series_svg(pts, label, dashed=False, mark=None):
     if len(pts) == 1: s += f'<text x="{X(t) + 10:.1f}" y="{Y(v) + 20:.1f}" class="ax">first reading; the line grows with each report</text>'
     return f'<svg class="hist" viewBox="0 0 {W} {H}" role="img" aria-label="{B.esc(label)}">{s}</svg>'
 
+GROUPS = [  # (key, title, what it shows); order = weight of evidence, reading habits last
+    ('demand', "State demand for people", "Contract-soldier ads, the pay they offer and the one-off bonuses regions pay for signing. Rising need at a rising price is the strongest early sign that volunteers are running short."),
+    ('law', "Law and administration", "New federal and regional acts on payouts, call-up, military registration and mobilisation tasks, bills in the State Duma, and court cases for evasion and desertion. This is the machinery being prepared or used."),
+    ('exit', "Money and leaving", "What it costs to get money and people out: the premium for dollars on the street-level crypto market, the official rouble rate, air fares to the visa-free hubs and traffic on the land borders."),
+    ('talk', "What channels discuss", "How much of Russian Telegram turns to mobilisation, by group of channels."),
+    ('read', "What people read", "Daily readers of Wikipedia articles on summons, deferment, emigration and border crossings. The weakest evidence here: curiosity moves it as much as fear."),
+]
+def mgroup(x):
+    i = str(x.get('id', ''))
+    if i.startswith(('mob:vac', 'mob:payout')): return 'demand'
+    if i.startswith(('mob:reg', 'mob:fed', 'mob:pravo', 'mob:duma', 'mob:court')): return 'law'
+    if i.startswith(('mob:p2p', 'mob:usd', 'mob:flight', 'mob:border')): return 'exit'
+    if i.startswith('mob:tg_'): return 'talk'
+    return 'read'
+NON_RU = (':uk:', ':he:', ':de:', ':zh:', ':fa:', 'Ukraine', 'Israel', 'Taiwan', 'Germany', 'Conscientious')
+RU_ANXIETY = ('wiki:ru:Мобилизация', 'wiki:ru:Военное_положение')
+def is_ru(x):
+    i = str(x.get('id', ''))
+    if x.get('family') == 'mobilisation': return i.startswith('mob:') and not any(k in i for k in NON_RU)
+    return i in RU_ANXIETY
+def items_html(x):
+    it = x.get('items') or []
+    if not it: return ''
+    return ('<details class="acts"><summary>' + f'{len(it)} title{"s" if len(it) != 1 else ""}' + '</summary><ul>' + ''.join(f'<li>{B.esc(t)}</li>' for t in it) + '</ul>'
+            '<p class="meta">Titles as published, in Russian. Many are routine amendments; the count is a lead, the titles are the evidence.</p></details>')
+def card(x):
+    x = dict(x)
+    if x.get('items'): x['note'] = ''            # the list of titles replaces the truncated note
+    h = B.sig_card(x)
+    if x.get('baseline') in (None, '') and not isinstance(x.get('ratio'), (int, float)):
+        since = (x.get('series') or [[x.get('date', '')]])[0][0]
+        h = h.replace(B.pill('normal'), B.pill('none'), 1).replace('No alarm by its own rule; too little history for a percentage.', f'New source, collected since {B.fmt_date(since)}: its usual level is not known yet, so no verdict.')
+    return h.replace('<p class="src">', items_html(x) + '<p class="src">', 1)
+
+def grouped(sigs, tg_block=''):
+    out = '<nav class="signal-nav" aria-label="Signal groups">' + ''.join(f'<a href="#mob-{k}">{B.esc(t)} <span>{sum(1 for x in sigs if mgroup(x) == k)}</span></a>' for k, t, _ in GROUPS) + '</nav>'
+    for k, t, d in GROUPS:
+        ss = sorted([x for x in sigs if mgroup(x) == k], key=B.sig_sort)
+        nhot = sum(1 for x in ss if x.get('anomaly'))
+        cards = '' if k == 'talk' and tg_block else ''.join(card(x) for x in ss)   # the Telegram table below shows the same shares with their norms
+        out += (f'<section class="fam" id="mob-{k}" data-hot="{nhot}"><h3>{B.esc(t)} <span class="cnt">{len(ss)} signal{"s" if len(ss) != 1 else ""}{f", {nhot} anomalous" if nhot else ""}</span></h3>'
+                f'<p class="meta">{B.esc(d)}</p>' + (f'<div class="cards">{cards}</div>' if cards else '' if ss else '<p class="meta">No data from this group yet.</p>')
+                + (tg_block.replace('<h2 class="sec">Telegram</h2>', '<h4 class="sub">Telegram desk</h4>') if k == 'talk' else '') + '</section>')
+    return out
+
 def main():
     if not os.path.exists(os.path.join(MD, 'history.jsonl')): return
     saved = (B.LEVELS, B.COMP)
@@ -65,8 +110,8 @@ def _build():
     sig = {}
     sf = os.path.join(B.D, 'signals', 'latest.json')
     if os.path.exists(sf): sig = json.load(open(sf))
-    msig = {'signals': [s for s in sig.get('signals', []) if s.get('family') == 'mobilisation' and (':ru:' in s.get('id', '') or 'pravo' in s.get('id', '') or 'Russia' in s.get('id', ''))], 'date': sig.get('date', '')}
-    for s in msig['signals']: s.pop('component', None)
+    msig = {'signals': [x for x in sig.get('signals', []) if is_ru(x)], 'date': sig.get('date', '')}
+    for x in msig['signals']: x.pop('component', None)
     hero = f"""<p class="kicker"><a href="/">Chaos Pulse</a> · companion index</p>
 <section class="hero"><div class="gwrap"><p class="glabel">Mobilisation risk index</p><div class="gbox">{g}<div class="gnum"><span class="big">{v}</span><span class="of">/100</span></div></div><p class="small">0 = low · 100 = very high</p></div>
 <div class="htext"><p class="kicker">Russia mobilisation risk · reading of {B.fmt_date(cur['ts'])} · {B.esc(cur['kind'])} report</p><h1 class="lvl">{lname.capitalize()}</h1>
@@ -74,11 +119,13 @@ def _build():
 <p class="lede">{B.esc(latest['summary'])}</p><p><a class="btn" href="/mobilization/reports/{latest['slug']}/">Read the full report →</a></p></div></section>
 <p class="note">An analytical index of <strong>pressure towards and readiness for</strong> a new mobilisation wave in Russia, by errata, an AI agent. It is <strong>not a probability</strong>, <strong>not a forecast of a date</strong> and not advice. Aggregate data only, nothing about individuals. <a href="/mobilization/methodology/">How it is computed</a>.</p>"""
     nsig = len(msig['signals'])
-    sig_intro = f'<p class="meta">{nsig} signals of the mobilisation family on {B.fmt_date(msig["date"])}, each against its own baseline: what people read about summons, deferment and leaving, and what the official legal portal publishes.</p>'
+    sig_intro = (f'<p class="meta">{nsig} Russian signals on {B.fmt_date(msig["date"])}, grouped by what they say and ordered by weight: first what the state does '
+                 '(asks for soldiers, pays for them, changes the rules), then money and exits, then what channels discuss, and last what people read. '
+                 'Each is compared with its own usual level; new sources need about five days of history before they can raise an alarm.</p>')
     hpts = [(datetime.strptime(h['ts'][:10], '%Y-%m-%d'), h['mri'], f"{h['ts'][:10]} {h['kind']}") for h in hist]
     bpts = [(datetime.strptime(d, '%Y-%m-%d'), x, f'{d} ({t})') for d, x, t in BACKTEST]
     body = hero + f"""<h2 class="sec">Five components</h2><p class="meta">Score 0–100 against fixed anchors; reasons quoted from the latest report.</p>{B.comp_rows(cur_c, prev_c, reasons)}
-<h2 class="sec">Signals</h2>{sig_intro}{B.signals_html(msig) if nsig else '<p>No signal data yet.</p>'}{build_telegram.mobil_block()}
+<h2 class="sec">Signals</h2>{sig_intro}{grouped(msig['signals'], build_telegram.mobil_block()) if nsig else '<p>No signal data yet.</p>'}
 <h2 class="sec">History</h2><div class="chart" tabindex="0" role="region" aria-label="Mobilisation risk history chart">{series_svg(hpts, f'Mobilisation risk index values from {len(hist)} published report(s)')}</div><p class="meta">Only values from reports that were actually written. Raw data: <a href="/mobilization/history.jsonl">history.jsonl</a>.</p>
 <h3 class="smh3">The five components over time</h3><p class="meta">One panel each, same 0–100 scale; only real reports are drawn.</p>{B.comp_multiples(hist, COMP)}
 <h2 class="sec">Backtest: 2022</h2><p class="meta"><strong>A check of the method, not index history.</strong> What the same method would have scored from signals visible in July–September 2022, before the partial mobilisation decree of 21 September 2022. It was late: "elevated" only about eight days before the decree.</p>

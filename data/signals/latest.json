@@ -10475,6 +10475,365 @@
    "component": "military",
    "means": "More official acts on call-up, reserves, military registration or exit rules means the state is changing how it raises soldiers.",
    "not_proves": "It does not prove mobilisation: the routine call-up decrees come every spring (late March) and autumn (late September), and many acts are technical."
+  },
+  {
+   "family": "mobilisation",
+   "id": "mob:vac_total",
+   "label": "Russia: open contract-service vacancies on the official job portal (Работа России)",
+   "value": 1676,
+   "baseline": null,
+   "ratio": null,
+   "anomaly": false,
+   "unit": "vacancies",
+   "note": "top regions: Калужская область 208, Мурманская область 179, Костромская область 179, Кабардино-Балкарская Республика 129, Новосибирская область 107",
+   "source": "errata mobil_signals",
+   "series": [
+    [
+     "2026-10-07",
+     1676
+    ]
+   ],
+   "series_kind": "daily value",
+   "component": "military",
+   "means": "More ads for contract soldiers means the state needs more men than volunteers bring in.",
+   "not_proves": "Ads are re-posted and padded; a count is not recruits, and a fall can mean a new channel, not less need.",
+   "date": "2026-10-07"
+  },
+  {
+   "family": "mobilisation",
+   "id": "mob:vac_new7",
+   "label": "Russia: contract-service vacancies posted in the last 7 days",
+   "value": 25,
+   "baseline": null,
+   "ratio": null,
+   "anomaly": false,
+   "unit": "vacancies",
+   "note": "top regions: Калужская область 208, Мурманская область 179, Костромская область 179, Кабардино-Балкарская Республика 129, Новосибирская область 107",
+   "source": "errata mobil_signals",
+   "series": [
+    [
+     "2026-10-07",
+     25
+    ]
+   ],
+   "series_kind": "daily value",
+   "component": "military",
+   "means": "A surge of new ads is a recruiting push, often before or instead of coercion.",
+   "not_proves": "Regional campaigns are seasonal and budget-driven.",
+   "date": "2026-10-07"
+  },
+  {
+   "family": "mobilisation",
+   "id": "mob:vac_pay_median",
+   "label": "Russia: median advertised monthly pay for contract service",
+   "value": 210000,
+   "baseline": null,
+   "ratio": null,
+   "anomaly": false,
+   "unit": "₽/month",
+   "note": "top regions: Калужская область 208, Мурманская область 179, Костромская область 179, Кабардино-Балкарская Республика 129, Новосибирская область 107",
+   "source": "errata mobil_signals",
+   "series": [
+    [
+     "2026-10-07",
+     210000
+    ]
+   ],
+   "series_kind": "daily value",
+   "component": "military",
+   "means": "Rising pay means volunteers are getting scarcer at the old price.",
+   "not_proves": "Ads show the headline, not what is paid; inflation lifts all wages.",
+   "date": "2026-10-07"
+  },
+  {
+   "family": "mobilisation",
+   "id": "mob:reg_hits",
+   "label": "Russian regions: new acts on contract payouts, call-up, military registration or mobilisation tasks (since last run)",
+   "value": 9,
+   "baseline": null,
+   "ratio": null,
+   "anomaly": false,
+   "unit": "acts",
+   "note": "2026-10-07 Приказ Министерства социального благополучия и семейной политики Камчатского края от 01.10.2026 № 81-Н\n \"О внесении изменений в приказ Минис; 2026-10-07 Постановление Правительства Смоленской области  от 05.10.2026 № 591\n \"О внесении изменений в Порядок предоставления дополнительной меры соци; 2026-10-07 Распоряжение правительства Еврейской автономной области  от 02.10.2026 № 395-рп\n \"О внесении изменений в распоряжение правительства Еврейско; 2026-10-06 Постановление Правительства Амурской области от 02.10.2026 № 685\n \"Об утверждении Правил предоставления субсидии индивидуальному предпринима; 2026-10-06 Закон Брянской области от 29.09.2026 № 84-З\n \"О внесении изменений в Закон Брянской области \"О дополнительной мере социальной поддержки воен",
+   "source": "errata mobil_signals",
+   "series": [
+    [
+     "2026-10-07",
+     9
+    ]
+   ],
+   "series_kind": "daily value",
+   "component": "military",
+   "means": "Regions raising payouts or issuing mobilisation tasks is the state reaching for men at the regional level.",
+   "not_proves": "Many acts are routine budget amendments; read the titles.",
+   "date": "2026-10-07",
+   "items": [
+    "2026-10-07 Приказ Министерства социального благополучия и семейной политики Камчатского края от 01.10.2026 № 81-Н\n \"О внесении изменений в приказ Минис",
+    "2026-10-07 Постановление Правительства Смоленской области  от 05.10.2026 № 591\n \"О внесении изменений в Порядок предоставления дополнительной меры соци",
+    "2026-10-07 Распоряжение правительства Еврейской автономной области  от 02.10.2026 № 395-рп\n \"О внесении изменений в распоряжение правительства Еврейско",
+    "2026-10-06 Постановление Правительства Амурской области от 02.10.2026 № 685\n \"Об утверждении Правил предоставления субсидии индивидуальному предпринима",
+    "2026-10-06 Закон Брянской области от 29.09.2026 № 84-З\n \"О внесении изменений в Закон Брянской области \"О дополнительной мере социальной поддержки воен",
+    "2026-10-06 Постановление Правительства Калининградской области от 02.10.2026 № 343-п\n \"О внесении изменений в порядок и условия предоставления дополнит",
+    "2026-10-06 Распоряжение министерства образования Кировской области от 30.09.2026 № 1181\n \"Об утверждении Порядка и условий освобождения от платы, взима",
+    "2026-10-06 Приказ министерства социальной политики Липецкой области от 05.10.2026 № 91-Н\n \"Об утверждении Порядка предоставления путевки на санаторно-к",
+    "2026-10-06 Приказ министерства социальной политики Липецкой области от 05.10.2026 № 90-Н\n \"О признании утратившим силу приказа управления социальной по"
+   ]
+  },
+  {
+   "family": "mobilisation",
+   "id": "mob:fed_hits",
+   "label": "Russian federal bodies: new acts on call-up, military registration or mobilisation (since last run)",
+   "value": 1,
+   "baseline": null,
+   "ratio": null,
+   "anomaly": false,
+   "unit": "acts",
+   "note": "2026-10-06 Приказ Федеральной службы безопасности Российской Федерации от 29.08.2026 № 325\n \"Об утверждении Требований к уровню физической подготовки, ",
+   "source": "errata mobil_signals",
+   "series": [
+    [
+     "2026-10-07",
+     1
+    ]
+   ],
+   "series_kind": "daily value",
+   "component": "military",
+   "means": "Federal ministries changing call-up and registration rules prepares the machinery.",
+   "not_proves": "Ministries publish technical orders all year.",
+   "date": "2026-10-07",
+   "items": [
+    "2026-10-06 Приказ Федеральной службы безопасности Российской Федерации от 29.08.2026 № 325\n \"Об утверждении Требований к уровню физической подготовки, "
+   ]
+  },
+  {
+   "family": "mobilisation",
+   "id": "mob:p2p_premium_pct",
+   "label": "Rouble: premium of P2P USDT over the official dollar rate (Bybit vs CBR)",
+   "value": -1.41,
+   "baseline": null,
+   "ratio": null,
+   "anomaly": false,
+   "unit": "%",
+   "note": "",
+   "source": "errata mobil_signals",
+   "series": [
+    [
+     "2026-10-07",
+     -1.41
+    ]
+   ],
+   "series_kind": "daily value",
+   "component": "society",
+   "means": "A rising premium means people pay extra to move money out of roubles: a classic sign of fear of leaving or of controls.",
+   "not_proves": "Crypto spreads also move with exchange rules, bank blocks and fees.",
+   "date": "2026-10-07"
+  },
+  {
+   "family": "mobilisation",
+   "id": "mob:usd_cbr",
+   "label": "Rouble: official dollar rate (CBR)",
+   "value": 85.71,
+   "baseline": null,
+   "ratio": null,
+   "anomaly": false,
+   "unit": "₽/$",
+   "note": "",
+   "source": "errata mobil_signals",
+   "series": [
+    [
+     "2026-10-07",
+     85.71
+    ]
+   ],
+   "series_kind": "daily value",
+   "component": "society",
+   "means": "A sharp fall of the rouble often accompanies capital flight and panic.",
+   "not_proves": "The rate is managed and moves with oil and policy rates.",
+   "date": "2026-10-07"
+  },
+  {
+   "family": "mobilisation",
+   "id": "mob:tg_analysis-ru",
+   "label": "Telegram (analysis-ru): share of posts about mobilisation, last 24 h",
+   "value": 0.0,
+   "baseline": null,
+   "ratio": null,
+   "anomaly": false,
+   "unit": "% of posts",
+   "note": "",
+   "source": "errata mobil_signals",
+   "series": [
+    [
+     "2026-10-07",
+     0.0
+    ]
+   ],
+   "series_kind": "daily value",
+   "component": "society",
+   "means": "When this group suddenly talks more about summons and call-up, something is moving.",
+   "not_proves": "Topic share follows news cycles; one viral story can lift it.",
+   "date": "2026-10-07"
+  },
+  {
+   "family": "mobilisation",
+   "id": "mob:tg_border-relocation",
+   "label": "Telegram (border-relocation): share of posts about mobilisation, last 24 h",
+   "value": 0.0,
+   "baseline": null,
+   "ratio": null,
+   "anomaly": false,
+   "unit": "% of posts",
+   "note": "",
+   "source": "errata mobil_signals",
+   "series": [
+    [
+     "2026-10-07",
+     0.0
+    ]
+   ],
+   "series_kind": "daily value",
+   "component": "society",
+   "means": "When this group suddenly talks more about summons and call-up, something is moving.",
+   "not_proves": "Topic share follows news cycles; one viral story can lift it.",
+   "date": "2026-10-07"
+  },
+  {
+   "family": "mobilisation",
+   "id": "mob:tg_independent-ru",
+   "label": "Telegram (independent-ru): share of posts about mobilisation, last 24 h",
+   "value": 1.8,
+   "baseline": null,
+   "ratio": null,
+   "anomaly": false,
+   "unit": "% of posts",
+   "note": "",
+   "source": "errata mobil_signals",
+   "series": [
+    [
+     "2026-10-07",
+     1.8
+    ]
+   ],
+   "series_kind": "daily value",
+   "component": "society",
+   "means": "When this group suddenly talks more about summons and call-up, something is moving.",
+   "not_proves": "Topic share follows news cycles; one viral story can lift it.",
+   "date": "2026-10-07"
+  },
+  {
+   "family": "mobilisation",
+   "id": "mob:tg_leaks-ru",
+   "label": "Telegram (leaks-ru): share of posts about mobilisation, last 24 h",
+   "value": 1.0,
+   "baseline": null,
+   "ratio": null,
+   "anomaly": false,
+   "unit": "% of posts",
+   "note": "",
+   "source": "errata mobil_signals",
+   "series": [
+    [
+     "2026-10-07",
+     1.0
+    ]
+   ],
+   "series_kind": "daily value",
+   "component": "society",
+   "means": "When this group suddenly talks more about summons and call-up, something is moving.",
+   "not_proves": "Topic share follows news cycles; one viral story can lift it.",
+   "date": "2026-10-07"
+  },
+  {
+   "family": "mobilisation",
+   "id": "mob:tg_milblog-ru",
+   "label": "Telegram (milblog-ru): share of posts about mobilisation, last 24 h",
+   "value": 1.6,
+   "baseline": null,
+   "ratio": null,
+   "anomaly": false,
+   "unit": "% of posts",
+   "note": "",
+   "source": "errata mobil_signals",
+   "series": [
+    [
+     "2026-10-07",
+     1.6
+    ]
+   ],
+   "series_kind": "daily value",
+   "component": "society",
+   "means": "When this group suddenly talks more about summons and call-up, something is moving.",
+   "not_proves": "Topic share follows news cycles; one viral story can lift it.",
+   "date": "2026-10-07"
+  },
+  {
+   "family": "mobilisation",
+   "id": "mob:tg_official-ru",
+   "label": "Telegram (official-ru): share of posts about mobilisation, last 24 h",
+   "value": 0.0,
+   "baseline": null,
+   "ratio": null,
+   "anomaly": false,
+   "unit": "% of posts",
+   "note": "",
+   "source": "errata mobil_signals",
+   "series": [
+    [
+     "2026-10-07",
+     0.0
+    ]
+   ],
+   "series_kind": "daily value",
+   "component": "society",
+   "means": "When this group suddenly talks more about summons and call-up, something is moving.",
+   "not_proves": "Topic share follows news cycles; one viral story can lift it.",
+   "date": "2026-10-07"
+  },
+  {
+   "family": "mobilisation",
+   "id": "mob:tg_official-ru-regional",
+   "label": "Telegram (official-ru-regional): share of posts about mobilisation, last 24 h",
+   "value": 0.0,
+   "baseline": null,
+   "ratio": null,
+   "anomaly": false,
+   "unit": "% of posts",
+   "note": "",
+   "source": "errata mobil_signals",
+   "series": [
+    [
+     "2026-10-07",
+     0.0
+    ]
+   ],
+   "series_kind": "daily value",
+   "component": "society",
+   "means": "When this group suddenly talks more about summons and call-up, something is moving.",
+   "not_proves": "Topic share follows news cycles; one viral story can lift it.",
+   "date": "2026-10-07"
+  },
+  {
+   "family": "mobilisation",
+   "id": "mob:tg_regional-ru",
+   "label": "Telegram (regional-ru): share of posts about mobilisation, last 24 h",
+   "value": 0.0,
+   "baseline": null,
+   "ratio": null,
+   "anomaly": false,
+   "unit": "% of posts",
+   "note": "",
+   "source": "errata mobil_signals",
+   "series": [
+    [
+     "2026-10-07",
+     0.0
+    ]
+   ],
+   "series_kind": "daily value",
+   "component": "society",
+   "means": "When this group suddenly talks more about summons and call-up, something is moving.",
+   "not_proves": "Topic share follows news cycles; one viral story can lift it.",
+   "date": "2026-10-07"
   }
  ],
  "errors": []
