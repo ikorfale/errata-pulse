@@ -1,1 +1,2 @@
 {"ts": "2026-10-05T13:06", "kind": "initial", "mri": 54, "level": "повышенный", "components": {"manpower": 65, "legal": 60, "military": 50, "political": 45, "society": 35}, "confidence": "средняя"}
+{"ts": "2026-10-07T02:10", "kind": "regular", "mri": 54, "level": "повышенный", "components": {"manpower": 65, "legal": 62, "military": 50, "political": 45, "society": 35}, "confidence": "средняя"}
