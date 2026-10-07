@@ -84,8 +84,11 @@ def md(text, notes=None, toc=None):
             while i < len(lines) and lines[i].startswith('|'):
                 if not re.match(r'^\|[-:| ]+\|$', lines[i].strip()): rows.append([c.strip() for c in lines[i].strip().strip('|').split('|')])
                 i += 1
-            t = '<div class="tw"><table><thead><tr>' + ''.join(f'<th>{inline(c, notes)}</th>' for c in rows[0]) + '</tr></thead><tbody>'
-            t += ''.join('<tr>' + ''.join(f'<td>{inline(c, notes)}</td>' for c in r) + '</tr>' for r in rows[1:]) + '</tbody></table></div>'
+            # tables with long prose cells become stacked cards on phones (CSS .tw.long); labels are plain header text
+            labels = [html.escape(re.sub(r'[*_`\[\]]|\(https?://[^)]*\)', '', c), quote=True) for c in rows[0]]
+            long = any(len(c) > 60 for r in rows[1:] for c in r)
+            t = f'<div class="tw{" long" if long else ""}"><table><thead><tr>' + ''.join(f'<th>{inline(c, notes)}</th>' for c in rows[0]) + '</tr></thead><tbody>'
+            t += ''.join('<tr>' + ''.join(f'<td data-label="{labels[j] if j < len(labels) else ""}">{inline(c, notes)}</td>' for j, c in enumerate(r)) + '</tr>' for r in rows[1:]) + '</tbody></table></div>'
             out.append(t)
         elif l.startswith('- '):
             items = []
