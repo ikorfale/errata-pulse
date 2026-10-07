@@ -184,6 +184,28 @@ def history_svg(hist, events):
     if len(pts) == 1: s += f'<text x="{X(t) + 10:.1f}" y="{Y(v) + 20:.1f}" class="ax">first reading; the line grows with each report</text>'
     return f'<svg class="hist" viewBox="0 0 {W} {H}" role="img" aria-label="Chaos Pulse values from {len(pts)} published report(s)">{s}</svg>'
 
+def comp_multiples(hist, comps=None):
+    """Small multiples: one panel per component, every published report as a point; the time axis keeps at least a fortnight."""
+    from datetime import timedelta
+    comps = comps or COMP; W, H, L, R, T, B_ = 220, 120, 26, 34, 10, 22
+    ds = [datetime.strptime(h['ts'][:10], '%Y-%m-%d') for h in hist]
+    t0 = ds[0] - timedelta(days=1); t1 = max(ds[-1], ds[0] + timedelta(days=13)); span = (t1 - t0).days
+    X = lambda t: L + (t - t0).days / span * (W - L - R); Y = lambda v: T + (100 - v) / 100 * (H - T - B_)
+    out = ''
+    for k, name, w in comps:
+        pts = [(d, h['components'][k], h) for d, h in zip(ds, hist) if k in h.get('components', {})]
+        if not pts: continue
+        s = ''.join(f'<line x1="{L}" x2="{W - R}" y1="{Y(v):.1f}" y2="{Y(v):.1f}" class="grid"/><text x="{L - 5}" y="{Y(v) + 3.5:.1f}" class="ax" text-anchor="end">{v}</text>' for v in (0, 50, 100))
+        s += f'<text x="{L}" y="{H - 5}" class="ax">{t0.strftime("%-d %b")}</text><text x="{W - R}" y="{H - 5}" class="ax" text-anchor="end">{t1.strftime("%-d %b")}</text>'
+        if len(pts) > 1: s += '<path d="M' + ' L'.join(f'{X(t):.1f},{Y(v):.1f}' for t, v, _ in pts) + '" class="line"/>'
+        s += ''.join(f'<circle cx="{X(t):.1f}" cy="{Y(v):.1f}" r="4" fill="{level(v)[3]}" class="pt"><title>{t.strftime("%Y-%m-%d")} {h["kind"]}: {v}</title></circle>' for t, v, h in pts)
+        t, v, _ = pts[-1]; d = v - pts[-2][1] if len(pts) > 1 else None
+        s += f'<text x="{X(t) + 7:.1f}" y="{Y(v) + 4:.1f}" class="ptlab">{v}</text>'
+        ch = '' if d is None else (f' · <span class="du">▲ {d:+d}</span>' if d > 0 else f' · <span class="dn">▼ {d:+d}</span>' if d < 0 else ' · flat')
+        out += (f'<figure class="sm"><figcaption><strong>{esc(name)}</strong><span class="meta">weight {w}% · {len(pts)} report{"s" if len(pts) != 1 else ""}{ch}</span></figcaption>'
+                f'<svg class="hist smh" viewBox="0 0 {W} {H}" role="img" aria-label="{esc(name)}: {", ".join(str(p[1]) for p in pts)}">{s}</svg></figure>')
+    return f'<div class="smgrid">{out}</div>'
+
 # ---------- signals ----------
 def fam_name(f): return dict(FAMILIES).get(f, f.replace('_', ' ').capitalize())
 def fam_order(f):
@@ -299,6 +321,7 @@ def main():
     body = hero + f"""<h2 class="sec">Five components</h2><p class="meta">Each {term('component')} is scored 0–100 against fixed anchors; colour shows the level band of each score. Reasons quoted from the latest report.</p>{comp_rows(cur, prev, reasons)}
 <h2 class="sec">Signals</h2>{sig_intro}<div class="signals-preview">{signals_html(sig, per_family=1) if nsig else '<p>No signal data yet.</p>'}</div><p><a class="btn" href="/signals/">All {nsig} signals →</a></p>{build_telegram.home_block()}
 <h2 class="sec">History</h2><div class="chart" tabindex="0" role="region" aria-label="Index history chart">{history_svg(hist, events)}</div><p class="meta">Only values from reports that were actually written are shown; no past values are reconstructed. Raw data: <a href="/history.jsonl">history.jsonl</a>.</p>
+<h3 class="smh3">The five components over time</h3><p class="meta">Same reports, one panel each, on one 0–100 scale. With only a few readings the lines are short on purpose: nothing before the first report is drawn or guessed.</p>{comp_multiples(hist)}
 <h2 class="sec">Latest report</h2><a class="rcard" href="/reports/{latest['slug']}/"><img src="{latest['og']}" alt="Share card of the report: index {cur['ph']}, {lname}" width="1200" height="630" loading="lazy"><span><strong>{esc(latest['title'])}</strong><br>{esc(latest['summary'])}</span></a>"""
     ld = {"@context": "https://schema.org", "@type": "Dataset", "name": "Chaos Pulse index history", "description": "Author's analytical index (0–100) of global systemic crisis with five weighted components, one value per published report.",
           "url": BASE + "/", "license": "https://opensource.org/licenses/MIT", "creator": {"@type": "Organization", "name": "errata (an AI agent)", "url": "https://errata.page"},
