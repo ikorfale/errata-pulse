@@ -11157,6 +11157,299 @@
    "means": "When this group suddenly talks more about summons and call-up, something is moving.",
    "not_proves": "Topic share follows news cycles; one viral story can lift it.",
    "date": "2026-10-07"
+  },
+  {
+   "family": "energy",
+   "id": "strikes:ru-oil:week",
+   "label": "Russia: oil refineries, terminals and pumping stations reported hit, last 7 days",
+   "value": 13,
+   "baseline": 10.22,
+   "ratio": 1.27,
+   "anomaly": false,
+   "unit": "facilities",
+   "note": "2 also reported by a Russian source; 1 with satellite fire detections (NASA FIRMS) on the day or the day after",
+   "source": "public Telegram previews: 12 channels (Ukrainian General Staff, SBU, SSO, Unmanned Systems Forces; Exilenova+, Supernova+, Crimean Wind; ASTRA, Shot, Baza, Mash, a pro-Kremlin milblogger)",
+   "series": [
+    [
+     "2026-09-07",
+     3
+    ],
+    [
+     "2026-09-08",
+     6
+    ],
+    [
+     "2026-09-09",
+     6
+    ],
+    [
+     "2026-09-10",
+     7
+    ],
+    [
+     "2026-09-11",
+     8
+    ],
+    [
+     "2026-09-12",
+     10
+    ],
+    [
+     "2026-09-13",
+     11
+    ],
+    [
+     "2026-09-14",
+     10
+    ],
+    [
+     "2026-09-15",
+     10
+    ],
+    [
+     "2026-09-16",
+     8
+    ],
+    [
+     "2026-09-17",
+     7
+    ],
+    [
+     "2026-09-18",
+     6
+    ],
+    [
+     "2026-09-19",
+     6
+    ],
+    [
+     "2026-09-20",
+     7
+    ],
+    [
+     "2026-09-21",
+     7
+    ],
+    [
+     "2026-09-22",
+     6
+    ],
+    [
+     "2026-09-23",
+     5
+    ],
+    [
+     "2026-09-24",
+     6
+    ],
+    [
+     "2026-09-25",
+     8
+    ],
+    [
+     "2026-09-26",
+     9
+    ],
+    [
+     "2026-09-27",
+     9
+    ],
+    [
+     "2026-09-28",
+     8
+    ],
+    [
+     "2026-09-29",
+     13
+    ],
+    [
+     "2026-10-01",
+     14
+    ],
+    [
+     "2026-10-02",
+     17
+    ],
+    [
+     "2026-10-03",
+     17
+    ],
+    [
+     "2026-10-04",
+     16
+    ],
+    [
+     "2026-10-05",
+     18
+    ],
+    [
+     "2026-10-06",
+     17
+    ],
+    [
+     "2026-10-07",
+     13
+    ]
+   ],
+   "series_kind": "distinct facilities named in strike reports over the 7 days to each date",
+   "component": "energy",
+   "date": "2026-10-07",
+   "means": "More named Russian refineries, terminals and pumping stations reported hit means a stronger campaign against fuel supply and exports.",
+   "not_proves": "It does not prove damage or lost output: Ukrainian channels claim hits, Russian channels report fires and \"debris\", both are biased, and a name in a post can be wrong.",
+   "items": [
+    "Samara oil pumping station — last reported 2026-10-07, also reported by a Russian source",
+    "Novorossiysk oil terminal (Sheskharis, CPC) — last reported 2026-10-07, Ukrainian claim only",
+    "Volgograd refinery — last reported 2026-10-06, also reported by a Russian source",
+    "Moscow refinery (Kapotnya) — last reported 2026-10-06, Ukrainian claim only",
+    "Feodosia oil depot (occupied Crimea) — last reported 2026-10-05, Ukrainian claim only",
+    "Ryazan refinery — last reported 2026-10-05, Ukrainian claim only",
+    "Saratov refinery — last reported 2026-10-05, Ukrainian claim only",
+    "Ilsky refinery — last reported 2026-10-05, Ukrainian claim only",
+    "Yaroslavl refinery (YANOS) — last reported 2026-10-05, Ukrainian claim only",
+    "Perm refinery — last reported 2026-10-05, Ukrainian claim only",
+    "Nizhnekamsk refineries (TANECO, TAIF) — last reported 2026-10-05, Ukrainian claim only",
+    "Ust-Luga port — last reported 2026-10-02, Ukrainian claim only",
+    "Tikhoretsk oil pumping station — last reported 2026-10-02, Ukrainian claim only"
+   ]
+  },
+  {
+   "family": "energy",
+   "id": "strikes:ru-oil:day",
+   "label": "Russia: oil facilities reported hit on 2026-10-07",
+   "value": 2,
+   "baseline": 2.66,
+   "ratio": 0.75,
+   "anomaly": false,
+   "unit": "facilities",
+   "note": "4 strike posts about oil sites, 2 without a facility named",
+   "source": "public Telegram previews: 12 channels (Ukrainian General Staff, SBU, SSO, Unmanned Systems Forces; Exilenova+, Supernova+, Crimean Wind; ASTRA, Shot, Baza, Mash, a pro-Kremlin milblogger)",
+   "series": [
+    [
+     "2026-09-07",
+     3
+    ],
+    [
+     "2026-09-08",
+     3
+    ],
+    [
+     "2026-09-09",
+     2
+    ],
+    [
+     "2026-09-10",
+     3
+    ],
+    [
+     "2026-09-11",
+     2
+    ],
+    [
+     "2026-09-12",
+     2
+    ],
+    [
+     "2026-09-13",
+     3
+    ],
+    [
+     "2026-09-14",
+     4
+    ],
+    [
+     "2026-09-15",
+     4
+    ],
+    [
+     "2026-09-16",
+     2
+    ],
+    [
+     "2026-09-17",
+     1
+    ],
+    [
+     "2026-09-18",
+     0
+    ],
+    [
+     "2026-09-19",
+     0
+    ],
+    [
+     "2026-09-20",
+     1
+    ],
+    [
+     "2026-09-21",
+     4
+    ],
+    [
+     "2026-09-22",
+     4
+    ],
+    [
+     "2026-09-23",
+     2
+    ],
+    [
+     "2026-09-24",
+     1
+    ],
+    [
+     "2026-09-25",
+     3
+    ],
+    [
+     "2026-09-26",
+     3
+    ],
+    [
+     "2026-09-27",
+     0
+    ],
+    [
+     "2026-09-28",
+     5
+    ],
+    [
+     "2026-09-29",
+     10
+    ],
+    [
+     "2026-10-01",
+     1
+    ],
+    [
+     "2026-10-02",
+     4
+    ],
+    [
+     "2026-10-03",
+     0
+    ],
+    [
+     "2026-10-04",
+     0
+    ],
+    [
+     "2026-10-05",
+     8
+    ],
+    [
+     "2026-10-06",
+     2
+    ],
+    [
+     "2026-10-07",
+     2
+    ]
+   ],
+   "series_kind": "distinct facilities named in strike reports that day",
+   "component": "energy",
+   "date": "2026-10-07",
+   "means": "More named Russian refineries, terminals and pumping stations reported hit means a stronger campaign against fuel supply and exports.",
+   "not_proves": "It does not prove damage or lost output: Ukrainian channels claim hits, Russian channels report fires and \"debris\", both are biased, and a name in a post can be wrong."
   }
  ],
  "errors": [

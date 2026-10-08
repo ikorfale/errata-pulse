@@ -36,3 +36,11 @@ Code: MIT. Report texts and data: CC BY 4.0.
 The site uses self-hosted Newsreader and IBM Plex Sans webfonts (SIL OFL licenses in `assets/fonts/`). It supports system dark mode, keyboard focus, reduced motion and print layouts. The homepage shows one representative signal per family; `/signals/` retains the full collection. Charts scroll independently on narrow screens so their labels stay readable.
 
 Install the existing build dependency with `python3 -m pip install matplotlib`, run `python3 build.py`, then serve `site/` with `python3 -m http.server --directory site 8000`. No JavaScript framework or external font request is required.
+
+## Languages
+
+The site is published in English (`/en/`) and Russian (`/ru/`); `/` sends readers to their remembered or browser language.
+Interface and data strings are translated through one dictionary per language (`i18n/<lang>.json`, keyed by the English
+string; see `i18n.py`). Reports and methodology pages have translated copies under `data/**/<lang>/`; a page without a
+translation falls back to English and says so. To add a language: copy `i18n/ru.json`, translate the values, add the code
+to `LANGS` in `i18n.py`, and run `python3 build.py`; untranslated strings are listed in `i18n/missing.<lang>.json`.

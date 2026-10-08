@@ -2,6 +2,7 @@
 and the chokepoints of IMF PortWatch coloured by traffic against their own baseline. Static SVG, Equal Earth projection,
 country shapes from Natural Earth 1:110m (public domain, data/geo/). Called from build.py; no third-party libraries."""
 import json, math, os, html
+from i18n import t, td
 HERE = os.path.dirname(os.path.abspath(__file__))
 W = 960
 A1, A2, A3, A4, M = 1.340264, -0.081106, 0.000893, 0.003796, math.sqrt(3) / 2
@@ -45,18 +46,17 @@ def map_svg(sig, status_of):
         pr = f['properties']; names = {pr['ADMIN'], pr['NAME'], pr['NAME_LONG']}; known |= names
         a, o = bool(names & set(l4)), bool(names & set(out))
         cls = 'mc' + (' m4' if a else '') + (' mo' if o else '')
-        tip = pr['NAME'] + (': US Level 4 "Do Not Travel"' if a else '') + ('; ' if a and o else ': ' if o else '') + ('large internet outage in the last 48 h' if o else '')
+        tip = td(pr['NAME']) + (': ' + t('US Level 4 “Do Not Travel”') if a else '') + ('; ' if a and o else ': ' if o else '') + (t('large internet outage in the last 48 h') if o else '')
         body.append(f'<path class="{cls}" d="{path(f["geometry"])}"><title>{html.escape(tip)}</title></path>')
     dots = []
     for name, (lon, lat) in CHOKE.items():
         s = by.get('transit:' + name)
         if not s: continue
         st = status_of(s.get('ratio'), s.get('anomaly'), True); x, y = proj(lon, lat)
-        r = s.get('ratio'); rt = f'{r:.2f}× its usual traffic' if isinstance(r, (int, float)) else 'no baseline yet'
-        dots.append(f'<g class="ck ck-{st}"><circle cx="{x:.1f}" cy="{y:.1f}" r="6"/><title>{html.escape(name)}: {s.get("value")} ships/day, {rt} ({st})</title></g>')
+        r = s.get('ratio'); rt = t('{r}× its usual traffic', r=f'{r:.2f}') if isinstance(r, (int, float)) else t('no baseline yet')
+        dots.append(f'<g class="ck ck-{st}"><circle cx="{x:.1f}" cy="{y:.1f}" r="6"/><title>{html.escape(td(name))}: {s.get("value")} {t("ships/day")}, {rt}</title></g>')
     missing = sorted({n for n in l4 + out if n not in known})
-    svg = (f'<svg class="wmap" viewBox="0 0 {W} {H}" role="img" aria-label="World map: US Level 4 advisory countries, '
-           f'countries with large internet outages, and shipping chokepoints coloured by traffic against their baseline">'
+    svg = (f'<svg class="wmap" viewBox="0 0 {W} {H}" role="img" aria-label="{t("World map: US Level 4 advisory countries, countries with large internet outages, and shipping chokepoints coloured by traffic against their baseline")}">'
            f'<defs><pattern id="hatch" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">'
            f'<line x1="0" y1="0" x2="0" y2="5" class="hl"/></pattern></defs>' + ''.join(body) + ''.join(dots) + '</svg>')
     return svg, {'l4': len(l4), 'outages': n_out, 'named': len(out), 'missing': missing}
@@ -70,13 +70,12 @@ CSS = """.wmap{display:block;width:100%;height:auto;margin:8px 0 6px}.wmap .mc{f
 
 def section(sig, status_of):
     svg, n = map_svg(sig, status_of)
-    miss = f' Not drawn at this scale or not matched to a shape by name: {", ".join(n["missing"])}.' if n['missing'] else ''
-    if isinstance(n['outages'], int) and n['named'] < n['outages']: miss += f' The outage source names {n["named"]} of the {n["outages"]} countries.'
-    return (f'<h2 class="sec" id="map">Where</h2><p class="meta"><span class="mkey mk4"></span>US "Do Not Travel" (Level 4): {n["l4"]} countries'
-            f'<span class="mkey mko"></span>large internet outage in the last 48 h (IODA): {n["outages"]} countries'
-            f'<br>Chokepoints, ships per day against their own baseline: <span class="mkey mkd" style="background:#3f7d4e"></span>more ships than usual'
-            f'<span class="mkey mkd" style="background:#6b7067"></span>normal<span class="mkey mkd" style="background:#a8661c"></span>fewer than usual'
-            f'<span class="mkey mkd" style="background:#b3261e"></span>anomaly. Hover or tap a country or a dot for details.{miss}</p>'
-            f'<div class="chart" tabindex="0" role="region" aria-label="World map">{svg}</div>'
-            f'<p class="small">An advisory is a political judgment, an outage has many causes (cable, power, censorship), and a quiet strait can be weather or a data lag. '
-            f'The map shows where to look, not what happened. Country shapes: Natural Earth (public domain).</p>')
+    miss = ' ' + t('Not drawn at this scale or not matched to a shape by name: {l}.', l=", ".join(td(x) for x in n["missing"])) if n['missing'] else ''
+    if isinstance(n['outages'], int) and n['named'] < n['outages']: miss += ' ' + t('The outage source names {a} of the {b} countries.', a=n["named"], b=n["outages"])
+    return (f'<h2 class="sec" id="map">{t("Where")}</h2><p class="meta"><span class="mkey mk4"></span>{t("US “Do Not Travel” (Level 4): {n} countries", n=n["l4"])}'
+            f'<span class="mkey mko"></span>{t("large internet outage in the last 48 h (IODA): {n} countries", n=n["outages"])}'
+            f'<br>{t("Chokepoints, ships per day against their own baseline:")} <span class="mkey mkd" style="background:#3f7d4e"></span>{t("more ships than usual")}'
+            f'<span class="mkey mkd" style="background:#6b7067"></span>{t("normal")}<span class="mkey mkd" style="background:#a8661c"></span>{t("fewer than usual")}'
+            f'<span class="mkey mkd" style="background:#b3261e"></span>{t("anomaly. Hover or tap a country or a dot for details.")}{miss}</p>'
+            f'<div class="chart" tabindex="0" role="region" aria-label="{t("World map")}">{svg}</div>'
+            f'<p class="small">{t("An advisory is a political judgment, an outage has many causes (cable, power, censorship), and a quiet strait can be weather or a data lag. The map shows where to look, not what happened. Country shapes: Natural Earth (public domain).")}</p>')

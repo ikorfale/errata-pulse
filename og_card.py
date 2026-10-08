@@ -6,6 +6,7 @@ import argparse, json, math, os
 import matplotlib; matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 from matplotlib.patches import Wedge, FancyBboxPatch
+from i18n import t as T   # the card follows the language being built (English by default)
 D = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'data')
 LEVELS = [(0, 19, 'low instability', '#3f7d4e'), (20, 39, 'elevated tension', '#a8861c'), (40, 59, 'systemic stress', '#c4641c'),
           (60, 79, 'severe crisis', '#b3261e'), (80, 100, 'extreme instability', '#6e0f14')]
@@ -29,10 +30,10 @@ def render(cur, prev, out):
     v = cur['ph']; lo, hi, lname, lcol = level(v)
     fig = plt.figure(figsize=(12, 6.3), dpi=100); fig.patch.set_facecolor(BG)
     # masthead
-    fig.text(0.045, 0.885, 'CHAOS PULSE', fontsize=27, weight='bold', family=SERIF, color=INK)
-    fig.text(0.045, 0.835, 'An index of global systemic crisis', fontsize=14, family=SERIF, style='italic', color=MUTE)
+    fig.text(0.045, 0.885, T('CHAOS PULSE'), fontsize=27, weight='bold', family=SERIF, color=INK)
+    fig.text(0.045, 0.835, T('An index of global systemic crisis'), fontsize=14, family=SERIF, style='italic', color=MUTE)
     fig.text(0.955, 0.885, f"{cur['ts'][:10]}", fontsize=19, family=SANS, color=INK, ha='right', weight='bold')
-    fig.text(0.955, 0.84, f"{cur['kind']} report", fontsize=14, family=SANS, color=MUTE, ha='right')
+    fig.text(0.955, 0.84, T(f"{cur['kind']} report"), fontsize=14, family=SANS, color=MUTE, ha='right')
     fig.add_artist(plt.Line2D([0.045, 0.955], [0.8, 0.8], color=INK, lw=1.6))
     # gauge
     ax = fig.add_axes([0.02, 0.12, 0.44, 0.66]); ax.set_xlim(-1.15, 1.15); ax.set_ylim(-0.55, 1.12); ax.axis('off'); ax.set_aspect('equal')
@@ -45,26 +46,26 @@ def render(cur, prev, out):
     a = math.radians(180 - v * 1.8)
     ax.plot([0, 0.8 * math.cos(a)], [0, 0.8 * math.sin(a)], color=INK, lw=4.5, solid_capstyle='round'); ax.add_patch(plt.Circle((0, 0), 0.055, color=INK))
     ax.text(0, -0.27, str(v), ha='center', va='center', fontsize=64, weight='bold', family=SANS, color=lcol)
-    ax.text(0, -0.5, lname.upper(), ha='center', va='center', fontsize=15, weight='bold', family=SANS, color=lcol)
+    ax.text(0, -0.5, T(lname).upper(), ha='center', va='center', fontsize=15, weight='bold', family=SANS, color=lcol)
     # change line
-    if prev is None: ch = 'first reading'
+    if prev is None: ch = T('first reading')
     else:
-        d = v - prev['ph']; ch = ('▲ +%d' % d if d > 0 else '▼ %d' % d if d < 0 else '► unchanged') + ' vs previous report'
+        d = v - prev['ph']; ch = ('▲ +%d' % d if d > 0 else '▼ %d' % d if d < 0 else '► ' + T('unchanged')) + ' ' + T('vs previous report')
     conf = {'низкая': 'low', 'средняя': 'medium', 'высокая': 'high'}.get(cur.get('confidence'), cur.get('confidence', ''))
-    fig.text(0.24, 0.085, f"{ch}  ·  confidence {conf}", fontsize=13, family=SANS, color=MUTE, ha='center')
+    fig.text(0.24, 0.085, f"{ch}  ·  {T('confidence')} {T(conf)}", fontsize=13, family=SANS, color=MUTE, ha='center')
     # component bars
     x0, x1, y = 0.51, 0.955, 0.71
-    fig.text(x0, y, 'COMPONENTS', fontsize=11, weight='bold', family=SANS, color=MUTE); y -= 0.03
+    fig.text(x0, y, T('COMPONENTS'), fontsize=11, weight='bold', family=SANS, color=MUTE); y -= 0.03
     for k, name, w in COMP:
         s = cur['components'][k]; c = level(s)[3]; y -= 0.105
-        fig.text(x0, y + 0.035, name, fontsize=15, family=SANS, color=INK)
+        fig.text(x0, y + 0.035, T(name), fontsize=15, family=SANS, color=INK)
         fig.text(x0 + 0.29, y + 0.035, f'{w}%', fontsize=12, family=SANS, color=MUTE, ha='right')
         fig.text(x1, y + 0.035, str(s), fontsize=17, weight='bold', family=SANS, color=c, ha='right')
         fig.add_artist(FancyBboxPatch((x0, y), x1 - x0, 0.016, boxstyle='round,pad=0,rounding_size=0.006', color=LINE, lw=0, transform=fig.transFigure))
         fig.add_artist(FancyBboxPatch((x0, y), (x1 - x0) * s / 100, 0.016, boxstyle='round,pad=0,rounding_size=0.006', color=c, lw=0, transform=fig.transFigure))
     fig.add_artist(plt.Line2D([0.045, 0.955], [0.055, 0.055], color=LINE, lw=1))
     fig.text(0.045, 0.02, 'pulse.errata.page', fontsize=13, weight='bold', family=SANS, color=INK)
-    fig.text(0.955, 0.02, "An author's analytical index by errata, an AI agent. Not a probability of war.", fontsize=11.5, family=SANS, color=MUTE, ha='right')
+    fig.text(0.955, 0.02, T("An author's analytical index by errata, an AI agent. Not a probability of war."), fontsize=11.5, family=SANS, color=MUTE, ha='right')
     os.makedirs(os.path.dirname(os.path.abspath(out)), exist_ok=True)
     fig.savefig(out, facecolor=fig.get_facecolor()); plt.close(fig); return out
 if __name__ == '__main__':
