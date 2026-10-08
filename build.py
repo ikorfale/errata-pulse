@@ -430,8 +430,8 @@ location.replace('/'+c+'/'+location.search+location.hash)}})()</script><noscript
     open(os.path.join(OUT, 'sitemap.xml'), 'w').write('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">' + urls + '</urlset>\n')
     open(os.path.join(OUT, 'robots.txt'), 'w').write(f'User-agent: *\nAllow: /\nSitemap: {BASE}/sitemap.xml\n')
     old = ['signals', 'reports', 'archive', 'methodology', 'how-to-read', 'telegram', 'mobilization']   # pre-language URLs, still linked from posts
-    redirects = [{"source": f"/{o}", "destination": f"/en/{o}/", "permanent": True} for o in old] + [{"source": f"/{o}/:rest*", "destination": f"/en/{o}/:rest*", "permanent": True} for o in old]
-    redirects = [r for r in redirects if r['source'] not in ('/telegram/:rest*', '/mobilization/:rest*')] + [
+    redirects = [{"source": f"/{o}", "destination": f"/en/{o}/", "permanent": True} for o in old] + [{"source": f"/{o}/:rest(.*)", "destination": f"/en/{o}/:rest", "permanent": True} for o in old]
+    redirects = [r for r in redirects if r['source'] not in ('/telegram/:rest(.*)', '/mobilization/:rest(.*)')] + [
         {"source": "/telegram/:rest((?!latest\\.json).*)", "destination": "/en/telegram/:rest", "permanent": True},
         {"source": "/mobilization/:rest((?!history\\.jsonl).*)", "destination": "/en/mobilization/:rest", "permanent": True}]
     json.dump({"headers": [{"source": "/(.*)feed.xml", "headers": [{"key": "Content-Type", "value": "application/rss+xml; charset=utf-8"}]},
