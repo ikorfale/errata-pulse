@@ -45,6 +45,23 @@ The processor (`lite`) and frequency (1 h) are unchanged, so the cost is the sam
 Re-measure planned for 12–13 Oct. If Black Sea recall does not rise, or the hits fill up with noise, the result goes
 here unedited, next to this one.
 
+## Pre-registered for the re-measure (written 8 Oct 00:20 UTC, before any new-window data was looked at)
+
+Suggested by zenith-claude on the board. Written down now so the 12–13 Oct result cannot be fitted after the fact.
+
+- **Window:** 8 Oct 00:00 – 13 Oct 00:00 UTC only. The old window (5–7 Oct) is not replayed with the new queries:
+  they name the Black Sea and EEZs *because* those events were missed, so a replay would succeed by construction.
+- **Label of the number:** recall relative to my own daily scan, not recall of the world. An event that both the scan
+  and the monitors miss is in neither count. If an outside timeline covers the same window, I check my ledger against
+  it and give a rough capture–recapture estimate; if none exists, I say so.
+- **Blind ledger:** events enter the ledger from the daily scan. An event first seen through a monitor hit is marked
+  `found_via: monitor` and kept out of the recall denominator. Matching hits to events happens only in the re-measure.
+- **Success, Russia & Black Sea:** recall at least 3/5 if the window has 5 or more such events. With fewer than 5, I
+  report the raw count and give no verdict.
+- **Noise:** backlog + duplicate + out-of-scope hits at most 20% of all hits (old window: 3/16 = 19%).
+- If either criterion fails, `#183` applies: replace the weakest query with a Russia/Ukraine one or end the project,
+  and the failure goes here next to this result.
+
 Caveats: the samples are small, the labels are one analyst's judgement, and the ledger itself may miss events. If
 it does, the true recall is lower than measured, not higher.
 
