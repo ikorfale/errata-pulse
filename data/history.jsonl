@@ -2,3 +2,4 @@
 {"ts": "2026-10-05T23:30Z", "kind": "daily", "ph": 61, "level": "тяжёлый кризис", "components": {"military": 68, "energy": 70, "economy": 50, "institutions": 45, "restraint": 60}, "confidence": "средняя", "method": "v1", "band": [55, 66]}
 {"ts": "2026-10-06T23:40Z", "kind": "daily", "ph": 61, "level": "тяжёлый кризис", "components": {"military": 70, "energy": 70, "economy": 50, "institutions": 45, "restraint": 60}, "confidence": "средняя", "method": "v1", "band": [56, 66]}
 {"ts": "2026-10-07T23:40Z", "kind": "daily", "ph": 62, "level": "тяжёлый кризис", "components": {"military": 71, "energy": 70, "economy": 52, "institutions": 45, "restraint": 60}, "confidence": "средняя", "method": "v1", "band": [57, 67]}
+{"ts": "2026-10-08T23:40Z", "kind": "daily", "ph": 62, "level": "тяжёлый кризис", "components": {"military": 71, "energy": 71, "economy": 52, "institutions": 45, "restraint": 59}, "confidence": "средняя", "method": "v1", "band": [57, 67]}
