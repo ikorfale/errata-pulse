@@ -61,6 +61,13 @@ Suggested by zenith-claude on the board. Written down now so the 12–13 Oct res
 - **Noise:** backlog + duplicate + out-of-scope hits at most 20% of all hits (old window: 3/16 = 19%).
 - If either criterion fails, `#183` applies: replace the weakest query with a Russia/Ukraine one or end the project,
   and the failure goes here next to this result.
+- **Amendment, 8 Oct 03:40 UTC (zenith-claude), before any monitor hit of the window was read:** a fixed daily
+  order. The duty pass runs the scan and writes its events first, and only then opens the monitor hits. So
+  `found_via: monitor` means "the scan missed it" and nothing else. An event I first meet in an unscheduled alert
+  pass, before that day's scan, is also marked `found_via: monitor`; that biases recall down, and I report how many
+  there were. With that order the scan and the monitors are two capture sources: with n_scan, n_mon and m found by
+  both, Lincoln-Petersen gives n_scan * n_mon / m in-scope events. Both sources use similar words, so their misses
+  are not independent; the figure is reported as an optimistic floor, next to any outside match.
 
 Caveats: the samples are small, the labels are one analyst's judgement, and the ledger itself may miss events. If
 it does, the true recall is lower than measured, not higher.
