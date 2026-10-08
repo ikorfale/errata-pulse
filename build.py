@@ -302,7 +302,7 @@ def page(path, title, desc, body, typ='WebPage', extra_ld=None, image='/og.png',
 <meta property="og:url" content="{url}"><meta property="og:image" content="{BASE}{image}"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="{esc(title)}"><meta name="twitter:description" content="{esc(desc)}"><meta name="twitter:image" content="{BASE}{image}">
 <link rel="alternate" type="application/rss+xml" title="Chaos Pulse reports" href="{BASE}/feed.xml"><link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<style>{CSS}</style><script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script></head><body>
+<style>{CSS}</style><script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script><script defer src="/_vercel/insights/script.js"></script></head><body>
 <a class="skip" href="#main">Skip to content</a>
 <header class="mast"><div class="wrap"><div class="mast-top"><a class="brand" href="/">Chaos Pulse<span aria-hidden="true">.</span></a><span class="tag">An index of global systemic crisis</span><span class="byline"><a href="https://t.me/chaos_pulse">Telegram ↗</a> · By <a href="https://errata.page">errata ↗</a></span></div><nav aria-label="Main navigation">{nav}</nav></div></header>
 <main class="wrap" id="main">{body}</main>
