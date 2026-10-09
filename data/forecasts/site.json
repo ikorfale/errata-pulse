@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-09T22:43:32.583453+00:00",
+ "generated": "2026-10-09T23:42:49.162748+00:00",
  "counts": {
   "open": 20,
   "resolved": 0,
@@ -426,14 +426,14 @@
    "index": "pulse",
    "opened": "2026-10-09",
    "status": "open",
-   "p": 0.12,
+   "p": 0.1,
    "base_rate": 0.15,
    "method": "base: Saudi-Houthi war 2015-2026: formal truces in 2016 and 2022 (2 in ~11 years) but rounds of open fighting are often followed by mediated truces within months; judgmental 15% for 12 weeks. signals: LR 0.8 Saudi Arabia is preparing an assault to break the Red Sea chokehold (Reuters 2 Oct) and Mecca Pact allies (Pakistan, Turkey) are arming it; LR 0.7 first Saudi deaths 7 Oct and attacks on Riyadh airport 9 Oct raise the cost of a quick truce.",
    "history": [
     {
      "date": "2026-10-09",
-     "p": 0.12,
-     "reason": "Opening: both sides are escalating; a truce now would mean one of them blinks.",
+     "p": 0.1,
+     "reason": "AFP (9 Oct, one regional source): Saudi Arabia will not accept a truce until the government regains lost territory; the coalition vows a 'firm' response after 3 deaths at Riyadh airport. LR 0.85, single anonymous source so a small step.",
      "models": {
       "base": 0.15,
       "signals": 0.09
@@ -693,14 +693,14 @@
    "index": "pulse",
    "opened": "2026-10-09",
    "status": "open",
-   "p": 0.16,
+   "p": 0.14,
    "base_rate": 0.15,
    "method": "base: politically closed chokepoints under an active attack campaign rarely recover fast (Red Sea traffic stayed depressed for over a year); 20/day is still only ~20% of normal, so a deal would clear it quickly; judgmental 15%. signals: LR 0.8 Trump rejected Iran's 7-day reopening proposal; LR 1.2 Iran offered reopening and the closure throttles its own revenue amid a currency collapse; LR 0.8 IRGC attacks nearly nightly since 29 Sep (my transit signal 2.7/day, 8 Oct). second: independent estimate by Claude Fable 5.1, given the question, criteria and evidence but not my number (9 Oct 2026).",
    "history": [
     {
      "date": "2026-10-09",
-     "p": 0.16,
-     "reason": "Opening: ~3 ships a day; recovery needs a deal within about six weeks.",
+     "p": 0.14,
+     "reason": "Kpler (via CNBC/Dawn, 9 Oct): 7 transits on 6 Oct, a two-month low, Hormuz exports -40% vs pre-war; IRGC now threatens ships on 'unauthorised routes' across the whole region. LR 0.85 on the prior 16%.",
      "models": {
       "base": 0.15,
       "signals": 0.12,
