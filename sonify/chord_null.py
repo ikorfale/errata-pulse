@@ -1,0 +1,50 @@
+"""zenith 80489: is the 'chord' real? Count days where >=3 of the 6 family voices are in their own
+top-3 days of the month; compare with nulls that keep each family's series but break alignment:
+(a) circular shift of each family by a random offset, (b) block shuffle, block = 7 days (longest rolling window).
+Family value = the sonify voice (family max |z| vs its own usual max)."""
+import json, sys, numpy as np, datetime as dt
+SRC = sys.argv[1] if len(sys.argv) > 1 else 'pulse/signals/2026-10-08.json'
+d = json.load(open(SRC)); end = dt.date.fromisoformat(d['date'])
+days = [(end - dt.timedelta(days=29 - i)).isoformat() for i in range(30)]; idx = {x: i for i, x in enumerate(days)}
+def zser(series):
+    v = np.full(30, np.nan)
+    for t, x in series:
+        if t in idx and x is not None: v[idx[t]] = float(x)
+    for i in range(1, 30):
+        if np.isnan(v[i]): v[i] = v[i - 1]
+    ok = ~np.isnan(v)
+    if ok.sum() < 20: return None
+    med = np.median(v[ok]); mad = 1.4826 * np.median(np.abs(v[ok] - med))
+    if mad == 0: mad = np.std(v[ok]) or 1.0
+    return np.nan_to_num((v - med) / mad)
+import os; CLIP = None if os.environ.get("NOCLIP") else 3.0
+FAMS = ['energy', 'military', 'control', 'anxiety', 'hidden war', 'mobilisation']
+V = {}
+for f in FAMS:
+    zs = [z for s in d['signals'] if s['family'] == f and (z := zser(s.get('series') or [])) is not None]
+    if not zs: continue
+    m = np.abs(np.vstack(zs)).max(axis=0); mad = 1.4826 * np.median(np.abs(m - np.median(m))) or 1.0
+    V[f] = (m - np.median(m)) / mad if CLIP is None else np.clip((m - np.median(m)) / mad, -CLIP, CLIP)
+F = list(V); M = np.vstack([V[f] for f in F])
+def top3(row):  # days in the family's top 3 (ties at the cut included, so clipped plateaus count fully)
+    return row >= np.sort(row)[-3]
+def chord_days(M, k=3): return int((np.vstack([top3(r) for r in M]).sum(axis=0) >= k).sum())
+real = chord_days(M); hits = np.vstack([top3(r) for r in M]).sum(axis=0)
+for k in (3, 4): print('k', k, 'days:', [days[i] for i in np.where(hits >= k)[0]])
+print('families:', F, ' top3 sizes:', [int(top3(r).sum()) for r in M])
+print('real month: days with >=3 families in their top 3 =', real, ' on', [days[i] for i in np.where(hits >= 3)[0]])
+rng = np.random.default_rng(1009); N = 2000
+def circ(M): return np.vstack([np.roll(r, rng.integers(30)) for r in M])
+def block(M, b=7):
+    out = []
+    for r in M:
+        s = rng.integers(b); r2 = np.roll(r, -s); blocks = [r2[i:i + b] for i in range(0, 30, b)]
+        rng.shuffle(blocks); out.append(np.roll(np.concatenate(blocks), s))
+    return np.vstack(out)
+for name, fn in [('circular shift', circ), ('block shuffle b=7', block)]:
+    null = np.array([chord_days(fn(M)) for _ in range(N)])
+    p = (1 + (null >= real).sum()) / (N + 1)
+    print(f'{name:18s}: null mean {null.mean():.2f}, 95th pct {np.percentile(null, 95):.0f}, max {null.max()}, P(null >= {real}) = {p:.4f}  (N={N})')
+for k in (2, 4):
+    r = chord_days(M, k); null = np.array([chord_days(circ(M), k) for _ in range(N)])
+    print(f'k={k}: real {r}, circular null mean {null.mean():.2f}, p = {(1 + (null >= r).sum()) / (N + 1):.4f}')
