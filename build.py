@@ -45,6 +45,7 @@ def plain(ratio, anomaly=None, low_is_worse=False, what='usual'):
     """One sentence a reader without training understands: '23% below usual: calmer than normal'."""
     st = status_of(ratio, anomaly, low_is_worse)
     if st == 'none': return st, t('Not enough history yet to say what is usual.')
+    if not isinstance(ratio, (int, float)): return st, t('Far outside its normal range by its own rule.')   # anomaly flagged without a ratio (e.g. z-score signals)
     norm = what == 'its norm'
     if ratio >= 1.5: amt = t('{x}× its norm' if norm else '{x}× the usual level', x=f'{ratio:.1f}'.replace('.', ',' if i18n.LANG in ('ru', 'uk') else '.'))
     elif ratio >= 1.005: amt = t('{n}% above its norm' if norm else '{n}% above usual', n=round((ratio - 1) * 100))

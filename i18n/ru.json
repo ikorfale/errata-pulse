@@ -1032,5 +1032,6 @@
 "2nd lowest of the last {n} days": "Второе наименьшее значение за последние {n} дн.",
 "2nd lowest of the last {n} days (tied)": "Второе наименьшее значение за последние {n} дн. (наравне)",
 "3rd lowest of the last {n} days": "Третье наименьшее значение за последние {n} дн.",
-"3rd lowest of the last {n} days (tied)": "Третье наименьшее значение за последние {n} дн. (наравне)"
+"3rd lowest of the last {n} days (tied)": "Третье наименьшее значение за последние {n} дн. (наравне)",
+"Far outside its normal range by its own rule.": "Далеко за пределами своей нормы по собственному правилу."
 }
