@@ -27,6 +27,10 @@ copy of 7 Oct (`coverage.py` counts observed / carried / missing per family and 
 leaves one chord event (26-27 Sep) and p about 0.4: no evidence of alignment in this month. The ru "martial law" spike
 heard at the end happened on 7 Oct. A second month is pre-registered with the corrected test.
 
+**v4 render (2026-10-09):** [month-2026-10-08-v4.mp4](month-2026-10-08-v4.mp4). Same data, but a voice is silent on a day when
+none of its series has a real value (hollow dot in the chart), and bells ring only on real values. In this month that
+silences anxiety and mobilisation on 8 Oct. The original video is kept for the record.
+
 ```
 python3 sonify.py pulse/signals/2026-10-08.json   # needs numpy, matplotlib, ffmpeg; OUT=dir to choose output
 ```
