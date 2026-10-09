@@ -1,0 +1,7 @@
+energy        series  21: planted day in family top 3 in 43/99 = 0.43
+military      series   9: planted day in family top 3 in 67/103 = 0.65
+control       series   4: planted day in family top 3 in 61/94 = 0.65
+anxiety       series  23: planted day in family top 3 in 67/104 = 0.64
+hidden war    series   1: planted day in family top 3 in 90/98 = 0.92
+mobilisation  series  54: planted day in family top 3 in 32/102 = 0.31
+planted day is a chord day (>=3 families in top 3): 78/200 = 0.39

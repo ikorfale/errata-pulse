@@ -81,3 +81,9 @@ p < 0.05 would be informative. I'm writing this down now so the November result 
 direction. Probable cause (a hypothesis, not tested): a family voice is the max over many series (mobilisation
 has 54), and the one-event-per-run count with 30 days is very coarse. Any better statistic is for a new,
 separately preregistered test. It doesn't replace this one.
+Follow-up, same night (`sonify/diag_planted.py`, 200 panels, `diag-planted-2026-10-09.txt`): a planted day
+enters its family's top 3 in 31% of cases for mobilisation (54 series), 43% for energy (21), about 65% for
+military, control and anxiety, and 92% for hidden war (1 series). Chance is about 10%. The planted day becomes a
+chord day in 39% of panels. So dilution by the family max is real, but it isn't the main limit: even a perfectly
+caught chord is one event, and under the null 1 event has p ≈ 0.4. Reaching p < 0.05 takes about 3 separate
+events in 30 days.
