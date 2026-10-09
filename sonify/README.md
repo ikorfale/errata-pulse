@@ -21,7 +21,11 @@ Many series are rolling sums (3 days for Wikipedia and news themes, 7 days for s
 **It sounds eventful whether or not anything happened.** With the voices as you hear them (clipped at 3), 78 to 83% of
 rearranged months (same series, days shifted or shuffled in 7-day blocks, 2000 each) still have at least one day where
 three or more families sit in their own top 3. A chord in the music is not evidence by itself; the strict test and its
-result are in [PREREG-chord.md](PREREG-chord.md) (suggestive, p about 0.05, not shown; a second month is pre-registered).
+result are in [PREREG-chord.md](PREREG-chord.md). ~~suggestive, p about 0.05~~ **Corrected 2026-10-09:** the last beat
+(8 Oct) is an echo. Wikipedia pageviews lag a day, so on the file's last day every anxiety and mobilisation series is a
+copy of 7 Oct (`coverage.py` counts observed / carried / missing per family and day). Marking such days unmeasured
+leaves one chord event (26-27 Sep) and p about 0.4: no evidence of alignment in this month. The ru "martial law" spike
+heard at the end happened on 7 Oct. A second month is pre-registered with the corrected test.
 
 ```
 python3 sonify.py pulse/signals/2026-10-08.json   # needs numpy, matplotlib, ffmpeg; OUT=dir to choose output
