@@ -1,0 +1,149 @@
+{
+ "energy": {
+  "n": 20,
+  "z_min": -1.36,
+  "z_max": 3.0,
+  "argmax": "2026-09-26",
+  "top_at_max": "gkg:POWER_OUTAGE",
+  "raw_at_max": 5.5,
+  "last": 2.32,
+  "silent_days": [],
+  "played_but_driver_carried": [
+   [
+    "2026-10-03",
+    [
+     [
+      "oil:brent-spot",
+      "2026-10-02",
+      1
+     ]
+    ]
+   ],
+   [
+    "2026-10-04",
+    [
+     [
+      "oil:brent-spot",
+      "2026-10-02",
+      2
+     ]
+    ]
+   ],
+   [
+    "2026-10-06",
+    [
+     [
+      "transit:Bab el-Mandeb Strait",
+      "2026-10-04",
+      2
+     ]
+    ]
+   ],
+   [
+    "2026-10-07",
+    [
+     [
+      "transit:Bab el-Mandeb Strait",
+      "2026-10-04",
+      3
+     ]
+    ]
+   ]
+  ]
+ },
+ "military": {
+  "n": 7,
+  "z_min": -0.79,
+  "z_max": 3.0,
+  "argmax": "2026-09-26",
+  "top_at_max": "strikes:dc:ua",
+  "raw_at_max": 10.8,
+  "last": 1.17,
+  "silent_days": [],
+  "played_but_driver_carried": [
+   [
+    "2026-09-30",
+    [
+     [
+      "strikes:dc:ua",
+      "2026-09-29",
+      1
+     ]
+    ]
+   ]
+  ]
+ },
+ "control": {
+  "n": 3,
+  "z_min": -0.78,
+  "z_max": 3.0,
+  "argmax": "2026-09-21",
+  "top_at_max": "gkg:MEDIA_CENSORSHIP+INTERNET_CENSORSHIP",
+  "raw_at_max": 8.4,
+  "last": 2.66,
+  "silent_days": [],
+  "played_but_driver_carried": []
+ },
+ "anxiety": {
+  "n": 23,
+  "z_min": -0.95,
+  "z_max": 3.0,
+  "argmax": "2026-09-19",
+  "top_at_max": "wiki:fa:\u062c\u0646\u06af_\u062c\u0647\u0627\u0646\u06cc_\u0633\u0648\u0645",
+  "raw_at_max": 14.4,
+  "last": 3.0,
+  "silent_days": [
+   "2026-10-08"
+  ],
+  "played_but_driver_carried": []
+ },
+ "hidden war": {
+  "n": 1,
+  "z_min": -0.99,
+  "z_max": 3.0,
+  "argmax": "2026-09-14",
+  "top_at_max": "gkg:CYBER_ATTACK",
+  "raw_at_max": 3.0,
+  "last": -0.98,
+  "silent_days": [],
+  "played_but_driver_carried": []
+ },
+ "mobilisation": {
+  "n": 24,
+  "z_min": -0.72,
+  "z_max": 3.0,
+  "argmax": "2026-09-25",
+  "top_at_max": "mob:wiki:ru:\u041f\u043e\u0432\u0435\u0441\u0442\u043a\u0430",
+  "raw_at_max": 31.4,
+  "last": 0.68,
+  "silent_days": [
+   "2026-10-08"
+  ],
+  "played_but_driver_carried": []
+ },
+ "bells": {
+  "2026-09-11": 2,
+  "2026-09-12": 1,
+  "2026-09-15": 2,
+  "2026-09-19": 3,
+  "2026-09-20": 5,
+  "2026-09-21": 5,
+  "2026-09-22": 2,
+  "2026-09-23": 1,
+  "2026-09-24": 1,
+  "2026-09-25": 3,
+  "2026-09-26": 7,
+  "2026-09-27": 7,
+  "2026-09-28": 2,
+  "2026-09-29": 1,
+  "2026-09-30": 1,
+  "2026-10-01": 2,
+  "2026-10-02": 3,
+  "2026-10-03": 1,
+  "2026-10-04": 2,
+  "2026-10-05": 1,
+  "2026-10-06": 2,
+  "2026-10-07": 3,
+  "2026-10-08": 3
+ }
+}

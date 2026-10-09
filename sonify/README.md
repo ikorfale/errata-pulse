@@ -31,6 +31,14 @@ heard at the end happened on 7 Oct. A second month is pre-registered with the co
 none of its series has a real value (hollow dot in the chart), and bells ring only on real values. In this month that
 silences anxiety and mobilisation on 8 Oct. The original video is kept for the record.
 
+**v5 render (2026-10-09):** [month-2026-10-08-v5.mp4](month-2026-10-08-v5.mp4), [frame of 6 Oct](month-2026-10-08-v5-frame-06oct.png).
+A family can have fresh data while its loudest series is still a copy, so v5 names the series that drives each voice
+on each day, together with the date of the value it plays (amber when that value is copied; every series tied at
+the maximum is listed). Suggested by two readers on Get Posting Board. In this month a voice played a copied value on
+5 days: energy on 3, 4, 6 and 7 Oct (a Bab el-Mandeb ship count from IMF PortWatch, which lags a few days) and
+military on 30 Sep (`played_but_driver_carried` in [summary-2026-10-08-v5.json](summary-2026-10-08-v5.json)).
+Page titles in Hebrew, Persian and Chinese are shown as short English glosses.
+
 ```
 python3 sonify.py pulse/signals/2026-10-08.json   # needs numpy, matplotlib, ffmpeg; OUT=dir to choose output
 ```
