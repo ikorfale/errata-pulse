@@ -4,7 +4,8 @@ data/history.jsonl  one line per published report (never reconstructed)
 data/reports/*.md   English reports with a front matter block
 data/signals/latest.json  hard signals of the latest collection day
 data/events.json    optional dated annotations for the history chart: [{"date": "YYYY-MM-DD", "label": "..."}]"""
-import json, os, re, html, shutil, math
+import json, os, re, html, shutil, math, sys
+sys.modules.setdefault('build', sys.modules[__name__])   # run as a script, the page modules' `import build` must share PAGES (the sitemap) with this module
 import build_map
 from datetime import datetime, timezone
 import og_card
@@ -315,7 +316,7 @@ def signals_html(sig, per_family=None, heading=3):
 # ---------- page shell ----------
 CSS = open(os.path.join(ROOT, 'style.css')).read() if os.path.exists(os.path.join(ROOT, 'style.css')) else ''
 # Links that stay at the site root in every language: data files, images, fonts, the analytics script.
-SHARED = re.compile(r'(href|src)="/(?!(?:en|ru|uk)/|assets/|og/|og\.png|favicon|history\.jsonl|signals\.json|_vercel|mobilization/history\.jsonl|telegram/latest\.json)')
+SHARED = re.compile(r'(href|src)="/(?!(?:en|ru|uk)/|assets/|og/|og\.png|favicon|history\.jsonl|signals\.json|_vercel|mobilization/history\.jsonl|telegram/latest\.json|forecasts\.json)')
 PAGES = {}   # path -> lastmod, for the sitemap (every path exists in every language)
 def page(path, title, desc, body, typ='WebPage', extra_ld=None, image='/og.png', active='', lastmod=None):
     """Write one page of the current language to site/<lang><path>; internal links get the language prefix."""
@@ -327,7 +328,7 @@ def page(path, title, desc, body, typ='WebPage', extra_ld=None, image='/og.png',
     ld = dict(ld, inLanguage=L)
     if ld.get('url', '').startswith(BASE) and not ld['url'].startswith(BASE + '/' + L + '/'): ld['url'] = BASE + i18n.lpath(ld['url'][len(BASE):])
     nav = ''.join(f'<a href="{h}"{" aria-current=page" if active == k else ""}>{t(n)}</a>' for k, h, n in
-                  [('home', '/', 'Index'), ('signals', '/signals/', 'Signals'), ('mobil', '/mobilization/', 'Mobilisation'), ('telegram', '/telegram/', 'Telegram'), ('archive', '/archive/', 'Archive'), ('howto', '/how-to-read/', 'How to read'), ('method', '/methodology/', 'Methodology')])
+                  [('home', '/', 'Index'), ('signals', '/signals/', 'Signals'), ('mobil', '/mobilization/', 'Mobilisation'), ('forecasts', '/forecasts/', 'Forecasts'), ('telegram', '/telegram/', 'Telegram'), ('archive', '/archive/', 'Archive'), ('howto', '/how-to-read/', 'How to read'), ('method', '/methodology/', 'Methodology')])
     alts = ''.join(f'<link rel="alternate" hreflang="{l}" href="{BASE}{i18n.lpath(path, l)}">' for l in i18n.LANGS) + f'<link rel="alternate" hreflang="x-default" href="{BASE}{"/" if path == "/" else i18n.lpath(path, "en")}">'
     langs = '<div class="langs" role="navigation" aria-label="' + t('Language') + '">' + ''.join(
         (f'<span aria-current="true" lang="{l}" title="{i18n.NATIVE[l]}">{i18n.LABEL[l]}</span>' if l == L else f'<a href="{i18n.lpath(path, l)}" hreflang="{l}" lang="{l}" title="{i18n.NATIVE[l]}" data-lang="{l}">{i18n.LABEL[l]}</a>')
@@ -429,7 +430,7 @@ location.replace('/'+c+'/'+location.search+location.hash)}})()</script><noscript
         urls += ''.join(f'<url><loc>{BASE}/{l}{pth}</loc><lastmod>{lm}</lastmod>{links}</url>' for l in i18n.LANGS)
     open(os.path.join(OUT, 'sitemap.xml'), 'w').write('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">' + urls + '</urlset>\n')
     open(os.path.join(OUT, 'robots.txt'), 'w').write(f'User-agent: *\nAllow: /\nSitemap: {BASE}/sitemap.xml\n')
-    old = ['signals', 'reports', 'archive', 'methodology', 'how-to-read', 'telegram', 'mobilization']   # pre-language URLs, still linked from posts
+    old = ['signals', 'reports', 'archive', 'methodology', 'how-to-read', 'telegram', 'mobilization', 'forecasts']   # pre-language URLs, still linked from posts
     redirects = [{"source": f"/{o}", "destination": f"/en/{o}/", "permanent": True} for o in old] + [{"source": f"/{o}/:rest(.*)", "destination": f"/en/{o}/:rest", "permanent": True} for o in old]
     redirects = [r for r in redirects if r['source'] not in ('/telegram/:rest(.*)', '/mobilization/:rest(.*)')] + [
         {"source": "/telegram/:rest((?!latest\\.json).*)", "destination": "/en/telegram/:rest", "permanent": True},
@@ -462,7 +463,7 @@ def build_lang(hist):
     lname = lvname(cur['ph']); conf = t(TR.get(cur['confidence'], cur['confidence']))
     if prev: d = cur['ph'] - prev['ph']; dtxt = (f'<span class="du">▲ +{d}</span>' if d > 0 else f'<span class="dn">▼ {d}</span>' if d < 0 else f'<span class="dz">► {t("unchanged")}</span>') + f' <span class="small">{t("since {d}", d=fmt_date(prev["ts"]))}</span>'
     else: dtxt = f'<span class="dz">{t("First reading")}</span> <span class="small">{t("no previous report to compare")}</span>'
-    import build_telegram
+    import build_telegram, build_forecasts
     nsig = len(sig.get('signals', [])); nhot = sum(1 for s in sig.get('signals', []) if s.get('anomaly'))
     kind = t(f"{cur['kind']} report")
     hero = f"""<section class="hero"><div class="gwrap"><p class="glabel">{t('Current index')}</p><div class="gbox">{gauge(cur['ph'], band)}<div class="gnum"><span class="big">{cur['ph']}</span><span class="of">/100</span></div></div><p class="small">{t('0 = low instability · 100 = extreme')}</p></div>
@@ -473,7 +474,7 @@ def build_lang(hist):
     sig_intro = ('<p class="meta">' + t('{n} hard signals collected on {d}, each compared with its own baseline.', n=nsig, d=fmt_date(sig.get("date", ""))) + ' '
                  + (f'<strong>{t("{n} anomalous.", n=nhot)}</strong>' if nhot else t('None is anomalous against its own baseline today.')) + ' ' + t('Signals are evidence for the components, never a formula of their own.') + '</p>')
     tgl = build_telegram.load(); body = hero + changed_today(cur, prev, reasons, sig, sigprev, tgl[-1] if tgl else None) + f"""<h2 class="sec" id="comps">{t('Five components')}</h2><p class="meta">{t('Each {c} is scored 0–100 against fixed anchors; colour shows the level band of each score. Reasons quoted from the latest report.', c=term('component'))}</p>{comp_rows(cur, prev, reasons)}
-<h2 class="sec">{t('Signals')}</h2>{sig_intro}<div class="signals-preview">{signals_html(sig, per_family=1) if nsig else f'<p>{t("No signal data yet.")}</p>'}</div><p><a class="btn" href="/signals/">{t('All {n} signals →', n=nsig)}</a></p>{build_telegram.home_block()}
+<h2 class="sec">{t('Signals')}</h2>{sig_intro}<div class="signals-preview">{signals_html(sig, per_family=1) if nsig else f'<p>{t("No signal data yet.")}</p>'}</div><p><a class="btn" href="/signals/">{t('All {n} signals →', n=nsig)}</a></p>{build_telegram.home_block()}{build_forecasts.home_block()}
 <h2 class="sec">{t('History')}</h2><div class="chart" tabindex="0" role="region" aria-label="{t('Index history chart')}">{history_svg(hist, events)}</div><p class="meta">{t('Only values from reports that were actually written are shown; no past values are reconstructed. Raw data:')} <a href="/history.jsonl">history.jsonl</a>.</p>
 <h3 class="smh3">{t('The five components over time')}</h3><p class="meta">{t('Same reports, one panel each, on one 0–100 scale. With only a few readings the lines are short on purpose: nothing before the first report is drawn or guessed.')}</p>{comp_multiples(hist)}
 <h2 class="sec">{t('Latest report')}</h2><a class="rcard" href="/reports/{latest['slug']}/"><img src="{latest['og']}" alt="{t('Share card of the report: index {v}, {l}', v=cur['ph'], l=lname)}" width="1200" height="630" loading="lazy"><span><strong>{esc(latest['title'])}</strong><br>{esc(latest['summary'])}</span></a>"""
@@ -513,6 +514,7 @@ def build_lang(hist):
     print(f'[{L}] built', len(reps), 'reports,', nsig, 'signals')
     build_telegram.main()
     import build_mobilization; build_mobilization.main()  # companion index; build_mobilization imports this module
+    build_forecasts.main()
 
 def toc_html(toc):
     return ('<nav class="toc" aria-label="' + t('Contents') + '"><strong>' + t('Contents') + '</strong><ol>' + ''.join(f'<li><a href="#{i}">{inline(x)}</a></li>' for i, x in toc) + '</ol></nav>') if toc else ''
