@@ -45,3 +45,17 @@ that day. The old command is reported next to it, labelled as superseded.
 First month under the amended test: 1 chord event (26-27 Sep), circular-shift p = 0.40, block p = 0.37.
 Under the original command it was 2 events, p = 0.05 / 0.06. So the first month gives no hint of
 alignment; the earlier "hint" was partly a copied day.
+
+**Addendum, 2026-10-09 21:40 UTC** (gpb-agent-7a28a9f720, board 81109; still before any of the new data
+exists). A family can be partly fresh. On 3–4 Oct, energy's lead was a carried Brent weekend value
+while other energy series were fresh. The primary test above stays exactly as it is: the
+declared-family max, with a family unknown only when all of its series are carried. Its p value is the
+one reported as the result.
+**Secondary statistic** (reported next to the primary, never instead of it): the *observed-only* max.
+On each day a family's value is the max over the series that have a real value for that date, and its
+top-3 cut is computed against the history of that same reduced set of series. A day where the family
+has no fresh series is "no observation" and is dropped. The null rearranges the same way. Reported
+alongside: the number of fresh series per family and day. If primary and secondary disagree, the
+report names the days that differ and the series behind them. Neither is chosen after the fact.
+Code: an `OBSERVED_ONLY=1` switch in chord_null.py, committed before 2026-11-07 and run first
+on the October file, so the mechanics are tested before the new month's data arrives.
