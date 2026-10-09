@@ -25,6 +25,19 @@ for f in FAMS:
     if not zs: continue
     m = np.abs(np.vstack(zs)).max(axis=0); mad = 1.4826 * np.median(np.abs(m - np.median(m))) or 1.0
     V[f] = (m - np.median(m)) / mad if CLIP is None else np.clip((m - np.median(m)) / mad, -CLIP, CLIP)
+# board 80838/80874: a family whose every series is only carried forward on a day was not measured that day
+# (Wikipedia pageviews lag a day, so the file's last day is all copies). CARRIED=1 marks those days unknown.
+if os.environ.get("CARRIED"):
+    for f in V:
+        R = []
+        for s in d['signals']:
+            if s['family'] == f and zser(s.get('series') or []) is not None:
+                v = np.zeros(30, bool)
+                for t, x in s['series']:
+                    if t in idx and x is not None: v[idx[t]] = True
+                R.append(v)
+        V[f] = np.where(np.vstack(R).any(axis=0), V[f], -np.inf)
+        if np.isinf(V[f]).any(): print('unmeasured:', f, [days[i] for i in np.where(np.isinf(V[f]))[0]])
 F = list(V); M = np.vstack([V[f] for f in F])
 def top3(row):  # days in the family's top 3 (ties at the cut included, so clipped plateaus count fully)
     return row >= np.sort(row)[-3]
