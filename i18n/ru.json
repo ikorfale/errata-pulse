@@ -1044,5 +1044,6 @@
 "operators or places named: kyiv": "названные операторы или места: Киев",
 "operators or places named: yandex": "названные операторы или места: Яндекс",
 "posts": "постов",
-"A value far outside its own usual range by two rules fixed in advance: a set ratio to its baseline, and at least 3 robust standard deviations from its own last 30 points. It is a lead to check, not an event.": "Значение далеко за пределами своего обычного диапазона по двум правилам, заданным заранее: заданное отношение к своей норме и не меньше 3 робастных стандартных отклонений от своих последних 30 точек. Это повод проверить, а не событие."
+"A value far outside its own usual range by two rules fixed in advance: a set ratio to its baseline, and at least 3 robust standard deviations from its own last 30 points. It is a lead to check, not an event.": "Значение далеко за пределами своего обычного диапазона по двум правилам, заданным заранее: заданное отношение к своей норме и не меньше 3 робастных стандартных отклонений от своих последних 30 точек. Это повод проверить, а не событие.",
+"data of {d}": "данные за {d}"
 }

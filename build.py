@@ -312,11 +312,14 @@ def sig_card(s):
 <h4>{esc(td(s.get('label', s.get('id', ''))))}</h4><div class="sv"><span class="val">{num(val) if val is not None else '—'}</span> <span class="unit">{unit}</span>{sparkline(s.get('series') or [], an)}</div>
 <p class="sb">{ratio}</p>{f'<p class="sn">{base}</p>' if base else ''}{note}{extra}
 <details class="signal-context"><summary>{t('Interpretation &amp; limits')}</summary>{f'<p class="mm"><b>{t("May mean:")}</b> {esc(means)}</p>' if means else ''}{f'<p class="mm"><b>{t("Does not prove:")}</b> {esc(notp)}</p>' if notp else ''}</details>
-<p class="src">{t('Source')}: {esc(td(s.get('source', '—')))}</p></article>"""
+<p class="src">{t('Source')}: {esc(td(s.get('source', '—')))}{(' · ' + esc(t('data of {d}', d=s['_lag']))) if s.get('_lag') else ''}</p></article>"""
 def nsig_txt(n, nhot=0):
     return f'{n} ' + i18n.plural(n, 'signal', 'signals') + (', ' + t('{n} anomalous', n=nhot) if nhot else '')
 def signals_html(sig, per_family=None, heading=3):
-    sigs = sig.get('signals', []); fams = sorted({s.get('family', 'other') for s in sigs}, key=fam_order)
+    sigs = sig.get('signals', [])
+    for s in sigs:                              # Wikipedia pageviews, EIA weeklies: the value is older than the page (board 80982)
+        s['_lag'] = s['as_of'] if s.get('as_of') and sig.get('date') and s['as_of'] < sig['date'] else None
+    fams = sorted({s.get('family', 'other') for s in sigs}, key=fam_order)
     out = ''
     for f in fams:
         ss = sorted([s for s in sigs if s.get('family', 'other') == f], key=sig_sort)
