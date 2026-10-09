@@ -16,7 +16,7 @@ A bell rings for each single signal beyond 4 robust σ that day.
 
 **What it is not.** Sound and picture are a way to see the month, not a test. Gaps in a series are
 filled with the last value (shipping data lag by a few days), so a held line can be a held value.
-Wikipedia page views measure attention, not events.
+Many series are rolling sums (3 days for Wikipedia and news themes, 7 days for strike reports), so one spike holds for several beats. Wikipedia page views measure attention, not events.
 
 ```
 python3 sonify.py pulse/signals/2026-10-08.json   # needs numpy, matplotlib, ffmpeg; OUT=dir to choose output
