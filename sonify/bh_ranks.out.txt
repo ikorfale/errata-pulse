@@ -1,0 +1,24 @@
+== 2026-10-05: m=62 pool n=1798; min possible p 0.00056; first threshold 0.00161; ranks passing: none
+   rank 1: mob:wiki:fa:خدمت_نظامی                 |z|   5.2  past cells >=  30  p 0.01723  thr 0.00161  ratio 10.7
+   rank 2: oil:stocks:WDISTUS1                    |z|   3.5  past cells >=  68  p 0.03835  thr 0.00323  ratio 11.9
+   rank 3: mob:wiki:he:צו_8                       |z|   2.7  past cells >= 123  p 0.06893  thr 0.00484  ratio 14.2
+   rank 4: wiki:zh:第三次世界大战                        |z|   2.0  past cells >= 212  p 0.11840  thr 0.00645  ratio 18.4
+   rank 5: wiki:en:Electromagnetic_pulse          |z|   1.8  past cells >= 234  p 0.13063  thr 0.00806  ratio 16.2
+== 2026-10-06: m=75 pool n=2175; min possible p 0.00046; first threshold 0.00133; ranks passing: none
+   rank 1: mob:wiki:he:צו_8                       |z|   7.4  past cells >=  22  p 0.01057  thr 0.00133  ratio 7.9
+   rank 2: oil:stocks:WDISTUS1                    |z|   3.5  past cells >=  76  p 0.03539  thr 0.00267  ratio 13.3
+   rank 3: wiki:ru:Третья_мировая_война           |z|   2.2  past cells >= 170  p 0.07858  thr 0.00400  ratio 19.6
+   rank 4: mob:wiki:en:Conscription_in_Ukraine    |z|   1.9  past cells >= 234  p 0.10800  thr 0.00533  ratio 20.2
+   rank 5: mob:wiki:ru:Мобилизация_в_России_(с_20 |z|   1.8  past cells >= 257  p 0.11857  thr 0.00667  ratio 17.8
+== 2026-10-07: m=77 pool n=2233; min possible p 0.00045; first threshold 0.00130; ranks passing: none
+   rank 1: mob:wiki:de:Kriegsdienstverweigerung   |z|  21.4  past cells >=   4  p 0.00224  thr 0.00130  ratio 1.7
+   rank 2: gkg:STATE_OF_EMERGENCY+CURFEW          |z|   5.5  past cells >=  33  p 0.01522  thr 0.00260  ratio 5.9
+   rank 3: mob:wiki:de:Wehrdienst                 |z|   4.8  past cells >=  38  p 0.01746  thr 0.00390  ratio 4.5
+   rank 4: oil:stocks:WDISTUS1                    |z|   3.6  past cells >=  70  p 0.03178  thr 0.00519  ratio 6.1
+   rank 5: wiki:ru:Ядерная_война                  |z|   2.4  past cells >= 163  p 0.07341  thr 0.00649  ratio 11.3
+== 2026-10-08: m=80 pool n=2320; min possible p 0.00043; first threshold 0.00125; ranks passing: none
+   rank 1: wiki:ru:Военное_положение              |z|  18.2  past cells >=   5  p 0.00259  thr 0.00125  ratio 2.1
+   rank 2: gkg:STATE_OF_EMERGENCY+CURFEW          |z|   6.5  past cells >=  33  p 0.01465  thr 0.00250  ratio 5.9
+   rank 3: mob:wiki:de:Kriegsdienstverweigerung   |z|   5.9  past cells >=  39  p 0.01723  thr 0.00375  ratio 4.6
+   rank 4: strikes:dc:ru                          |z|   5.6  past cells >=  45  p 0.01982  thr 0.00500  ratio 4.0
+   rank 5: gkg:SHORTAGE                           |z|   4.2  past cells >=  59  p 0.02585  thr 0.00625  ratio 4.1
