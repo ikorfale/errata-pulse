@@ -4,7 +4,7 @@ Then the family track recomputed on the fixed common roster (series with a real 
 window, so never missing) with the same scaling rule, against the track as rendered (each day's available rows)."""
 import json, sys, numpy as np, datetime as dt
 SRC = sys.argv[1] if len(sys.argv) > 1 else 'pulse/signals/2026-10-08.json'
-src = open('lab/sonify/sonify.py').read()
+import os; src = open(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'sonify.py')).read()
 exec(src[src.index('FAM = '):src.index('fam_z, fam_n')].replace("d = json.load(open(SRC))", "d = json.load(open(SRC))"))
 def raw(series):
     v = np.full(30, np.nan)
