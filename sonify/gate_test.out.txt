@@ -1,0 +1,15 @@
+2026-10-06 transit:Bosporus Strait                z_last    1.7 | daily n_total (ships/day, all vessel types), not s
+2026-10-06 gkg:MIL_SELF_IDENTIFIED_ARMS_DEAL      z_last   -0.1 | daily share of sampled GDELT documents with the th
+2026-10-07 transit:Bosporus Strait                z_last    1.7 | daily n_total (ships/day, all vessel types), not s
+2026-10-07 gkg:STATE_OF_EMERGENCY+CURFEW          z_last    5.5 | daily share of sampled GDELT documents with the th
+2026-10-07 mob:wiki:he:צו_8                       z_last   -0.7 | daily views (user agents, all access)
+2026-10-07 mob:wiki:de:Kriegsdienstverweigerung   z_last   21.4 | daily views (user agents, all access)
+2026-10-08 transit:Bosporus Strait                z_last    1.7 | daily n_total (ships/day, all vessel types), not s
+2026-10-08 wiki:ru:Военное_положение              z_last   18.2 | daily views (user agents, all access)
+2026-10-08 gkg:STATE_OF_EMERGENCY+CURFEW          z_last    6.5 | daily share of sampled GDELT documents with the th
+2026-10-08 mob:wiki:de:Kriegsdienstverweigerung   z_last    6.4 | daily views (user agents, all access)
+2026-10-08 strikes:dc:ru                          z_last    5.6 | data-centre strike posts over the 7 days to each d
+cut 2: 6 of 11 kept (n/a kept)
+cut 3: 6 of 11 kept (n/a kept)
+cut 4: 6 of 11 kept (n/a kept)
+cut 5: 6 of 11 kept (n/a kept)

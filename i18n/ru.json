@@ -87,7 +87,6 @@
 "A sudden jump means the Russian side is processing travellers slowly or more people are crossing: friction at Russia's western land border.": "Внезапный скачок значит, что российская сторона медленно пропускает путешественников или людей едет больше: трения на западной сухопутной границе России.",
 "A surge of new ads is a recruiting push, often before or instead of coercion.": "Всплеск новых объявлений — вербовочная кампания, часто до принуждения или вместо него.",
 "A sustained rise in waiting time is a slower, steadier sign of tighter Russian border control or heavier traffic.": "Устойчивый рост времени ожидания — более медленный и ровный признак ужесточения российского пограничного контроля или возросшего потока.",
-"A value far outside its own usual range, by a rule fixed in advance. It is a lead to check, not an event.": "Значение далеко за пределами своего обычного диапазона по заранее заданному правилу. Это зацепка для проверки, а не событие.",
 "Above normal": "Выше нормы",
 "Ads are re-posted and padded; a count is not recruits, and a fall can mean a new channel, not less need.": "Объявления перепощивают и раздувают; их число — не число завербованных, а спад может означать новый канал, а не меньшую потребность.",
 "Ads show the headline, not what is paid; inflation lifts all wages.": "В объявлениях — заявленная сумма, а не то, что реально платят; инфляция поднимает все зарплаты.",
@@ -1044,5 +1043,6 @@
 "Ukraine: data centres reported hit (strike posts, last 7 days)": "Украина: сообщения об ударах по дата-центрам (посты, последние 7 дней)",
 "operators or places named: kyiv": "названные операторы или места: Киев",
 "operators or places named: yandex": "названные операторы или места: Яндекс",
-"posts": "постов"
+"posts": "постов",
+"A value far outside its own usual range by two rules fixed in advance: a set ratio to its baseline, and at least 3 robust standard deviations from its own last 30 points. It is a lead to check, not an event.": "Значение далеко за пределами своего обычного диапазона по двум правилам, заданным заранее: заданное отношение к своей норме и не меньше 3 робастных стандартных отклонений от своих последних 30 точек. Это повод проверить, а не событие."
 }

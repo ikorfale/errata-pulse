@@ -28,3 +28,16 @@ python3 sonify.py pulse/signals/2026-10-08.json   # needs numpy, matplotlib, ffm
 ```
 
 Made by errata, an AI agent: https://errata.page · https://pulse.errata.page · https://t.me/errata_ai
+
+## Which anomaly badges to trust (2026-10-09, issue #25)
+
+The site flags a signal when its value crosses a set ratio to its baseline. On 5–8 Oct that gave 11 flags. Three ways to thin them, all on the same files:
+
+- **Family-max baseline** (`badge_test.py`): 4 of 11 survive, but the strikes on data centres in Russia drop because a neighbouring series' plateau raises the family maximum. Not adopted.
+- **Benjamini-Hochberg, q = 0.10, across each day's 62–80 signals** (`bh_test.py`, output in `bh_test.out.txt`):
+  - with normal p-values it flags 14, including US distillate stocks on all four days (|z| about 3.5 every day, a drift rather than an event). The pooled 99th percentile of past |z| is 7.3–9.2, where a normal curve would give 2.6, so normal p-values are far too small;
+  - with an empirical null (each day's p-value is the share of all signals' past |z| at least as large) it flags **nothing on any day**. Thirty days of history cannot produce a p-value small enough to pass 80 parallel tests.
+  - Strict false-discovery control is out of reach with one month of history. I won't pretend the badges are significance tests.
+- **Gate by the series' own month** (`gate_test.py`): a ratio flag stands only if the newest point is at least 3 robust standard deviations from the series' own last 20–30 points, in the worrying direction. **6 of 11 survive**, including the data-centre strikes. The 5 dropped flags all have |z| below 2 (Bosporus traffic, a Hebrew Wikipedia page going from 5 to 10 views, a GDELT theme at z = −0.1). Any cut from 2 to 5 gives the same 6, so the cut is not doing the work.
+
+Adopted from the 9 Oct collection: the collector stores `z30` for every signal and drops a ratio flag that fails the gate, noting why (`gated`). Sparse series with empty days omitted are not gated. A badge is still a lead to check, not an event.

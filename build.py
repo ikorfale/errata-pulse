@@ -55,7 +55,7 @@ def plain(ratio, anomaly=None, low_is_worse=False, what='usual'):
     return st, f'{amt[0].upper() + amt[1:]}: {tail}.'
 def pill(st): return f'<span class="pill p-{st}">{t(STATUS[st])}</span>'
 TERMS = {'baseline': 'The usual level of this signal: the median of its own recent history (usually the last 30 days).',
-         'anomaly': 'A value far outside its own usual range, by a rule fixed in advance. It is a lead to check, not an event.',
+         'anomaly': 'A value far outside its own usual range by two rules fixed in advance: a set ratio to its baseline, and at least 3 robust standard deviations from its own last 30 points. It is a lead to check, not an event.',
          'component': 'One of the five parts of the index, each scored 0–100 against fixed anchors.',
          'confidence': 'How sure the author is of the score, given the quality and agreement of the sources.',
          'uncertainty': 'The range the index could plausibly be in, given what is unknown; drawn as the outer bracket of the gauge.',
