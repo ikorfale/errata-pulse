@@ -11410,33 +11410,29 @@
    "family": "energy",
    "id": "strikes:ru-oil:week",
    "label": "Russia: oil refineries, terminals and pumping stations reported hit, last 7 days",
-   "value": 13,
-   "baseline": 10.22,
-   "ratio": 1.27,
+   "value": 10,
+   "baseline": 7.57,
+   "ratio": 1.32,
    "anomaly": false,
    "unit": "facilities",
-   "note": "2 also reported by a Russian source; 1 with satellite fire detections (NASA FIRMS) on the day or the day after",
+   "note": "4 also reported by a Russian source; 1 with satellite fire detections (NASA FIRMS) on the day or the day after",
    "source": "public Telegram previews: 12 channels (Ukrainian General Staff, SBU, SSO, Unmanned Systems Forces; Exilenova+, Supernova+, Crimean Wind; ASTRA, Shot, Baza, Mash, a pro-Kremlin milblogger)",
    "series": [
     [
-     "2026-09-07",
-     3
-    ],
-    [
      "2026-09-08",
-     6
+     10
     ],
     [
      "2026-09-09",
-     6
+     8
     ],
     [
      "2026-09-10",
-     7
+     9
     ],
     [
      "2026-09-11",
-     8
+     9
     ],
     [
      "2026-09-12",
@@ -11472,7 +11468,7 @@
     ],
     [
      "2026-09-20",
-     7
+     6
     ],
     [
      "2026-09-21",
@@ -11488,19 +11484,19 @@
     ],
     [
      "2026-09-24",
-     6
+     5
     ],
     [
      "2026-09-25",
-     8
+     7
     ],
     [
      "2026-09-26",
-     9
+     8
     ],
     [
      "2026-09-27",
-     9
+     8
     ],
     [
      "2026-09-28",
@@ -11508,54 +11504,55 @@
     ],
     [
      "2026-09-29",
-     13
+     6
     ],
     [
      "2026-10-01",
-     14
+     5
     ],
     [
      "2026-10-02",
-     17
+     9
     ],
     [
      "2026-10-03",
-     17
+     8
     ],
     [
      "2026-10-04",
-     16
+     5
     ],
     [
      "2026-10-05",
-     18
+     6
     ],
     [
      "2026-10-06",
-     17
+     7
     ],
     [
      "2026-10-07",
-     13
+     8
+    ],
+    [
+     "2026-10-08",
+     10
     ]
    ],
    "series_kind": "distinct facilities named in strike reports over the 7 days to each date",
    "component": "energy",
-   "date": "2026-10-07",
+   "date": "2026-10-08",
    "means": "More named Russian refineries, terminals and pumping stations reported hit means a stronger campaign against fuel supply and exports.",
    "not_proves": "It does not prove damage or lost output: Ukrainian channels claim hits, Russian channels report fires and \"debris\", both are biased, and a name in a post can be wrong.",
    "items": [
-    "Samara oil pumping station — last reported 2026-10-07, also reported by a Russian source",
+    "Samara oil pumping station — last reported 2026-10-08, also reported by a Russian source",
+    "Salavat refinery — last reported 2026-10-08, also reported by a Russian source",
+    "Omsk refinery — last reported 2026-10-08, also reported by a Russian source",
     "Novorossiysk oil terminal (Sheskharis, CPC) — last reported 2026-10-07, Ukrainian claim only",
     "Volgograd refinery — last reported 2026-10-06, also reported by a Russian source",
     "Moscow refinery (Kapotnya) — last reported 2026-10-06, Ukrainian claim only",
-    "Feodosia oil depot (occupied Crimea) — last reported 2026-10-05, Ukrainian claim only",
-    "Ryazan refinery — last reported 2026-10-05, Ukrainian claim only",
-    "Saratov refinery — last reported 2026-10-05, Ukrainian claim only",
     "Ilsky refinery — last reported 2026-10-05, Ukrainian claim only",
-    "Yaroslavl refinery (YANOS) — last reported 2026-10-05, Ukrainian claim only",
-    "Perm refinery — last reported 2026-10-05, Ukrainian claim only",
-    "Nizhnekamsk refineries (TANECO, TAIF) — last reported 2026-10-05, Ukrainian claim only",
+    "Feodosia oil depot (occupied Crimea) — last reported 2026-10-05, Ukrainian claim only",
     "Ust-Luga port — last reported 2026-10-02, Ukrainian claim only",
     "Tikhoretsk oil pumping station — last reported 2026-10-02, Ukrainian claim only"
    ]
@@ -11563,19 +11560,15 @@
   {
    "family": "energy",
    "id": "strikes:ru-oil:day",
-   "label": "Russia: oil facilities reported hit on 2026-10-07",
-   "value": 2,
-   "baseline": 2.66,
-   "ratio": 0.75,
+   "label": "Russia: oil facilities reported hit on 2026-10-08",
+   "value": 3,
+   "baseline": 1.8,
+   "ratio": 1.67,
    "anomaly": false,
    "unit": "facilities",
-   "note": "4 strike posts about oil sites, 2 without a facility named",
+   "note": "20 strike posts about oil sites, 0 without a facility named",
    "source": "public Telegram previews: 12 channels (Ukrainian General Staff, SBU, SSO, Unmanned Systems Forces; Exilenova+, Supernova+, Crimean Wind; ASTRA, Shot, Baza, Mash, a pro-Kremlin milblogger)",
    "series": [
-    [
-     "2026-09-07",
-     3
-    ],
     [
      "2026-09-08",
      3
@@ -11602,7 +11595,7 @@
     ],
     [
      "2026-09-14",
-     4
+     1
     ],
     [
      "2026-09-15",
@@ -11630,7 +11623,7 @@
     ],
     [
      "2026-09-21",
-     4
+     3
     ],
     [
      "2026-09-22",
@@ -11658,11 +11651,11 @@
     ],
     [
      "2026-09-28",
-     5
+     0
     ],
     [
      "2026-09-29",
-     10
+     0
     ],
     [
      "2026-10-01",
@@ -11682,7 +11675,7 @@
     ],
     [
      "2026-10-05",
-     8
+     2
     ],
     [
      "2026-10-06",
@@ -11691,13 +11684,295 @@
     [
      "2026-10-07",
      2
+    ],
+    [
+     "2026-10-08",
+     3
     ]
    ],
    "series_kind": "distinct facilities named in strike reports that day",
    "component": "energy",
-   "date": "2026-10-07",
+   "date": "2026-10-08",
    "means": "More named Russian refineries, terminals and pumping stations reported hit means a stronger campaign against fuel supply and exports.",
    "not_proves": "It does not prove damage or lost output: Ukrainian channels claim hits, Russian channels report fires and \"debris\", both are biased, and a name in a post can be wrong."
+  },
+  {
+   "family": "military",
+   "id": "strikes:dc:ru",
+   "label": "Russia: data centres reported hit (strike posts, last 7 days)",
+   "value": 17,
+   "baseline": 0,
+   "ratio": null,
+   "anomaly": true,
+   "unit": "posts",
+   "note": "operators or places named: yandex",
+   "source": "public Telegram previews: 12 channels (Ukrainian General Staff, SBU, SSO, Unmanned Systems Forces; Exilenova+, Supernova+, Crimean Wind; ASTRA, Shot, Baza, Mash, a pro-Kremlin milblogger)",
+   "series": [
+    [
+     "2026-09-08",
+     0
+    ],
+    [
+     "2026-09-09",
+     0
+    ],
+    [
+     "2026-09-10",
+     0
+    ],
+    [
+     "2026-09-11",
+     0
+    ],
+    [
+     "2026-09-12",
+     0
+    ],
+    [
+     "2026-09-13",
+     0
+    ],
+    [
+     "2026-09-14",
+     0
+    ],
+    [
+     "2026-09-15",
+     0
+    ],
+    [
+     "2026-09-16",
+     0
+    ],
+    [
+     "2026-09-17",
+     0
+    ],
+    [
+     "2026-09-18",
+     0
+    ],
+    [
+     "2026-09-19",
+     0
+    ],
+    [
+     "2026-09-20",
+     0
+    ],
+    [
+     "2026-09-21",
+     0
+    ],
+    [
+     "2026-09-22",
+     0
+    ],
+    [
+     "2026-09-23",
+     0
+    ],
+    [
+     "2026-09-24",
+     0
+    ],
+    [
+     "2026-09-25",
+     0
+    ],
+    [
+     "2026-09-26",
+     0
+    ],
+    [
+     "2026-09-27",
+     0
+    ],
+    [
+     "2026-09-28",
+     0
+    ],
+    [
+     "2026-09-29",
+     0
+    ],
+    [
+     "2026-10-01",
+     0
+    ],
+    [
+     "2026-10-02",
+     0
+    ],
+    [
+     "2026-10-03",
+     0
+    ],
+    [
+     "2026-10-04",
+     0
+    ],
+    [
+     "2026-10-05",
+     0
+    ],
+    [
+     "2026-10-06",
+     0
+    ],
+    [
+     "2026-10-07",
+     0
+    ],
+    [
+     "2026-10-08",
+     17
+    ]
+   ],
+   "series_kind": "data-centre strike posts over the 7 days to each date (a post count, not a count of strikes)",
+   "component": "military",
+   "date": "2026-10-08",
+   "means": "Strikes on Russian data centres reach civilian digital infrastructure: cloud, banking, maps and state services.",
+   "not_proves": "It does not prove a data centre was hit or went down: one strike makes many posts, the side is read from the operator or city named near the word, and a few posts name neither."
+  },
+  {
+   "family": "military",
+   "id": "strikes:dc:ua",
+   "label": "Ukraine: data centres reported hit (strike posts, last 7 days)",
+   "value": 1,
+   "baseline": 6.73,
+   "ratio": 0.15,
+   "anomaly": false,
+   "unit": "posts",
+   "note": "operators or places named: kyiv",
+   "source": "public Telegram previews: 12 channels (Ukrainian General Staff, SBU, SSO, Unmanned Systems Forces; Exilenova+, Supernova+, Crimean Wind; ASTRA, Shot, Baza, Mash, a pro-Kremlin milblogger)",
+   "series": [
+    [
+     "2026-09-08",
+     0
+    ],
+    [
+     "2026-09-09",
+     0
+    ],
+    [
+     "2026-09-10",
+     0
+    ],
+    [
+     "2026-09-11",
+     1
+    ],
+    [
+     "2026-09-12",
+     1
+    ],
+    [
+     "2026-09-13",
+     1
+    ],
+    [
+     "2026-09-14",
+     1
+    ],
+    [
+     "2026-09-15",
+     1
+    ],
+    [
+     "2026-09-16",
+     1
+    ],
+    [
+     "2026-09-17",
+     2
+    ],
+    [
+     "2026-09-18",
+     1
+    ],
+    [
+     "2026-09-19",
+     1
+    ],
+    [
+     "2026-09-20",
+     1
+    ],
+    [
+     "2026-09-21",
+     1
+    ],
+    [
+     "2026-09-22",
+     1
+    ],
+    [
+     "2026-09-23",
+     5
+    ],
+    [
+     "2026-09-24",
+     4
+    ],
+    [
+     "2026-09-25",
+     5
+    ],
+    [
+     "2026-09-26",
+     17
+    ],
+    [
+     "2026-09-27",
+     24
+    ],
+    [
+     "2026-09-28",
+     26
+    ],
+    [
+     "2026-09-29",
+     26
+    ],
+    [
+     "2026-10-01",
+     22
+    ],
+    [
+     "2026-10-02",
+     23
+    ],
+    [
+     "2026-10-03",
+     22
+    ],
+    [
+     "2026-10-04",
+     10
+    ],
+    [
+     "2026-10-05",
+     3
+    ],
+    [
+     "2026-10-06",
+     1
+    ],
+    [
+     "2026-10-07",
+     1
+    ],
+    [
+     "2026-10-08",
+     1
+    ]
+   ],
+   "series_kind": "data-centre strike posts over the 7 days to each date (a post count, not a count of strikes)",
+   "component": "military",
+   "date": "2026-10-08",
+   "means": "Russian strikes on Ukrainian data centres and telecoms aim at connectivity and the civilian economy.",
+   "not_proves": "It does not prove a data centre was hit or went down: one strike makes many posts, the side is read from the operator or city named near the word, and a few posts name neither."
   }
  ],
  "errors": [
