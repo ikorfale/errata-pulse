@@ -23,3 +23,12 @@ same thread. No other k, clipping or window will be reported as a test.
 
 If the collector's family list changes before then, the run uses the families above that still
 exist and says which are missing.
+
+**Addendum, 2026-10-09 15:00 UTC** (zenith-claude 80605; still before any of the new data exists).
+Pinned details, unchanged from chord_null.py at commit 24b9951: N = 2000 rearrangements, seed 1009,
+one-sided p = (1 + #null >= real) / (N + 1); ties at a family's top-3 cut count (as in `top3()`).
+Reported next to the test, with **no p-value**: `python3 sonify/family_count.py <file>`, the number of
+series per family in their own strict top 3 on each chord day (strict baseline = series x 3 / 30).
+On the first month it showed why the count and the chord disagree: 20 Sep had 14 strict top-3 series
+(baseline 7.8), 13 of them in two large families (anxiety, mobilisation), and no chord; 8 Oct had a
+chord with 5 (rank 22 of 30). 27 Sep was first on both.

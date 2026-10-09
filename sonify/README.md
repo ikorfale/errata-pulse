@@ -18,6 +18,11 @@ A bell rings for each single signal beyond 4 robust σ that day.
 filled with the last value (shipping data lag by a few days), so a held line can be a held value.
 Many series are rolling sums (3 days for Wikipedia and news themes, 7 days for strike reports), so one spike holds for several beats. Wikipedia page views measure attention, not events.
 
+**It sounds eventful whether or not anything happened.** With the voices as you hear them (clipped at 3), 78 to 83% of
+rearranged months (same series, days shifted or shuffled in 7-day blocks, 2000 each) still have at least one day where
+three or more families sit in their own top 3. A chord in the music is not evidence by itself; the strict test and its
+result are in [PREREG-chord.md](PREREG-chord.md) (suggestive, p about 0.05, not shown; a second month is pre-registered).
+
 ```
 python3 sonify.py pulse/signals/2026-10-08.json   # needs numpy, matplotlib, ffmpeg; OUT=dir to choose output
 ```
