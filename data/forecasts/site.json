@@ -1,0 +1,715 @@
+{
+ "generated": "2026-10-09T08:34:54.448563+00:00",
+ "counts": {
+  "open": 20,
+  "resolved": 0,
+  "annulled": 0
+ },
+ "brier": {
+  "mine": null,
+  "final": null,
+  "base": null,
+  "crowd": null
+ },
+ "calibration": [
+  {
+   "bin": "0-10%",
+   "n": 0,
+   "mean_p": null,
+   "freq_yes": null
+  },
+  {
+   "bin": "10-20%",
+   "n": 0,
+   "mean_p": null,
+   "freq_yes": null
+  },
+  {
+   "bin": "20-30%",
+   "n": 0,
+   "mean_p": null,
+   "freq_yes": null
+  },
+  {
+   "bin": "30-40%",
+   "n": 0,
+   "mean_p": null,
+   "freq_yes": null
+  },
+  {
+   "bin": "40-50%",
+   "n": 0,
+   "mean_p": null,
+   "freq_yes": null
+  },
+  {
+   "bin": "50-60%",
+   "n": 0,
+   "mean_p": null,
+   "freq_yes": null
+  },
+  {
+   "bin": "60-70%",
+   "n": 0,
+   "mean_p": null,
+   "freq_yes": null
+  },
+  {
+   "bin": "70-80%",
+   "n": 0,
+   "mean_p": null,
+   "freq_yes": null
+  },
+  {
+   "bin": "80-90%",
+   "n": 0,
+   "mean_p": null,
+   "freq_yes": null
+  },
+  {
+   "bin": "90-100%",
+   "n": 0,
+   "mean_p": null,
+   "freq_yes": null
+  }
+ ],
+ "models": {},
+ "questions": [
+  {
+   "id": "1",
+   "title": "Will Russia officially announce a new mobilisation of reservists by 31 October 2026?",
+   "criteria": "YES if between 10 and 31 Oct 2026 (Moscow time) a presidential decree or an official announcement by the Russian president or government declares a mobilisation (partial or general) of reservists, as published on kremlin.ru / pravo.gov.ru or reported by two major wire services. Regular conscription, contract recruitment, regional quotas, reservist training call-ups (BARS, special musters) and summonses for 'record checks' do not count. Otherwise NO.",
+   "deadline": "2026-10-31",
+   "category": "mobilisation",
+   "index": "mri",
+   "opened": "2026-10-09",
+   "status": "open",
+   "p": 0.02,
+   "base_rate": 0.02,
+   "method": "base: reference class = declared mobilisations during the current war, 1 (Sep 2022) in 4.6 years, Poisson with +0.5 smoothing over 22 days. signals: LR 1.3 mobilisation risk index 54 'elevated' (legal readiness 62, rising); LR 0.8 the rumoured post-election '1 October window' passed with no decree; LR 0.8 the state keeps substituting (quotas, foreigners, coercion of conscripts) and recruitment is only ~10% below 2025; official denials taken as LR 1.0 (they preceded 2022 too).",
+   "history": [
+    {
+     "date": "2026-10-09",
+     "p": 0.02,
+     "reason": "Pre-mortem (it is 31 Oct and I was wrong): a sudden front collapse or a decision already taken behind closed doors; neither story has visible evidence now. Opening: no battlefield shock of the 2022 Kharkiv kind; the index is elevated but the substitutes are working.",
+     "models": {
+      "base": 0.02,
+      "signals": 0.02
+     }
+    }
+   ],
+   "crowd": [
+    "manifold:russia-announces-mobilization-befor",
+    "polymarket:will-russia-announce-a-new-forced-mobilization-by-october-31-2026"
+   ],
+   "crowd_history": [
+    {
+     "date": "2026-10-09",
+     "p": 0.087
+    }
+   ],
+   "crowd_urls": {
+    "manifold:russia-announces-mobilization-befor": "https://manifold.markets/AIBear/russia-announces-mobilization-befor",
+    "polymarket:will-russia-announce-a-new-forced-mobilization-by-october-31-2026": "https://polymarket.com/event/will-russia-announce-a-new-forced-mobilization-by-october-31-2026"
+   }
+  },
+  {
+   "id": "2",
+   "title": "Will Russia legally bar reservists as a category from leaving the country by 30 June 2027?",
+   "criteria": "YES if by 30 Jun 2027 a Russian federal law, presidential decree or government decree enters into force that restricts departure abroad for men in the military reserve as a category (for example all reservists of certain ages or ranks), without an individual summons or call-up order having been served. Restrictions that apply only to men already served a summons, to conscripts, or to specific professions with state secrets do not count. Source: pravo.gov.ru text plus two major outlets. Otherwise NO.",
+   "deadline": "2027-06-30",
+   "category": "mobilisation",
+   "index": "mri",
+   "opened": "2026-10-09",
+   "status": "open",
+   "p": 0.09,
+   "base_rate": 0.08,
+   "method": "base: no category-wide exit ban for reservists in 4.6 years of war despite 2022 pressure; 0 events, +0.5 smoothing, 264 days. signals: LR 1.2 legal readiness component at 62 and rising (summons register with restrictions, notary-chamber letter on reservists aged 18-30, Sep 2026); LR 1.2 garrison court cases for unauthorised absence rising (my court collector).",
+   "history": [
+    {
+     "date": "2026-10-09",
+     "p": 0.09,
+     "reason": "Opening: the legal machinery for individual restrictions exists; a category-wide ban is a political step not yet visible.",
+     "models": {
+      "base": 0.08,
+      "signals": 0.11
+     }
+    }
+   ],
+   "crowd": [],
+   "crowd_history": []
+  },
+  {
+   "id": "3",
+   "title": "Will the presidential decree expanding Russian military police search powers be signed by 30 November 2026?",
+   "criteria": "YES if between 10 Oct and 30 Nov 2026 Russia's president signs the decree drafted by the Ministry of Defence (published for discussion around 8 Oct 2026) that gives the military police inquiry powers and search measures (cordons, ambushes, fingerprinting of detainees without documents), as shown by publication on pravo.gov.ru or kremlin.ru. A signed text with substantially the same powers counts even if renamed. Still a draft, withdrawn or merged into a law: NO.",
+   "deadline": "2026-11-30",
+   "category": "mobilisation",
+   "index": "mri",
+   "opened": "2026-10-09",
+   "status": "open",
+   "p": 0.37,
+   "base_rate": 0.35,
+   "method": "base: judgmental reference class = MoD-drafted presidential decrees put up for public discussion; most are signed, but a minority within ~7-8 weeks of publication; I put that share at 35% (no count yet: method gap to fill). signals: LR 1.2 rising desertion/unauthorised-absence caseload gives the MoD a reason to hurry; LR 1.0 no public statement of a timetable.",
+   "history": [
+    {
+     "date": "2026-10-09",
+     "p": 0.37,
+     "reason": "Opening: draft published 8 Oct (RBC, MK, Izvestia); signing speed is the open question.",
+     "models": {
+      "base": 0.35,
+      "signals": 0.39
+     }
+    }
+   ],
+   "crowd": [],
+   "crowd_history": []
+  },
+  {
+   "id": "4",
+   "title": "Will Russia and Ukraine reach a full ceasefire that takes effect by 31 December 2026?",
+   "criteria": "YES if a formal agreement between Russia and Ukraine to halt hostilities along the entire front line is announced by both governments and takes effect between 10 Oct and 31 Dec 2026. Partial truces (energy-only, sea-only, holiday truces, prisoner-exchange pauses) do not count. Source: official statements of both governments, or two major wire services. Otherwise NO.",
+   "deadline": "2026-12-31",
+   "category": "war",
+   "index": "pulse",
+   "opened": "2026-10-09",
+   "status": "open",
+   "p": 0.03,
+   "base_rate": 0.02,
+   "method": "base: no full ceasefire in 4.6 years of full-scale war; 0 events, +0.5 smoothing, 83 days. signals: LR 1.5 US proposes trilateral technical talks by end of October; LR 1.3 Miami meeting 9 Oct; LR 0.8 Rubio called a deal 'unachievable', Lavrov hard line; escalation against energy and data centres continues (restraint component 59).",
+   "history": [
+    {
+     "date": "2026-10-09",
+     "p": 0.03,
+     "reason": "Opening: talks about talks, no sign either side accepts a freeze on the current line.",
+     "models": {
+      "base": 0.02,
+      "signals": 0.04
+     }
+    }
+   ],
+   "crowd": [
+    "polymarket:russia-x-ukraine-ceasefire-by-december-31-2026",
+    "manifold:russia-x-ukraine-ceasefire-in-2026"
+   ],
+   "crowd_history": [
+    {
+     "date": "2026-10-09",
+     "p": 0.083
+    }
+   ],
+   "crowd_urls": {
+    "polymarket:russia-x-ukraine-ceasefire-by-december-31-2026": "https://polymarket.com/event/russia-x-ukraine-ceasefire-by-december-31-2026",
+    "manifold:russia-x-ukraine-ceasefire-in-2026": "https://manifold.markets/HillaryClinton/russia-x-ukraine-ceasefire-in-2026"
+   }
+  },
+  {
+   "id": "5",
+   "title": "Will Russia publicly commit to a reciprocal halt of strikes on energy infrastructure by 20 November 2026?",
+   "criteria": "YES if between 10 Oct and 20 Nov 2026 the Kremlin, Russia's president or its foreign ministry publicly states that Russia will stop (or has stopped) striking Ukraine's energy infrastructure as part of a reciprocal arrangement with Ukraine, as reported by two major wire services. Statements by third parties (for example the US president) that both sides agreed do not count without Russia's own confirmation. Otherwise NO.",
+   "deadline": "2026-11-20",
+   "category": "war",
+   "index": "pulse",
+   "opened": "2026-10-09",
+   "status": "open",
+   "p": 0.04,
+   "base_rate": 0.04,
+   "method": "base: one comparable Russian commitment (the 30-day energy moratorium of March 2025) in 4.6 years; Poisson +0.5 smoothing over 42 days. signals: LR 1.8 Zelensky's public offer of a reciprocal energy truce (22 Sep) and Trump's claim of agreement; LR 0.7 the strike campaign is widening, not narrowing (Omsk, Salavat refineries 8 Oct; Yandex data centres 8-9 Oct); LR 1.2 US-led talks under way.",
+   "history": [
+    {
+     "date": "2026-10-09",
+     "p": 0.04,
+     "reason": "Opening: an offer is on the table but both sides are escalating against each other's infrastructure this week.",
+     "models": {
+      "base": 0.04,
+      "signals": 0.05
+     }
+    }
+   ],
+   "crowd": [
+    "manifold:will-russia-publicly-commit-to-an-e"
+   ],
+   "crowd_history": [
+    {
+     "date": "2026-10-09",
+     "p": 0.116
+    }
+   ],
+   "crowd_urls": {
+    "manifold:will-russia-publicly-commit-to-an-e": "https://manifold.markets/Terminator2/will-russia-publicly-commit-to-an-e"
+   }
+  },
+  {
+   "id": "6",
+   "title": "Will another data centre in Russia be damaged by a drone or missile strike between 10 October and 15 November 2026?",
+   "criteria": "YES if between 10 Oct and 15 Nov 2026 a data centre on Russia's internationally recognised territory (other than the Yandex sites at Sasovo, struck 8 Oct, and Kaluga, struck 9 Oct) is damaged by a drone or missile attack, confirmed by its operator or by two major outlets. A repeat strike on Sasovo or Kaluga counts only if reported as new damage on a new date. Debris falling nearby without damage to the facility does not count. Otherwise NO.",
+   "deadline": "2026-11-15",
+   "category": "war",
+   "index": "pulse",
+   "opened": "2026-10-09",
+   "status": "open",
+   "p": 0.6,
+   "base_rate": 0.6,
+   "method": "base: reference class = new target classes Ukraine opened during this war (refineries 2024, oil ports, power plants, pumping stations): after two hits in quick succession, a third followed within ~5 weeks in most cases; judgmental 60%. signals: LR 0.8 Yandex hid all four cloud sites from its maps and operators will harden sites; LR 1.2 strikes framed as retaliation for Russian strikes on Ukrainian data centres since late September (my Telegram strike collector: 17 Russian-side posts on data-centre strikes on 8 Oct vs baseline 0).",
+   "history": [
+    {
+     "date": "2026-10-09",
+     "p": 0.6,
+     "reason": "Opening: two Yandex sites in two days look like a campaign, not a one-off.",
+     "models": {
+      "base": 0.6,
+      "signals": 0.59
+     }
+    }
+   ],
+   "crowd": [],
+   "crowd_history": []
+  },
+  {
+   "id": "7",
+   "title": "Will any NATO member formally request Article 4 consultations between 10 October and 31 December 2026?",
+   "criteria": "YES if between 10 Oct and 31 Dec 2026 any NATO member formally requests consultations under Article 4 of the North Atlantic Treaty and NATO confirms it (nato.int press release or Secretary General statement), or two major wire services report the formal request. Calls for 'consultations' without invoking Article 4 do not count. Otherwise NO.",
+   "deadline": "2026-12-31",
+   "category": "war",
+   "index": "pulse",
+   "opened": "2026-10-09",
+   "status": "open",
+   "p": 0.18,
+   "base_rate": 0.16,
+   "method": "base: Article 4 requests since Feb 2022 counted as 3 in 4.7 years (Feb 2022; Poland Sep 2025; Estonia Sep 2025); Poisson +0.5 smoothing over 83 days. Checked: NATO's own list ends with Estonia, 23 Sep 2025; none in 2026 so far. signals: LR 1.5 pressure on NATO's eastern flank moved from rhetoric to incidents (Latvia 6 Oct, Lithuania moving troops towards Kaliningrad, Danish PET warnings); LR 1.2 the military component of the Chaos Pulse at 71; LR 0.8 the 2026 incidents so far (German grid sabotage and airport drones, Aug-Sep) were handled bilaterally, without Article 4, so the bar for a request is high.",
+   "history": [
+    {
+     "date": "2026-10-09",
+     "p": 0.18,
+     "reason": "Opening: flank incidents are frequent, but 2026 incidents have not been taken to Article 4.",
+     "models": {
+      "base": 0.16,
+      "signals": 0.21
+     }
+    }
+   ],
+   "crowd": [
+    "polymarket:another-nato-article-4-invocation-by-december-31-2026-20260726214511854"
+   ],
+   "crowd_history": [
+    {
+     "date": "2026-10-09",
+     "p": 0.27
+    }
+   ],
+   "crowd_urls": {
+    "polymarket:another-nato-article-4-invocation-by-december-31-2026-20260726214511854": "https://polymarket.com/event/another-nato-article-4-invocation-by-december-31-2026-20260726214511854"
+   }
+  },
+  {
+   "id": "8",
+   "title": "Will the US strike targets on Iranian territory before the US midterm elections (10 Oct - 2 Nov 2026)?",
+   "criteria": "YES if between 10 Oct and 2 Nov 2026 (UTC) US military forces strike targets on Iran's land territory or in Iran's territorial waters, as confirmed by the US government or two major wire services. Strikes on Iranian proxies outside Iran, on Iranian ships in international waters, interceptions of missiles or drones, and Israeli-only strikes do not count. Otherwise NO.",
+   "deadline": "2026-11-02",
+   "category": "war",
+   "index": "pulse",
+   "opened": "2026-10-09",
+   "status": "open",
+   "p": 0.06,
+   "base_rate": 0.06,
+   "method": "base: reference class = the current Pakistan-brokered US-Iran ceasefire, ~180 days with no US strike on Iranian territory (strikes on tankers in Sep were at sea); 0 events in 0.5 years, +0.5 smoothing, 24 days. signals: LR 0.5 Trump publicly promised no strikes before the 3 Nov midterms (AP, Guardian, 8 Oct); LR 1.3 Pentagon reportedly told to prepare options; LR 1.3 near-nightly IRGC attacks on Hormuz shipping since 29 Sep.",
+   "history": [
+    {
+     "date": "2026-10-09",
+     "p": 0.06,
+     "reason": "Opening: an explicit presidential promise with an electoral motive covers the whole window.",
+     "models": {
+      "base": 0.06,
+      "signals": 0.05
+     }
+    }
+   ],
+   "crowd": [],
+   "crowd_history": []
+  },
+  {
+   "id": "9",
+   "title": "Will 100 or more ships cross the Strait of Hormuz on a single day by 31 December 2026, per IMF PortWatch?",
+   "criteria": "YES if IMF PortWatch daily transit-call data for the Strait of Hormuz shows 100 or more transits on any single day between 10 Oct and 31 Dec 2026 (data as published by 15 Jan 2027). Otherwise NO.",
+   "deadline": "2026-12-31",
+   "category": "energy",
+   "index": "pulse",
+   "opened": "2026-10-09",
+   "status": "open",
+   "p": 0.07,
+   "base_rate": 0.08,
+   "method": "base: reference class = major chokepoint disruptions by an armed party (Bab el-Mandeb 2024-25, Hormuz 2026): a return to normal daily traffic within ~3 months of a still-active attack campaign is rare; judgmental 8%. signals: LR 0.8 Trump rejected Iran's 7-day reopening proposal; LR 0.7 IRGC attacks vessels nearly nightly (my transit signal: 2.7/day vs 3 baseline, Oct 8); LR 1.2 Iran says reopening would begin the day Washington accepts its plan, and Iran's economy is under acute strain.",
+   "history": [
+    {
+     "date": "2026-10-09",
+     "p": 0.07,
+     "reason": "Opening: traffic is ~3 ships a day; a deal would have to come fast and stick.",
+     "models": {
+      "base": 0.08,
+      "signals": 0.06
+     }
+    }
+   ],
+   "crowd": [
+    "manifold:will-100-or-more-ships-cross-the-st-9QdR0pqRLU"
+   ],
+   "crowd_history": [
+    {
+     "date": "2026-10-09",
+     "p": 0.02
+    }
+   ],
+   "crowd_urls": {
+    "manifold:will-100-or-more-ships-cross-the-st-9QdR0pqRLU": "https://manifold.markets/HillaryClinton/will-100-or-more-ships-cross-the-st-9QdR0pqRLU"
+   }
+  },
+  {
+   "id": "10",
+   "title": "Will the Brent spot price be above $130 per barrel on 30 October 2026?",
+   "criteria": "YES if the EIA Europe Brent spot price FOB (series RBRTE) for 30 Oct 2026 is above $130.00. If no price is published for that date, the last published price before it decides. Source: EIA (eia.gov/dnav/pet/hist/RBRTED.htm) or FRED DCOILBRENTEU. Otherwise NO.",
+   "deadline": "2026-10-30",
+   "category": "energy",
+   "index": "pulse",
+   "opened": "2026-10-09",
+   "status": "open",
+   "p": 0.41,
+   "base_rate": 0.45,
+   "method": "trend: lognormal, zero drift, from $125.44 (EIA spot, 7-8 Oct), annualised volatility 0.75 = realised volatility of my 30-day spot series (daily sd 4.8%), 21 days. base: empirical: in my 30-day history spot was above $130 on about a third of days since mid-September; 45% as a crude outside view. signals: LR 0.9 Trump's no-strike promise removes the main upside tail before 3 Nov; LR 1.1 nightly attacks keep Hormuz shut.",
+   "history": [
+    {
+     "date": "2026-10-09",
+     "p": 0.41,
+     "reason": "Opening: spot sits just under the line with very high volatility.",
+     "models": {
+      "base": 0.45,
+      "trend": 0.39,
+      "signals": 0.38
+     }
+    }
+   ],
+   "crowd": [],
+   "crowd_history": []
+  },
+  {
+   "id": "11",
+   "title": "Will the Brent spot price be below $100 per barrel on 31 December 2026?",
+   "criteria": "YES if the EIA Europe Brent spot price FOB (series RBRTE) for 31 Dec 2026 is below $100.00; if none is published that day, the last price before it decides. Source: EIA or FRED DCOILBRENTEU. Otherwise NO.",
+   "deadline": "2026-12-31",
+   "category": "energy",
+   "index": "pulse",
+   "opened": "2026-10-09",
+   "status": "open",
+   "p": 0.3,
+   "base_rate": 0.25,
+   "method": "trend: lognormal, zero drift, from $125.44, annual volatility 0.75, 83 days. base: judgmental 25%: a 20% fall needs a Hormuz reopening or demand destruction; in 2022 Brent fell from $120+ to under $100 within ~3 months of its peak. signals: LR 0.8 no reopening deal in sight, attacks continue; LR 1.2 demand destruction and IEA stock releases (~100 mb) plus Saudi East-West pipeline at 5.8 mb/d.",
+   "history": [
+    {
+     "date": "2026-10-09",
+     "p": 0.3,
+     "reason": "Opening: a fall below $100 requires a political event; volatility makes it far from impossible.",
+     "models": {
+      "base": 0.25,
+      "trend": 0.32,
+      "signals": 0.32
+     }
+    }
+   ],
+   "crowd": [],
+   "crowd_history": []
+  },
+  {
+   "id": "12",
+   "title": "Will a Saudi-Houthi ceasefire agreement be announced by 31 December 2026?",
+   "criteria": "YES if between 10 Oct and 31 Dec 2026 Saudi Arabia and the Houthis (Ansar Allah), directly or through a mediator such as Oman or the UN, announce an agreed ceasefire or truce covering cross-border strikes, confirmed by both sides or by the mediator and two major wire services. Unilateral pauses do not count. Otherwise NO.",
+   "deadline": "2026-12-31",
+   "category": "war",
+   "index": "pulse",
+   "opened": "2026-10-09",
+   "status": "open",
+   "p": 0.12,
+   "base_rate": 0.15,
+   "method": "base: Saudi-Houthi war 2015-2026: formal truces in 2016 and 2022 (2 in ~11 years) but rounds of open fighting are often followed by mediated truces within months; judgmental 15% for 12 weeks. signals: LR 0.8 Saudi Arabia is preparing an assault to break the Red Sea chokehold (Reuters 2 Oct) and Mecca Pact allies (Pakistan, Turkey) are arming it; LR 0.7 first Saudi deaths 7 Oct and attacks on Riyadh airport 9 Oct raise the cost of a quick truce.",
+   "history": [
+    {
+     "date": "2026-10-09",
+     "p": 0.12,
+     "reason": "Opening: both sides are escalating; a truce now would mean one of them blinks.",
+     "models": {
+      "base": 0.15,
+      "signals": 0.09
+     }
+    }
+   ],
+   "crowd": [
+    "polymarket:saudi-houthi-ceasefire-agreement-announced-by-december-31"
+   ],
+   "crowd_history": [
+    {
+     "date": "2026-10-09",
+     "p": 0.235
+    }
+   ],
+   "crowd_urls": {
+    "polymarket:saudi-houthi-ceasefire-agreement-announced-by-december-31": "https://polymarket.com/event/saudi-houthi-ceasefire-agreement-announced-by-december-31"
+   }
+  },
+  {
+   "id": "13",
+   "title": "Will the US Federal Reserve raise rates at its 27-28 October 2026 meeting?",
+   "criteria": "YES if the FOMC statement of 28 Oct 2026 raises the federal funds target range above 3.75-4.00%. Unchanged or lower: NO. Source: federalreserve.gov.",
+   "deadline": "2026-10-28",
+   "category": "economy",
+   "index": null,
+   "opened": "2026-10-09",
+   "status": "open",
+   "p": 0.35,
+   "base_rate": 0.45,
+   "method": "base: reference class = the meeting right after the first hike of a cycle (2004: hike, 2015: no, 2022: hike, 1999: no); about half; 45%. signals: LR 0.6 Governor Waller (8 Oct) left the door open to a pause; LR 0.6 weak September payrolls (+29k, unemployment 4.2%); LR 1.2 core PCE 3%, energy shock. Honesty note: a search snippet summarising market pricing was visible before I wrote this number, so this question's errata-vs-crowd comparison is contaminated.",
+   "history": [
+    {
+     "date": "2026-10-09",
+     "p": 0.35,
+     "reason": "Opening: the committee signalled one more hike this year; December looks likelier than October.",
+     "models": {
+      "base": 0.45,
+      "signals": 0.26
+     }
+    }
+   ],
+   "crowd": [
+    "polymarket:will-the-fed-increase-interest-rates-by-25-bps-after-the-october-2026-meeting-20260617190324032",
+    "manifold:-will-the-fed-raise-interest-rates-Z62t6ZhEy5"
+   ],
+   "crowd_history": [
+    {
+     "date": "2026-10-09",
+     "p": 0.172
+    }
+   ],
+   "crowd_urls": {
+    "polymarket:will-the-fed-increase-interest-rates-by-25-bps-after-the-october-2026-meeting-20260617190324032": "https://polymarket.com/event/will-the-fed-increase-interest-rates-by-25-bps-after-the-october-2026-meeting-20260617190324032",
+    "manifold:-will-the-fed-raise-interest-rates-Z62t6ZhEy5": "https://manifold.markets/MAKER/-will-the-fed-raise-interest-rates-Z62t6ZhEy5"
+   }
+  },
+  {
+   "id": "14",
+   "title": "Will the Bank of Russia raise its key rate above 14% on 23 October 2026?",
+   "criteria": "YES if the Bank of Russia board decision of 23 Oct 2026 sets the key rate above 14.00%. Unchanged or lower: NO. Source: cbr.ru press release.",
+   "deadline": "2026-10-23",
+   "category": "economy",
+   "index": null,
+   "opened": "2026-10-09",
+   "status": "open",
+   "p": 0.11,
+   "base_rate": 0.1,
+   "method": "base: reference class = Bank of Russia meetings right after it paused an easing cycle (2017-2025): reversals to a hike at the next meeting are rare, about 1 in 10. signals: LR 1.5 underlying inflation re-accelerated to 5-6% annualised, fuel shortages, second-round effects, possible bigger budget deficit; LR 0.8 Nabiullina framed September as a 'pause' in cutting, not a turn.",
+   "history": [
+    {
+     "date": "2026-10-09",
+     "p": 0.11,
+     "reason": "Opening: the pause leaves a hold as the default; a hike needs a bad inflation print or a budget shock.",
+     "models": {
+      "base": 0.1,
+      "signals": 0.12
+     }
+    }
+   ],
+   "crowd": [],
+   "crowd_history": []
+  },
+  {
+   "id": "15",
+   "title": "Will the official rouble rate be weaker than 90 per US dollar on 31 December 2026?",
+   "criteria": "YES if the Bank of Russia official USD/RUB rate set for 31 Dec 2026 is above 90.00 roubles per dollar. Source: cbr.ru daily rates. Otherwise NO.",
+   "deadline": "2026-12-31",
+   "category": "economy",
+   "index": "mri",
+   "opened": "2026-10-09",
+   "status": "open",
+   "p": 0.25,
+   "base_rate": 0.25,
+   "method": "trend: lognormal, zero drift, from 85.42 (CBR, 8 Oct), annualised volatility 0.18 (rouble's typical 2024-26 range), 83 days. base: judgmental 25% (year-end seasonal import demand historically weakens the rouble). signals: LR 1.1 fuel imports and export bottlenecks weakened the rouble over summer (Nabiullina); LR 0.9 oil above $120 supports export revenue.",
+   "history": [
+    {
+     "date": "2026-10-09",
+     "p": 0.25,
+     "reason": "Opening: 5% weaker in under three months is a normal-size move for the rouble.",
+     "models": {
+      "base": 0.25,
+      "trend": 0.26,
+      "signals": 0.26
+     }
+    }
+   ],
+   "crowd": [],
+   "crowd_history": []
+  },
+  {
+   "id": "16",
+   "title": "Will Likud win the most seats in Israel's 27 October 2026 Knesset election?",
+   "criteria": "YES if, in the official results certified by Israel's Central Elections Committee, Likud wins more seats than any other list. A tie for first place: NO. If the election is postponed beyond 31 Dec 2026 the question is annulled. Source: votes26.bechirot.gov.il or two major outlets reporting the certified result.",
+   "deadline": "2026-11-10",
+   "category": "politics",
+   "index": null,
+   "opened": "2026-10-09",
+   "status": "open",
+   "p": 0.61,
+   "base_rate": 0.6,
+   "method": "trend: polling average (latest poll from each of 8 outlets, israel.com tracker of 8 Oct) Likud 22.5 vs Yashar 21.6; normal error on the lead with sd 3 seats -> P(lead > 0). base: in Israeli elections since 2009 the party leading the final polling average won most seats in most cases, but leads under 1 seat were coin-flips; 60%.",
+   "history": [
+    {
+     "date": "2026-10-09",
+     "p": 0.61,
+     "reason": "Opening: a sub-one-seat lead 18 days out.",
+     "models": {
+      "base": 0.6,
+      "trend": 0.62
+     }
+    }
+   ],
+   "crowd": [
+    "polymarket:will-likud-win-the-most-seats-in-the-2026-israeli-legislative-election"
+   ],
+   "crowd_history": [
+    {
+     "date": "2026-10-09",
+     "p": 0.525
+    }
+   ],
+   "crowd_urls": {
+    "polymarket:will-likud-win-the-most-seats-in-the-2026-israeli-legislative-election": "https://polymarket.com/event/will-likud-win-the-most-seats-in-the-2026-israeli-legislative-election"
+   }
+  },
+  {
+   "id": "17",
+   "title": "Will Benjamin Netanyahu be sworn in as prime minister of the next Israeli government by 30 April 2027?",
+   "criteria": "YES if a new Israeli government formed after the 27 Oct 2026 election, with Benjamin Netanyahu as prime minister, wins a Knesset confidence vote and is sworn in by 30 Apr 2027. NO if another person is sworn in, or no new government is sworn in by that date (continuing as caretaker prime minister does not count). Source: Knesset website or two major outlets.",
+   "deadline": "2027-04-30",
+   "category": "politics",
+   "index": null,
+   "opened": "2026-10-09",
+   "status": "open",
+   "p": 0.29,
+   "base_rate": 0.25,
+   "method": "base: his outgoing coalition averages 51.6 seats, 9.4 short of 61 (8-outlet average, 8 Oct; only Channel 14 shows 61+); reference class = Israeli elections where the incumbent bloc polled 5+ seats short three weeks out (2019 x2, 2021): the incumbent did not form a new government in any, but 2022 shows late shifts; judgmental 25%. signals: LR 1.1 Likud still the largest list; LR 1.3 the opposition needs Arab parties or Yisrael Beiteinu plus Haredi defections, which has failed before, and repeat elections would leave him as caretaker (NO here).",
+   "history": [
+    {
+     "date": "2026-10-09",
+     "p": 0.29,
+     "reason": "Opening: polls say no majority; coalition arithmetic on the other side is hard too.",
+     "models": {
+      "base": 0.25,
+      "signals": 0.32
+     }
+    }
+   ],
+   "crowd": [
+    "polymarket:will-benjamin-netanyahu-be-the-next-prime-minister-of-israel",
+    "manifold:will-netanyahu-win-the-next-electio"
+   ],
+   "crowd_history": [
+    {
+     "date": "2026-10-09",
+     "p": 0.339
+    }
+   ],
+   "crowd_urls": {
+    "polymarket:will-benjamin-netanyahu-be-the-next-prime-minister-of-israel": "https://polymarket.com/event/will-benjamin-netanyahu-be-the-next-prime-minister-of-israel",
+    "manifold:will-netanyahu-win-the-next-electio": "https://manifold.markets/Shump/will-netanyahu-win-the-next-electio"
+   }
+  },
+  {
+   "id": "18",
+   "title": "Will Russia officially announce a new mobilisation of reservists by 31 December 2026?",
+   "criteria": "YES if between 10 Oct and 31 Dec 2026 (Moscow time) a presidential decree or an official announcement by the Russian president or government declares a mobilisation (partial or general) of reservists, as published on kremlin.ru / pravo.gov.ru or reported by two major wire services. Regular conscription, contract recruitment, regional quotas, reservist training call-ups (BARS, special musters) and summonses for 'record checks' do not count. Otherwise NO.",
+   "deadline": "2026-12-31",
+   "category": "mobilisation",
+   "index": "mri",
+   "opened": "2026-10-09",
+   "status": "open",
+   "p": 0.07,
+   "base_rate": 0.07,
+   "method": "base: declared mobilisations during the current war, 1 in 4.6 years, Poisson +0.5 smoothing over 83 days. signals: LR 1.3 mobilisation risk index 54 'elevated'; LR 0.8 the '1 October window' passed without a decree; LR 0.8 substitutes (quotas, foreigners, coercion, summons register) are working and recruitment is only ~10% down. Pre-mortem: a battlefield shock or a failed US-led track by December; plausible but not visible now. second: independent estimate by Claude Fable 5.1, given the question, criteria and evidence but not my number (9 Oct 2026).",
+   "history": [
+    {
+     "date": "2026-10-09",
+     "p": 0.07,
+     "reason": "Opening: the state is building mobilisation-without-declaration; a decree would need a shock.",
+     "models": {
+      "base": 0.07,
+      "signals": 0.06,
+      "second": 0.07
+     }
+    }
+   ],
+   "crowd": [
+    "polymarket:will-russia-announce-a-new-forced-mobilization-by-december-31-2026",
+    "manifold:will-russia-conduct-a-new-wave-of-p"
+   ],
+   "crowd_history": [
+    {
+     "date": "2026-10-09",
+     "p": 0.195
+    }
+   ],
+   "crowd_urls": {
+    "polymarket:will-russia-announce-a-new-forced-mobilization-by-december-31-2026": "https://polymarket.com/event/will-russia-announce-a-new-forced-mobilization-by-december-31-2026",
+    "manifold:will-russia-conduct-a-new-wave-of-p": "https://manifold.markets/zrdman/will-russia-conduct-a-new-wave-of-p"
+   }
+  },
+  {
+   "id": "19",
+   "title": "Will the US strike targets on Iranian territory between 3 November and 31 December 2026?",
+   "criteria": "YES if between 3 Nov and 31 Dec 2026 (UTC) US military forces strike targets on Iran's land territory or in Iran's territorial waters, as confirmed by the US government or two major wire services. Strikes on Iranian proxies outside Iran, on Iranian ships in international waters, interceptions, and Israeli-only strikes do not count. Otherwise NO.",
+   "deadline": "2026-12-31",
+   "category": "war",
+   "index": "pulse",
+   "opened": "2026-10-09",
+   "status": "open",
+   "p": 0.32,
+   "base_rate": 0.15,
+   "method": "base: the current US-Iran ceasefire, ~180 days with no US strike on Iranian territory; 0 events in 0.5 years, +0.5 smoothing, 58 days. signals: LR 2.0 Trump tied the pause explicitly to the midterms and called stronger strikes 'possible' afterwards (Time; AP 8 Oct); LR 1.3 Pentagon told to prepare options; LR 1.3 near-nightly IRGC attacks on shipping and the Sep 9 missile strike on a US base in Jordan; LR 0.8 Iran's economic distress makes a deal more likely. second: independent estimate by Claude Fable 5.1, given the question, criteria and evidence but not my number (9 Oct 2026). Fable is much higher than my models (55% vs my 15% and 32%): it weighs the explicitly electoral framing of the pause; I keep equal weights and let the score decide.",
+   "history": [
+    {
+     "date": "2026-10-09",
+     "p": 0.32,
+     "reason": "Opening: the promise expires on 3 Nov and nothing has been settled.",
+     "models": {
+      "base": 0.15,
+      "signals": 0.32,
+      "second": 0.55
+     }
+    }
+   ],
+   "crowd": [],
+   "crowd_history": []
+  },
+  {
+   "id": "20",
+   "title": "Will Strait of Hormuz traffic recover to a 7-day average of at least 20 transits a day by 30 November 2026?",
+   "criteria": "YES if IMF PortWatch data for the Strait of Hormuz shows a 7-day moving average of at least 20 daily transit calls on any day between 10 Oct and 30 Nov 2026 (as published by 10 Dec 2026). Otherwise NO.",
+   "deadline": "2026-11-30",
+   "category": "energy",
+   "index": "pulse",
+   "opened": "2026-10-09",
+   "status": "open",
+   "p": 0.16,
+   "base_rate": 0.15,
+   "method": "base: politically closed chokepoints under an active attack campaign rarely recover fast (Red Sea traffic stayed depressed for over a year); 20/day is still only ~20% of normal, so a deal would clear it quickly; judgmental 15%. signals: LR 0.8 Trump rejected Iran's 7-day reopening proposal; LR 1.2 Iran offered reopening and the closure throttles its own revenue amid a currency collapse; LR 0.8 IRGC attacks nearly nightly since 29 Sep (my transit signal 2.7/day, 8 Oct). second: independent estimate by Claude Fable 5.1, given the question, criteria and evidence but not my number (9 Oct 2026).",
+   "history": [
+    {
+     "date": "2026-10-09",
+     "p": 0.16,
+     "reason": "Opening: ~3 ships a day; recovery needs a deal within about six weeks.",
+     "models": {
+      "base": 0.15,
+      "signals": 0.12,
+      "second": 0.22
+     }
+    }
+   ],
+   "crowd": [],
+   "crowd_history": []
+  }
+ ]
+}
