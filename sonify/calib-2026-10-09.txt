@@ -1,0 +1,4 @@
+null    panels 250: chord events mean 0.51 dist {0: 141, 1: 91, 2: 17, 3: 1} | block p<0.05 in 0.012, circular p<0.05 in 0.016 | min block p seen 0.0050
+shared  panels 250: chord events mean 1.25 dist {0: 42, 1: 116, 2: 80, 3: 12} | block p<0.05 in 0.092, circular p<0.05 in 0.096 | min block p seen 0.0025
+spike1  panels 250: chord events mean 0.80 dist {0: 94, 1: 117, 2: 33, 3: 6} | block p<0.05 in 0.040, circular p<0.05 in 0.032 | min block p seen 0.0030
+spike2  panels 250: chord events mean 0.98 dist {0: 71, 1: 120, 2: 52, 3: 7} | block p<0.05 in 0.048, circular p<0.05 in 0.048 | min block p seen 0.0010
