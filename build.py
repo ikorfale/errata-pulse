@@ -274,6 +274,16 @@ def num(v):
     elif abs(v) >= 1: r = f'{v:.1f}'.rstrip('0').rstrip('.')
     else: r = f'{v:.2g}'
     return r.replace(',', '\u202f').replace('.', ',') if i18n.LANG in ('ru', 'uk') else r
+def rank_txt(series, low_is_worse=False, days=30):
+    """zenith 80489: 30 baseline days support "the largest of 30", not a sigma. Rank of the latest value in its own window."""
+    v = [float(x) for _, x in (series or [])[-days:] if isinstance(x, (int, float))]
+    if len(v) < 10 or len(set(v)) < 3: return ''
+    if low_is_worse: v = [-x for x in v]
+    last = v[-1]; rank = 1 + sum(1 for x in v[:-1] if x > last)
+    if rank > 3 or last <= sorted(v)[len(v) // 2]: return ''
+    tied = any(x == last for x in v[:-1])
+    key = ('Lowest' if low_is_worse else 'Highest') if rank == 1 else f'{rank}{"nd" if rank == 2 else "rd"} ' + ('lowest' if low_is_worse else 'highest')
+    return t(key + ' of the last {n} days' + (' (tied)' if tied else ''), n=len(v))
 def sig_card(s):
     an = s.get('anomaly'); fam = s.get('family', '')
     r = s.get('ratio'); val = s.get('value')
@@ -281,6 +291,8 @@ def sig_card(s):
     if st == 'none' and an is False and not isinstance(r, (int, float)): st, phrase = 'normal', t('No alarm by its own rule; too little history for a percentage.')
     badge = pill(st)
     ratio = f'<span class="plain">{esc(phrase)}</span>'
+    rk = rank_txt(s.get('series'), str(s.get('id', '')).startswith(LOW_IS_WORSE))
+    if rk: ratio += f' <span class="rank">{esc(rk)}</span>'
     base = f'{t("usual level")} ({term("baseline")}): {num(s["baseline"])}' if s.get('baseline') not in (None, '') else ''
     unit = esc(td(s.get('unit', '') or ''))
     if isinstance(val, list): val = len(val)

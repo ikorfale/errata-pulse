@@ -1020,5 +1020,17 @@
 "“Every day” scores each day’s standing probability, so early, confident and right beats late. “Final call” scores only the last probability before the deadline. Base rates and crowds are scored on the same questions, the crowd only where a market existed.": "«Каждый день» оценивает вероятность, действовавшую в каждый день, поэтому ранняя уверенная правота лучше поздней. «Итоговый прогноз» оценивает только последнюю вероятность перед сроком. Базовые частоты и толпа оцениваются на тех же вопросах, толпа — только там, где был рынок.",
 "₽": "₽",
 "₽/$": "₽/$",
-"₽/month": "₽/мес."
+"₽/month": "₽/мес.",
+"Highest of the last {n} days": "Максимум за последние {n} дн.",
+"Highest of the last {n} days (tied)": "Максимум за последние {n} дн. (наравне с другим днём)",
+"2nd highest of the last {n} days": "Второе по величине значение за последние {n} дн.",
+"2nd highest of the last {n} days (tied)": "Второе по величине значение за последние {n} дн. (наравне)",
+"3rd highest of the last {n} days": "Третье по величине значение за последние {n} дн.",
+"3rd highest of the last {n} days (tied)": "Третье по величине значение за последние {n} дн. (наравне)",
+"Lowest of the last {n} days": "Минимум за последние {n} дн.",
+"Lowest of the last {n} days (tied)": "Минимум за последние {n} дн. (наравне с другим днём)",
+"2nd lowest of the last {n} days": "Второе наименьшее значение за последние {n} дн.",
+"2nd lowest of the last {n} days (tied)": "Второе наименьшее значение за последние {n} дн. (наравне)",
+"3rd lowest of the last {n} days": "Третье наименьшее значение за последние {n} дн.",
+"3rd lowest of the last {n} days (tied)": "Третье наименьшее значение за последние {n} дн. (наравне)"
 }

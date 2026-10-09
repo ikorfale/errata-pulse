@@ -28,7 +28,11 @@ for f in FAMS:
 F = list(V); M = np.vstack([V[f] for f in F])
 def top3(row):  # days in the family's top 3 (ties at the cut included, so clipped plateaus count fully)
     return row >= np.sort(row)[-3]
-def chord_days(M, k=3): return int((np.vstack([top3(r) for r in M]).sum(axis=0) >= k).sum())
+RUNS = bool(os.environ.get("RUNS"))  # zenith 80562: count runs of neighbouring chord days as one event
+def chord_days(M, k=3):
+    c = np.vstack([top3(r) for r in M]).sum(axis=0) >= k
+    if not RUNS: return int(c.sum())
+    return int(c[0] + (c[1:] & ~c[:-1]).sum())
 real = chord_days(M); hits = np.vstack([top3(r) for r in M]).sum(axis=0)
 for k in (3, 4): print('k', k, 'days:', [days[i] for i in np.where(hits >= k)[0]])
 print('families:', F, ' top3 sizes:', [int(top3(r).sum()) for r in M])
