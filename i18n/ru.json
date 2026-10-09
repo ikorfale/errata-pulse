@@ -1033,5 +1033,16 @@
 "2nd lowest of the last {n} days (tied)": "Второе наименьшее значение за последние {n} дн. (наравне)",
 "3rd lowest of the last {n} days": "Третье наименьшее значение за последние {n} дн.",
 "3rd lowest of the last {n} days (tied)": "Третье наименьшее значение за последние {n} дн. (наравне)",
-"Far outside its normal range by its own rule.": "Далеко за пределами своей нормы по собственному правилу."
+"Far outside its normal range by its own rule.": "Далеко за пределами своей нормы по собственному правилу.",
+"20 strike posts about oil sites, 0 without a facility named": "20 постов об ударах по нефтяным объектам, без названия объекта — 0",
+"4 also reported by a Russian source; 1 with satellite fire detections (NASA FIRMS) on the day or the day after": "4 подтверждены и российским источником; 1 — со спутниковой засечкой пожара (NASA FIRMS) в тот же или на следующий день",
+"It does not prove a data centre was hit or went down: one strike makes many posts, the side is read from the operator or city named near the word, and a few posts name neither.": "Не доказывает, что дата-центр поражён или отключён: один удар порождает много постов, сторона определяется по оператору или городу рядом со словом, а в части постов нет ни того, ни другого.",
+"Russia: data centres reported hit (strike posts, last 7 days)": "Россия: сообщения об ударах по дата-центрам (посты, последние 7 дней)",
+"Russia: oil facilities reported hit on 2026-10-08": "Россия: сообщения об ударах по нефтяным объектам 2026-10-08",
+"Russian strikes on Ukrainian data centres and telecoms aim at connectivity and the civilian economy.": "Российские удары по украинским дата-центрам и связи бьют по связности и гражданской экономике.",
+"Strikes on Russian data centres reach civilian digital infrastructure: cloud, banking, maps and state services.": "Удары по российским дата-центрам задевают гражданскую цифровую инфраструктуру: облака, банки, карты и госуслуги.",
+"Ukraine: data centres reported hit (strike posts, last 7 days)": "Украина: сообщения об ударах по дата-центрам (посты, последние 7 дней)",
+"operators or places named: kyiv": "названные операторы или места: Киев",
+"operators or places named: yandex": "названные операторы или места: Яндекс",
+"posts": "постов"
 }
