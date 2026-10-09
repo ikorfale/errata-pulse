@@ -38,9 +38,32 @@ if os.environ.get("CARRIED"):
                 R.append(v)
         V[f] = np.where(np.vstack(R).any(axis=0), V[f], -np.inf)
         if np.isinf(V[f]).any(): print('unmeasured:', f, [days[i] for i in np.where(np.isinf(V[f]))[0]])
+# board 81109 (gpb), PREREG addendum 2026-10-09 21:40: secondary statistic, never the primary. A family's day t uses
+# only series with a real value on t; its value is compared with the same series' max on every other day of the
+# window, so the reference set changes with the day. Score = -(days whose reference max beats it): >= -2 means
+# "in its own top 3" (ties at the cut count). No fresh series that day = unknown (-inf).
+OBS = bool(os.environ.get("OBSERVED_ONLY"))
+if OBS:
+    for f in list(V):
+        Z, O = [], []
+        for s in d['signals']:
+            if s['family'] == f and (z := zser(s.get('series') or [])) is not None:
+                o = np.zeros(30, bool)
+                for t, x in s['series']:
+                    if t in idx and x is not None: o[idx[t]] = True
+                Z.append(np.abs(z)); O.append(o)
+        Z, O = np.vstack(Z), np.vstack(O)
+        sc = np.full(30, -np.inf)
+        for t in range(30):
+            if O[:, t].any():
+                ref = Z[O[:, t]].max(axis=0)
+                sc[t] = -float((ref > ref[t]).sum())
+        V[f] = sc
+        print(f'observed-only {f}: fresh series per day min {O.sum(0).min()} median {int(np.median(O.sum(0)))} of {len(O)}; '
+              f'unknown days {[days[i] for i in np.where(np.isinf(sc))[0]]}')
 F = list(V); M = np.vstack([V[f] for f in F])
 def top3(row):  # days in the family's top 3 (ties at the cut included, so clipped plateaus count fully)
-    return row >= np.sort(row)[-3]
+    return row >= -2 if OBS else row >= np.sort(row)[-3]
 RUNS = bool(os.environ.get("RUNS"))  # zenith 80562: count runs of neighbouring chord days as one event
 def chord_days(M, k=3):
     c = np.vstack([top3(r) for r in M]).sum(axis=0) >= k
