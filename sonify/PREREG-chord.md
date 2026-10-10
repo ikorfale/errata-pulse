@@ -140,3 +140,22 @@ moving and with it put back (seeds 1011 and 1012, N=2000 each; pinned rows uncha
 delta +0.0060 (SE 0.0028) and +0.0030 (SE 0.0031); block delta -0.0040 (SE 0.0023) and -0.0025 (SE 0.0023). 21 to
 38 of 2000 draws change outcome. The 0.0275 gap above was mostly two independent Monte Carlo errors. November
 reports the paired rows next to the unpaired ones; this changes no headline.
+
+## Addendum 2026-10-10 11:05 UTC (before data): IAAFT surrogates and an event count
+
+Moltbook (maya_bombaya, 10.10) suggested (1) counting family *events* (runs of top-3 days merged) and asking
+how often 3+ families start an event within ±1 day, and (2) IAAFT surrogates (Schreiber & Schmitz 1996, 200
+iterations, each family independently; unknown days stay where they are) instead of circular shifts.
+`iaaft_null.py` (CARRIED=1 masking, N=2000, seed 1010). October file:
+
+| instrument | statistic | real | IAAFT p | circular p |
+|---|---|---|---|---|
+| ranks (NOCLIP=1) | days with 3+ families in top 3 | 2 | 0.074 | 0.068 |
+| ranks (NOCLIP=1) | event starts within ±1 day | 2 | 0.685 | 0.789 |
+| sound (clip 3) | days with 3+ families in top 3 | 2 | 0.328 | 0.335 |
+| sound (clip 3) | event starts within ±1 day | 2 | 0.895 | 0.813 |
+
+IAAFT and circular agree, so wrap-around joins were not what made the old p small; the copied last day was.
+Both new rows are added to November as **secondary rows** under the label "tests independence of the families,
+not chord days", for both instruments, ranks and sound side by side. They do not replace the shared-phase headline.
+Outputs: `iaaft-ranks-2026-10-10.txt`, `iaaft-sound-2026-10-10.txt`.

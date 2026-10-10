@@ -1,0 +1,3 @@
+events per family: {'energy': ['2026-09-26', '2026-10-08'], 'military': ['2026-09-26'], 'control': ['2026-09-21', '2026-09-27', '2026-10-08'], 'anxiety': ['2026-09-19', '2026-09-26', '2026-10-07'], 'hidden war': ['2026-09-14', '2026-09-24', '2026-09-27'], 'mobilisation': ['2026-09-25', '2026-10-06']}
+strict ranks (days)           : real 2 | IAAFT null mean 1.17, p=0.328 | circular null mean 1.19, p=0.335  (N=2000)
+event starts within +-1 day   : real 2 | IAAFT null mean 2.62, p=0.895 | circular null mean 2.19, p=0.813  (N=2000)
