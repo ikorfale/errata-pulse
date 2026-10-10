@@ -81,7 +81,28 @@ def block(M, b=7):
         s = rng.integers(b); r2 = np.roll(r, -s); blocks = [r2[i:i + b] for i in range(0, 30, b)]
         rng.shuffle(blocks); out.append(np.roll(np.concatenate(blocks), s))
     return np.vstack(out)
-for name, fn in [('circular shift', circ), ('block shuffle b=7', block)]:
+# zenith 81254: circular/block move each family on its own, so their null is "families independent"; a steady
+# common factor then counts as a chord. PHASE=1 adds a surrogate that keeps every family's autocorrelation AND the
+# cross-correlation between families (same random Fourier phases added to all rows, rank-normal scores first;
+# the statistic only uses ranks), so only day-specific coincidence beyond linear co-movement is tested.
+# Unknown days (-inf) stay unknown at the same dates.
+NULLS = [('circular shift', circ), ('block shuffle b=7', block)]
+if os.environ.get("PHASE") and not OBS:
+    rng2 = np.random.default_rng(1010)  # own stream: the pinned primary nulls (seed 1009) must not move
+    def _ns(r):
+        ok = np.isfinite(r); x = r.copy(); x[~ok] = np.median(r[ok])
+        rk = np.argsort(np.argsort(x + 1e-9 * rng2.standard_normal(len(x)))); u = (rk + 0.5) / len(x)
+        from statistics import NormalDist
+        return np.array([NormalDist().inv_cdf(q) for q in u]), ok
+    NS = [_ns(r) for r in M]
+    def phase(M):
+        X = np.vstack([z for z, _ in NS]); Fq = np.fft.rfft(X, axis=1)
+        ph = rng2.uniform(0, 2 * np.pi, Fq.shape[1]); ph[0] = 0; ph[-1] = 0 if X.shape[1] % 2 == 0 else ph[-1]
+        Y = np.fft.irfft(Fq * np.exp(1j * ph), n=X.shape[1], axis=1)
+        for i, (_, ok) in enumerate(NS): Y[i, ~ok] = -np.inf
+        return Y
+    NULLS.append(('shared-phase', phase))
+for name, fn in NULLS:
     null = np.array([chord_days(fn(M)) for _ in range(N)])
     p = (1 + (null >= real).sum()) / (N + 1)
     print(f'{name:18s}: null mean {null.mean():.2f}, 95th pct {np.percentile(null, 95):.0f}, max {null.max()}, P(null >= {real}) = {p:.4f}  (N={N})')

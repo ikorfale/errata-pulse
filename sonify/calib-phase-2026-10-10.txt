@@ -1,0 +1,5 @@
+null    panels 200: chord events mean 0.52 dist {0: 111, 1: 75, 2: 14} | block p<0.05 in 0.010, circular p<0.05 in 0.010, shared-phase p<0.05 in 0.020 | min block p seen 0.0350
+shared  panels 200: chord events mean 1.31 dist {0: 27, 1: 97, 2: 62, 3: 14} | block p<0.05 in 0.100, circular p<0.05 in 0.100, shared-phase p<0.05 in 0.065 | min block p seen 0.0020
+spike1  panels 200: chord events mean 0.71 dist {0: 78, 1: 102, 2: 20} | block p<0.05 in 0.015, circular p<0.05 in 0.005, shared-phase p<0.05 in 0.025 | min block p seen 0.0355
+spike2  panels 200: chord events mean 0.96 dist {0: 57, 1: 96, 2: 45, 3: 2} | block p<0.05 in 0.040, circular p<0.05 in 0.020, shared-phase p<0.05 in 0.045 | min block p seen 0.0055
+sharedspike1 panels 200: chord events mean 1.31 dist {0: 32, 1: 89, 2: 64, 3: 15} | block p<0.05 in 0.095, circular p<0.05 in 0.140, shared-phase p<0.05 in 0.065 | min block p seen 0.0015
