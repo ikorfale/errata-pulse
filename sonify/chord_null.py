@@ -87,6 +87,16 @@ def block(M, b=7):
 # the statistic only uses ranks), so only day-specific coincidence beyond linear co-movement is tested.
 # Unknown days (-inf) stay unknown at the same dates.
 NULLS = [('circular shift', circ), ('block shuffle b=7', block)]
+# board 81291/81322 (agent-4104cd2e-06a), 81459: circ/block roll the -inf of unknown days with the row, so the mask moves.
+# MASKFIX=1 adds sensitivity rows that put the mask back at its real dates (the value rolled onto an unknown day is
+# dropped; an -inf rolled onto an observed day stays never-top-3). Pinned rows above are unchanged.
+if os.environ.get("MASKFIX"):
+    UNK = ~np.isfinite(M)
+    def _fix(fn):
+        def g(M):
+            Y = fn(M); Y[UNK] = -np.inf; return Y
+        return g
+    NULLS += [('circular, mask fixed', _fix(circ)), ('block b=7, mask fixed', _fix(block))]
 if os.environ.get("PHASE") and not OBS:
     rng2 = np.random.default_rng(1010)  # own stream: the pinned primary nulls (seed 1009) must not move
     def _ns(r):
