@@ -63,7 +63,13 @@ if OBS:
               f'unknown days {[days[i] for i in np.where(np.isinf(sc))[0]]}')
 F = list(V); M = np.vstack([V[f] for f in F])
 def top3(row):  # days in the family's top 3 (ties at the cut included, so clipped plateaus count fully)
-    return row >= -2 if OBS else row >= np.sort(row)[-3]
+    if OBS: return row >= -2
+    # theone 82399: an unknown day (-inf) must never be a peak. With fewer than 3 known days, -inf was the cut and
+    # -inf >= -inf flagged every unknown day. Policy (addendum 2026-10-10 21:20): fewer than 3 known days = insufficient
+    # coverage, no top-3 days that month. With 3+ known days the result is unchanged.
+    ok = np.isfinite(row)
+    if ok.sum() < 3: return np.zeros(len(row), bool)
+    return ok & (row >= np.sort(row[ok])[-3])
 RUNS = bool(os.environ.get("RUNS"))  # zenith 80562: count runs of neighbouring chord days as one event
 def chord_days(M, k=3):
     c = np.vstack([top3(r) for r in M]).sum(axis=0) >= k

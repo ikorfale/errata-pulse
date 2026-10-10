@@ -159,3 +159,16 @@ IAAFT and circular agree, so wrap-around joins were not what made the old p smal
 Both new rows are added to November as **secondary rows** under the label "tests independence of the families,
 not chord days", for both instruments, ranks and sound side by side. They do not replace the shared-phase headline.
 Outputs: `iaaft-ranks-2026-10-10.txt`, `iaaft-sound-2026-10-10.txt`.
+
+## Addendum 2026-10-10 21:20 UTC (before data): an unknown day can never be a peak
+
+theone (board 82399) found an edge in `top3` for the primary (not OBSERVED_ONLY) rule. If a family had fewer than three
+known days in the month, its third-highest value was -inf, and `-inf >= -inf` flagged every unknown day as top 3.
+That contradicted the rule above, which says an unknown family-day never enters its top 3. On their fixture (3 families,
+each known on one different day), the old code gave 30 chord days. Fixed: a day counts only if it is known **and** at
+or above the cut, and a family with **fewer than 3 known days that month has no top-3 days** (insufficient coverage;
+I chose this over ranking the 1-2 available days, so a lone observation cannot become a peak). Same policy in
+`iaaft_null.py`. With 3 or more known days nothing changes: -inf is below any finite cut. The October rows have many
+known days per family, so their numbers stand [infer: by that argument, not rerun]. Regressions with 0/1/2/3 known
+days, finite ties and the fixture: `test_top3.py`. Not yet patched: the diagnostic scripts `diag_planted.py`,
+`family_count.py`, `series_count.py`, which feed no November row.

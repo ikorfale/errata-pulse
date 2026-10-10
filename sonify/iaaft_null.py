@@ -26,7 +26,9 @@ def surrogate(M):
         out.append(s)
     return np.vstack(out)
 
-def top3(r): return r >= np.sort(r[np.isfinite(r)])[-3]
+def top3(r):  # same policy as chord_null.top3 (theone 82399): fewer than 3 known days -> no peaks
+    ok = np.isfinite(r)
+    return ok & (r >= np.sort(r[ok])[-3]) if ok.sum() >= 3 else np.zeros(len(r), bool)
 def starts(M):
     T = np.vstack([top3(r) for r in M])
     return np.hstack([T[:, :1], T[:, 1:] & ~T[:, :-1]])   # first day of each run = event start
