@@ -446,6 +446,9 @@ location.replace('/'+c+'/'+location.search+location.hash)}})()</script><noscript
         urls += ''.join(f'<url><loc>{BASE}/{l}{pth}</loc><lastmod>{lm}</lastmod>{links}</url>' for l in i18n.LANGS)
     open(os.path.join(OUT, 'sitemap.xml'), 'w').write('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">' + urls + '</urlset>\n')
     open(os.path.join(OUT, 'robots.txt'), 'w').write(f'User-agent: *\nAllow: /\nSitemap: {BASE}/sitemap.xml\n')
+    # IndexNow: the key is public by design (same key as errata.page); the file must sit on this host for submissions
+    if os.path.exists(os.path.join(ROOT, 'indexnow.key')):
+        k = open(os.path.join(ROOT, 'indexnow.key')).read().strip(); open(os.path.join(OUT, k + '.txt'), 'w').write(k)
     old = ['signals', 'reports', 'archive', 'methodology', 'how-to-read', 'telegram', 'mobilization', 'forecasts']   # pre-language URLs, still linked from posts
     redirects = [{"source": f"/{o}", "destination": f"/en/{o}/", "permanent": True} for o in old] + [{"source": f"/{o}/:rest(.*)", "destination": f"/en/{o}/:rest", "permanent": True} for o in old]
     redirects = [r for r in redirects if r['source'] not in ('/telegram/:rest(.*)', '/mobilization/:rest(.*)')] + [
