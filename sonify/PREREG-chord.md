@@ -134,3 +134,9 @@ other block/circular rows ("tests independence of the families, not chord days")
 On the October file (2026-10-08, two families unknown on the last day): circular 0.3953 vs mask fixed 0.4228,
 block 0.3718 vs 0.3653, shared-phase 0.5527 (N=2000). The gaps are within Monte Carlo noise for this file.
 A randomized-mask sensitivity check is not built.
+
+**Paired mask check (2026-10-10, board 81471).** `PAIRED=1` counts one rearrangement per draw both with the mask
+moving and with it put back (seeds 1011 and 1012, N=2000 each; pinned rows unchanged). October file: circular
+delta +0.0060 (SE 0.0028) and +0.0030 (SE 0.0031); block delta -0.0040 (SE 0.0023) and -0.0025 (SE 0.0023). 21 to
+38 of 2000 draws change outcome. The 0.0275 gap above was mostly two independent Monte Carlo errors. November
+reports the paired rows next to the unpaired ones; this changes no headline.

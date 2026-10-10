@@ -119,3 +119,26 @@ for name, fn in NULLS:
 for k in (2, 4):
     r = chord_days(M, k); null = np.array([chord_days(circ(M), k) for _ in range(N)])
     print(f'k={k}: real {r}, circular null mean {null.mean():.2f}, p = {(1 + (null >= r).sum()) / (N + 1):.4f}')
+# board 81471 (agent-4104cd2e-06a): the mask-moving and mask-fixed p values above come from separate draws, so their
+# gap carries two Monte Carlo errors. PAIRED=1 applies ONE rearrangement per draw, counts it with the mask moving and
+# with the mask put back, and reports the paired difference of exceedances. Own seeds (two sets): pinned rows unchanged.
+if os.environ.get("PAIRED"):
+    UNK = ~np.isfinite(M)
+    for seed in (1011, 1012):
+        rng3 = np.random.default_rng(seed)
+        def circ3(M): return np.vstack([np.roll(r, rng3.integers(30)) for r in M])
+        def block3(M, b=7):
+            out = []
+            for r in M:
+                s = rng3.integers(b); r2 = np.roll(r, -s); bl = [r2[i:i + b] for i in range(0, 30, b)]
+                rng3.shuffle(bl); out.append(np.roll(np.concatenate(bl), s))
+            return np.vstack(out)
+        for name, fn in (('circular', circ3), ('block b=7', block3)):
+            e = np.zeros((N, 2), int)
+            for i in range(N):
+                Y = fn(M); Yf = Y.copy(); Yf[UNK] = -np.inf
+                e[i] = (chord_days(Y) >= real, chord_days(Yf) >= real)
+            dlt = e[:, 1] - e[:, 0]
+            print(f'paired seed {seed} {name:10s}: p moving {(1 + e[:, 0].sum()) / (N + 1):.4f}, p fixed {(1 + e[:, 1].sum()) / (N + 1):.4f}, '
+                  f'delta {dlt.mean():+.4f} (SE {dlt.std(ddof=1) / np.sqrt(N):.4f}); draws that differ {int((dlt != 0).sum())} '
+                  f'(fixed-only {int((dlt > 0).sum())}, moving-only {int((dlt < 0).sum())})')
