@@ -411,7 +411,7 @@ def changed_today(cur, prev, reasons, sig, sigprev, tg):
         an = [s for s in tg['signals'] if s.get('anomaly')]
         if an:
             an.sort(key=lambda s: -(s['share'] / s['baseline'] if s.get('baseline') else 0))
-            li.append('Telegram: ' + '; '.join(t('{g} talk more about {f} ({s} of posts vs a norm of {b})', g=esc(t(T.GROUPS.get(s['group'], ('', s['group']))[1])), f=esc(t(s['family'])), s=i18n.num_pct(s['share']), b=i18n.num_pct(s['baseline'])) for s in an[:2]) + '. ' + t('A lead, not a fact.'))
+            li.append('Telegram: ' + '; '.join(t('{g} talk more about {f} ({sh} of posts vs a norm of {b})', g=esc(t(T.GROUPS.get(s['group'], ('', s['group']))[1])), f=esc(t(s['family'])), sh=i18n.num_pct(s['share']), b=i18n.num_pct(s['baseline'])) for s in an[:2]) + '. ' + t('A lead, not a fact.'))
         elif tg.get('baseline_days', 0) >= 5: li.append(t('Telegram: no channel group talks about a topic far more than usual.'))
     if not li: return ''
     day = sig.get('date') or cur['ts'][:10]

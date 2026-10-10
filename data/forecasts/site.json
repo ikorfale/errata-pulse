@@ -1,7 +1,7 @@
 {
- "generated": "2026-10-09T23:42:49.162748+00:00",
+ "generated": "2026-10-10T23:23:10.270326+00:00",
  "counts": {
-  "open": 20,
+  "open": 24,
   "resolved": 0,
   "annulled": 0
  },
@@ -106,6 +106,10 @@
     {
      "date": "2026-10-09",
      "p": 0.086
+    },
+    {
+     "date": "2026-10-10",
+     "p": 0.087
     }
    ],
    "crowd_urls": {
@@ -196,6 +200,10 @@
     {
      "date": "2026-10-09",
      "p": 0.08
+    },
+    {
+     "date": "2026-10-10",
+     "p": 0.08
     }
    ],
    "crowd_urls": {
@@ -232,6 +240,10 @@
    "crowd_history": [
     {
      "date": "2026-10-09",
+     "p": 0.116
+    },
+    {
+     "date": "2026-10-10",
      "p": 0.116
     }
    ],
@@ -295,6 +307,10 @@
     {
      "date": "2026-10-09",
      "p": 0.25
+    },
+    {
+     "date": "2026-10-10",
+     "p": 0.265
     }
    ],
    "crowd_urls": {
@@ -356,6 +372,10 @@
    "crowd_history": [
     {
      "date": "2026-10-09",
+     "p": 0.02
+    },
+    {
+     "date": "2026-10-10",
      "p": 0.02
     }
    ],
@@ -426,7 +446,7 @@
    "index": "pulse",
    "opened": "2026-10-09",
    "status": "open",
-   "p": 0.1,
+   "p": 0.09,
    "base_rate": 0.15,
    "method": "base: Saudi-Houthi war 2015-2026: formal truces in 2016 and 2022 (2 in ~11 years) but rounds of open fighting are often followed by mediated truces within months; judgmental 15% for 12 weeks. signals: LR 0.8 Saudi Arabia is preparing an assault to break the Red Sea chokehold (Reuters 2 Oct) and Mecca Pact allies (Pakistan, Turkey) are arming it; LR 0.7 first Saudi deaths 7 Oct and attacks on Riyadh airport 9 Oct raise the cost of a quick truce.",
    "history": [
@@ -434,6 +454,15 @@
      "date": "2026-10-09",
      "p": 0.1,
      "reason": "AFP (9 Oct, one regional source): Saudi Arabia will not accept a truce until the government regains lost territory; the coalition vows a 'firm' response after 3 deaths at Riyadh airport. LR 0.85, single anonymous source so a small step.",
+     "models": {
+      "base": 0.15,
+      "signals": 0.09
+     }
+    },
+    {
+     "date": "2026-10-10",
+     "p": 0.09,
+     "reason": "Third Houthi strike on Riyadh airport in a week (10 Oct), terminal hit; Saudi Arabia still rejects a truce before regaining territory; ground offensive ongoing.",
      "models": {
       "base": 0.15,
       "signals": 0.09
@@ -446,6 +475,10 @@
    "crowd_history": [
     {
      "date": "2026-10-09",
+     "p": 0.235
+    },
+    {
+     "date": "2026-10-10",
      "p": 0.235
     }
    ],
@@ -484,6 +517,10 @@
     {
      "date": "2026-10-09",
      "p": 0.168
+    },
+    {
+     "date": "2026-10-10",
+     "p": 0.174
     }
    ],
    "crowd_urls": {
@@ -574,6 +611,10 @@
     {
      "date": "2026-10-09",
      "p": 0.515
+    },
+    {
+     "date": "2026-10-10",
+     "p": 0.505
     }
    ],
    "crowd_urls": {
@@ -611,6 +652,10 @@
     {
      "date": "2026-10-09",
      "p": 0.334
+    },
+    {
+     "date": "2026-10-10",
+     "p": 0.329
     }
    ],
    "crowd_urls": {
@@ -650,6 +695,10 @@
     {
      "date": "2026-10-09",
      "p": 0.202
+    },
+    {
+     "date": "2026-10-10",
+     "p": 0.205
     }
    ],
    "crowd_urls": {
@@ -705,6 +754,111 @@
       "base": 0.15,
       "signals": 0.12,
       "second": 0.22
+     }
+    }
+   ],
+   "crowd": [],
+   "crowd_history": []
+  },
+  {
+   "id": "21",
+   "title": "Will Riyadh's King Khalid International Airport be closed to commercial flights for at least 24 consecutive hours between 11 and 31 October 2026?",
+   "criteria": "YES if GACA, the airport operator, or at least two major outlets (AP, Reuters, AFP, Bloomberg) report that all commercial flight operations at King Khalid International Airport (RUH) were suspended for a continuous period of 24 hours or more starting between 11 Oct and 31 Oct 2026 (UTC). Suspensions of single airlines or terminals do not count. NO otherwise.",
+   "deadline": "2026-10-31",
+   "category": "war",
+   "index": null,
+   "opened": "2026-10-10",
+   "status": "open",
+   "p": 0.22,
+   "base_rate": 0.15,
+   "method": "base: rare full-day closures of Gulf capital airports in this war (judgement, no clean series); signals: bayes x2 (three strikes in a week, terminal hit) x0.8 (quick reopenings so far)",
+   "history": [
+    {
+     "date": "2026-10-10",
+     "p": 0.22,
+     "reason": "Third hit on the airport in a week; on 10 Oct a missile struck the domestic terminal complex and GACA suspended operations temporarily. So far reopenings came within hours.",
+     "models": {
+      "base": 0.15,
+      "signals": 0.22
+     }
+    }
+   ],
+   "crowd": [],
+   "crowd_history": []
+  },
+  {
+   "id": "22",
+   "title": "Will the United States carry out acknowledged military strikes on Houthi targets in Yemen by 30 November 2026?",
+   "criteria": "YES if the US government (White House, Pentagon, CENTCOM) confirms US forces struck Houthi targets in Yemen between 11 Oct and 30 Nov 2026, or at least two major outlets report such US strikes as fact citing US officials. Intelligence, refuelling or support for Saudi strikes does not count. NO otherwise.",
+   "deadline": "2026-11-30",
+   "category": "war",
+   "index": null,
+   "opened": "2026-10-10",
+   "status": "open",
+   "p": 0.27,
+   "base_rate": 0.11,
+   "method": "base: forecast calc rate, 2 US anti-Houthi campaigns in 3 years over 51 days = 0.11; signals: bayes x3 (Trump 'may') x1.3 (support already flowing); trend: judgement; ensemble ~0.27",
+   "history": [
+    {
+     "date": "2026-10-10",
+     "p": 0.27,
+     "reason": "Trump said on 10 Oct the US 'may' join strikes after the Riyadh airport attacks; the US already gives intelligence and refuelling (Al-Monitor). No decision announced; pre-midterm caution.",
+     "models": {
+      "base": 0.11,
+      "signals": 0.3,
+      "trend": 0.25
+     }
+    }
+   ],
+   "crowd": [],
+   "crowd_history": []
+  },
+  {
+   "id": "23",
+   "title": "Will the United States suspend intelligence sharing with Ukraine by 30 November 2026?",
+   "criteria": "YES if between 11 Oct and 30 Nov 2026 a US official confirms on the record, or at least two major outlets (Reuters, AP, Bloomberg, FT, NYT, WSJ, Axios) report as implemented, a suspension or pause (full or covering long-range targeting) of US intelligence sharing with Ukraine. A threat or warning does not count. NO otherwise.",
+   "deadline": "2026-11-30",
+   "category": "war",
+   "index": null,
+   "opened": "2026-10-10",
+   "status": "open",
+   "p": 0.16,
+   "base_rate": 0.1,
+   "method": "base: forecast calc rate, 1 suspension in 2 years over 51 days = 0.10; signals: bayes x2.5 (reported threat) x1.2 (Trump vs Zelensky), shaded down for the official denial",
+   "history": [
+    {
+     "date": "2026-10-10",
+     "p": 0.16,
+     "reason": "Axios and FT (10 Oct) report Witkoff and Kushner threatened to cut intelligence over refinery strikes; a US official denies a threat was made. Trump called for Ukraine to get a new president. Precedent: a pause in March 2025.",
+     "models": {
+      "base": 0.1,
+      "signals": 0.18
+     }
+    }
+   ],
+   "crowd": [],
+   "crowd_history": []
+  },
+  {
+   "id": "24",
+   "title": "Will there be a pause of at least 14 consecutive days without a Ukrainian strike on a Russian oil refinery between 11 October and 30 November 2026?",
+   "criteria": "YES if there is any window of 14 consecutive UTC days within 11 Oct - 30 Nov 2026 in which no strike on a Russian oil refinery is reported as carried out by Ukraine by Ukraine's General Staff, the Ukrainian president, or at least two major outlets (Reuters, AP, AFP, Bloomberg, Kyiv Independent, Moscow Times). Strikes on depots, pumping stations or terminals do not count. NO otherwise.",
+   "deadline": "2026-11-30",
+   "category": "war",
+   "index": null,
+   "opened": "2026-10-10",
+   "status": "open",
+   "p": 0.13,
+   "base_rate": 0.15,
+   "method": "base: judgement from 2025-26 campaign which had multi-week lulls a few times a year; signals: bayes x1.5 (US pressure) x0.6 (Kyiv's stated refusal; Russia keeps striking the grid)",
+   "history": [
+    {
+     "date": "2026-10-10",
+     "p": 0.13,
+     "reason": "US pressure (intelligence threat, diesel deal) pushes for a halt; Kyiv says it will keep 'burning refineries' unless Russia stops striking Ukraine's grid. Campaign at its normal pace (6 sites in 7 days vs norm 6.8).",
+     "models": {
+      "base": 0.15,
+      "signals": 0.13
      }
     }
    ],
