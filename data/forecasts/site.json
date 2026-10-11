@@ -1,14 +1,14 @@
 {
- "generated": "2026-10-11T01:39:55.762042+00:00",
+ "generated": "2026-10-11T22:42:49.852865+00:00",
  "counts": {
-  "open": 25,
-  "resolved": 0,
+  "open": 24,
+  "resolved": 1,
   "annulled": 0
  },
  "brier": {
-  "mine": null,
-  "final": null,
-  "base": null,
+  "mine": 0.16,
+  "final": 0.16,
+  "base": 0.16,
   "crowd": null
  },
  "calibration": [
@@ -50,9 +50,9 @@
   },
   {
    "bin": "60-70%",
-   "n": 0,
-   "mean_p": null,
-   "freq_yes": null
+   "n": 1,
+   "mean_p": 0.6,
+   "freq_yes": 1.0
   },
   {
    "bin": "70-80%",
@@ -73,7 +73,10 @@
    "freq_yes": null
   }
  ],
- "models": {},
+ "models": {
+  "signals": 0.1681,
+  "base": 0.16
+ },
  "questions": [
   {
    "id": "1",
@@ -110,6 +113,10 @@
     {
      "date": "2026-10-10",
      "p": 0.087
+    },
+    {
+     "date": "2026-10-11",
+     "p": 0.088
     }
    ],
    "crowd_urls": {
@@ -204,6 +211,10 @@
     {
      "date": "2026-10-10",
      "p": 0.08
+    },
+    {
+     "date": "2026-10-11",
+     "p": 0.095
     }
    ],
    "crowd_urls": {
@@ -245,6 +256,10 @@
     {
      "date": "2026-10-10",
      "p": 0.116
+    },
+    {
+     "date": "2026-10-11",
+     "p": 0.138
     }
    ],
    "crowd_urls": {
@@ -259,7 +274,7 @@
    "category": "war",
    "index": "pulse",
    "opened": "2026-10-09",
-   "status": "open",
+   "status": "yes",
    "p": 0.6,
    "base_rate": 0.6,
    "method": "base: reference class = new target classes Ukraine opened during this war (refineries 2024, oil ports, power plants, pumping stations): after two hits in quick succession, a third followed within ~5 weeks in most cases; judgmental 60%. signals: LR 0.8 Yandex hid all four cloud sites from its maps and operators will harden sites; LR 1.2 strikes framed as retaliation for Russian strikes on Ukrainian data centres since late September (my Telegram strike collector: 17 Russian-side posts on data-centre strikes on 8 Oct vs baseline 0).",
@@ -275,7 +290,22 @@
     }
    ],
    "crowd": [],
-   "crowd_history": []
+   "crowd_history": [],
+   "resolved_at": "2026-10-11",
+   "resolution_source": "https://tass.com/emergencies/2200435",
+   "resolution_note": "Yandex data centre in Vladimir damaged and halted by drone attack on 11 Oct 2026; confirmed by the operator (Yandex Cloud status channel, via TASS) and reported by Kyiv Independent.",
+   "scores": {
+    "brier": 0.16000000000000003,
+    "brier_final": 0.16000000000000003,
+    "models": {
+     "signals": 0.16810000000000003,
+     "base": 0.16000000000000003
+    },
+    "brier_base": 0.16000000000000003,
+    "brier_crowd": null,
+    "days": 3,
+    "outcome": 1.0
+   }
   },
   {
    "id": "7",
@@ -310,6 +340,10 @@
     },
     {
      "date": "2026-10-10",
+     "p": 0.265
+    },
+    {
+     "date": "2026-10-11",
      "p": 0.265
     }
    ],
@@ -376,6 +410,10 @@
     },
     {
      "date": "2026-10-10",
+     "p": 0.02
+    },
+    {
+     "date": "2026-10-11",
      "p": 0.02
     }
    ],
@@ -480,6 +518,10 @@
     {
      "date": "2026-10-10",
      "p": 0.235
+    },
+    {
+     "date": "2026-10-11",
+     "p": 0.235
     }
    ],
    "crowd_urls": {
@@ -521,6 +563,10 @@
     {
      "date": "2026-10-10",
      "p": 0.174
+    },
+    {
+     "date": "2026-10-11",
+     "p": 0.179
     }
    ],
    "crowd_urls": {
@@ -615,6 +661,10 @@
     {
      "date": "2026-10-10",
      "p": 0.505
+    },
+    {
+     "date": "2026-10-11",
+     "p": 0.515
     }
    ],
    "crowd_urls": {
@@ -656,6 +706,10 @@
     {
      "date": "2026-10-10",
      "p": 0.329
+    },
+    {
+     "date": "2026-10-11",
+     "p": 0.324
     }
    ],
    "crowd_urls": {
@@ -708,6 +762,10 @@
     },
     {
      "date": "2026-10-10",
+     "p": 0.205
+    },
+    {
+     "date": "2026-10-11",
      "p": 0.205
     }
    ],
