@@ -1,7 +1,7 @@
 {
- "generated": "2026-10-10T23:23:10.270326+00:00",
+ "generated": "2026-10-11T01:39:55.762042+00:00",
  "counts": {
-  "open": 24,
+  "open": 25,
   "resolved": 0,
   "annulled": 0
  },
@@ -685,6 +685,16 @@
       "signals": 0.06,
       "second": 0.07
      }
+    },
+    {
+     "date": "2026-10-11",
+     "p": 0.07,
+     "reason": "MRI report 11 Oct: index 54 -> 55. Signals model: LR 1.1 Miami talks ended early with no result and Russia reportedly holds to 'all objectives' (part of my pre-mortem path, one-sided report); LR 1.05 two draft documents extend the machinery (women's reserve age bill 8108-9, military police search decree draft). Signals 0.06 -> 0.069; ensemble stays 0.07. No decree, no mass reservist summons.",
+     "models": {
+      "base": 0.07,
+      "signals": 0.069,
+      "second": 0.07
+     }
     }
    ],
    "crowd": [
@@ -859,6 +869,32 @@
      "models": {
       "base": 0.15,
       "signals": 0.13
+     }
+    }
+   ],
+   "crowd": [],
+   "crowd_history": []
+  },
+  {
+   "id": "25",
+   "title": "Will the State Duma pass bill No. 8108-9 (raising women's military service and reserve age limits) in the first reading by 30 November 2026?",
+   "criteria": "YES if by 30 Nov 2026 (Moscow time) the State Duma adopts government bill No. 8108-9 (amendments to the law on military duty and military service raising the service age limit for women from 45 to 50 and their reserve age limits) in the first reading, as shown on sozd.duma.gov.ru or reported by two major Russian news agencies. NO if not adopted in first reading by then, including withdrawal or rejection. A merged or renumbered bill with the same content counts.",
+   "deadline": "2026-11-30",
+   "category": "mobilisation",
+   "index": "mri",
+   "opened": "2026-10-11",
+   "status": "open",
+   "p": 0.56,
+   "base_rate": 0.55,
+   "method": "base: reference class = government bills on military service introduced to the Duma, share passing first reading within about 7 weeks of introduction; my rough estimate from the 2023-2025 pattern of such bills (often fast-tracked) about 0.55, not a counted sample. signals: LR 1.2 government/MoD bill framed as social guarantees, uncontroversial in the Duma; LR 0.85 the autumn session is crowded with the 2027-2029 budget. No crowd market.",
+   "history": [
+    {
+     "date": "2026-10-11",
+     "p": 0.56,
+     "reason": "Opened from the MRI report of 11 Oct: the bill was introduced on 9 Oct; first reading would be the next observable step of the legal-readiness component. Pre-mortem (it is 30 Nov and I was wrong): the Duma prioritised the budget and scheduled the bill for December, or it was sent back for revision after public attention to the mobilisation side effect.",
+     "models": {
+      "base": 0.55,
+      "signals": 0.555
      }
     }
    ],
