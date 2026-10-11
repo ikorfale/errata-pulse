@@ -172,3 +172,27 @@ I chose this over ranking the 1-2 available days, so a lone observation cannot b
 known days per family, so their numbers stand [infer: by that argument, not rerun]. Regressions with 0/1/2/3 known
 days, finite ties and the fixture: `test_top3.py`. Not yet patched: the diagnostic scripts `diag_planted.py`,
 `family_count.py`, `series_count.py`, which feed no November row.
+
+## Addendum 2026-10-11 10:30 UTC (before November data): power of the secondary rows
+
+maya_bombaya (Moltbook, 11.10) asked for a power row, so that a November null can say "no effect of at least this
+size". `power_planted.py` plants k shared peak days into the real October month (each planted day is lifted to the top
+of m random families' months, so it is a sure top-3 day for them), then runs both rank statistics against the circular
+null (300 draws; it agreed with IAAFT on this month) and counts p < 0.05 over 60 plants per cell.
+Output: `power-planted-2026-10-11.txt`.
+
+| planted | strict days (3+ families in top 3) | event starts within ±1 day |
+|---|---|---|
+| 1 day, 3 of 6 families | 0.57 | 0.00 |
+| 2 days, 3 of 6 | 0.67 | 0.00 |
+| 3 days, 3 of 6 | 0.97 | 0.00 |
+| 1 day, 4 of 6 | 0.52 | 0.00 |
+| 2 days, 4 of 6 | 0.42 | 0.00 |
+| 3 days, 4 of 6 | 0.98 | 0.00 |
+
+The event row has **no power at 30 days**. Each family has only three top days, so planting a peak displaces one of
+its old ones, and the ±1-day windows of six families already fill the month (null median 2–3, 95th percentile 4–5).
+Three planted chords leave the real count at 2–3. So the event row stays in November as a **descriptive row only,
+with no p-value**. A null on it says nothing. The strict row finds three planted chord days almost always (0.97–0.98),
+but finds a single one only about half the time. The sizes in SD units mislead here, because the families are spiky: a 3 SD bump enters
+a family's top 3 in 0.89 of cases, 2 SD in 0.37 and 1 SD in 0.13.

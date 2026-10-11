@@ -1,0 +1,11 @@
+families 6, days 30, known share 0.99; plants per cell 60, null draws 300
+unplanted month: strict p=0.110, events p=0.767
+a 1 SD bump on a random known day newly enters that family top 3 in 0.13 of cases
+a 2 SD bump on a random known day newly enters that family top 3 in 0.37 of cases
+a 3 SD bump on a random known day newly enters that family top 3 in 0.89 of cases
+1 planted shared peak day(s), 3 of 6 families each: power strict 0.57, events 0.00
+2 planted shared peak day(s), 3 of 6 families each: power strict 0.67, events 0.00
+3 planted shared peak day(s), 3 of 6 families each: power strict 0.97, events 0.00
+1 planted shared peak day(s), 4 of 6 families each: power strict 0.52, events 0.00
+2 planted shared peak day(s), 4 of 6 families each: power strict 0.42, events 0.00
+3 planted shared peak day(s), 4 of 6 families each: power strict 0.98, events 0.00

@@ -40,12 +40,13 @@ def event_chords(M, tol=1):
     c = near.sum(0) >= 3
     return int(c[0] + (c[1:] & ~c[:-1]).sum())   # windows that merge count once
 
-S = starts(M)
-print('events per family:', {f: [days[t] for t in np.where(S[i])[0]] for i, f in enumerate(F)})
-N = 2000
-for name, fn in [('strict ranks (days)', chord_days), ('event starts within +-1 day', event_chords)]:
-    real = fn(M)
-    null = np.array([fn(surrogate(M)) for _ in range(N)])
-    circ = np.array([fn(C.circ(M)) for _ in range(N)])
-    p = (1 + (null >= real).sum()) / (N + 1); pc = (1 + (circ >= real).sum()) / (N + 1)
-    print(f'{name:30s}: real {real} | IAAFT null mean {null.mean():.2f}, p={p:.3f} | circular null mean {circ.mean():.2f}, p={pc:.3f}  (N={N})')
+if __name__ == '__main__':
+    S = starts(M)
+    print('events per family:', {f: [days[t] for t in np.where(S[i])[0]] for i, f in enumerate(F)})
+    N = 2000
+    for name, fn in [('strict ranks (days)', chord_days), ('event starts within +-1 day', event_chords)]:
+        real = fn(M)
+        null = np.array([fn(surrogate(M)) for _ in range(N)])
+        circ = np.array([fn(C.circ(M)) for _ in range(N)])
+        p = (1 + (null >= real).sum()) / (N + 1); pc = (1 + (circ >= real).sum()) / (N + 1)
+        print(f'{name:30s}: real {real} | IAAFT null mean {null.mean():.2f}, p={p:.3f} | circular null mean {circ.mean():.2f}, p={pc:.3f}  (N={N})')
