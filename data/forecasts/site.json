@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-11T22:42:49.852865+00:00",
+ "generated": "2026-10-11T23:21:19.214584+00:00",
  "counts": {
   "open": 24,
   "resolved": 1,
@@ -74,8 +74,8 @@
   }
  ],
  "models": {
-  "signals": 0.1681,
-  "base": 0.16
+  "base": 0.16,
+  "signals": 0.1681
  },
  "questions": [
   {
@@ -231,7 +231,7 @@
    "index": "pulse",
    "opened": "2026-10-09",
    "status": "open",
-   "p": 0.04,
+   "p": 0.06,
    "base_rate": 0.04,
    "method": "base: one comparable Russian commitment (the 30-day energy moratorium of March 2025) in 4.6 years; Poisson +0.5 smoothing over 42 days. signals: LR 1.8 Zelensky's public offer of a reciprocal energy truce (22 Sep) and Trump's claim of agreement; LR 0.7 the strike campaign is widening, not narrowing (Omsk, Salavat refineries 8 Oct; Yandex data centres 8-9 Oct); LR 1.2 US-led talks under way.",
    "history": [
@@ -239,6 +239,15 @@
      "date": "2026-10-09",
      "p": 0.04,
      "reason": "Opening: an offer is on the table but both sides are escalating against each other's infrastructure this week.",
+     "models": {
+      "base": 0.04,
+      "signals": 0.05
+     }
+    },
+    {
+     "date": "2026-10-11",
+     "p": 0.06,
+     "reason": "Trump announced an energy ceasefire on 11 Oct; Moscow did not confirm and struck Kharkiv and Kyiv power plants within hours. Higher than before only because the US is pushing with offers (NYT).",
      "models": {
       "base": 0.04,
       "signals": 0.05
@@ -810,7 +819,7 @@
    "index": "pulse",
    "opened": "2026-10-09",
    "status": "open",
-   "p": 0.14,
+   "p": 0.12,
    "base_rate": 0.15,
    "method": "base: politically closed chokepoints under an active attack campaign rarely recover fast (Red Sea traffic stayed depressed for over a year); 20/day is still only ~20% of normal, so a deal would clear it quickly; judgmental 15%. signals: LR 0.8 Trump rejected Iran's 7-day reopening proposal; LR 1.2 Iran offered reopening and the closure throttles its own revenue amid a currency collapse; LR 0.8 IRGC attacks nearly nightly since 29 Sep (my transit signal 2.7/day, 8 Oct). second: independent estimate by Claude Fable 5.1, given the question, criteria and evidence but not my number (9 Oct 2026).",
    "history": [
@@ -818,6 +827,16 @@
      "date": "2026-10-09",
      "p": 0.14,
      "reason": "Kpler (via CNBC/Dawn, 9 Oct): 7 transits on 6 Oct, a two-month low, Hormuz exports -40% vs pre-war; IRGC now threatens ships on 'unauthorised routes' across the whole region. LR 0.85 on the prior 16%.",
+     "models": {
+      "base": 0.15,
+      "signals": 0.12,
+      "second": 0.22
+     }
+    },
+    {
+     "date": "2026-10-11",
+     "p": 0.12,
+     "reason": "Iran calls the US reply insufficient and says it is no longer responding (Rezaei, 11 Oct); tankers hit 10-11 Oct.",
      "models": {
       "base": 0.15,
       "signals": 0.12,
@@ -837,7 +856,7 @@
    "index": null,
    "opened": "2026-10-10",
    "status": "open",
-   "p": 0.22,
+   "p": 0.6,
    "base_rate": 0.15,
    "method": "base: rare full-day closures of Gulf capital airports in this war (judgement, no clean series); signals: bayes x2 (three strikes in a week, terminal hit) x0.8 (quick reopenings so far)",
    "history": [
@@ -848,6 +867,15 @@
      "models": {
       "base": 0.15,
       "signals": 0.22
+     }
+    },
+    {
+     "date": "2026-10-11",
+     "p": 0.6,
+     "reason": "AP 11 Oct: airport still closed on Sunday after the 10 Oct strike (12 dead, 309 injured), terminal hit again on 11 Oct. If the closure lasts past 00:00 UTC 12 Oct, a 24h window starting 11 Oct is met; awaiting confirmation.",
+     "models": {
+      "base": 0.15,
+      "signals": 0.75
      }
     }
    ],
@@ -863,7 +891,7 @@
    "index": null,
    "opened": "2026-10-10",
    "status": "open",
-   "p": 0.27,
+   "p": 0.33,
    "base_rate": 0.11,
    "method": "base: forecast calc rate, 2 US anti-Houthi campaigns in 3 years over 51 days = 0.11; signals: bayes x3 (Trump 'may') x1.3 (support already flowing); trend: judgement; ensemble ~0.27",
    "history": [
@@ -875,6 +903,15 @@
       "base": 0.11,
       "signals": 0.3,
       "trend": 0.25
+     }
+    },
+    {
+     "date": "2026-10-11",
+     "p": 0.33,
+     "reason": "A US citizen was killed in the 10 Oct Riyadh airport strike; Trump says the US may join Saudi strikes and will decide very quickly.",
+     "models": {
+      "base": 0.2,
+      "signals": 0.4
      }
     }
    ],
@@ -916,7 +953,7 @@
    "index": null,
    "opened": "2026-10-10",
    "status": "open",
-   "p": 0.13,
+   "p": 0.15,
    "base_rate": 0.15,
    "method": "base: judgement from 2025-26 campaign which had multi-week lulls a few times a year; signals: bayes x1.5 (US pressure) x0.6 (Kyiv's stated refusal; Russia keeps striking the grid)",
    "history": [
@@ -924,6 +961,15 @@
      "date": "2026-10-10",
      "p": 0.13,
      "reason": "US pressure (intelligence threat, diesel deal) pushes for a halt; Kyiv says it will keep 'burning refineries' unless Russia stops striking Ukraine's grid. Campaign at its normal pace (6 sites in 7 days vs norm 6.8).",
+     "models": {
+      "base": 0.15,
+      "signals": 0.13
+     }
+    },
+    {
+     "date": "2026-10-11",
+     "p": 0.15,
+     "reason": "Zelensky publicly ready to stop strikes on Russian energy if Russia reciprocates; Russia kept striking, so a pause still unlikely.",
      "models": {
       "base": 0.15,
       "signals": 0.13
