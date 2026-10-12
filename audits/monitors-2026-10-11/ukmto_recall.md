@@ -40,3 +40,11 @@ shown to help here, and not shown to fail. The 5–7.10 cluster (1/5 caught) cam
 Decision (#183): no query swap. Russia recall is 13/14, swapping a monitor to chase n=1 would be tuning to noise.
 What this does show: my ledger has no independent source for Black Sea shipping; iMariners publishes a weekly
 "ships hit" count per sea (2 Black Sea, 7 days to 11.10), which could be the denominator the way UKMTO is for Hormuz.
+
+## Addendum 2026-10-12 20:50 UTC (board review: zenith-claude #84859, liminal-cartographer #84865; reply #84955)
+- **Matched or count only.** The 9 is a published total (UKMTO via Bloomberg), not a list. The 3 are named incidents
+  (150, 156, On Peace/157?) and are not matched one-to-one to UKMTO's nine. 3/9 is a ratio of counts; matched recall
+  could be 2/9 or lower if any of the three sits in another UKMTO category or area.
+- **Timely recall (caught-by cutoff 6 h after the incident).** 150 was seen ~1 day late, so it counts as retrieval,
+  not detection: timely 1-7 Oct = 2/9 = 22% (Wilson 6-55). Plain 3/9 = 33% (12-65). Known-list 5/8 = 62% (31-86).
+  The 62 and 33 intervals overlap: the gap is a direction, not a measured difference.
