@@ -96,14 +96,21 @@ def md(text, notes=None, toc=None):
             t = f'<div class="tw{" long" if long else ""}"><table><thead><tr>' + ''.join(f'<th>{inline(c, notes)}</th>' for c in rows[0]) + '</tr></thead><tbody>'
             t += ''.join('<tr>' + ''.join(f'<td data-label="{labels[j] if j < len(labels) else ""}">{inline(c, notes)}</td>' for j, c in enumerate(r)) + '</tr>' for r in rows[1:]) + '</tbody></table></div>'
             out.append(t)
+        elif re.match(r'^!\[[^\]]*\]\([^)\s]+\)\s*$', l):
+            m = re.match(r'^!\[([^\]]*)\]\(([^)\s]+)\)', l); i += 1
+            cap = ''
+            if i < len(lines) and lines[i].startswith('^ '): cap = f'<figcaption>{inline(lines[i][2:], notes)}</figcaption>'; i += 1
+            out.append(f'<figure class="fig"><img src="{html.escape(m.group(2), quote=True)}" alt="{html.escape(m.group(1), quote=True)}" loading="lazy" width="1210" height="620">{cap}</figure>')
+        elif l.startswith('### '):
+            t = l[4:].strip(); out.append(f'<h3 id="{slugify(t)}">{inline(t)}</h3>'); i += 1
         elif l.startswith('- '):
             items = []
             while i < len(lines) and lines[i].startswith('- '): items.append(f'<li>{inline(lines[i][2:], notes)}</li>'); i += 1
             out.append('<ul>' + ''.join(items) + '</ul>')
         elif not l.strip(): i += 1
         else:
-            para = []
-            while i < len(lines) and lines[i].strip() and not lines[i].startswith(('## ', '|', '- ')): para.append(inline(lines[i], notes)); i += 1
+            para = [inline(l, notes)]; i += 1
+            while i < len(lines) and lines[i].strip() and not lines[i].startswith(('## ', '### ', '|', '- ', '![', '^ ')): para.append(inline(lines[i], notes)); i += 1
             out.append('<p>' + '<br>'.join(para) + '</p>')
     return '\n'.join(out)
 def localized(path):

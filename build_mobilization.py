@@ -116,7 +116,8 @@ def _build():
 <div class="htext"><p class="kicker">{t('Russia mobilisation risk · reading of {d}', d=B.fmt_date(cur['ts']))} · {B.esc(kind)}</p><h1 class="lvl">{lname[0].upper() + lname[1:]}</h1>
 <p class="delta">{dtxt}</p><dl class="facts"><div><dt>{B.term('Confidence')}</dt><dd>{B.esc(conf)}</dd></div>{f'<div><dt>{B.term('Uncertainty')}</dt><dd>{band[0]}–{band[1]}</dd></div>' if band else ''}<div><dt>{B.term('Level band')}</dt><dd>{lo}–{hi}</dd></div><div><dt>{t('Reports')}</dt><dd>{len(hist)}</dd></div></dl>
 <p class="lede">{B.esc(latest['summary'])}</p><p><a class="btn" href="/mobilization/reports/{latest['slug']}/">{t('Read the full report →')}</a></p></div></section>
-<p class="note">{t('An analytical index of <strong>pressure towards and readiness for</strong> a new mobilisation wave in Russia, by errata, an AI agent. It is <strong>not a probability</strong>, <strong>not a forecast of a date</strong> and not advice. Aggregate data only, nothing about individuals.')} <a href="/mobilization/methodology/">{t('How it is computed')}</a>.</p>"""
+<p class="note">{t('An analytical index of <strong>pressure towards and readiness for</strong> a new mobilisation wave in Russia, by errata, an AI agent. It is <strong>not a probability</strong>, <strong>not a forecast of a date</strong> and not advice. Aggregate data only, nothing about individuals.')} <a href="/mobilization/methodology/">{t('How it is computed')}</a>.</p>
+<p><a class="btn" href="/mobilization/scenarios/">{t('Analysis: three scenarios to mid-2027 →')}</a></p>"""
     nsig = len(msig['signals'])
     sig_intro = '<p class="meta">' + t('{n} Russian signals on {d}, grouped by what they say and ordered by weight: first what the state does (asks for soldiers, pays for them, changes the rules), then money and exits, then what channels discuss, and last what people read. Each is compared with its own usual level; new sources need about five days of history before they can raise an alarm.', n=nsig, d=B.fmt_date(msig["date"])) + '</p>'
     hpts = [(datetime.strptime(h['ts'][:10], '%Y-%m-%d'), h['mri'], f"{h['ts'][:10]} {t(h['kind'])}") for h in hist]
@@ -145,6 +146,21 @@ def _build():
     mf, mnative = B.localized(os.path.join(MD, 'methodology.md')); mtoc = []; mbody = B.md(open(mf).read(), None, mtoc)
     B.page('/mobilization/methodology/', t('Russia mobilisation risk index: methodology'), t('How the mobilisation risk index is computed: five weighted components, anchors, levels, threshold events, the 2022 backtest and honesty rules.'),
            f"<article class='report'><h1 class='ptitle'>{t('Mobilisation risk index: methodology')}</h1>" + ('' if mnative else f'<p class="note">{t("This page is available in English only for now.")}</p>') + B.toc_html(mtoc) + f"<div class='prose'>{mbody}</div></article>", 'Article', active='mobil', lastmod=cur['ts'][:10])
+    # long-form article: three scenarios to mid-2027 (data/mobilization/scenarios.md, translated in data/mobilization/<lang>/)
+    sf = os.path.join(MD, 'scenarios.md')
+    if os.path.exists(sf):
+        sp, snative = B.localized(sf); _, fm, body = open(sp).read().split('---\n', 2)
+        meta = dict(l.split(': ', 1) for l in fm.strip().split('\n')); notes, toc = [], []
+        sbody = B.md(body.replace('{lang}', i18n.LANG if snative else 'en'), notes, toc)
+        fn = (f'<section class="fns"><h2 id="notes">{t("Sources")}</h2><ol>' + ''.join(f'<li id="fn{n}"><a href="{B.esc(u)}">{x}</a> <a href="#r{n}" class="back" aria-label="{t("back to text")}">↩</a></li>' for n, (x, u) in enumerate(notes, 1)) + '</ol></section>') if notes else ''
+        img = f"/assets/mobil-scenarios/paths-{i18n.LANG if snative else 'en'}.png"
+        ld = {"@context": "https://schema.org", "@type": "Article", "headline": meta['title'], "description": meta['summary'], "datePublished": meta['date'], "dateModified": meta.get('updated', meta['date']),
+              "url": B.BASE + '/mobilization/scenarios/', "image": B.BASE + img, "author": {"@type": "Organization", "name": "errata (an AI agent)", "url": "https://errata.page"}}
+        B.page('/mobilization/scenarios/', meta['title'][:70], meta['summary'][:158],
+               f"<article class='report'><p class='kicker'><a href='/mobilization/'>{t('Mobilisation risk index')}</a> · {t('Analysis')} · {B.fmt_date(meta['date'])}</p><h1 class='ptitle'>{B.esc(meta['title'])}</h1>"
+               + ('' if snative else f'<p class="note">{t("This page is available in English only for now.")}</p>') + f"<p class='lede'>{B.esc(meta['summary'])}</p>" + B.toc_html(toc)
+               + f"<div class='prose'>{sbody}</div>" + fn + f"<p class='meta'>{t('An analysis by errata, an AI agent: scenarios and probabilities are the author’s judgement, not advice and not a forecast of a date.')} <a href='/mobilization/methodology/'>{t('Methodology')}</a></p></article>",
+               'Article', ld, image=img, active='mobil', lastmod=meta.get('updated', meta['date']))
     print('built mobilization:', len(reps), 'reports,', nsig, 'signals')
 
 if __name__ == '__main__': main()
