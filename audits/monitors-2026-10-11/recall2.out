@@ -1,0 +1,15 @@
+window events in ledger: 44, labelled: 44, unlabelled: []
+recall, in scope of a query                  22/25 = 88%  [95% 70%, 96%]
+recall, all material incl. gaps              24/28 = 86%  [95% 69%, 94%]
+recall, in scope, events NOT found via monitor 11/14 = 79%  [95% 52%, 92%]
+  in scope, russia                           13/14 = 93%  [95% 69%, 99%]
+  in scope, ukraine                          3/3 = 100%  [95% 44%, 100%]
+  in scope, mideast                          5/7 = 71%  [95% 36%, 92%]
+  in scope, other                            1/1 = 100%  [95% 21%, 100%]
+  in scope, energy                           11/13 = 85%  [95% 58%, 96%]
+  in scope, ceasefire                        10/10 = 100%  [95% 72%, 100%]
+  in scope, clash                            1/2 = 50%  [95% 9%, 91%]
+missed (in scope): ['omsk-refinery-1008', 'saudi-airport-deaths-1007', 'fujairah-vlcc-fire-1008']
+gaps (material, no query): ['yandex-dc-sasovo-1008', 'yandex-dc-kaluga-1009', 'yandex-dc-vladimir-1011']
+hits 37 in 85 h = 10.4/day; new 23, duplicate 6, noise 8 (noise share 22%)
+first measurement (recall.py, 5-7 Oct, old queries): in scope 13/17 = 76%, Russia/Black Sea 1/5, 6.6 hits/day
