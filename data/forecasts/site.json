@@ -1,14 +1,14 @@
 {
- "generated": "2026-10-13T22:43:33.375035+00:00",
+ "generated": "2026-10-13T23:36:56.166442+00:00",
  "counts": {
-  "open": 24,
-  "resolved": 1,
+  "open": 23,
+  "resolved": 2,
   "annulled": 0
  },
  "brier": {
-  "mine": 0.16,
-  "final": 0.16,
-  "base": 0.16,
+  "mine": 0.1817,
+  "final": 0.0913,
+  "base": 0.4412,
   "crowd": null
  },
  "calibration": [
@@ -62,9 +62,9 @@
   },
   {
    "bin": "80-90%",
-   "n": 0,
-   "mean_p": null,
-   "freq_yes": null
+   "n": 1,
+   "mean_p": 0.85,
+   "freq_yes": 1.0
   },
   {
    "bin": "90-100%",
@@ -74,8 +74,8 @@
   }
  ],
  "models": {
-  "signals": 0.1681,
-  "base": 0.16
+  "base": 0.4412,
+  "signals": 0.1715
  },
  "questions": [
   {
@@ -247,7 +247,7 @@
    "index": "pulse",
    "opened": "2026-10-09",
    "status": "open",
-   "p": 0.05,
+   "p": 0.06,
    "base_rate": 0.04,
    "method": "base: one comparable Russian commitment (the 30-day energy moratorium of March 2025) in 4.6 years; Poisson +0.5 smoothing over 42 days. signals: LR 1.8 Zelensky's public offer of a reciprocal energy truce (22 Sep) and Trump's claim of agreement; LR 0.7 the strike campaign is widening, not narrowing (Omsk, Salavat refineries 8 Oct; Yandex data centres 8-9 Oct); LR 1.2 US-led talks under way.",
    "history": [
@@ -273,6 +273,15 @@
      "date": "2026-10-12",
      "p": 0.05,
      "reason": "Peskov 12 Oct: no comment on the energy ceasefire, rejected a 60-day truce, offered only an election-day pause; Russia hit at least six energy targets after Trump's announcement (Zelensky, Reuters 12 Oct).",
+     "models": {
+      "base": 0.04,
+      "signals": 0.05
+     }
+    },
+    {
+     "date": "2026-10-13",
+     "p": 0.06,
+     "reason": "Kremlin 13.10: contacts on the energy truce continue, no progress (Peskov via Xinhua/Reuters); first night without Russian energy strikes (Reuters 13.10). Still no public commitment.",
      "models": {
       "base": 0.04,
       "signals": 0.05
@@ -358,7 +367,7 @@
    "index": "pulse",
    "opened": "2026-10-09",
    "status": "open",
-   "p": 0.18,
+   "p": 0.2,
    "base_rate": 0.16,
    "method": "base: Article 4 requests since Feb 2022 counted as 3 in 4.7 years (Feb 2022; Poland Sep 2025; Estonia Sep 2025); Poisson +0.5 smoothing over 83 days. Checked: NATO's own list ends with Estonia, 23 Sep 2025; none in 2026 so far. signals: LR 1.5 pressure on NATO's eastern flank moved from rhetoric to incidents (Latvia 6 Oct, Lithuania moving troops towards Kaliningrad, Danish PET warnings); LR 1.2 the military component of the Chaos Pulse at 71; LR 0.8 the 2026 incidents so far (German grid sabotage and airport drones, Aug-Sep) were handled bilaterally, without Article 4, so the bar for a request is high.",
    "history": [
@@ -366,6 +375,15 @@
      "date": "2026-10-09",
      "p": 0.18,
      "reason": "Opening: flank incidents are frequent, but 2026 incidents have not been taken to Article 4.",
+     "models": {
+      "base": 0.16,
+      "signals": 0.21
+     }
+    },
+    {
+     "date": "2026-10-13",
+     "p": 0.2,
+     "reason": "13.10: third merchant sinking off Bulgaria/Romania in nine days (HS Dignity, 11 missing); Bulgaria asks NATO and EU for surveillance help and summons Russia's ambassador, but Radev says there is no clear evidence to accuse anyone and earlier ruled out Articles 4 and 5 (Stars and Stripes, RBC-Ukraine 13.10).",
      "models": {
       "base": 0.16,
       "signals": 0.21
@@ -953,7 +971,7 @@
    "category": "war",
    "index": null,
    "opened": "2026-10-10",
-   "status": "open",
+   "status": "yes",
    "p": 0.85,
    "base_rate": 0.15,
    "method": "base: rare full-day closures of Gulf capital airports in this war (judgement, no clean series); signals: bayes x2 (three strikes in a week, terminal hit) x0.8 (quick reopenings so far)",
@@ -987,7 +1005,22 @@
     }
    ],
    "crowd": [],
-   "crowd_history": []
+   "crowd_history": [],
+   "resolved_at": "2026-10-13",
+   "resolution_source": "https://pajhwok.com/2026/10/13/riyadh-airport-to-remain-closed-until-saturday-amid-houthi-attacks",
+   "resolution_note": "GACA (SPA 12.10 08:35 GMT, https://www.spa.gov.sa/en/N2699133) extended the suspension of operations; Reuters 13.10 (via Pajhwok): closed since 10.10, closure extended to 21:00 GMT 17.10. Any 24h window from 12.10 00:00 UTC lies inside an official all-operations suspension. Caveat: Cirium showed >=1 departure on 11.10; a single travel site claims limited Saudia domestic flights from 13.10 (not confirmed by GACA or wires).",
+   "scores": {
+    "brier": 0.20335000000000003,
+    "brier_final": 0.022500000000000006,
+    "models": {
+     "base": 0.7224999999999999,
+     "signals": 0.17492500000000002
+    },
+    "brier_base": 0.7224999999999999,
+    "brier_crowd": null,
+    "days": 4,
+    "outcome": 1.0
+   }
   },
   {
    "id": "22",
@@ -1069,7 +1102,7 @@
    "index": null,
    "opened": "2026-10-10",
    "status": "open",
-   "p": 0.3,
+   "p": 0.33,
    "base_rate": 0.15,
    "method": "base: judgement from 2025-26 campaign which had multi-week lulls a few times a year; signals: bayes x1.5 (US pressure) x0.6 (Kyiv's stated refusal; Russia keeps striking the grid)",
    "history": [
@@ -1095,6 +1128,15 @@
      "date": "2026-10-12",
      "p": 0.3,
      "reason": "Zelensky: armed forces received orders, no Russian refinery was hit on the night of 11-12 Oct (Moscow Times, Kyiv Independent); Kyiv Independent (two Ukrainian officials): US threatened to cut intelligence sharing and PURL if refineries are hit. Pause is conditional on Russian reciprocity, which has not come (6 energy targets hit, Zelensky 12 Oct).",
+     "models": {
+      "base": 0.15,
+      "signals": 0.31
+     }
+    },
+    {
+     "date": "2026-10-13",
+     "p": 0.33,
+     "reason": "Zelensky 13.10: two days without Ukrainian refinery strikes; Reuters 13.10: Russia hit no energy targets overnight for the first time since the truce claim. Pause is holding so far but has no Russian commitment; 12 more days needed.",
      "models": {
       "base": 0.15,
       "signals": 0.31
