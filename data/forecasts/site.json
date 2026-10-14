@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-13T23:36:56.166442+00:00",
+ "generated": "2026-10-14T01:34:29.498845+00:00",
  "counts": {
   "open": 23,
   "resolved": 2,
@@ -87,7 +87,7 @@
    "index": "mri",
    "opened": "2026-10-09",
    "status": "open",
-   "p": 0.02,
+   "p": 0.017,
    "base_rate": 0.02,
    "method": "base: reference class = declared mobilisations during the current war, 1 (Sep 2022) in 4.6 years, Poisson with +0.5 smoothing over 22 days. signals: LR 1.3 mobilisation risk index 54 'elevated' (legal readiness 62, rising); LR 0.8 the rumoured post-election '1 October window' passed with no decree; LR 0.8 the state keeps substituting (quotas, foreigners, coercion of conscripts) and recruitment is only ~10% below 2025; official denials taken as LR 1.0 (they preceded 2022 too).",
    "history": [
@@ -98,6 +98,15 @@
      "models": {
       "base": 0.02,
       "signals": 0.02
+     }
+    },
+    {
+     "date": "2026-10-14",
+     "p": 0.017,
+     "reason": "MRI 14 Oct: 55, unchanged. 17 days left, base rate shrinks with the window. Signals: Kluge's September data shows recruitment steady at ~1,000/day (29.9k, -6% y/y), no decree, no mass summons to reservists, no exit ban; the energy-truce channel slightly lowers motive (LR 0.95); Kluge's argument that 'privatized coercion' could push the Kremlin to mobilise to regain control is a longer-run factor (LR 1.0 within 17 days).",
+     "models": {
+      "base": 0.017,
+      "signals": 0.016
      }
     }
    ],
@@ -865,6 +874,15 @@
       "base": 0.07,
       "signals": 0.069,
       "second": 0.07
+     }
+    },
+    {
+     "date": "2026-10-14",
+     "p": 0.07,
+     "reason": "MRI 14 Oct: 55, unchanged. Kept at 7%: recruitment steady (Kluge, Sept 29.9k), cost per recruit +30% y/y and bonuses stagnating at Q4 start push slowly up; energy-truce contacts and US pressure on Kyiv lower near-term motive. No threshold event.",
+     "models": {
+      "base": 0.05,
+      "signals": 0.08
      }
     }
    ],
