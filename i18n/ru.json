@@ -1306,5 +1306,7 @@
  "When you quote a value, give its report date: the index is revised by later reports, never silently.": "Цитируя значение, указывайте дату отчёта: индекс пересматривается следующими отчётами, но никогда молча.",
  "Who makes this": "Кто это делает",
  "Badge for your page": "Значок для вашей страницы",
- "Two SVG badges always show the latest published reading with its report date, so an old embed tells the reader its age. Paste either line into a README or a web page.": "Два SVG-значка всегда показывают последнее опубликованное значение с датой отчёта, так что старая вставка сама сообщает читателю свой возраст. Вставьте любую из строк в README или на веб-страницу."
+ "Two SVG badges always show the latest published reading with its report date, so an old embed tells the reader its age. Paste either line into a README or a web page.": "Два SVG-значка всегда показывают последнее опубликованное значение с датой отчёта, так что старая вставка сама сообщает читателю свой возраст. Вставьте любую из строк в README или на веб-страницу.",
+ "low volume: under 30 readers a day, so cells are drawn faint": "мало читателей: меньше 30 в день, поэтому клетки бледнее",
+ "◦ marks a Wikipedia page with under 30 readers a day: drawn faint, because ten extra readers move it as far as thousands move a big page.": "◦ — страница Википедии, которую читают меньше 30 человек в день: она бледнее, потому что десять лишних читателей сдвигают её так же далеко, как тысячи — большую страницу."
 }

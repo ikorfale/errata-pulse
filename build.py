@@ -248,25 +248,28 @@ def heatmap_svg(sig, days=30):
         dev = sorted(abs(x - med) for x in v); mad = 1.4826 * (dev[len(dev) // 2] if len(dev) % 2 else (dev[len(dev) // 2 - 1] + dev[len(dev) // 2]) / 2)
         if mad == 0: mad = (sum(dev) / len(dev)) or 1
         sign = -1 if str(s.get('id', '')).startswith(LOW_IS_WORSE) else 1
-        rows.append((s.get('family', 'other'), s.get('label', s.get('id', '')), {d: max(-3, min(3, sign * (x - med) / mad)) for d, x in pts}))
+        # a page read by ~7 people a day can swing as many robust units as one read by 1,500: same colour, different news
+        low = 'wiki:' in str(s.get('id', '')) and med < 30
+        rows.append((s.get('family', 'other'), s.get('label', s.get('id', '')), {d: max(-3, min(3, sign * (x - med) / mad)) for d, x in pts}, low))
     if not rows: return ''
-    dates = sorted({d for _, _, z in rows for d in z})[-days:]
+    dates = sorted({d for _, _, z, _ in rows for d in z})[-days:]
     LW, CW, RH, FH = 300, 14, 13, 24; W = LW + CW * len(dates) + 8; y = 22; out = []
     for i, d in enumerate(dates):
         if i % 7 == len(dates) % 7 or i == len(dates) - 1:
             out.append(f'<text class="ax" x="{LW + i * CW + CW / 2:.0f}" y="14" text-anchor="middle">{d[8:10]}.{d[5:7]}</text>')
     fam = None
-    for f, lab, z in rows:
+    for f, lab, z, low in rows:
         if f != fam:
             fam = f; y += 6; out.append(f'<text class="hmfam" x="0" y="{y + 12}">{esc(fam_name(f))}</text>'); y += FH - 6
         short = re.sub(r'^News share tagged ', 'News: ', re.sub(r'^Wikipedia \((\w+)\) ', r'\1 wiki ', re.split(r' \(GDELT|: daily read| \(7-day|: ships per day', lab)[0]))
         if i18n.LANG != 'en':
             lab = td(lab); short = re.sub(r'^Доля новостей с темой ', 'Новости: ', re.sub(r'^Википедия \((\w+)\) ', r'\1 вики ', re.split(r' \(темы GDELT| \(GDELT|: читател| \(среднее за|: судов в сутки', lab)[0]))
         short = short if len(short) <= 46 else short[:45] + '…'
+        if low: short = '◦ ' + short; lab += ' · ' + t('low volume: under 30 readers a day, so cells are drawn faint')
         out.append(f'<text class="hmlab" x="{LW - 8}" y="{y + RH - 3}" text-anchor="end"><title>{esc(lab)}</title>{esc(short)}</text>')
         for i, d in enumerate(dates):
             if d not in z: out.append(f'<rect class="hmna" x="{LW + i * CW}" y="{y}" width="{CW - 1}" height="{RH - 1}"/>'); continue
-            v = z[d]; cls = 'hmw' if v > 0 else 'hmc'; op = min(abs(v) / 3, 1)
+            v = z[d]; cls = 'hmw' if v > 0 else 'hmc'; op = min(abs(v) / 3, 1) * (0.4 if low else 1)
             out.append(f'<rect class="{cls}" x="{LW + i * CW}" y="{y}" width="{CW - 1}" height="{RH - 1}" fill-opacity="{0.08 + 0.92 * op:.2f}"><title>{esc(lab)}, {d}: {t('{v} robust units from its median', v=f'{v:+.1f}')}</title></rect>')
         y += RH
     return (f'<svg class="heatmap" viewBox="0 0 {W} {y + 6}" role="img" aria-label="{esc(t('Heatmap: {n} signals over {d} days, {a} to {b}, each day against the signal’s own median', n=len(rows), d=len(dates), a=dates[0], b=dates[-1]))}">'
@@ -516,7 +519,7 @@ def build_lang(hist):
         f'<a href="#signals-{slugify(f)}" data-hot="{sum(1 for s in sig.get("signals", []) if s.get("family", "other") == f and s.get("anomaly"))}">{esc(fam_name(f))} <span>{sum(1 for s in sig.get("signals", []) if s.get("family", "other") == f)}</span></a>'
         for f in fams) + '</nav>'
     sbody = f"""<h1 class="ptitle">{t('Signals')}</h1><p class="lede">{t('What states, armies, markets and people <em>do</em>, not what they say: shipping through chokepoints, travel advisories, internet outages, news volume on procurement and emergency powers, and what people read about war. Each signal is compared with its own baseline.')}</p>{sig_intro}{signal_nav}
-{build_map.section(sig, status_of)}<h2 class="sec" id="heatmap">{t('Thirty days at a glance')}</h2><p class="meta">{t('One row per signal with at least 14 days of history, one column per day. Colour shows how far that day sits from the signal’s own median: <span class="hmkey hmw"></span> towards the worrying direction, <span class="hmkey hmc"></span> towards calm, darker = further (capped at 3 robust units, median absolute deviation based). Grey = no data. A dark cell is a reason to look, not a finding: holidays, data lags and news cycles move these too.')}</p><div class="chart" tabindex="0" role="region" aria-label="{t('Signals heatmap')}">{heatmap_svg(sig)}</div><p class="filt" hidden><label><input type="checkbox" id="onlyhot"> {t('Anomalies only')}</label></p>{signals_html(sig, heading=2)}
+{build_map.section(sig, status_of)}<h2 class="sec" id="heatmap">{t('Thirty days at a glance')}</h2><p class="meta">{t('One row per signal with at least 14 days of history, one column per day. Colour shows how far that day sits from the signal’s own median: <span class="hmkey hmw"></span> towards the worrying direction, <span class="hmkey hmc"></span> towards calm, darker = further (capped at 3 robust units, median absolute deviation based). Grey = no data. A dark cell is a reason to look, not a finding: holidays, data lags and news cycles move these too.')} {t('◦ marks a Wikipedia page with under 30 readers a day: drawn faint, because ten extra readers move it as far as thousands move a big page.')}</p><div class="chart" tabindex="0" role="region" aria-label="{t('Signals heatmap')}">{heatmap_svg(sig)}</div><p class="filt" hidden><label><input type="checkbox" id="onlyhot"> {t('Anomalies only')}</label></p>{signals_html(sig, heading=2)}
 <p class="meta">{t('Data of {d}:', d=esc(sig.get('date', '')))} <a href="/signals.json">signals.json</a>. {t('A badge “within baseline” means the latest value is inside its normal range; “no baseline” means there is not enough history yet.')}</p>
 <script>(function(){{var f=document.querySelector('.filt'),c=document.getElementById('onlyhot');f.hidden=false;c.onchange=function(){{document.querySelectorAll('.sig').forEach(function(e){{e.hidden=c.checked&&e.dataset.anomaly!=='1'}});document.querySelectorAll('.fam,.signal-nav a').forEach(function(e){{e.hidden=c.checked&&e.dataset.hot==='0'}})}}}})()</script>"""
     page('/signals/', t('Chaos Pulse signals: shipping, advisories, outages, anxiety'), t('Hard signals behind the Chaos Pulse index: chokepoint shipping, travel advisories, internet outages, procurement news and war-related reading, each against its own baseline.'), sbody, 'CollectionPage', active='signals', lastmod=sig.get('date'))
