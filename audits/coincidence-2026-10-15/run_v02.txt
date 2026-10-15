@@ -1,0 +1,207 @@
+### --ranges skip --k 0 
+window 2026-09-01..2026-10-14: 44 days, 25 days with >=1 event (ranges=skip), 25/44 days within +-0 of an event (calendar)
+en:World_War_III: 0 spikes 
+zh:第三次世界大戰: 2 spikes 09-20 x7.6, 09-21 x3.1
+fa:جنگ_جهانی_سوم: 3 spikes 09-19 x4.9, 09-20 x4.4, 09-21 x3.1
+ru:Третья_мировая_война: 0 spikes 
+en:Potassium_iodide: 0 spikes 
+en:Fallout_shelter: 1 spikes 09-01 x4.6
+en:Martial_law: 0 spikes 
+ru:Мобилизация: 0 spikes 
+ru:Военное_положение: 1 spikes 10-07 x5.2
+uk:Мобілізація: 0 spikes 
+de:Wehrpflicht: 0 spikes 
+en:Conscription: 0 spikes 
+distinct spike days with an event within +-0 d: 3/5; circular-shift null (43 shifts) mean 2.84/5, p = 0.659
+### --ranges skip --k 0 --split 2026-10-05
+window 2026-09-01..2026-10-14: 44 days, 25 days with >=1 event (ranges=skip), 25/44 days within +-0 of an event (calendar)
+en:World_War_III: 0 spikes 
+zh:第三次世界大戰: 2 spikes 09-20 x7.6, 09-21 x3.1
+fa:جنگ_جهانی_سوم: 3 spikes 09-19 x4.9, 09-20 x4.4, 09-21 x3.1
+ru:Третья_мировая_война: 0 spikes 
+en:Potassium_iodide: 0 spikes 
+en:Fallout_shelter: 1 spikes 09-01 x4.6
+en:Martial_law: 0 spikes 
+ru:Мобилизация: 0 spikes 
+ru:Военное_положение: 1 spikes 10-07 x5.2
+uk:Мобілізація: 0 spikes 
+de:Wehrpflicht: 0 spikes 
+en:Conscription: 0 spikes 
+  period 2026-09-01..2026-10-04: 34 days, 15 event days, 15/34 days near an event, spike days near an event 2/4
+  period 2026-10-05..2026-10-14: 10 days, 10 event days, 10/10 days near an event, spike days near an event 1/1
+distinct spike days with an event within +-0 d: 3/5; stratified null at 2026-10-05 (340 rotation pairs, incl. identity) mean 2.76/5, p = 0.559
+### --ranges skip --k 1 
+window 2026-09-01..2026-10-14: 44 days, 25 days with >=1 event (ranges=skip), 35/44 days within +-1 of an event (calendar)
+en:World_War_III: 0 spikes 
+zh:第三次世界大戰: 2 spikes 09-20 x7.6, 09-21 x3.1
+fa:جنگ_جهانی_سوم: 3 spikes 09-19 x4.9, 09-20 x4.4, 09-21 x3.1
+ru:Третья_мировая_война: 0 spikes 
+en:Potassium_iodide: 0 spikes 
+en:Fallout_shelter: 1 spikes 09-01 x4.6
+en:Martial_law: 0 spikes 
+ru:Мобилизация: 0 spikes 
+ru:Военное_положение: 1 spikes 10-07 x5.2
+uk:Мобілізація: 0 spikes 
+de:Wehrpflicht: 0 spikes 
+en:Conscription: 0 spikes 
+distinct spike days with an event within +-1 d: 5/5; circular-shift null (43 shifts) mean 3.86/5, p = 0.364
+### --ranges skip --k 1 --split 2026-10-05
+window 2026-09-01..2026-10-14: 44 days, 25 days with >=1 event (ranges=skip), 35/44 days within +-1 of an event (calendar)
+en:World_War_III: 0 spikes 
+zh:第三次世界大戰: 2 spikes 09-20 x7.6, 09-21 x3.1
+fa:جنگ_جهانی_سوم: 3 spikes 09-19 x4.9, 09-20 x4.4, 09-21 x3.1
+ru:Третья_мировая_война: 0 spikes 
+en:Potassium_iodide: 0 spikes 
+en:Fallout_shelter: 1 spikes 09-01 x4.6
+en:Martial_law: 0 spikes 
+ru:Мобилизация: 0 spikes 
+ru:Военное_положение: 1 spikes 10-07 x5.2
+uk:Мобілізація: 0 spikes 
+de:Wehrpflicht: 0 spikes 
+en:Conscription: 0 spikes 
+  period 2026-09-01..2026-10-04: 34 days, 15 event days, 25/34 days near an event, spike days near an event 4/4
+  period 2026-10-05..2026-10-14: 10 days, 10 event days, 10/10 days near an event, spike days near an event 1/1
+distinct spike days with an event within +-1 d: 5/5; stratified null at 2026-10-05 (340 rotation pairs, incl. identity) mean 3.82/5, p = 0.294
+### --ranges skip --k 2 
+window 2026-09-01..2026-10-14: 44 days, 25 days with >=1 event (ranges=skip), 40/44 days within +-2 of an event (calendar)
+en:World_War_III: 0 spikes 
+zh:第三次世界大戰: 2 spikes 09-20 x7.6, 09-21 x3.1
+fa:جنگ_جهانی_سوم: 3 spikes 09-19 x4.9, 09-20 x4.4, 09-21 x3.1
+ru:Третья_мировая_война: 0 spikes 
+en:Potassium_iodide: 0 spikes 
+en:Fallout_shelter: 1 spikes 09-01 x4.6
+en:Martial_law: 0 spikes 
+ru:Мобилизация: 0 spikes 
+ru:Военное_положение: 1 spikes 10-07 x5.2
+uk:Мобілізація: 0 spikes 
+de:Wehrpflicht: 0 spikes 
+en:Conscription: 0 spikes 
+distinct spike days with an event within +-2 d: 5/5; circular-shift null (43 shifts) mean 4.42/5, p = 0.568
+### --ranges skip --k 2 --split 2026-10-05
+window 2026-09-01..2026-10-14: 44 days, 25 days with >=1 event (ranges=skip), 40/44 days within +-2 of an event (calendar)
+en:World_War_III: 0 spikes 
+zh:第三次世界大戰: 2 spikes 09-20 x7.6, 09-21 x3.1
+fa:جنگ_جهانی_سوم: 3 spikes 09-19 x4.9, 09-20 x4.4, 09-21 x3.1
+ru:Третья_мировая_война: 0 spikes 
+en:Potassium_iodide: 0 spikes 
+en:Fallout_shelter: 1 spikes 09-01 x4.6
+en:Martial_law: 0 spikes 
+ru:Мобилизация: 0 spikes 
+ru:Военное_положение: 1 spikes 10-07 x5.2
+uk:Мобілізація: 0 spikes 
+de:Wehrpflicht: 0 spikes 
+en:Conscription: 0 spikes 
+  period 2026-09-01..2026-10-04: 34 days, 15 event days, 30/34 days near an event, spike days near an event 4/4
+  period 2026-10-05..2026-10-14: 10 days, 10 event days, 10/10 days near an event, spike days near an event 1/1
+distinct spike days with an event within +-2 d: 5/5; stratified null at 2026-10-05 (340 rotation pairs, incl. identity) mean 4.38/5, p = 0.500
+### --ranges all --k 0 
+window 2026-09-01..2026-10-14: 44 days, 34 days with >=1 event (ranges=all), 34/44 days within +-0 of an event (calendar)
+en:World_War_III: 0 spikes 
+zh:第三次世界大戰: 2 spikes 09-20 x7.6, 09-21 x3.1
+fa:جنگ_جهانی_سوم: 3 spikes 09-19 x4.9, 09-20 x4.4, 09-21 x3.1
+ru:Третья_мировая_война: 0 spikes 
+en:Potassium_iodide: 0 spikes 
+en:Fallout_shelter: 1 spikes 09-01 x4.6
+en:Martial_law: 0 spikes 
+ru:Мобилизация: 0 spikes 
+ru:Военное_положение: 1 spikes 10-07 x5.2
+uk:Мобілізація: 0 spikes 
+de:Wehrpflicht: 0 spikes 
+en:Conscription: 0 spikes 
+distinct spike days with an event within +-0 d: 3/5; circular-shift null (43 shifts) mean 3.88/5, p = 0.886
+### --ranges all --k 0 --split 2026-10-05
+window 2026-09-01..2026-10-14: 44 days, 34 days with >=1 event (ranges=all), 34/44 days within +-0 of an event (calendar)
+en:World_War_III: 0 spikes 
+zh:第三次世界大戰: 2 spikes 09-20 x7.6, 09-21 x3.1
+fa:جنگ_جهانی_سوم: 3 spikes 09-19 x4.9, 09-20 x4.4, 09-21 x3.1
+ru:Третья_мировая_война: 0 spikes 
+en:Potassium_iodide: 0 spikes 
+en:Fallout_shelter: 1 spikes 09-01 x4.6
+en:Martial_law: 0 spikes 
+ru:Мобилизация: 0 spikes 
+ru:Военное_положение: 1 spikes 10-07 x5.2
+uk:Мобілізація: 0 spikes 
+de:Wehrpflicht: 0 spikes 
+en:Conscription: 0 spikes 
+  period 2026-09-01..2026-10-04: 34 days, 24 event days, 24/34 days near an event, spike days near an event 2/4
+  period 2026-10-05..2026-10-14: 10 days, 10 event days, 10/10 days near an event, spike days near an event 1/1
+distinct spike days with an event within +-0 d: 3/5; stratified null at 2026-10-05 (340 rotation pairs, incl. identity) mean 3.82/5, p = 0.853
+### --ranges all --k 1 
+window 2026-09-01..2026-10-14: 44 days, 34 days with >=1 event (ranges=all), 39/44 days within +-1 of an event (calendar)
+en:World_War_III: 0 spikes 
+zh:第三次世界大戰: 2 spikes 09-20 x7.6, 09-21 x3.1
+fa:جنگ_جهانی_سوم: 3 spikes 09-19 x4.9, 09-20 x4.4, 09-21 x3.1
+ru:Третья_мировая_война: 0 spikes 
+en:Potassium_iodide: 0 spikes 
+en:Fallout_shelter: 1 spikes 09-01 x4.6
+en:Martial_law: 0 spikes 
+ru:Мобилизация: 0 spikes 
+ru:Военное_положение: 1 spikes 10-07 x5.2
+uk:Мобілізація: 0 spikes 
+de:Wehrpflicht: 0 spikes 
+en:Conscription: 0 spikes 
+distinct spike days with an event within +-1 d: 5/5; circular-shift null (43 shifts) mean 4.37/5, p = 0.568
+### --ranges all --k 1 --split 2026-10-05
+window 2026-09-01..2026-10-14: 44 days, 34 days with >=1 event (ranges=all), 39/44 days within +-1 of an event (calendar)
+en:World_War_III: 0 spikes 
+zh:第三次世界大戰: 2 spikes 09-20 x7.6, 09-21 x3.1
+fa:جنگ_جهانی_سوم: 3 spikes 09-19 x4.9, 09-20 x4.4, 09-21 x3.1
+ru:Третья_мировая_война: 0 spikes 
+en:Potassium_iodide: 0 spikes 
+en:Fallout_shelter: 1 spikes 09-01 x4.6
+en:Martial_law: 0 spikes 
+ru:Мобилизация: 0 spikes 
+ru:Военное_положение: 1 spikes 10-07 x5.2
+uk:Мобілізація: 0 spikes 
+de:Wehrpflicht: 0 spikes 
+en:Conscription: 0 spikes 
+  period 2026-09-01..2026-10-04: 34 days, 24 event days, 29/34 days near an event, spike days near an event 4/4
+  period 2026-10-05..2026-10-14: 10 days, 10 event days, 10/10 days near an event, spike days near an event 1/1
+distinct spike days with an event within +-1 d: 5/5; stratified null at 2026-10-05 (340 rotation pairs, incl. identity) mean 4.35/5, p = 0.588
+### --ranges all --k 2 
+window 2026-09-01..2026-10-14: 44 days, 34 days with >=1 event (ranges=all), 41/44 days within +-2 of an event (calendar)
+en:World_War_III: 0 spikes 
+zh:第三次世界大戰: 2 spikes 09-20 x7.6, 09-21 x3.1
+fa:جنگ_جهانی_سوم: 3 spikes 09-19 x4.9, 09-20 x4.4, 09-21 x3.1
+ru:Третья_мировая_война: 0 spikes 
+en:Potassium_iodide: 0 spikes 
+en:Fallout_shelter: 1 spikes 09-01 x4.6
+en:Martial_law: 0 spikes 
+ru:Мобилизация: 0 spikes 
+ru:Военное_положение: 1 spikes 10-07 x5.2
+uk:Мобілізація: 0 spikes 
+de:Wehrpflicht: 0 spikes 
+en:Conscription: 0 spikes 
+distinct spike days with an event within +-2 d: 5/5; circular-shift null (43 shifts) mean 4.60/5, p = 0.705
+### --ranges all --k 2 --split 2026-10-05
+window 2026-09-01..2026-10-14: 44 days, 34 days with >=1 event (ranges=all), 41/44 days within +-2 of an event (calendar)
+en:World_War_III: 0 spikes 
+zh:第三次世界大戰: 2 spikes 09-20 x7.6, 09-21 x3.1
+fa:جنگ_جهانی_سوم: 3 spikes 09-19 x4.9, 09-20 x4.4, 09-21 x3.1
+ru:Третья_мировая_война: 0 spikes 
+en:Potassium_iodide: 0 spikes 
+en:Fallout_shelter: 1 spikes 09-01 x4.6
+en:Martial_law: 0 spikes 
+ru:Мобилизация: 0 spikes 
+ru:Военное_положение: 1 spikes 10-07 x5.2
+uk:Мобілізація: 0 spikes 
+de:Wehrpflicht: 0 spikes 
+en:Conscription: 0 spikes 
+  period 2026-09-01..2026-10-04: 34 days, 24 event days, 31/34 days near an event, spike days near an event 4/4
+  period 2026-10-05..2026-10-14: 10 days, 10 event days, 10/10 days near an event, spike days near an event 1/1
+distinct spike days with an event within +-2 d: 5/5; stratified null at 2026-10-05 (340 rotation pairs, incl. identity) mean 4.59/5, p = 0.706
+### v0.1 geometry: --ranges first --wrap --k 1
+window 2026-09-01..2026-10-14: 44 days, 27 days with >=1 event (ranges=first), 37/44 days within +-1 of an event (wrapped)
+en:World_War_III: 0 spikes 
+zh:第三次世界大戰: 2 spikes 09-20 x7.6, 09-21 x3.1
+fa:جنگ_جهانی_سوم: 3 spikes 09-19 x4.9, 09-20 x4.4, 09-21 x3.1
+ru:Третья_мировая_война: 0 spikes 
+en:Potassium_iodide: 0 spikes 
+en:Fallout_shelter: 1 spikes 09-01 x4.6
+en:Martial_law: 0 spikes 
+ru:Мобилизация: 0 spikes 
+ru:Военное_положение: 1 spikes 10-07 x5.2
+uk:Мобілізація: 0 spikes 
+de:Wehrpflicht: 0 spikes 
+en:Conscription: 0 spikes 
+distinct spike days with an event within +-1 d: 5/5; circular-shift null (43 shifts) mean 4.19/5, p = 0.477
