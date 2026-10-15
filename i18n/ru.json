@@ -1304,5 +1304,7 @@
  "Published values of two author's analytical indices: global systemic crisis (Chaos Pulse) and Russia mobilisation risk, one row per report.": "Опубликованные значения двух авторских аналитических индексов: глобального системного кризиса (Пульс хаоса) и мобилизационного риска России, одна строка на отчёт.",
  "Series": "Ряд",
  "When you quote a value, give its report date: the index is revised by later reports, never silently.": "Цитируя значение, указывайте дату отчёта: индекс пересматривается следующими отчётами, но никогда молча.",
- "Who makes this": "Кто это делает"
+ "Who makes this": "Кто это делает",
+ "Badge for your page": "Значок для вашей страницы",
+ "Two SVG badges always show the latest published reading with its report date, so an old embed tells the reader its age. Paste either line into a README or a web page.": "Два SVG-значка всегда показывают последнее опубликованное значение с датой отчёта, так что старая вставка сама сообщает читателю свой возраст. Вставьте любую из строк в README или на веб-страницу."
 }

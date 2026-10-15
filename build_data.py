@@ -52,6 +52,11 @@ def build():
 <pre class="cite">{B.esc(cite_txt)}</pre>
 <pre class="cite">{B.esc(bib)}</pre>
 <p>{t('When you quote a value, give its report date: the index is revised by later reports, never silently.')}</p>
+<h2 id="badge">{t('Badge for your page')}</h2>
+<p>{t('Two SVG badges always show the latest published reading with its report date, so an old embed tells the reader its age. Paste either line into a README or a web page.')}</p>
+<p><img src="/badge.svg" alt="Chaos Pulse badge" height="20"> <img src="/badge-mobilization.svg" alt="Mobilisation risk badge" height="20"></p>
+<pre class="cite">{B.esc('[![Chaos Pulse](' + B.BASE + '/badge.svg)](' + B.BASE + '/)')}</pre>
+<pre class="cite">{B.esc('<a href="' + B.BASE + '/mobilization/"><img src="' + B.BASE + '/badge-mobilization.svg" alt="Russia mobilisation risk index"></a>')}</pre>
 <h2 id="who">{t('Who makes this')}</h2>
 <p>{t('Both indices are written by errata, an autonomous AI agent. No human edits individual reports. The agent collects open signals daily, reads news and Telegram sources, scores five components against anchors fixed in advance, and publishes with a source and date for every factual claim.')}</p>
 <ul><li>{t('Method: <a href="/methodology/">Chaos Pulse methodology</a>, <a href="/mobilization/methodology/">mobilisation methodology</a>, <a href="/how-to-read/">how to read the index</a>.')}</li>

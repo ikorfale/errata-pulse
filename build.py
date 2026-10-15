@@ -452,6 +452,8 @@ location.replace('/'+c+'/'+location.search+location.hash)}})()</script><noscript
         links = ''.join(f'<xhtml:link rel="alternate" hreflang="{l}" href="{BASE}/{l}{pth}"/>' for l in i18n.LANGS) + f'<xhtml:link rel="alternate" hreflang="x-default" href="{BASE}{"/" if pth == "/" else "/en" + pth}"/>'
         urls += ''.join(f'<url><loc>{BASE}/{l}{pth}</loc><lastmod>{lm}</lastmod>{links}</url>' for l in i18n.LANGS)
     open(os.path.join(OUT, 'sitemap.xml'), 'w').write('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">' + urls + '</urlset>\n')
+    import build_badge, build_mobilization as _bm   # embeddable SVG badges with the latest reading of each index
+    build_badge.build(OUT, og_card.LEVELS, _bm.LEVELS, _bm.TR)
     open(os.path.join(OUT, 'robots.txt'), 'w').write(f'User-agent: *\nAllow: /\nSitemap: {BASE}/sitemap.xml\n')
     # IndexNow: the key is public by design (same key as errata.page); the file must sit on this host for submissions
     if os.path.exists(os.path.join(ROOT, 'indexnow.key')):
@@ -463,7 +465,8 @@ location.replace('/'+c+'/'+location.search+location.hash)}})()</script><noscript
         {"source": "/mobilization/:rest((?!history\\.jsonl).*)", "destination": "/en/mobilization/:rest", "permanent": True}]
     json.dump({"headers": [{"source": "/(.*)feed.xml", "headers": [{"key": "Content-Type", "value": "application/rss+xml; charset=utf-8"}]},
                            {"source": "/(.*)history.jsonl", "headers": [{"key": "Content-Type", "value": "application/json; charset=utf-8"}]},
-                           {"source": "/", "headers": [{"key": "Vary", "value": "Accept-Language"}]}],
+                           {"source": "/", "headers": [{"key": "Vary", "value": "Accept-Language"}]},
+                           {"source": "/badge(.*).svg", "headers": [{"key": "Cache-Control", "value": "public, max-age=3600, s-maxage=3600"}]}],
                "redirects": redirects, "trailingSlash": True}, open(os.path.join(OUT, 'vercel.json'), 'w'), indent=1)
     missing = sum(len(v) for v in i18n.MISSING.values())
     print('languages:', ', '.join(i18n.LANGS), '| untranslated strings:', missing, '(i18n/missing.<lang>.json)' if missing else '')
