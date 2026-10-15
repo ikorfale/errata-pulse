@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-14T22:45:35.452438+00:00",
+ "generated": "2026-10-15T22:45:17.384737+00:00",
  "counts": {
   "open": 23,
   "resolved": 2,
@@ -74,8 +74,8 @@
   }
  ],
  "models": {
-  "signals": 0.1715,
-  "base": 0.4412
+  "base": 0.4412,
+  "signals": 0.1715
  },
  "questions": [
   {
@@ -138,6 +138,10 @@
     {
      "date": "2026-10-14",
      "p": 0.088
+    },
+    {
+     "date": "2026-10-15",
+     "p": 0.086
     }
    ],
    "crowd_urls": {
@@ -248,6 +252,10 @@
     {
      "date": "2026-10-14",
      "p": 0.085
+    },
+    {
+     "date": "2026-10-15",
+     "p": 0.085
     }
    ],
    "crowd_urls": {
@@ -264,7 +272,7 @@
    "index": "pulse",
    "opened": "2026-10-09",
    "status": "open",
-   "p": 0.06,
+   "p": 0.04,
    "base_rate": 0.04,
    "method": "base: one comparable Russian commitment (the 30-day energy moratorium of March 2025) in 4.6 years; Poisson +0.5 smoothing over 42 days. signals: LR 1.8 Zelensky's public offer of a reciprocal energy truce (22 Sep) and Trump's claim of agreement; LR 0.7 the strike campaign is widening, not narrowing (Omsk, Salavat refineries 8 Oct; Yandex data centres 8-9 Oct); LR 1.2 US-led talks under way.",
    "history": [
@@ -303,6 +311,15 @@
       "base": 0.04,
       "signals": 0.05
      }
+    },
+    {
+     "date": "2026-10-14",
+     "p": 0.04,
+     "reason": "14.10: mass strike on Ukraine's grid (39 ballistic, 26 energy sites, 600k without power) and Peskov: the truce 'was not specified, so Russia cannot be said to break it' — the opposite of a public commitment. LR x0.65.",
+     "models": {
+      "base": 0.04,
+      "signals": 0.05
+     }
     }
    ],
    "crowd": [
@@ -332,6 +349,10 @@
     {
      "date": "2026-10-14",
      "p": 0.125
+    },
+    {
+     "date": "2026-10-15",
+     "p": 0.118
     }
    ],
    "crowd_urls": {
@@ -388,7 +409,7 @@
    "index": "pulse",
    "opened": "2026-10-09",
    "status": "open",
-   "p": 0.2,
+   "p": 0.22,
    "base_rate": 0.16,
    "method": "base: Article 4 requests since Feb 2022 counted as 3 in 4.7 years (Feb 2022; Poland Sep 2025; Estonia Sep 2025); Poisson +0.5 smoothing over 83 days. Checked: NATO's own list ends with Estonia, 23 Sep 2025; none in 2026 so far. signals: LR 1.5 pressure on NATO's eastern flank moved from rhetoric to incidents (Latvia 6 Oct, Lithuania moving troops towards Kaliningrad, Danish PET warnings); LR 1.2 the military component of the Chaos Pulse at 71; LR 0.8 the 2026 incidents so far (German grid sabotage and airport drones, Aug-Sep) were handled bilaterally, without Article 4, so the bar for a request is high.",
    "history": [
@@ -405,6 +426,15 @@
      "date": "2026-10-13",
      "p": 0.2,
      "reason": "13.10: third merchant sinking off Bulgaria/Romania in nine days (HS Dignity, 11 missing); Bulgaria asks NATO and EU for surveillance help and summons Russia's ambassador, but Radev says there is no clear evidence to accuse anyone and earlier ruled out Articles 4 and 5 (Stars and Stripes, RBC-Ukraine 13.10).",
+     "models": {
+      "base": 0.16,
+      "signals": 0.21
+     }
+    },
+    {
+     "date": "2026-10-14",
+     "p": 0.22,
+     "reason": "Bulgaria (Radev to parliament 14.10, AP): Russia 'likely' behind 4 ship attacks, 2 sunk, but cannot prove it; asks NATO for counter-drone support, not Art.4. Romania: drone briefly entered airspace near Sulina, F-16s scrambled (MApN 14.10). LR x1.15.",
      "models": {
       "base": 0.16,
       "signals": 0.21
@@ -437,6 +467,10 @@
     },
     {
      "date": "2026-10-14",
+     "p": 0.315
+    },
+    {
+     "date": "2026-10-15",
      "p": 0.315
     }
    ],
@@ -519,6 +553,10 @@
     },
     {
      "date": "2026-10-14",
+     "p": 0.02
+    },
+    {
+     "date": "2026-10-15",
      "p": 0.02
     }
    ],
@@ -648,6 +686,10 @@
     {
      "date": "2026-10-14",
      "p": 0.295
+    },
+    {
+     "date": "2026-10-15",
+     "p": 0.34
     }
    ],
    "crowd_urls": {
@@ -663,7 +705,7 @@
    "index": null,
    "opened": "2026-10-09",
    "status": "open",
-   "p": 0.35,
+   "p": 0.45,
    "base_rate": 0.45,
    "method": "base: reference class = the meeting right after the first hike of a cycle (2004: hike, 2015: no, 2022: hike, 1999: no); about half; 45%. signals: LR 0.6 Governor Waller (8 Oct) left the door open to a pause; LR 0.6 weak September payrolls (+29k, unemployment 4.2%); LR 1.2 core PCE 3%, energy shock. Honesty note: a search snippet summarising market pricing was visible before I wrote this number, so this question's errata-vs-crowd comparison is contaminated.",
    "history": [
@@ -671,6 +713,15 @@
      "date": "2026-10-09",
      "p": 0.35,
      "reason": "Opening: the committee signalled one more hike this year; December looks likelier than October.",
+     "models": {
+      "base": 0.45,
+      "signals": 0.26
+     }
+    },
+    {
+     "date": "2026-10-14",
+     "p": 0.45,
+     "reason": "CPI Sep (BLS 14.10): 3.7% y/y, core 2.6%, both above consensus; 10y at 5.3%, 10y auction highest yield in 26 years (WSJ). LR x1.6 on 0.35 -> 0.46, rounded down. Crowd/market pricing (~50% per Trading Economics) seen before this update — said openly.",
      "models": {
       "base": 0.45,
       "signals": 0.26
@@ -705,6 +756,10 @@
     {
      "date": "2026-10-14",
      "p": 0.313
+    },
+    {
+     "date": "2026-10-15",
+     "p": 0.273
     }
    ],
    "crowd_urls": {
@@ -815,6 +870,10 @@
     {
      "date": "2026-10-14",
      "p": 0.315
+    },
+    {
+     "date": "2026-10-15",
+     "p": 0.385
     }
    ],
    "crowd_urls": {
@@ -872,6 +931,10 @@
     {
      "date": "2026-10-14",
      "p": 0.289
+    },
+    {
+     "date": "2026-10-15",
+     "p": 0.28
     }
    ],
    "crowd_urls": {
@@ -949,6 +1012,10 @@
     },
     {
      "date": "2026-10-14",
+     "p": 0.205
+    },
+    {
+     "date": "2026-10-15",
      "p": 0.205
     }
    ],
@@ -1160,7 +1227,7 @@
    "index": null,
    "opened": "2026-10-10",
    "status": "open",
-   "p": 0.33,
+   "p": 0.28,
    "base_rate": 0.15,
    "method": "base: judgement from 2025-26 campaign which had multi-week lulls a few times a year; signals: bayes x1.5 (US pressure) x0.6 (Kyiv's stated refusal; Russia keeps striking the grid)",
    "history": [
@@ -1195,6 +1262,15 @@
      "date": "2026-10-13",
      "p": 0.33,
      "reason": "Zelensky 13.10: two days without Ukrainian refinery strikes; Reuters 13.10: Russia hit no energy targets overnight for the first time since the truce claim. Pause is holding so far but has no Russian commitment; 12 more days needed.",
+     "models": {
+      "base": 0.15,
+      "signals": 0.31
+     }
+    },
+    {
+     "date": "2026-10-14",
+     "p": 0.28,
+     "reason": "Ukraine's pause is day 3 (Lytvyn 14.10 denies refinery strikes; Novak claims Saratov and Ryazan were hit), but Russia did not reciprocate and Kyiv threatens large-scale winter strikes; the incentive to keep the pause 14 days fell. LR x0.8.",
      "models": {
       "base": 0.15,
       "signals": 0.31
