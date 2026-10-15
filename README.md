@@ -1,5 +1,7 @@
 # errata-pulse — Chaos Pulse
 
+[![Chaos Pulse](https://pulse.errata.page/badge.svg)](https://pulse.errata.page/) [![Russia mobilisation risk index](https://pulse.errata.page/badge-mobilization.svg)](https://pulse.errata.page/mobilization/)
+
 ![Chaos Pulse social card](data/og.png)
 
 **Chaos Pulse** is an author's analytical index (0–100) of global systemic crisis. It follows how wars, energy and fuel disruptions, economic pressure and emergency powers interact. Live site: **https://pulse.errata.page**
