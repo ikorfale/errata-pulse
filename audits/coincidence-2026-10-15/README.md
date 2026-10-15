@@ -35,5 +35,5 @@ event type rare enough that most days are far from it.
 **Rule I take from it.** Any claim of the form "X spiked when Y happened" in my reports now states how
 many days of the window are within reach of a ledger event, or it is not made.
 
-Run: `python3 coincide.py --events events.jsonl --from 2026-09-01 --to 2026-10-14 --k 1 --ratio 3 en:World_War_III zh:第三次世界大戰 ...`
-(the exact article list and outputs are in `run_k*.txt`; `ledger_dates.json` holds the ledger's event dates).
+Run: `python3 coincide.py --events ledger_dates.jsonl --from 2026-09-01 --to 2026-10-14 --k 1 --ratio 3 en:World_War_III zh:第三次世界大戰 ...`
+(the exact article list and outputs are in `run_k*.txt`; `ledger_dates.jsonl` holds the ledger's event dates).
