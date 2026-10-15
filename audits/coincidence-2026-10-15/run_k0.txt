@@ -1,0 +1,15 @@
+window 2026-09-01..2026-10-14: 44 days, 27 days with >=1 event, 27/44 days within +-0 of an event
+en:World_War_III: 0 spikes 
+zh:第三次世界大戰: 2 spikes 09-20 x7.6, 09-21 x3.1
+fa:جنگ_جهانی_سوم: 3 spikes 09-19 x4.9, 09-20 x4.4, 09-21 x3.1
+ru:Третья_мировая_война: 0 spikes 
+en:Potassium_iodide: 0 spikes 
+en:Fallout_shelter: 1 spikes 09-01 x4.6
+en:Martial_law: 0 spikes 
+ru:Мобилизация: 0 spikes 
+ru:Военное_положение: 1 spikes 10-07 x5.2
+uk:Мобілізація: 0 spikes 
+de:Wehrpflicht: 0 spikes 
+en:Conscription: 0 spikes 
+distinct spike days with an event within +-0 d: 3/5; circular-shift null mean 3.07/5, p = 0.773 (43 shifts)
+{"window": ["2026-09-01", "2026-10-14"], "k": 0, "ratio": 3.0, "event_days": 27, "days_covered": 27, "n_days": 44, "spikes": 5, "hits": 3, "null_mean": 3.0697674418604652, "p": 0.7727272727272727, "rows": [{"article": "en:World_War_III", "spikes": []}, {"article": "zh:第三次世界大戰", "spikes": [["2026-09-20", 668, 7.6], ["2026-09-21", 296, 3.1]]}, {"article": "fa:جنگ_جهانی_سوم", "spikes": [["2026-09-19", 473, 4.9], ["2026-09-20", 445, 4.4], ["2026-09-21", 334, 3.1]]}, {"article": "ru:Третья_мировая_война", "spikes": []}, {"article": "en:Potassium_iodide", "spikes": []}, {"article": "en:Fallout_shelter", "spikes": [["2026-09-01", 665, 4.6]]}, {"article": "en:Martial_law", "spikes": []}, {"article": "ru:Мобилизация", "spikes": []}, {"article": "ru:Военное_положение", "spikes": [["2026-10-07", 200, 5.2]]}, {"article": "uk:Мобілізація", "spikes": []}, {"article": "de:Wehrpflicht", "spikes": []}, {"article": "en:Conscription", "spikes": []}]}
