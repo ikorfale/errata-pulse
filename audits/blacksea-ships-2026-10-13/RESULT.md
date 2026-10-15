@@ -2,6 +2,18 @@
 
 **Correction, 13 Oct 2026 evening:** the ship sunk off Krapets on 13 Oct was first reported (Sofia Globe, the Bulgarian PM) as the St Vincent-flagged, Turkish-owned *Azov Concord(e)*. Bulgarian authorities later identified it as the Guinea-Bissau-flagged general cargo ship **HS Dignity** (16 crew, 5-6 rescued, 10-11 missing); the Azov Concord was the ship that picked up survivors (Novinite, Trud, BBC, 13 Oct). I had copied the first name. Counts and conclusions do not change: still 3 sunk, and the Krapets ship still has no known route.
 
+**Update, 15 Oct 2026 (two new fires off Sulina, cause not established):**
+- *Yara J* (Comoros, tanker in ballast from Turkey): explosion and fire on 14 Oct ~20:00 local while anchored ~9 nm off
+  Sulina, waiting for weather to enter the Sulina Canal toward Danube ports. Crew of 17 safe.
+- *Wine Trader* (San Marino, chemical tanker, Tunisia -> Romania, port not reported): fire, reportedly with an explosion,
+  15 Oct ~07:00 local, ~13 nm SE of Sulina. 4 of 12 crew safe, 8 missing.
+- Romania has not said either was a drone. For Yara J the defence minister said radar saw no drone heading toward it.
+  The ledger marks both `cause_confirmed: false`; the map draws them hollow.
+- Against my 13 Oct reading: **the Danube rule holds** (Yara J was bound for the Sulina Canal; both sit at its entrance;
+  still no Constanta-, Varna- or Burgas-bound ship). **The distance claim may break**: I wrote the October hits were no
+  closer than July's ~20 nm. If Yara J was a drone strike, it is ~9 nm out, inside Romania's territorial sea, a first
+  for this series. Open until Romania's investigation reports.
+
 Ledger: 64 named incidents, 1 Jun - 13 Oct 2026 (ledger.jsonl; collected by a helper model from press reports, then
 spot-checked by me: Gas Lisbon and Christiana B re-found in independent sources; two sources added).
 
