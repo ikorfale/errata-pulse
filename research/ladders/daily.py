@@ -53,10 +53,28 @@ for h in hist:
     for k, v in h['pairs'].items():
         s = seen.setdefault(k, {'first': h['day'], 'last': h['day'], 'runs': 0, **v})
         s['last'] = h['day']; s['runs'] += 1; s['gap'] = v['gap']
-L = [f'# Ladder pairs over time ({days[0]} to {days[-1]}, {len(days)} daily runs)', '',
+by_market = {}  # one multiple-choice market yields up to n(n-1)/2 pairs, so persistence is counted per market too
+for k, s in seen.items():
+    m = by_market.setdefault(k if s['kind'] == 'binary' else k.split('|')[0],
+                             {'first': s['first'], 'last': s['last'], 'pairs': 0, 'max_gap': 0, 'kind': s['kind'],
+                              'what': s['what'].split(': ')[0] if s['kind'] != 'binary' else s['what'], 'url': s['url'], 'key': k})
+    m['first'] = min(m['first'], s['first']); m['last'] = max(m['last'], s['last'])
+    m['pairs'] += 1; m.setdefault('members', []).append(s)
+for m in by_market.values():
+    m['max_gap'] = max(s['gap'] for s in m.pop('members') if s['last'] == m['last'])
+L = [f'# Ladder breaks over time ({days[0]} to {days[-1]}, {len(days)} daily runs)', '',
+     f'{len(by_market)} markets or binary pairs ever flagged, {sum(m["last"] == day for m in by_market.values())} open now.', '',
      'Review: ladder = same event and compatible criteria (incoherent prices); criteria-differ = the gap may be honest; '
      'state = not a cumulative event (matcher false positive); unreviewed = new, not read yet (review.json).', '',
-     '| first seen | last seen | runs flagged | open now | last gap | review | pair |', '|---|---|---|---|---|---|---|']
+     '## Per market', '',
+     '| first seen | last seen | days span | open now | flagged pairs | max gap (last run) | review | market |',
+     '|---|---|---|---|---|---|---|---|']
+dspan = lambda a, b: (datetime.fromisoformat(b) - datetime.fromisoformat(a)).days + 1
+for m in sorted(by_market.values(), key=lambda m: (m['last'] != day, -m['max_gap'])):
+    L.append(f"| {m['first']} | {m['last']} | {dspan(m['first'], m['last'])} | {'yes' if m['last'] == day else 'no'} | "
+             f"{m['pairs']} | {m['max_gap'] * 100:.0f} pts | {verdict(m['key'])} | [{m['what'][:120]}]({m['url']}) ({m['kind']}) |")
+L += ['', '## Every pair', '',
+      '| first seen | last seen | runs flagged | open now | last gap | review | pair |', '|---|---|---|---|---|---|---|']
 for k, s in sorted(seen.items(), key=lambda kv: (kv[1]['last'] != day, kv[1]['first'])):
     L.append(f"| {s['first']} | {s['last']} | {s['runs']} | {'yes' if s['last'] == day else 'no'} | "
              f"{s['gap'] * 100:.0f} pts | {verdict(k)} | [{s['what'][:120]}]({s['url']}) ({s['kind']}) |")
@@ -64,4 +82,5 @@ open(os.path.join(runs, 'persistence.md'), 'w').write('\n'.join(L) + '\n')
 print(f"{day}: {row['binary_pairs']} binary pairs, {row['mc_pairs']} mc pairs in {row['mc_markets_flagged']} markets, "
       f"{row['never_breaks']} never-breaks; verdicts {row['verdicts']}; "
       f"polymarket {row['poly']['pairs'] if poly else 'n/a'} pairs, {len(row['poly']['crossed']) if poly else '-'} crossed; "
-      f"{len(seen)} pairs ever, {sum(s['last'] == day for s in seen.values())} open now")
+      f"{len(seen)} pairs ever, {sum(s['last'] == day for s in seen.values())} open now; "
+      f"{len(by_market)} markets ever, {sum(m['last'] == day for m in by_market.values())} open now")
