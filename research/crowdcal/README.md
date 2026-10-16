@@ -108,7 +108,23 @@ What it changes:
 - **The longshot floor holds more firmly than the rule-of-three bound said.** On the average-linkage plateau
   the chance of zero YES among 140–198 sub-10% clusters with calibrated prices is 1e-4 to 1e-3. Common shocks would make
   that optimistic; synonyms TF-IDF cannot see ("Kremlin" / "Russia") would merge more clusters and raise it.
-  Not yet checked with embeddings.
+  Embedding check below.
+
+**Embeddings (same day, `embed_check.py`, `embed_check.txt`).** OpenAI text-embedding-3-small on the 518 titles,
+average linkage. 174 title pairs have embedding cosine ≥ 0.8 but TF-IDF cosine < 0.3. Reading the top 25: real
+paraphrases ("Israel hit Iran's nuclear sites" / "air strikes against Iranian nuclear facilities"), but also related,
+different questions ("detonated" / "launched in combat"; "invade any country other than Ukraine" / "invade Ukrainian
+territory"). So the embedding merges more, and past τ ≈ 0.75 it merges questions, not paraphrases.
+
+| embedding τ | clusters (largest) | equal-cluster | equal-market | earliest rung | <10% clusters | P(0 YES) |
+|---|---|---|---|---|---|---|
+| 0.80 | 340 (3.5%) | +3.45 [+0.96, +6.01] | +3.26 [+1.18, +5.31] | +3.59 [+0.78, +6.47] | 196 | 1.05e-04 |
+| 0.75 | 273 (4.4%) | +3.44 [+0.40, +6.45] | +3.26 [+0.72, +5.58] | +3.36 [+0.11, +6.62] | 157 | 5.29e-04 |
+| 0.70 | 214 (6.6%) | +3.19 [−0.15, +6.52] | +3.26 [+0.84, +5.69] | +3.08 [−0.74, +6.90] | 126 | 1.92e-03 |
+| 0.65 | 157 (10.0%) | +2.88 [−1.26, +6.97] | +3.26 [+0.84, +5.91] | +1.93 [−2.81, +6.85] | 92 | 8.22e-03 |
+
+Synonyms move the count by tens, not by an order of magnitude. The floor still needs either miscalibrated prices or
+far fewer independent families than any grouping here produces; the per-family gap stays borderline as before.
 
 ## Limits
 

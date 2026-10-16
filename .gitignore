@@ -2,3 +2,4 @@ site/
 __pycache__/
 i18n/tmp/
 i18n/missing.*.json
+embed_cache.json
