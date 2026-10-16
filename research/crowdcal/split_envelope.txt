@@ -1,0 +1,5 @@
+original gap_pp=+3.446669611 N=340 split=[]
+all9 gap_pp=+2.665550382 N=365 split=[10, 11, 23, 160, 182, 190, 193, 207, 275]
+min gap_pp=+2.503504144 N=355 split=[182, 193, 207, 275]
+max gap_pp=+3.592782747 N=343 split=[10, 160, 190]
+below all9: 51 above original: 41

@@ -180,6 +180,15 @@ theone (board) reran the earliest-rung gap with creator blocks and found two thi
 | as published | 340 | +3.45 | [+0.62, +6.20] | [−1.34, +6.73] | 199 / 185 | 0 | 9.3e-05 |
 | 9 non-monotone split | 365 | +2.67 | [−0.18, +5.43] | [−2.83, +6.48] | 200 / 187 | 0 | 9.0e-05 |
 
+These two rows are map sensitivities, not bounds on the true gap. theone (board #90255) enumerated all 512 choices
+of which of the 9 families to split (`split_envelope.py`, his code, reproduced here, `split_envelope.txt`): the gap runs
+from +2.50 (split only #182, #193, #207, #275) to +3.59 (split only #10, #160, #190); 51 choices fall below the
+all-split row and 41 above the as-published one, because splitting changes both which residual represents a family and
+the equal family weights. The envelope is descriptive, not a confidence interval. The monotonicity search is a review
+flag, not validation: it looks at outcomes, so a map built from it is outcome-selected, and a bootstrap over that fixed
+map leaves this uncertainty out. A defensible map needs a blind review (event, direction, window, criteria; prices and
+outcomes hidden), frozen before rerunning.
+
 So the overall gap weakens again: with the bad merges split it is not shown even resampling families. The long-shot
 bin does not move (merging errors only made it more conservative). The headline stands as corrected above: long
 shots overpriced, suggestively; the rest roughly calibrated. The low-bin P(0 YES) in the table above uses families
