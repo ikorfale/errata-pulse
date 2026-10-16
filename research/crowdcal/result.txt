@@ -1,0 +1,69 @@
+source markets.json: 2812 markets, YES 793
+groups v1: {'escalation': 553, 'other': 1372, 'peace': 887}
+groups v2: {'escalation': 721, 'escalation?': 4, 'offtopic': 68, 'other': 1834, 'peace': 185}
+
+# PRE-REGISTERED TEST: v1 escalation, T-30d before close, market bootstrap; prediction gap >= +0.05
+v1 escalation T-30d                          n= 391 eff= 391  crowd 0.203  YES 0.164  gap +0.039 [+0.014,+0.063]  Brier 0.060 vs const 0.137
+
+# Context and robustness
+v2 escalation 30d cluster-boot               n= 518 eff= 384  crowd 0.195  YES 0.162  gap +0.033 [+0.011,+0.052]  Brier 0.059 vs const 0.136
+v2 escalation 30d liquid cluster-boot        n= 506 eff= 373  crowd 0.192  YES 0.160  gap +0.032 [+0.011,+0.053]  Brier 0.056 vs const 0.134
+v2 peace 30d cluster-boot                    n= 126 eff=  93  crowd 0.247  YES 0.167  gap +0.081 [+0.023,+0.131]  Brier 0.087 vs const 0.139
+v2 peace 30d liquid cluster-boot             n= 121 eff=  89  crowd 0.248  YES 0.165  gap +0.083 [+0.028,+0.130]  Brier 0.085 vs const 0.138
+v2 other 30d cluster-boot                    n=1406 eff=1148  crowd 0.297  YES 0.249  gap +0.048 [+0.031,+0.063]  Brier 0.085 vs const 0.187
+v2 other 30d liquid cluster-boot             n=1363 eff=1119  crowd 0.291  YES 0.249  gap +0.041 [+0.026,+0.057]  Brier 0.079 vs const 0.187
+v2 escalation 7d cluster-boot                n= 641 eff= 468  crowd 0.194  YES 0.206  gap -0.012 [-0.032,+0.007]  Brier 0.061 vs const 0.164
+v2 escalation 7d liquid cluster-boot         n= 635 eff= 464  crowd 0.193  YES 0.203  gap -0.010 [-0.029,+0.010]  Brier 0.059 vs const 0.162
+v2 peace 7d cluster-boot                     n= 160 eff= 113  crowd 0.206  YES 0.194  gap +0.012 [-0.031,+0.052]  Brier 0.072 vs const 0.156
+v2 peace 7d liquid cluster-boot              n= 159 eff= 113  crowd 0.207  YES 0.195  gap +0.012 [-0.033,+0.051]  Brier 0.072 vs const 0.157
+v2 other 7d cluster-boot                     n=1670 eff=1342  crowd 0.284  YES 0.276  gap +0.008 [-0.005,+0.021]  Brier 0.069 vs const 0.200
+v2 other 7d liquid cluster-boot              n=1645 eff=1326  crowd 0.281  YES 0.274  gap +0.007 [-0.006,+0.020]  Brier 0.066 vs const 0.199
+v2 escalation c14 cluster-boot               n= 720 eff= 512  crowd 0.314  YES 0.246  gap +0.068 [+0.043,+0.091]  Brier 0.091 vs const 0.185
+v2 escalation c14 liquid cluster-boot        n= 653 eff= 466  crowd 0.308  YES 0.237  gap +0.071 [+0.046,+0.094]  Brier 0.083 vs const 0.181
+v2 peace c14 cluster-boot                    n= 185 eff= 133  crowd 0.359  YES 0.232  gap +0.127 [+0.068,+0.179]  Brier 0.141 vs const 0.178
+v2 peace c14 liquid cluster-boot             n= 173 eff= 127  crowd 0.358  YES 0.243  gap +0.115 [+0.058,+0.169]  Brier 0.135 vs const 0.184
+v2 other c14 cluster-boot                    n=1829 eff=1451  crowd 0.404  YES 0.301  gap +0.103 [+0.084,+0.122]  Brier 0.139 vs const 0.210
+v2 other c14 liquid cluster-boot             n=1601 eff=1284  crowd 0.400  YES 0.306  gap +0.094 [+0.076,+0.112]  Brier 0.128 vs const 0.212
+v2 escalation c14 open-at-anchor only        n= 600 eff= 437  crowd 0.278  YES 0.192  gap +0.087 [+0.059,+0.113]  Brier 0.104 vs const 0.155
+v2 escalation c30 cluster-boot               n= 721 eff= 513  crowd 0.307  YES 0.245  gap +0.062 [+0.041,+0.082]  Brier 0.068 vs const 0.185
+v2 escalation c30 liquid cluster-boot        n= 676 eff= 483  crowd 0.304  YES 0.241  gap +0.063 [+0.042,+0.082]  Brier 0.060 vs const 0.183
+v2 peace c30 cluster-boot                    n= 185 eff= 133  crowd 0.311  YES 0.232  gap +0.078 [+0.029,+0.123]  Brier 0.097 vs const 0.178
+v2 peace c30 liquid cluster-boot             n= 178 eff= 130  crowd 0.310  YES 0.236  gap +0.074 [+0.026,+0.118]  Brier 0.092 vs const 0.180
+v2 other c30 cluster-boot                    n=1832 eff=1454  crowd 0.388  YES 0.301  gap +0.087 [+0.070,+0.104]  Brier 0.119 vs const 0.211
+v2 other c30 liquid cluster-boot             n=1697 eff=1352  crowd 0.386  YES 0.302  gap +0.084 [+0.067,+0.101]  Brier 0.110 vs const 0.211
+v2 escalation c30 open-at-anchor only        n= 518 eff= 384  crowd 0.254  YES 0.162  gap +0.092 [+0.065,+0.117]  Brier 0.086 vs const 0.136
+
+# one random market per cluster, v2 escalation T-30d
+v2 escalation T-30d one-per-cluster          n= 384 eff= 384  crowd 0.220  YES 0.193  gap +0.027 [+0.001,+0.053]  Brier 0.067 vs const 0.156
+
+# liquidity terciles (bettors before anchor), v2 escalation T-30d
+tercile 1 (users 1..25)                      n= 172 eff= 172  crowd 0.256  YES 0.192  gap +0.064 [+0.024,+0.103]  Brier 0.075 vs const 0.155
+tercile 2 (users 25..43)                     n= 173 eff= 173  crowd 0.186  YES 0.168  gap +0.018 [-0.018,+0.052]  Brier 0.055 vs const 0.140
+tercile 3 (users 43..396)                    n= 173 eff= 173  crowd 0.143  YES 0.127  gap +0.016 [-0.016,+0.046]  Brier 0.047 vs const 0.111
+
+# 25 random v2 escalation titles for a hand check of direction (YES = more violence?)
+   NO 0.10 Will North Korea fire missiles that travel directly above land internationally recognized as Japan in 2023?
+   NO 0.06 Will Israel conduct an attack that significantly degrades Iran’s Fordow nuclear facility before January 2026?
+   NO 0.03 Will Belarus invade Ukraine by the end of the year?
+   NO 0.06 Drone attack on Taiwan's critical infrastructure before December 31, 2025
+   NO 0.29 Will Israel conduct strikes in Yemen in 2023?
+   NO 0.22 Will Germany supply Kyiv with cruise missiles to aid Ukraine's counter-offensive against Russia before 31 Dec 2023?
+   NO 0.19 Will NATO or Romania Shoot Down a Russian Military Drone Over Romania in 2023?
+   NO 0.02 Will Russia have a nuclear weapon in Earth orbit in 2024?
+   NO 0.62 Will Donald Trump express support for the 'nuclear option" of breaking legislative filibuster, before September 2025?
+   NO 0.02 Will China invade Taiwan by the end of 2025?
+   NO 0.02 Will Venezuela invade Brazil by 2024 year end?
+   NO 0.03 Will any country that is not currently known to have nuclear weapons detonate a nuclear weapon in 2025? (Tests included)
+   NO 0.04 Will there be an serious coup attempt in Russia aganist Putin (successful or unsuccessful) by the end of 2023
+   NO 0.10 Will Wagner group attack Ukraine from Belarus?
+   NO 0.02 Will any countries that are not currently known to have nuclear weapons test a functioning nuclear warhead in 2023?
+   NO 0.05 Will the US bomb sites in Iran in 2024
+   NO 0.07 Will Trump bomb Oman?
+   NO 0.08 If there has been no nuclear strike will NATO troops intervene on the ground before April 2023?
+   NO 0.07 Will China test a nuclear weapon during 2024?
+   NO 0.01 Will Russian troops invade Latvia, Lithuania, or Estonia prior to 2024?
+   NO 0.26 Trump reverses Biden's Ukraine long-range missile policy by March 1st, 2025
+   NO 0.05 Will Russia perform a nuclear weapons test in Q1 of 2023?
+   YES 0.90 Will another aid worker die by air strike in Gaza in 2024?
+   NO 0.07 Will Russia attack Moldova before the end of 2023?
+   NO 0.40 Will Russia begin a new wave of mobilisation by May 1, 2023?

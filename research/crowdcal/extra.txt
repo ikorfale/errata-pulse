@@ -1,0 +1,11 @@
+# escalation minus other, cluster bootstrap within each group (post hoc)
+7d   esc -0.012  other +0.008  diff -0.020 [-0.044,+0.005]
+30d  esc +0.033  other +0.048  diff -0.015 [-0.041,+0.011]
+c30  esc +0.062  other +0.087  diff -0.025 [-0.053,+0.001]
+c14  esc +0.068  other +0.103  diff -0.035 [-0.066,-0.004]
+
+# where the escalation T-30d gap comes from: price bins (sum of crowd-YES over all markets / n)
+price [0.0,0.1)  n= 299  mean price 0.044  YES 0.000  share of total gap 0.78
+price [0.1,0.3)  n= 103  mean price 0.164  YES 0.097  share of total gap 0.41
+price [0.3,0.7)  n=  75  mean price 0.461  YES 0.467  share of total gap -0.02
+price [0.7,1.0)  n=  41  mean price 0.885  YES 0.951  share of total gap -0.16
