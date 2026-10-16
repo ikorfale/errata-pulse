@@ -73,6 +73,43 @@ What it says:
 - ICC of the residual is 0.4–0.8 inside small same-month clusters (there are duplicates) and near 0 at
   the search-term level; with mostly single-market clusters and a 0/1 outcome I do not lean on it.
 
+## Linkage and estimator check (16.10, after glitchfox and theone)
+
+glitchfox pointed out that union-find on a cosine threshold is single linkage, which chains, and that
+average linkage does not; theone showed that my equal-cluster bootstrap changes both the weights and the
+resampling unit, so its width cannot be read as a design effect, and gave the pooled equal-market
+estimator. `linkage_check.py` runs both on the real titles (across deadlines, blocked by group only);
+full table in `linkage_check.txt`. Bootstrap: 2000 cluster draws, seed 7, the same draws for all three
+estimators; "earliest rung" keeps one market per cluster, the one that closes first.
+
+| linkage, τ | clusters (largest) | equal-cluster | equal-market | earliest rung | P(0 YES in <10% bin) |
+|---|---|---|---|---|---|
+| single 0.5 | 286 (12.9%) | +2.96 [−0.25, +5.97] | +3.26 [+0.47, +5.64] | +3.57 [+0.37, +6.52] | 5.13e-04 |
+| single 0.4 | 206 (40.9%) | +3.73 [+0.13, +7.18] | +3.26 [+0.71, +5.55] | +3.83 [+0.09, +7.53] | 4.21e-03 |
+| single 0.3 | 104 (73.9%) | +6.00 [+0.58, +11.32] | +3.26 [+1.78, +9.65] | +6.08 [+0.55, +11.68] | 5.23e-02 |
+| average 0.5 | 339 (3.5%) | +2.96 [+0.34, +5.54] | +3.26 [+1.05, +5.30] | +3.47 [+0.75, +6.19] | 9.90e-05 |
+| average 0.4 | 289 (3.7%) | +2.89 [−0.16, +5.73] | +3.26 [+1.03, +5.28] | +3.05 [−0.13, +6.10] | 2.98e-04 |
+| average 0.3 | 230 (5.2%) | +2.97 [+0.08, +5.82] | +3.26 [+1.10, +5.29] | +3.52 [+0.11, +6.80] | 9.74e-04 |
+
+Gaps in percentage points. The last column is prod(1 − p_c) over the sub-10% clusters, p_c the mean price of
+the cluster's sub-10% markets: the chance of no YES at all if those prices were calibrated and clusters
+independent. No sub-10% cluster resolved YES in any row.
+
+What it changes:
+- **The cliff was chaining.** Single linkage drops 286 → 206 → 104 clusters between τ 0.5 and 0.3 while
+  its largest cluster grows to 74%; average linkage goes 339 → 289 → 230 with the largest cluster at most
+  5.2%. The single-linkage rows below τ 0.5 measure the chain, not question families.
+- **The gap: about +3 points, lower bound near zero at question-family level.** With equal cluster
+  weights (and with one rung per family) the lower bound sits between −0.16 and +0.34 on the average-linkage
+  plateau; with equal market weights it stays above +1.0. Which one to quote is a choice of target (per family
+  or per market), not a correction; both assume independent clusters, and neither measures common shocks
+  between families. I withdraw nothing from the earlier reading, "positive per event, borderline per question
+  family", and I do not derive an effective n from the interval widths (theone).
+- **The longshot floor holds more firmly than the rule-of-three bound said.** On the average-linkage plateau
+  the chance of zero YES among 140–198 sub-10% clusters with calibrated prices is 1e-4 to 1e-3. Common shocks would make
+  that optimistic; synonyms TF-IDF cannot see ("Kremlin" / "Russia") would merge more clusters and raise it.
+  Not yet checked with embeddings.
+
 ## Limits
 
 - Clustering of near-duplicate questions (identical capitalised words + quarter) is too fine; the true
