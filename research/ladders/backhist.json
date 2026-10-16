@@ -1,6 +1,5 @@
 {
  "day": "2026-10-16",
- "tol": 0.03,
  "pairs": [
   {
    "key": "I8X5vPa7vS8TfjwmO1Vc|p0mSvUwyzruumWS20Rr6",
@@ -9,14 +8,109 @@
    "url": "https://manifold.markets/WXTJ/will-the-uk-nhs-national-health-ser",
    "gap_now": 0.187,
    "verdict": "state",
-   "days": 1381,
-   "streak": 1126,
-   "share": 0.99637943519189,
-   "max_gap": 0.18697052694617633,
-   "since": "2023-09-17",
-   "last_bet": "2025-03-28",
-   "bets": 37,
-   "bets_during": 14
+   "market": "I8X5vPa7vS8TfjwmO1Vc|p0mSvUwyzruumWS20Rr6",
+   "tol3": {
+    "episodes": 6,
+    "closed": [
+     {
+      "start": 1672834681228,
+      "cause": "born",
+      "max_gap": 0.0427,
+      "end": 1672835869807,
+      "ended_by": "later rung up",
+      "days": 0.0
+     },
+     {
+      "start": 1672835880022,
+      "cause": "earlier rung up",
+      "max_gap": 0.0442,
+      "end": 1672844084207,
+      "ended_by": "later rung up",
+      "days": 0.1
+     },
+     {
+      "start": 1672943068407,
+      "cause": "earlier rung up",
+      "max_gap": 0.1909,
+      "end": 1694559194717,
+      "ended_by": "later rung up",
+      "days": 250.2
+     },
+     {
+      "start": 1694559348732,
+      "cause": "later rung down",
+      "max_gap": 0.1931,
+      "end": 1694560010949,
+      "ended_by": "later rung up",
+      "days": 0.0
+     },
+     {
+      "start": 1694871558913,
+      "cause": "later rung down",
+      "max_gap": 0.2986,
+      "end": 1695537765772,
+      "ended_by": "later rung up",
+      "days": 7.7
+     }
+    ],
+    "open": {
+     "start": 1695538805986,
+     "cause": "earlier rung up",
+     "max_gap": 0.2311,
+     "end": null,
+     "days": 1118.2
+    },
+    "rung_fills_after": 12,
+    "market_fills_after": 12,
+    "bettors_after": 5
+   },
+   "tol5": {
+    "episodes": 5,
+    "closed": [
+     {
+      "start": 1672998677163,
+      "cause": "earlier rung up",
+      "max_gap": 0.1909,
+      "end": 1694559194717,
+      "ended_by": "later rung up",
+      "days": 249.5
+     },
+     {
+      "start": 1694559348732,
+      "cause": "later rung down",
+      "max_gap": 0.1931,
+      "end": 1694560010949,
+      "ended_by": "later rung up",
+      "days": 0.0
+     },
+     {
+      "start": 1694871558913,
+      "cause": "later rung down",
+      "max_gap": 0.2986,
+      "end": 1695537765772,
+      "ended_by": "later rung up",
+      "days": 7.7
+     },
+     {
+      "start": 1695538805986,
+      "cause": "earlier rung up",
+      "max_gap": 0.2311,
+      "end": 1721721742854,
+      "ended_by": "later rung up",
+      "days": 303.0
+     }
+    ],
+    "open": {
+     "start": 1721721765165,
+     "cause": "earlier rung up",
+     "max_gap": 0.1938,
+     "end": null,
+     "days": 815.2
+    },
+    "rung_fills_after": 7,
+    "market_fills_after": 7,
+    "bettors_after": 3
+   }
   },
   {
    "key": "IhLdAnnAEQ|yQRCgdRPyR",
@@ -25,14 +119,61 @@
    "url": "https://manifold.markets/Ernie/russian-attacks-or-invades-finland-c9C9S2A0Pd",
    "gap_now": 0.1073,
    "verdict": "ladder",
-   "days": 107,
-   "streak": 107,
-   "share": 1.0,
-   "max_gap": 0.13105078779489937,
-   "since": "2026-07-02",
-   "last_bet": "2026-09-22",
-   "bets": 42,
-   "bets_during": 5
+   "market": "IhLdAnnAEQ|yQRCgdRPyR",
+   "tol3": {
+    "episodes": 2,
+    "closed": [
+     {
+      "start": 1782886637968,
+      "cause": "earlier rung up",
+      "max_gap": 0.0527,
+      "end": 1782886638044,
+      "ended_by": "earlier rung down",
+      "days": 0.0
+     }
+    ],
+    "open": {
+     "start": 1782894356280,
+     "cause": "later rung down",
+     "max_gap": 0.1455,
+     "end": null,
+     "days": 107.2
+    },
+    "rung_fills_after": 11,
+    "market_fills_after": 11,
+    "bettors_after": 8
+   },
+   "tol5": {
+    "episodes": 3,
+    "closed": [
+     {
+      "start": 1782886637968,
+      "cause": "earlier rung up",
+      "max_gap": 0.0527,
+      "end": 1782886638044,
+      "ended_by": "earlier rung down",
+      "days": 0.0
+     },
+     {
+      "start": 1782894356280,
+      "cause": "later rung down",
+      "max_gap": 0.0574,
+      "end": 1782902777909,
+      "ended_by": "earlier rung down",
+      "days": 0.1
+     }
+    ],
+    "open": {
+     "start": 1782903420453,
+     "cause": "later rung down",
+     "max_gap": 0.1455,
+     "end": null,
+     "days": 107.1
+    },
+    "rung_fills_after": 9,
+    "market_fills_after": 9,
+    "bettors_after": 7
+   }
   },
   {
    "key": "X3zlXDKlKNxi1LknVk5i|qfbmVECblEwwPj50qJ46",
@@ -41,14 +182,253 @@
    "url": "https://manifold.markets/RemNi/will-we-get-agi-before-july-2028",
    "gap_now": 0.0577,
    "verdict": "criteria-differ",
-   "days": 1053,
-   "streak": 39,
-   "share": 0.15479582146248813,
-   "max_gap": 0.20510982943151065,
-   "since": "2026-09-08",
-   "last_bet": "2026-09-21",
-   "bets": 344,
-   "bets_during": 41
+   "market": "X3zlXDKlKNxi1LknVk5i|qfbmVECblEwwPj50qJ46",
+   "tol3": {
+    "episodes": 16,
+    "closed": [
+     {
+      "start": 1701208918071,
+      "cause": "born",
+      "max_gap": 0.3379,
+      "end": 1701212924518,
+      "ended_by": "earlier rung down",
+      "days": 0.0
+     },
+     {
+      "start": 1701241721811,
+      "cause": "earlier rung up",
+      "max_gap": 0.0355,
+      "end": 1701446816312,
+      "ended_by": "earlier rung down",
+      "days": 2.4
+     },
+     {
+      "start": 1701599432447,
+      "cause": "earlier rung up",
+      "max_gap": 0.252,
+      "end": 1701610637017,
+      "ended_by": "earlier rung down",
+      "days": 0.1
+     },
+     {
+      "start": 1701610641534,
+      "cause": "earlier rung up",
+      "max_gap": 0.2284,
+      "end": 1701823041763,
+      "ended_by": "earlier rung down",
+      "days": 2.5
+     },
+     {
+      "start": 1701910441562,
+      "cause": "earlier rung up",
+      "max_gap": 0.146,
+      "end": 1702009056620,
+      "ended_by": "earlier rung down",
+      "days": 1.1
+     },
+     {
+      "start": 1702125378605,
+      "cause": "earlier rung up",
+      "max_gap": 0.1172,
+      "end": 1702286020369,
+      "ended_by": "earlier rung down",
+      "days": 1.9
+     },
+     {
+      "start": 1702391092208,
+      "cause": "earlier rung up",
+      "max_gap": 0.0538,
+      "end": 1702550461508,
+      "ended_by": "earlier rung down",
+      "days": 1.8
+     },
+     {
+      "start": 1702666094318,
+      "cause": "earlier rung up",
+      "max_gap": 0.0907,
+      "end": 1702684186132,
+      "ended_by": "earlier rung down",
+      "days": 0.2
+     },
+     {
+      "start": 1702701903580,
+      "cause": "earlier rung up",
+      "max_gap": 0.0442,
+      "end": 1702789364678,
+      "ended_by": "earlier rung down",
+      "days": 1.0
+     },
+     {
+      "start": 1702882266236,
+      "cause": "earlier rung up",
+      "max_gap": 0.0743,
+      "end": 1704342908169,
+      "ended_by": "later rung up",
+      "days": 16.9
+     },
+     {
+      "start": 1737309344360,
+      "cause": "earlier rung up",
+      "max_gap": 0.0318,
+      "end": 1737323781436,
+      "ended_by": "earlier rung down",
+      "days": 0.2
+     },
+     {
+      "start": 1737332491854,
+      "cause": "earlier rung up",
+      "max_gap": 0.0412,
+      "end": 1737916723939,
+      "ended_by": "later rung up",
+      "days": 6.8
+     },
+     {
+      "start": 1741046705091,
+      "cause": "later rung down",
+      "max_gap": 0.0341,
+      "end": 1744399347544,
+      "ended_by": "later rung up",
+      "days": 38.8
+     },
+     {
+      "start": 1744575940253,
+      "cause": "later rung down",
+      "max_gap": 0.1875,
+      "end": 1748945099000,
+      "ended_by": "earlier rung down",
+      "days": 50.6
+     },
+     {
+      "start": 1788822574382,
+      "cause": "earlier rung up",
+      "max_gap": 0.0446,
+      "end": 1788905956885,
+      "ended_by": "earlier rung down",
+      "days": 1.0
+     }
+    ],
+    "open": {
+     "start": 1788909652543,
+     "cause": "earlier rung up",
+     "max_gap": 0.0719,
+     "end": null,
+     "days": 37.6
+    },
+    "rung_fills_after": 10,
+    "market_fills_after": 10,
+    "bettors_after": 3
+   },
+   "tol5": {
+    "episodes": 13,
+    "closed": [
+     {
+      "start": 1701208918071,
+      "cause": "born",
+      "max_gap": 0.3379,
+      "end": 1701212924518,
+      "ended_by": "earlier rung down",
+      "days": 0.0
+     },
+     {
+      "start": 1701599432447,
+      "cause": "earlier rung up",
+      "max_gap": 0.252,
+      "end": 1701610637017,
+      "ended_by": "earlier rung down",
+      "days": 0.1
+     },
+     {
+      "start": 1701610641534,
+      "cause": "earlier rung up",
+      "max_gap": 0.062,
+      "end": 1701718619824,
+      "ended_by": "earlier rung down",
+      "days": 1.2
+     },
+     {
+      "start": 1701816875464,
+      "cause": "earlier rung up",
+      "max_gap": 0.2284,
+      "end": 1701823028541,
+      "ended_by": "earlier rung down",
+      "days": 0.1
+     },
+     {
+      "start": 1701910441562,
+      "cause": "earlier rung up",
+      "max_gap": 0.146,
+      "end": 1701963565733,
+      "ended_by": "earlier rung down",
+      "days": 0.6
+     },
+     {
+      "start": 1702173798966,
+      "cause": "earlier rung up",
+      "max_gap": 0.1172,
+      "end": 1702286020369,
+      "ended_by": "earlier rung down",
+      "days": 1.3
+     },
+     {
+      "start": 1702469541425,
+      "cause": "earlier rung up",
+      "max_gap": 0.0538,
+      "end": 1702550461508,
+      "ended_by": "earlier rung down",
+      "days": 0.9
+     },
+     {
+      "start": 1702672089795,
+      "cause": "earlier rung up",
+      "max_gap": 0.0907,
+      "end": 1702684186132,
+      "ended_by": "earlier rung down",
+      "days": 0.1
+     },
+     {
+      "start": 1703020633369,
+      "cause": "earlier rung up",
+      "max_gap": 0.0743,
+      "end": 1703084912426,
+      "ended_by": "earlier rung down",
+      "days": 0.7
+     },
+     {
+      "start": 1703237416735,
+      "cause": "earlier rung up",
+      "max_gap": 0.0584,
+      "end": 1703252317801,
+      "ended_by": "earlier rung down",
+      "days": 0.2
+     },
+     {
+      "start": 1703712313923,
+      "cause": "earlier rung up",
+      "max_gap": 0.0566,
+      "end": 1703802768176,
+      "ended_by": "earlier rung down",
+      "days": 1.0
+     },
+     {
+      "start": 1747322982248,
+      "cause": "later rung down",
+      "max_gap": 0.1875,
+      "end": 1748945083559,
+      "ended_by": "earlier rung down",
+      "days": 18.8
+     }
+    ],
+    "open": {
+     "start": 1788909652543,
+     "cause": "earlier rung up",
+     "max_gap": 0.0719,
+     "end": null,
+     "days": 37.6
+    },
+    "rung_fills_after": 10,
+    "market_fills_after": 10,
+    "bettors_after": 3
+   }
   },
   {
    "key": "0De2oqzKin906UN6iSoT|M7otkCTCzDgLaCJAQQuj",
@@ -57,14 +437,92 @@
    "url": "https://manifold.markets/IsaacKing/at-the-beginning-of-2035-will-manif",
    "gap_now": 0.0472,
    "verdict": "state",
-   "days": 1429,
-   "streak": 1423,
-   "share": 0.9972008397480756,
-   "max_gap": 0.14325715548973794,
-   "since": "2022-11-24",
-   "last_bet": "2025-05-08",
-   "bets": 70,
-   "bets_during": 40
+   "market": "0De2oqzKin906UN6iSoT|M7otkCTCzDgLaCJAQQuj",
+   "tol3": {
+    "episodes": 5,
+    "closed": [
+     {
+      "start": 1668721284912,
+      "cause": "later rung down",
+      "max_gap": 0.0321,
+      "end": 1668721674590,
+      "ended_by": "later rung up",
+      "days": 0.0
+     },
+     {
+      "start": 1668721690175,
+      "cause": "earlier rung up",
+      "max_gap": 0.086,
+      "end": 1668739477055,
+      "ended_by": "later rung up",
+      "days": 0.2
+     },
+     {
+      "start": 1668760048239,
+      "cause": "later rung down",
+      "max_gap": 0.047,
+      "end": 1668863274009,
+      "ended_by": "later rung up",
+      "days": 1.2
+     },
+     {
+      "start": 1668974453580,
+      "cause": "later rung down",
+      "max_gap": 0.0384,
+      "end": 1668974474884,
+      "ended_by": "earlier rung down",
+      "days": 0.0
+     }
+    ],
+    "open": {
+     "start": 1669171106791,
+     "cause": "earlier rung up",
+     "max_gap": 0.1578,
+     "end": null,
+     "days": 1423.4
+    },
+    "rung_fills_after": 33,
+    "market_fills_after": 33,
+    "bettors_after": 22
+   },
+   "tol5": {
+    "episodes": 4,
+    "closed": [
+     {
+      "start": 1668728656306,
+      "cause": "later rung down",
+      "max_gap": 0.086,
+      "end": 1668736492943,
+      "ended_by": "later rung up",
+      "days": 0.1
+     },
+     {
+      "start": 1668739471966,
+      "cause": "earlier rung up",
+      "max_gap": 0.0724,
+      "end": 1668739474278,
+      "ended_by": "later rung up",
+      "days": 0.0
+     },
+     {
+      "start": 1669223032853,
+      "cause": "later rung down",
+      "max_gap": 0.0778,
+      "end": 1676107369906,
+      "ended_by": "earlier rung down",
+      "days": 79.7
+     },
+     {
+      "start": 1676162354098,
+      "cause": "earlier rung up",
+      "max_gap": 0.1578,
+      "end": 1746666376748,
+      "ended_by": "later rung up",
+      "days": 816.0
+     }
+    ],
+    "open": null
+   }
   },
   {
    "key": "gn2Ncc6ht5|0vYAkKrceyAHaSvNpRQq",
@@ -73,14 +531,35 @@
    "url": "https://manifold.markets/rg26/will-china-invade-taiwan-before-202-uSQqPO0sts",
    "gap_now": 0.0454,
    "verdict": "ladder",
-   "days": 146,
-   "streak": 5,
-   "share": 0.03424657534246575,
-   "max_gap": 0.04544066529168356,
-   "since": "2026-10-12",
-   "last_bet": "2026-10-14",
-   "bets": 334,
-   "bets_during": 1
+   "market": "gn2Ncc6ht5|0vYAkKrceyAHaSvNpRQq",
+   "tol3": {
+    "episodes": 1,
+    "closed": [],
+    "open": {
+     "start": 1791685740413,
+     "cause": "earlier rung up",
+     "max_gap": 0.1427,
+     "end": null,
+     "days": 5.4
+    },
+    "rung_fills_after": 4,
+    "market_fills_after": 4,
+    "bettors_after": 2
+   },
+   "tol5": {
+    "episodes": 1,
+    "closed": [
+     {
+      "start": 1791685740413,
+      "cause": "earlier rung up",
+      "max_gap": 0.1427,
+      "end": 1791724826069,
+      "ended_by": "earlier rung down",
+      "days": 0.5
+     }
+    ],
+    "open": null
+   }
   },
   {
    "key": "SqZplOlscQ|EPlUUyuO6p",
@@ -89,14 +568,68 @@
    "url": "https://manifold.markets/ukaszIgn/will-donald-trump-carry-out-an-inva-dpN2hutAsN",
    "gap_now": 0.033,
    "verdict": "ladder",
-   "days": 231,
-   "streak": 11,
-   "share": 0.047619047619047616,
-   "max_gap": 0.03296657568706857,
-   "since": "2026-10-06",
-   "last_bet": "2026-10-05",
-   "bets": 698,
-   "bets_during": 0
+   "market": "SqZplOlscQ|EPlUUyuO6p",
+   "tol3": {
+    "episodes": 5,
+    "closed": [
+     {
+      "start": 1772224227881,
+      "cause": "later rung down",
+      "max_gap": 0.1186,
+      "end": 1772231065574,
+      "ended_by": "later rung up",
+      "days": 0.1
+     },
+     {
+      "start": 1772257684972,
+      "cause": "later rung down",
+      "max_gap": 0.0313,
+      "end": 1772263014221,
+      "ended_by": "later rung up",
+      "days": 0.1
+     },
+     {
+      "start": 1787432445329,
+      "cause": "later rung down",
+      "max_gap": 0.0412,
+      "end": 1787441941560,
+      "ended_by": "earlier rung down",
+      "days": 0.1
+     },
+     {
+      "start": 1789775842385,
+      "cause": "earlier rung up",
+      "max_gap": 0.0425,
+      "end": 1789775869770,
+      "ended_by": "earlier rung down",
+      "days": 0.0
+     }
+    ],
+    "open": {
+     "start": 1791188055959,
+     "cause": "later rung down",
+     "max_gap": 0.033,
+     "end": null,
+     "days": 11.2
+    },
+    "rung_fills_after": 0,
+    "market_fills_after": 0,
+    "bettors_after": 0
+   },
+   "tol5": {
+    "episodes": 1,
+    "closed": [
+     {
+      "start": 1772224227881,
+      "cause": "later rung down",
+      "max_gap": 0.1186,
+      "end": 1772231065574,
+      "ended_by": "later rung up",
+      "days": 0.1
+     }
+    ],
+    "open": null
+   }
   },
   {
    "key": "5pgyAuC0Nl|By end of 2036|By end of 2040",
@@ -105,14 +638,35 @@
    "url": "https://manifold.markets/TonyJackson/by-when-will-the-boom-overture-make",
    "gap_now": 0.0959,
    "verdict": "ladder",
-   "days": 589,
-   "streak": 55,
-   "share": 0.0933786078098472,
-   "max_gap": 0.09585180985232222,
-   "since": "2026-08-23",
-   "last_bet": "2026-08-22",
-   "bets": 9,
-   "bets_during": 0
+   "market": "5pgyAuC0Nl",
+   "tol3": {
+    "episodes": 1,
+    "closed": [],
+    "open": {
+     "start": 1787399812207,
+     "cause": "earlier rung up",
+     "max_gap": 0.1528,
+     "end": null,
+     "days": 55.0
+    },
+    "rung_fills_after": 2,
+    "market_fills_after": 39,
+    "bettors_after": 1
+   },
+   "tol5": {
+    "episodes": 1,
+    "closed": [],
+    "open": {
+     "start": 1787399812207,
+     "cause": "earlier rung up",
+     "max_gap": 0.1528,
+     "end": null,
+     "days": 55.0
+    },
+    "rung_fills_after": 2,
+    "market_fills_after": 39,
+    "bettors_after": 1
+   }
   },
   {
    "key": "5pgyAuC0Nl|By end of 2036|By end of 2038",
@@ -121,14 +675,35 @@
    "url": "https://manifold.markets/TonyJackson/by-when-will-the-boom-overture-make",
    "gap_now": 0.0959,
    "verdict": "ladder",
-   "days": 589,
-   "streak": 55,
-   "share": 0.0933786078098472,
-   "max_gap": 0.09585180985232211,
-   "since": "2026-08-23",
-   "last_bet": "2026-08-22",
-   "bets": 7,
-   "bets_during": 0
+   "market": "5pgyAuC0Nl",
+   "tol3": {
+    "episodes": 1,
+    "closed": [],
+    "open": {
+     "start": 1787399812207,
+     "cause": "earlier rung up",
+     "max_gap": 0.1528,
+     "end": null,
+     "days": 55.0
+    },
+    "rung_fills_after": 2,
+    "market_fills_after": 39,
+    "bettors_after": 1
+   },
+   "tol5": {
+    "episodes": 1,
+    "closed": [],
+    "open": {
+     "start": 1787399812207,
+     "cause": "earlier rung up",
+     "max_gap": 0.1528,
+     "end": null,
+     "days": 55.0
+    },
+    "rung_fills_after": 2,
+    "market_fills_after": 39,
+    "bettors_after": 1
+   }
   },
   {
    "key": "5pgyAuC0Nl|By end of 2036|By end of 2039",
@@ -137,14 +712,35 @@
    "url": "https://manifold.markets/TonyJackson/by-when-will-the-boom-overture-make",
    "gap_now": 0.0959,
    "verdict": "ladder",
-   "days": 589,
-   "streak": 55,
-   "share": 0.0933786078098472,
-   "max_gap": 0.09585180985232211,
-   "since": "2026-08-23",
-   "last_bet": "2026-08-22",
-   "bets": 7,
-   "bets_during": 0
+   "market": "5pgyAuC0Nl",
+   "tol3": {
+    "episodes": 1,
+    "closed": [],
+    "open": {
+     "start": 1787399812207,
+     "cause": "earlier rung up",
+     "max_gap": 0.1528,
+     "end": null,
+     "days": 55.0
+    },
+    "rung_fills_after": 2,
+    "market_fills_after": 39,
+    "bettors_after": 1
+   },
+   "tol5": {
+    "episodes": 1,
+    "closed": [],
+    "open": {
+     "start": 1787399812207,
+     "cause": "earlier rung up",
+     "max_gap": 0.1528,
+     "end": null,
+     "days": 55.0
+    },
+    "rung_fills_after": 2,
+    "market_fills_after": 39,
+    "bettors_after": 1
+   }
   },
   {
    "key": "5pgyAuC0Nl|By end of 2033|By end of 2035",
@@ -153,14 +749,44 @@
    "url": "https://manifold.markets/TonyJackson/by-when-will-the-boom-overture-make",
    "gap_now": 0.09,
    "verdict": "ladder",
-   "days": 589,
-   "streak": 30,
-   "share": 0.050933786078098474,
-   "max_gap": 0.1517472118959106,
-   "since": "2026-09-17",
-   "last_bet": "2026-09-16",
-   "bets": 23,
-   "bets_during": 0
+   "market": "5pgyAuC0Nl",
+   "tol3": {
+    "episodes": 1,
+    "closed": [],
+    "open": {
+     "start": 1789563739284,
+     "cause": "later rung down",
+     "max_gap": 0.1879,
+     "end": null,
+     "days": 30.0
+    },
+    "rung_fills_after": 4,
+    "market_fills_after": 5,
+    "bettors_after": 1
+   },
+   "tol5": {
+    "episodes": 2,
+    "closed": [
+     {
+      "start": 1789563739284,
+      "cause": "later rung down",
+      "max_gap": 0.1083,
+      "end": 1789564289485,
+      "ended_by": "later rung up",
+      "days": 0.0
+     }
+    ],
+    "open": {
+     "start": 1789566162573,
+     "cause": "later rung down",
+     "max_gap": 0.1879,
+     "end": null,
+     "days": 30.0
+    },
+    "rung_fills_after": 2,
+    "market_fills_after": 3,
+    "bettors_after": 1
+   }
   },
   {
    "key": "RaUhdxs3ToW4qEOXslFy|Before 2036|Before 2040",
@@ -169,14 +795,53 @@
    "url": "https://manifold.markets/Tripping/when-will-the-worlds-total-fertilit",
    "gap_now": 0.087,
    "verdict": "ladder",
-   "days": 885,
-   "streak": 240,
-   "share": 0.2711864406779661,
-   "max_gap": 0.09325805841834,
-   "since": "2026-02-19",
-   "last_bet": "2026-09-13",
-   "bets": 43,
-   "bets_during": 15
+   "market": "RaUhdxs3ToW4qEOXslFy",
+   "tol3": {
+    "episodes": 2,
+    "closed": [
+     {
+      "start": 1771395359308,
+      "cause": "later rung down",
+      "max_gap": 0.1928,
+      "end": 1789295553117,
+      "ended_by": "later rung up",
+      "days": 207.2
+     }
+    ],
+    "open": {
+     "start": 1789341757026,
+     "cause": "earlier rung up",
+     "max_gap": 0.1389,
+     "end": null,
+     "days": 32.6
+    },
+    "rung_fills_after": 3,
+    "market_fills_after": 9,
+    "bettors_after": 2
+   },
+   "tol5": {
+    "episodes": 2,
+    "closed": [
+     {
+      "start": 1771395359308,
+      "cause": "later rung down",
+      "max_gap": 0.1928,
+      "end": 1789295519655,
+      "ended_by": "later rung up",
+      "days": 207.2
+     }
+    ],
+    "open": {
+     "start": 1789341761184,
+     "cause": "earlier rung up",
+     "max_gap": 0.1389,
+     "end": null,
+     "days": 32.6
+    },
+    "rung_fills_after": 2,
+    "market_fills_after": 7,
+    "bettors_after": 1
+   }
   },
   {
    "key": "RaUhdxs3ToW4qEOXslFy|Before 2036|Before 2039",
@@ -185,14 +850,44 @@
    "url": "https://manifold.markets/Tripping/when-will-the-worlds-total-fertilit",
    "gap_now": 0.0864,
    "verdict": "ladder",
-   "days": 885,
-   "streak": 33,
-   "share": 0.03728813559322034,
-   "max_gap": 0.08644807441430014,
-   "since": "2026-09-14",
-   "last_bet": "2026-09-13",
-   "bets": 45,
-   "bets_during": 0
+   "market": "RaUhdxs3ToW4qEOXslFy",
+   "tol3": {
+    "episodes": 2,
+    "closed": [
+     {
+      "start": 1789295541402,
+      "cause": "later rung down",
+      "max_gap": 0.0331,
+      "end": 1789295590901,
+      "ended_by": "later rung up",
+      "days": 0.0
+     }
+    ],
+    "open": {
+     "start": 1789341757026,
+     "cause": "earlier rung up",
+     "max_gap": 0.1383,
+     "end": null,
+     "days": 32.6
+    },
+    "rung_fills_after": 3,
+    "market_fills_after": 9,
+    "bettors_after": 2
+   },
+   "tol5": {
+    "episodes": 1,
+    "closed": [],
+    "open": {
+     "start": 1789341761184,
+     "cause": "earlier rung up",
+     "max_gap": 0.1383,
+     "end": null,
+     "days": 32.6
+    },
+    "rung_fills_after": 2,
+    "market_fills_after": 7,
+    "bettors_after": 1
+   }
   },
   {
    "key": "5pgyAuC0Nl|By end of 2032|By end of 2035",
@@ -201,14 +896,44 @@
    "url": "https://manifold.markets/TonyJackson/by-when-will-the-boom-overture-make",
    "gap_now": 0.08,
    "verdict": "ladder",
-   "days": 589,
-   "streak": 30,
-   "share": 0.050933786078098474,
-   "max_gap": 0.07999999999999999,
-   "since": "2026-09-17",
-   "last_bet": "2026-09-16",
-   "bets": 26,
-   "bets_during": 0
+   "market": "5pgyAuC0Nl",
+   "tol3": {
+    "episodes": 2,
+    "closed": [
+     {
+      "start": 1789563739284,
+      "cause": "later rung down",
+      "max_gap": 0.0366,
+      "end": 1789564289485,
+      "ended_by": "later rung up",
+      "days": 0.0
+     }
+    ],
+    "open": {
+     "start": 1789566162573,
+     "cause": "later rung down",
+     "max_gap": 0.1162,
+     "end": null,
+     "days": 30.0
+    },
+    "rung_fills_after": 2,
+    "market_fills_after": 3,
+    "bettors_after": 1
+   },
+   "tol5": {
+    "episodes": 1,
+    "closed": [],
+    "open": {
+     "start": 1789566162573,
+     "cause": "later rung down",
+     "max_gap": 0.1162,
+     "end": null,
+     "days": 30.0
+    },
+    "rung_fills_after": 2,
+    "market_fills_after": 3,
+    "bettors_after": 1
+   }
   },
   {
    "key": "RaUhdxs3ToW4qEOXslFy|Before 2035|Before 2040",
@@ -217,14 +942,69 @@
    "url": "https://manifold.markets/Tripping/when-will-the-worlds-total-fertilit",
    "gap_now": 0.0797,
    "verdict": "ladder",
-   "days": 885,
-   "streak": 240,
-   "share": 0.2711864406779661,
-   "max_gap": 0.07973669782636705,
-   "since": "2026-02-19",
-   "last_bet": "2026-09-13",
-   "bets": 47,
-   "bets_during": 16
+   "market": "RaUhdxs3ToW4qEOXslFy",
+   "tol3": {
+    "episodes": 3,
+    "closed": [
+     {
+      "start": 1719710923327,
+      "cause": "earlier rung up",
+      "max_gap": 0.0637,
+      "end": 1719766992084,
+      "ended_by": "earlier rung down",
+      "days": 0.6
+     },
+     {
+      "start": 1771395359308,
+      "cause": "later rung down",
+      "max_gap": 0.1714,
+      "end": 1789295519655,
+      "ended_by": "later rung up",
+      "days": 207.2
+     }
+    ],
+    "open": {
+     "start": 1789341749717,
+     "cause": "earlier rung up",
+     "max_gap": 0.1316,
+     "end": null,
+     "days": 32.6
+    },
+    "rung_fills_after": 3,
+    "market_fills_after": 14,
+    "bettors_after": 2
+   },
+   "tol5": {
+    "episodes": 3,
+    "closed": [
+     {
+      "start": 1719710923327,
+      "cause": "earlier rung up",
+      "max_gap": 0.0637,
+      "end": 1719766992084,
+      "ended_by": "earlier rung down",
+      "days": 0.6
+     },
+     {
+      "start": 1771395359308,
+      "cause": "later rung down",
+      "max_gap": 0.1714,
+      "end": 1787399917078,
+      "ended_by": "later rung up",
+      "days": 185.2
+     }
+    ],
+    "open": {
+     "start": 1789341756468,
+     "cause": "earlier rung up",
+     "max_gap": 0.1316,
+     "end": null,
+     "days": 32.6
+    },
+    "rung_fills_after": 2,
+    "market_fills_after": 12,
+    "bettors_after": 1
+   }
   },
   {
    "key": "RaUhdxs3ToW4qEOXslFy|Before 2035|Before 2039",
@@ -233,14 +1013,53 @@
    "url": "https://manifold.markets/Tripping/when-will-the-worlds-total-fertilit",
    "gap_now": 0.0792,
    "verdict": "ladder",
-   "days": 885,
-   "streak": 33,
-   "share": 0.03728813559322034,
-   "max_gap": 0.07916846866110772,
-   "since": "2026-09-14",
-   "last_bet": "2026-09-13",
-   "bets": 49,
-   "bets_during": 0
+   "market": "RaUhdxs3ToW4qEOXslFy",
+   "tol3": {
+    "episodes": 2,
+    "closed": [
+     {
+      "start": 1719710923327,
+      "cause": "earlier rung up",
+      "max_gap": 0.0606,
+      "end": 1719766992084,
+      "ended_by": "earlier rung down",
+      "days": 0.6
+     }
+    ],
+    "open": {
+     "start": 1789341749717,
+     "cause": "earlier rung up",
+     "max_gap": 0.1311,
+     "end": null,
+     "days": 32.6
+    },
+    "rung_fills_after": 3,
+    "market_fills_after": 14,
+    "bettors_after": 2
+   },
+   "tol5": {
+    "episodes": 2,
+    "closed": [
+     {
+      "start": 1719710923327,
+      "cause": "earlier rung up",
+      "max_gap": 0.0606,
+      "end": 1719766992084,
+      "ended_by": "earlier rung down",
+      "days": 0.6
+     }
+    ],
+    "open": {
+     "start": 1789341756468,
+     "cause": "earlier rung up",
+     "max_gap": 0.1311,
+     "end": null,
+     "days": 32.6
+    },
+    "rung_fills_after": 2,
+    "market_fills_after": 12,
+    "bettors_after": 1
+   }
   },
   {
    "key": "RaUhdxs3ToW4qEOXslFy|Before 2034|Before 2040",
@@ -249,14 +1068,93 @@
    "url": "https://manifold.markets/Tripping/when-will-the-worlds-total-fertilit",
    "gap_now": 0.0642,
    "verdict": "ladder",
-   "days": 885,
-   "streak": 240,
-   "share": 0.27231638418079096,
-   "max_gap": 0.2539688295419562,
-   "since": "2026-02-19",
-   "last_bet": "2026-09-13",
-   "bets": 55,
-   "bets_during": 10
+   "market": "RaUhdxs3ToW4qEOXslFy",
+   "tol3": {
+    "episodes": 5,
+    "closed": [
+     {
+      "start": 1715951036218,
+      "cause": "earlier rung up",
+      "max_gap": 0.2066,
+      "end": 1715984450676,
+      "ended_by": "earlier rung down",
+      "days": 0.4
+     },
+     {
+      "start": 1717111215986,
+      "cause": "earlier rung up",
+      "max_gap": 0.254,
+      "end": 1717120768860,
+      "ended_by": "earlier rung down",
+      "days": 0.1
+     },
+     {
+      "start": 1719710924786,
+      "cause": "earlier rung up",
+      "max_gap": 0.0404,
+      "end": 1719766983863,
+      "ended_by": "earlier rung down",
+      "days": 0.6
+     },
+     {
+      "start": 1771395359308,
+      "cause": "later rung down",
+      "max_gap": 0.1634,
+      "end": 1789295519655,
+      "ended_by": "later rung up",
+      "days": 207.2
+     }
+    ],
+    "open": {
+     "start": 1789341748981,
+     "cause": "earlier rung up",
+     "max_gap": 0.1131,
+     "end": null,
+     "days": 32.6
+    },
+    "rung_fills_after": 3,
+    "market_fills_after": 18,
+    "bettors_after": 2
+   },
+   "tol5": {
+    "episodes": 4,
+    "closed": [
+     {
+      "start": 1715951036218,
+      "cause": "earlier rung up",
+      "max_gap": 0.2066,
+      "end": 1715984450676,
+      "ended_by": "earlier rung down",
+      "days": 0.4
+     },
+     {
+      "start": 1717111215986,
+      "cause": "earlier rung up",
+      "max_gap": 0.254,
+      "end": 1717120768860,
+      "ended_by": "earlier rung down",
+      "days": 0.1
+     },
+     {
+      "start": 1771395359308,
+      "cause": "later rung down",
+      "max_gap": 0.1634,
+      "end": 1787399917078,
+      "ended_by": "later rung up",
+      "days": 185.2
+     }
+    ],
+    "open": {
+     "start": 1789341748981,
+     "cause": "earlier rung up",
+     "max_gap": 0.1131,
+     "end": null,
+     "days": 32.6
+    },
+    "rung_fills_after": 3,
+    "market_fills_after": 18,
+    "bettors_after": 2
+   }
   },
   {
    "key": "RaUhdxs3ToW4qEOXslFy|Before 2034|Before 2039",
@@ -265,14 +1163,77 @@
    "url": "https://manifold.markets/Tripping/when-will-the-worlds-total-fertilit",
    "gap_now": 0.0637,
    "verdict": "ladder",
-   "days": 885,
-   "streak": 33,
-   "share": 0.0384180790960452,
-   "max_gap": 0.27638546903289407,
-   "since": "2026-09-14",
-   "last_bet": "2026-09-13",
-   "bets": 57,
-   "bets_during": 0
+   "market": "RaUhdxs3ToW4qEOXslFy",
+   "tol3": {
+    "episodes": 4,
+    "closed": [
+     {
+      "start": 1715951036218,
+      "cause": "earlier rung up",
+      "max_gap": 0.2066,
+      "end": 1715984450676,
+      "ended_by": "earlier rung down",
+      "days": 0.4
+     },
+     {
+      "start": 1717111215986,
+      "cause": "earlier rung up",
+      "max_gap": 0.2764,
+      "end": 1717120768860,
+      "ended_by": "earlier rung down",
+      "days": 0.1
+     },
+     {
+      "start": 1719710924786,
+      "cause": "earlier rung up",
+      "max_gap": 0.0373,
+      "end": 1719766983863,
+      "ended_by": "earlier rung down",
+      "days": 0.6
+     }
+    ],
+    "open": {
+     "start": 1789341748981,
+     "cause": "earlier rung up",
+     "max_gap": 0.1126,
+     "end": null,
+     "days": 32.6
+    },
+    "rung_fills_after": 3,
+    "market_fills_after": 18,
+    "bettors_after": 2
+   },
+   "tol5": {
+    "episodes": 3,
+    "closed": [
+     {
+      "start": 1715951036218,
+      "cause": "earlier rung up",
+      "max_gap": 0.2066,
+      "end": 1715984450676,
+      "ended_by": "earlier rung down",
+      "days": 0.4
+     },
+     {
+      "start": 1717111215986,
+      "cause": "earlier rung up",
+      "max_gap": 0.2764,
+      "end": 1717120768860,
+      "ended_by": "earlier rung down",
+      "days": 0.1
+     }
+    ],
+    "open": {
+     "start": 1789341748981,
+     "cause": "earlier rung up",
+     "max_gap": 0.1126,
+     "end": null,
+     "days": 32.6
+    },
+    "rung_fills_after": 3,
+    "market_fills_after": 18,
+    "bettors_after": 2
+   }
   },
   {
    "key": "RaUhdxs3ToW4qEOXslFy|Before 2036|Before 2038",
@@ -281,14 +1242,44 @@
    "url": "https://manifold.markets/Tripping/when-will-the-worlds-total-fertilit",
    "gap_now": 0.0624,
    "verdict": "ladder",
-   "days": 885,
-   "streak": 33,
-   "share": 0.03728813559322034,
-   "max_gap": 0.06237721288961906,
-   "since": "2026-09-14",
-   "last_bet": "2026-09-13",
-   "bets": 52,
-   "bets_during": 0
+   "market": "RaUhdxs3ToW4qEOXslFy",
+   "tol3": {
+    "episodes": 2,
+    "closed": [
+     {
+      "start": 1789295544303,
+      "cause": "later rung down",
+      "max_gap": 0.0367,
+      "end": 1789295587217,
+      "ended_by": "later rung up",
+      "days": 0.0
+     }
+    ],
+    "open": {
+     "start": 1789341757026,
+     "cause": "earlier rung up",
+     "max_gap": 0.1416,
+     "end": null,
+     "days": 32.6
+    },
+    "rung_fills_after": 4,
+    "market_fills_after": 9,
+    "bettors_after": 2
+   },
+   "tol5": {
+    "episodes": 1,
+    "closed": [],
+    "open": {
+     "start": 1789341761184,
+     "cause": "earlier rung up",
+     "max_gap": 0.1416,
+     "end": null,
+     "days": 32.6
+    },
+    "rung_fills_after": 3,
+    "market_fills_after": 7,
+    "bettors_after": 1
+   }
   },
   {
    "key": "RaUhdxs3ToW4qEOXslFy|Before 2033|Before 2040",
@@ -297,14 +1288,93 @@
    "url": "https://manifold.markets/Tripping/when-will-the-worlds-total-fertilit",
    "gap_now": 0.0608,
    "verdict": "ladder",
-   "days": 885,
-   "streak": 240,
-   "share": 0.2711864406779661,
-   "max_gap": 0.06979475337762564,
-   "since": "2026-02-19",
-   "last_bet": "2026-09-30",
-   "bets": 61,
-   "bets_during": 13
+   "market": "RaUhdxs3ToW4qEOXslFy",
+   "tol3": {
+    "episodes": 4,
+    "closed": [
+     {
+      "start": 1715933552138,
+      "cause": "earlier rung up",
+      "max_gap": 0.2016,
+      "end": 1715984443029,
+      "ended_by": "earlier rung down",
+      "days": 0.6
+     },
+     {
+      "start": 1719710925835,
+      "cause": "earlier rung up",
+      "max_gap": 0.0577,
+      "end": 1719766978470,
+      "ended_by": "earlier rung down",
+      "days": 0.6
+     },
+     {
+      "start": 1771395359308,
+      "cause": "later rung down",
+      "max_gap": 0.1572,
+      "end": 1789295519655,
+      "ended_by": "later rung up",
+      "days": 207.2
+     }
+    ],
+    "open": {
+     "start": 1789341744862,
+     "cause": "earlier rung up",
+     "max_gap": 0.093,
+     "end": null,
+     "days": 32.6
+    },
+    "rung_fills_after": 3,
+    "market_fills_after": 22,
+    "bettors_after": 3
+   },
+   "tol5": {
+    "episodes": 5,
+    "closed": [
+     {
+      "start": 1715933552138,
+      "cause": "earlier rung up",
+      "max_gap": 0.2016,
+      "end": 1715984443029,
+      "ended_by": "earlier rung down",
+      "days": 0.6
+     },
+     {
+      "start": 1719710925835,
+      "cause": "earlier rung up",
+      "max_gap": 0.0577,
+      "end": 1719766978470,
+      "ended_by": "earlier rung down",
+      "days": 0.6
+     },
+     {
+      "start": 1771395359308,
+      "cause": "later rung down",
+      "max_gap": 0.1572,
+      "end": 1787399917078,
+      "ended_by": "later rung up",
+      "days": 185.2
+     },
+     {
+      "start": 1789341744862,
+      "cause": "earlier rung up",
+      "max_gap": 0.093,
+      "end": 1789341745368,
+      "ended_by": "earlier rung down",
+      "days": 0.0
+     }
+    ],
+    "open": {
+     "start": 1789341745425,
+     "cause": "earlier rung up",
+     "max_gap": 0.0698,
+     "end": null,
+     "days": 32.6
+    },
+    "rung_fills_after": 1,
+    "market_fills_after": 19,
+    "bettors_after": 1
+   }
   },
   {
    "key": "RaUhdxs3ToW4qEOXslFy|Before 2033|Before 2039",
@@ -313,14 +1383,77 @@
    "url": "https://manifold.markets/Tripping/when-will-the-worlds-total-fertilit",
    "gap_now": 0.0602,
    "verdict": "ladder",
-   "days": 885,
-   "streak": 33,
-   "share": 0.03728813559322034,
-   "max_gap": 0.0692265242123663,
-   "since": "2026-09-14",
-   "last_bet": "2026-09-30",
-   "bets": 63,
-   "bets_during": 1
+   "market": "RaUhdxs3ToW4qEOXslFy",
+   "tol3": {
+    "episodes": 3,
+    "closed": [
+     {
+      "start": 1715933552138,
+      "cause": "earlier rung up",
+      "max_gap": 0.2016,
+      "end": 1715984443029,
+      "ended_by": "earlier rung down",
+      "days": 0.6
+     },
+     {
+      "start": 1719710925835,
+      "cause": "earlier rung up",
+      "max_gap": 0.0546,
+      "end": 1719766978470,
+      "ended_by": "earlier rung down",
+      "days": 0.6
+     }
+    ],
+    "open": {
+     "start": 1789341744862,
+     "cause": "earlier rung up",
+     "max_gap": 0.0924,
+     "end": null,
+     "days": 32.6
+    },
+    "rung_fills_after": 3,
+    "market_fills_after": 22,
+    "bettors_after": 3
+   },
+   "tol5": {
+    "episodes": 4,
+    "closed": [
+     {
+      "start": 1715933552138,
+      "cause": "earlier rung up",
+      "max_gap": 0.2016,
+      "end": 1715984443029,
+      "ended_by": "earlier rung down",
+      "days": 0.6
+     },
+     {
+      "start": 1719710925835,
+      "cause": "earlier rung up",
+      "max_gap": 0.0546,
+      "end": 1719766978470,
+      "ended_by": "earlier rung down",
+      "days": 0.6
+     },
+     {
+      "start": 1789341744862,
+      "cause": "earlier rung up",
+      "max_gap": 0.0924,
+      "end": 1789341745368,
+      "ended_by": "earlier rung down",
+      "days": 0.0
+     }
+    ],
+    "open": {
+     "start": 1789341745425,
+     "cause": "earlier rung up",
+     "max_gap": 0.0692,
+     "end": null,
+     "days": 32.6
+    },
+    "rung_fills_after": 1,
+    "market_fills_after": 19,
+    "bettors_after": 1
+   }
   },
   {
    "key": "5pgyAuC0Nl|By end of 2037|By end of 2040",
@@ -329,14 +1462,35 @@
    "url": "https://manifold.markets/TonyJackson/by-when-will-the-boom-overture-make",
    "gap_now": 0.0555,
    "verdict": "ladder",
-   "days": 589,
-   "streak": 55,
-   "share": 0.0933786078098472,
-   "max_gap": 0.05548518417084114,
-   "since": "2026-08-23",
-   "last_bet": "2026-08-22",
-   "bets": 5,
-   "bets_during": 0
+   "market": "5pgyAuC0Nl",
+   "tol3": {
+    "episodes": 1,
+    "closed": [],
+    "open": {
+     "start": 1787399813794,
+     "cause": "earlier rung up",
+     "max_gap": 0.0555,
+     "end": null,
+     "days": 55.0
+    },
+    "rung_fills_after": 0,
+    "market_fills_after": 35,
+    "bettors_after": 0
+   },
+   "tol5": {
+    "episodes": 1,
+    "closed": [],
+    "open": {
+     "start": 1787399813794,
+     "cause": "earlier rung up",
+     "max_gap": 0.0555,
+     "end": null,
+     "days": 55.0
+    },
+    "rung_fills_after": 0,
+    "market_fills_after": 35,
+    "bettors_after": 0
+   }
   },
   {
    "key": "5pgyAuC0Nl|By end of 2037|By end of 2038",
@@ -345,14 +1499,35 @@
    "url": "https://manifold.markets/TonyJackson/by-when-will-the-boom-overture-make",
    "gap_now": 0.0555,
    "verdict": "ladder",
-   "days": 589,
-   "streak": 55,
-   "share": 0.0933786078098472,
-   "max_gap": 0.05548518417084103,
-   "since": "2026-08-23",
-   "last_bet": "2026-08-22",
-   "bets": 3,
-   "bets_during": 0
+   "market": "5pgyAuC0Nl",
+   "tol3": {
+    "episodes": 1,
+    "closed": [],
+    "open": {
+     "start": 1787399813794,
+     "cause": "earlier rung up",
+     "max_gap": 0.0555,
+     "end": null,
+     "days": 55.0
+    },
+    "rung_fills_after": 0,
+    "market_fills_after": 35,
+    "bettors_after": 0
+   },
+   "tol5": {
+    "episodes": 1,
+    "closed": [],
+    "open": {
+     "start": 1787399813794,
+     "cause": "earlier rung up",
+     "max_gap": 0.0555,
+     "end": null,
+     "days": 55.0
+    },
+    "rung_fills_after": 0,
+    "market_fills_after": 35,
+    "bettors_after": 0
+   }
   },
   {
    "key": "5pgyAuC0Nl|By end of 2037|By end of 2039",
@@ -361,14 +1536,35 @@
    "url": "https://manifold.markets/TonyJackson/by-when-will-the-boom-overture-make",
    "gap_now": 0.0555,
    "verdict": "ladder",
-   "days": 589,
-   "streak": 55,
-   "share": 0.0933786078098472,
-   "max_gap": 0.05548518417084103,
-   "since": "2026-08-23",
-   "last_bet": "2026-08-22",
-   "bets": 3,
-   "bets_during": 0
+   "market": "5pgyAuC0Nl",
+   "tol3": {
+    "episodes": 1,
+    "closed": [],
+    "open": {
+     "start": 1787399813794,
+     "cause": "earlier rung up",
+     "max_gap": 0.0555,
+     "end": null,
+     "days": 55.0
+    },
+    "rung_fills_after": 0,
+    "market_fills_after": 35,
+    "bettors_after": 0
+   },
+   "tol5": {
+    "episodes": 1,
+    "closed": [],
+    "open": {
+     "start": 1787399813794,
+     "cause": "earlier rung up",
+     "max_gap": 0.0555,
+     "end": null,
+     "days": 55.0
+    },
+    "rung_fills_after": 0,
+    "market_fills_after": 35,
+    "bettors_after": 0
+   }
   },
   {
    "key": "RaUhdxs3ToW4qEOXslFy|Before 2035|Before 2038",
@@ -377,14 +1573,53 @@
    "url": "https://manifold.markets/Tripping/when-will-the-worlds-total-fertilit",
    "gap_now": 0.0551,
    "verdict": "ladder",
-   "days": 885,
-   "streak": 33,
-   "share": 0.03728813559322034,
-   "max_gap": 0.05509760713642664,
-   "since": "2026-09-14",
-   "last_bet": "2026-09-13",
-   "bets": 56,
-   "bets_during": 0
+   "market": "RaUhdxs3ToW4qEOXslFy",
+   "tol3": {
+    "episodes": 2,
+    "closed": [
+     {
+      "start": 1719710923327,
+      "cause": "earlier rung up",
+      "max_gap": 0.0655,
+      "end": 1719766992084,
+      "ended_by": "earlier rung down",
+      "days": 0.6
+     }
+    ],
+    "open": {
+     "start": 1789341749717,
+     "cause": "earlier rung up",
+     "max_gap": 0.1343,
+     "end": null,
+     "days": 32.6
+    },
+    "rung_fills_after": 4,
+    "market_fills_after": 14,
+    "bettors_after": 2
+   },
+   "tol5": {
+    "episodes": 2,
+    "closed": [
+     {
+      "start": 1719710923327,
+      "cause": "earlier rung up",
+      "max_gap": 0.0655,
+      "end": 1719766992084,
+      "ended_by": "earlier rung down",
+      "days": 0.6
+     }
+    ],
+    "open": {
+     "start": 1789341756468,
+     "cause": "earlier rung up",
+     "max_gap": 0.1343,
+     "end": null,
+     "days": 32.6
+    },
+    "rung_fills_after": 3,
+    "market_fills_after": 12,
+    "bettors_after": 1
+   }
   },
   {
    "key": "RaUhdxs3ToW4qEOXslFy|Before 2036|Before 2041",
@@ -393,14 +1628,35 @@
    "url": "https://manifold.markets/Tripping/when-will-the-worlds-total-fertilit",
    "gap_now": 0.054,
    "verdict": "ladder",
-   "days": 885,
-   "streak": 33,
-   "share": 0.03728813559322034,
-   "max_gap": 0.05397352405072264,
-   "since": "2026-09-14",
-   "last_bet": "2026-09-13",
-   "bets": 36,
-   "bets_during": 0
+   "market": "RaUhdxs3ToW4qEOXslFy",
+   "tol3": {
+    "episodes": 1,
+    "closed": [],
+    "open": {
+     "start": 1789341761184,
+     "cause": "earlier rung up",
+     "max_gap": 0.1059,
+     "end": null,
+     "days": 32.6
+    },
+    "rung_fills_after": 2,
+    "market_fills_after": 7,
+    "bettors_after": 1
+   },
+   "tol5": {
+    "episodes": 1,
+    "closed": [],
+    "open": {
+     "start": 1789341761184,
+     "cause": "earlier rung up",
+     "max_gap": 0.1059,
+     "end": null,
+     "days": 32.6
+    },
+    "rung_fills_after": 2,
+    "market_fills_after": 7,
+    "bettors_after": 1
+   }
   },
   {
    "key": "5pgyAuC0Nl|By end of 2033|By end of 2034",
@@ -409,14 +1665,35 @@
    "url": "https://manifold.markets/TonyJackson/by-when-will-the-boom-overture-make",
    "gap_now": 0.0535,
    "verdict": "ladder",
-   "days": 589,
-   "streak": 30,
-   "share": 0.050933786078098474,
-   "max_gap": 0.11520834694673981,
-   "since": "2026-09-17",
-   "last_bet": "2026-09-16",
-   "bets": 8,
-   "bets_during": 0
+   "market": "5pgyAuC0Nl",
+   "tol3": {
+    "episodes": 1,
+    "closed": [],
+    "open": {
+     "start": 1789572408055,
+     "cause": "later rung down",
+     "max_gap": 0.1152,
+     "end": null,
+     "days": 29.9
+    },
+    "rung_fills_after": 0,
+    "market_fills_after": 0,
+    "bettors_after": 0
+   },
+   "tol5": {
+    "episodes": 1,
+    "closed": [],
+    "open": {
+     "start": 1789572408055,
+     "cause": "later rung down",
+     "max_gap": 0.1152,
+     "end": null,
+     "days": 29.9
+    },
+    "rung_fills_after": 0,
+    "market_fills_after": 0,
+    "bettors_after": 0
+   }
   },
   {
    "key": "RaUhdxs3ToW4qEOXslFy|Before 2036|Before 2037",
@@ -425,14 +1702,52 @@
    "url": "https://manifold.markets/Tripping/when-will-the-worlds-total-fertilit",
    "gap_now": 0.0497,
    "verdict": "ladder",
-   "days": 885,
-   "streak": 33,
-   "share": 0.03728813559322034,
-   "max_gap": 0.04969299966317109,
-   "since": "2026-09-14",
-   "last_bet": "2026-09-13",
-   "bets": 53,
-   "bets_during": 0
+   "market": "RaUhdxs3ToW4qEOXslFy",
+   "tol3": {
+    "episodes": 3,
+    "closed": [
+     {
+      "start": 1717089431129,
+      "cause": "earlier rung up",
+      "max_gap": 0.0437,
+      "end": 1717089436625,
+      "ended_by": "later rung up",
+      "days": 0.0
+     },
+     {
+      "start": 1789341757026,
+      "cause": "earlier rung up",
+      "max_gap": 0.1398,
+      "end": 1789341761761,
+      "ended_by": "earlier rung down",
+      "days": 0.0
+     }
+    ],
+    "open": {
+     "start": 1789343138632,
+     "cause": "later rung down",
+     "max_gap": 0.0497,
+     "end": null,
+     "days": 32.5
+    },
+    "rung_fills_after": 0,
+    "market_fills_after": 1,
+    "bettors_after": 0
+   },
+   "tol5": {
+    "episodes": 1,
+    "closed": [
+     {
+      "start": 1789341761184,
+      "cause": "earlier rung up",
+      "max_gap": 0.1398,
+      "end": 1789341761761,
+      "ended_by": "earlier rung down",
+      "days": 0.0
+     }
+    ],
+    "open": null
+   }
   },
   {
    "key": "RaUhdxs3ToW4qEOXslFy|Before 2036|Before 2042",
@@ -441,14 +1756,35 @@
    "url": "https://manifold.markets/Tripping/when-will-the-worlds-total-fertilit",
    "gap_now": 0.0478,
    "verdict": "ladder",
-   "days": 885,
-   "streak": 33,
-   "share": 0.03728813559322034,
-   "max_gap": 0.047762891815791075,
-   "since": "2026-09-14",
-   "last_bet": "2026-09-13",
-   "bets": 36,
-   "bets_during": 0
+   "market": "RaUhdxs3ToW4qEOXslFy",
+   "tol3": {
+    "episodes": 1,
+    "closed": [],
+    "open": {
+     "start": 1789341761184,
+     "cause": "earlier rung up",
+     "max_gap": 0.0997,
+     "end": null,
+     "days": 32.6
+    },
+    "rung_fills_after": 2,
+    "market_fills_after": 7,
+    "bettors_after": 1
+   },
+   "tol5": {
+    "episodes": 1,
+    "closed": [
+     {
+      "start": 1789341761184,
+      "cause": "earlier rung up",
+      "max_gap": 0.0997,
+      "end": 1789341761761,
+      "ended_by": "earlier rung down",
+      "days": 0.0
+     }
+    ],
+    "open": null
+   }
   },
   {
    "key": "IcRUl2IZZq|before Dec 31, 2026|before Mar 31, 2027",
@@ -457,14 +1793,35 @@
    "url": "https://manifold.markets/DanielCsomor/when-will-pete-buttigieg-announce-h",
    "gap_now": 0.0477,
    "verdict": "ladder",
-   "days": 289,
-   "streak": 73,
-   "share": 0.25259515570934254,
-   "max_gap": 0.04771105110621343,
-   "since": "2026-08-05",
-   "last_bet": "2026-08-04",
-   "bets": 6,
-   "bets_during": 0
+   "market": "IcRUl2IZZq",
+   "tol3": {
+    "episodes": 2,
+    "closed": [
+     {
+      "start": 1785883201842,
+      "cause": "earlier rung up",
+      "max_gap": 0.0477,
+      "end": 1785883201924,
+      "ended_by": "earlier rung down",
+      "days": 0.0
+     }
+    ],
+    "open": {
+     "start": 1785883202401,
+     "cause": "earlier rung up",
+     "max_gap": 0.0477,
+     "end": null,
+     "days": 72.6
+    },
+    "rung_fills_after": 0,
+    "market_fills_after": 6,
+    "bettors_after": 0
+   },
+   "tol5": {
+    "episodes": 0,
+    "closed": [],
+    "open": null
+   }
   },
   {
    "key": "RaUhdxs3ToW4qEOXslFy|Before 2035|Before 2041",
@@ -473,14 +1830,52 @@
    "url": "https://manifold.markets/Tripping/when-will-the-worlds-total-fertilit",
    "gap_now": 0.0467,
    "verdict": "ladder",
-   "days": 885,
-   "streak": 33,
-   "share": 0.03728813559322034,
-   "max_gap": 0.046693918297530224,
-   "since": "2026-09-14",
-   "last_bet": "2026-09-13",
-   "bets": 40,
-   "bets_during": 0
+   "market": "RaUhdxs3ToW4qEOXslFy",
+   "tol3": {
+    "episodes": 2,
+    "closed": [
+     {
+      "start": 1719710923327,
+      "cause": "earlier rung up",
+      "max_gap": 0.0586,
+      "end": 1719766992084,
+      "ended_by": "earlier rung down",
+      "days": 0.6
+     }
+    ],
+    "open": {
+     "start": 1789341756468,
+     "cause": "earlier rung up",
+     "max_gap": 0.0986,
+     "end": null,
+     "days": 32.6
+    },
+    "rung_fills_after": 2,
+    "market_fills_after": 12,
+    "bettors_after": 1
+   },
+   "tol5": {
+    "episodes": 2,
+    "closed": [
+     {
+      "start": 1719710923327,
+      "cause": "earlier rung up",
+      "max_gap": 0.0586,
+      "end": 1719766992084,
+      "ended_by": "earlier rung down",
+      "days": 0.6
+     },
+     {
+      "start": 1789341756468,
+      "cause": "earlier rung up",
+      "max_gap": 0.0986,
+      "end": 1789341757115,
+      "ended_by": "earlier rung down",
+      "days": 0.0
+     }
+    ],
+    "open": null
+   }
   },
   {
    "key": "88EtCuOqp2|before Nov 15, 2026|before Dec 31, 2026",
@@ -489,14 +1884,26 @@
    "url": "https://manifold.markets/DanielCsomor/when-will-josh-shapiro-announce-his",
    "gap_now": 0.0441,
    "verdict": "ladder",
-   "days": 55,
-   "streak": 55,
-   "share": 1.0,
-   "max_gap": 0.04413048021727978,
-   "since": "2026-08-23",
-   "last_bet": "2026-08-22",
-   "bets": 3,
-   "bets_during": 0
+   "market": "88EtCuOqp2",
+   "tol3": {
+    "episodes": 1,
+    "closed": [],
+    "open": {
+     "start": 1787399921970,
+     "cause": "born",
+     "max_gap": 0.0441,
+     "end": null,
+     "days": 55.0
+    },
+    "rung_fills_after": 0,
+    "market_fills_after": 4,
+    "bettors_after": 0
+   },
+   "tol5": {
+    "episodes": 0,
+    "closed": [],
+    "open": null
+   }
   },
   {
    "key": "5pgyAuC0Nl|By end of 2032|By end of 2034",
@@ -505,14 +1912,26 @@
    "url": "https://manifold.markets/TonyJackson/by-when-will-the-boom-overture-make",
    "gap_now": 0.0435,
    "verdict": "ladder",
-   "days": 589,
-   "streak": 30,
-   "share": 0.050933786078098474,
-   "max_gap": 0.043461135050829214,
-   "since": "2026-09-17",
-   "last_bet": "2026-09-16",
-   "bets": 11,
-   "bets_during": 0
+   "market": "5pgyAuC0Nl",
+   "tol3": {
+    "episodes": 1,
+    "closed": [],
+    "open": {
+     "start": 1789572408055,
+     "cause": "later rung down",
+     "max_gap": 0.0435,
+     "end": null,
+     "days": 29.9
+    },
+    "rung_fills_after": 0,
+    "market_fills_after": 0,
+    "bettors_after": 0
+   },
+   "tol5": {
+    "episodes": 0,
+    "closed": [],
+    "open": null
+   }
   },
   {
    "key": "RaUhdxs3ToW4qEOXslFy|Before 2035|Before 2037",
@@ -521,14 +1940,60 @@
    "url": "https://manifold.markets/Tripping/when-will-the-worlds-total-fertilit",
    "gap_now": 0.0424,
    "verdict": "ladder",
-   "days": 885,
-   "streak": 33,
-   "share": 0.03728813559322034,
-   "max_gap": 0.04241339390997867,
-   "since": "2026-09-14",
-   "last_bet": "2026-09-13",
-   "bets": 57,
-   "bets_during": 0
+   "market": "RaUhdxs3ToW4qEOXslFy",
+   "tol3": {
+    "episodes": 3,
+    "closed": [
+     {
+      "start": 1719710923327,
+      "cause": "earlier rung up",
+      "max_gap": 0.0657,
+      "end": 1719766992084,
+      "ended_by": "earlier rung down",
+      "days": 0.6
+     },
+     {
+      "start": 1789341749717,
+      "cause": "earlier rung up",
+      "max_gap": 0.1325,
+      "end": 1789341761693,
+      "ended_by": "later rung up",
+      "days": 0.0
+     }
+    ],
+    "open": {
+     "start": 1789343138632,
+     "cause": "later rung down",
+     "max_gap": 0.0424,
+     "end": null,
+     "days": 32.5
+    },
+    "rung_fills_after": 0,
+    "market_fills_after": 1,
+    "bettors_after": 0
+   },
+   "tol5": {
+    "episodes": 2,
+    "closed": [
+     {
+      "start": 1719710923327,
+      "cause": "earlier rung up",
+      "max_gap": 0.0657,
+      "end": 1719766992084,
+      "ended_by": "earlier rung down",
+      "days": 0.6
+     },
+     {
+      "start": 1789341756468,
+      "cause": "earlier rung up",
+      "max_gap": 0.1325,
+      "end": 1789341761410,
+      "ended_by": "later rung up",
+      "days": 0.0
+     }
+    ],
+    "open": null
+   }
   },
   {
    "key": "RaUhdxs3ToW4qEOXslFy|Before 2035|Before 2042",
@@ -537,14 +2002,44 @@
    "url": "https://manifold.markets/Tripping/when-will-the-worlds-total-fertilit",
    "gap_now": 0.0405,
    "verdict": "ladder",
-   "days": 885,
-   "streak": 33,
-   "share": 0.03728813559322034,
-   "max_gap": 0.040483286062598656,
-   "since": "2026-09-14",
-   "last_bet": "2026-09-13",
-   "bets": 40,
-   "bets_during": 0
+   "market": "RaUhdxs3ToW4qEOXslFy",
+   "tol3": {
+    "episodes": 2,
+    "closed": [
+     {
+      "start": 1719710923327,
+      "cause": "earlier rung up",
+      "max_gap": 0.0392,
+      "end": 1719766992084,
+      "ended_by": "earlier rung down",
+      "days": 0.6
+     }
+    ],
+    "open": {
+     "start": 1789341756468,
+     "cause": "earlier rung up",
+     "max_gap": 0.0924,
+     "end": null,
+     "days": 32.6
+    },
+    "rung_fills_after": 2,
+    "market_fills_after": 12,
+    "bettors_after": 1
+   },
+   "tol5": {
+    "episodes": 1,
+    "closed": [
+     {
+      "start": 1789341756468,
+      "cause": "earlier rung up",
+      "max_gap": 0.0924,
+      "end": 1789341757115,
+      "ended_by": "earlier rung down",
+      "days": 0.0
+     }
+    ],
+    "open": null
+   }
   },
   {
    "key": "5pgyAuC0Nl|By end of 2036|By end of 2037",
@@ -553,14 +2048,35 @@
    "url": "https://manifold.markets/TonyJackson/by-when-will-the-boom-overture-make",
    "gap_now": 0.0404,
    "verdict": "ladder",
-   "days": 589,
-   "streak": 55,
-   "share": 0.0933786078098472,
-   "max_gap": 0.04036662568148108,
-   "since": "2026-08-23",
-   "last_bet": "2026-08-22",
-   "bets": 8,
-   "bets_during": 0
+   "market": "5pgyAuC0Nl",
+   "tol3": {
+    "episodes": 1,
+    "closed": [],
+    "open": {
+     "start": 1787399812207,
+     "cause": "earlier rung up",
+     "max_gap": 0.1528,
+     "end": null,
+     "days": 55.0
+    },
+    "rung_fills_after": 3,
+    "market_fills_after": 39,
+    "bettors_after": 1
+   },
+   "tol5": {
+    "episodes": 1,
+    "closed": [
+     {
+      "start": 1787399812207,
+      "cause": "earlier rung up",
+      "max_gap": 0.1528,
+      "end": 1787399813963,
+      "ended_by": "earlier rung down",
+      "days": 0.0
+     }
+    ],
+    "open": null
+   }
   },
   {
    "key": "RaUhdxs3ToW4qEOXslFy|Before 2036|Before 2043",
@@ -569,14 +2085,35 @@
    "url": "https://manifold.markets/Tripping/when-will-the-worlds-total-fertilit",
    "gap_now": 0.0403,
    "verdict": "ladder",
-   "days": 885,
-   "streak": 33,
-   "share": 0.03728813559322034,
-   "max_gap": 0.04028393011178577,
-   "since": "2026-09-14",
-   "last_bet": "2026-09-13",
-   "bets": 34,
-   "bets_during": 0
+   "market": "RaUhdxs3ToW4qEOXslFy",
+   "tol3": {
+    "episodes": 1,
+    "closed": [],
+    "open": {
+     "start": 1789341761184,
+     "cause": "earlier rung up",
+     "max_gap": 0.0922,
+     "end": null,
+     "days": 32.6
+    },
+    "rung_fills_after": 2,
+    "market_fills_after": 7,
+    "bettors_after": 1
+   },
+   "tol5": {
+    "episodes": 1,
+    "closed": [
+     {
+      "start": 1789341761184,
+      "cause": "earlier rung up",
+      "max_gap": 0.0922,
+      "end": 1789341761761,
+      "ended_by": "earlier rung down",
+      "days": 0.0
+     }
+    ],
+    "open": null
+   }
   },
   {
    "key": "RaUhdxs3ToW4qEOXslFy|Before 2034|Before 2038",
@@ -585,14 +2122,76 @@
    "url": "https://manifold.markets/Tripping/when-will-the-worlds-total-fertilit",
    "gap_now": 0.0396,
    "verdict": "ladder",
-   "days": 885,
-   "streak": 33,
-   "share": 0.0384180790960452,
-   "max_gap": 0.2982679754828437,
-   "since": "2026-09-14",
-   "last_bet": "2026-09-13",
-   "bets": 64,
-   "bets_during": 0
+   "market": "RaUhdxs3ToW4qEOXslFy",
+   "tol3": {
+    "episodes": 4,
+    "closed": [
+     {
+      "start": 1715951036218,
+      "cause": "earlier rung up",
+      "max_gap": 0.2066,
+      "end": 1715984450676,
+      "ended_by": "earlier rung down",
+      "days": 0.4
+     },
+     {
+      "start": 1717111215986,
+      "cause": "earlier rung up",
+      "max_gap": 0.2983,
+      "end": 1717120768860,
+      "ended_by": "earlier rung down",
+      "days": 0.1
+     },
+     {
+      "start": 1719710924786,
+      "cause": "earlier rung up",
+      "max_gap": 0.0422,
+      "end": 1719766983863,
+      "ended_by": "earlier rung down",
+      "days": 0.6
+     }
+    ],
+    "open": {
+     "start": 1789341748981,
+     "cause": "earlier rung up",
+     "max_gap": 0.1158,
+     "end": null,
+     "days": 32.6
+    },
+    "rung_fills_after": 4,
+    "market_fills_after": 18,
+    "bettors_after": 2
+   },
+   "tol5": {
+    "episodes": 3,
+    "closed": [
+     {
+      "start": 1715951036218,
+      "cause": "earlier rung up",
+      "max_gap": 0.2066,
+      "end": 1715984450676,
+      "ended_by": "earlier rung down",
+      "days": 0.4
+     },
+     {
+      "start": 1717111215986,
+      "cause": "earlier rung up",
+      "max_gap": 0.2983,
+      "end": 1717120768860,
+      "ended_by": "earlier rung down",
+      "days": 0.1
+     },
+     {
+      "start": 1789341748981,
+      "cause": "earlier rung up",
+      "max_gap": 0.1158,
+      "end": 1789343138550,
+      "ended_by": "later rung up",
+      "days": 0.0
+     }
+    ],
+    "open": null
+   }
   },
   {
    "key": "RaUhdxs3ToW4qEOXslFy|Before 2037|Before 2040",
@@ -601,14 +2200,68 @@
    "url": "https://manifold.markets/Tripping/when-will-the-worlds-total-fertilit",
    "gap_now": 0.0373,
    "verdict": "ladder",
-   "days": 885,
-   "streak": 240,
-   "share": 0.2711864406779661,
-   "max_gap": 0.0979577076453878,
-   "since": "2026-02-19",
-   "last_bet": "2026-09-13",
-   "bets": 44,
-   "bets_during": 12
+   "market": "RaUhdxs3ToW4qEOXslFy",
+   "tol3": {
+    "episodes": 3,
+    "closed": [
+     {
+      "start": 1717381379541,
+      "cause": "earlier rung up",
+      "max_gap": 0.196,
+      "end": 1717431411477,
+      "ended_by": "earlier rung down",
+      "days": 0.6
+     },
+     {
+      "start": 1771395359308,
+      "cause": "later rung down",
+      "max_gap": 0.1975,
+      "end": 1789295553117,
+      "ended_by": "later rung up",
+      "days": 207.2
+     }
+    ],
+    "open": {
+     "start": 1789341761410,
+     "cause": "earlier rung up",
+     "max_gap": 0.0628,
+     "end": null,
+     "days": 32.6
+    },
+    "rung_fills_after": 2,
+    "market_fills_after": 6,
+    "bettors_after": 1
+   },
+   "tol5": {
+    "episodes": 3,
+    "closed": [
+     {
+      "start": 1717381379541,
+      "cause": "earlier rung up",
+      "max_gap": 0.196,
+      "end": 1717431411477,
+      "ended_by": "earlier rung down",
+      "days": 0.6
+     },
+     {
+      "start": 1771395359308,
+      "cause": "later rung down",
+      "max_gap": 0.1975,
+      "end": 1789295519655,
+      "ended_by": "later rung up",
+      "days": 207.2
+     },
+     {
+      "start": 1789341761693,
+      "cause": "earlier rung up",
+      "max_gap": 0.0628,
+      "end": 1789343138632,
+      "ended_by": "earlier rung down",
+      "days": 0.0
+     }
+    ],
+    "open": null
+   }
   },
   {
    "key": "RaUhdxs3ToW4qEOXslFy|Before 2037|Before 2039",
@@ -617,14 +2270,60 @@
    "url": "https://manifold.markets/Tripping/when-will-the-worlds-total-fertilit",
    "gap_now": 0.0368,
    "verdict": "ladder",
-   "days": 885,
-   "streak": 33,
-   "share": 0.03728813559322034,
-   "max_gap": 0.03675507475112905,
-   "since": "2026-09-14",
-   "last_bet": "2026-09-13",
-   "bets": 46,
-   "bets_during": 0
+   "market": "RaUhdxs3ToW4qEOXslFy",
+   "tol3": {
+    "episodes": 3,
+    "closed": [
+     {
+      "start": 1717381379541,
+      "cause": "earlier rung up",
+      "max_gap": 0.2024,
+      "end": 1717431411477,
+      "ended_by": "earlier rung down",
+      "days": 0.6
+     },
+     {
+      "start": 1789295541402,
+      "cause": "later rung down",
+      "max_gap": 0.0378,
+      "end": 1789295590901,
+      "ended_by": "later rung up",
+      "days": 0.0
+     }
+    ],
+    "open": {
+     "start": 1789341761410,
+     "cause": "earlier rung up",
+     "max_gap": 0.0623,
+     "end": null,
+     "days": 32.6
+    },
+    "rung_fills_after": 2,
+    "market_fills_after": 6,
+    "bettors_after": 1
+   },
+   "tol5": {
+    "episodes": 2,
+    "closed": [
+     {
+      "start": 1717381379541,
+      "cause": "earlier rung up",
+      "max_gap": 0.2024,
+      "end": 1717431411477,
+      "ended_by": "earlier rung down",
+      "days": 0.6
+     },
+     {
+      "start": 1789341761693,
+      "cause": "earlier rung up",
+      "max_gap": 0.0623,
+      "end": 1789343138632,
+      "ended_by": "earlier rung down",
+      "days": 0.0
+     }
+    ],
+    "open": null
+   }
   },
   {
    "key": "5pgyAuC0Nl|By end of 2034|By end of 2035",
@@ -633,14 +2332,35 @@
    "url": "https://manifold.markets/TonyJackson/by-when-will-the-boom-overture-make",
    "gap_now": 0.0365,
    "verdict": "ladder",
-   "days": 589,
-   "streak": 30,
-   "share": 0.050933786078098474,
-   "max_gap": 0.036538864949170774,
-   "since": "2026-09-17",
-   "last_bet": "2026-09-16",
-   "bets": 25,
-   "bets_during": 0
+   "market": "5pgyAuC0Nl",
+   "tol3": {
+    "episodes": 1,
+    "closed": [],
+    "open": {
+     "start": 1789563640375,
+     "cause": "later rung down",
+     "max_gap": 0.226,
+     "end": null,
+     "days": 30.0
+    },
+    "rung_fills_after": 6,
+    "market_fills_after": 6,
+    "bettors_after": 1
+   },
+   "tol5": {
+    "episodes": 1,
+    "closed": [],
+    "open": {
+     "start": 1789563640375,
+     "cause": "later rung down",
+     "max_gap": 0.226,
+     "end": null,
+     "days": 30.0
+    },
+    "rung_fills_after": 6,
+    "market_fills_after": 6,
+    "bettors_after": 1
+   }
   },
   {
    "key": "RaUhdxs3ToW4qEOXslFy|Before 2033|Before 2038",
@@ -649,14 +2369,76 @@
    "url": "https://manifold.markets/Tripping/when-will-the-worlds-total-fertilit",
    "gap_now": 0.0362,
    "verdict": "ladder",
-   "days": 885,
-   "streak": 33,
-   "share": 0.03728813559322034,
-   "max_gap": 0.04515566268768523,
-   "since": "2026-09-14",
-   "last_bet": "2026-09-30",
-   "bets": 70,
-   "bets_during": 1
+   "market": "RaUhdxs3ToW4qEOXslFy",
+   "tol3": {
+    "episodes": 3,
+    "closed": [
+     {
+      "start": 1715933552138,
+      "cause": "earlier rung up",
+      "max_gap": 0.2016,
+      "end": 1715984443029,
+      "ended_by": "earlier rung down",
+      "days": 0.6
+     },
+     {
+      "start": 1719710925835,
+      "cause": "earlier rung up",
+      "max_gap": 0.0595,
+      "end": 1719766978470,
+      "ended_by": "earlier rung down",
+      "days": 0.6
+     }
+    ],
+    "open": {
+     "start": 1789341744862,
+     "cause": "earlier rung up",
+     "max_gap": 0.0956,
+     "end": null,
+     "days": 32.6
+    },
+    "rung_fills_after": 4,
+    "market_fills_after": 22,
+    "bettors_after": 3
+   },
+   "tol5": {
+    "episodes": 4,
+    "closed": [
+     {
+      "start": 1715933552138,
+      "cause": "earlier rung up",
+      "max_gap": 0.2016,
+      "end": 1715984443029,
+      "ended_by": "earlier rung down",
+      "days": 0.6
+     },
+     {
+      "start": 1719710925835,
+      "cause": "earlier rung up",
+      "max_gap": 0.0595,
+      "end": 1719766978470,
+      "ended_by": "earlier rung down",
+      "days": 0.6
+     },
+     {
+      "start": 1789341744862,
+      "cause": "earlier rung up",
+      "max_gap": 0.0956,
+      "end": 1789341745368,
+      "ended_by": "earlier rung down",
+      "days": 0.0
+     },
+     {
+      "start": 1789341745425,
+      "cause": "earlier rung up",
+      "max_gap": 0.0724,
+      "end": 1789343138550,
+      "ended_by": "later rung up",
+      "days": 0.0
+     }
+    ],
+    "open": null
+   }
   },
   {
    "key": "RaUhdxs3ToW4qEOXslFy|Before 2035|Before 2043",
@@ -665,14 +2447,35 @@
    "url": "https://manifold.markets/Tripping/when-will-the-worlds-total-fertilit",
    "gap_now": 0.033,
    "verdict": "ladder",
-   "days": 885,
-   "streak": 33,
-   "share": 0.03728813559322034,
-   "max_gap": 0.03300432435859335,
-   "since": "2026-09-14",
-   "last_bet": "2026-09-13",
-   "bets": 38,
-   "bets_during": 0
+   "market": "RaUhdxs3ToW4qEOXslFy",
+   "tol3": {
+    "episodes": 1,
+    "closed": [],
+    "open": {
+     "start": 1789341756468,
+     "cause": "earlier rung up",
+     "max_gap": 0.0849,
+     "end": null,
+     "days": 32.6
+    },
+    "rung_fills_after": 2,
+    "market_fills_after": 12,
+    "bettors_after": 1
+   },
+   "tol5": {
+    "episodes": 1,
+    "closed": [
+     {
+      "start": 1789341756468,
+      "cause": "earlier rung up",
+      "max_gap": 0.0849,
+      "end": 1789341757115,
+      "ended_by": "earlier rung down",
+      "days": 0.0
+     }
+    ],
+    "open": null
+   }
   },
   {
    "key": "RaUhdxs3ToW4qEOXslFy|Before 2034|Before 2041",
@@ -681,14 +2484,92 @@
    "url": "https://manifold.markets/Tripping/when-will-the-worlds-total-fertilit",
    "gap_now": 0.0312,
    "verdict": "ladder",
-   "days": 885,
-   "streak": 33,
-   "share": 0.0384180790960452,
-   "max_gap": 0.2228625632414475,
-   "since": "2026-09-14",
-   "last_bet": "2026-09-13",
-   "bets": 48,
-   "bets_during": 0
+   "market": "RaUhdxs3ToW4qEOXslFy",
+   "tol3": {
+    "episodes": 5,
+    "closed": [
+     {
+      "start": 1715951036218,
+      "cause": "earlier rung up",
+      "max_gap": 0.2066,
+      "end": 1715984450676,
+      "ended_by": "earlier rung down",
+      "days": 0.4
+     },
+     {
+      "start": 1717111215986,
+      "cause": "earlier rung up",
+      "max_gap": 0.2229,
+      "end": 1717120768860,
+      "ended_by": "earlier rung down",
+      "days": 0.1
+     },
+     {
+      "start": 1719710924786,
+      "cause": "earlier rung up",
+      "max_gap": 0.0353,
+      "end": 1719766983863,
+      "ended_by": "earlier rung down",
+      "days": 0.6
+     },
+     {
+      "start": 1789341748981,
+      "cause": "earlier rung up",
+      "max_gap": 0.0801,
+      "end": 1789341749278,
+      "ended_by": "earlier rung down",
+      "days": 0.0
+     }
+    ],
+    "open": {
+     "start": 1789341749517,
+     "cause": "earlier rung up",
+     "max_gap": 0.057,
+     "end": null,
+     "days": 32.6
+    },
+    "rung_fills_after": 1,
+    "market_fills_after": 15,
+    "bettors_after": 1
+   },
+   "tol5": {
+    "episodes": 4,
+    "closed": [
+     {
+      "start": 1715951036218,
+      "cause": "earlier rung up",
+      "max_gap": 0.2066,
+      "end": 1715984450676,
+      "ended_by": "earlier rung down",
+      "days": 0.4
+     },
+     {
+      "start": 1717111215986,
+      "cause": "earlier rung up",
+      "max_gap": 0.2229,
+      "end": 1717120768860,
+      "ended_by": "earlier rung down",
+      "days": 0.1
+     },
+     {
+      "start": 1789341748981,
+      "cause": "earlier rung up",
+      "max_gap": 0.0801,
+      "end": 1789341749278,
+      "ended_by": "earlier rung down",
+      "days": 0.0
+     },
+     {
+      "start": 1789341749517,
+      "cause": "earlier rung up",
+      "max_gap": 0.057,
+      "end": 1789341749785,
+      "ended_by": "earlier rung down",
+      "days": 0.0
+     }
+    ],
+    "open": null
+   }
   }
  ]
 }
