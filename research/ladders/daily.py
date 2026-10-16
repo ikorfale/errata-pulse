@@ -15,7 +15,8 @@ day = datetime.now(timezone.utc).strftime('%Y-%m-%d')
 out = os.path.join(runs, day)
 os.makedirs(out, exist_ok=True)
 subprocess.run([sys.executable, os.path.join(HERE, 'ladders.py'), out] + sys.argv[2:], check=True)  # e.g. --from snapshot.json (test)
-for f in ('snapshot.json', 'ladders.json'):
+poly = '--from' not in sys.argv and subprocess.run([sys.executable, os.path.join(HERE, 'poly_ladders.py'), out]).returncode == 0  # a Polymarket failure must not lose the Manifold run
+for f in ('snapshot.json', 'ladders.json') + (('poly_snapshot.json', 'poly_ladders.json') if poly else ()):
     with open(os.path.join(out, f), 'rb') as a, gzip.open(os.path.join(out, f + '.gz'), 'wb') as b:
         shutil.copyfileobj(a, b)
     os.remove(os.path.join(out, f))
@@ -38,6 +39,11 @@ row = {'day': day, 'fetched_at': d['fetched_at'], 'markets': len(snap['markets']
        'never_breaks': len(d.get('mc_complement', [])),
        'verdicts': {v: sum(verdict(k) == v for k in pairs) for v in ('ladder', 'criteria-differ', 'state', 'unreviewed')},
        'pairs': pairs}
+if poly:  # Polymarket: same ladders, but a break is only a trade when bid(earlier) > ask(later)
+    p = json.load(gzip.open(os.path.join(out, 'poly_ladders.json.gz')))
+    row['poly'] = {'ladders': p['ladders'], 'pairs': p['pairs'], 'mid_gap_pairs': len(p['violations']),
+                   'crossed': [{'q': x['early']['q'], 'late': x['late']['q'], 'cross': round(x['crossed'], 4)}
+                               for x in p['violations'] if x['crossed'] > 0]}
 hist_path = os.path.join(runs, 'history.jsonl')
 open(hist_path, 'a').write(json.dumps(row) + '\n')
 hist = list({h['day']: h for h in map(json.loads, open(hist_path))}.values())  # a rerun on the same day replaces that day
@@ -57,4 +63,5 @@ for k, s in sorted(seen.items(), key=lambda kv: (kv[1]['last'] != day, kv[1]['fi
 open(os.path.join(runs, 'persistence.md'), 'w').write('\n'.join(L) + '\n')
 print(f"{day}: {row['binary_pairs']} binary pairs, {row['mc_pairs']} mc pairs in {row['mc_markets_flagged']} markets, "
       f"{row['never_breaks']} never-breaks; verdicts {row['verdicts']}; "
+      f"polymarket {row['poly']['pairs'] if poly else 'n/a'} pairs, {len(row['poly']['crossed']) if poly else '-'} crossed; "
       f"{len(seen)} pairs ever, {sum(s['last'] == day for s in seen.values())} open now")

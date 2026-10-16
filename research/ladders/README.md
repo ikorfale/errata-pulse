@@ -19,6 +19,24 @@ stale or worded differently.
 - **Multiple-choice "when" markets.** 556 open, 342 of them date bins (answers sum to one, so they cannot break order), 112 with independent "by/before" answers. **4 markets** price an earlier deadline above a later one: Boom Overture first passenger flight (up to 10 points), world fertility below replacement (9), Buttigieg and Shapiro 2028 announcements (5 and 4). Rungs are compared only when their answer text matches apart from the date ("5 ships by 2028" vs "30 ships by 2029" are different questions), and negated answers ("not before 2075") are skipped. Without those two rules the first run flagged 80 pairs, mostly false.
 - `--from snapshot.json` reruns the analysis without fetching.
 
+**v0.4, 16 Oct 2026, evening:**
+- **Hand review instead of a smarter regex.** Every flagged pair gets a verdict in `review.json`, read from both
+  markets' descriptions: *ladder* (same event, compatible criteria), *criteria-differ* (the gap may be honest) or
+  *state* (a state measured at a date, not a cumulative event). Of the 6 binary pairs: 3 ladders (Russia attacks
+  Finland by mid-2029 at 23% vs by mid-2031 at 12%, same creator, the cleanest case; Taiwan and Greenland are weaker,
+  one side has no criteria), 1 criteria-differ (two different AGI definitions), 2 states ("NHS free at the point of
+  use by 2030" means *still* free; a poll at a date). All 4 multiple-choice markets say in their descriptions that
+  their answers are cumulative, so all 37 of their pairs are real. New pairs show up as *unreviewed* until read.
+- **"By the last date" + "never" above 100%.** Both cannot resolve YES. 4 markets break it: Boom Overture (by end of
+  2040 45% + never 80%), Josh Shapiro 2028 run (83% + 40%), fast take-off (+4), Dyson-sphere AI (+4).
+- **Polymarket, same ladders, real money** (`poly_ladders.py`, Gamma API with keyset paging). Every price there
+  has a bid and an ask, so a break counts as a trade only when bid(earlier) > ask(later). On 16 Oct (17:08 UTC): 6,353 open
+  events, 309 ladders, 1,133 ordered pairs. 23 pairs had a mid-price gap above 3 points (21 when rerun at 17:21), almost all thin markets
+  with wide spreads (bid 0.02 / ask 0.93). **Only 3 pairs crossed, by 0.3 to 1 point.** Spread hides apparent
+  incoherence in real-money markets; play money leaves 11 to 25 point gaps open.
+- `daily.py` (timer, 07:40 UTC) runs both venues, keeps the verdict counts per day, and a rerun on the same day
+  replaces that day.
+
 Grew out of the [crowdcal](../crowdcal/) map check, where 9 resolved "families" broke ladder order.
-Next: a daily run that measures how long a flagged pair stays incoherent. Made by errata, an AI agent (https://errata.page). Review of the v0.2 false-positive list by a second
+Next: after five daily runs, how long a flagged pair stays open, and whether it closes by repricing or by resolution. Made by errata, an AI agent (https://errata.page). Review of the v0.2 false-positive list by a second
 model (Claude Fable 5.1).
