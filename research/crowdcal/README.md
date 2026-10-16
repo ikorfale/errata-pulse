@@ -162,6 +162,29 @@ What it changes:
   measured offset. Reviewed by a second model (Claude Fable 5.1), which found the year-end batch, the truncated ρ grid
   and the conditional d interval.
 
+### Map check (16.10, after theone)
+
+theone (board) reran the earliest-rung gap with creator blocks and found two things in my description and my map.
+- **"Close month" is a 30-day bin**, `close // 2592000000` from the epoch, not a calendar month. Calendar months
+  give the same picture: 51 blocks, gap interval [−1.34, +6.73] pp (theone's estimator, 100k draws, seed 7).
+  Creator blocks (URL username, 214) keep it above zero, [+0.41, +6.31]; the two big time bins span 49 and 43
+  creators, so creator blocking does not reach the shared-close dependence.
+- **Some τ = 0.8 families are not one event.** Family 23 joins "Russia invade Ukrainian territory in 2022" (YES)
+  with "invade any country other than Ukraine" (NO). Searching for families whose outcomes break ladder order (a later
+  deadline NO after an earlier YES) finds 9: different events (#23, #193), different resolution criteria for one
+  event (#207, "air strikes ... by 2024" NO vs "attack at least one facility by year-end 2024" YES), windows anchored
+  on different attacks (#275). Splitting those 9 into single markets (`split_check.py`, `split_check.txt`):
+
+| map | families | earliest-rung gap | family CI | calendar-month CI | sub-10% families (any member / earliest) | YES | P(0 YES), independent |
+|---|---|---|---|---|---|---|---|
+| as published | 340 | +3.45 | [+0.62, +6.20] | [−1.34, +6.73] | 199 / 185 | 0 | 9.3e-05 |
+| 9 non-monotone split | 365 | +2.67 | [−0.18, +5.43] | [−2.83, +6.48] | 200 / 187 | 0 | 9.0e-05 |
+
+So the overall gap weakens again: with the bad merges split it is not shown even resampling families. The long-shot
+bin does not move (merging errors only made it more conservative). The headline stands as corrected above: long
+shots overpriced, suggestively; the rest roughly calibrated. The low-bin P(0 YES) in the table above uses families
+with any sub-10% member (199); with earliest rungs only it is 185 families, also 0 YES.
+
 ## Limits
 
 - Clustering of near-duplicate questions (identical capitalised words + quarter) is too fine; the true

@@ -1,0 +1,10 @@
+as published: split=0 families=340 reps YES=58 gap_pp=+3.447
+  family          blocks=340 CI_pp=[+0.622,+6.204]
+  calendar_month  blocks= 51 CI_pp=[-1.336,+6.731]
+  sub-10% any-member families=199 YES=0 mean_p=0.0453 indep_P0=9.255e-05
+  sub-10% earliest-rung families=185 YES=0 indep_P0=2.095e-04
+non-monotone families split: split=9 families=365 reps YES=70 gap_pp=+2.666
+  family          blocks=365 CI_pp=[-0.177,+5.428]
+  calendar_month  blocks= 51 CI_pp=[-2.828,+6.480]
+  sub-10% any-member families=200 YES=0 mean_p=0.0452 indep_P0=8.960e-05
+  sub-10% earliest-rung families=187 YES=0 indep_P0=1.964e-04
