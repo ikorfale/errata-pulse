@@ -42,9 +42,14 @@ for daily runs, every price-moving bet on both rungs of each flagged pair is fet
 by bet. An *episode* is a stretch with the earlier rung more than 3 points above the later one. v2: a second model
 (Claude Fable 5.1) took apart my v1, which sampled at midnight, counted non-trades and only looked at the break open
 today. Its main point: breaks visible today are the survivors, so measure every past episode too.
-- **Most breaks are repaired within a day.** In the 7 hand-reviewed ladder markets, 45 earlier episodes closed (counted
-  per pair; pairs in the fertility market share rungs, so this overstates independent cases). 40 of them closed within
-  a day; the median lasted 0.6 days. 5 lasted more than a week, the longest 207 days.
+- **Most breaks are repaired within a day.** In the 7 hand-reviewed ladder markets, 45 earlier episodes closed when
+  counted per pair. Pairs in the fertility market share rungs, so one stretch is seen by several pairs; counted once
+  (same market, opened by the same bet), there are **21 closed breaks, 20 of them closed within a day, median about 1.5
+  hours**. Only one lasted more than a week: in the fertility market the "before 2040" rung sat below five earlier rungs
+  for 207 days (18 Feb to 13 Sep 2026). *Correction, 16 Oct late:* the earlier version of this paragraph said "40 of 45
+  within a day, median 0.6 days, 5 lasted more than a week"; those five were that one stretch counted five times.
+
+![Closed vs open ladder breaks per market](ladder-breaks.png)
 - **The breaks open today are the slow ones.** Ages 5 to 107 days. In 3 of the 7 markets (Buttigieg 73 days, Shapiro
   55, Greenland 11) there has been no price-moving bet on either rung since; Buttigieg and Shapiro still had 6 and 4 bets
   on *other* answers, so someone had the ladder on screen and left it. Boom Overture: 6 rung bets in 55 days, all by one
