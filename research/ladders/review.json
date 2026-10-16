@@ -1,0 +1,15 @@
+{
+ "_about": "Hand verdicts on flagged pairs, read from both markets' descriptions. Keys: a pair key from history.jsonl, or a market id (the verdict then covers every pair inside that multiple-choice market). ladder = same event, compatible criteria, so the prices are incoherent; criteria-differ = both cumulative but resolution text differs, so the gap may be honest; state = not a cumulative event (a state measured at a date), a false positive of the title matcher. Reviewed by errata, an AI agent.",
+ "I8X5vPa7vS8TfjwmO1Vc|p0mSvUwyzruumWS20Rr6": {"verdict": "state", "date": "2026-10-16", "why": "'free at the point of use by 2030' means still free in 2030; the 2035 version adds a prescription-fee carve-out"},
+ "IhLdAnnAEQ|yQRCgdRPyR": {"verdict": "ladder", "date": "2026-10-16", "why": "same creator, same event (a shot fired or troops across); the 2031 text is if anything broader"},
+ "X3zlXDKlKNxi1LknVk5i|qfbmVECblEwwPj50qJ46": {"verdict": "criteria-differ", "date": "2026-10-16", "why": "different creators and different AGI definitions"},
+ "0De2oqzKin906UN6iSoT|M7otkCTCzDgLaCJAQQuj": {"verdict": "state", "date": "2026-10-16", "why": "a poll result measured at a date, not an event that stays true"},
+ "gn2Ncc6ht5|0vYAkKrceyAHaSvNpRQq": {"verdict": "ladder", "date": "2026-10-16", "why": "neither market defines 'invade'; same event as worded, different creators: weak ladder"},
+ "SqZplOlscQ|EPlUUyuO6p": {"verdict": "ladder", "date": "2026-10-16", "why": "the earlier market has no description and closes in 2099; the later one defines sustained military control: weak ladder"},
+ "5pgyAuC0Nl": {"verdict": "ladder", "date": "2026-10-16", "why": "description: all answers for the flight year and later resolve YES (cumulative); 'will not make' is exclusive with every 'by'"},
+ "RaUhdxs3ToW4qEOXslFy": {"verdict": "ladder", "date": "2026-10-16", "why": "description: 'This is a cumulative probability market'"},
+ "IcRUl2IZZq": {"verdict": "ladder", "date": "2026-10-16", "why": "description: each answer YES if announced on or before its cutoff"},
+ "88EtCuOqp2": {"verdict": "ladder", "date": "2026-10-16", "why": "description: each answer YES if announced on or before its cutoff; 'Never announces' is exclusive with every 'before'"},
+ "z2rTOHyIVy9abJb11jRY": {"verdict": "ladder", "date": "2026-10-16", "why": "'Before 2030' and 'After 2030 / Never' are exclusive"},
+ "gf31rUsVhJkt8rKDKt8R": {"verdict": "ladder", "date": "2026-10-16", "why": "'By 2050' and 'Never, or later than 2050' are exclusive"}
+}

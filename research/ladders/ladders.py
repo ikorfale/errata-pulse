@@ -166,6 +166,34 @@ def mc_violations(mcs):
     return rungs, viol
 
 
+NEVER = re.compile(r"^\s*(never|no\b|not\b|.*\b(will not|won't|does not|doesn't|never)\b)", re.I)
+
+
+def mc_complement(mcs):
+    """'By the latest date' and 'never' cannot both be true: in an independent-answers market their prices must not
+    sum above 1. Uses the longest ladder's latest rung and the one dateless negative answer ("Never announces...")."""
+    out = []
+    for m in mcs:
+        if m['sum_to_one'] is not False:
+            continue
+        nev = [a for a in m['answers'] if a['p'] is not None and not a['resolved'] and NEVER.search(a['text'] or '')
+               and not ANS_DATE.search(a['text'] or '')]  # 'Never announces a 2028 run' names a year but no deadline
+        lad = defaultdict(list)
+        for a in m['answers']:
+            if a['p'] is not None and not a['resolved'] and answer_deadline(a['text']) and not NEG.search(a['text']):
+                lad[answer_stem(a['text'])].append((answer_deadline(a['text']), a))
+        if len(nev) != 1 or not lad:
+            continue
+        dl_last, last = max(max(lad.values(), key=len), key=lambda t: t[0])
+        after = [int(y) for y in re.findall(r'\b(?:after|later than|beyond)\s+((?:19|20)\d\d)', nev[0]['text'], re.I)]
+        if any(y * 12 + 12 < dl_last for y in after):  # 'after 2029 or never' overlaps 'by 2032'
+            continue
+        if last['p'] + nev[0]['p'] > 1 + TOL:
+            out.append({'market': m, 'late': last, 'never': nev[0], 'excess': last['p'] + nev[0]['p'] - 1})
+    out.sort(key=lambda x: -x['excess'])
+    return out
+
+
 def overlap(i, j):
     """Token Jaccard of two markets' descriptions: low means the creators wrote different resolution criteria."""
     w = []
@@ -186,6 +214,7 @@ def main(out):
     json.dump({'fetched_at': ts, 'coverage': 'search terms' if '--search' in sys.argv else 'all open',
                'markets': rows, 'multiple_choice': mcs}, open(f'{out}/snapshot.json', 'w'))
     mc_rungs, mc_viol = mc_violations(mcs)
+    mc_comp = mc_complement(mcs)
     fam, surv = defaultdict(list), set()
     now = time.time() * 1000
     for r in rows:
@@ -214,7 +243,7 @@ def main(out):
                                  'same_creator': a['creator'] == b['creator'], 'stale': stale,
                                  'criteria_overlap': None if a['creator'] == b['creator'] else overlap(a['id'], b['id'])})
     viol.sort(key=lambda x: -x['gap'])
-    json.dump({'fetched_at': ts, 'families': fam, 'violations': viol, 'mc_violations': mc_viol},
+    json.dump({'fetched_at': ts, 'families': fam, 'violations': viol, 'mc_violations': mc_viol, 'mc_complement': mc_comp},
               open(f'{out}/ladders.json', 'w'))
     d = lambda ms: datetime.fromtimestamp(ms / 1000, timezone.utc).strftime('%Y-%m-%d')
     L = [f'# Incoherent deadline ladders on Manifold, {ts}', '',
@@ -244,8 +273,15 @@ def main(out):
         m, a, b = x['market'], x['early'], x['late']
         L += [f'- **{x["gap"] * 100:.0f} pts**: [{m["q"]}]({m["url"]}) ({m["bettors"]} bettors): '
               f'"{a["text"]}" {a["p"] * 100:.0f}% vs "{b["text"]}" {b["p"] * 100:.0f}%']
+    L += ['', '## "By the last date" plus "never" above 100%', '',
+          f'{len(mc_comp)} independent-answers markets where the latest "by" answer and the "never" answer together '
+          f'cost more than {1 + TOL:.2f}: both cannot resolve YES.', '']
+    for x in mc_comp:
+        m = x['market']
+        L += [f'- **+{x["excess"] * 100:.0f} pts**: [{m["q"]}]({m["url"]}) ({m["bettors"]} bettors): '
+              f'"{x["late"]["text"]}" {x["late"]["p"] * 100:.0f}% + "{x["never"]["text"]}" {x["never"]["p"] * 100:.0f}%']
     open(f'{out}/violations.md', 'w').write('\n'.join(L) + '\n')
-    print(L[2]); print(L[-len(mc_viol) - 2] if mc_viol else L[-2])
+    print(L[2]); print(f'{len(mc_viol)} mc pairs, {len(mc_comp)} complement breaks')
 
 
 if __name__ == '__main__':
