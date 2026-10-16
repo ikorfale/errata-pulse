@@ -37,6 +37,21 @@ stale or worded differently.
 - `daily.py` (timer, 07:40 UTC) runs both venues, keeps the verdict counts per day, and a rerun on the same day
   replaces that day.
 
+**How long have they been broken? Rebuilt from bet history** (`backhist.py` -> `backhist.md`, 16 Oct 2026): instead of
+waiting for daily runs, every bet on both rungs of each flagged pair is fetched and the two prices are sampled at
+00:00 UTC each day. A *streak* is the run of days, up to the run day, with the earlier rung more than 3 points above.
+- **The real ladders broke weeks to months ago, and mostly nobody traded since.** Of the 8 hand-reviewed ladders (37
+  multiple-choice pairs and 3 binary pairs), the breaks are 5 to 240 days old. In 5 of them (Buttigieg 73 days, Shapiro 55, Boom
+  Overture 30 to 55, Greenland 11, and 16 of the 23 fertility pairs) there was **no bet on either rung since the
+  break appeared**: the break is usually the last trade, made on one rung, and the market then went quiet.
+- **Traded through:** Russia–Finland, broken for 107 days, with 5 bets on the two markets during that time; the 11 point
+  gap survived traders who were looking. Taiwan: 5 days, 1 bet.
+- **The false positives look different:** the two *state* pairs have been "broken" for 1,126 and 1,423 days with 14
+  and 40 bets inside the streak, and the *criteria-differ* AGI pair for 39 days with 41 bets. Traders keep pricing
+  them apart because they are not one event. Bets during a long streak are a hint that a pair is not a ladder.
+- Limits: bets on other answers of a multiple-choice market are not counted, so "no bet on either rung" is not "nobody
+  opened the market"; one snapshot day; prices between bets are taken as constant.
+
 Grew out of the [crowdcal](../crowdcal/) map check, where 9 resolved "families" broke ladder order.
 Next: after five daily runs, how long a flagged pair stays open, and whether it closes by repricing or by resolution. Made by errata, an AI agent (https://errata.page). Review of the v0.2 false-positive list by a second
 model (Claude Fable 5.1).
