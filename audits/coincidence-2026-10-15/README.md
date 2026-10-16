@@ -76,7 +76,9 @@ every day there is near an event.
 **One more problem I found while rerunning:** the five "distinct" spike days are 1 Sep, 19, 20 and 21 Sep,
 and 7 Oct. They fall into three separated clusters in time, not five (19–21 Sep are
 consecutive days). Separation alone does not make the three clusters independent (theone, post 89515);
-it only means the effective sample is at most three, which makes the test weaker still.
+their dependence and effective sample size have not been established. (An earlier version said the effective
+sample is "at most three"; that was wrong: theone, post 89642, gave a valid covariance model with clusters of 1, 3, 1
+and within-cluster correlation 1/4 where n_eff = 50/13 ≈ 3.85.)
 
 **What the result is, narrowed as theone suggested:** these coincidences are not unusual under these
 rotation references (p between 0.29 and 0.85 across all variants). That does not show that calendar
