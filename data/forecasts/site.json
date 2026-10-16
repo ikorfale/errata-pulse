@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-15T22:45:17.384737+00:00",
+ "generated": "2026-10-16T22:44:02.935692+00:00",
  "counts": {
   "open": 23,
   "resolved": 2,
@@ -74,8 +74,8 @@
   }
  ],
  "models": {
-  "base": 0.4412,
-  "signals": 0.1715
+  "signals": 0.1715,
+  "base": 0.4412
  },
  "questions": [
   {
@@ -141,6 +141,10 @@
     },
     {
      "date": "2026-10-15",
+     "p": 0.086
+    },
+    {
+     "date": "2026-10-16",
      "p": 0.086
     }
    ],
@@ -256,6 +260,10 @@
     {
      "date": "2026-10-15",
      "p": 0.085
+    },
+    {
+     "date": "2026-10-16",
+     "p": 0.083
     }
    ],
    "crowd_urls": {
@@ -353,6 +361,10 @@
     {
      "date": "2026-10-15",
      "p": 0.118
+    },
+    {
+     "date": "2026-10-16",
+     "p": 0.118
     }
    ],
    "crowd_urls": {
@@ -409,7 +421,7 @@
    "index": "pulse",
    "opened": "2026-10-09",
    "status": "open",
-   "p": 0.22,
+   "p": 0.3,
    "base_rate": 0.16,
    "method": "base: Article 4 requests since Feb 2022 counted as 3 in 4.7 years (Feb 2022; Poland Sep 2025; Estonia Sep 2025); Poisson +0.5 smoothing over 83 days. Checked: NATO's own list ends with Estonia, 23 Sep 2025; none in 2026 so far. signals: LR 1.5 pressure on NATO's eastern flank moved from rhetoric to incidents (Latvia 6 Oct, Lithuania moving troops towards Kaliningrad, Danish PET warnings); LR 1.2 the military component of the Chaos Pulse at 71; LR 0.8 the 2026 incidents so far (German grid sabotage and airport drones, Aug-Sep) were handled bilaterally, without Article 4, so the bar for a request is high.",
    "history": [
@@ -438,6 +450,15 @@
      "models": {
       "base": 0.16,
       "signals": 0.21
+     }
+    },
+    {
+     "date": "2026-10-15",
+     "p": 0.3,
+     "reason": "First drone strike on a ship inside a NATO member's territorial waters: Romania's president says the Wine Trader (8 missing) and Yara J were hit by drones and promises a reaction; a drone entered Romanian airspace; Rutte met Dan and Radev. No Article 4 request yet. bayes x1.5. Crowd (32%) was visible before this update.",
+     "models": {
+      "base": 0.12,
+      "signals": 0.3
      }
     }
    ],
@@ -472,6 +493,10 @@
     {
      "date": "2026-10-15",
      "p": 0.315
+    },
+    {
+     "date": "2026-10-16",
+     "p": 0.295
     }
    ],
    "crowd_urls": {
@@ -557,6 +582,10 @@
     },
     {
      "date": "2026-10-15",
+     "p": 0.02
+    },
+    {
+     "date": "2026-10-16",
      "p": 0.02
     }
    ],
@@ -690,6 +719,10 @@
     {
      "date": "2026-10-15",
      "p": 0.34
+    },
+    {
+     "date": "2026-10-16",
+     "p": 0.31
     }
    ],
    "crowd_urls": {
@@ -760,6 +793,10 @@
     {
      "date": "2026-10-15",
      "p": 0.273
+    },
+    {
+     "date": "2026-10-16",
+     "p": 0.138
     }
    ],
    "crowd_urls": {
@@ -874,6 +911,10 @@
     {
      "date": "2026-10-15",
      "p": 0.385
+    },
+    {
+     "date": "2026-10-16",
+     "p": 0.325
     }
    ],
    "crowd_urls": {
@@ -935,6 +976,10 @@
     {
      "date": "2026-10-15",
      "p": 0.28
+    },
+    {
+     "date": "2026-10-16",
+     "p": 0.285
     }
    ],
    "crowd_urls": {
@@ -1016,6 +1061,10 @@
     },
     {
      "date": "2026-10-15",
+     "p": 0.205
+    },
+    {
+     "date": "2026-10-16",
      "p": 0.205
     }
    ],
@@ -1192,7 +1241,7 @@
    "index": null,
    "opened": "2026-10-10",
    "status": "open",
-   "p": 0.18,
+   "p": 0.29,
    "base_rate": 0.1,
    "method": "base: forecast calc rate, 1 suspension in 2 years over 51 days = 0.10; signals: bayes x2.5 (reported threat) x1.2 (Trump vs Zelensky), shaded down for the official denial",
    "history": [
@@ -1213,6 +1262,15 @@
       "base": 0.1,
       "signals": 0.18
      }
+    },
+    {
+     "date": "2026-10-15",
+     "p": 0.29,
+     "reason": "Zelensky (AP, FT 15 Oct) says Ukraine has been denied the usual intelligence on Russian ballistic launches and calls the withdrawal dangerous; Ukrainian defence officials confirm the US threat. Trump says sharing has not stopped; no US official or two outlets report a suspension as implemented, so not YES. bayes x1.9.",
+     "models": {
+      "base": 0.1,
+      "signals": 0.29
+     }
     }
    ],
    "crowd": [],
@@ -1227,7 +1285,7 @@
    "index": null,
    "opened": "2026-10-10",
    "status": "open",
-   "p": 0.28,
+   "p": 0.14,
    "base_rate": 0.15,
    "method": "base: judgement from 2025-26 campaign which had multi-week lulls a few times a year; signals: bayes x1.5 (US pressure) x0.6 (Kyiv's stated refusal; Russia keeps striking the grid)",
    "history": [
@@ -1274,6 +1332,15 @@
      "models": {
       "base": 0.15,
       "signals": 0.31
+     }
+    },
+    {
+     "date": "2026-10-15",
+     "p": 0.14,
+     "reason": "The pause ended after 3 days: Ukraine hit the Ryazan refinery on 15 Oct (governor, Russian MoD, a senior Ukrainian official to AP) and Zelensky told the FT the block is lifted. A 14-day window now needs a new pause, against Kyiv's stated position. bayes x0.4.",
+     "models": {
+      "base": 0.15,
+      "signals": 0.135
      }
     }
    ],
