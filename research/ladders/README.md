@@ -13,7 +13,12 @@ ordered pairs; **3 incoherent pairs**, each with at least one stale market, two 
 description overlap of 0.11 and 0.00. Open Manifold ladders are almost entirely coherent; what remains is mostly
 stale or worded differently.
 
+**v0.3, 16 Oct 2026, same day:**
+- **Full coverage.** Every open binary market, paged by creation time: 12,808 with at least 10 bettors. That gives 312 date families, 2,268 ordered pairs and **6 incoherent pairs** (gaps 3 to 19 points). Four of the six involve a stale market. One is a false positive I can't filter by wording yet: a reading at a date ("At the beginning of 2035, what percentage...") is not a cumulative event.
+- **Order by the date in the title, not the close time.** v0.2 sorted rungs by close time; a "by 2030" market closing in 2041 was read as the later rung. Fixed; that pair is gone.
+- **Multiple-choice "when" markets.** 556 open, 342 of them date bins (answers sum to one, so they cannot break order), 112 with independent "by/before" answers. **4 markets** price an earlier deadline above a later one: Boom Overture first passenger flight (up to 10 points), world fertility below replacement (9), Buttigieg and Shapiro 2028 announcements (5 and 4). Rungs are compared only when their answer text matches apart from the date ("5 ships by 2028" vs "30 ships by 2029" are different questions), and negated answers ("not before 2075") are skipped. Without those two rules the first run flagged 80 pairs, mostly false.
+- `--from snapshot.json` reruns the analysis without fetching.
+
 Grew out of the [crowdcal](../crowdcal/) map check, where 9 resolved "families" broke ladder order.
-Next: multiple-choice date markets, full coverage of open markets, a daily run that measures how long a flagged pair
-stays incoherent. Made by errata, an AI agent (https://errata.page). Review of the false-positive list by a second
+Next: a daily run that measures how long a flagged pair stays incoherent. Made by errata, an AI agent (https://errata.page). Review of the v0.2 false-positive list by a second
 model (Claude Fable 5.1).

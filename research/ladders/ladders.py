@@ -5,8 +5,10 @@ deadline: YES by the earlier date implies YES by the later one. This script grou
 only in their date, keeps cumulative phrasings (by / before / until / end of), and lists every pair where the earlier
 deadline is priced above the later one by more than TOL.
 
-Run: python3 ladders.py [out_dir]  -> snapshot.json (all markets fetched), ladders.json (families), violations.md
-Read-only, public API, ~0.3 s between calls. Made by errata, an AI agent (https://errata.page).
+Run: python3 ladders.py [out_dir] [--search]  -> snapshot.json (all markets fetched), ladders.json, violations.md
+--from snapshot.json: analyse a saved snapshot. Default: every open binary market (search-markets sort=newest paged by beforeTime); --search: the v0.2 term list.
+Also every open multiple-choice "when" market with independent answers: "by"/"before" answers form a ladder too.
+Read-only, public API, 0.3-0.4 s between calls. Made by errata, an AI agent (https://errata.page).
 """
 import json, re, sys, time, urllib.parse, urllib.request
 from collections import defaultdict
@@ -51,6 +53,31 @@ def key(q):
     return re.sub(r'\s+', ' ', k).strip()
 
 
+def walk(ctype):
+    """Every open market of one contract type: search-markets sort=newest paged by beforeTime (offset stops at 1000)."""
+    out, before = [], None
+    while True:
+        q = dict(term='', filter='open', contractType=ctype, limit=1000, sort='newest')
+        if before:
+            q['beforeTime'] = before
+        page = get('/search-markets', **q)
+        time.sleep(0.4)
+        out += page
+        if len(page) < 1000:
+            return out
+        before = page[-1]['createdTime']
+
+
+def lite(m, t):
+    return {'id': m['id'], 'q': m['question'], 'p': m.get('probability'), 'close': m.get('closeTime'),
+            'bettors': m.get('uniqueBettorCount'), 'creator': m.get('creatorUsername'), 'url': m.get('url'),
+            'liq': m.get('totalLiquidity'), 'last_bet': m.get('lastBetTime'), 'term': t}
+
+
+def fetch_all():
+    return [lite(m, '*') for m in walk('BINARY') if (m.get('uniqueBettorCount') or 0) >= MIN_BETTORS]
+
+
 def fetch():
     seen = {}
     for t in TERMS:
@@ -60,13 +87,83 @@ def fetch():
             time.sleep(0.3)
             for m in page:
                 if (m.get('uniqueBettorCount') or 0) >= MIN_BETTORS and m['id'] not in seen:
-                    seen[m['id']] = {'id': m['id'], 'q': m['question'], 'p': m.get('probability'),
-                                     'close': m.get('closeTime'), 'bettors': m.get('uniqueBettorCount'),
-                                     'creator': m.get('creatorUsername'), 'url': m.get('url'),
-                                     'liq': m.get('totalLiquidity'), 'last_bet': m.get('lastBetTime'), 'term': t}
+                    seen[m['id']] = lite(m, t)
             if len(page) < 100:
                 break
     return list(seen.values())
+
+
+MONTH_N = dict(zip(['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep', 'oct', 'nov', 'dec'], range(1, 13)))
+ANS_DATE = re.compile(r'\b(by|before|until|prior to|no later than|end of|by the end of)\b\s*(?:the\s+)?(?:(?:end|middle)\s+of\s+|mid[- ])?'
+                      r'(?:(q[1-4])\s+|(' + MONTHS + r')\.?\s+(?:\d{1,2}(?:st|nd|rd|th)?,?\s+)?)?((?:19|20)\d\d)\b', re.I)
+
+
+def answer_deadline(text):
+    """Deadline of a cumulative answer ("Before 2027", "By June 2028", "by end of Q3 2027") as a month index
+    y*12+m of the last month it covers; None if the answer is not cumulative or has not exactly one year in it.
+    Plain "2027" (= in 2027) is a bin, not a ladder rung."""
+    hits = ANS_DATE.findall(text)
+    if len(hits) != 1 or len(re.findall(r'\b(?:19|20)\d\d\b', text)) != 1:
+        return None
+    word, qtr, mon, yr = hits[0]
+    y, before = int(yr), word.lower() == 'before'
+    if qtr:
+        m = int(qtr[1]) * 3 - (2 if before else 0)
+    elif mon:
+        m = MONTH_N[mon.lower()[:3]]
+    else:
+        m = 1 if before else 12
+    return y * 12 + m - (1 if before else 0)  # 'before M' ends with the month before M, 'by M' with M
+
+
+def fetch_mc():
+    """Open multiple-choice 'when' markets with >= MIN_BETTORS: answers fetched one market at a time."""
+    cand = [m for m in walk('MULTIPLE_CHOICE') if (m.get('uniqueBettorCount') or 0) >= MIN_BETTORS
+            and re.search(r'\b(when|what year|by when|which year)\b', m['question'], re.I)]
+    out = []
+    for m in cand:
+        d = get('/market/' + m['id']); time.sleep(0.3)
+        out.append({'id': m['id'], 'q': m['question'], 'url': m.get('url'), 'bettors': m.get('uniqueBettorCount'),
+                    'creator': m.get('creatorUsername'), 'sum_to_one': d.get('shouldAnswersSumToOne'),
+                    'answers': [{'text': a.get('text'), 'p': a.get('probability'), 'resolved': a.get('resolution')}
+                                for a in d.get('answers') or []]})
+    return out
+
+
+NEG = re.compile(r"\b(not|no|never|doesn't|does not|don't|won't|fails?|without)\b", re.I)
+
+
+def answer_stem(text):
+    """Answer text with its deadline removed: two answers are rungs of one ladder only if their stems are equal
+    ("05 ships by end of 2028" and "30 ships by end of 2029" are different questions)."""
+    t = re.sub(r'(?:19|20)\d\d(?:\s*/\s*\d{1,2})?', ' ', ANS_DATE.sub(' DATE ', text.lower()))
+    t = re.sub(r'\b(' + MONTHS + r')\b|\bq[1-4]\b|\b\d{1,2}(st|nd|rd|th)?\b(?=\s*,|\s*$)', ' ', t)
+    return re.sub(r'\s+', ' ', re.sub(r'[^a-z0-9 ]+', ' ', t)).strip()
+
+
+def mc_violations(mcs):
+    """In an independent-answers market (sum_to_one False), 'by an earlier date' must not cost more than 'by a later date'.
+    Sum-to-one markets are date bins: their cumulative ladder is a running sum and cannot break order.
+    Rungs are answers with the same stem (text minus the date); negated answers ("not before 2075") are skipped."""
+    rungs, viol = 0, []
+    for m in mcs:
+        if m['sum_to_one'] is not False:
+            continue
+        lad = defaultdict(list)
+        for a in m['answers']:
+            if a['p'] is not None and not a['resolved'] and answer_deadline(a['text']) and not NEG.search(a['text']):
+                lad[answer_stem(a['text'])].append((answer_deadline(a['text']), a))
+        lad = {k: sorted(v, key=lambda t: t[0]) for k, v in lad.items() if len({d for d, _ in v}) > 1}
+        if not lad:
+            continue
+        m['ladders'] = {k: len(v) for k, v in lad.items()}; rungs += 1
+        for r in lad.values():
+            for i, (da, a) in enumerate(r):
+                for db, b in r[i + 1:]:
+                    if db > da and a['p'] > b['p'] + TOL:
+                        viol.append({'market': m, 'early': a, 'late': b, 'gap': a['p'] - b['p']})
+    viol.sort(key=lambda x: -x['gap'])
+    return rungs, viol
 
 
 def overlap(i, j):
@@ -80,8 +177,15 @@ def overlap(i, j):
 
 def main(out):
     ts = datetime.now(timezone.utc).strftime('%Y-%m-%dT%H:%MZ')
-    rows = fetch()
-    json.dump({'fetched_at': ts, 'markets': rows}, open(f'{out}/snapshot.json', 'w'))
+    if '--from' in sys.argv:  # rerun the analysis on a saved snapshot, no fetching
+        snap = json.load(open(sys.argv[sys.argv.index('--from') + 1]))
+        ts, rows, mcs = snap['fetched_at'], snap['markets'], snap['multiple_choice']
+    else:
+        rows = fetch() if '--search' in sys.argv else fetch_all()
+        mcs = fetch_mc()
+    json.dump({'fetched_at': ts, 'coverage': 'search terms' if '--search' in sys.argv else 'all open',
+               'markets': rows, 'multiple_choice': mcs}, open(f'{out}/snapshot.json', 'w'))
+    mc_rungs, mc_viol = mc_violations(mcs)
     fam, surv = defaultdict(list), set()
     now = time.time() * 1000
     for r in rows:
@@ -94,18 +198,24 @@ def main(out):
     fam = {k: sorted(v, key=lambda r: r['close']) for k, v in fam.items()
            if len(v) > 1 and len({r['close'] // 86400000 for r in v}) > 1}
     viol, npairs = [], 0
+    # order rungs by the deadline written in the title (a market can close years after its deadline: "by 2030"
+    # closing 2041); fall back to the close time only when the title has no single cumulative date
+    dl = lambda r: (answer_deadline(r['q']) or 0, r['close'])
+    later = lambda a, b: (dl(b)[0] > dl(a)[0]) if dl(a)[0] and dl(b)[0] else b['close'] - a['close'] > 86400000
     for k, v in fam.items():
+        v.sort(key=dl)
         for i, a in enumerate(v):
             for b in v[i + 1:]:
-                npairs += b['close'] - a['close'] > 86400000
-                if b['close'] - a['close'] > 86400000 and a['p'] > b['p'] + TOL:
+                npairs += later(a, b)
+                if later(a, b) and a['p'] > b['p'] + TOL:
                     stale = [r['q'] for r in (a, b) if not r['last_bet'] or now - r['last_bet'] > STALE_DAYS * 86400000]
                     yrs = max((b['close'] - now) / (365.25 * 86400000), 0.25)
                     viol.append({'key': k, 'early': a, 'late': b, 'gap': a['p'] - b['p'], 'gap_per_year': (a['p'] - b['p']) / yrs,
                                  'same_creator': a['creator'] == b['creator'], 'stale': stale,
                                  'criteria_overlap': None if a['creator'] == b['creator'] else overlap(a['id'], b['id'])})
     viol.sort(key=lambda x: -x['gap'])
-    json.dump({'fetched_at': ts, 'families': fam, 'violations': viol}, open(f'{out}/ladders.json', 'w'))
+    json.dump({'fetched_at': ts, 'families': fam, 'violations': viol, 'mc_violations': mc_viol},
+              open(f'{out}/ladders.json', 'w'))
     d = lambda ms: datetime.fromtimestamp(ms / 1000, timezone.utc).strftime('%Y-%m-%d')
     L = [f'# Incoherent deadline ladders on Manifold, {ts}', '',
          f'{len(rows)} open binary markets with >= {MIN_BETTORS} bettors; {len(fam)} families of cumulative '
@@ -124,9 +234,20 @@ def main(out):
               f'{x["gap_per_year"] * 100:.0f} pts per year to the later close'
               + (f'; description overlap {x["criteria_overlap"]:.2f}' if x['criteria_overlap'] is not None else '')
               + (f'; stale (no bet in {STALE_DAYS} days): {len(x["stale"])} of 2' if x['stale'] else '')]
+    L += ['', '## Multiple-choice "when" markets', '',
+          f'{len(mcs)} open multiple-choice "when" markets with >= {MIN_BETTORS} bettors; '
+          f'{sum(m["sum_to_one"] is True for m in mcs)} are date bins (answers sum to one, so the ladder cannot break); '
+          f'{mc_rungs} have independent answers with at least two cumulative deadlines ("by"/"before" a date); '
+          f'{len(mc_viol)} answer pairs where the earlier deadline is priced more than {TOL:.2f} above the later one, '
+          f'in {len({x["market"]["id"] for x in mc_viol})} markets.', '']
+    for x in mc_viol:
+        m, a, b = x['market'], x['early'], x['late']
+        L += [f'- **{x["gap"] * 100:.0f} pts**: [{m["q"]}]({m["url"]}) ({m["bettors"]} bettors): '
+              f'"{a["text"]}" {a["p"] * 100:.0f}% vs "{b["text"]}" {b["p"] * 100:.0f}%']
     open(f'{out}/violations.md', 'w').write('\n'.join(L) + '\n')
-    print(L[2])
+    print(L[2]); print(L[-len(mc_viol) - 2] if mc_viol else L[-2])
 
 
 if __name__ == '__main__':
-    main(sys.argv[1] if len(sys.argv) > 1 else '.')
+    args = [a for i, a in enumerate(sys.argv[1:], 1) if not a.startswith('--') and sys.argv[i - 1] != '--from']
+    main(args[0] if args else '.')
