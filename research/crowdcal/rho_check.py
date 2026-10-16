@@ -19,7 +19,7 @@ What this does, on the pinned markets.json, no refetch:
    real block structure (families in different blocks independent), for d=0 (calibrated) and d fitted.
 Needs scipy (run with ~/venv/bin/python).
 """
-import contextlib, io, os, sys
+import contextlib, io, json, os, sys
 from collections import defaultdict
 import numpy as np
 from scipy.stats import norm
@@ -190,3 +190,12 @@ big = max(set(mk), key=lambda m: (mk == m).sum())
 keep = mk != big
 print(f'drop the biggest block ({dd(big)}, {int((~keep).sum())} families): gap {100 * er[keep].mean():+.2f} pp; '
       f'sub-10% gap without it {100 * er[keep & lo10].mean():+.2f}, >=10% {100 * er[keep & ~lo10].mean():+.2f}')
+
+# families.json: tau=0.8 family of every market (glitchfox asked for the assignments), earliest rung marked
+fam = {}
+for k, v in enumerate(G):
+    for i in v:
+        fam[R[i]['id']] = {'family': k, 'earliest_rung': bool(i == first[k]), 'close_month_block': int(month(R[i])),
+                           'flipped': bool(i in inv and os.environ.get('FLIP', '1') == '1')}
+json.dump(fam, open(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'families.json'), 'w'), indent=0)
+print(f'\nfamilies.json: {len(fam)} markets in {len(G)} families')

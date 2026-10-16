@@ -1,0 +1,3110 @@
+{
+"k85pxgla0i": {
+"family": 0,
+"earliest_rung": true,
+"close_month_block": 669,
+"flipped": false
+},
+"pG3hOMmZlDv3PR3CLyi0": {
+"family": 1,
+"earliest_rung": true,
+"close_month_block": 634,
+"flipped": false
+},
+"FyaxzCiSEVRSS2yEiwin": {
+"family": 2,
+"earliest_rung": false,
+"close_month_block": 669,
+"flipped": false
+},
+"iXISqMjSzjTEcvY11639": {
+"family": 2,
+"earliest_rung": false,
+"close_month_block": 669,
+"flipped": false
+},
+"feVNz39GC5bGNx7LFayt": {
+"family": 2,
+"earliest_rung": false,
+"close_month_block": 681,
+"flipped": false
+},
+"NGvr47J6cdXsrELqtCcg": {
+"family": 2,
+"earliest_rung": true,
+"close_month_block": 662,
+"flipped": false
+},
+"HX4SgWLoH0JXuRWHmV7C": {
+"family": 3,
+"earliest_rung": true,
+"close_month_block": 645,
+"flipped": false
+},
+"Sg4t6ZsYr2udEYxJ24m8": {
+"family": 4,
+"earliest_rung": true,
+"close_month_block": 661,
+"flipped": false
+},
+"6L7A2jjvxCHu8L5EdYp2": {
+"family": 5,
+"earliest_rung": false,
+"close_month_block": 657,
+"flipped": false
+},
+"gyfbz8dfot": {
+"family": 5,
+"earliest_rung": false,
+"close_month_block": 669,
+"flipped": false
+},
+"n4PUmfZVsnmmK9Fergvj": {
+"family": 5,
+"earliest_rung": false,
+"close_month_block": 657,
+"flipped": false
+},
+"XcdGM8g8Xt2vI5KxcbPG": {
+"family": 5,
+"earliest_rung": true,
+"close_month_block": 638,
+"flipped": false
+},
+"yenok205is": {
+"family": 5,
+"earliest_rung": false,
+"close_month_block": 681,
+"flipped": false
+},
+"iM93SADJoZHPtLJ3objD": {
+"family": 5,
+"earliest_rung": false,
+"close_month_block": 641,
+"flipped": false
+},
+"mn8vwsH83cg1dL6evAP4": {
+"family": 6,
+"earliest_rung": true,
+"close_month_block": 673,
+"flipped": false
+},
+"rayndg3srp": {
+"family": 7,
+"earliest_rung": true,
+"close_month_block": 668,
+"flipped": false
+},
+"3EeZ3lbo3sS7oKldMtyu": {
+"family": 8,
+"earliest_rung": true,
+"close_month_block": 647,
+"flipped": false
+},
+"VKRJAdhjuhGRZmbglX2T": {
+"family": 9,
+"earliest_rung": true,
+"close_month_block": 661,
+"flipped": false
+},
+"zPsfIBSirLhpXKtibKzE": {
+"family": 10,
+"earliest_rung": true,
+"close_month_block": 652,
+"flipped": false
+},
+"D216ZmU62ux07TtpzeKx": {
+"family": 10,
+"earliest_rung": false,
+"close_month_block": 657,
+"flipped": false
+},
+"xUOlZ6SAzPIPurSTiBYI": {
+"family": 11,
+"earliest_rung": true,
+"close_month_block": 644,
+"flipped": false
+},
+"wLTDYeuMqBhmnbiLKgso": {
+"family": 11,
+"earliest_rung": false,
+"close_month_block": 651,
+"flipped": false
+},
+"VpBneZwYZOMa4n6nnr9w": {
+"family": 11,
+"earliest_rung": false,
+"close_month_block": 652,
+"flipped": false
+},
+"9jq7io9YbT1dlcKUKXne": {
+"family": 11,
+"earliest_rung": false,
+"close_month_block": 655,
+"flipped": false
+},
+"sRb2bldlZVQ9sasJU8Qi": {
+"family": 11,
+"earliest_rung": false,
+"close_month_block": 651,
+"flipped": false
+},
+"ZrkBCXACr5chOCFIa8qe": {
+"family": 11,
+"earliest_rung": false,
+"close_month_block": 647,
+"flipped": false
+},
+"yaWFgNksTS07TYSXjae3": {
+"family": 12,
+"earliest_rung": true,
+"close_month_block": 669,
+"flipped": false
+},
+"XqE8KtXDbVYcCQWj405X": {
+"family": 13,
+"earliest_rung": true,
+"close_month_block": 645,
+"flipped": false
+},
+"Rbf9UUYGteMBlm5aq2nB": {
+"family": 14,
+"earliest_rung": true,
+"close_month_block": 681,
+"flipped": false
+},
+"eueePhVjC2UqDBwoBBjF": {
+"family": 15,
+"earliest_rung": true,
+"close_month_block": 653,
+"flipped": false
+},
+"abhDWdbrKdvXIqDEn6gH": {
+"family": 16,
+"earliest_rung": true,
+"close_month_block": 645,
+"flipped": false
+},
+"kZXjYFXfsL7pxNgrFizV": {
+"family": 17,
+"earliest_rung": true,
+"close_month_block": 667,
+"flipped": false
+},
+"uih5ao1xx8": {
+"family": 18,
+"earliest_rung": true,
+"close_month_block": 675,
+"flipped": false
+},
+"739g5p16up": {
+"family": 19,
+"earliest_rung": true,
+"close_month_block": 668,
+"flipped": false
+},
+"cTjzuW6P6R4P0YXUTehl": {
+"family": 20,
+"earliest_rung": true,
+"close_month_block": 671,
+"flipped": false
+},
+"Hhffzftib3xqzFLAHSJD": {
+"family": 21,
+"earliest_rung": false,
+"close_month_block": 645,
+"flipped": false
+},
+"1MFV7nwrJ392lMQER2NQ": {
+"family": 21,
+"earliest_rung": true,
+"close_month_block": 645,
+"flipped": false
+},
+"sunZAgByldC6X08Yut09": {
+"family": 22,
+"earliest_rung": true,
+"close_month_block": 661,
+"flipped": false
+},
+"GrS4mf1XqJ9pyjBG1Ojh": {
+"family": 23,
+"earliest_rung": false,
+"close_month_block": 645,
+"flipped": false
+},
+"4EY1wV58irrOOJjtrF5r": {
+"family": 23,
+"earliest_rung": true,
+"close_month_block": 634,
+"flipped": false
+},
+"gYC0L3XWIeQE75EfKVqU": {
+"family": 23,
+"earliest_rung": false,
+"close_month_block": 645,
+"flipped": false
+},
+"CWA7VIubo70TWugQi5iU": {
+"family": 24,
+"earliest_rung": true,
+"close_month_block": 657,
+"flipped": false
+},
+"w8DWVxgHRkqq7emW5W62": {
+"family": 25,
+"earliest_rung": true,
+"close_month_block": 669,
+"flipped": false
+},
+"2TEsAeBVHPJSpc2VSRIK": {
+"family": 26,
+"earliest_rung": true,
+"close_month_block": 671,
+"flipped": false
+},
+"h2qtQmAHpljWprKfooyV": {
+"family": 26,
+"earliest_rung": false,
+"close_month_block": 671,
+"flipped": false
+},
+"8uEzn8puCN": {
+"family": 27,
+"earliest_rung": true,
+"close_month_block": 675,
+"flipped": false
+},
+"t6uE58tnpl": {
+"family": 28,
+"earliest_rung": true,
+"close_month_block": 683,
+"flipped": false
+},
+"AHBv7bWoueSiDweVBpC8": {
+"family": 29,
+"earliest_rung": true,
+"close_month_block": 661,
+"flipped": false
+},
+"FUcv63HSVgvR0aET45Oy": {
+"family": 30,
+"earliest_rung": false,
+"close_month_block": 669,
+"flipped": false
+},
+"UcTD6HlxMUUFY9Sr38HN": {
+"family": 30,
+"earliest_rung": true,
+"close_month_block": 645,
+"flipped": false
+},
+"mOfc86gPxWorUBEl88PR": {
+"family": 30,
+"earliest_rung": false,
+"close_month_block": 657,
+"flipped": false
+},
+"chE69SNOgO": {
+"family": 31,
+"earliest_rung": true,
+"close_month_block": 681,
+"flipped": false
+},
+"Wtx5YCk5kV5ifbja4vQK": {
+"family": 31,
+"earliest_rung": false,
+"close_month_block": 683,
+"flipped": false
+},
+"NLM7WNzyU3lZ90n3m7ci": {
+"family": 32,
+"earliest_rung": true,
+"close_month_block": 657,
+"flipped": false
+},
+"vUslWAdaquBsgUcyLjGC": {
+"family": 33,
+"earliest_rung": true,
+"close_month_block": 650,
+"flipped": false
+},
+"RBDZhPWceghrgsxqFFo5": {
+"family": 34,
+"earliest_rung": true,
+"close_month_block": 669,
+"flipped": false
+},
+"PHRWRhwjugsi23OtsUbM": {
+"family": 35,
+"earliest_rung": true,
+"close_month_block": 638,
+"flipped": false
+},
+"cuQdhaTroQfaZdzObv7B": {
+"family": 36,
+"earliest_rung": true,
+"close_month_block": 669,
+"flipped": false
+},
+"9g9d829S2z": {
+"family": 37,
+"earliest_rung": true,
+"close_month_block": 669,
+"flipped": false
+},
+"vJkPUDv9JrdI39acJOLa": {
+"family": 38,
+"earliest_rung": true,
+"close_month_block": 645,
+"flipped": false
+},
+"QXwOs41qMv6AfsqKERox": {
+"family": 39,
+"earliest_rung": true,
+"close_month_block": 657,
+"flipped": false
+},
+"sJF6HUJwlWgdniAzFTHs": {
+"family": 39,
+"earliest_rung": false,
+"close_month_block": 657,
+"flipped": false
+},
+"uO50K9n8tsKr66wxFF1b": {
+"family": 40,
+"earliest_rung": false,
+"close_month_block": 657,
+"flipped": false
+},
+"Asd6eOfrvLls8VnuR4Pk": {
+"family": 40,
+"earliest_rung": true,
+"close_month_block": 645,
+"flipped": false
+},
+"aG0O9zNiEnT1FXAEJP4M": {
+"family": 41,
+"earliest_rung": true,
+"close_month_block": 645,
+"flipped": false
+},
+"xjxMyBj18K0xhn92iqaI": {
+"family": 42,
+"earliest_rung": true,
+"close_month_block": 645,
+"flipped": false
+},
+"hxpqnqxmne": {
+"family": 42,
+"earliest_rung": false,
+"close_month_block": 669,
+"flipped": false
+},
+"Nn5QcNusnq": {
+"family": 43,
+"earliest_rung": true,
+"close_month_block": 672,
+"flipped": false
+},
+"SPyQOt2Qyl": {
+"family": 44,
+"earliest_rung": true,
+"close_month_block": 681,
+"flipped": false
+},
+"9GfwhS1RB9VN9kUcm77b": {
+"family": 45,
+"earliest_rung": true,
+"close_month_block": 657,
+"flipped": false
+},
+"FpOETLujTpp1OB9Bfw1R": {
+"family": 46,
+"earliest_rung": true,
+"close_month_block": 670,
+"flipped": false
+},
+"I8RC4jbiFAZZOlkeOsBI": {
+"family": 47,
+"earliest_rung": true,
+"close_month_block": 686,
+"flipped": false
+},
+"p2PNzNdQ0C": {
+"family": 48,
+"earliest_rung": false,
+"close_month_block": 681,
+"flipped": false
+},
+"uSSE6nZNZQ": {
+"family": 48,
+"earliest_rung": true,
+"close_month_block": 681,
+"flipped": false
+},
+"q7IhFDyz6ScEslPcYrVQ": {
+"family": 49,
+"earliest_rung": true,
+"close_month_block": 646,
+"flipped": false
+},
+"iADlG4vTG9A04S93OnyU": {
+"family": 50,
+"earliest_rung": true,
+"close_month_block": 669,
+"flipped": false
+},
+"nDlEF6ZVU8E6uNnqTmft": {
+"family": 51,
+"earliest_rung": true,
+"close_month_block": 669,
+"flipped": false
+},
+"798oq0fri0": {
+"family": 52,
+"earliest_rung": true,
+"close_month_block": 669,
+"flipped": false
+},
+"EyLwTvPIgdOM0nLwrW4Z": {
+"family": 53,
+"earliest_rung": true,
+"close_month_block": 657,
+"flipped": false
+},
+"zODXA7FLh4b30TE38qtC": {
+"family": 53,
+"earliest_rung": false,
+"close_month_block": 681,
+"flipped": false
+},
+"LAqxqEjPl3QtNQ17yIV0": {
+"family": 54,
+"earliest_rung": true,
+"close_month_block": 658,
+"flipped": false
+},
+"IUCVSuNXLbmU9gJk2dew": {
+"family": 55,
+"earliest_rung": true,
+"close_month_block": 657,
+"flipped": false
+},
+"YZj0gXBHUhHeW56tPvuf": {
+"family": 56,
+"earliest_rung": true,
+"close_month_block": 637,
+"flipped": false
+},
+"4x96V9EFKIKsXdlkbAQa": {
+"family": 57,
+"earliest_rung": true,
+"close_month_block": 669,
+"flipped": false
+},
+"iwtrFMTUQO7WJTu9hgUr": {
+"family": 58,
+"earliest_rung": true,
+"close_month_block": 657,
+"flipped": false
+},
+"jsm1T8ITGd43LqLuL8ub": {
+"family": 59,
+"earliest_rung": true,
+"close_month_block": 657,
+"flipped": false
+},
+"oOH6ZVn3ZiGTPqITNwwF": {
+"family": 60,
+"earliest_rung": true,
+"close_month_block": 657,
+"flipped": false
+},
+"8HUZepqW6Qb0xKxKqdw0": {
+"family": 61,
+"earliest_rung": true,
+"close_month_block": 678,
+"flipped": false
+},
+"EnCtlAt0S6": {
+"family": 62,
+"earliest_rung": true,
+"close_month_block": 671,
+"flipped": false
+},
+"UlqBTcWZA35ASglxYzGh": {
+"family": 63,
+"earliest_rung": true,
+"close_month_block": 657,
+"flipped": false
+},
+"i1awnjyk4l": {
+"family": 64,
+"earliest_rung": true,
+"close_month_block": 681,
+"flipped": false
+},
+"iHARXdgfRTnayS84YHJD": {
+"family": 65,
+"earliest_rung": true,
+"close_month_block": 651,
+"flipped": false
+},
+"o5zwMpcwefpStBSUcQhT": {
+"family": 66,
+"earliest_rung": true,
+"close_month_block": 651,
+"flipped": false
+},
+"pVRknTi1kVXS8UL1EJ5e": {
+"family": 67,
+"earliest_rung": true,
+"close_month_block": 657,
+"flipped": false
+},
+"LU25S0OOCt": {
+"family": 68,
+"earliest_rung": true,
+"close_month_block": 681,
+"flipped": false
+},
+"ge8cln68zl": {
+"family": 69,
+"earliest_rung": true,
+"close_month_block": 669,
+"flipped": false
+},
+"u0hCN6hnhu": {
+"family": 69,
+"earliest_rung": false,
+"close_month_block": 676,
+"flipped": false
+},
+"PA9baZofXHsOISfJSpj7": {
+"family": 70,
+"earliest_rung": true,
+"close_month_block": 645,
+"flipped": false
+},
+"OgXJFUHddrtqmVAbfwUd": {
+"family": 71,
+"earliest_rung": true,
+"close_month_block": 669,
+"flipped": false
+},
+"0lPgqpNOUy": {
+"family": 71,
+"earliest_rung": false,
+"close_month_block": 681,
+"flipped": false
+},
+"TbtPQVsLYueyjff2IAtZ": {
+"family": 72,
+"earliest_rung": true,
+"close_month_block": 645,
+"flipped": false
+},
+"T2pUroz3OwKXmOQ4UOUK": {
+"family": 73,
+"earliest_rung": true,
+"close_month_block": 653,
+"flipped": false
+},
+"6FnMgbeDSPMiMJ0Hlehd": {
+"family": 74,
+"earliest_rung": true,
+"close_month_block": 654,
+"flipped": false
+},
+"0I5Ud3F6iS0QbC5DNEnl": {
+"family": 75,
+"earliest_rung": false,
+"close_month_block": 666,
+"flipped": false
+},
+"tBGcZLmjl88GIfTj0zzm": {
+"family": 75,
+"earliest_rung": false,
+"close_month_block": 665,
+"flipped": false
+},
+"RryFjDx8UgNrT7qE6uHf": {
+"family": 75,
+"earliest_rung": true,
+"close_month_block": 661,
+"flipped": false
+},
+"i3de5CE4h6u8UPxkWhXF": {
+"family": 76,
+"earliest_rung": true,
+"close_month_block": 645,
+"flipped": false
+},
+"MOvVMuk818ymjFi7KaJJ": {
+"family": 76,
+"earliest_rung": false,
+"close_month_block": 661,
+"flipped": false
+},
+"r11HlmFV2vaMt3JgmZW9": {
+"family": 76,
+"earliest_rung": false,
+"close_month_block": 665,
+"flipped": false
+},
+"g0LFKhaQSi0oQYTU0W24": {
+"family": 77,
+"earliest_rung": false,
+"close_month_block": 669,
+"flipped": false
+},
+"G9n8NEwUTITBSblWyOlR": {
+"family": 77,
+"earliest_rung": true,
+"close_month_block": 663,
+"flipped": false
+},
+"5RYvcPTm4WLCJxeEGGi9": {
+"family": 78,
+"earliest_rung": false,
+"close_month_block": 669,
+"flipped": false
+},
+"0zPqOyDHG6Y0FbCSTrdN": {
+"family": 78,
+"earliest_rung": true,
+"close_month_block": 657,
+"flipped": false
+},
+"VcRDkmYr1N1F19ZksjRW": {
+"family": 79,
+"earliest_rung": true,
+"close_month_block": 646,
+"flipped": false
+},
+"yb9i4Z24QdbwsiXrHwjO": {
+"family": 80,
+"earliest_rung": true,
+"close_month_block": 657,
+"flipped": false
+},
+"iHv0tCur3NbhI4oUXtoy": {
+"family": 80,
+"earliest_rung": false,
+"close_month_block": 681,
+"flipped": false
+},
+"dV6LqKmb34LFpoh7qBxo": {
+"family": 81,
+"earliest_rung": true,
+"close_month_block": 646,
+"flipped": false
+},
+"DeJ4xzMwGWei7hDcgtz2": {
+"family": 81,
+"earliest_rung": false,
+"close_month_block": 647,
+"flipped": false
+},
+"AjTX22N74RZ4HTaMXZKY": {
+"family": 81,
+"earliest_rung": false,
+"close_month_block": 669,
+"flipped": false
+},
+"hNqvClQZWT2VeKjnR2Wr": {
+"family": 81,
+"earliest_rung": false,
+"close_month_block": 660,
+"flipped": false
+},
+"xr7I5QvKmzy6iMzX4TWd": {
+"family": 81,
+"earliest_rung": false,
+"close_month_block": 649,
+"flipped": false
+},
+"JAEwyrjHe1QwxtiPxGpM": {
+"family": 82,
+"earliest_rung": true,
+"close_month_block": 657,
+"flipped": false
+},
+"A0uKxcIjjHNxw7vtXEKl": {
+"family": 82,
+"earliest_rung": false,
+"close_month_block": 669,
+"flipped": false
+},
+"lCOnxcFEWFUKPzftm7QG": {
+"family": 82,
+"earliest_rung": false,
+"close_month_block": 669,
+"flipped": false
+},
+"evi4ahl2DS8rHqzFZ0V4": {
+"family": 82,
+"earliest_rung": false,
+"close_month_block": 669,
+"flipped": false
+},
+"onhTHDgQVDpX6V5inItM": {
+"family": 83,
+"earliest_rung": true,
+"close_month_block": 657,
+"flipped": false
+},
+"8IoamQxG1grsUrxJFA5x": {
+"family": 84,
+"earliest_rung": false,
+"close_month_block": 669,
+"flipped": false
+},
+"VqcK714P3rPxwwgAa2qS": {
+"family": 84,
+"earliest_rung": false,
+"close_month_block": 657,
+"flipped": false
+},
+"5QZcEW1BzuAOFByntvUn": {
+"family": 84,
+"earliest_rung": false,
+"close_month_block": 657,
+"flipped": false
+},
+"m9bQJyAH89r1ntkYXTfE": {
+"family": 84,
+"earliest_rung": false,
+"close_month_block": 669,
+"flipped": false
+},
+"jnok9w1yv0BhbH0awN6I": {
+"family": 84,
+"earliest_rung": false,
+"close_month_block": 669,
+"flipped": false
+},
+"mXMIkxIHIdc7T8Gd17p0": {
+"family": 84,
+"earliest_rung": false,
+"close_month_block": 681,
+"flipped": false
+},
+"Mz2HCwrIb8IBadLpNZ6q": {
+"family": 84,
+"earliest_rung": true,
+"close_month_block": 648,
+"flipped": false
+},
+"PE6KbwcktQfKetT0ixuc": {
+"family": 85,
+"earliest_rung": true,
+"close_month_block": 657,
+"flipped": false
+},
+"GXaqCmKi8u1Qdx3QroIw": {
+"family": 86,
+"earliest_rung": true,
+"close_month_block": 681,
+"flipped": false
+},
+"K7udU5MzTMRZBNztC9Zt": {
+"family": 87,
+"earliest_rung": false,
+"close_month_block": 645,
+"flipped": false
+},
+"GWhf9NOrrkllog52ifTn": {
+"family": 87,
+"earliest_rung": true,
+"close_month_block": 645,
+"flipped": false
+},
+"TwxjC5SETAbZ9Rij3wXl": {
+"family": 88,
+"earliest_rung": false,
+"close_month_block": 669,
+"flipped": false
+},
+"qniUeP2t0iTyrI6CtF8D": {
+"family": 88,
+"earliest_rung": true,
+"close_month_block": 669,
+"flipped": false
+},
+"NTjr8ptihEhvnRhFLDtM": {
+"family": 89,
+"earliest_rung": true,
+"close_month_block": 669,
+"flipped": false
+},
+"UEPAqYrBCsVob2ZcXayT": {
+"family": 90,
+"earliest_rung": false,
+"close_month_block": 681,
+"flipped": false
+},
+"6ACImkljaHVI2fyiBYCX": {
+"family": 90,
+"earliest_rung": true,
+"close_month_block": 637,
+"flipped": false
+},
+"GuYRksdNn0xHvIP5Tp9C": {
+"family": 91,
+"earliest_rung": true,
+"close_month_block": 639,
+"flipped": false
+},
+"ZRYqjyMg1LwJOoiOX7xk": {
+"family": 91,
+"earliest_rung": false,
+"close_month_block": 639,
+"flipped": false
+},
+"yaka9zRiAGqcWPMlSd7u": {
+"family": 92,
+"earliest_rung": true,
+"close_month_block": 649,
+"flipped": false
+},
+"3i0087FKvd931vqf7mmO": {
+"family": 93,
+"earliest_rung": true,
+"close_month_block": 645,
+"flipped": false
+},
+"Yq84IROWgzYkY3a9s3zk": {
+"family": 94,
+"earliest_rung": true,
+"close_month_block": 659,
+"flipped": false
+},
+"Q1bciMf246qbVP2eEMTl": {
+"family": 95,
+"earliest_rung": true,
+"close_month_block": 657,
+"flipped": false
+},
+"i0m357AtNeyHK7vKO3b6": {
+"family": 96,
+"earliest_rung": false,
+"close_month_block": 657,
+"flipped": false
+},
+"p3lMHM9uhNrNgI9XfLSC": {
+"family": 96,
+"earliest_rung": true,
+"close_month_block": 645,
+"flipped": false
+},
+"YEbTrZyQ0GUcl4ygw5RF": {
+"family": 97,
+"earliest_rung": false,
+"close_month_block": 657,
+"flipped": false
+},
+"L8Da5E4NLIC7sAWWNoiH": {
+"family": 97,
+"earliest_rung": true,
+"close_month_block": 651,
+"flipped": false
+},
+"lkaEC4kuzvPWr3wsiZoC": {
+"family": 98,
+"earliest_rung": true,
+"close_month_block": 672,
+"flipped": false
+},
+"JGz9VHOG7iKS494bml1H": {
+"family": 99,
+"earliest_rung": true,
+"close_month_block": 648,
+"flipped": false
+},
+"FmbBDGyBuSJXu1aAoY0d": {
+"family": 100,
+"earliest_rung": true,
+"close_month_block": 681,
+"flipped": false
+},
+"UpUSyE2tEA": {
+"family": 101,
+"earliest_rung": true,
+"close_month_block": 670,
+"flipped": false
+},
+"jGnp5J2xlWSljTXsYFHd": {
+"family": 102,
+"earliest_rung": true,
+"close_month_block": 657,
+"flipped": false
+},
+"3CcQ9YcjohwOwybZQU2T": {
+"family": 103,
+"earliest_rung": true,
+"close_month_block": 639,
+"flipped": false
+},
+"dxtivM3iFLwCEkaJib2Y": {
+"family": 104,
+"earliest_rung": true,
+"close_month_block": 669,
+"flipped": false
+},
+"qqyQIn2Uqu": {
+"family": 104,
+"earliest_rung": false,
+"close_month_block": 681,
+"flipped": false
+},
+"25n9h08d9E": {
+"family": 105,
+"earliest_rung": true,
+"close_month_block": 669,
+"flipped": false
+},
+"kXE54Jw63QKey3CIvhUx": {
+"family": 106,
+"earliest_rung": true,
+"close_month_block": 657,
+"flipped": false
+},
+"Xu3qArBFvImOPCWqL5dL": {
+"family": 107,
+"earliest_rung": true,
+"close_month_block": 669,
+"flipped": false
+},
+"YWCbLrRWwW1Oy6FeNSaE": {
+"family": 108,
+"earliest_rung": true,
+"close_month_block": 669,
+"flipped": false
+},
+"Cd6GWDXg7hwpwWVMOdra": {
+"family": 109,
+"earliest_rung": true,
+"close_month_block": 690,
+"flipped": false
+},
+"dmc923LdZM04z6mYsPfu": {
+"family": 110,
+"earliest_rung": true,
+"close_month_block": 653,
+"flipped": false
+},
+"fsDSN2faO5HFgMNJNWzb": {
+"family": 110,
+"earliest_rung": false,
+"close_month_block": 660,
+"flipped": false
+},
+"57EqeupgrlMYtCYulNHM": {
+"family": 111,
+"earliest_rung": true,
+"close_month_block": 657,
+"flipped": false
+},
+"8TGMkSPjMMgWKl24ymom": {
+"family": 112,
+"earliest_rung": false,
+"close_month_block": 687,
+"flipped": false
+},
+"Jc4rRAQpvCXE9tCEfa4n": {
+"family": 112,
+"earliest_rung": true,
+"close_month_block": 687,
+"flipped": false
+},
+"FoeyQsSUkEtlHPCwJ9mV": {
+"family": 112,
+"earliest_rung": false,
+"close_month_block": 687,
+"flipped": false
+},
+"Qzcm46r7qTdLHDd2NU84": {
+"family": 113,
+"earliest_rung": true,
+"close_month_block": 669,
+"flipped": false
+},
+"FXdByfjND6Dq7LUyi7iS": {
+"family": 114,
+"earliest_rung": true,
+"close_month_block": 657,
+"flipped": false
+},
+"uexh2lfd6z": {
+"family": 115,
+"earliest_rung": true,
+"close_month_block": 681,
+"flipped": false
+},
+"l1iDCBLvjB97Oyr45JsC": {
+"family": 116,
+"earliest_rung": true,
+"close_month_block": 672,
+"flipped": false
+},
+"7y3fvnetmgEzeB7MAlwT": {
+"family": 117,
+"earliest_rung": true,
+"close_month_block": 681,
+"flipped": false
+},
+"nZkZx58EYDdrL3tcSfwb": {
+"family": 118,
+"earliest_rung": true,
+"close_month_block": 669,
+"flipped": false
+},
+"vkb2k34loJIatt0Tv0Oq": {
+"family": 118,
+"earliest_rung": false,
+"close_month_block": 669,
+"flipped": false
+},
+"PC5lKFnA6TvpLRTTdvTE": {
+"family": 119,
+"earliest_rung": true,
+"close_month_block": 669,
+"flipped": false
+},
+"aUGTGSoAnkWLNUqfx1mZ": {
+"family": 120,
+"earliest_rung": true,
+"close_month_block": 669,
+"flipped": false
+},
+"6LZwk5nMMAYOz8grHrTW": {
+"family": 121,
+"earliest_rung": true,
+"close_month_block": 657,
+"flipped": false
+},
+"zq2uEizdHwNA6ujQSQOf": {
+"family": 122,
+"earliest_rung": true,
+"close_month_block": 650,
+"flipped": false
+},
+"3w8c8irwmp": {
+"family": 123,
+"earliest_rung": true,
+"close_month_block": 667,
+"flipped": false
+},
+"dG5mEzeRCIpsf38J3hcP": {
+"family": 124,
+"earliest_rung": true,
+"close_month_block": 645,
+"flipped": false
+},
+"0SPMdjJZRAZwIjuSx3t7": {
+"family": 125,
+"earliest_rung": true,
+"close_month_block": 645,
+"flipped": false
+},
+"lqd6x2dhWmE2NlApNoNX": {
+"family": 126,
+"earliest_rung": true,
+"close_month_block": 681,
+"flipped": false
+},
+"jNKc6iq5y70dQNtp7OfH": {
+"family": 127,
+"earliest_rung": true,
+"close_month_block": 669,
+"flipped": false
+},
+"RjhKUA1a3noq2wVERo2A": {
+"family": 128,
+"earliest_rung": true,
+"close_month_block": 657,
+"flipped": false
+},
+"hTktxSLVPm4RNqF4nJvN": {
+"family": 129,
+"earliest_rung": true,
+"close_month_block": 645,
+"flipped": false
+},
+"A9C7Ol7FbKUvCjbJ37bz": {
+"family": 129,
+"earliest_rung": false,
+"close_month_block": 645,
+"flipped": false
+},
+"Co048SXT8rsBoeVkJMWf": {
+"family": 129,
+"earliest_rung": false,
+"close_month_block": 645,
+"flipped": false
+},
+"PdKQoBOuvGDwTsZCewbY": {
+"family": 129,
+"earliest_rung": false,
+"close_month_block": 645,
+"flipped": false
+},
+"lGr4OIRikyWvEe4regp9": {
+"family": 130,
+"earliest_rung": true,
+"close_month_block": 657,
+"flipped": false
+},
+"KmoxBfe5LaVS2JTx3w5y": {
+"family": 130,
+"earliest_rung": false,
+"close_month_block": 669,
+"flipped": false
+},
+"NMM9vyBwQrnFqbA8VHu4": {
+"family": 131,
+"earliest_rung": true,
+"close_month_block": 649,
+"flipped": false
+},
+"B8dLLvQoCMH6BrnLUDm2": {
+"family": 132,
+"earliest_rung": true,
+"close_month_block": 657,
+"flipped": false
+},
+"LE59NcPRnQ": {
+"family": 133,
+"earliest_rung": true,
+"close_month_block": 681,
+"flipped": false
+},
+"s92PSpZlus": {
+"family": 134,
+"earliest_rung": true,
+"close_month_block": 683,
+"flipped": false
+},
+"D38AIR8f03odzU8ZvoKr": {
+"family": 135,
+"earliest_rung": false,
+"close_month_block": 681,
+"flipped": false
+},
+"315CXfnEtUNgE7rkwFxm": {
+"family": 135,
+"earliest_rung": false,
+"close_month_block": 669,
+"flipped": false
+},
+"v0CshxExpy6kZXQhv22F": {
+"family": 135,
+"earliest_rung": true,
+"close_month_block": 663,
+"flipped": false
+},
+"9lld8R6gI0": {
+"family": 135,
+"earliest_rung": false,
+"close_month_block": 681,
+"flipped": false
+},
+"3l00o2wegl": {
+"family": 136,
+"earliest_rung": true,
+"close_month_block": 667,
+"flipped": false
+},
+"TsIXDQYwigSTivaNLj1B": {
+"family": 137,
+"earliest_rung": true,
+"close_month_block": 657,
+"flipped": false
+},
+"cTH4tY46Kej3GhuSoNSJ": {
+"family": 138,
+"earliest_rung": true,
+"close_month_block": 657,
+"flipped": false
+},
+"TYOc75frKzpoSLjK7Xyj": {
+"family": 138,
+"earliest_rung": false,
+"close_month_block": 669,
+"flipped": false
+},
+"pX9HWElu1wWNmnkL6NjW": {
+"family": 139,
+"earliest_rung": true,
+"close_month_block": 664,
+"flipped": false
+},
+"jOMXblps620wAtXZKFkt": {
+"family": 140,
+"earliest_rung": true,
+"close_month_block": 657,
+"flipped": false
+},
+"S5IxHycQoa37farVD755": {
+"family": 141,
+"earliest_rung": true,
+"close_month_block": 657,
+"flipped": false
+},
+"LgoGVx3ErpZUwhsSQDKv": {
+"family": 142,
+"earliest_rung": true,
+"close_month_block": 657,
+"flipped": false
+},
+"04oaMNcx0pNYjKgF4GLI": {
+"family": 143,
+"earliest_rung": true,
+"close_month_block": 666,
+"flipped": false
+},
+"em73ftsfwr": {
+"family": 143,
+"earliest_rung": false,
+"close_month_block": 678,
+"flipped": false
+},
+"8YkDryn5mcfEcSd2iZ1e": {
+"family": 144,
+"earliest_rung": true,
+"close_month_block": 645,
+"flipped": false
+},
+"lzaEroqohVXpvV3xhWL6": {
+"family": 144,
+"earliest_rung": false,
+"close_month_block": 645,
+"flipped": false
+},
+"gpl6RddQPQ": {
+"family": 145,
+"earliest_rung": true,
+"close_month_block": 681,
+"flipped": false
+},
+"UAPQZpIPZc": {
+"family": 146,
+"earliest_rung": true,
+"close_month_block": 681,
+"flipped": false
+},
+"Q0O26R6y2u": {
+"family": 146,
+"earliest_rung": false,
+"close_month_block": 681,
+"flipped": false
+},
+"PoYnekOwSel6h5W9OFfY": {
+"family": 147,
+"earliest_rung": true,
+"close_month_block": 662,
+"flipped": false
+},
+"YnEqwoM468RVaFi9sMMz": {
+"family": 148,
+"earliest_rung": true,
+"close_month_block": 669,
+"flipped": false
+},
+"by6SJGIOgvdxBjehEdbl": {
+"family": 149,
+"earliest_rung": true,
+"close_month_block": 655,
+"flipped": false
+},
+"8tzksggrtn": {
+"family": 150,
+"earliest_rung": true,
+"close_month_block": 669,
+"flipped": false
+},
+"Uqny2UuygI": {
+"family": 151,
+"earliest_rung": true,
+"close_month_block": 685,
+"flipped": false
+},
+"QLWEwRt49op0CY0jc5IA": {
+"family": 152,
+"earliest_rung": true,
+"close_month_block": 636,
+"flipped": false
+},
+"JifD1dXC9WU0QArpBXF2": {
+"family": 153,
+"earliest_rung": true,
+"close_month_block": 669,
+"flipped": false
+},
+"qJrmXSSz9hE7aOp93RA0": {
+"family": 154,
+"earliest_rung": true,
+"close_month_block": 657,
+"flipped": false
+},
+"9PlQp8uym4iK5bWf7y74": {
+"family": 155,
+"earliest_rung": false,
+"close_month_block": 657,
+"flipped": false
+},
+"HUv9oYW6Ux6IbULHWLr9": {
+"family": 155,
+"earliest_rung": true,
+"close_month_block": 645,
+"flipped": false
+},
+"BR8lHvKEdL1kkExMggpO": {
+"family": 156,
+"earliest_rung": false,
+"close_month_block": 669,
+"flipped": false
+},
+"6glwMYCAcUNMZekfksk5": {
+"family": 156,
+"earliest_rung": false,
+"close_month_block": 669,
+"flipped": false
+},
+"FYt3jMfFLo7EIqzdZ98w": {
+"family": 156,
+"earliest_rung": false,
+"close_month_block": 669,
+"flipped": false
+},
+"7Noix6EKZN6WlYXvDeSz": {
+"family": 156,
+"earliest_rung": false,
+"close_month_block": 669,
+"flipped": false
+},
+"UlEzW1mujMghb3cAXAm4": {
+"family": 156,
+"earliest_rung": false,
+"close_month_block": 669,
+"flipped": false
+},
+"zCp3EvOVA93RIuoynXJ4": {
+"family": 156,
+"earliest_rung": true,
+"close_month_block": 669,
+"flipped": false
+},
+"uSUcA5UD0INKN1BlqRdx": {
+"family": 156,
+"earliest_rung": false,
+"close_month_block": 669,
+"flipped": false
+},
+"VxkxtHeV5MH24k8TaDLo": {
+"family": 156,
+"earliest_rung": false,
+"close_month_block": 669,
+"flipped": false
+},
+"naM5XofeEJOgT1QKlsWg": {
+"family": 157,
+"earliest_rung": false,
+"close_month_block": 657,
+"flipped": false
+},
+"8zRc8F4rBCavSjHLq5Ak": {
+"family": 157,
+"earliest_rung": true,
+"close_month_block": 657,
+"flipped": false
+},
+"U3ErcZW9KU3kA57Q50ht": {
+"family": 158,
+"earliest_rung": true,
+"close_month_block": 669,
+"flipped": false
+},
+"NLPzcQ2Cy9": {
+"family": 159,
+"earliest_rung": true,
+"close_month_block": 685,
+"flipped": false
+},
+"PdlUOR8E90": {
+"family": 160,
+"earliest_rung": false,
+"close_month_block": 687,
+"flipped": false
+},
+"tllRhO59t6": {
+"family": 160,
+"earliest_rung": true,
+"close_month_block": 687,
+"flipped": false
+},
+"alPKlzI3ZFoEb9WMRrdr": {
+"family": 161,
+"earliest_rung": false,
+"close_month_block": 657,
+"flipped": false
+},
+"6ylpO2Qoc5fc1WS3W1fT": {
+"family": 161,
+"earliest_rung": true,
+"close_month_block": 657,
+"flipped": true
+},
+"k4XTBQLFuDvBljexbalv": {
+"family": 162,
+"earliest_rung": false,
+"close_month_block": 669,
+"flipped": false
+},
+"Qh5yIEC5NU": {
+"family": 162,
+"earliest_rung": false,
+"close_month_block": 681,
+"flipped": false
+},
+"FxUeYUDUIOSv3QH2uCBv": {
+"family": 162,
+"earliest_rung": false,
+"close_month_block": 681,
+"flipped": false
+},
+"z9J2TnUkQSPcQYve80zI": {
+"family": 162,
+"earliest_rung": false,
+"close_month_block": 669,
+"flipped": false
+},
+"ZJEVVzcMnKFmaC1F7yjj": {
+"family": 162,
+"earliest_rung": true,
+"close_month_block": 657,
+"flipped": false
+},
+"3zGTOte61ULeQOlyA3VY": {
+"family": 162,
+"earliest_rung": false,
+"close_month_block": 669,
+"flipped": false
+},
+"bRKNXg3f0EdzV2SlShQh": {
+"family": 162,
+"earliest_rung": false,
+"close_month_block": 669,
+"flipped": false
+},
+"JlDOukeUul5jSsqQdYOS": {
+"family": 162,
+"earliest_rung": false,
+"close_month_block": 669,
+"flipped": false
+},
+"GnOBhyKAW52pEsdJlKdx": {
+"family": 162,
+"earliest_rung": false,
+"close_month_block": 681,
+"flipped": false
+},
+"nNupLRA1zp76r56LI0Q1": {
+"family": 162,
+"earliest_rung": false,
+"close_month_block": 681,
+"flipped": false
+},
+"BjTJaXUJcoCsLTvCsCO2": {
+"family": 162,
+"earliest_rung": false,
+"close_month_block": 669,
+"flipped": false
+},
+"XRHksomxN5CAlXCVtXqS": {
+"family": 162,
+"earliest_rung": false,
+"close_month_block": 681,
+"flipped": false
+},
+"mAx0YpbNkbcNBH8bdI3P": {
+"family": 162,
+"earliest_rung": false,
+"close_month_block": 669,
+"flipped": false
+},
+"HYPBCUKo0ZGNR5wBPBiI": {
+"family": 162,
+"earliest_rung": false,
+"close_month_block": 669,
+"flipped": false
+},
+"lR5Z5vmP3GTA1kIuMBWq": {
+"family": 162,
+"earliest_rung": false,
+"close_month_block": 669,
+"flipped": false
+},
+"Nd0q9tA5yO": {
+"family": 162,
+"earliest_rung": false,
+"close_month_block": 681,
+"flipped": false
+},
+"DoDA2XYRlLWrqG1VchQl": {
+"family": 162,
+"earliest_rung": false,
+"close_month_block": 669,
+"flipped": false
+},
+"jN0u9c7lKtNDWenzukpS": {
+"family": 162,
+"earliest_rung": false,
+"close_month_block": 658,
+"flipped": false
+},
+"FF4szmqaKfYKgp6tSLKt": {
+"family": 163,
+"earliest_rung": false,
+"close_month_block": 665,
+"flipped": false
+},
+"VDzpg2etiGWalSJTJQuW": {
+"family": 163,
+"earliest_rung": false,
+"close_month_block": 669,
+"flipped": false
+},
+"CfLhP0Lq2jBoldBnB2dZ": {
+"family": 163,
+"earliest_rung": false,
+"close_month_block": 659,
+"flipped": false
+},
+"GilorJCWUxPFkvgFZdrG": {
+"family": 163,
+"earliest_rung": false,
+"close_month_block": 662,
+"flipped": false
+},
+"g6kJIG3W5tG39P76LiYE": {
+"family": 163,
+"earliest_rung": true,
+"close_month_block": 657,
+"flipped": false
+},
+"9H6ebhmaTM4G6gVDkD5V": {
+"family": 164,
+"earliest_rung": false,
+"close_month_block": 661,
+"flipped": false
+},
+"aRuklZCAHScS9FHllksk": {
+"family": 164,
+"earliest_rung": false,
+"close_month_block": 662,
+"flipped": false
+},
+"R11xklhvs7X9dJRQO8Be": {
+"family": 164,
+"earliest_rung": false,
+"close_month_block": 661,
+"flipped": false
+},
+"CgwD7J1SLUDPJrlj5plY": {
+"family": 164,
+"earliest_rung": true,
+"close_month_block": 660,
+"flipped": false
+},
+"jCukeVbhPsmvRnKo20Os": {
+"family": 165,
+"earliest_rung": true,
+"close_month_block": 683,
+"flipped": false
+},
+"UgWzOvfLqApZ5OMJmfQX": {
+"family": 166,
+"earliest_rung": true,
+"close_month_block": 661,
+"flipped": false
+},
+"Mct3YDNYNIdcuoDF0Hc9": {
+"family": 167,
+"earliest_rung": true,
+"close_month_block": 664,
+"flipped": false
+},
+"6ZURulqO2E": {
+"family": 168,
+"earliest_rung": false,
+"close_month_block": 681,
+"flipped": false
+},
+"VBXOWW5jKIgyXzMDRHAG": {
+"family": 168,
+"earliest_rung": true,
+"close_month_block": 669,
+"flipped": false
+},
+"phcBCtkoCeLQ6RBrbejG": {
+"family": 169,
+"earliest_rung": true,
+"close_month_block": 657,
+"flipped": false
+},
+"EZ8qISZnh9": {
+"family": 170,
+"earliest_rung": true,
+"close_month_block": 683,
+"flipped": false
+},
+"9mkpts1kVKuIm7SOXE9B": {
+"family": 171,
+"earliest_rung": true,
+"close_month_block": 669,
+"flipped": false
+},
+"32wfq6hr74": {
+"family": 172,
+"earliest_rung": true,
+"close_month_block": 666,
+"flipped": false
+},
+"29yEAun22q": {
+"family": 173,
+"earliest_rung": true,
+"close_month_block": 675,
+"flipped": false
+},
+"7ZmRZEFDSsSrW9nNisIr": {
+"family": 174,
+"earliest_rung": true,
+"close_month_block": 657,
+"flipped": false
+},
+"eH49NOSuo7pWooevawP6": {
+"family": 174,
+"earliest_rung": false,
+"close_month_block": 669,
+"flipped": false
+},
+"LfjC8XJig8zOUhpbz93X": {
+"family": 175,
+"earliest_rung": true,
+"close_month_block": 669,
+"flipped": false
+},
+"paitses2f9": {
+"family": 176,
+"earliest_rung": true,
+"close_month_block": 669,
+"flipped": false
+},
+"umB9eZVje3tyQ9yh7sKo": {
+"family": 177,
+"earliest_rung": true,
+"close_month_block": 666,
+"flipped": false
+},
+"IYLNuRnbNLN5abWTzn2b": {
+"family": 178,
+"earliest_rung": false,
+"close_month_block": 645,
+"flipped": false
+},
+"S2HirYmZ5SqgHfrvNZUk": {
+"family": 178,
+"earliest_rung": true,
+"close_month_block": 644,
+"flipped": false
+},
+"I6h9535EJuvPbiIY4vE8": {
+"family": 179,
+"earliest_rung": true,
+"close_month_block": 657,
+"flipped": false
+},
+"8O8P06pACd": {
+"family": 180,
+"earliest_rung": true,
+"close_month_block": 681,
+"flipped": false
+},
+"evK7aAHzkCWn9JfJOx99": {
+"family": 181,
+"earliest_rung": false,
+"close_month_block": 657,
+"flipped": false
+},
+"Bb3eFUOtKn03RcoPue1D": {
+"family": 181,
+"earliest_rung": false,
+"close_month_block": 646,
+"flipped": false
+},
+"94aUJ7prGjcOEAqr8Azl": {
+"family": 181,
+"earliest_rung": false,
+"close_month_block": 648,
+"flipped": false
+},
+"R0vr845SfAKEFyc3V6bc": {
+"family": 181,
+"earliest_rung": true,
+"close_month_block": 646,
+"flipped": false
+},
+"0vq047wblrejxuBCnBtD": {
+"family": 182,
+"earliest_rung": false,
+"close_month_block": 666,
+"flipped": false
+},
+"L94IqRzjI8KJ7pzs2lne": {
+"family": 182,
+"earliest_rung": true,
+"close_month_block": 657,
+"flipped": false
+},
+"ype0am65ld": {
+"family": 182,
+"earliest_rung": false,
+"close_month_block": 669,
+"flipped": false
+},
+"0fRf67M7sWWeTUPKyeKE": {
+"family": 183,
+"earliest_rung": true,
+"close_month_block": 657,
+"flipped": false
+},
+"M70mtdWPEXN5pe1653wS": {
+"family": 183,
+"earliest_rung": false,
+"close_month_block": 666,
+"flipped": false
+},
+"H4jvRcIaD8ycZ3VaHOZx": {
+"family": 184,
+"earliest_rung": true,
+"close_month_block": 657,
+"flipped": false
+},
+"kRd5JRPTIhDSukHIKyJg": {
+"family": 184,
+"earliest_rung": false,
+"close_month_block": 657,
+"flipped": false
+},
+"4A3FdGUfSxy6I2x5lcAu": {
+"family": 184,
+"earliest_rung": false,
+"close_month_block": 669,
+"flipped": false
+},
+"OVns3V1PFbuCvTSvp3lx": {
+"family": 185,
+"earliest_rung": true,
+"close_month_block": 657,
+"flipped": false
+},
+"ckso1KafVSsUy5nHBCxp": {
+"family": 186,
+"earliest_rung": true,
+"close_month_block": 654,
+"flipped": false
+},
+"AlwpQbS8v3NtKCJJM3w8": {
+"family": 187,
+"earliest_rung": true,
+"close_month_block": 669,
+"flipped": false
+},
+"ajoazne9l9": {
+"family": 188,
+"earliest_rung": true,
+"close_month_block": 667,
+"flipped": true
+},
+"uIhNPlp5nz": {
+"family": 189,
+"earliest_rung": true,
+"close_month_block": 687,
+"flipped": false
+},
+"nUgAynUu8I": {
+"family": 190,
+"earliest_rung": false,
+"close_month_block": 676,
+"flipped": false
+},
+"2SA2SUCPI2": {
+"family": 190,
+"earliest_rung": true,
+"close_month_block": 675,
+"flipped": false
+},
+"Ln2Z5cdzSP": {
+"family": 191,
+"earliest_rung": true,
+"close_month_block": 683,
+"flipped": false
+},
+"0tutUUqSnq": {
+"family": 192,
+"earliest_rung": true,
+"close_month_block": 683,
+"flipped": false
+},
+"gpPp5EsAgd": {
+"family": 193,
+"earliest_rung": false,
+"close_month_block": 669,
+"flipped": false
+},
+"NgrEqPg3cNgcjv5GhkiY": {
+"family": 193,
+"earliest_rung": false,
+"close_month_block": 668,
+"flipped": false
+},
+"ZXsF3lopQkmEZ01GgdDY": {
+"family": 193,
+"earliest_rung": true,
+"close_month_block": 660,
+"flipped": false
+},
+"IAHgx4LFLUDi0qGkD7DP": {
+"family": 194,
+"earliest_rung": true,
+"close_month_block": 662,
+"flipped": false
+},
+"e0a3yrcmre": {
+"family": 195,
+"earliest_rung": true,
+"close_month_block": 669,
+"flipped": false
+},
+"jvLOaVvOX4PL0SKTuEwJ": {
+"family": 196,
+"earliest_rung": true,
+"close_month_block": 650,
+"flipped": false
+},
+"NNlsyzOsns": {
+"family": 197,
+"earliest_rung": true,
+"close_month_block": 687,
+"flipped": false
+},
+"tnsSE2OqCy": {
+"family": 198,
+"earliest_rung": true,
+"close_month_block": 689,
+"flipped": false
+},
+"lLN6q5Sy5g": {
+"family": 199,
+"earliest_rung": true,
+"close_month_block": 681,
+"flipped": false
+},
+"PvhrsdUiBxPSOVs19184": {
+"family": 200,
+"earliest_rung": true,
+"close_month_block": 644,
+"flipped": false
+},
+"Sa8dqARzQF3rpFPG8JLn": {
+"family": 201,
+"earliest_rung": true,
+"close_month_block": 669,
+"flipped": false
+},
+"9OIp5OROLP": {
+"family": 202,
+"earliest_rung": false,
+"close_month_block": 686,
+"flipped": false
+},
+"S58tdy0s22": {
+"family": 202,
+"earliest_rung": true,
+"close_month_block": 675,
+"flipped": false
+},
+"QR6hduuyIz": {
+"family": 203,
+"earliest_rung": true,
+"close_month_block": 681,
+"flipped": false
+},
+"cp05tZqIdQ": {
+"family": 204,
+"earliest_rung": true,
+"close_month_block": 690,
+"flipped": false
+},
+"8tLqAqcqEL": {
+"family": 205,
+"earliest_rung": true,
+"close_month_block": 681,
+"flipped": false
+},
+"5S3AApt7AYNMYmdDFaq0": {
+"family": 206,
+"earliest_rung": false,
+"close_month_block": 657,
+"flipped": false
+},
+"iew0lloCfGQai0JV34X5": {
+"family": 206,
+"earliest_rung": false,
+"close_month_block": 657,
+"flipped": false
+},
+"JLNUN540nn4lYj6ImKKV": {
+"family": 206,
+"earliest_rung": false,
+"close_month_block": 657,
+"flipped": false
+},
+"NIQlBaP3fDuQ7VGjmidd": {
+"family": 206,
+"earliest_rung": false,
+"close_month_block": 657,
+"flipped": false
+},
+"CBCpG7AUU4pnsbyBn0bg": {
+"family": 206,
+"earliest_rung": false,
+"close_month_block": 657,
+"flipped": false
+},
+"o9NkCaQUzNqQGM2ffXit": {
+"family": 206,
+"earliest_rung": false,
+"close_month_block": 657,
+"flipped": false
+},
+"2V4mFj9ngyjvgQvoKTI3": {
+"family": 206,
+"earliest_rung": false,
+"close_month_block": 657,
+"flipped": false
+},
+"dzexB9AXJdMBzGUWr0d5": {
+"family": 206,
+"earliest_rung": true,
+"close_month_block": 651,
+"flipped": false
+},
+"fZpZ93ohPfAbUHYyCTXK": {
+"family": 206,
+"earliest_rung": false,
+"close_month_block": 657,
+"flipped": false
+},
+"ArsbtVj8m8neCa5MJjSp": {
+"family": 206,
+"earliest_rung": false,
+"close_month_block": 657,
+"flipped": false
+},
+"68q8QvRQzSIaRcsLeDh4": {
+"family": 206,
+"earliest_rung": false,
+"close_month_block": 657,
+"flipped": false
+},
+"tPyn05ZAgL": {
+"family": 207,
+"earliest_rung": false,
+"close_month_block": 675,
+"flipped": false
+},
+"1n1yFBEOk5JmsB3MC9Gw": {
+"family": 207,
+"earliest_rung": false,
+"close_month_block": 668,
+"flipped": false
+},
+"3UcoDQzPBNxGDVfe9uoG": {
+"family": 207,
+"earliest_rung": false,
+"close_month_block": 669,
+"flipped": false
+},
+"cyNyu0yNgN": {
+"family": 207,
+"earliest_rung": false,
+"close_month_block": 683,
+"flipped": false
+},
+"MkSIacfBrlpBD0uiZ1Zs": {
+"family": 207,
+"earliest_rung": true,
+"close_month_block": 657,
+"flipped": false
+},
+"utbd2aj2o6": {
+"family": 207,
+"earliest_rung": false,
+"close_month_block": 669,
+"flipped": false
+},
+"cnlR6p5sZl": {
+"family": 208,
+"earliest_rung": true,
+"close_month_block": 687,
+"flipped": false
+},
+"cxdi2amEVJeMkIC8PxWB": {
+"family": 209,
+"earliest_rung": true,
+"close_month_block": 647,
+"flipped": false
+},
+"RQRoeChXrJY6yfOgyaLQ": {
+"family": 210,
+"earliest_rung": false,
+"close_month_block": 671,
+"flipped": false
+},
+"Mobo1jxLhZqnFJhWl6xY": {
+"family": 210,
+"earliest_rung": true,
+"close_month_block": 670,
+"flipped": false
+},
+"Pd59AAtPOR": {
+"family": 211,
+"earliest_rung": true,
+"close_month_block": 681,
+"flipped": false
+},
+"MPzDRXhIYJ3xD5RgX17t": {
+"family": 212,
+"earliest_rung": true,
+"close_month_block": 650,
+"flipped": false
+},
+"v7raMQr79sQZzkDItoJR": {
+"family": 213,
+"earliest_rung": false,
+"close_month_block": 681,
+"flipped": false
+},
+"tg8cjm3uin": {
+"family": 213,
+"earliest_rung": false,
+"close_month_block": 681,
+"flipped": false
+},
+"RmFWh3nUxPmeQvQSfaqM": {
+"family": 213,
+"earliest_rung": false,
+"close_month_block": 669,
+"flipped": false
+},
+"ixMgOdD1ykTcEUwrIsyg": {
+"family": 213,
+"earliest_rung": true,
+"close_month_block": 657,
+"flipped": false
+},
+"iOxytFVGwL4ChEZKG27C": {
+"family": 214,
+"earliest_rung": true,
+"close_month_block": 669,
+"flipped": false
+},
+"N3h3nsi8TYNMywoO3iUU": {
+"family": 214,
+"earliest_rung": false,
+"close_month_block": 669,
+"flipped": false
+},
+"ghiaxzda0v": {
+"family": 214,
+"earliest_rung": false,
+"close_month_block": 681,
+"flipped": false
+},
+"Wcrb7CnXS5ZhI3O9LJfF": {
+"family": 215,
+"earliest_rung": true,
+"close_month_block": 636,
+"flipped": false
+},
+"4wJJEwIfetedH935r6Md": {
+"family": 216,
+"earliest_rung": true,
+"close_month_block": 669,
+"flipped": false
+},
+"Gv1SrBXtPZIyzumw1npB": {
+"family": 217,
+"earliest_rung": true,
+"close_month_block": 677,
+"flipped": false
+},
+"WUOGgtMOlcgnKNWyJrMq": {
+"family": 218,
+"earliest_rung": false,
+"close_month_block": 681,
+"flipped": false
+},
+"iytwqijns7": {
+"family": 218,
+"earliest_rung": false,
+"close_month_block": 681,
+"flipped": false
+},
+"UANYJYqIFqzhWGTUr0VS": {
+"family": 218,
+"earliest_rung": true,
+"close_month_block": 681,
+"flipped": false
+},
+"88agqw8ul5": {
+"family": 218,
+"earliest_rung": false,
+"close_month_block": 681,
+"flipped": false
+},
+"nluFMu08Yio23YHqfC59": {
+"family": 219,
+"earliest_rung": true,
+"close_month_block": 657,
+"flipped": false
+},
+"COTcSJQbT4Lp2CPJKK9r": {
+"family": 220,
+"earliest_rung": true,
+"close_month_block": 645,
+"flipped": false
+},
+"LsnoNdSnFvCxbWMcHrqf": {
+"family": 221,
+"earliest_rung": true,
+"close_month_block": 636,
+"flipped": false
+},
+"gLgPgY0Ifzhwot7txWue": {
+"family": 222,
+"earliest_rung": true,
+"close_month_block": 653,
+"flipped": false
+},
+"vwNRBKnSRr9X5Cu5J73B": {
+"family": 223,
+"earliest_rung": false,
+"close_month_block": 669,
+"flipped": false
+},
+"LaAcs5PgYWHu1Xh7Hegd": {
+"family": 223,
+"earliest_rung": false,
+"close_month_block": 681,
+"flipped": false
+},
+"ofASX0dUFjzTJisIAwzb": {
+"family": 223,
+"earliest_rung": true,
+"close_month_block": 657,
+"flipped": false
+},
+"qcvbZTRfhR8d8fHhpAYy": {
+"family": 223,
+"earliest_rung": false,
+"close_month_block": 669,
+"flipped": false
+},
+"zNsA6EAzQR": {
+"family": 224,
+"earliest_rung": false,
+"close_month_block": 681,
+"flipped": false
+},
+"7h24smrseOe6bf8M6GgC": {
+"family": 224,
+"earliest_rung": false,
+"close_month_block": 665,
+"flipped": false
+},
+"DaV0m6SVc1mkaeZhHjNX": {
+"family": 224,
+"earliest_rung": false,
+"close_month_block": 667,
+"flipped": false
+},
+"Iy9nzltLC2": {
+"family": 224,
+"earliest_rung": false,
+"close_month_block": 682,
+"flipped": false
+},
+"HyilfuCmfROgmaOITLmE": {
+"family": 224,
+"earliest_rung": true,
+"close_month_block": 663,
+"flipped": false
+},
+"cdS6u9E8L5": {
+"family": 224,
+"earliest_rung": false,
+"close_month_block": 682,
+"flipped": false
+},
+"mNvS2QczNn0VCkB7rh65": {
+"family": 224,
+"earliest_rung": false,
+"close_month_block": 666,
+"flipped": false
+},
+"5nvRF1ET3mfQyzhkPSFD": {
+"family": 225,
+"earliest_rung": true,
+"close_month_block": 681,
+"flipped": false
+},
+"hZ9OJ9B7sNU49epiNcaP": {
+"family": 226,
+"earliest_rung": true,
+"close_month_block": 667,
+"flipped": false
+},
+"YX9vf1ZOt8ek4WC6u7Q4": {
+"family": 227,
+"earliest_rung": true,
+"close_month_block": 668,
+"flipped": false
+},
+"bRdSEJOC7jfxIinMidiM": {
+"family": 228,
+"earliest_rung": true,
+"close_month_block": 669,
+"flipped": false
+},
+"FMRsohgwRADhI8t23AZm": {
+"family": 229,
+"earliest_rung": true,
+"close_month_block": 657,
+"flipped": false
+},
+"mj52h2hkrf": {
+"family": 229,
+"earliest_rung": false,
+"close_month_block": 681,
+"flipped": false
+},
+"8slj32paf4": {
+"family": 230,
+"earliest_rung": true,
+"close_month_block": 681,
+"flipped": false
+},
+"GicyNGDVDn18hI9xKqlT": {
+"family": 231,
+"earliest_rung": true,
+"close_month_block": 657,
+"flipped": false
+},
+"RRDk4ArB9zC6p2ahzajM": {
+"family": 231,
+"earliest_rung": false,
+"close_month_block": 657,
+"flipped": false
+},
+"9Qq4fZWK3RyIL1JQciKs": {
+"family": 231,
+"earliest_rung": false,
+"close_month_block": 657,
+"flipped": false
+},
+"bQnFKhQE7SFgaQHW358d": {
+"family": 232,
+"earliest_rung": true,
+"close_month_block": 645,
+"flipped": false
+},
+"GE0X2hWCvub4CnaIuj8U": {
+"family": 233,
+"earliest_rung": false,
+"close_month_block": 651,
+"flipped": false
+},
+"PBDFMLI0qd8X1Y6YP3AX": {
+"family": 233,
+"earliest_rung": false,
+"close_month_block": 654,
+"flipped": false
+},
+"TJ66y02UbZNcvKSLZRfm": {
+"family": 233,
+"earliest_rung": true,
+"close_month_block": 648,
+"flipped": false
+},
+"ZNI80chS0p": {
+"family": 234,
+"earliest_rung": true,
+"close_month_block": 672,
+"flipped": false
+},
+"vxIBDNnQBydzkSJdNFqP": {
+"family": 235,
+"earliest_rung": true,
+"close_month_block": 645,
+"flipped": false
+},
+"CD9SQAh7blVvttNp8KJW": {
+"family": 236,
+"earliest_rung": true,
+"close_month_block": 657,
+"flipped": false
+},
+"iXtRmRVxWGepUUFjwlCM": {
+"family": 237,
+"earliest_rung": true,
+"close_month_block": 662,
+"flipped": false
+},
+"ExCRhjU5n4JSHa3eMmSa": {
+"family": 238,
+"earliest_rung": true,
+"close_month_block": 669,
+"flipped": false
+},
+"qblxJKiXQHDMnNUGa3U0": {
+"family": 238,
+"earliest_rung": false,
+"close_month_block": 669,
+"flipped": false
+},
+"R6nCl0zqEz": {
+"family": 239,
+"earliest_rung": true,
+"close_month_block": 675,
+"flipped": false
+},
+"x9x1ftg38w": {
+"family": 240,
+"earliest_rung": true,
+"close_month_block": 677,
+"flipped": false
+},
+"b7WnF32ZxSOayfrPhLyr": {
+"family": 241,
+"earliest_rung": true,
+"close_month_block": 657,
+"flipped": false
+},
+"SnOyRhNQZu": {
+"family": 242,
+"earliest_rung": true,
+"close_month_block": 687,
+"flipped": false
+},
+"9spAh6QIzP": {
+"family": 243,
+"earliest_rung": true,
+"close_month_block": 681,
+"flipped": false
+},
+"Jgx18VePNWeNzhT0zteb": {
+"family": 244,
+"earliest_rung": true,
+"close_month_block": 669,
+"flipped": false
+},
+"kMW3fOkW8GlCAlDCA0PC": {
+"family": 245,
+"earliest_rung": false,
+"close_month_block": 669,
+"flipped": false
+},
+"5VfQxVzcsWPKTqildlGf": {
+"family": 245,
+"earliest_rung": true,
+"close_month_block": 669,
+"flipped": false
+},
+"2ASE0Sl2CE": {
+"family": 246,
+"earliest_rung": true,
+"close_month_block": 682,
+"flipped": false
+},
+"3yp8entb5z": {
+"family": 247,
+"earliest_rung": true,
+"close_month_block": 677,
+"flipped": false
+},
+"8qpg2d05LS": {
+"family": 248,
+"earliest_rung": true,
+"close_month_block": 681,
+"flipped": false
+},
+"BgFFhWt9ExCjCBilYEhd": {
+"family": 249,
+"earliest_rung": true,
+"close_month_block": 681,
+"flipped": false
+},
+"EzEhQEA0pp": {
+"family": 250,
+"earliest_rung": true,
+"close_month_block": 684,
+"flipped": false
+},
+"4kts7etgm3": {
+"family": 251,
+"earliest_rung": true,
+"close_month_block": 669,
+"flipped": false
+},
+"5DXvCxvjkPjk2aloZe0H": {
+"family": 252,
+"earliest_rung": true,
+"close_month_block": 657,
+"flipped": false
+},
+"tmUp8RUn9KnF2WTyzy6x": {
+"family": 253,
+"earliest_rung": true,
+"close_month_block": 657,
+"flipped": false
+},
+"xxamfwe1az": {
+"family": 254,
+"earliest_rung": true,
+"close_month_block": 677,
+"flipped": false
+},
+"gIpy26tUup": {
+"family": 255,
+"earliest_rung": true,
+"close_month_block": 678,
+"flipped": false
+},
+"h45p93yazmutSyiGdEzz": {
+"family": 256,
+"earliest_rung": true,
+"close_month_block": 669,
+"flipped": false
+},
+"E5pRpycSyc": {
+"family": 257,
+"earliest_rung": true,
+"close_month_block": 681,
+"flipped": false
+},
+"c2GMkmrmWfos0h0ZLt5j": {
+"family": 258,
+"earliest_rung": true,
+"close_month_block": 657,
+"flipped": false
+},
+"r27OD6kLHpwZjSilt3fp": {
+"family": 259,
+"earliest_rung": true,
+"close_month_block": 657,
+"flipped": true
+},
+"AEzO2Pzysg": {
+"family": 260,
+"earliest_rung": true,
+"close_month_block": 674,
+"flipped": false
+},
+"Ry2zpzAACu": {
+"family": 260,
+"earliest_rung": false,
+"close_month_block": 676,
+"flipped": false
+},
+"RrwdXaihc2CDTdbUnyOq": {
+"family": 261,
+"earliest_rung": true,
+"close_month_block": 662,
+"flipped": false
+},
+"TR0HB4kd1XVad82mXefG": {
+"family": 262,
+"earliest_rung": true,
+"close_month_block": 669,
+"flipped": false
+},
+"wdMfMYx3eQNf0LhdKUI2": {
+"family": 263,
+"earliest_rung": true,
+"close_month_block": 645,
+"flipped": false
+},
+"J1j9x30AuuxMqCRfTOoH": {
+"family": 264,
+"earliest_rung": true,
+"close_month_block": 657,
+"flipped": true
+},
+"LRoCx81xfMt0XwMFvCIm": {
+"family": 265,
+"earliest_rung": true,
+"close_month_block": 645,
+"flipped": false
+},
+"NIlZhzcnLy": {
+"family": 266,
+"earliest_rung": true,
+"close_month_block": 674,
+"flipped": false
+},
+"PdCt9hgOg8": {
+"family": 267,
+"earliest_rung": true,
+"close_month_block": 675,
+"flipped": false
+},
+"X8j0fpCv2xGhkwtu2Cgo": {
+"family": 268,
+"earliest_rung": true,
+"close_month_block": 657,
+"flipped": false
+},
+"kw2PvMFf7m9g9XbkNAcJ": {
+"family": 269,
+"earliest_rung": true,
+"close_month_block": 669,
+"flipped": false
+},
+"tSYxtLqJchSbMMf9C9uh": {
+"family": 270,
+"earliest_rung": true,
+"close_month_block": 689,
+"flipped": false
+},
+"xi85d9FF2A1rvr9OFMbw": {
+"family": 271,
+"earliest_rung": true,
+"close_month_block": 657,
+"flipped": false
+},
+"ZctCIAhQsu": {
+"family": 272,
+"earliest_rung": true,
+"close_month_block": 684,
+"flipped": false
+},
+"296uZqqPp9": {
+"family": 273,
+"earliest_rung": true,
+"close_month_block": 673,
+"flipped": false
+},
+"qULU28SUhc": {
+"family": 273,
+"earliest_rung": false,
+"close_month_block": 674,
+"flipped": false
+},
+"7iN5lLvlsPGyWL3Ts81d": {
+"family": 274,
+"earliest_rung": true,
+"close_month_block": 668,
+"flipped": false
+},
+"q5g9CTDHJXYUa7ds04sj": {
+"family": 275,
+"earliest_rung": true,
+"close_month_block": 662,
+"flipped": false
+},
+"BKs8pvqFrwMM6hpbcEuN": {
+"family": 275,
+"earliest_rung": false,
+"close_month_block": 665,
+"flipped": false
+},
+"y35osr7huo": {
+"family": 275,
+"earliest_rung": false,
+"close_month_block": 666,
+"flipped": false
+},
+"fdup4z2017": {
+"family": 275,
+"earliest_rung": false,
+"close_month_block": 666,
+"flipped": false
+},
+"ni207sci8p": {
+"family": 275,
+"earliest_rung": false,
+"close_month_block": 666,
+"flipped": false
+},
+"nSOyZCQqg0": {
+"family": 275,
+"earliest_rung": false,
+"close_month_block": 682,
+"flipped": false
+},
+"50z22ZO2yL": {
+"family": 275,
+"earliest_rung": false,
+"close_month_block": 683,
+"flipped": false
+},
+"JjwvKJiCe3P8XLHR9OXv": {
+"family": 276,
+"earliest_rung": true,
+"close_month_block": 670,
+"flipped": false
+},
+"o6k7CNHA0A3v8rVbSoIe": {
+"family": 277,
+"earliest_rung": true,
+"close_month_block": 657,
+"flipped": false
+},
+"S8Cp255QLO": {
+"family": 278,
+"earliest_rung": true,
+"close_month_block": 681,
+"flipped": false
+},
+"CUduAEnzyu": {
+"family": 279,
+"earliest_rung": true,
+"close_month_block": 677,
+"flipped": false
+},
+"CakfF7EHZYyZpIu3KuYq": {
+"family": 280,
+"earliest_rung": true,
+"close_month_block": 671,
+"flipped": false
+},
+"20l847MyKQdWLyJoqrEG": {
+"family": 281,
+"earliest_rung": true,
+"close_month_block": 651,
+"flipped": false
+},
+"8PtNdQgcPP": {
+"family": 282,
+"earliest_rung": true,
+"close_month_block": 681,
+"flipped": false
+},
+"5A99LA96lA": {
+"family": 283,
+"earliest_rung": true,
+"close_month_block": 668,
+"flipped": false
+},
+"QsCI0IycEQ": {
+"family": 284,
+"earliest_rung": true,
+"close_month_block": 689,
+"flipped": false
+},
+"nz9exwi2os": {
+"family": 285,
+"earliest_rung": false,
+"close_month_block": 665,
+"flipped": false
+},
+"zvkr514dud": {
+"family": 285,
+"earliest_rung": false,
+"close_month_block": 669,
+"flipped": false
+},
+"RYFgGdY0oHZNhiQoSxCz": {
+"family": 285,
+"earliest_rung": true,
+"close_month_block": 662,
+"flipped": false
+},
+"S9lCRLUNgL": {
+"family": 286,
+"earliest_rung": true,
+"close_month_block": 685,
+"flipped": false
+},
+"lg0OStAeXBrRJ56hIJHp": {
+"family": 287,
+"earliest_rung": true,
+"close_month_block": 667,
+"flipped": false
+},
+"9tc5N6Q59y": {
+"family": 288,
+"earliest_rung": true,
+"close_month_block": 681,
+"flipped": false
+},
+"qnmuia61d0": {
+"family": 289,
+"earliest_rung": true,
+"close_month_block": 666,
+"flipped": false
+},
+"gEy6pqL02z": {
+"family": 290,
+"earliest_rung": true,
+"close_month_block": 686,
+"flipped": false
+},
+"tthOrSibQGkRAccC2Dr0": {
+"family": 291,
+"earliest_rung": true,
+"close_month_block": 661,
+"flipped": false
+},
+"tafjkufkh1": {
+"family": 292,
+"earliest_rung": true,
+"close_month_block": 681,
+"flipped": false
+},
+"kmz3y4fsq7": {
+"family": 293,
+"earliest_rung": true,
+"close_month_block": 669,
+"flipped": false
+},
+"odboqdkv0f": {
+"family": 294,
+"earliest_rung": true,
+"close_month_block": 669,
+"flipped": false
+},
+"cnbnBos0fBT8zVMGMAtF": {
+"family": 295,
+"earliest_rung": true,
+"close_month_block": 681,
+"flipped": false
+},
+"iY8R3FpdEym0OX68T72I": {
+"family": 296,
+"earliest_rung": true,
+"close_month_block": 660,
+"flipped": false
+},
+"319f5s7ju0": {
+"family": 297,
+"earliest_rung": true,
+"close_month_block": 666,
+"flipped": false
+},
+"U82IlpcnIC": {
+"family": 298,
+"earliest_rung": true,
+"close_month_block": 681,
+"flipped": false
+},
+"uQq3o8K9M9tiCUqgALMg": {
+"family": 299,
+"earliest_rung": true,
+"close_month_block": 664,
+"flipped": false
+},
+"RKda6306gLpsyVF3ObdL": {
+"family": 300,
+"earliest_rung": true,
+"close_month_block": 657,
+"flipped": false
+},
+"G7d67FUH2jNRbzziH3c0": {
+"family": 301,
+"earliest_rung": true,
+"close_month_block": 669,
+"flipped": false
+},
+"or1zkIj0dSRSFq1i2KEm": {
+"family": 302,
+"earliest_rung": true,
+"close_month_block": 659,
+"flipped": false
+},
+"ORWvL8BPP5GnkcA51Kow": {
+"family": 303,
+"earliest_rung": true,
+"close_month_block": 681,
+"flipped": false
+},
+"Pj1zROfk0A3TLuhiyFaQ": {
+"family": 304,
+"earliest_rung": false,
+"close_month_block": 645,
+"flipped": false
+},
+"CNuNRkolHmEIsjJJ2jjK": {
+"family": 304,
+"earliest_rung": true,
+"close_month_block": 645,
+"flipped": false
+},
+"ApQUhI9zUL": {
+"family": 305,
+"earliest_rung": true,
+"close_month_block": 681,
+"flipped": false
+},
+"UJZerf6AyePtmC6kXAZu": {
+"family": 306,
+"earliest_rung": false,
+"close_month_block": 681,
+"flipped": false
+},
+"hQZEMA1tERf2TDVdCqo5": {
+"family": 306,
+"earliest_rung": true,
+"close_month_block": 669,
+"flipped": false
+},
+"ItAhEgI8IZ": {
+"family": 306,
+"earliest_rung": false,
+"close_month_block": 681,
+"flipped": false
+},
+"jQhWfdxGzUCrlfrcZ8hi": {
+"family": 307,
+"earliest_rung": true,
+"close_month_block": 657,
+"flipped": false
+},
+"MnHrajBT05pqRgmUecix": {
+"family": 308,
+"earliest_rung": true,
+"close_month_block": 670,
+"flipped": false
+},
+"L8N9SnOcLU": {
+"family": 309,
+"earliest_rung": true,
+"close_month_block": 681,
+"flipped": false
+},
+"VbSjkDh97t4NTpUaEL5k": {
+"family": 310,
+"earliest_rung": true,
+"close_month_block": 669,
+"flipped": false
+},
+"y7gVNSkHZlwpM7eeyr8I": {
+"family": 311,
+"earliest_rung": true,
+"close_month_block": 657,
+"flipped": false
+},
+"dOMB1nMIELdEKYCgm5W0": {
+"family": 312,
+"earliest_rung": true,
+"close_month_block": 657,
+"flipped": false
+},
+"gh99SyhtRy": {
+"family": 313,
+"earliest_rung": true,
+"close_month_block": 681,
+"flipped": false
+},
+"ukGCy1zdIdckkWQIO2u2": {
+"family": 314,
+"earliest_rung": true,
+"close_month_block": 657,
+"flipped": true
+},
+"8gh9ptqc17": {
+"family": 315,
+"earliest_rung": true,
+"close_month_block": 678,
+"flipped": false
+},
+"I9pC9sZR2n": {
+"family": 316,
+"earliest_rung": true,
+"close_month_block": 673,
+"flipped": false
+},
+"3BqmiWgb6njYBMNaEyhP": {
+"family": 317,
+"earliest_rung": true,
+"close_month_block": 669,
+"flipped": false
+},
+"ofRxCtxG0Lc2LsWjUH0Z": {
+"family": 318,
+"earliest_rung": true,
+"close_month_block": 681,
+"flipped": false
+},
+"psr7IRurMI9yDmzdvnGx": {
+"family": 319,
+"earliest_rung": true,
+"close_month_block": 653,
+"flipped": false
+},
+"VKU7amVmCKLgPl5MSgd8": {
+"family": 320,
+"earliest_rung": true,
+"close_month_block": 653,
+"flipped": false
+},
+"ubgsk7PBqNLFzzoxhhSG": {
+"family": 320,
+"earliest_rung": false,
+"close_month_block": 657,
+"flipped": false
+},
+"BaqsvJMJxxiA6VPR8IJu": {
+"family": 321,
+"earliest_rung": false,
+"close_month_block": 657,
+"flipped": false
+},
+"1kyXhVQ2b5Av5tOQC9av": {
+"family": 321,
+"earliest_rung": true,
+"close_month_block": 654,
+"flipped": false
+},
+"5T0JMwuqpMZ4FNOFOLAt": {
+"family": 321,
+"earliest_rung": false,
+"close_month_block": 657,
+"flipped": false
+},
+"KYS82zlMOCrLjtlj3abv": {
+"family": 322,
+"earliest_rung": true,
+"close_month_block": 653,
+"flipped": false
+},
+"YUPBSurLLZw6M4lipYDo": {
+"family": 323,
+"earliest_rung": true,
+"close_month_block": 654,
+"flipped": false
+},
+"ydj0ynMCx6iryBVioQyq": {
+"family": 324,
+"earliest_rung": true,
+"close_month_block": 660,
+"flipped": false
+},
+"V9kxU0NuGkcG3fEn30Me": {
+"family": 325,
+"earliest_rung": true,
+"close_month_block": 645,
+"flipped": false
+},
+"2slBzh6e1LYXHstncFa3": {
+"family": 326,
+"earliest_rung": true,
+"close_month_block": 669,
+"flipped": false
+},
+"Ic6PDj3SnuMS3Ei8hEQK": {
+"family": 327,
+"earliest_rung": true,
+"close_month_block": 635,
+"flipped": false
+},
+"tbznoVGE8cqQOfjj3Uug": {
+"family": 328,
+"earliest_rung": true,
+"close_month_block": 669,
+"flipped": false
+},
+"UUn2Yz1xeEAs0MFEDk3q": {
+"family": 329,
+"earliest_rung": true,
+"close_month_block": 656,
+"flipped": false
+},
+"L1HgFERnNm9Hwy5z90Ao": {
+"family": 330,
+"earliest_rung": true,
+"close_month_block": 669,
+"flipped": false
+},
+"jpXBxJRdw75gwy12rNzp": {
+"family": 330,
+"earliest_rung": false,
+"close_month_block": 669,
+"flipped": false
+},
+"R2GgW7NBpYSo7puq9BoT": {
+"family": 331,
+"earliest_rung": true,
+"close_month_block": 656,
+"flipped": false
+},
+"dUqQ5kWdeF9a37ajkehU": {
+"family": 332,
+"earliest_rung": true,
+"close_month_block": 669,
+"flipped": false
+},
+"fohbhsn2tx": {
+"family": 333,
+"earliest_rung": true,
+"close_month_block": 665,
+"flipped": false
+},
+"WbjzyYRcya1tGStNNp6n": {
+"family": 334,
+"earliest_rung": true,
+"close_month_block": 657,
+"flipped": false
+},
+"pc6Hr1mu3oi1YDXnx2Yv": {
+"family": 335,
+"earliest_rung": true,
+"close_month_block": 649,
+"flipped": false
+},
+"Linshm98asoIyOaPZBMe": {
+"family": 336,
+"earliest_rung": true,
+"close_month_block": 669,
+"flipped": false
+},
+"57915rTOELU9QSQdpjyL": {
+"family": 336,
+"earliest_rung": false,
+"close_month_block": 669,
+"flipped": false
+},
+"QKSE40OxD9Tqul0ZSCLx": {
+"family": 337,
+"earliest_rung": true,
+"close_month_block": 657,
+"flipped": false
+},
+"wAjQHLPoliv0kOfM3rSs": {
+"family": 338,
+"earliest_rung": true,
+"close_month_block": 657,
+"flipped": false
+},
+"ayAHiwYurXffPzLZssZF": {
+"family": 339,
+"earliest_rung": true,
+"close_month_block": 657,
+"flipped": false
+}
+}
