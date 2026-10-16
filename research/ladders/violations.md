@@ -1,0 +1,9 @@
+# Incoherent deadline ladders on Manifold, 2026-10-16T10:21Z
+
+5701 open binary markets with >= 10 bettors; 143 families of cumulative questions that differ only in date; 394 markets in them; 922 ordered pairs; 3 pairs where the earlier deadline is priced more than 0.03 above the later one (1 with the same creator). 51 survival-question families ("still", "remain"...) skipped: for them an earlier deadline is rightly priced higher.
+
+A pair is listed when "X by an earlier date" costs more than "X by a later date". If both resolve on the same criteria that is incoherent; if the creators wrote different criteria it may not be. Read both before trading.
+
+- **11 pts** (same creator): [Russian attacks or invades Finland by mid 2029](https://manifold.markets/Ernie/russian-attacks-or-invades-finland-c9C9S2A0Pd) 23% (closes 2029-06-30, 19 bettors) vs [Russian attacks or invades Finland by mid 2031](https://manifold.markets/Ernie/russian-attacks-or-invades-finland-PANQ2huNZy) 12% (closes 2031-07-01, 11 bettors); 2 pts per year to the later close; stale (no bet in 30 days): 1 of 2
+- **6 pts**: [Will we get AGI before July 1st 2028?](https://manifold.markets/RemNi/will-we-get-agi-before-july-2028) 29% (closes 2028-10-01, 84 bettors) vs [Will we get AGI before 2029?](https://manifold.markets/MarioCannistra/will-we-get-agi-before-2029) 23% (closes 2028-12-31, 24 bettors); 3 pts per year to the later close; description overlap 0.11; stale (no bet in 30 days): 1 of 2
+- **5 pts**: [Will China invade Taiwan before 2029?](https://manifold.markets/rg26/will-china-invade-taiwan-before-202-uSQqPO0sts) 36% (closes 2028-12-31, 11 bettors) vs [Will China invade Taiwan before 2030?](https://manifold.markets/HermaeusMora/will-china-invade-taiwan-before-203) 31% (closes 2030-01-01, 143 bettors); 1 pts per year to the later close; description overlap 0.00
