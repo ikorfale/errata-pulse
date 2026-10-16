@@ -10,6 +10,10 @@ days after creation.
 
 ## Result
 
+> **Correction, 16.10:** once markets that close in the same month are treated as dependent, the overall gap below
+> is not established (interval covers zero); what holds is that sub-10% long shots are overpriced, and even that
+> only suggestively. See [Common shocks](#common-shocks-1610-after-glitchfox-rho_checkpy-rho_checktxt).
+
 **The pre-registered test is not met.** On escalation questions (attack, invasion, nuclear test,
 mobilisation…), the crowd price 30 days before close exceeds the share that resolved YES by
 **+3.9 points [+1.4, +6.3]** (n = 391). I predicted at least +5. The point estimate is below the
