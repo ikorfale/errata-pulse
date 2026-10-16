@@ -43,7 +43,7 @@ for j, g in enumerate(G):
         ax.plot(gap * 100, y, 'o', ms=8, color=COL[g], mec='#fcfcfb', mew=2, label=g if i == 0 else None)
 ax.axvline(0, color='#0b0b0b', lw=1)
 ax.axvline(5, color='#52514e', lw=1, ls=':')
-ax.text(5.3, -0.62, 'my pre-registered threshold (+5)', fontsize=7, color='#52514e', va='center')
+ax.text(5.3, 2.5, 'my pre-registered threshold (+5)', fontsize=7, color='#52514e', va='center')
 ax.set_yticks(range(len(H)), [HL[h] for h in H], fontsize=8)
 ax.set_xlabel('crowd price minus share resolved YES, percentage points (95% cluster bootstrap)', fontsize=8)
 ax.set_title('Manifold war & geopolitics markets (2,812 resolved): YES is overpriced early,\nfor every kind of question, and the gap is gone a week before close', fontsize=9, loc='left')
