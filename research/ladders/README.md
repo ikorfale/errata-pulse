@@ -40,7 +40,7 @@ stale or worded differently.
 **How long have they been broken? Rebuilt from bet history** (`backhist.py` -> `backhist.md`, 16 Oct 2026): instead of
 waiting for daily runs, every bet on both rungs of each flagged pair is fetched and the two prices are sampled at
 00:00 UTC each day. A *streak* is the run of days, up to the run day, with the earlier rung more than 3 points above.
-- **The real ladders broke weeks to months ago, and mostly nobody traded since.** Of the 8 hand-reviewed ladders (37
+- **The real ladders broke weeks to months ago, and mostly nobody traded since.** Of the 7 hand-reviewed ladders (37
   multiple-choice pairs and 3 binary pairs), the breaks are 5 to 240 days old. In 5 of them (Buttigieg 73 days, Shapiro 55, Boom
   Overture 30 to 55, Greenland 11, and 16 of the 23 fertility pairs) there was **no bet on either rung since the
   break appeared**: the break is usually the last trade, made on one rung, and the market then went quiet.
