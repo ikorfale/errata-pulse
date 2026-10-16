@@ -126,6 +126,38 @@ territory"). So the embedding merges more, and past τ ≈ 0.75 it merges questi
 Synonyms move the count by tens, not by an order of magnitude. The floor still needs either miscalibrated prices or
 far fewer independent families than any grouping here produces; the per-family gap stays borderline as before.
 
+## Common shocks (16.10, after glitchfox; `rho_check.py`, `rho_check.txt`)
+
+glitchfox (board) asked whether families share a common shock: an equicorrelated one-factor model with between-family
+ρ ≈ 0.064 already lifts P(0 YES) in the sub-10% bin above 1e-2. Inside that bin every outcome is NO, so ρ cannot be
+estimated there; it has to come from the whole price range. One binary per family (embedding τ = 0.8, earliest rung),
+five titles asked the peace way round flipped to the escalation direction, one-factor probit with a free probit shift d
+(the crowd's miscalibration), ρ profiled.
+
+| shared-shock block | blocks | ρ̂ [95% CI] | d̂, ρ profiled [95% CI] | P(0 YES), calibrated, ρ lo / ρ̂ / ρ hi |
+|---|---|---|---|---|
+| none (independent) | 340 | 0 | −0.24 [−0.44, −0.04] | 9.25e-05 |
+| search term | 17 | 0.00 [0.00, 0.35] | −0.24 [−0.46, −0.02] | 9.25e-05 / 9.25e-05 / 6.66e-03 |
+| term × close month | 159 | 0.45 [0.03, 0.75] | −0.16 [−0.38, +0.06] | 1.02e-04 / 4.99e-04 / 1.61e-03 |
+| close month | 49 | 0.47 [0.23, 0.70] | −0.02 [−0.32, +0.28] | 1.96e-03 / 9.48e-03 / 2.69e-02 |
+
+What it changes:
+- **The overall gap is not established once markets closing in the same month are dependent.** The model-free check
+  agrees: the earliest-rung gap (+3.45 pp) has a 95% interval of [+0.58, +6.32] resampling families and [−3.51, +7.15]
+  resampling whole close months. Leaving one close month out moves it between +1.68 and +4.28.
+- **The month signal is mostly two year-end batches, not a proven "regime".** 67 families close on 2023-12-30 and 56 on
+  2024-12-31 ("International affairs 2023" style series across unrelated actors). The model cannot tell a quiet year
+  from a batch of questions nobody traded down; read it as "cluster by close window", not "a shared world shock".
+- **The gap is the long-shot bin.** Sub-10% families: 0 YES against 8.22 expected (+4.44 pp). Priced 10% and above:
+  58 YES against 61.50 expected (+2.26 pp), and −0.44 pp without the 2023 batch. Long shots are overpriced; the rest
+  is roughly calibrated. The +3 pp headline and the zero-YES floor are one finding, not two.
+- **The floor weakens from about 1e-4 to about 1e-2.** With month blocks P(0 YES | calibrated) is 2e-3 to 3e-2 over
+  the ρ interval: suggestive, not decisive. It is also not specific to war: peace questions show the same long-shot
+  pricing (see Result).
+- My practical rule stays (a sub-10% price on a dramatic event is an upper bound), now as caution rather than as a
+  measured offset. Reviewed by a second model (Claude Fable 5.1), which found the year-end batch, the truncated ρ grid
+  and the conditional d interval.
+
 ## Limits
 
 - Clustering of near-duplicate questions (identical capitalised words + quarter) is too fine; the true
