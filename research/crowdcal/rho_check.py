@@ -37,11 +37,11 @@ INVERTED = ('China will not launch a full-scale invasion of Taiwan', 'Will no no
             'International affairs 2023: No nuclear weapon use', 'International affairs 2023: No Chinese attack on Taiwan',
             'Will November 2024 pass with no missile alarms in Haifa')
 inv = [i for i, r in enumerate(R) if r['q'].startswith(INVERTED)]
-if os.environ.get('FLIP') == '1':
+if os.environ.get('FLIP', '1') == '1':  # default: escalation coding (Fable review)
     x = x.copy(); y = y.copy()
     x[inv] = 1 - x[inv]; y[inv] = 1 - y[inv]
     low = x < 0.10
-print(f'inverted titles found: {len(inv)}; flipped: {os.environ.get("FLIP") == "1"}')
+print(f'inverted titles found: {len(inv)}; flipped: {os.environ.get("FLIP", "1") == "1"}')
 g = L.hier_groups(R, EC.SE, 0.8, 'average')
 G = L.groups_of(g)
 close = np.array([r['close'] for r in R])
@@ -76,7 +76,7 @@ def nll(rho, d, B):
 
 
 def fit(B, label):
-    grid = np.round(np.arange(0, 0.61, 0.02), 2)
+    grid = np.round(np.arange(0, 0.951, 0.025), 3)
     prof = []
     for rho in grid:
         r = minimize_scalar(lambda d: nll(rho, d, B), bounds=(-2, 2), method='bounded')
@@ -144,7 +144,12 @@ for k, (best, lo, hi) in fits.items():
         ds = np.round(np.arange(-0.6, 0.31, 0.01), 2)
         f = np.array([nll(rho, d, B) for d in ds])
         ok = ds[f - f.min() <= 1.92]
-        print(f'  {k:<20} rho {rho:.2f}: d_hat {ds[f.argmin()]:+.2f} [{ok.min():+.2f}, {ok.max():+.2f}]')
+        print(f'  {k:<20} rho {rho:.2f} fixed: d_hat {ds[f.argmin()]:+.2f} [{ok.min():+.2f}, {ok.max():+.2f}]')
+    # profile CI: rho optimised at each d (Fable: the fixed-rho interval is conditional)
+    ds = np.round(np.arange(-0.6, 0.31, 0.02), 2)
+    f = np.array([minimize_scalar(lambda r: nll(r, d, B), bounds=(0, 0.95), method='bounded').fun for d in ds])
+    ok = ds[f - f.min() <= 1.92]
+    print(f'  {k:<20} rho profiled: d_hat {ds[f.argmin()]:+.2f} [{ok.min():+.2f}, {ok.max():+.2f}]')
 
 # model-free check: earliest-rung gap (price - outcome), bootstrap resampling families vs whole close-month blocks
 er = x[first] - y[first]
@@ -159,3 +164,29 @@ for k in ('family', 'close-month', 'term x close-month'):
         v = np.concatenate([B[t] for t in j]); bs.append(er[v].mean())
     lo, hi = np.percentile(bs, [2.5, 97.5])
     print(f'  resample {k:<20} ({len(B):3d} units): [{100 * lo:+.2f}, {100 * hi:+.2f}]')
+
+# quadrature check: 60 vs 120 Gauss-Hermite nodes, biggest block, high rho
+Bm = blocks_of(first, keys['close-month'])
+a = nll(0.9, -0.1, Bm)
+GH_z, GH_w = np.polynomial.hermite_e.hermegauss(120); GH_w = GH_w / GH_w.sum()
+print(f'\nquadrature: nll at rho 0.9 with 60 nodes {a:.4f}, with 120 nodes {nll(0.9, -0.1, Bm):.4f}')
+
+# where the gap lives: price bins, and leave-one-close-month-out (Fable: lumpy 49-unit bootstrap)
+lo10 = x[first] < 0.10
+print(f'\ngap by price: sub-10% {lo10.sum()} families, YES {int(y[first][lo10].sum())}, expected {x[first][lo10].sum():.2f}, '
+      f'gap {100 * er[lo10].mean():+.2f} pp; >=10% {(~lo10).sum()} families, YES {int(y[first][~lo10].sum())}, '
+      f'expected {x[first][~lo10].sum():.2f}, gap {100 * er[~lo10].mean():+.2f} pp')
+mk = np.array([month(R[i]) for i in first])
+loo = []
+for m in set(mk):
+    keep = mk != m
+    loo.append((er[keep].mean(), m, int((~keep).sum())))
+loo.sort()
+import datetime
+dd = lambda m: datetime.datetime.fromtimestamp(close[first][mk == m].min() / 1000, datetime.timezone.utc).strftime('%Y-%m-%d')
+print('leave one close-month out, gap pp: min {:+.2f} (drop {} , {} families), max {:+.2f} (drop {}, {} families)'.format(
+    100 * loo[0][0], dd(loo[0][1]), loo[0][2], 100 * loo[-1][0], dd(loo[-1][1]), loo[-1][2]))
+big = max(set(mk), key=lambda m: (mk == m).sum())
+keep = mk != big
+print(f'drop the biggest block ({dd(big)}, {int((~keep).sum())} families): gap {100 * er[keep].mean():+.2f} pp; '
+      f'sub-10% gap without it {100 * er[keep & lo10].mean():+.2f}, >=10% {100 * er[keep & ~lo10].mean():+.2f}')

@@ -1,42 +1,51 @@
-inverted titles found: 5; flipped: False
-families (tau=0.8, average linkage): 340; earliest-rung YES: 61; mean price 0.2154
-term x close-month     blocks  159 (with >=2 families: 60, largest 16) rho_hat 0.44  95% CI [0.00, 0.60]+  d_hat -0.176  (-2 dLL at rho=0: 3.52)
-close-month            blocks   49 (with >=2 families: 43, largest 67) rho_hat 0.48  95% CI [0.22, 0.60]+  d_hat -0.025  (-2 dLL at rho=0: 18.39)
-term                   blocks   17 (with >=2 families: 15, largest 77) rho_hat 0.00  95% CI [0.00, 0.34]  d_hat -0.241  (-2 dLL at rho=0: 0.00)
+inverted titles found: 5; flipped: True
+families (tau=0.8, average linkage): 340; earliest-rung YES: 58; mean price 0.2051
+term x close-month     blocks  159 (with >=2 families: 60, largest 16) rho_hat 0.45  95% CI [0.03, 0.75]  d_hat -0.164  (-2 dLL at rho=0: 3.93)
+close-month            blocks   49 (with >=2 families: 43, largest 67) rho_hat 0.47  95% CI [0.23, 0.70]  d_hat -0.025  (-2 dLL at rho=0: 20.55)
+term                   blocks   17 (with >=2 families: 15, largest 77) rho_hat 0.00  95% CI [0.00, 0.35]  d_hat -0.235  (-2 dLL at rho=0: 0.00)
 
-sub-10% families: 196, YES among them: 0, mean p 0.0453, independent P(0 YES) 1.05e-04
+sub-10% families: 199, YES among them: 0, mean p 0.0453, independent P(0 YES) 9.25e-05
 
 glitchfox check, one shock shared by all families (homogeneous p replaced by the real p_c):
-  rho 0.000  P(0 YES) 1.05e-04
-  rho 0.020  P(0 YES) 1.07e-03
-  rho 0.050  P(0 YES) 5.44e-03
-  rho 0.064  P(0 YES) 8.82e-03
-  rho 0.100  P(0 YES) 2.13e-02
+  rho 0.000  P(0 YES) 9.25e-05
+  rho 0.020  P(0 YES) 9.98e-04
+  rho 0.050  P(0 YES) 5.19e-03
+  rho 0.064  P(0 YES) 8.48e-03
+  rho 0.100  P(0 YES) 2.07e-02
 
 with the fitted rho and its CI, shocks shared only inside a block:
-  term x close-month   calibrated d=0     P(0 YES) at rho lo/hat/hi: 1.05e-04 5.11e-04 9.21e-04
-  term x close-month   fitted d=-0.176    P(0 YES) at rho lo/hat/hi: 1.88e-03 5.00e-03 7.51e-03
-  close-month          calibrated d=0     P(0 YES) at rho lo/hat/hi: 1.95e-03 9.87e-03 1.74e-02
-  close-month          fitted d=-0.025    P(0 YES) at rho lo/hat/hi: 2.60e-03 1.22e-02 2.10e-02
-  term                 calibrated d=0     P(0 YES) at rho lo/hat/hi: 1.05e-04 1.05e-04 6.43e-03
-  term                 fitted d=-0.241    P(0 YES) at rho lo/hat/hi: 4.46e-03 4.46e-03 3.86e-02
+  term x close-month   calibrated d=0     P(0 YES) at rho lo/hat/hi: 1.02e-04 4.99e-04 1.61e-03
+  term x close-month   fitted d=-0.164    P(0 YES) at rho lo/hat/hi: 1.55e-03 4.33e-03 1.00e-02
+  close-month          calibrated d=0     P(0 YES) at rho lo/hat/hi: 1.96e-03 9.48e-03 2.69e-02
+  close-month          fitted d=-0.025    P(0 YES) at rho lo/hat/hi: 2.60e-03 1.17e-02 3.17e-02
+  term                 calibrated d=0     P(0 YES) at rho lo/hat/hi: 9.25e-05 9.25e-05 6.66e-03
+  term                 fitted d=-0.235    P(0 YES) at rho lo/hat/hi: 3.83e-03 3.83e-03 3.79e-02
 
 close-months with most YES families (month = close // 30 days; first YES title shown):
   2024-11-22  families   5  YES  5  expected  2.39  e.g. Will the US lift restrictions on Ukraine striking targets in Russia? A
-  2023-12-30  families  67  YES  4  expected  9.86  e.g. China will not launch a full-scale invasion of Taiwan [in 2023]
+  2024-10-17  families   6  YES  4  expected  3.01  e.g. Will any country admit to sending troops to Ukraine by the end of 2024
   2026-02-11  families   6  YES  4  expected  1.91  e.g. Ukraine conducts another Trojan-style attack before 2026?
   2024-10-01  families   5  YES  4  expected  2.93  e.g. On the first anniversary of October 7th attacks, will the Israel-Hamas
-  2024-10-17  families   6  YES  3  expected  2.83  e.g. Will any country admit to sending troops to Ukraine by the end of 2024
   2025-06-19  families   7  YES  3  expected  1.90  e.g. Will America bomb Iran in 2025?
+  2024-12-31  families  56  YES  2  expected  8.94  e.g. Will I be satisfied by 2025 that Israeli leadership did not deliberate
 
 probit shift d (negative = crowd overprices YES), LR 95% CI, rho fixed:
-  term x close-month   rho 0.00: d_hat -0.24 [-0.44, -0.05]
-  term x close-month   rho 0.44: d_hat -0.18 [-0.40, +0.04]
-  close-month          rho 0.00: d_hat -0.24 [-0.44, -0.05]
-  close-month          rho 0.48: d_hat -0.03 [-0.32, +0.27]
-  term                 rho 0.00: d_hat -0.24 [-0.44, -0.05]
+  term x close-month   rho 0.00 fixed: d_hat -0.24 [-0.44, -0.04]
+  term x close-month   rho 0.45 fixed: d_hat -0.16 [-0.39, +0.05]
+  term x close-month   rho profiled: d_hat -0.16 [-0.38, +0.06]
+  close-month          rho 0.00 fixed: d_hat -0.24 [-0.44, -0.04]
+  close-month          rho 0.47 fixed: d_hat -0.03 [-0.32, +0.27]
+  close-month          rho profiled: d_hat -0.02 [-0.32, +0.28]
+  term                 rho 0.00 fixed: d_hat -0.24 [-0.44, -0.04]
+  term                 rho profiled: d_hat -0.24 [-0.46, -0.02]
 
-earliest-rung gap +3.59 pp over 340 families; 95% bootstrap interval:
-  resample family               (340 units): [+0.72, +6.43]
-  resample close-month          ( 49 units): [-3.00, +7.22]
-  resample term x close-month   (159 units): [+0.35, +6.32]
+earliest-rung gap +3.45 pp over 340 families; 95% bootstrap interval:
+  resample family               (340 units): [+0.58, +6.32]
+  resample close-month          ( 49 units): [-3.51, +7.15]
+  resample term x close-month   (159 units): [+0.19, +6.22]
+
+quadrature: nll at rho 0.9 with 60 nodes 80.8615, with 120 nodes 80.9237
+
+gap by price: sub-10% 185 families, YES 0, expected 8.22, gap +4.44 pp; >=10% 155 families, YES 58, expected 61.50, gap +2.26 pp
+leave one close-month out, gap pp: min +1.68 (drop 2024-12-31 , 56 families), max +4.28 (drop 2024-11-22, 5 families)
+drop the biggest block (2023-12-30, 67 families): gap +2.03 pp; sub-10% gap without it +4.57, >=10% -0.44
