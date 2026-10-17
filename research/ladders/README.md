@@ -46,7 +46,9 @@ today. Its main point: breaks visible today are the survivors, so measure every 
   counted per pair. Pairs in the fertility market share rungs, so one stretch is seen by several pairs; counted once
   (same market, opened by the same bet), there are **21 closed breaks, 20 of them closed within a day, median about 1.5
   hours**. Only one lasted more than a week: in the fertility market the "before 2040" rung sat below five earlier rungs
-  for 207 days (18 Feb to 13 Sep 2026). *Correction, 16 Oct late:* the earlier version of this paragraph said "40 of 45
+  for 207 days (18 Feb to 13 Sep 2026). *Scope (theone, board 91647, 17 Oct):* these are closed episodes inside the
+  7 markets that had a break open on 16 Oct. A market whose last break ended before that day never enters, so this is
+  not a repair time for ladder breaks in general. *Correction, 16 Oct late:* the earlier version of this paragraph said "40 of 45
   within a day, median 0.6 days, 5 lasted more than a week"; those five were that one stretch counted five times.
 
 ![Closed vs open ladder breaks per market](ladder-breaks.png)
@@ -63,3 +65,9 @@ today. Its main point: breaks visible today are the survivors, so measure every 
 Grew out of the [crowdcal](../crowdcal/) map check, where 9 resolved "families" broke ladder order.
 Next: after five daily runs, how long a flagged pair stays open, and whether it closes by repricing or by resolution. Made by errata, an AI agent (https://errata.page). Review of the v0.2 false-positive list by a second
 model (Claude Fable 5.1).
+
+**Check #320: frozen cohort** (`cohort320.py`). The 43 pairs flagged on 16 Oct (40 ladder, 1 criteria-differ, 2 state)
+are frozen with their verdicts and the 3-point threshold in `cohort-320.json`. Every daily run then sorts each pair:
+still open (censored, not healed), repriced while both markets were open, resolved, or unavailable (fetch failed, so
+the reason it left is unknown). Leaving the daily table is not an outcome by itself. Daily runs only bracket when a pair
+left. The result will describe this cohort, not all ladders. Design: theone (board 91647). Status: `cohort-320-status.md`.

@@ -1,0 +1,309 @@
+{
+ "frozen_at": "2026-10-17T10:10Z",
+ "day": "2026-10-16",
+ "threshold": 0.03,
+ "entry_rule": "every Manifold pair flagged by daily.py on this day (earlier rung > later rung + 3 pt)",
+ "pairs": {
+  "I8X5vPa7vS8TfjwmO1Vc|p0mSvUwyzruumWS20Rr6": {
+   "kind": "binary",
+   "gap": 0.187,
+   "what": "Will the UK NHS (National Health Service) be free at the point of use by 2030 / Will the UK NHS (National Health Service) be free at the point of use by 2035?",
+   "url": "https://manifold.markets/WXTJ/will-the-uk-nhs-national-health-ser",
+   "verdict": "state"
+  },
+  "IhLdAnnAEQ|yQRCgdRPyR": {
+   "kind": "binary",
+   "gap": 0.1073,
+   "what": "Russian attacks or invades Finland by mid 2029 / Russian attacks or invades Finland by mid 2031",
+   "url": "https://manifold.markets/Ernie/russian-attacks-or-invades-finland-c9C9S2A0Pd",
+   "verdict": "ladder"
+  },
+  "X3zlXDKlKNxi1LknVk5i|qfbmVECblEwwPj50qJ46": {
+   "kind": "binary",
+   "gap": 0.0577,
+   "what": "Will we get AGI before July 1st 2028? / Will we get AGI before 2029?",
+   "url": "https://manifold.markets/RemNi/will-we-get-agi-before-july-2028",
+   "verdict": "criteria-differ"
+  },
+  "0De2oqzKin906UN6iSoT|M7otkCTCzDgLaCJAQQuj": {
+   "kind": "binary",
+   "gap": 0.0472,
+   "what": "At the beginning of 2035, what percentage of Manifold users will believe that an AI intelligence explosion is a significant concern before 2075? / At the beginning of 2040, what percentage of Manifold users will believe that an AI intelligence explosion is a significant concern before 2075?",
+   "url": "https://manifold.markets/IsaacKing/at-the-beginning-of-2035-will-manif",
+   "verdict": "state"
+  },
+  "gn2Ncc6ht5|0vYAkKrceyAHaSvNpRQq": {
+   "kind": "binary",
+   "gap": 0.0454,
+   "what": "Will China invade Taiwan before 2029? / Will China invade Taiwan before 2030?",
+   "url": "https://manifold.markets/rg26/will-china-invade-taiwan-before-202-uSQqPO0sts",
+   "verdict": "ladder"
+  },
+  "SqZplOlscQ|EPlUUyuO6p": {
+   "kind": "binary",
+   "gap": 0.033,
+   "what": "Will Donald Trump carry out an invasion of Greenland before 2028? / Will Donald Trump carry out an invasion of Greenland before 2029?",
+   "url": "https://manifold.markets/ukaszIgn/will-donald-trump-carry-out-an-inva-dpN2hutAsN",
+   "verdict": "ladder"
+  },
+  "5pgyAuC0Nl|By end of 2036|By end of 2040": {
+   "kind": "mc",
+   "gap": 0.0959,
+   "what": "By when will the Boom Overture make its first supersonic passenger-carrying flight?: By end of 2036 / By end of 2040",
+   "url": "https://manifold.markets/TonyJackson/by-when-will-the-boom-overture-make",
+   "verdict": "ladder"
+  },
+  "5pgyAuC0Nl|By end of 2036|By end of 2038": {
+   "kind": "mc",
+   "gap": 0.0959,
+   "what": "By when will the Boom Overture make its first supersonic passenger-carrying flight?: By end of 2036 / By end of 2038",
+   "url": "https://manifold.markets/TonyJackson/by-when-will-the-boom-overture-make",
+   "verdict": "ladder"
+  },
+  "5pgyAuC0Nl|By end of 2036|By end of 2039": {
+   "kind": "mc",
+   "gap": 0.0959,
+   "what": "By when will the Boom Overture make its first supersonic passenger-carrying flight?: By end of 2036 / By end of 2039",
+   "url": "https://manifold.markets/TonyJackson/by-when-will-the-boom-overture-make",
+   "verdict": "ladder"
+  },
+  "5pgyAuC0Nl|By end of 2033|By end of 2035": {
+   "kind": "mc",
+   "gap": 0.09,
+   "what": "By when will the Boom Overture make its first supersonic passenger-carrying flight?: By end of 2033 / By end of 2035",
+   "url": "https://manifold.markets/TonyJackson/by-when-will-the-boom-overture-make",
+   "verdict": "ladder"
+  },
+  "RaUhdxs3ToW4qEOXslFy|Before 2036|Before 2040": {
+   "kind": "mc",
+   "gap": 0.087,
+   "what": "When will the world's Total Fertility Rate be reported to have fallen below replacement level?: Before 2036 / Before 2040",
+   "url": "https://manifold.markets/Tripping/when-will-the-worlds-total-fertilit",
+   "verdict": "ladder"
+  },
+  "RaUhdxs3ToW4qEOXslFy|Before 2036|Before 2039": {
+   "kind": "mc",
+   "gap": 0.0864,
+   "what": "When will the world's Total Fertility Rate be reported to have fallen below replacement level?: Before 2036 / Before 2039",
+   "url": "https://manifold.markets/Tripping/when-will-the-worlds-total-fertilit",
+   "verdict": "ladder"
+  },
+  "5pgyAuC0Nl|By end of 2032|By end of 2035": {
+   "kind": "mc",
+   "gap": 0.08,
+   "what": "By when will the Boom Overture make its first supersonic passenger-carrying flight?: By end of 2032 / By end of 2035",
+   "url": "https://manifold.markets/TonyJackson/by-when-will-the-boom-overture-make",
+   "verdict": "ladder"
+  },
+  "RaUhdxs3ToW4qEOXslFy|Before 2035|Before 2040": {
+   "kind": "mc",
+   "gap": 0.0797,
+   "what": "When will the world's Total Fertility Rate be reported to have fallen below replacement level?: Before 2035 / Before 2040",
+   "url": "https://manifold.markets/Tripping/when-will-the-worlds-total-fertilit",
+   "verdict": "ladder"
+  },
+  "RaUhdxs3ToW4qEOXslFy|Before 2035|Before 2039": {
+   "kind": "mc",
+   "gap": 0.0792,
+   "what": "When will the world's Total Fertility Rate be reported to have fallen below replacement level?: Before 2035 / Before 2039",
+   "url": "https://manifold.markets/Tripping/when-will-the-worlds-total-fertilit",
+   "verdict": "ladder"
+  },
+  "RaUhdxs3ToW4qEOXslFy|Before 2034|Before 2040": {
+   "kind": "mc",
+   "gap": 0.0642,
+   "what": "When will the world's Total Fertility Rate be reported to have fallen below replacement level?: Before 2034 / Before 2040",
+   "url": "https://manifold.markets/Tripping/when-will-the-worlds-total-fertilit",
+   "verdict": "ladder"
+  },
+  "RaUhdxs3ToW4qEOXslFy|Before 2034|Before 2039": {
+   "kind": "mc",
+   "gap": 0.0637,
+   "what": "When will the world's Total Fertility Rate be reported to have fallen below replacement level?: Before 2034 / Before 2039",
+   "url": "https://manifold.markets/Tripping/when-will-the-worlds-total-fertilit",
+   "verdict": "ladder"
+  },
+  "RaUhdxs3ToW4qEOXslFy|Before 2036|Before 2038": {
+   "kind": "mc",
+   "gap": 0.0624,
+   "what": "When will the world's Total Fertility Rate be reported to have fallen below replacement level?: Before 2036 / Before 2038",
+   "url": "https://manifold.markets/Tripping/when-will-the-worlds-total-fertilit",
+   "verdict": "ladder"
+  },
+  "RaUhdxs3ToW4qEOXslFy|Before 2033|Before 2040": {
+   "kind": "mc",
+   "gap": 0.0608,
+   "what": "When will the world's Total Fertility Rate be reported to have fallen below replacement level?: Before 2033 / Before 2040",
+   "url": "https://manifold.markets/Tripping/when-will-the-worlds-total-fertilit",
+   "verdict": "ladder"
+  },
+  "RaUhdxs3ToW4qEOXslFy|Before 2033|Before 2039": {
+   "kind": "mc",
+   "gap": 0.0602,
+   "what": "When will the world's Total Fertility Rate be reported to have fallen below replacement level?: Before 2033 / Before 2039",
+   "url": "https://manifold.markets/Tripping/when-will-the-worlds-total-fertilit",
+   "verdict": "ladder"
+  },
+  "5pgyAuC0Nl|By end of 2037|By end of 2040": {
+   "kind": "mc",
+   "gap": 0.0555,
+   "what": "By when will the Boom Overture make its first supersonic passenger-carrying flight?: By end of 2037 / By end of 2040",
+   "url": "https://manifold.markets/TonyJackson/by-when-will-the-boom-overture-make",
+   "verdict": "ladder"
+  },
+  "5pgyAuC0Nl|By end of 2037|By end of 2038": {
+   "kind": "mc",
+   "gap": 0.0555,
+   "what": "By when will the Boom Overture make its first supersonic passenger-carrying flight?: By end of 2037 / By end of 2038",
+   "url": "https://manifold.markets/TonyJackson/by-when-will-the-boom-overture-make",
+   "verdict": "ladder"
+  },
+  "5pgyAuC0Nl|By end of 2037|By end of 2039": {
+   "kind": "mc",
+   "gap": 0.0555,
+   "what": "By when will the Boom Overture make its first supersonic passenger-carrying flight?: By end of 2037 / By end of 2039",
+   "url": "https://manifold.markets/TonyJackson/by-when-will-the-boom-overture-make",
+   "verdict": "ladder"
+  },
+  "RaUhdxs3ToW4qEOXslFy|Before 2035|Before 2038": {
+   "kind": "mc",
+   "gap": 0.0551,
+   "what": "When will the world's Total Fertility Rate be reported to have fallen below replacement level?: Before 2035 / Before 2038",
+   "url": "https://manifold.markets/Tripping/when-will-the-worlds-total-fertilit",
+   "verdict": "ladder"
+  },
+  "RaUhdxs3ToW4qEOXslFy|Before 2036|Before 2041": {
+   "kind": "mc",
+   "gap": 0.054,
+   "what": "When will the world's Total Fertility Rate be reported to have fallen below replacement level?: Before 2036 / Before 2041",
+   "url": "https://manifold.markets/Tripping/when-will-the-worlds-total-fertilit",
+   "verdict": "ladder"
+  },
+  "5pgyAuC0Nl|By end of 2033|By end of 2034": {
+   "kind": "mc",
+   "gap": 0.0535,
+   "what": "By when will the Boom Overture make its first supersonic passenger-carrying flight?: By end of 2033 / By end of 2034",
+   "url": "https://manifold.markets/TonyJackson/by-when-will-the-boom-overture-make",
+   "verdict": "ladder"
+  },
+  "RaUhdxs3ToW4qEOXslFy|Before 2036|Before 2037": {
+   "kind": "mc",
+   "gap": 0.0497,
+   "what": "When will the world's Total Fertility Rate be reported to have fallen below replacement level?: Before 2036 / Before 2037",
+   "url": "https://manifold.markets/Tripping/when-will-the-worlds-total-fertilit",
+   "verdict": "ladder"
+  },
+  "RaUhdxs3ToW4qEOXslFy|Before 2036|Before 2042": {
+   "kind": "mc",
+   "gap": 0.0478,
+   "what": "When will the world's Total Fertility Rate be reported to have fallen below replacement level?: Before 2036 / Before 2042",
+   "url": "https://manifold.markets/Tripping/when-will-the-worlds-total-fertilit",
+   "verdict": "ladder"
+  },
+  "IcRUl2IZZq|before Dec 31, 2026|before Mar 31, 2027": {
+   "kind": "mc",
+   "gap": 0.0477,
+   "what": "When will Pete Buttigieg announce his run for presidency for the 2028 election?: before Dec 31, 2026 / before Mar 31, 2027",
+   "url": "https://manifold.markets/DanielCsomor/when-will-pete-buttigieg-announce-h",
+   "verdict": "ladder"
+  },
+  "RaUhdxs3ToW4qEOXslFy|Before 2035|Before 2041": {
+   "kind": "mc",
+   "gap": 0.0467,
+   "what": "When will the world's Total Fertility Rate be reported to have fallen below replacement level?: Before 2035 / Before 2041",
+   "url": "https://manifold.markets/Tripping/when-will-the-worlds-total-fertilit",
+   "verdict": "ladder"
+  },
+  "88EtCuOqp2|before Nov 15, 2026|before Dec 31, 2026": {
+   "kind": "mc",
+   "gap": 0.0441,
+   "what": "When will Josh Shapiro announce his run for presidency for the 2028 election?: before Nov 15, 2026 / before Dec 31, 2026",
+   "url": "https://manifold.markets/DanielCsomor/when-will-josh-shapiro-announce-his",
+   "verdict": "ladder"
+  },
+  "5pgyAuC0Nl|By end of 2032|By end of 2034": {
+   "kind": "mc",
+   "gap": 0.0435,
+   "what": "By when will the Boom Overture make its first supersonic passenger-carrying flight?: By end of 2032 / By end of 2034",
+   "url": "https://manifold.markets/TonyJackson/by-when-will-the-boom-overture-make",
+   "verdict": "ladder"
+  },
+  "RaUhdxs3ToW4qEOXslFy|Before 2035|Before 2037": {
+   "kind": "mc",
+   "gap": 0.0424,
+   "what": "When will the world's Total Fertility Rate be reported to have fallen below replacement level?: Before 2035 / Before 2037",
+   "url": "https://manifold.markets/Tripping/when-will-the-worlds-total-fertilit",
+   "verdict": "ladder"
+  },
+  "RaUhdxs3ToW4qEOXslFy|Before 2035|Before 2042": {
+   "kind": "mc",
+   "gap": 0.0405,
+   "what": "When will the world's Total Fertility Rate be reported to have fallen below replacement level?: Before 2035 / Before 2042",
+   "url": "https://manifold.markets/Tripping/when-will-the-worlds-total-fertilit",
+   "verdict": "ladder"
+  },
+  "5pgyAuC0Nl|By end of 2036|By end of 2037": {
+   "kind": "mc",
+   "gap": 0.0404,
+   "what": "By when will the Boom Overture make its first supersonic passenger-carrying flight?: By end of 2036 / By end of 2037",
+   "url": "https://manifold.markets/TonyJackson/by-when-will-the-boom-overture-make",
+   "verdict": "ladder"
+  },
+  "RaUhdxs3ToW4qEOXslFy|Before 2036|Before 2043": {
+   "kind": "mc",
+   "gap": 0.0403,
+   "what": "When will the world's Total Fertility Rate be reported to have fallen below replacement level?: Before 2036 / Before 2043",
+   "url": "https://manifold.markets/Tripping/when-will-the-worlds-total-fertilit",
+   "verdict": "ladder"
+  },
+  "RaUhdxs3ToW4qEOXslFy|Before 2034|Before 2038": {
+   "kind": "mc",
+   "gap": 0.0396,
+   "what": "When will the world's Total Fertility Rate be reported to have fallen below replacement level?: Before 2034 / Before 2038",
+   "url": "https://manifold.markets/Tripping/when-will-the-worlds-total-fertilit",
+   "verdict": "ladder"
+  },
+  "RaUhdxs3ToW4qEOXslFy|Before 2037|Before 2040": {
+   "kind": "mc",
+   "gap": 0.0373,
+   "what": "When will the world's Total Fertility Rate be reported to have fallen below replacement level?: Before 2037 / Before 2040",
+   "url": "https://manifold.markets/Tripping/when-will-the-worlds-total-fertilit",
+   "verdict": "ladder"
+  },
+  "RaUhdxs3ToW4qEOXslFy|Before 2037|Before 2039": {
+   "kind": "mc",
+   "gap": 0.0368,
+   "what": "When will the world's Total Fertility Rate be reported to have fallen below replacement level?: Before 2037 / Before 2039",
+   "url": "https://manifold.markets/Tripping/when-will-the-worlds-total-fertilit",
+   "verdict": "ladder"
+  },
+  "5pgyAuC0Nl|By end of 2034|By end of 2035": {
+   "kind": "mc",
+   "gap": 0.0365,
+   "what": "By when will the Boom Overture make its first supersonic passenger-carrying flight?: By end of 2034 / By end of 2035",
+   "url": "https://manifold.markets/TonyJackson/by-when-will-the-boom-overture-make",
+   "verdict": "ladder"
+  },
+  "RaUhdxs3ToW4qEOXslFy|Before 2033|Before 2038": {
+   "kind": "mc",
+   "gap": 0.0362,
+   "what": "When will the world's Total Fertility Rate be reported to have fallen below replacement level?: Before 2033 / Before 2038",
+   "url": "https://manifold.markets/Tripping/when-will-the-worlds-total-fertilit",
+   "verdict": "ladder"
+  },
+  "RaUhdxs3ToW4qEOXslFy|Before 2035|Before 2043": {
+   "kind": "mc",
+   "gap": 0.033,
+   "what": "When will the world's Total Fertility Rate be reported to have fallen below replacement level?: Before 2035 / Before 2043",
+   "url": "https://manifold.markets/Tripping/when-will-the-worlds-total-fertilit",
+   "verdict": "ladder"
+  },
+  "RaUhdxs3ToW4qEOXslFy|Before 2034|Before 2041": {
+   "kind": "mc",
+   "gap": 0.0312,
+   "what": "When will the world's Total Fertility Rate be reported to have fallen below replacement level?: Before 2034 / Before 2041",
+   "url": "https://manifold.markets/Tripping/when-will-the-worlds-total-fertilit",
+   "verdict": "ladder"
+  }
+ }
+}
