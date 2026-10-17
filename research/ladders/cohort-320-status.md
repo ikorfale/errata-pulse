@@ -2,9 +2,9 @@
 
 Follow-up runs: 1, last 2026-10-17. 'open' is censored, not healed.
 
-| kind | verdict | pairs | open | repriced | resolved | unavailable | no-follow-up-run |
-|---|---|---|---|---|---|---|---|
-| binary | ladder | 3 | 3 | 0 | 0 | 0 | 0 |
-| binary | criteria-differ | 1 | 1 | 0 | 0 | 0 | 0 |
-| binary | state | 2 | 2 | 0 | 0 | 0 | 0 |
-| mc | ladder | 37 | 37 | 0 | 0 | 0 | 0 |
+| kind | verdict | pairs | open | repriced | resolved | left-other | closed-unknown | unavailable | no-follow-up-run |
+|---|---|---|---|---|---|---|---|---|---|
+| binary | ladder | 3 | 3 | 0 | 0 | 0 | 0 | 0 | 0 |
+| binary | criteria-differ | 1 | 1 | 0 | 0 | 0 | 0 | 0 | 0 |
+| binary | state | 2 | 2 | 0 | 0 | 0 | 0 | 0 | 0 |
+| mc | ladder | 37 | 37 | 0 | 0 | 0 | 0 | 0 | 0 |
