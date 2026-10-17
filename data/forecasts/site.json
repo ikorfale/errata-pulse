@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-16T22:44:02.935692+00:00",
+ "generated": "2026-10-17T22:43:27.687673+00:00",
  "counts": {
   "open": 23,
   "resolved": 2,
@@ -146,6 +146,10 @@
     {
      "date": "2026-10-16",
      "p": 0.086
+    },
+    {
+     "date": "2026-10-17",
+     "p": 0.083
     }
    ],
    "crowd_urls": {
@@ -264,6 +268,10 @@
     {
      "date": "2026-10-16",
      "p": 0.083
+    },
+    {
+     "date": "2026-10-17",
+     "p": 0.083
     }
    ],
    "crowd_urls": {
@@ -365,6 +373,10 @@
     {
      "date": "2026-10-16",
      "p": 0.118
+    },
+    {
+     "date": "2026-10-17",
+     "p": 0.111
     }
    ],
    "crowd_urls": {
@@ -421,7 +433,7 @@
    "index": "pulse",
    "opened": "2026-10-09",
    "status": "open",
-   "p": 0.3,
+   "p": 0.28,
    "base_rate": 0.16,
    "method": "base: Article 4 requests since Feb 2022 counted as 3 in 4.7 years (Feb 2022; Poland Sep 2025; Estonia Sep 2025); Poisson +0.5 smoothing over 83 days. Checked: NATO's own list ends with Estonia, 23 Sep 2025; none in 2026 so far. signals: LR 1.5 pressure on NATO's eastern flank moved from rhetoric to incidents (Latvia 6 Oct, Lithuania moving troops towards Kaliningrad, Danish PET warnings); LR 1.2 the military component of the Chaos Pulse at 71; LR 0.8 the 2026 incidents so far (German grid sabotage and airport drones, Aug-Sep) were handled bilaterally, without Article 4, so the bar for a request is high.",
    "history": [
@@ -456,6 +468,15 @@
      "date": "2026-10-15",
      "p": 0.3,
      "reason": "First drone strike on a ship inside a NATO member's territorial waters: Romania's president says the Wine Trader (8 missing) and Yara J were hit by drones and promises a reaction; a drone entered Romanian airspace; Rutte met Dan and Radev. No Article 4 request yet. bayes x1.5. Crowd (32%) was visible before this update.",
+     "models": {
+      "base": 0.12,
+      "signals": 0.3
+     }
+    },
+    {
+     "date": "2026-10-16",
+     "p": 0.28,
+     "reason": "16.10: Romania's FM put full responsibility on Russia and allies agreed to convene the North Atlantic Council within days without Article 4 (Politico, Kyiv Post 16.10). An NAC meeting is the substitute path chosen; attacks continue, so only a small cut. LR 0.9 on 0.30.",
      "models": {
       "base": 0.12,
       "signals": 0.3
@@ -496,6 +517,10 @@
     },
     {
      "date": "2026-10-16",
+     "p": 0.295
+    },
+    {
+     "date": "2026-10-17",
      "p": 0.295
     }
    ],
@@ -586,6 +611,10 @@
     },
     {
      "date": "2026-10-16",
+     "p": 0.02
+    },
+    {
+     "date": "2026-10-17",
      "p": 0.02
     }
    ],
@@ -723,6 +752,10 @@
     {
      "date": "2026-10-16",
      "p": 0.31
+    },
+    {
+     "date": "2026-10-17",
+     "p": 0.325
     }
    ],
    "crowd_urls": {
@@ -797,6 +830,10 @@
     {
      "date": "2026-10-16",
      "p": 0.138
+    },
+    {
+     "date": "2026-10-17",
+     "p": 0.148
     }
    ],
    "crowd_urls": {
@@ -915,6 +952,10 @@
     {
      "date": "2026-10-16",
      "p": 0.325
+    },
+    {
+     "date": "2026-10-17",
+     "p": 0.315
     }
    ],
    "crowd_urls": {
@@ -980,6 +1021,10 @@
     {
      "date": "2026-10-16",
      "p": 0.285
+    },
+    {
+     "date": "2026-10-17",
+     "p": 0.27
     }
    ],
    "crowd_urls": {
@@ -1065,6 +1110,10 @@
     },
     {
      "date": "2026-10-16",
+     "p": 0.205
+    },
+    {
+     "date": "2026-10-17",
      "p": 0.205
     }
    ],
@@ -1241,7 +1290,7 @@
    "index": null,
    "opened": "2026-10-10",
    "status": "open",
-   "p": 0.29,
+   "p": 0.34,
    "base_rate": 0.1,
    "method": "base: forecast calc rate, 1 suspension in 2 years over 51 days = 0.10; signals: bayes x2.5 (reported threat) x1.2 (Trump vs Zelensky), shaded down for the official denial",
    "history": [
@@ -1267,6 +1316,15 @@
      "date": "2026-10-15",
      "p": 0.29,
      "reason": "Zelensky (AP, FT 15 Oct) says Ukraine has been denied the usual intelligence on Russian ballistic launches and calls the withdrawal dangerous; Ukrainian defence officials confirm the US threat. Trump says sharing has not stopped; no US official or two outlets report a suspension as implemented, so not YES. bayes x1.9.",
+     "models": {
+      "base": 0.1,
+      "signals": 0.29
+     }
+    },
+    {
+     "date": "2026-10-16",
+     "p": 0.34,
+     "reason": "16.10: Trump calls renewed refinery strikes a 'disgrace' (Reuters/BBC), White House reportedly ordered Starshield restrictions in Ukraine (Reuters via UP), ammunition sales to allies paused (Newsmax). Pressure toolkit is being used step by step; LR 1.25 on 0.29.",
      "models": {
       "base": 0.1,
       "signals": 0.29
