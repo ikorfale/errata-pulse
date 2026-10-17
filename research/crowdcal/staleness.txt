@@ -1,0 +1,11 @@
+A. sub-10% quotes with 0-10 days left, by age of the last trade before the quote
+last trade age | quotes | YES | expected | obs/exp | P(<=obs | calibrated, indep.)
+    <1 day |   481 |  10 |   19.6 | 0.51 | 0.012
+  1-7 days |   548 |   6 |   20.6 | 0.29 | 0.00013
+ 7-30 days |   408 |   3 |   15.1 | 0.20 | 0.00015
+  30+ days |   134 |   0 |    5.3 | 0.00 | 0.0041
+total quotes 1571 (per quote, not per family; dependence ignored)
+
+B. carry: markets under 10% at T-30d, price at T-7d, by outcome
+NO: n=968 median T-30 0.044 -> T-7 0.027; fell 532, flat(+-0.5pt) 387, rose 49
+YES: n=4 median T-30 0.066 -> T-7 0.041; fell 2, flat(+-0.5pt) 1, rose 1
