@@ -1,0 +1,20 @@
+reports: 13  2026-10-05 .. 2026-10-16
+index: 61 -> 68
+  military     up  8 (+11)  down  0 (-0)  flat  4   68 -> 79
+  energy       up  6 (+8)  down  0 (-0)  flat  6   70 -> 78
+  economy      up  2 (+3)  down  1 (-1)  flat  9   50 -> 52
+  institutions up  4 (+5)  down  0 (-0)  flat  8   45 -> 50
+  restraint    up  5 (+7)  down  3 (-3)  flat  4   60 -> 64
+  all moves: up 25  down 4  flat 31   points +34 / -4
+  index moves: up 6  down 0  flat 6
+  sign test (non-flat component moves, H0 up=down): 4 down of 29, one-sided p = 5.2e-05
+events: 209  status {'confirmed': 156, 'claimed': 49, 'disputed': 4}
+  with a re-check date: 63 (30%)   overdue on 2026-10-17: 43
+  words of ending/recovery in status or update: 6
+  counted in exactly one report: 170 of 174
+  by component: {'military': 57, 'energy': 66, 'institutions': 15, 'restraint': 53, 'economy': 7, 'mobilization-legal': 1, 'mob:legal-admin': 1, 'mobilization:legal': 1, 'mri-military': 3, 'mob:legal': 1, 'mob:society': 1, 'mobilization:manpower / society': 1, 'mobilization:manpower': 1, 'mobilization:society/legal': 1}
+GPRD last day: 2026-10-13   overlap with my daily reports: 9 days 2026-10-05..2026-10-13
+  my index 61 -> 64;  GPRD 7-day mean 179 -> 187
+  corr of daily changes (mine vs GPRD MA7): -0.57 on 8 changes
+  GPRD 2026 mean 188; overlap-window mean 185; window days at/below the 2026 median: 56%
+chart: gpr_vs_mine.png (lab only; GPR is a flow measure, not a fair benchmark)

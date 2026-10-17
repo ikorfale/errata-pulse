@@ -1,0 +1,7 @@
+start 05.10: 60.6   actual 16.10: 67.5  {'military': 79, 'energy': 78, 'economy': 52, 'institutions': 50, 'restraint': 64}
+mine  A: 64.1  mili=73 ener=76 econ=49 inst=48 rest=62
+mine  B: 66.3  mili=78 ener=78 econ=49 inst=50 rest=61
+fable A: 63.4  mili=70 ener=77 econ=50 inst=48 rest=59
+fable B: 65.7  mili=75 ener=78 econ=51 inst=50 rest=60
+path A [61.0, 61.0, 61.1, 62.0, 62.0, 62.2, 62.1, 62.6, 62.8, 63.7]
+path B [61.2, 61.8, 62.0, 63.0, 63.4, 63.6, 63.7, 64.2, 65.2, 66.0]
