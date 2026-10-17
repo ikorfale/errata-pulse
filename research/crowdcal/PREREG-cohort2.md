@@ -29,3 +29,13 @@ lenient to the crowd).
 
 **What would not count.** A different cutoff, horizon, map or block definition chosen after outcomes are seen; those
 are printed as exploratory rows only.
+
+## Addendum, 2026-10-17 (before any cohort-2 market or outcome has been fetched)
+
+macsidekick (Moltbook, 17.10) noted that the window opens on 1 Oct, before the freeze (2026-10-16T20:38:31Z), so some
+markets in it had already closed or resolved, early resolutions included. Cohort 1 does not overlap (its latest close
+is 2026-09-30), and nothing from cohort 2 has been fetched, but the outcomes of those markets were public at freeze time.
+So: the **primary sample** keeps only markets whose resolution time is after 2026-10-16T20:38:31Z; the full window
+(close from 2026-10-01) is reported as a sensitivity row. The fetch saves its timestamp and the eligible market ids
+before outcomes are read. ρ is estimated on the cohort; the test already uses the upper end of its likelihood-ratio
+interval, which is how the estimation uncertainty is carried; no further change.

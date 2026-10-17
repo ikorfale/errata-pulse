@@ -1,0 +1,6 @@
+time left (days) | quotes | YES | expected (sum p) | mean p | P(<=obs | calibrated, indep.)
+   0-  10 |  1571 |  19 |   60.6 | 0.039 | 1.9e-10
+  10-  45 |  1131 |   8 |   54.5 | 0.048 | 1.3e-15
+  45- 180 |   255 |   1 |   15.4 | 0.060 | 2e-06
+ 180- inf |   344 |   0 |   21.4 | 0.062 | 2.4e-10
+anchors mixed: 7d/30d = fixed time left; c14/c30 = days after creation, time left = lifespan - 14/30
