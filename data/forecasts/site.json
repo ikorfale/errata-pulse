@@ -1,7 +1,7 @@
 {
- "generated": "2026-10-17T22:43:27.687673+00:00",
+ "generated": "2026-10-17T23:21:05.634218+00:00",
  "counts": {
-  "open": 23,
+  "open": 27,
   "resolved": 2,
   "annulled": 0
  },
@@ -1425,6 +1425,114 @@
      "models": {
       "base": 0.55,
       "signals": 0.555
+     }
+    }
+   ],
+   "crowd": [],
+   "crowd_history": []
+  },
+  {
+   "id": "26",
+   "title": "Will Egypt's House of Representatives approve an authorisation for military action to defend Saudi Arabia by 25 October 2026?",
+   "criteria": "YES if Egypt's House of Representatives adopts, by 25 Oct 2026 23:59 UTC, a resolution or vote authorising the president to deploy or use armed forces in defence of Saudi Arabia (conditional on a Saudi request counts). A statement of support without authorisation, or a deferral, is NO. Source: Ahram, Reuters, AFP or the House.",
+   "deadline": "2026-10-25",
+   "category": "war",
+   "index": "pulse",
+   "opened": "2026-10-17",
+   "status": "open",
+   "p": 0.86,
+   "base_rate": 0.9,
+   "method": "Batch 17.10: my number written before asking Claude Fable blind (it never saw mine); ensemble = log-odds mean of base and the two judgements.",
+   "history": [
+    {
+     "date": "2026-10-17",
+     "p": 0.86,
+     "reason": "Sisi asked for an emergency session on 17 Oct; plenary set for 18 Oct; the House approved past security requests (Libya 2020 unanimously). Residual risk: a support statement short of authorisation.",
+     "models": {
+      "base": 0.9,
+      "mine": 0.88,
+      "fable": 0.85
+     }
+    }
+   ],
+   "crowd": [],
+   "crowd_history": []
+  },
+  {
+   "id": "27",
+   "title": "Will a government publicly name the perpetrator of either 16 October tanker attack off Jubail, Saudi Arabia, by 15 November 2026?",
+   "criteria": "YES if by 15 Nov 2026 the government of Saudi Arabia, the US (incl. CENTCOM), the UK or the flag state publicly attributes either of the two tanker attacks 68 nm and 78 nm NE of Jubail on 16 Oct 2026 (UKMTO 174-26 and follow-up) to a named state or named group. General accusations not tied to these attacks are NO.",
+   "deadline": "2026-11-15",
+   "category": "war",
+   "index": "pulse",
+   "opened": "2026-10-17",
+   "status": "open",
+   "p": 0.45,
+   "base_rate": 0.45,
+   "method": "Batch 17.10: my number written before asking Claude Fable blind (it never saw mine); ensemble = log-odds mean of base and the two judgements.",
+   "history": [
+    {
+     "date": "2026-10-17",
+     "p": 0.45,
+     "reason": "RPG from a small boat inside the Gulf is suggestive and Riyadh already blames Iran in general; but many 'unknown projectile' attacks this year were never formally attributed.",
+     "models": {
+      "base": 0.45,
+      "mine": 0.35,
+      "fable": 0.55
+     }
+    }
+   ],
+   "crowd": [],
+   "crowd_history": []
+  },
+  {
+   "id": "28",
+   "title": "Will either chamber of the US Congress hold a floor vote on a measure to block or reverse the 16 October Graham Act waiver by 30 November 2026?",
+   "criteria": "YES if by 30 Nov 2026 the House or the Senate holds a recorded floor vote on a joint resolution, bill or amendment whose stated purpose is to block, disapprove, override or reverse the 16 Oct 2026 executive order waiving sanctions/duties under the Lindsey O. Graham Sanctioning Russia and Iran Act of 2026. Source: congress.gov or major media.",
+   "deadline": "2026-11-30",
+   "category": "politics",
+   "index": "pulse",
+   "opened": "2026-10-17",
+   "status": "open",
+   "p": 0.1,
+   "base_rate": 0.08,
+   "method": "Batch 17.10: my number written before asking Claude Fable blind (it never saw mine); ensemble = log-odds mean of base and the two judgements.",
+   "history": [
+    {
+     "date": "2026-10-17",
+     "p": 0.1,
+     "reason": "Floor votes against a same-party president's sanctions waiver are rare; Congress is out until after 3 Nov; a forced-vote review mechanism, if the Act has one, is the only fast path.",
+     "models": {
+      "base": 0.08,
+      "mine": 0.08,
+      "fable": 0.12
+     }
+    }
+   ],
+   "crowd": [],
+   "crowd_history": []
+  },
+  {
+   "id": "29",
+   "title": "Will CENTCOM or UKMTO publicly state by 31 October 2026 that a merchant ship struck a sea mine in or near the Strait of Hormuz on or after 17 October?",
+   "criteria": "YES if by 31 Oct 2026 US CENTCOM or UKMTO publicly states that a merchant vessel struck a sea mine (or 'mine') in or near the Strait of Hormuz in an incident dated 17 Oct 2026 or later. IRGC or Iranian media claims alone are NO; other authorities (e.g. a port authority) do not count.",
+   "deadline": "2026-10-31",
+   "category": "energy",
+   "index": "pulse",
+   "opened": "2026-10-17",
+   "status": "open",
+   "p": 0.22,
+   "base_rate": 0.1,
+   "method": "Batch 17.10: my number written before asking Claude Fable blind (it never saw mine); ensemble = log-odds mean of base and the two judgements.",
+   "history": [
+    {
+     "date": "2026-10-17",
+     "p": 0.22,
+     "reason": "IRGC claims two supertankers hit mines on 17 Oct; its 14 Oct mine claim was later matched to GFS Pride by a port authority, not by UKMTO/CENTCOM, which usually say 'unknown projectile'.",
+     "models": {
+      "base": 0.1,
+      "mine": 0.35,
+      "fable": 0.15
      }
     }
    ],
