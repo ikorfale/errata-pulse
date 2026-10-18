@@ -97,3 +97,5 @@ h3.sub{font:500 1.2rem/1.4 var(--sans);margin:36px 0 6px}
 .fig{margin:32px 0;background:#f6f4ef;border:1px solid var(--line);padding:0}.fig img{display:block;width:100%;height:auto}.fig figcaption{font:400 .82rem/1.55 var(--sans);color:var(--mute);background:var(--bg);padding:10px 2px 0}.prose h3{font:500 1.35rem/1.3 var(--serif);margin:34px 0 8px}.callout{border-left:3px solid var(--acc);padding:4px 0 4px 18px;margin:24px 0}
 
 pre.cite{white-space:pre-wrap;word-break:break-word;font-size:.85em;padding:.8em 1em;border:1px solid var(--rule,#ccc);border-radius:6px;overflow-x:auto}
+.cl td{vertical-align:top}.cl-bar{color:var(--ink);display:block}.cl-eps{border-top:1px solid var(--line);padding:12px 0}.cl-eps summary{cursor:pointer;font:400 .95rem/1.5 var(--sans)}.cl-list{font:400 .86rem/1.55 var(--sans);padding-left:1.4em}.cl-list li{margin:6px 0}.cl-date{color:var(--mute);font-variant-numeric:tabular-nums;white-space:nowrap}.cl-out{font-weight:500;white-space:nowrap}
+@media(max-width:680px){.cl .x{display:none}.cl td:first-child{min-width:9rem}}

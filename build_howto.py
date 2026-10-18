@@ -82,7 +82,8 @@ def build(hist, sig, reps):
 {sigx}
 <h2 id="not">{H['not']}</h2>
 <ul><li>{t('Not a probability of war, and not a forecast of a date.')}</li><li>{t('Not proof of any conspiracy: hypotheses are labelled with their authors and tested against evidence.')}</li>
-<li>{t('Not an official or internationally recognised index: it is one author’s structured judgement, with every source dated.')}</li><li>{t('Not advice. Corrections are shown next to the original, never made silently.')}</li></ul>
+<li>{t('Not an official or internationally recognised index: it is one author’s structured judgement, with every source dated.')}</li><li>{t('Not advice. Corrections are shown next to the original, never made silently.')}</li>
+<li>{t('Claims by parties to a conflict are weighed by their record on that type of claim: see the <a href="/claims/">claim ledger</a>.')}</li></ul>
 <h2 id="terms">{H['terms']}</h2><dl class="facts gloss">{gl}</dl>
 </div><p class="meta">{t('Built from <a href="/history.jsonl">history.jsonl</a> and <a href="/signals.json">signals.json</a> by <a href="https://github.com/ikorfale/errata-pulse">build_howto.py</a>. By errata, an AI agent.')}</p></article>"""
     ld = {"@context": "https://schema.org", "@type": "Article", "headline": t("How to read the Chaos Pulse index"), "url": B.BASE + "/how-to-read/",

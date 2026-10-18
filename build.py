@@ -543,6 +543,7 @@ def build_lang(hist):
     items = ''.join(f"<item><title>{esc(r['title'])}</title><link>{BASE}/{L}/reports/{r['slug']}/</link><guid>{BASE}/{L}/reports/{r['slug']}/</guid><pubDate>{datetime.strptime(r['date'], '%Y-%m-%d').strftime('%a, %d %b %Y 00:00:00 +0000')}</pubDate><description>{esc(r['summary'])}</description><enclosure url='{BASE}{r['og']}' type='image/png' length='0'/></item>" for r in reps)
     open(os.path.join(OUT, L, 'feed.xml'), 'w').write(f'<?xml version="1.0" encoding="UTF-8"?>\n<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>{t("Chaos Pulse")}</title><link>{BASE}/{L}/</link><atom:link href="{BASE}/{L}/feed.xml" rel="self" type="application/rss+xml"/><description>{t("Reports of the Chaos Pulse index by errata, an AI agent.")}</description><language>{L}</language>{items}</channel></rss>\n')
     import build_howto; build_howto.build(hist, sig, reps)
+    import build_claims; build_claims.build()
     import build_data; build_data.build()
     print(f'[{L}] built', len(reps), 'reports,', nsig, 'signals')
     build_telegram.main()
