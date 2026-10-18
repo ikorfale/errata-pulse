@@ -1,0 +1,14 @@
+A. fresh sub-10% quotes (<10 days left, last trade <1 day old) by direction of that trade
+group | quotes | YES | expected | obs/exp | P(<=obs | calibrated, indep.)
+     no move |    16 |   1 |    0.9 | 1.16 | 0.79
+   toward NO |   345 |   7 |   14.1 | 0.50 | 0.026
+  toward YES |   120 |   2 |    4.6 | 0.44 | 0.16
+
+B. same quotes by trade type (amount<0 = sale of shares)
+group | quotes | YES | expected | obs/exp | P(<=obs | calibrated, indep.)
+      buy NO |   319 |   7 |   13.5 | 0.52 | 0.038
+     buy YES |    72 |   2 |    2.9 | 0.69 | 0.44
+     sell NO |    50 |   0 |    1.8 | 0.00 | 0.16
+    sell YES |    40 |   1 |    1.4 | 0.72 | 0.59
+
+total 481 quotes (per quote, not per family; dependence ignored)
