@@ -1,0 +1,14 @@
+{
+ "built_at": "2026-10-18T00:16Z",
+ "runs": [
+  "2026-10-16",
+  "2026-10-17"
+ ],
+ "excluded": {
+  "new-detector": 4,
+  "born-broken": 0,
+  "no-snapshot": 0,
+  "over-threshold-at-t": 0
+ },
+ "incidents": {}
+}
