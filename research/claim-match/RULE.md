@@ -29,5 +29,29 @@ ambiguous matches. If the rule assigns any named case to the wrong entry, it is 
 until it is fixed and re-validated on cases it has not seen. Until then the ledger shows the open-episode range as
 the headline.
 
+## Validation result, 2026-10-18 (rule as frozen above)
+
+Dataset: `validation_2024_25.jsonl`, 56 claim/UKMTO pairs with a usable claim date whose link is stated by a source
+(53 from 2024, 4 from 2025, one without a claim date), 35 UKMTO entries for other ships on nearby days, and 26
+Houthi claims with no UKMTO incident found. Collected by a research subagent with sources per line
+(`validation_2024_25_sources.md`). The matcher `match_rule.py` was written before the data arrived; it sees no
+names. Output: `match_rule_2024_25.txt`.
+
+Of 82 claims:
+- matched, correct: 19
+- matched, **wrong: 1**. Ocean Jazz (22 Jan 2024, Gulf of Aden) is a claim the US Navy called false. The rule
+  matched it to a UKMTO entry the next day near Bab el-Mandeb, which was only a drone sighting.
+- no candidate, correctly: 19 (claims with no incident)
+- no candidate although a pair exists: 9 (the claimed area differs from UKMTO's, or the claim came more than a day
+  before or more than two days after the incident, e.g. Eternity C)
+- ambiguous: 34 (28 true pairs, 6 claims with no incident). In 2024 there were often several incidents within days.
+
+**Verdict: not usable.** One wrong assignment out of 20 matches, and that one turned a false claim into a confirmed
+one, which is exactly the error that would flatter a claimant's rate. The three open 2026 Houthi episodes stay open
+and the open-episode range stays the headline.
+
+An obvious fix would be to require that E reports an attack on a vessel, not a sighting or an approach. I found it
+on this data, though, so it can only be tested on cases the rule hasn't seen: named 2026 incidents as they come.
+
 ## Changes
-(none yet)
+(none)
