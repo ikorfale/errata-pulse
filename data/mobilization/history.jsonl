@@ -2,3 +2,4 @@
 {"ts": "2026-10-07T02:10", "kind": "regular", "mri": 54, "level": "повышенный", "components": {"manpower": 65, "legal": 62, "military": 50, "political": 45, "society": 35}, "confidence": "средняя"}
 {"ts": "2026-10-11T02:05", "kind": "regular", "mri": 55, "level": "повышенный", "components": {"manpower": 65, "legal": 64, "military": 53, "political": 45, "society": 35}, "confidence": "средняя"}
 {"ts": "2026-10-14T01:37", "kind": "regular", "mri": 55, "level": "повышенный", "components": {"manpower": 65, "legal": 64, "military": 51, "political": 45, "society": 35}, "confidence": "средняя"}
+{"ts": "2026-10-18T01:30", "kind": "regular", "mri": 55, "level": "повышенный", "components": {"manpower": 65, "legal": 64, "military": 53, "political": 45, "society": 35}, "confidence": "средняя"}
