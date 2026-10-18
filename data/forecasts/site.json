@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-17T23:21:05.634218+00:00",
+ "generated": "2026-10-18T22:43:46.868183+00:00",
  "counts": {
   "open": 27,
   "resolved": 2,
@@ -74,8 +74,8 @@
   }
  ],
  "models": {
-  "signals": 0.1715,
-  "base": 0.4412
+  "base": 0.4412,
+  "signals": 0.1715
  },
  "questions": [
   {
@@ -87,7 +87,7 @@
    "index": "mri",
    "opened": "2026-10-09",
    "status": "open",
-   "p": 0.017,
+   "p": 0.013,
    "base_rate": 0.02,
    "method": "base: reference class = declared mobilisations during the current war, 1 (Sep 2022) in 4.6 years, Poisson with +0.5 smoothing over 22 days. signals: LR 1.3 mobilisation risk index 54 'elevated' (legal readiness 62, rising); LR 0.8 the rumoured post-election '1 October window' passed with no decree; LR 0.8 the state keeps substituting (quotas, foreigners, coercion of conscripts) and recruitment is only ~10% below 2025; official denials taken as LR 1.0 (they preceded 2022 too).",
    "history": [
@@ -104,6 +104,15 @@
      "date": "2026-10-14",
      "p": 0.017,
      "reason": "MRI 14 Oct: 55, unchanged. 17 days left, base rate shrinks with the window. Signals: Kluge's September data shows recruitment steady at ~1,000/day (29.9k, -6% y/y), no decree, no mass summons to reservists, no exit ban; the energy-truce channel slightly lowers motive (LR 0.95); Kluge's argument that 'privatized coercion' could push the Kremlin to mobilise to regain control is a longer-run factor (LR 1.0 within 17 days).",
+     "models": {
+      "base": 0.017,
+      "signals": 0.016
+     }
+    },
+    {
+     "date": "2026-10-18",
+     "p": 0.013,
+     "reason": "MRI 18 Oct: 55, unchanged. 13 days left: the base rate shrinks with the window. Evidence both ways is weak: the energy truce collapsed and Putin (16 Oct) ruled out concessions (LR 1.15), while Kluge and Massicot (RFE/RL 16 Oct) see steady recruitment and no emergent manpower deficit (LR 0.9). No decree, no mass summons to reservists, no exit closure.",
      "models": {
       "base": 0.017,
       "signals": 0.016
@@ -150,6 +159,10 @@
     {
      "date": "2026-10-17",
      "p": 0.083
+    },
+    {
+     "date": "2026-10-18",
+     "p": 0.085
     }
    ],
    "crowd_urls": {
@@ -272,6 +285,10 @@
     {
      "date": "2026-10-17",
      "p": 0.083
+    },
+    {
+     "date": "2026-10-18",
+     "p": 0.083
     }
    ],
    "crowd_urls": {
@@ -376,6 +393,10 @@
     },
     {
      "date": "2026-10-17",
+     "p": 0.111
+    },
+    {
+     "date": "2026-10-18",
      "p": 0.111
     }
    ],
@@ -522,6 +543,10 @@
     {
      "date": "2026-10-17",
      "p": 0.295
+    },
+    {
+     "date": "2026-10-18",
+     "p": 0.235
     }
    ],
    "crowd_urls": {
@@ -615,6 +640,10 @@
     },
     {
      "date": "2026-10-17",
+     "p": 0.02
+    },
+    {
+     "date": "2026-10-18",
      "p": 0.02
     }
    ],
@@ -756,6 +785,10 @@
     {
      "date": "2026-10-17",
      "p": 0.325
+    },
+    {
+     "date": "2026-10-18",
+     "p": 0.275
     }
    ],
    "crowd_urls": {
@@ -834,6 +867,10 @@
     {
      "date": "2026-10-17",
      "p": 0.148
+    },
+    {
+     "date": "2026-10-18",
+     "p": 0.103
     }
    ],
    "crowd_urls": {
@@ -956,6 +993,10 @@
     {
      "date": "2026-10-17",
      "p": 0.315
+    },
+    {
+     "date": "2026-10-18",
+     "p": 0.325
     }
    ],
    "crowd_urls": {
@@ -1025,6 +1066,10 @@
     {
      "date": "2026-10-17",
      "p": 0.27
+    },
+    {
+     "date": "2026-10-18",
+     "p": 0.288
     }
    ],
    "crowd_urls": {
@@ -1114,6 +1159,10 @@
     },
     {
      "date": "2026-10-17",
+     "p": 0.205
+    },
+    {
+     "date": "2026-10-18",
      "p": 0.205
     }
    ],
@@ -1521,7 +1570,7 @@
    "index": "pulse",
    "opened": "2026-10-17",
    "status": "open",
-   "p": 0.22,
+   "p": 0.14,
    "base_rate": 0.1,
    "method": "Batch 17.10: my number written before asking Claude Fable blind (it never saw mine); ensemble = log-odds mean of base and the two judgements.",
    "history": [
@@ -1532,6 +1581,16 @@
      "models": {
       "base": 0.1,
       "mine": 0.35,
+      "fable": 0.15
+     }
+    },
+    {
+     "date": "2026-10-18",
+     "p": 0.14,
+     "reason": "Correction to my own update an hour earlier: I wrote '~7 episodes, Laplace 0/7'. Exact count: 5 resolved IRGC mine-claim episodes (31 Aug and 14 Sep El Gaia refuted by CENTCOM; 10 Oct, 11 Oct and 14 Oct GFS Pride attributed by UKMTO/maritime authorities to a projectile), 0 confirmed as mines; 17 Oct is still open. Base = Laplace 0/5 = 1/7 = 0.14.",
+     "models": {
+      "base": 0.14,
+      "mine": 0.12,
       "fable": 0.15
      }
     }
