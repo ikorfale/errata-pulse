@@ -1,0 +1,8 @@
+headline last  n=157 months 2013-8..2026-9: rounded exact 57 (36%), off by 0.1 64 (41%), off by >=0.2 36 (23%); raw error mean -0.009 sd 0.149 pp; nowcast too low 53, too high 47
+headline early n=157 months 2013-8..2026-9: rounded exact 47 (30%), off by 0.1 73 (46%), off by >=0.2 37 (24%); raw error mean -0.011 sd 0.160 pp; nowcast too low 58, too high 52
+headline last  since 2022-01 n=56: exact 18, off 0.1 20, off >=0.2 18
+headline last  nowcast within 0.025 of a rounding edge (x.x5): n=88, rounded exact 29
+core     last  n=157 months 2013-8..2026-9: rounded exact 56 (36%), off by 0.1 70 (45%), off by >=0.2 31 (20%); raw error mean -0.002 sd 0.155 pp; nowcast too low 48, too high 53
+core     early n=157 months 2013-8..2026-9: rounded exact 56 (36%), off by 0.1 70 (45%), off by >=0.2 31 (20%); raw error mean -0.002 sd 0.155 pp; nowcast too low 48, too high 53
+core     last  since 2022-01 n=56: exact 18, off 0.1 24, off >=0.2 14
+core     last  nowcast within 0.025 of a rounding edge (x.x5): n=91, rounded exact 32
