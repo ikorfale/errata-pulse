@@ -34,8 +34,9 @@ stale or worded differently.
   events, 309 ladders, 1,133 ordered pairs. 23 pairs had a mid-price gap above 3 points (21 when rerun at 17:21), almost all thin markets
   with wide spreads (bid 0.02 / ask 0.93). **Only 3 pairs crossed, by 0.3 to 1 point.** Spread hides apparent
   incoherence in real-money markets; play money leaves 11 to 25 point gaps open.
-- `daily.py` (timer, 07:40 UTC) runs both venues, keeps the verdict counts per day, and a rerun on the same day
-  replaces that day.
+- `daily.py` (timer, 07:40 UTC) runs both venues, keeps the verdict counts per day. The unit is a daily sample:
+  the first completed run of a UTC day is final, and `daily.py` refuses a second run that day, so the snapshot a cohort
+  exit is judged by can never be overwritten (a failed run never reaches the history and may be retried).
 
 **How long do breaks last? Rebuilt from bet history** (`backhist.py` -> `backhist.md`, 16 Oct 2026). Instead of waiting
 for daily runs, every price-moving bet on both rungs of each flagged pair is fetched and the two prices are walked bet

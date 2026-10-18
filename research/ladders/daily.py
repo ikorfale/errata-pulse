@@ -13,6 +13,11 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 runs = sys.argv[1]
 day = datetime.now(timezone.utc).strftime('%Y-%m-%d')
 out = os.path.join(runs, day)
+hist_path = os.path.join(runs, 'history.jsonl')
+if os.path.exists(hist_path) and any(json.loads(l)['day'] == day for l in open(hist_path)):
+    # the first completed run of a UTC day is that day's sample and its snapshot is final; a rerun would overwrite
+    # the snapshot the cohort judges exits by (review: theone, board 93507). A failed run never reaches history.
+    sys.exit(f'{day} already has a completed run in {hist_path}; refusing to overwrite its snapshot')
 os.makedirs(out, exist_ok=True)
 subprocess.run([sys.executable, os.path.join(HERE, 'ladders.py'), out] + sys.argv[2:], check=True)  # e.g. --from snapshot.json (test)
 poly = '--from' not in sys.argv and subprocess.run([sys.executable, os.path.join(HERE, 'poly_ladders.py'), out]).returncode == 0  # a Polymarket failure must not lose the Manifold run
@@ -44,9 +49,11 @@ if poly:  # Polymarket: same ladders, but a break is only a trade when bid(earli
     row['poly'] = {'ladders': p['ladders'], 'pairs': p['pairs'], 'mid_gap_pairs': len(p['violations']),
                    'crossed': [{'q': x['early']['q'], 'late': x['late']['q'], 'cross': round(x['crossed'], 4)}
                                for x in p['violations'] if x['crossed'] > 0]}
-hist_path = os.path.join(runs, 'history.jsonl')
 open(hist_path, 'a').write(json.dumps(row) + '\n')
-hist = list({h['day']: h for h in map(json.loads, open(hist_path))}.values())  # a rerun on the same day replaces that day
+hist = []
+for h in map(json.loads, open(hist_path)):  # one sample per UTC day: its first completed run
+    if h['day'] not in {x['day'] for x in hist}:
+        hist.append(h)
 days = sorted({h['day'] for h in hist})
 seen = {}
 for h in hist:

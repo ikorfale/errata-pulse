@@ -29,7 +29,10 @@ TOL = 0.03
 
 
 def load(hist_path):
-    return {h['day']: h for h in map(json.loads, open(hist_path))}  # a rerun on the same day replaces that day
+    rows = {}
+    for h in map(json.loads, open(hist_path)):  # one sample per UTC day: its first completed run (daily.py refuses reruns)
+        rows.setdefault(h['day'], h)
+    return rows
 
 
 def verdict(review, k):
