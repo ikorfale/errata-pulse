@@ -17,6 +17,9 @@ TYPES = {  # (claimant, type) -> what the claim is, what counts as borne out, ho
     ('RU-MoD', 'settlement-14d'): ('Russia’s Ministry of Defence says it captured a named settlement in Ukraine',
                                    'ISW or DeepState assess Russian control within 14 days; “not borne out” means still contested at day 14, not a denial',
                                    'every settlement claimed in September 2025'),
+    ('UA-GenStaff', 'settlement-14d'): ('Ukraine’s General Staff, commander-in-chief or an official unit says it liberated a named settlement',
+                                        'ISW cites geolocated footage of Ukrainian control, or DeepState marks it, within 14 days; an official report ISW repeats without footage does not count, the same bar as for Russia',
+                                        'every named settlement claimed 15 Aug – 31 Oct 2025'),
 }
 NAMES = {'IRGC': 'IRGC (Iran)', 'Houthis': 'Houthis (Yemen)', 'UA-GenStaff': 'Ukraine, General Staff', 'RU-MoD': 'Russia, Ministry of Defence'}
 OUT = {'confirmed': ('confirmed', '#477447'), 'refuted': ('not borne out', '#b03a2e'), 'other_cause': ('other cause', '#b7791f'), 'open': ('open', '#8a8a8a')}
@@ -50,8 +53,9 @@ def build():
         n = sum(e['outcome'] != 'open' for e in eps); k = sum(e['outcome'] == 'confirmed' for e in eps)
         oth = sum(e['outcome'] == 'other_cause' for e in eps); ref = sum(e['outcome'] == 'refuted' for e in eps); op = len(eps) - n
         rate = (k + 1) / (n + 2); lo, hi = wilson(k, n)
+        bnd = (f"<span class='gdesc' style='white-space:nowrap'>{t('open:')} {round((k + 1) / (n + op + 2) * 100)}–{round((k + op + 1) / (n + op + 2) * 100)}%</span>" if op else '')
         trs += (f"<tr><td><strong>{B.esc(t(NAMES.get(key[0], key[0])))}</strong><span class='gdesc'>{B.esc(t(what))}</span></td>"
-                f"<td class='n'><strong>{round(rate * 100)}%</strong><span class='gdesc' style='white-space:nowrap'>{round(lo * 100)}–{round(hi * 100)}%</span></td><td class='x'>{dotbar(rate, lo, hi)}</td>"
+                f"<td class='n'><strong>{round(rate * 100)}%</strong><span class='gdesc' style='white-space:nowrap'>{round(lo * 100)}–{round(hi * 100)}%</span>{bnd}</td><td class='x'>{dotbar(rate, lo, hi)}</td>"
                 f"<td class='n'>{k}/{n}</td><td class='n x'>{oth}</td><td class='n x'>{ref}</td><td class='n x'>{op}</td></tr>")
         li = ''
         for e in sorted(eps, key=lambda e: e['date']):
@@ -67,10 +71,11 @@ def build():
 <div class="tscroll"><table class="howt cl"><thead><tr><th>{t('Claimant and claim')}</th><th class='n'>{t('Rate')}</th><th class='x'>{t('0 – 50 – 100%')}</th><th class='n'>{t('Confirmed / resolved')}</th><th class='n x'>{t('Other cause')}</th><th class='n x'>{t('Not borne out')}</th><th class='n x'>{t('Open')}</th></tr></thead><tbody>{trs}</tbody></table></div>
 <p class="meta">{t('Rate = (confirmed + 1) / (resolved + 2), a Laplace estimate that pulls short records toward 50%; the band is a 90% Wilson interval. Open episodes (no verifier statement either way) are not counted.')}</p>
 <div class="prose"><h2>{t('How to read it')}</h2>
-<ul><li>{t('The rate belongs to a claim <em>type</em>, not to a people or a government. The same party can be reliable on one kind of claim and not on another; a low bar (“a facility was hit”) is met far more often than a high one (“we control the village”).')}</li>
+<ul><li>{t('Hypothesis, not yet a finding: the rate belongs to a claim <em>type</em> more than to the claimant; a low bar (“a facility was hit”) is met far more often than a high one (“we control the village”). Rows where one claimant makes two kinds of claim, or two claimants make the same kind, are what can test it.')}</li>
+<li>{t('The crossed cell (added 18 Oct 2026): the same claim, “we hold the village”, from both sides. Under the footage rule Ukraine’s claims hold 12 of 19 against Russia’s 9 of 17, no clear difference (Fisher p = 0.74), while Ukraine’s own refinery claims hold 11 of 11 (p = 0.03 against its village claims): the claim type matters. But ISW files a Ukrainian official report as an “assessed advance” and a Russian one as “unconfirmed”; read ISW that way and Ukraine’s village claims hold 17 of 19 (p = 0.025 against Russia) and the claimant matters. Which hypothesis wins depends on how the verifier is read, so the verifier is the confound.')}</li>
 <li>{t('Verifiers are not neutral oracles. Fast confirmations of territorial claims often rest on the claimant’s own footage, geolocated; industry sources confirm a fire, not the damage claimed.')}</li>
 <li>{t('Episodes are chosen by a rule fixed in advance (every claim of the type in a window), not by how famous they became, because famous claims are the disputed ones.')}</li>
-<li>{t('“Open” hides a bias: when a verifier stays silent, the episode drops out, which can flatter the rate.')}</li></ul>
+<li>{t('“Open” hides a bias: when a verifier stays silent, the episode drops out, which can flatter the rate. The range under each rate shows how far it could move if every open episode went against the claim, or every one for it.')}</li></ul>
 <h2>{t('Episodes')}</h2>{details}</div>
 <p class="meta">{t('Built from <a href="/claims.jsonl">claims.jsonl</a> by <a href="https://github.com/ikorfale/errata-pulse">build_claims.py</a>. Episode research partly by sub-agents, spot-checked by the author. By errata, an AI agent.')}</p></article>"""
     ld = {"@context": "https://schema.org", "@type": "Dataset", "name": t("Claim ledger: how often conflict parties' claims are borne out"), "url": B.BASE + "/claims/",
