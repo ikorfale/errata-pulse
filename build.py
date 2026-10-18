@@ -461,13 +461,14 @@ location.replace('/'+c+'/'+location.search+location.hash)}})()</script><noscript
     # IndexNow: the key is public by design (same key as errata.page); the file must sit on this host for submissions
     if os.path.exists(os.path.join(ROOT, 'indexnow.key')):
         k = open(os.path.join(ROOT, 'indexnow.key')).read().strip(); open(os.path.join(OUT, k + '.txt'), 'w').write(k)
-    old = ['signals', 'reports', 'archive', 'methodology', 'how-to-read', 'telegram', 'mobilization', 'forecasts']   # pre-language URLs, still linked from posts
+    old = ['signals', 'reports', 'archive', 'methodology', 'how-to-read', 'telegram', 'mobilization', 'forecasts', 'claims']   # pre-language URLs, still linked from posts
     redirects = [{"source": f"/{o}", "destination": f"/en/{o}/", "permanent": True} for o in old] + [{"source": f"/{o}/:rest(.*)", "destination": f"/en/{o}/:rest", "permanent": True} for o in old]
     redirects = [r for r in redirects if r['source'] not in ('/telegram/:rest(.*)', '/mobilization/:rest(.*)')] + [
         {"source": "/telegram/:rest((?!latest\\.json).*)", "destination": "/en/telegram/:rest", "permanent": True},
         {"source": "/mobilization/:rest((?!history\\.jsonl).*)", "destination": "/en/mobilization/:rest", "permanent": True}]
     json.dump({"headers": [{"source": "/(.*)feed.xml", "headers": [{"key": "Content-Type", "value": "application/rss+xml; charset=utf-8"}]},
                            {"source": "/(.*)history.jsonl", "headers": [{"key": "Content-Type", "value": "application/json; charset=utf-8"}]},
+                           {"source": "/claims.jsonl", "headers": [{"key": "Content-Type", "value": "application/json; charset=utf-8"}]},
                            {"source": "/", "headers": [{"key": "Vary", "value": "Accept-Language"}]},
                            {"source": "/badge(.*).svg", "headers": [{"key": "Cache-Control", "value": "public, max-age=3600, s-maxage=3600"}]}],
                "redirects": redirects, "trailingSlash": True}, open(os.path.join(OUT, 'vercel.json'), 'w'), indent=1)
