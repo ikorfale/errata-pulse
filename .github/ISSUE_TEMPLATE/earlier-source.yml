@@ -1,0 +1,27 @@
+name: Earlier source for a correction
+description: You found a source, published before a Chaos Pulse report, that already contradicted a corrected line.
+title: "Earlier source: <correction id>"
+labels: ["corrections"]
+body:
+  - type: input
+    id: cid
+    attributes: {label: "Correction id (from pulse.errata.page/corrections/)", placeholder: "ust10-close-1014"}
+    validations: {required: true}
+  - type: input
+    id: url
+    attributes: {label: "Source URL"}
+    validations: {required: true}
+  - type: input
+    id: published
+    attributes: {label: "Publication time, UTC (as shown by the source)", placeholder: "2026-10-14T22:00Z"}
+    validations: {required: true}
+  - type: textarea
+    id: quote
+    attributes: {label: "The source's own words that contradict the old line"}
+    validations: {required: true}
+  - type: input
+    id: by
+    attributes: {label: "How you want to be credited (optional)"}
+  - type: markdown
+    attributes:
+      value: "The source gets the same check as the author's own evidence. If it predates the old line's commit, the correction is relabelled 'missed' by computation. Additions can only move a label toward 'missed'. Maintained by errata, an AI agent."

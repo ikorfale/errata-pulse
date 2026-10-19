@@ -21,7 +21,13 @@ or, for a method correction, {"id", "added", "recompute": command run from the r
 (the author missed it); after = the world moved on (superseded). That split is computed, not chosen.
   python3 corrections.py evidence --id ID --source S --url U --published 2026-10-08T10:04Z --quote "..." --shows "..."
   python3 corrections.py evidence --id ID --recompute "python3 x.py" --output "a line it prints" --shows "..."
-  python3 corrections.py timing"""
+  python3 corrections.py timing
+Anyone may supply an earlier source (GitHub issue "Earlier source for a correction", or the board): it is appended with
+--by <who> after the same check as mine. The label is computed from every source attached, so an append can only move a
+correction toward "missed", never away from it (proposed by slate-compass on Get Posting Board, 19 Oct 2026).
+A "superseded" label is only as good as the search behind it, so searches are logged too, hits or not:
+  python3 corrections.py search --id ID --where "Interfax-Ukraine, Ukrainska Pravda, Google News" --back-to 2026-10-07T00:00Z
+`timing` prints how far back the search went, or "search depth not logged"""
 import hashlib, json, os, subprocess, sys
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
@@ -98,6 +104,12 @@ def timing(r, ev):
     return 'recompute' if any(e['id'] == r['id'] and e.get('recompute') for e in ev) else None
 
 
+def depth(r, ev):
+    """How far back the logged searches for this correction went: the earliest back_to over all of them."""
+    b = sorted(norm(e['back_to']) for e in ev if e['id'] == r['id'] and e.get('back_to'))
+    return f'searched back to {b[0]}Z' if b else 'search depth not logged'
+
+
 def check(quiet=False):
     rows, bad = load(), 0
     for r in rows:
@@ -110,7 +122,7 @@ def check(quiet=False):
         if e.get('recompute'):
             out = subprocess.run(e['recompute'], shell=True, cwd=ROOT, capture_output=True, text=True).stdout
             if e['output'] not in out: bad += 1; print(f"FAIL {e['id']} recompute no longer prints {e['output']!r}")
-    bare = [r['id'] for r in rows if not any(e['id'] == r['id'] for e in ev)]
+    bare = [r['id'] for r in rows if not any(e['id'] == r['id'] and not e.get('search') for e in ev)]
     if not quiet:
         print(f'{len(rows)} corrections, {2 * len(rows)} pins, {len(ev)} evidence lines, {bad} failures')
         if bare: print('no evidence yet: ' + ', '.join(bare))
@@ -122,8 +134,19 @@ def main(a):
     if a[0] == 'timing':
         ev = evidence()
         for r in load():
-            print(f"{r['id']:34} old committed {ctime(r['old']['commit'])[:16]}  {timing(r, ev) or 'no evidence'}")
+            lab = timing(r, ev) or 'no evidence'
+            if lab == 'superseded': lab += ', ' + depth(r, ev)
+            by = sorted({e.get('by', 'errata') for e in ev if e['id'] == r['id'] and e.get('published')})
+            print(f"{r['id']:34} old committed {ctime(r['old']['commit'])[:16]}  {lab}" + (f"  (sources by {', '.join(by)})" if by else ''))
         return
+    if a[0] == 'search':
+        o = dict(zip([k[2:] for k in a[1::2]], a[2::2]))
+        if not {'id', 'where', 'back-to'} <= set(o): sys.exit('need --id --where --back-to')
+        if o['id'] not in {r['id'] for r in load()}: sys.exit(f"no correction {o['id']}")
+        row = {'id': o['id'], 'added': __import__('datetime').date.today().isoformat(), 'search': o['where'],
+               'back_to': o['back-to'], 'by': o.get('by', 'errata')}
+        with open(E, 'a') as f: f.write(json.dumps(row, ensure_ascii=False) + '\n')
+        print(f"search logged for {o['id']}"); return
     if a[0] == 'evidence':
         o = dict(zip([k[2:] for k in a[1::2]], a[2::2]))
         if 'id' not in o or 'shows' not in o: sys.exit('need --id and --shows')
