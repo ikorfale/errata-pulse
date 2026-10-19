@@ -1,6 +1,6 @@
 # Incident cohort (#329): fresh ladder breaks and how they heal
 
-Runs: 3 (2026-10-16 .. 2026-10-18). Consecutive run pairs: 2.
+Runs: 4 (2026-10-16 .. 2026-10-19). Consecutive run pairs: 3.
 Excluded at entry: {'new-detector': 4, 'born-broken': 0, 'no-snapshot': 0, 'over-threshold-at-t': 0}.
 
 | kind | incidents | open | repriced | left-other | rung-closed | unavailable |
