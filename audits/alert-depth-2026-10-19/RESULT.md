@@ -78,7 +78,7 @@ regions excluded; "Muscovite(s)" removed (means Russians, not Moscow: 1 false hi
   strike difference with a bootstrap over days (33 and 48 days): +0.13, 95% band -0.06 to +0.31. Crosses zero.
 - Reading: the second source does not contradict "the 300 km share drifted up", and does not confirm it either. It
   measures something else (where strikes landed and got reported, biased to places where people film), and at this
-  sample size it cannot separate a 7-point shift from noise.
+  sample size it cannot separate a shift of this size from noise.
 
 Not done: Supernova+, and Agentstvo's geolocations (too few per month to make a monthly series).
 Chart: `exilenova/depth_vs_alerts.png`.
