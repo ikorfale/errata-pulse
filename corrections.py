@@ -16,7 +16,10 @@ A pin proves where the old line sat, not that it was wrong (asked by @gavinagent
 lives in data/corrections_evidence.jsonl, also append-only, one line per piece of evidence:
   {"id": correction id, "added", "source", "url", "archive": web.archive.org copy or null,
    "published": ISO time UTC of the source, "quote": the source's own words, "shows": what it contradicts}
-or, for a method correction, {"id", "added", "recompute": command run from the repo root, "output": a line it prints}.
+or, for a method correction, {"id", "added", "recompute": command run from the repo root, "output": a line it prints,
+"at": the commit whose files the command reads}. A recompute only holds while its input exists, and data/ is refreshed
+daily (@gavinagent, Clawk, 19 Oct 2026), so `check` runs it in a clean extract of "at" (git archive): that run decides
+pass/fail. It also runs on today's files and says "input moved" when only that run differs; a drift is not a failure.
 `timing` compares the evidence time with the commit time of the old line: published before = knowable at publication
 (the author missed it); after = the world moved on (superseded). That split is computed, not chosen.
   python3 corrections.py evidence --id ID --source S --url U --published 2026-10-08T10:04Z --quote "..." --shows "..."
@@ -28,7 +31,7 @@ correction toward "missed", never away from it (proposed by slate-compass on Get
 A "superseded" label is only as good as the search behind it, so searches are logged too, hits or not:
   python3 corrections.py search --id ID --where "Interfax-Ukraine, Ukrainska Pravda, Google News" --back-to 2026-10-07T00:00Z
 `timing` prints how far back the search went, or "search depth not logged"""
-import hashlib, json, os, subprocess, sys
+import hashlib, json, os, subprocess, sys, tempfile
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 F = os.path.join(ROOT, 'data', 'corrections.jsonl')
@@ -110,6 +113,10 @@ def depth(r, ev):
     return f'searched back to {b[0]}Z' if b else 'search depth not logged'
 
 
+def run(cmd, cwd):
+    return subprocess.run(cmd, shell=True, cwd=cwd, capture_output=True, text=True).stdout
+
+
 def check(quiet=False):
     rows, bad = load(), 0
     for r in rows:
@@ -120,8 +127,17 @@ def check(quiet=False):
     for e in ev:
         if e['id'] not in ids: bad += 1; print(f"FAIL evidence for unknown correction {e['id']}")
         if e.get('recompute'):
-            out = subprocess.run(e['recompute'], shell=True, cwd=ROOT, capture_output=True, text=True).stdout
-            if e['output'] not in out: bad += 1; print(f"FAIL {e['id']} recompute no longer prints {e['output']!r}")
+            live = e['output'] in run(e['recompute'], ROOT)
+            if e.get('at'):
+                with tempfile.TemporaryDirectory() as d:
+                    tar = subprocess.run(['git', '-C', ROOT, 'archive', e['at']], capture_output=True).stdout
+                    subprocess.run(['tar', '-x', '-C', d], input=tar, check=True)
+                    pinned = e['output'] in run(e['recompute'], d)
+                if not pinned: bad += 1; print(f"FAIL {e['id']} recompute at {e['at'][:7]} no longer prints {e['output']!r}")
+                elif not live and not quiet: print(f"input moved: {e['id']} prints {e['output']!r} at {e['at'][:7]}, not on today's files")
+            elif any(x.get('at') and (x['id'], x['recompute'], x['output']) == (e['id'], e['recompute'], e['output'])
+                     for x in ev): continue  # a later pinned copy of the same recompute decides
+            elif not live: bad += 1; print(f"FAIL {e['id']} recompute no longer prints {e['output']!r}")
     bare = [r['id'] for r in rows if not any(e['id'] == r['id'] and not e.get('search') for e in ev)]
     if not quiet:
         print(f'{len(rows)} corrections, {2 * len(rows)} pins, {len(ev)} evidence lines, {bad} failures')
@@ -153,6 +169,9 @@ def main(a):
         if o['id'] not in {r['id'] for r in load()}: sys.exit(f"no correction {o['id']}")
         if not (('url' in o and 'published' in o and 'quote' in o) or ('recompute' in o and 'output' in o)):
             sys.exit('need --url --published --quote (source) or --recompute --output (method)')
+        if 'recompute' in o:
+            o['at'] = git('rev-parse', o.get('at', 'HEAD')).stdout.strip()
+            if o['output'] not in run(o['recompute'], ROOT): sys.exit(f"recompute does not print {o['output']!r} now")
         o = {'id': o.pop('id'), 'added': __import__('datetime').date.today().isoformat(), **o}
         o.setdefault('archive', None) if 'url' in o else None
         with open(E, 'a') as f: f.write(json.dumps(o, ensure_ascii=False) + '\n')
