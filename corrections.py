@@ -10,11 +10,23 @@ line_sha256 = sha256 of the line plus its newline, so anyone can check it withou
 
   python3 corrections.py add --id ID --kind fact --what "..." --old PATH "quote" --new PATH "quote"
   python3 corrections.py check      # rc 1 if any pin no longer matches or a commit left the history
-Entries are append-only: a wrong entry gets a new entry, never an edit."""
+Entries are append-only: a wrong entry gets a new entry, never an edit.
+
+A pin proves where the old line sat, not that it was wrong (asked by @gavinagent on Clawk, 19 Oct 2026). The reason
+lives in data/corrections_evidence.jsonl, also append-only, one line per piece of evidence:
+  {"id": correction id, "added", "source", "url", "archive": web.archive.org copy or null,
+   "published": ISO time UTC of the source, "quote": the source's own words, "shows": what it contradicts}
+or, for a method correction, {"id", "added", "recompute": command run from the repo root, "output": a line it prints}.
+`timing` compares the evidence time with the commit time of the old line: published before = knowable at publication
+(the author missed it); after = the world moved on (superseded). That split is computed, not chosen.
+  python3 corrections.py evidence --id ID --source S --url U --published 2026-10-08T10:04Z --quote "..." --shows "..."
+  python3 corrections.py evidence --id ID --recompute "python3 x.py" --output "a line it prints" --shows "..."
+  python3 corrections.py timing"""
 import hashlib, json, os, subprocess, sys
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 F = os.path.join(ROOT, 'data', 'corrections.jsonl')
+E = os.path.join(ROOT, 'data', 'corrections_evidence.jsonl')
 
 
 def git(*a):
@@ -59,18 +71,69 @@ def load():
     return [json.loads(l) for l in open(F) if l.strip()] if os.path.exists(F) else []
 
 
+def evidence():
+    return [json.loads(l) for l in open(E) if l.strip()] if os.path.exists(E) else []
+
+
+def ctime(commit):
+    return git('show', '-s', '--format=%cI', commit).stdout.strip().replace('+00:00', 'Z')
+
+
+def norm(ts):
+    """'2026-10-08T10:04Z' or '2026-10-08T10:04:00Z' -> comparable 'YYYY-MM-DDTHH:MM'."""
+    return ts.replace('Z', '')[:16]
+
+
+def timing(r, ev):
+    """'missed' if any dated source evidence predates the old line's commit, 'superseded' if all came later,
+    'ambiguous' when only a date-only source from the same day exists, 'recompute' for method evidence, None without
+    evidence. Commit time stands in for publication time; the site deploys minutes after the commit."""
+    old = norm(ctime(r['old']['commit']))
+    src = [e for e in ev if e['id'] == r['id'] and e.get('published')]
+    if src:
+        if any(norm(e['published']) < old[:len(norm(e['published']))] for e in src): return 'missed'
+        # a date-only source from the same day as the old line cannot be ordered against it
+        if any(len(norm(e['published'])) == 10 and norm(e['published']) == old[:10] for e in src): return 'ambiguous'
+        return 'superseded'
+    return 'recompute' if any(e['id'] == r['id'] and e.get('recompute') for e in ev) else None
+
+
 def check(quiet=False):
     rows, bad = load(), 0
     for r in rows:
         for side in ('old', 'new'):
             for prob in verify(r[side]):
                 bad += 1; print(f"FAIL {r['id']} {side}: {prob}")
-    if not quiet: print(f'{len(rows)} corrections, {2 * len(rows)} pins, {bad} failures')
+    ids, ev = {r['id'] for r in rows}, evidence()
+    for e in ev:
+        if e['id'] not in ids: bad += 1; print(f"FAIL evidence for unknown correction {e['id']}")
+        if e.get('recompute'):
+            out = subprocess.run(e['recompute'], shell=True, cwd=ROOT, capture_output=True, text=True).stdout
+            if e['output'] not in out: bad += 1; print(f"FAIL {e['id']} recompute no longer prints {e['output']!r}")
+    bare = [r['id'] for r in rows if not any(e['id'] == r['id'] for e in ev)]
+    if not quiet:
+        print(f'{len(rows)} corrections, {2 * len(rows)} pins, {len(ev)} evidence lines, {bad} failures')
+        if bare: print('no evidence yet: ' + ', '.join(bare))
     return bad
 
 
 def main(a):
     if not a or a[0] == 'check': sys.exit(1 if check() else 0)
+    if a[0] == 'timing':
+        ev = evidence()
+        for r in load():
+            print(f"{r['id']:34} old committed {ctime(r['old']['commit'])[:16]}  {timing(r, ev) or 'no evidence'}")
+        return
+    if a[0] == 'evidence':
+        o = dict(zip([k[2:] for k in a[1::2]], a[2::2]))
+        if 'id' not in o or 'shows' not in o: sys.exit('need --id and --shows')
+        if o['id'] not in {r['id'] for r in load()}: sys.exit(f"no correction {o['id']}")
+        if not (('url' in o and 'published' in o and 'quote' in o) or ('recompute' in o and 'output' in o)):
+            sys.exit('need --url --published --quote (source) or --recompute --output (method)')
+        o = {'id': o.pop('id'), 'added': __import__('datetime').date.today().isoformat(), **o}
+        o.setdefault('archive', None) if 'url' in o else None
+        with open(E, 'a') as f: f.write(json.dumps(o, ensure_ascii=False) + '\n')
+        print(f"evidence added for {o['id']}"); return
     if a[0] != 'add': sys.exit(__doc__)
     o = {}
     i = 1
