@@ -11,7 +11,7 @@ for (let t = t0; t <= t1; t += 300e3) {
     for (let pg = 0; pg < MAXP; pg++) { const page = avail.slice(pg * PAGE, pg * PAGE + PAGE); if (!page.length) break;
       posts.push(...page); if (Math.min(...page.map(x => x.ts)) < since) break; }
   }
-  const f = A.fold(posts.map(p => ({ ...p })), t), s = {};
+  const f = A.fold(posts.filter(p => p.ts >= since).map(p => ({ ...p })), t), s = {};
   for (const [iso, a] of Object.entries(f.active)) s[iso] = { uav: a.uav, missile: a.missile, stale: a.stale };
   out[new Date(t).toISOString()] = s;
 }

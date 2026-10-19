@@ -131,7 +131,8 @@ async function build(now = Date.now()) {
   const posts = [], ok = [], cover = [];
   got.forEach((g, j) => { if (g.status === 'fulfilled' && g.value.length) { ok.push(CHANNELS[j]); posts.push(...g.value); cover.push(Math.min(...g.value.map(p => p.ts))); } });
   if (!ok.length) throw new Error('no source answered');
-  const f = fold(posts.filter(p => p.ts <= now), now);
+  // only the window: a regime with no word for 12 h drops off (hatched as stale from 4 h), whatever the page boundary
+  const f = fold(posts.filter(p => p.ts >= since && p.ts <= now), now);
   return { updated: new Date(now).toISOString(), window_hours: WINDOW_H, stale_hours: STALE_H, bin_minutes: 10,
            covered_from: new Date(Math.max(...cover)).toISOString(), sources: ok, ...f };
 }
