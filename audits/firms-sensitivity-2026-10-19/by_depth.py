@@ -3,7 +3,9 @@ import sys, io, contextlib
 import os; sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'alert-depth-2026-10-19'))
 with contextlib.redirect_stdout(io.StringIO()):
     import evaluate as E
+_here = os.getcwd(); os.chdir(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'alert-depth-2026-10-19'))
 from depth import depth
+os.chdir(_here)
 for name in ('R0 current (20 km, 2 sats, mean+3sd)', 'R2 5 km, 3 sats, Poisson p<0.01'):
     r = E.RULES[name]; rows = []
     for e, v in E.data:
