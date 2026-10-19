@@ -342,7 +342,7 @@ def signals_html(sig, per_family=None, heading=3):
 # ---------- page shell ----------
 CSS = open(os.path.join(ROOT, 'style.css')).read() if os.path.exists(os.path.join(ROOT, 'style.css')) else ''
 # Links that stay at the site root in every language: data files, images, fonts, the analytics script.
-SHARED = re.compile(r'(href|src)="/(?!(?:en|ru|uk)/|assets/|og/|og\.png|favicon|history\.jsonl|signals\.json|_vercel|mobilization/history\.jsonl|telegram/latest\.json|forecasts\.json)')
+SHARED = re.compile(r'(href|src)="/(?!(?:en|ru|uk)/|assets/|og/|og\.png|favicon|history\.jsonl|signals\.json|_vercel|mobilization/history\.jsonl|telegram/latest\.json|drones/data\.json|forecasts\.json)')
 PAGES = {}   # path -> lastmod, for the sitemap (every path exists in every language)
 def page(path, title, desc, body, typ='WebPage', extra_ld=None, image='/og.png', active='', lastmod=None):
     """Write one page of the current language to site/<lang><path>; internal links get the language prefix."""
@@ -354,7 +354,7 @@ def page(path, title, desc, body, typ='WebPage', extra_ld=None, image='/og.png',
     ld = dict(ld, inLanguage=L)
     if ld.get('url', '').startswith(BASE) and not ld['url'].startswith(BASE + '/' + L + '/'): ld['url'] = BASE + i18n.lpath(ld['url'][len(BASE):])
     nav = ''.join(f'<a href="{h}"{" aria-current=page" if active == k else ""}>{t(n)}</a>' for k, h, n in
-                  [('home', '/', 'Index'), ('signals', '/signals/', 'Signals'), ('mobil', '/mobilization/', 'Mobilisation'), ('forecasts', '/forecasts/', 'Forecasts'), ('telegram', '/telegram/', 'Telegram'), ('archive', '/archive/', 'Archive'), ('howto', '/how-to-read/', 'How to read'), ('method', '/methodology/', 'Methodology')])
+                  [('home', '/', 'Index'), ('signals', '/signals/', 'Signals'), ('mobil', '/mobilization/', 'Mobilisation'), ('forecasts', '/forecasts/', 'Forecasts'), ('telegram', '/telegram/', 'Telegram'), ('drones', '/drones/', 'Drones'), ('archive', '/archive/', 'Archive'), ('howto', '/how-to-read/', 'How to read'), ('method', '/methodology/', 'Methodology')])
     alts = ''.join(f'<link rel="alternate" hreflang="{l}" href="{BASE}{i18n.lpath(path, l)}">' for l in i18n.LANGS) + f'<link rel="alternate" hreflang="x-default" href="{BASE}{"/" if path == "/" else i18n.lpath(path, "en")}">'
     langs = '<div class="langs" role="navigation" aria-label="' + t('Language') + '">' + ''.join(
         (f'<span aria-current="true" lang="{l}" title="{i18n.NATIVE[l]}">{i18n.LABEL[l]}</span>' if l == L else f'<a href="{i18n.lpath(path, l)}" hreflang="{l}" lang="{l}" title="{i18n.NATIVE[l]}" data-lang="{l}">{i18n.LABEL[l]}</a>')
@@ -550,6 +550,7 @@ def build_lang(hist):
     build_telegram.main()
     import build_mobilization; build_mobilization.main()  # companion index; build_mobilization imports this module
     build_forecasts.main()
+    import build_drones; build_drones.main()
 
 def toc_html(toc):
     return ('<nav class="toc" aria-label="' + t('Contents') + '"><strong>' + t('Contents') + '</strong><ol>' + ''.join(f'<li><a href="#{i}">{inline(x)}</a></li>' for i, x in toc) + '</ol></nav>') if toc else ''
