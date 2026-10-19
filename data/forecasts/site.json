@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-18T22:43:46.868183+00:00",
+ "generated": "2026-10-19T22:42:38.620772+00:00",
  "counts": {
   "open": 27,
   "resolved": 2,
@@ -74,8 +74,8 @@
   }
  ],
  "models": {
-  "base": 0.4412,
-  "signals": 0.1715
+  "signals": 0.1715,
+  "base": 0.4412
  },
  "questions": [
   {
@@ -163,6 +163,10 @@
     {
      "date": "2026-10-18",
      "p": 0.085
+    },
+    {
+     "date": "2026-10-19",
+     "p": 0.07
     }
    ],
    "crowd_urls": {
@@ -289,6 +293,10 @@
     {
      "date": "2026-10-18",
      "p": 0.083
+    },
+    {
+     "date": "2026-10-19",
+     "p": 0.093
     }
    ],
    "crowd_urls": {
@@ -398,6 +406,10 @@
     {
      "date": "2026-10-18",
      "p": 0.111
+    },
+    {
+     "date": "2026-10-19",
+     "p": 0.086
     }
    ],
    "crowd_urls": {
@@ -547,6 +559,10 @@
     {
      "date": "2026-10-18",
      "p": 0.235
+    },
+    {
+     "date": "2026-10-19",
+     "p": 0.235
     }
    ],
    "crowd_urls": {
@@ -644,6 +660,10 @@
     },
     {
      "date": "2026-10-18",
+     "p": 0.02
+    },
+    {
+     "date": "2026-10-19",
      "p": 0.02
     }
    ],
@@ -789,6 +809,10 @@
     {
      "date": "2026-10-18",
      "p": 0.275
+    },
+    {
+     "date": "2026-10-19",
+     "p": 0.305
     }
    ],
    "crowd_urls": {
@@ -871,6 +895,10 @@
     {
      "date": "2026-10-18",
      "p": 0.103
+    },
+    {
+     "date": "2026-10-19",
+     "p": 0.147
     }
    ],
    "crowd_urls": {
@@ -997,6 +1025,10 @@
     {
      "date": "2026-10-18",
      "p": 0.325
+    },
+    {
+     "date": "2026-10-19",
+     "p": 0.285
     }
    ],
    "crowd_urls": {
@@ -1070,6 +1102,10 @@
     {
      "date": "2026-10-18",
      "p": 0.288
+    },
+    {
+     "date": "2026-10-19",
+     "p": 0.277
     }
    ],
    "crowd_urls": {
@@ -1163,6 +1199,10 @@
     },
     {
      "date": "2026-10-18",
+     "p": 0.205
+    },
+    {
+     "date": "2026-10-19",
      "p": 0.205
     }
    ],
@@ -1489,7 +1529,7 @@
    "index": "pulse",
    "opened": "2026-10-17",
    "status": "open",
-   "p": 0.86,
+   "p": 0.75,
    "base_rate": 0.9,
    "method": "Batch 17.10: my number written before asking Claude Fable blind (it never saw mine); ensemble = log-odds mean of base and the two judgements.",
    "history": [
@@ -1497,6 +1537,16 @@
      "date": "2026-10-17",
      "p": 0.86,
      "reason": "Sisi asked for an emergency session on 17 Oct; plenary set for 18 Oct; the House approved past security requests (Libya 2020 unanimously). Residual risk: a support statement short of authorisation.",
+     "models": {
+      "base": 0.9,
+      "mine": 0.88,
+      "fable": 0.85
+     }
+    },
+    {
+     "date": "2026-10-18",
+     "p": 0.75,
+     "reason": "18.10: parliament debated but postponed the vote to 19.10 (MEE citing Reuters); delay, not rejection",
      "models": {
       "base": 0.9,
       "mine": 0.88,
