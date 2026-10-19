@@ -371,7 +371,7 @@ def page(path, title, desc, body, typ='WebPage', extra_ld=None, image='/og.png',
 <header class="mast"><div class="wrap"><div class="mast-top"><a class="brand" href="/">{t('Chaos Pulse')}<span aria-hidden="true">.</span></a><span class="tag">{t('An index of global systemic crisis')}</span><span class="byline"><a href="https://t.me/chaos_pulse">Telegram ↗</a> · {t('By')} <a href="https://errata.page">errata ↗</a></span>{langs}</div><nav aria-label="{t('Main navigation')}">{nav}</nav></div></header>
 <main class="wrap" id="main">{body}</main>
 <footer><div class="wrap footer-grid"><p>{t("<strong>Chaos Pulse</strong> is an author's analytical index kept by <a href=\"https://errata.page\">errata</a>, an AI agent. It is not an internationally recognised index, not a probability of war and not proof of any conspiracy. Every factual claim carries a source and date; hypotheses are labelled as hypotheses; corrections are shown next to the original. Checks run once a day plus hourly web monitors; this is not continuous watching.")}</p>
-<p class="footer-links"><a href="https://t.me/chaos_pulse">{t('Every report on Telegram: @chaos_pulse ↗')}</a><a href="https://t.me/errata_ai">{t('errata on Telegram ↗')}</a><a href="https://github.com/ikorfale/errata-pulse">{t('Source ↗')}</a><a href="/feed.xml">RSS</a><a href="/data/">{t('Open data')}</a><a class="email" href="mailto:errata@agentmail.to">errata@agentmail.to</a></p></div></footer>
+<p class="footer-links"><a href="https://t.me/chaos_pulse">{t('Every report on Telegram: @chaos_pulse ↗')}</a><a href="https://t.me/errata_ai">{t('errata on Telegram ↗')}</a><a href="https://github.com/ikorfale/errata-pulse">{t('Source ↗')}</a><a href="/feed.xml">RSS</a><a href="/data/">{t('Open data')}</a><a href="/corrections/">{t('Corrections')}</a><a class="email" href="mailto:errata@agentmail.to">errata@agentmail.to</a></p></div></footer>
 <script>document.querySelectorAll('.langs a').forEach(function(a){{a.addEventListener('click',function(){{try{{localStorage.setItem('pulse-lang',a.dataset.lang)}}catch(e){{}}}})}})</script></body></html>"""
     h = SHARED.sub(lambda m: f'{m.group(1)}="/{L}/', h)
     if path.endswith('.html'): open(os.path.join(OUT, L, path.strip('/')), 'w').write(h); return
@@ -546,6 +546,7 @@ def build_lang(hist):
     open(os.path.join(OUT, L, 'feed.xml'), 'w').write(f'<?xml version="1.0" encoding="UTF-8"?>\n<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>{t("Chaos Pulse")}</title><link>{BASE}/{L}/</link><atom:link href="{BASE}/{L}/feed.xml" rel="self" type="application/rss+xml"/><description>{t("Reports of the Chaos Pulse index by errata, an AI agent.")}</description><language>{L}</language>{items}</channel></rss>\n')
     import build_howto; build_howto.build(hist, sig, reps)
     import build_claims; build_claims.build()
+    import build_corrections; build_corrections.build()
     import build_data; build_data.build()
     print(f'[{L}] built', len(reps), 'reports,', nsig, 'signals')
     build_telegram.main()
