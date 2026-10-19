@@ -5,7 +5,7 @@
 // Cached at the edge for 60 s, so Telegram sees at most a few requests a minute whatever the traffic.
 const CHANNELS = ['radarrussiia', 'locatorru'];
 const UA = 'errata-alerts/1.0 (AI agent; https://pulse.errata.page/alerts/; errata@agentmail.to)';
-const WINDOW_H = 12, STALE_H = 4, MAX_PAGES = 5;
+const WINDOW_H = 12, STALE_H = 4, MAX_PAGES = 26, BATCH = 5;
 // region stems; M = needs a region word (область/край/...) in the same segment, so a town of the same name is skipped
 const REG = [
   ['RU-MOW', /московск\S*\s+обл|подмосков/, 0], ['RU-MOS', /(^|[^а-яё])москв[аеуы]([^а-яё]|$)/, 0],
@@ -70,25 +70,41 @@ function parsePage(html) {
   }
   return posts;
 }
+// A busy night fills 12 h with 300-420 posts per channel (audit 19.10: up to 21 pages), and a 5-page cap dropped
+// alerts declared earlier that night. Pages are fetched in parallel batches: post ids run consecutively, so
+// before=newest-20k lands on page k (overlaps are deduplicated, a deleted post only shifts a page, never leaves a gap).
+async function page(ch, before) {
+  const r = await fetch(`https://t.me/s/${ch}` + (before ? `?before=${before}` : ''), { headers: { 'User-Agent': UA } });
+  if (!r.ok) throw new Error(`${ch} ${r.status}`);
+  return parsePage(await r.text());
+}
 async function channel(ch, since) {
-  let url = `https://t.me/s/${ch}`, all = [], pages = 0;
-  while (pages++ < MAX_PAGES) {
-    const r = await fetch(url, { headers: { 'User-Agent': UA } });
-    if (!r.ok) throw new Error(`${ch} ${r.status}`);
-    const p = parsePage(await r.text()); if (!p.length) break;
-    all = all.concat(p.map(x => ({ ...x, ch }))); const oldest = Math.min(...p.map(x => x.id));
-    if (Math.min(...p.map(x => x.ts)) < since) break;
-    url = `https://t.me/s/${ch}?before=${oldest}`;
+  const first = await page(ch); if (!first.length) return [];
+  const seen = new Map(first.map(x => [x.id, { ...x, ch }])); let lo = Math.min(...first.map(x => x.id)), done = Math.min(...first.map(x => x.ts)) < since;
+  for (let k = 1; !done && k < MAX_PAGES; k += BATCH) {
+    const befores = []; for (let j = 0; j < BATCH && k + j < MAX_PAGES; j++) befores.push(lo - 20 * j);
+    const got = await Promise.all(befores.map(b => page(ch, b)));
+    for (const g of got) for (const x of g) seen.set(x.id, { ...x, ch });
+    const all = got.flat(); if (!all.length) break;
+    lo = Math.min(...all.map(x => x.id)); done = Math.min(...all.map(x => x.ts)) < since;
   }
-  return all;
+  return [...seen.values()];
 }
 // fold posts (oldest first) into region states; also a 10-minute series of how many regions were under alert
 function fold(posts, now) {
   const st = {}, series = [], clears = {}; posts.sort((a, b) => a.ts - b.ts);
   const BIN = 600e3, t0 = now - WINDOW_H * 3600e3; let bin = Math.floor(t0 / BIN) * BIN, i = 0;
   const count = t => Object.values(st).filter(s => (s.uav || s.missile) && t - s.upd < STALE_H * 3600e3).length;
-  const apply = p => {
-    const c = classify(p.text); if (!c) return; let rs = regions(p.text);
+  // a post can carry several announcements in blank-line separated paragraphs ("Тульская - отбой ракетной опасности" /
+  // "Курская, Орловская - ракетная опасность сохраняется"): read them apart when each one names a region and a status
+  const parts = p => { const ch = p.text.split(/\n\s*\n/).filter(x => classify(x) && regions(x).length);
+                       return ch.length > 1 ? ch.map(text => ({ ...p, text })) : [p]; };
+  const apply = p => parts(p).forEach(apply1);
+  const apply1 = p => {
+    const c = classify(p.text); if (!c) return;
+    // "Отбой ... На территории региона опасность сохраняется": an all-clear for some towns, the region stays under alert
+    if (c.clear && /(территори\S*\s+(региона|области|края|республики)|в\s+регионе)\s+опасност\S*\s+сохраня/.test(p.text.toLowerCase())) return;
+    let rs = regions(p.text);
     if (!rs.length && c.clear && /(всем|ранее)\s+(ранее\s+)?объявленн/.test(p.text.toLowerCase())) rs = Object.keys(st).filter(k => st[k].by.has(p.ch));
     if (!rs.length) return;
     for (const iso of rs) {
@@ -123,7 +139,7 @@ module.exports = async (req, res) => {
   try {
     const out = await build();
     res.setHeader('Content-Type', 'application/json; charset=utf-8');
-    res.setHeader('Cache-Control', 'public, max-age=30, s-maxage=60, stale-while-revalidate=120');
+    res.setHeader('Cache-Control', 'public, max-age=60, s-maxage=90, stale-while-revalidate=180');
     res.setHeader('Access-Control-Allow-Origin', '*');
     res.statusCode = 200; res.end(JSON.stringify(out));
   } catch (e) {

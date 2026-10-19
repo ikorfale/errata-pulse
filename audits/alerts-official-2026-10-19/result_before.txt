@@ -1,0 +1,11 @@
+RU-VOR steps 444  agree 366 (82%)  missed 78 (390 min)  false 0 (0 min)  onset lag min [2]  clear lag min [2, 3]
+RU-TUL steps 444  agree 410 (92%)  missed 34 (170 min)  false 0 (0 min)  onset lag min [3]  clear lag min [2, 2]
+RU-PNZ steps 444  agree 417 (94%)  missed 1 (5 min)  false 26 (130 min)  onset lag min [1]  clear lag min [4]
+RU-VOR missed:absent 10-17T22:45 -> 10-18T02:55 255 min
+RU-VOR missed:absent 10-19T00:55 -> 10-19T03:05 135 min
+RU-TUL missed:absent 10-17T22:10 -> 10-17T22:15 10 min
+RU-TUL missed:stale 10-18T02:20 -> 10-18T02:55 40 min
+RU-TUL missed:absent 10-18T03:00 -> 10-18T04:55 120 min
+RU-PNZ false 10-17T21:00 -> 10-17T22:05 70 min
+RU-PNZ false 10-18T18:10 -> 10-18T19:05 60 min
+RU-PNZ missed:absent 10-19T01:10 -> 10-19T01:10 5 min

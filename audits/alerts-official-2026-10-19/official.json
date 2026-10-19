@@ -1,0 +1,4 @@
+{"_note": "Region-level regimes declared in official channels, UTC, transcribed from posts_<ch>.json (t.me/s previews fetched 2026-10-19 ~09:45 UTC). Voronezh 19.10 00:44 cancels only 'immediate danger' in districts; the region UAV regime ends 03:07.",
+ "RU-VOR": {"ch": "gusev_36", "uav": [["2026-10-17T17:02Z", "2026-10-18T02:58Z"], ["2026-10-18T16:13Z", "2026-10-19T03:07Z"]], "missile": [["2026-10-17T20:55Z", "2026-10-17T22:05Z"]]},
+ "RU-TUL": {"ch": "dmilyaev", "uav": [["2026-10-17T18:00Z", "2026-10-18T04:58Z"], ["2026-10-18T16:27Z", "2026-10-19T01:08Z"]], "missile": [["2026-10-17T20:54Z", "2026-10-17T22:54Z"]]},
+ "RU-PNZ": {"ch": "omelnichenko", "uav": [["2026-10-18T19:09Z", "2026-10-19T01:11Z"]], "missile": []}}
