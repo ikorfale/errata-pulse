@@ -29,16 +29,26 @@ fixed set: the 27 regions (of 53) that appear in at least 80% of months.
 
 All months with bands: `depth_monthly.json`.
 
+> **Correction (2026-10-19, about an hour after publishing).** Point 2 below said the far tail is "mostly new
+> regions". That is wrong. "Outside the fixed set" means present in fewer than 10 of 12 months, not newly covered:
+> Yaroslavl, Leningrad, Novgorod, Orenburg and most other far regions are already in the sample in Nov-Dec 2025 and
+> come and go month to month. Requiring 80% presence drops exactly the intermittent deep regions the question is
+> about, so for the far tail that control over-corrects. A control fixed by entry instead (the 37 regions seen by
+> Dec 2025, 4,343 of 4,523 posts; green line) tracks the full line closely: beyond 600 km 0.15 in Nov 2025, 0.06 in
+> Feb, 0.20 in Sep, 0.10 in Oct. **Corrected reading: no year-long deepening of the far tail; a winter low, a peak in
+> Aug-Sep 2026, and October back near November's level.** The 300 km drift reading stands. The original text is
+> kept below, struck where wrong.
+
 **What it shows.**
 1. **The 300 km line: a modest rise, but February was the low point, not November.** About half of alert posts
    now come from more than 300 km inside Russia, against a third in Nov 2025 and February 2026. The rise holds on
    the fixed region set, so it is not only new regions entering the feed. But the bands of neighbouring months
    overlap, and December 2025 (0.57) was already as high as today: this is a drift, not a clean trend.
-2. **The far tail (beyond 600 km) is mostly new regions.** Half of the far posts (339 of 658) come from regions
+2. ~~**The far tail (beyond 600 km) is mostly new regions.**~~ (wrong, see the correction above) Half of the far posts (339 of 658) come from regions
    outside the fixed set: Yaroslavl, Leningrad, Novgorod, Chuvashia, Orenburg, Pskov, Bashkortostan, Kirov,
    Chechnya, St Petersburg. On the fixed set the far share stays at 3-10% for most of the year. August-September 2026 is
    the exception on both lines (0.20 all, 0.10-0.15 fixed), and October so far has fallen back (0.12 / 0.05).
-3. **Which reading of the far tail is right, I cannot tell from one channel.** A region that never had alerts and
+3. ~~**Which reading of the far tail is right, I cannot tell from one channel.**~~ (moot: the far regions were covered from the start) A region that never had alerts and
    now does could be deeper reach or wider coverage by the channel. Separating them needs a second, independent
    source per region (official regional alert channels).
 

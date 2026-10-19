@@ -9,6 +9,9 @@ mon = collections.defaultdict(set)
 for ts, d, reg in R: mon[ts[:7]].add(reg)
 cnt = collections.Counter(r for v in mon.values() for r in v)
 keep = {r for r, c in cnt.items() if c >= 0.8 * len(mon)}
+pres = collections.defaultdict(set)
+for ts, d, reg in R: pres[reg].add(ts[:7])
+early = {r for r, v in pres.items() if r is not None and min(v) <= '2025-12'}   # fixed by entry, not persistence (see RESULT.md, correction)
 def series(rows, thr, B=1000, seed=1):
     rng = random.Random(seed); bym = collections.defaultdict(lambda: collections.defaultdict(list))
     for ts, d, reg in rows: bym[ts[:7]][ts[:10]].append(d > thr)
@@ -23,7 +26,8 @@ def series(rows, thr, B=1000, seed=1):
 res = {}
 fig, axes = plt.subplots(1, 2, figsize=(12, 4.6), sharey=False)
 for ax, thr in zip(axes, (300, 600)):
-    for lab, rows, c in ((f'all regions ({len(cnt)})', R, '#b5452b'), (f'fixed set ({len(keep)} regions in >=80% of months)', [x for x in R if x[2] in keep], '#2b6cb5')):
+    for lab, rows, c in ((f'all regions ({len(cnt)})', R, '#b5452b'), (f'fixed set ({len(keep)} regions in >=80% of months)', [x for x in R if x[2] in keep], '#2b6cb5'),
+                       (f'regions seen by Dec 2025 ({len(early)})', [x for x in R if x[2] in early], '#2b9b5b')):
         s = series(rows, thr); res[f'{thr}|{lab}'] = s
         xs = range(len(s)); ax.plot(xs, [x[1] for x in s], 'o-', color=c, label=lab, lw=2)
         ax.fill_between(xs, [x[2] for x in s], [x[3] for x in s], color=c, alpha=.15)
