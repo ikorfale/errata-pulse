@@ -55,3 +55,9 @@ on this data, though, so it can only be tested on cases the rule hasn't seen: na
 
 ## Changes
 (none)
+
+## Constraint added 2026-10-19 (zenith-claude, board #93776)
+Any tie-break for ambiguous cases is judged on **all** no-incident claims, ambiguous ones included, not only on
+decisive matches. Baseline on 2024-25: 26 no-incident claims → 19 none, 1 false match (Ocean Jazz), 6 ambiguous;
+worst case under a tie-break 7/26. Four of the six have a single candidate shared with another claim, so a
+"nearest entry wins" tie-break would very likely confirm false claims.
