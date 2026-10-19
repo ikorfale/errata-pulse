@@ -1,0 +1,1644 @@
+{
+ "Московская область": {
+  "governor": {
+   "handle": "vorobiev_live",
+   "url": "https://t.me/vorobiev_live",
+   "title": "Воробьёв LIVE",
+   "subscribers": "117K",
+   "last_post": "2026-10-18",
+   "last_post_matching_opasnost": "2023-09-20"
+  },
+  "mchs": {
+   "handle": "mchs_mo",
+   "url": "https://t.me/mchs_mo",
+   "title": "МЧС Московской области",
+   "subscribers": "5.17K",
+   "last_post": "2026-10-18",
+   "verified_via": "channel description names ГУ МЧС России by region",
+   "max": {
+    "name": "МЧС Московской области (MAX)",
+    "url": "https://max.ru/id5036062440_gos",
+    "title_seen": "МЧС Московской области"
+   }
+  },
+  "other": [
+   {
+    "name": "РСЧС Московская область (MAX)",
+    "url": "https://max.ru/id5027285419_gos",
+    "title_seen": "РСЧС Московская область"
+   }
+  ],
+  "note": ""
+ },
+ "Москва": {
+  "governor": {
+   "handle": "mos_sobyanin",
+   "url": "https://t.me/mos_sobyanin",
+   "title": "Мэр Москвы Сергей Собянин",
+   "subscribers": "368K",
+   "last_post": "2026-10-18",
+   "last_post_matching_opasnost": "2025-11-07"
+  },
+  "mchs": {
+   "handle": "mchsmsk",
+   "url": "https://t.me/mchsmsk",
+   "title": "МЧС Москвы",
+   "subscribers": "6.59K",
+   "last_post": "2026-05-09",
+   "verified_via": "channel description names ГУ МЧС России by region",
+   "max": {
+    "name": "id7710566322_gos (MAX)",
+    "url": "https://max.ru/id7710566322_gos",
+    "title_seen": null,
+    "note": "link taken from the official MChS site; title not confirmed (MAX page did not answer)"
+   },
+   "telegram_inactive_since": "2026-05-09"
+  },
+  "other": [
+   {
+    "name": "No public regional air-raid alert channel found; the mayor posts about drones shot down on approach to Moscow, not alert/all-clear signals",
+    "url": null
+   }
+  ],
+  "note": "Sobyanin's channel reports drones downed on approach to Moscow; it rarely uses the words 'опасность'. MChS Moscow Telegram quiet since May 2026, active in MAX."
+ },
+ "Воронежская область": {
+  "governor": {
+   "handle": "gusev_36",
+   "url": "https://t.me/gusev_36",
+   "title": "Гусев",
+   "subscribers": "128K",
+   "last_post": "2026-10-19",
+   "last_post_matching_opasnost": "2026-10-19"
+  },
+  "mchs": {
+   "handle": "mchs36",
+   "url": "https://t.me/mchs36",
+   "title": "МЧС Воронежской области",
+   "subscribers": "27.4K",
+   "last_post": "2026-07-29",
+   "verified_via": "channel description names ГУ МЧС России by region",
+   "max": {
+    "name": "МЧС Воронежской области (MAX)",
+    "url": "https://max.ru/mchs36",
+    "title_seen": "МЧС Воронежской области"
+   },
+   "telegram_inactive_since": "2026-07-29"
+  },
+  "other": [],
+  "note": ""
+ },
+ "Тульская область": {
+  "governor": {
+   "handle": "dmilyaev",
+   "url": "https://t.me/dmilyaev",
+   "title": "Дмитрий Миляев",
+   "subscribers": "60.3K",
+   "last_post": "2026-10-19",
+   "last_post_matching_opasnost": "2026-10-19"
+  },
+  "mchs": {
+   "handle": "mchs71tula",
+   "url": "https://t.me/mchs71tula",
+   "title": "МЧС Тульской области",
+   "subscribers": "2.54K",
+   "last_post": "2026-10-18",
+   "verified_via": "link on official site 71.mchs.gov.ru",
+   "max": {
+    "name": "МЧС Тульской области (MAX)",
+    "url": "https://max.ru/id7106063211_gos",
+    "title_seen": "МЧС Тульской области"
+   }
+  },
+  "other": [],
+  "note": ""
+ },
+ "Калужская область": {
+  "governor": {
+   "handle": "Shapsha_VV",
+   "url": "https://t.me/Shapsha_VV",
+   "title": "Владислав Шапша",
+   "subscribers": "45.1K",
+   "last_post": "2026-10-18",
+   "last_post_matching_opasnost": "2026-10-18"
+  },
+  "mchs": {
+   "handle": "mchs40",
+   "url": "https://t.me/mchs40",
+   "title": "МЧС Калужской области",
+   "subscribers": "1.48K",
+   "last_post": "2026-04-09",
+   "verified_via": "link on official site 40.mchs.gov.ru",
+   "max": {
+    "name": "МЧС Калужской области (MAX)",
+    "url": "https://max.ru/id4027066486_gos",
+    "title_seen": "МЧС Калужской области"
+   },
+   "telegram_inactive_since": "2026-04-09"
+  },
+  "other": [
+   {
+    "name": "РСЧС Калужская область (MAX)",
+    "url": "https://max.ru/RSCHS_Kaluga",
+    "title_seen": "РСЧС Калужская область"
+   }
+  ],
+  "note": ""
+ },
+ "Краснодарский край": {
+  "governor": {
+   "handle": "kondratyevvi",
+   "url": "https://t.me/kondratyevvi",
+   "title": "Вениамин Кондратьев",
+   "subscribers": "59.2K",
+   "last_post": "2026-10-18",
+   "last_post_matching_opasnost": "2026-08-25"
+  },
+  "mchs": {
+   "handle": "mchs_kuban",
+   "url": "https://t.me/mchs_kuban",
+   "title": "МЧС Краснодарского края",
+   "subscribers": "7.15K",
+   "last_post": "2026-06-15",
+   "verified_via": "link on official site 23.mchs.gov.ru",
+   "max": {
+    "name": "МЧС Краснодарского края (MAX)",
+    "url": "https://max.ru/id2309090290_gos",
+    "title_seen": "МЧС Краснодарского края"
+   },
+   "telegram_inactive_since": "2026-06-15"
+  },
+  "other": [
+   {
+    "name": "Оперативный штаб - Краснодарский край (Telegram)",
+    "url": "https://t.me/opershtab23",
+    "title_seen": "Оперативный штаб - Краснодарский край",
+    "last_post": "2026-10-18"
+   }
+  ],
+  "note": ""
+ },
+ "Ростовская область": {
+  "governor": {
+   "handle": "Yuri_Slusar",
+   "url": "https://t.me/Yuri_Slusar",
+   "title": "Юрий Слюсарь",
+   "subscribers": "166K",
+   "last_post": "2026-10-18",
+   "last_post_matching_opasnost": "2026-10-17"
+  },
+  "mchs": {
+   "handle": "mchs_rostov",
+   "url": "https://t.me/mchs_rostov",
+   "title": "МЧС Ростовской области",
+   "subscribers": "6.52K",
+   "last_post": "2026-03-23",
+   "verified_via": "channel description names ГУ МЧС России by region",
+   "max": {
+    "name": "МЧС Ростовской области (MAX)",
+    "url": "https://max.ru/id6164228703_gos",
+    "title_seen": "МЧС Ростовской области"
+   },
+   "telegram_inactive_since": "2026-03-23"
+  },
+  "other": [],
+  "note": ""
+ },
+ "Орловская область": {
+  "governor": {
+   "handle": "Klychkov_Andrey",
+   "url": "https://t.me/Klychkov_Andrey",
+   "title": "Губернатор Клычков",
+   "subscribers": "66.8K",
+   "last_post": "2026-07-03",
+   "last_post_matching_opasnost": "2026-05-15",
+   "telegram_inactive_since": "2026-07-03"
+  },
+  "mchs": {
+   "handle": "mchs_orel",
+   "url": "https://t.me/mchs_orel",
+   "title": "МЧС Орловской области",
+   "subscribers": "9.93K",
+   "last_post": "2026-04-02",
+   "verified_via": "link on official site 57.mchs.gov.ru",
+   "max": {
+    "name": "МЧС Орловской области (MAX)",
+    "url": "https://max.ru/id5753035851_gos",
+    "title_seen": "МЧС Орловской области"
+   },
+   "telegram_inactive_since": "2026-04-02"
+  },
+  "other": [
+   {
+    "name": "Губернатор Клычков (MAX)",
+    "url": "https://max.ru/a_klychkov",
+    "title_seen": "Губернатор Клычков"
+   }
+  ],
+  "note": "Governor stopped posting in Telegram on 1 April 2026 and moved to MAX (Kommersant, 9 Apr 2026)."
+ },
+ "Рязанская область": {
+  "governor": {
+   "handle": "pavelmalkov_official",
+   "url": "https://t.me/pavelmalkov_official",
+   "title": "Павел Малков",
+   "subscribers": "30.2K",
+   "last_post": "2026-10-18",
+   "last_post_matching_opasnost": "2026-01-27"
+  },
+  "mchs": {
+   "handle": "GUmchs62",
+   "url": "https://t.me/GUmchs62",
+   "title": "МЧС Рязанской области",
+   "subscribers": "2.08K",
+   "last_post": "2026-03-17",
+   "verified_via": "link on official site 62.mchs.gov.ru",
+   "max": {
+    "name": "МЧС Рязанской области (MAX)",
+    "url": "https://max.ru/id6234010196_gos",
+    "title_seen": "МЧС Рязанской области"
+   },
+   "telegram_inactive_since": "2026-03-17"
+  },
+  "other": [
+   {
+    "name": "РСЧС Рязанская область (MAX)",
+    "url": "https://max.ru/RSCHS_Ryazan",
+    "title_seen": "РСЧС Рязанская область"
+   }
+  ],
+  "note": ""
+ },
+ "Липецкая область": {
+  "governor": {
+   "handle": "igor_artamonov48",
+   "url": "https://t.me/igor_artamonov48",
+   "title": "Игорь Артамонов",
+   "subscribers": "185K",
+   "last_post": "2026-10-18",
+   "last_post_matching_opasnost": "2026-07-18"
+  },
+  "mchs": {
+   "handle": "gumchs48",
+   "url": "https://t.me/gumchs48",
+   "title": "МЧС Липецкой области",
+   "subscribers": "13.8K",
+   "last_post": "2026-07-31",
+   "verified_via": "link on official site 48.mchs.gov.ru",
+   "max": {
+    "name": "МЧС Липецкой области (MAX)",
+    "url": "https://max.ru/gumchs48",
+    "title_seen": "МЧС Липецкой области"
+   },
+   "telegram_inactive_since": "2026-07-31"
+  },
+  "other": [
+   {
+    "name": "112 Официальный канал оповещения Липецкой области (MAX)",
+    "url": "https://max.ru/lipsignal",
+    "title_seen": "112 Официальный канал оповещения Липецкой области"
+   },
+   {
+    "name": "Two-level alert system explained by ГУ МЧС по Липецкой области (yellow 'Воздушная опасность' / red 'Угроза атаки БПЛА')",
+    "url": "https://48.mchs.gov.ru/deyatelnost/press-centr/novosti/5485315"
+   }
+  ],
+  "note": "Two-level system: yellow 'Воздушная опасность', red 'Угроза атаки БПЛА'; announced via sirens, push, and the official '112' MAX channel."
+ },
+ "Ярославская область": {
+  "governor": {
+   "handle": "evraevmikhail",
+   "url": "https://t.me/evraevmikhail",
+   "title": "Михаил Евраев",
+   "subscribers": "18.4K",
+   "last_post": "2026-10-18",
+   "last_post_matching_opasnost": "2026-10-17"
+  },
+  "mchs": {
+   "handle": "mchsyaroslavl",
+   "url": "https://t.me/mchsyaroslavl",
+   "title": "МЧС Ярославской области",
+   "subscribers": "1.53K",
+   "last_post": "2026-05-22",
+   "verified_via": "link on official site 76.mchs.gov.ru",
+   "max": {
+    "name": "МЧС Ярославской области (MAX)",
+    "url": "https://max.ru/id7604071046_gos",
+    "title_seen": "МЧС Ярославской области"
+   },
+   "telegram_inactive_since": "2026-05-22"
+  },
+  "other": [],
+  "note": ""
+ },
+ "Смоленская область": {
+  "governor": {
+   "handle": "anohin67",
+   "url": "https://t.me/anohin67",
+   "title": "Василий Анохин",
+   "subscribers": "41.4K",
+   "last_post": "2026-10-18",
+   "last_post_matching_opasnost": "2026-10-18"
+  },
+  "mchs": {
+   "handle": "mchs_smolensk",
+   "url": "https://t.me/mchs_smolensk",
+   "title": "МЧС Смоленской области",
+   "subscribers": "3.03K",
+   "last_post": "2026-06-15",
+   "verified_via": "channel description names ГУ МЧС России by region",
+   "max": {
+    "name": "МЧС Смоленской области (MAX)",
+    "url": "https://max.ru/mchs_smolensk",
+    "title_seen": "МЧС Смоленской области"
+   },
+   "telegram_inactive_since": "2026-06-15"
+  },
+  "other": [],
+  "note": ""
+ },
+ "Республика Адыгея": {
+  "governor": {
+   "handle": "muratkumpilov",
+   "url": "https://t.me/muratkumpilov",
+   "title": "Мурат Кумпилов",
+   "subscribers": "18.4K",
+   "last_post": "2026-10-18",
+   "last_post_matching_opasnost": "2026-04-26"
+  },
+  "mchs": {
+   "handle": "mchs0101",
+   "url": "https://t.me/mchs0101",
+   "title": "МЧС Республики Адыгея",
+   "subscribers": "2.44K",
+   "last_post": "2026-10-08",
+   "verified_via": "link on official site 01.mchs.gov.ru",
+   "max": {
+    "name": "МЧС Республики Адыгея (MAX)",
+    "url": "https://max.ru/id105043700_gos",
+    "title_seen": "МЧС Республики Адыгея"
+   }
+  },
+  "other": [],
+  "note": ""
+ },
+ "Владимирская область": {
+  "governor": {
+   "handle": "avdeev_o_vazhnom",
+   "url": "https://t.me/avdeev_o_vazhnom",
+   "title": "Авдеев. О важном",
+   "subscribers": "18K",
+   "last_post": "2026-10-17",
+   "last_post_matching_opasnost": "2026-08-03"
+  },
+  "mchs": {
+   "handle": "mchs33",
+   "url": "https://t.me/mchs33",
+   "title": "МЧС Владимирской области",
+   "subscribers": "1.63K",
+   "last_post": "2026-04-22",
+   "verified_via": "channel description names ГУ МЧС России by region",
+   "max": {
+    "name": "МЧС Владимирской области (MAX)",
+    "url": "https://max.ru/id3328103193_gos",
+    "title_seen": "МЧС Владимирской области"
+   },
+   "telegram_inactive_since": "2026-04-22"
+  },
+  "other": [
+   {
+    "name": "РСЧС Владимирская область (MAX)",
+    "url": "https://max.ru/id3328480152_gos",
+    "title_seen": "РСЧС Владимирская область"
+   }
+  ],
+  "note": ""
+ },
+ "Пензенская область": {
+  "governor": {
+   "handle": "omelnichenko",
+   "url": "https://t.me/omelnichenko",
+   "title": "Мельниченко",
+   "subscribers": "63.2K",
+   "last_post": "2026-10-19",
+   "last_post_matching_opasnost": "2026-10-19"
+  },
+  "mchs": {
+   "handle": "mchs58",
+   "url": "https://t.me/mchs58",
+   "title": "МЧС Пензенской области",
+   "subscribers": "3.55K",
+   "last_post": "2026-04-09",
+   "verified_via": "link on official site 58.mchs.gov.ru",
+   "max": {
+    "name": "МЧС Пензенской области (MAX)",
+    "url": "https://max.ru/id5836013273_gos",
+    "title_seen": "МЧС Пензенской области"
+   },
+   "telegram_inactive_since": "2026-04-09"
+  },
+  "other": [],
+  "note": ""
+ },
+ "Ленинградская область": {
+  "governor": {
+   "handle": "drozdenko_au_lo",
+   "url": "https://t.me/drozdenko_au_lo",
+   "title": "Александр ДроZденко",
+   "subscribers": "84.6K",
+   "last_post": "2026-10-18",
+   "last_post_matching_opasnost": "2026-10-18"
+  },
+  "mchs": {
+   "handle": "gumchslo",
+   "url": "https://t.me/gumchslo",
+   "title": "МЧС Ленинградской области",
+   "subscribers": "2.65K",
+   "last_post": "2026-10-18",
+   "verified_via": "channel description names ГУ МЧС России by region",
+   "max": {
+    "name": "МЧС Ленинградской области (MAX)",
+    "url": "https://max.ru/id7839306722_gos",
+    "title_seen": "МЧС Ленинградской области"
+   }
+  },
+  "other": [],
+  "note": ""
+ },
+ "Санкт-Петербург": {
+  "governor": {
+   "handle": "a_beglov",
+   "url": "https://t.me/a_beglov",
+   "title": "Александр Беглов",
+   "subscribers": "93.7K",
+   "last_post": "2026-10-18",
+   "last_post_matching_opasnost": "2026-10-18"
+  },
+  "mchs": {
+   "handle": "mchspetersburg",
+   "url": "https://t.me/mchspetersburg",
+   "title": "МЧС Санкт-Петербурга",
+   "subscribers": "5.93K",
+   "last_post": "2026-10-17",
+   "verified_via": "link on official site 78.mchs.gov.ru",
+   "max": {
+    "name": "МЧС Санкт-Петербурга (MAX)",
+    "url": "https://max.ru/mchs_st_peterburg",
+    "title_seen": "МЧС Санкт-Петербурга"
+   }
+  },
+  "other": [],
+  "note": "MChS also runs @mchs_st_petersburg ('Оперативный МЧС Петербурга', linked from 78.mchs.gov.ru), quiet since April 2026."
+ },
+ "Саратовская область": {
+  "governor": {
+   "handle": "busargin_r",
+   "url": "https://t.me/busargin_r",
+   "title": "Роман Бусаргин",
+   "subscribers": "120K",
+   "last_post": "2026-10-18",
+   "last_post_matching_opasnost": "2026-08-29"
+  },
+  "mchs": {
+   "handle": "mchs_64",
+   "url": "https://t.me/mchs_64",
+   "title": "МЧС Саратовской области",
+   "subscribers": "6.7K",
+   "last_post": "2026-04-09",
+   "verified_via": "link on official site 64.mchs.gov.ru",
+   "max": {
+    "name": "МЧС Саратовской области (MAX)",
+    "url": "https://max.ru/id6450604733_gos",
+    "title_seen": "МЧС Саратовской области"
+   },
+   "telegram_inactive_since": "2026-04-09"
+  },
+  "other": [],
+  "note": ""
+ },
+ "Ивановская область": {
+  "governor": null,
+  "mchs": {
+   "handle": "mchsivanovo",
+   "url": "https://t.me/mchsivanovo",
+   "title": "МЧС Ивановской области",
+   "subscribers": "2.71K",
+   "last_post": "2026-04-01",
+   "verified_via": "link on official site 37.mchs.gov.ru",
+   "max": {
+    "name": "МЧС Ивановской области (MAX)",
+    "url": "https://max.ru/id3702062557_gos",
+    "title_seen": "МЧС Ивановской области"
+   },
+   "telegram_inactive_since": "2026-04-01"
+  },
+  "other": [],
+  "note": "Governor Voskresensky has no Telegram channel (MAX only, per Vedomosti/Agentstvo); MAX handle not verified."
+ },
+ "Тамбовская область": {
+  "governor": {
+   "handle": "PervyshovEA",
+   "url": "https://t.me/PervyshovEA",
+   "title": "Евгений Первышов",
+   "subscribers": "15K",
+   "last_post": "2026-10-17",
+   "last_post_matching_opasnost": "2026-06-25"
+  },
+  "mchs": {
+   "handle": "gu_mchs_tambov",
+   "url": "https://t.me/gu_mchs_tambov",
+   "title": "МЧС Тамбовской области",
+   "subscribers": "1.58K",
+   "last_post": "2026-04-12",
+   "verified_via": "channel description names ГУ МЧС России by region",
+   "max": {
+    "name": "МЧС Тамбовской области (MAX)",
+    "url": "https://max.ru/id6829009430_gos",
+    "title_seen": "МЧС Тамбовской области"
+   },
+   "telegram_inactive_since": "2026-04-12"
+  },
+  "other": [],
+  "note": ""
+ },
+ "Самарская область": {
+  "governor": null,
+  "mchs": {
+   "handle": "mchs_samara",
+   "url": "https://t.me/mchs_samara",
+   "title": "МЧС Самарской области",
+   "subscribers": "9.14K",
+   "last_post": "2026-04-26",
+   "verified_via": "link on official site 63.mchs.gov.ru",
+   "max": {
+    "name": "МЧС Самарской области (MAX)",
+    "url": "https://max.ru/id6315800812_gos",
+    "title_seen": "МЧС Самарской области"
+   },
+   "telegram_inactive_since": "2026-04-26"
+  },
+  "other": [
+   {
+    "name": "Оперштаб. Самарская область (Telegram; former governor channel 'Федорищев. Официально', now run by the regional government press service)",
+    "url": "https://t.me/fedorishchev_official",
+    "title_seen": "Оперштаб. Самарская область",
+    "last_post": "2026-10-01"
+   },
+   {
+    "name": "Вячеслав Федорищев (MAX)",
+    "url": "https://max.ru/Fedorischev63",
+    "title_seen": "Вячеслав Федорищев"
+   },
+   {
+    "name": "Самарская область (regional government Telegram, linked from samregion.ru)",
+    "url": "https://t.me/SamarOblast",
+    "title_seen": "Самарская область"
+   }
+  ],
+  "note": "Governor's Telegram 'Федорищев. Официально' was renamed 'Оперштаб. Самарская область' and is run by the government press service; it posts 'БЕСПИЛОТНАЯ ОПАСНОСТЬ' / 'ОТБОЙ'. Governor himself is primarily in MAX."
+ },
+ "Республика Татарстан": {
+  "governor": {
+   "handle": "rustamminnikhanov",
+   "url": "https://t.me/rustamminnikhanov",
+   "title": "Рустам Минниханов",
+   "subscribers": "67.1K",
+   "last_post": "2026-10-18",
+   "last_post_matching_opasnost": "2024-11-13"
+  },
+  "mchs": {
+   "handle": "mchstatarstan",
+   "url": "https://t.me/mchstatarstan",
+   "title": "ГУ МЧС России по Республике Татарстан",
+   "subscribers": "3.19K",
+   "last_post": "2026-01-01",
+   "verified_via": "link on official site 16.mchs.gov.ru",
+   "max": {
+    "name": "ГУ МЧС России по Республике Татарстан (MAX)",
+    "url": "https://max.ru/mchs_tatarstan",
+    "title_seen": "ГУ МЧС России по Республике Татарстан"
+   },
+   "telegram_inactive_since": "2026-01-01"
+  },
+  "other": [],
+  "note": "Minnikhanov's channel rarely posts alerts; MChS Tatarstan Telegram quiet since Jan 2026 (MAX active)."
+ },
+ "Волгоградская область": {
+  "governor": null,
+  "mchs": {
+   "handle": "mchs_volgograd",
+   "url": "https://t.me/mchs_volgograd",
+   "title": "МЧС Волгоградской области",
+   "subscribers": "1.49K",
+   "last_post": "2026-04-13",
+   "verified_via": "link on official site 34.mchs.gov.ru",
+   "max": {
+    "name": "МЧС Волгоградской области (MAX)",
+    "url": "https://max.ru/id3444118546_gos",
+    "title_seen": "МЧС Волгоградской области"
+   },
+   "telegram_inactive_since": "2026-04-13"
+  },
+  "other": [
+   {
+    "name": "РСЧС Волгоградская область (MAX)",
+    "url": "https://max.ru/id3443079238_gos",
+    "title_seen": "РСЧС Волгоградская область"
+   }
+  ],
+  "note": "Governor Bocharov has no Telegram or MAX channel (Agentstvo, Mar 2026). Alerts go out via SMS and the official 'РСЧС Волгоградская область' MAX channel."
+ },
+ "Нижегородская область": {
+  "governor": {
+   "handle": "glebnikitin_nn",
+   "url": "https://t.me/glebnikitin_nn",
+   "title": "Глеб Никитин",
+   "subscribers": "48.6K",
+   "last_post": "2026-10-18",
+   "last_post_matching_opasnost": "2026-05-20"
+  },
+  "mchs": {
+   "handle": "mchs52",
+   "url": "https://t.me/mchs52",
+   "title": "МЧС Нижегородской области",
+   "subscribers": "4.06K",
+   "last_post": "2026-01-22",
+   "verified_via": "link on official site 52.mchs.gov.ru",
+   "max": {
+    "name": "МЧС Нижегородской области (MAX)",
+    "url": "https://max.ru/mchs52",
+    "title_seen": "МЧС Нижегородской области"
+   },
+   "telegram_inactive_since": "2026-01-22"
+  },
+  "other": [],
+  "note": ""
+ },
+ "Ульяновская область": {
+  "governor": {
+   "handle": "Russkih_Aleksey",
+   "url": "https://t.me/Russkih_Aleksey",
+   "title": "Алексей Русских",
+   "subscribers": "19.7K",
+   "last_post": "2026-10-18",
+   "last_post_matching_opasnost": "2026-10-15"
+  },
+  "mchs": {
+   "handle": "mchs_ulyanovsk",
+   "url": "https://t.me/mchs_ulyanovsk",
+   "title": "МЧС Ульяновской области",
+   "subscribers": "2.69K",
+   "last_post": "2026-05-24",
+   "verified_via": "link on official site 73.mchs.gov.ru",
+   "max": {
+    "name": "МЧС Ульяновской области (MAX)",
+    "url": "https://max.ru/id7325050261_gos",
+    "title_seen": "МЧС Ульяновской области"
+   },
+   "telegram_inactive_since": "2026-05-24"
+  },
+  "other": [],
+  "note": ""
+ },
+ "Тверская область": {
+  "governor": null,
+  "mchs": {
+   "handle": "mchs_tver_69",
+   "url": "https://t.me/mchs_tver_69",
+   "title": "МЧС Тверской области",
+   "subscribers": "2.66K",
+   "last_post": "2026-05-26",
+   "verified_via": "link on official site 69.mchs.gov.ru",
+   "max": {
+    "name": "МЧС Тверской области (MAX)",
+    "url": "https://max.ru/id6901066135_gos",
+    "title_seen": "МЧС Тверской области"
+   },
+   "telegram_inactive_since": "2026-05-26"
+  },
+  "other": [
+   {
+    "name": "Виталий Королев (MAX)",
+    "url": "https://max.ru/korolev",
+    "title_seen": "Виталий Королев"
+   }
+  ],
+  "note": "Acting governor Korolev has no Telegram channel; posts in MAX."
+ },
+ "Вологодская область": {
+  "governor": {
+   "handle": "filimonov_official",
+   "url": "https://t.me/filimonov_official",
+   "title": "Филимонов LIVE",
+   "subscribers": "53.5K",
+   "last_post": "2026-10-18",
+   "last_post_matching_opasnost": "2026-10-18"
+  },
+  "mchs": {
+   "handle": "mchs35",
+   "url": "https://t.me/mchs35",
+   "title": "МЧС Вологодской области",
+   "subscribers": "1.52K",
+   "last_post": "2026-02-19",
+   "verified_via": "channel description names ГУ МЧС России by region",
+   "max": {
+    "name": "МЧС Вологодской области (MAX)",
+    "url": "https://max.ru/id3525143533_gos",
+    "title_seen": "МЧС Вологодской области"
+   },
+   "telegram_inactive_since": "2026-02-19"
+  },
+  "other": [],
+  "note": ""
+ },
+ "Брянская область": {
+  "governor": {
+   "handle": "E_V_Kovalchuk",
+   "url": "https://t.me/E_V_Kovalchuk",
+   "title": "Егор Ковальчук",
+   "subscribers": "12.3K",
+   "last_post": "2026-10-18",
+   "last_post_matching_opasnost": "2026-10-04"
+  },
+  "mchs": {
+   "handle": "mchs_bryansk",
+   "url": "https://t.me/mchs_bryansk",
+   "title": "МЧС Брянской области",
+   "subscribers": "18.8K",
+   "last_post": "2026-04-09",
+   "verified_via": "link on official site 32.mchs.gov.ru",
+   "max": {
+    "name": "МЧС Брянской области (MAX)",
+    "url": "https://max.ru/mchs_bryansk",
+    "title_seen": "МЧС Брянской области"
+   },
+   "telegram_inactive_since": "2026-04-09"
+  },
+  "other": [],
+  "note": "Governor changed 13 May 2026 (Bogomaz -> acting governor Kovalchuk); old channel @avbogomaz no longer the governor's."
+ },
+ "Курская область": {
+  "governor": {
+   "handle": "Hinshtein",
+   "url": "https://t.me/Hinshtein",
+   "title": "Александр Хинштейн",
+   "subscribers": "214K",
+   "last_post": "2026-10-17",
+   "last_post_matching_opasnost": "2026-09-10"
+  },
+  "mchs": {
+   "handle": "mchs_46",
+   "url": "https://t.me/mchs_46",
+   "title": "МЧС Курской области",
+   "subscribers": "11.1K",
+   "last_post": "2026-04-30",
+   "verified_via": "link on official site 46.mchs.gov.ru",
+   "max": {
+    "name": "mchskursk46 (MAX)",
+    "url": "https://max.ru/mchskursk46",
+    "title_seen": null,
+    "note": "link taken from the official MChS site; title not confirmed (MAX page did not answer)"
+   },
+   "telegram_inactive_since": "2026-04-30"
+  },
+  "other": [
+   {
+    "name": "Оперштаб Курской области (Telegram)",
+    "url": "https://t.me/gubernator_46",
+    "title_seen": "Оперштаб Курской области 🇷🇺",
+    "last_post": "2026-10-18"
+   },
+   {
+    "name": "Курская область — regional government (Telegram)",
+    "url": "https://t.me/kurskadm",
+    "title_seen": "Курская область"
+   },
+   {
+    "name": "Курская область 🇷🇺 (MAX)",
+    "url": "https://max.ru/kurskadm",
+    "title_seen": "Курская область 🇷🇺"
+   }
+  ],
+  "note": "District-level alerts and all-clears are posted by the Оперштаб channel @gubernator_46 (official, RKN-registered)."
+ },
+ "Белгородская область": {
+  "governor": {
+   "handle": "aleksandr_shuvaev",
+   "url": "https://t.me/aleksandr_shuvaev",
+   "title": "Александр Шуваев",
+   "subscribers": "30.7K",
+   "last_post": "2026-10-18",
+   "last_post_matching_opasnost": "2026-08-30"
+  },
+  "mchs": {
+   "handle": "mchs31",
+   "url": "https://t.me/mchs31",
+   "title": "МЧС Белгородской области",
+   "subscribers": "18.5K",
+   "last_post": "2026-04-21",
+   "verified_via": "link on official site 31.mchs.gov.ru",
+   "max": {
+    "name": "МЧС Белгородской области (MAX)",
+    "url": "https://max.ru/mchs31",
+    "title_seen": "МЧС Белгородской области"
+   },
+   "telegram_inactive_since": "2026-04-21"
+  },
+  "other": [
+   {
+    "name": "Оперштаб Белгородской области (Telegram; linked from the acting governor's posts)",
+    "url": "https://t.me/operativno31",
+    "title_seen": "Оперштаб Белгородской области",
+    "last_post": "2026-10-18"
+   },
+   {
+    "name": "Александр Шуваев (MAX)",
+    "url": "https://max.ru/aleksandr_shuvaev",
+    "title_seen": "Александр Шуваев"
+   }
+  ],
+  "note": "Governor changed 13 May 2026 (Gladkov -> acting governor Shuvaev); @vvgladkov is no longer the governor's. Per-district alerts ('ОПАСНОСТЬ АТАКИ БПЛА в ... МО') come from Оперштаб @operativno31."
+ },
+ "Костромская область": {
+  "governor": {
+   "handle": "sk_sitnikov",
+   "url": "https://t.me/sk_sitnikov",
+   "title": "Сергей Ситников",
+   "subscribers": "7.32K",
+   "last_post": "2026-10-18",
+   "last_post_matching_opasnost": "2026-10-18"
+  },
+  "mchs": {
+   "handle": null,
+   "max": {
+    "name": "МЧС Костромской области (MAX)",
+    "url": "https://max.ru/id4401049191_gos",
+    "title_seen": "МЧС Костромской области"
+   },
+   "verified_via": "link on official site 44.mchs.gov.ru"
+  },
+  "other": [],
+  "note": "No MChS Telegram found; MChS is in MAX."
+ },
+ "Чувашская Республика": {
+  "governor": {
+   "handle": "oanikolaev",
+   "url": "https://t.me/oanikolaev",
+   "title": "Олег Николаев | Чувашия",
+   "subscribers": "19.4K",
+   "last_post": "2026-10-18",
+   "last_post_matching_opasnost": "2026-10-06"
+  },
+  "mchs": {
+   "handle": "mchs_chuvashia",
+   "url": "https://t.me/mchs_chuvashia",
+   "title": "МЧС Чувашской Республики - Чувашии",
+   "subscribers": "3.11K",
+   "last_post": "2026-04-25",
+   "verified_via": "channel description names ГУ МЧС России by region",
+   "max": {
+    "name": "МЧС Чувашской Республики (MAX)",
+    "url": "https://max.ru/id2128056868_gos",
+    "title_seen": "МЧС Чувашской Республики"
+   },
+   "telegram_inactive_since": "2026-04-25"
+  },
+  "other": [],
+  "note": ""
+ },
+ "Новгородская область": {
+  "governor": {
+   "handle": "dronovnov",
+   "url": "https://t.me/dronovnov",
+   "title": "Александр Дронов",
+   "subscribers": "11.1K",
+   "last_post": "2026-10-18",
+   "last_post_matching_opasnost": "2026-03-25"
+  },
+  "mchs": {
+   "handle": null,
+   "max": {
+    "name": "МЧС Новгородской области (MAX)",
+    "url": "https://max.ru/club43575064",
+    "title_seen": "МЧС Новгородской области"
+   },
+   "verified_via": "link on official site 53.mchs.gov.ru"
+  },
+  "other": [],
+  "note": "No MChS Telegram found; MChS is in MAX."
+ },
+ "Республика Мордовия": {
+  "governor": {
+   "handle": "zdunov",
+   "url": "https://t.me/zdunov",
+   "title": "Здунов здесь",
+   "subscribers": "15.4K",
+   "last_post": "2026-10-18",
+   "last_post_matching_opasnost": "2025-05-07"
+  },
+  "mchs": {
+   "handle": "mchs_13",
+   "url": "https://t.me/mchs_13",
+   "title": "МЧС Республики Мордовия",
+   "subscribers": "2K",
+   "last_post": "2026-05-26",
+   "verified_via": "link on official site 13.mchs.gov.ru",
+   "max": {
+    "name": "МЧС Мордовии (MAX)",
+    "url": "https://max.ru/id1326192116_gos",
+    "title_seen": "МЧС Мордовии"
+   },
+   "telegram_inactive_since": "2026-05-26"
+  },
+  "other": [],
+  "note": ""
+ },
+ "Псковская область": {
+  "governor": {
+   "handle": "MV_007_Pskov",
+   "url": "https://t.me/MV_007_Pskov",
+   "title": "Михаил Ведерников",
+   "subscribers": "33.7K",
+   "last_post": "2026-04-18",
+   "last_post_matching_opasnost": "2026-04-18",
+   "telegram_inactive_since": "2026-04-18"
+  },
+  "mchs": {
+   "handle": "mchspskov",
+   "url": "https://t.me/mchspskov",
+   "title": "МЧС Псковской области",
+   "subscribers": "1.01K",
+   "last_post": "2026-04-12",
+   "verified_via": "link on official site 60.mchs.gov.ru",
+   "max": {
+    "name": "МЧС Псковской области (MAX)",
+    "url": "https://max.ru/id6027085570_gos",
+    "title_seen": "МЧС Псковской области"
+   },
+   "telegram_inactive_since": "2026-04-12"
+  },
+  "other": [],
+  "note": "Governor's Telegram last posted April 2026 (likely moved to MAX; not verified)."
+ },
+ "Астраханская область": {
+  "governor": {
+   "handle": "babushkin30",
+   "url": "https://t.me/babushkin30",
+   "title": "Игорь Бабушкин",
+   "subscribers": "23.5K",
+   "last_post": "2026-10-11",
+   "last_post_matching_opasnost": "2026-08-18"
+  },
+  "mchs": {
+   "handle": "mchs30",
+   "url": "https://t.me/mchs30",
+   "title": "МЧС Астраханской области",
+   "subscribers": "2.82K",
+   "last_post": "2026-05-09",
+   "verified_via": "link on official site 30.mchs.gov.ru",
+   "max": {
+    "name": "МЧС Астраханской области (MAX)",
+    "url": "https://max.ru/mchs_astrakhan",
+    "title_seen": "МЧС Астраханской области"
+   },
+   "telegram_inactive_since": "2026-05-09"
+  },
+  "other": [],
+  "note": ""
+ },
+ "Ставропольский край": {
+  "governor": {
+   "handle": "VVV5807",
+   "url": "https://t.me/VVV5807",
+   "title": "Владимир Владимиров",
+   "subscribers": "147K",
+   "last_post": "2026-10-18",
+   "last_post_matching_opasnost": "2026-10-15"
+  },
+  "mchs": {
+   "handle": "sk_gumchs",
+   "url": "https://t.me/sk_gumchs",
+   "title": "МЧС Ставропольского края",
+   "subscribers": "5.27K",
+   "last_post": "2026-03-19",
+   "verified_via": "link on official site 26.mchs.gov.ru",
+   "max": {
+    "name": "МЧС Ставрополья (MAX)",
+    "url": "https://max.ru/id2635077144_gos",
+    "title_seen": "МЧС Ставрополья"
+   },
+   "telegram_inactive_since": "2026-03-19"
+  },
+  "other": [],
+  "note": ""
+ },
+ "Оренбургская область": {
+  "governor": {
+   "handle": "solntsev_official",
+   "url": "https://t.me/solntsev_official",
+   "title": "Евгений Солнцев",
+   "subscribers": "72.2K",
+   "last_post": "2026-10-18",
+   "last_post_matching_opasnost": "2026-10-16"
+  },
+  "mchs": {
+   "handle": null,
+   "max": {
+    "name": "МЧС Оренбургской области (MAX)",
+    "url": "https://max.ru/id5610084427_gos",
+    "title_seen": "МЧС Оренбургской области"
+   },
+   "verified_via": "link on official site 56.mchs.gov.ru"
+  },
+  "other": [],
+  "note": "No MChS Telegram found; MChS is in MAX."
+ },
+ "Республика Калмыкия": {
+  "governor": {
+   "handle": "BatuKhasikov08",
+   "url": "https://t.me/BatuKhasikov08",
+   "title": "Бату Хасиков",
+   "subscribers": "9.78K",
+   "last_post": "2026-10-17",
+   "last_post_matching_opasnost": "2025-03-30"
+  },
+  "mchs": {
+   "handle": "mchs_08kalmykiya",
+   "url": "https://t.me/mchs_08kalmykiya",
+   "title": "МЧС Республики Калмыкия",
+   "subscribers": "1.53K",
+   "last_post": "2026-07-28",
+   "verified_via": "link on official site 08.mchs.gov.ru",
+   "max": {
+    "name": "МЧС Калмыкии (MAX)",
+    "url": "https://max.ru/id814162730_gos",
+    "title_seen": "МЧС Калмыкии"
+   },
+   "telegram_inactive_since": "2026-07-28"
+  },
+  "other": [],
+  "note": "Head's channel rarely posts alerts."
+ },
+ "Кировская область": {
+  "governor": {
+   "handle": "aleksandrsokolov43",
+   "url": "https://t.me/aleksandrsokolov43",
+   "title": "Александр Соколов",
+   "subscribers": "22.5K",
+   "last_post": "2026-10-18",
+   "last_post_matching_opasnost": "2026-07-29"
+  },
+  "mchs": {
+   "handle": "MchsKirov",
+   "url": "https://t.me/MchsKirov",
+   "title": "МЧС Кировской области",
+   "subscribers": "1.61K",
+   "last_post": "2026-04-09",
+   "verified_via": "link on official site 43.mchs.gov.ru",
+   "max": {
+    "name": "МЧС Кировской области (MAX)",
+    "url": "https://max.ru/id4345091888_gos",
+    "title_seen": "МЧС Кировской области"
+   },
+   "telegram_inactive_since": "2026-04-09"
+  },
+  "other": [],
+  "note": ""
+ },
+ "Архангельская область": {
+  "governor": {
+   "handle": "Tsybulskiy_A",
+   "url": "https://t.me/Tsybulskiy_A",
+   "title": "Цыбульский",
+   "subscribers": "10.3K",
+   "last_post": "2026-10-18",
+   "last_post_matching_opasnost": "2026-10-17"
+  },
+  "mchs": {
+   "handle": "mchs29",
+   "url": "https://t.me/mchs29",
+   "title": "МЧС России: Архангельская область",
+   "subscribers": "1.55K",
+   "last_post": "2026-01-02",
+   "verified_via": "channel description names ГУ МЧС России by region",
+   "max": {
+    "name": "mchs29 (MAX)",
+    "url": "https://max.ru/mchs29",
+    "title_seen": null,
+    "note": "link taken from the official MChS site; title not confirmed (MAX page did not answer)"
+   },
+   "telegram_inactive_since": "2026-01-02"
+  },
+  "other": [],
+  "note": ""
+ },
+ "Республика Марий Эл": {
+  "governor": {
+   "handle": "yvzaitsev",
+   "url": "https://t.me/yvzaitsev",
+   "title": "Юрий Зайцев",
+   "subscribers": "12.2K",
+   "last_post": "2026-10-18",
+   "last_post_matching_opasnost": "2025-10-09"
+  },
+  "mchs": {
+   "handle": null,
+   "max": {
+    "name": "МЧС Республики Марий Эл (MAX)",
+    "url": "https://max.ru/id1215098830_gos",
+    "title_seen": "МЧС Республики Марий Эл"
+   },
+   "verified_via": "link on official site 12.mchs.gov.ru"
+  },
+  "other": [],
+  "note": "No MChS Telegram found; MChS is in MAX."
+ },
+ "Удмуртская Республика": {
+  "governor": {
+   "handle": "brechalov",
+   "url": "https://t.me/brechalov",
+   "title": "Бречалов",
+   "subscribers": "54.7K",
+   "last_post": "2026-10-11",
+   "last_post_matching_opasnost": "2026-07-27"
+  },
+  "mchs": {
+   "handle": "mchsUR",
+   "url": "https://t.me/mchsUR",
+   "title": "МЧС Удмуртии",
+   "subscribers": "9.62K",
+   "last_post": "2026-05-08",
+   "verified_via": "channel description names ГУ МЧС России by region",
+   "max": {
+    "name": "МЧС Удмуртии (MAX)",
+    "url": "https://max.ru/mchsUR",
+    "title_seen": "МЧС Удмуртии"
+   },
+   "telegram_inactive_since": "2026-05-08"
+  },
+  "other": [],
+  "note": ""
+ },
+ "Пермский край": {
+  "governor": {
+   "handle": "mahonin59",
+   "url": "https://t.me/mahonin59",
+   "title": "Дмитрий Махонин",
+   "subscribers": "28.6K",
+   "last_post": "2026-10-18",
+   "last_post_matching_opasnost": "2026-09-25"
+  },
+  "mchs": {
+   "handle": "mchs_prikamia",
+   "url": "https://t.me/mchs_prikamia",
+   "title": "МЧС Пермского края",
+   "subscribers": "3.51K",
+   "last_post": "2026-04-29",
+   "verified_via": "link on official site 59.mchs.gov.ru",
+   "max": {
+    "name": "МЧС Пермского края (MAX)",
+    "url": "https://max.ru/mchsprikamia",
+    "title_seen": "МЧС Пермского края"
+   },
+   "telegram_inactive_since": "2026-04-29"
+  },
+  "other": [],
+  "note": ""
+ },
+ "Республика Башкортостан": {
+  "governor": {
+   "handle": "radiyhabirov",
+   "url": "https://t.me/radiyhabirov",
+   "title": "Радий Хабиров",
+   "subscribers": "34.7K",
+   "last_post": "2026-10-18",
+   "last_post_matching_opasnost": "2025-03-21"
+  },
+  "mchs": {
+   "handle": "mchsrb01",
+   "url": "https://t.me/mchsrb01",
+   "title": "МЧС Башкортостана",
+   "subscribers": "6.86K",
+   "last_post": "2026-09-19",
+   "verified_via": "link on official site 02.mchs.gov.ru",
+   "max": {
+    "name": "МЧС Башкортостана (MAX)",
+    "url": "https://max.ru/mchsrb",
+    "title_seen": "МЧС Башкортостана"
+   }
+  },
+  "other": [],
+  "note": "Head's channel rarely posts alerts."
+ },
+ "Республика Крым": {
+  "governor": {
+   "handle": "Aksenov82",
+   "url": "https://t.me/Aksenov82",
+   "title": "Аксёнов Z 82",
+   "subscribers": "139K",
+   "last_post": "2026-10-18",
+   "last_post_matching_opasnost": "2026-10-09"
+  },
+  "mchs": {
+   "handle": "crimea_mchs",
+   "url": "https://t.me/crimea_mchs",
+   "title": "ГУ МЧС России по Республике Крым",
+   "subscribers": "4.08K",
+   "last_post": "2026-04-24",
+   "verified_via": "link on official site 82.mchs.gov.ru",
+   "max": {
+    "name": "ГУ МЧС России по Республике Крым (MAX)",
+    "url": "https://max.ru/mchs_crimea",
+    "title_seen": "ГУ МЧС России по Республике Крым"
+   },
+   "telegram_inactive_since": "2026-04-24"
+  },
+  "other": [],
+  "note": ""
+ },
+ "Севастополь": {
+  "governor": {
+   "handle": "razvozhaev",
+   "url": "https://t.me/razvozhaev",
+   "title": "РаZVожаев",
+   "subscribers": "219K",
+   "last_post": "2026-10-18",
+   "last_post_matching_opasnost": "2026-10-01"
+  },
+  "mchs": {
+   "handle": "mchs_sevastopol",
+   "url": "https://t.me/mchs_sevastopol",
+   "title": "МЧС Севастополя",
+   "subscribers": "2.73K",
+   "last_post": "2026-10-18",
+   "verified_via": "link on official site 92.mchs.gov.ru",
+   "max": {
+    "name": "МЧС Севастополя (MAX)",
+    "url": "https://max.ru/id7702835839_gos",
+    "title_seen": "МЧС Севастополя"
+   }
+  },
+  "other": [],
+  "note": ""
+ },
+ "Мурманская область": {
+  "governor": {
+   "handle": "andrey_chibis",
+   "url": "https://t.me/andrey_chibis",
+   "title": "Губернатор Чибис",
+   "subscribers": "31.6K",
+   "last_post": "2026-10-18",
+   "last_post_matching_opasnost": "2026-06-10"
+  },
+  "mchs": {
+   "handle": "mchs_murmansk",
+   "url": "https://t.me/mchs_murmansk",
+   "title": "#МЧСМурманск",
+   "subscribers": "2.72K",
+   "last_post": "2026-07-03",
+   "verified_via": "link on official site 51.mchs.gov.ru",
+   "max": {
+    "name": "МЧС Мурманской области (MAX)",
+    "url": "https://max.ru/mchs_murmansk",
+    "title_seen": "МЧС Мурманской области"
+   },
+   "telegram_inactive_since": "2026-07-03"
+  },
+  "other": [],
+  "note": ""
+ },
+ "Калининградская область": {
+  "governor": {
+   "handle": "besprozvannih",
+   "url": "https://t.me/besprozvannih",
+   "title": "Алексей Беспрозванных. Калининград",
+   "subscribers": "56.1K",
+   "last_post": "2026-10-18",
+   "last_post_matching_opasnost": "2026-03-11"
+  },
+  "mchs": {
+   "handle": "mchs39",
+   "url": "https://t.me/mchs39",
+   "title": "МЧС Калининградской области",
+   "subscribers": "3.93K",
+   "last_post": "2026-10-18",
+   "verified_via": "link on official site 39.mchs.gov.ru",
+   "max": {
+    "name": "МЧС Калининградской области (MAX)",
+    "url": "https://max.ru/id3906129263_gos",
+    "title_seen": "МЧС Калининградской области"
+   }
+  },
+  "other": [],
+  "note": "Governor channel rarely posts alerts."
+ },
+ "Республика Карелия": {
+  "governor": {
+   "handle": "Aparfenchikov",
+   "url": "https://t.me/Aparfenchikov",
+   "title": "Парфенчиков|Карелия",
+   "subscribers": "5.68K",
+   "last_post": "2026-10-18",
+   "last_post_matching_opasnost": "2026-06-01"
+  },
+  "mchs": {
+   "handle": "mchs_10",
+   "url": "https://t.me/mchs_10",
+   "title": "МЧС Республики Карелия",
+   "subscribers": "1.85K",
+   "last_post": "2026-01-01",
+   "verified_via": "link on official site 10.mchs.gov.ru",
+   "max": {
+    "name": "МЧС Карелии (MAX)",
+    "url": "https://max.ru/mchs_10",
+    "title_seen": "МЧС Карелии"
+   },
+   "telegram_inactive_since": "2026-01-01"
+  },
+  "other": [],
+  "note": ""
+ },
+ "Тюменская область": {
+  "governor": {
+   "handle": "av_moor",
+   "url": "https://t.me/av_moor",
+   "title": "Александр Моор",
+   "subscribers": "17.6K",
+   "last_post": "2026-10-18",
+   "last_post_matching_opasnost": "2026-10-16"
+  },
+  "mchs": {
+   "handle": "MCHSTYUMEN72",
+   "url": "https://t.me/MCHSTYUMEN72",
+   "title": "МЧС Тюменской области",
+   "subscribers": "3.12K",
+   "last_post": "2026-07-27",
+   "verified_via": "link on official site 72.mchs.gov.ru",
+   "max": {
+    "name": "МЧС Тюменской области (MAX)",
+    "url": "https://max.ru/vk_mchs_72",
+    "title_seen": "МЧС Тюменской области"
+   },
+   "telegram_inactive_since": "2026-07-27"
+  },
+  "other": [],
+  "note": ""
+ },
+ "Свердловская область": {
+  "governor": {
+   "handle": "DVPasler",
+   "url": "https://t.me/DVPasler",
+   "title": "Денис Паслер",
+   "subscribers": "65.6K",
+   "last_post": "2026-10-18",
+   "last_post_matching_opasnost": "2026-10-16"
+  },
+  "mchs": {
+   "handle": "mchs66",
+   "url": "https://t.me/mchs66",
+   "title": "МЧС Свердловской области",
+   "subscribers": "5.79K",
+   "last_post": "2026-05-12",
+   "verified_via": "link on official site 66.mchs.gov.ru",
+   "max": {
+    "name": "МЧС Свердловской области (MAX)",
+    "url": "https://max.ru/id6672176609_gos",
+    "title_seen": "МЧС Свердловской области"
+   },
+   "telegram_inactive_since": "2026-05-12"
+  },
+  "other": [
+   {
+    "name": "РСЧС Свердловская область (MAX)",
+    "url": "https://max.ru/id6671173115_gos",
+    "title_seen": "РСЧС Свердловская область"
+   }
+  ],
+  "note": ""
+ },
+ "Челябинская область": {
+  "governor": {
+   "handle": "alexeytexlerofficial",
+   "url": "https://t.me/alexeytexlerofficial",
+   "title": "Алексей Текслер",
+   "subscribers": "27.5K",
+   "last_post": "2026-10-18",
+   "last_post_matching_opasnost": "2026-05-02"
+  },
+  "mchs": {
+   "handle": "mchs_74",
+   "url": "https://t.me/mchs_74",
+   "title": "МЧС Челябинской области",
+   "subscribers": "3.51K",
+   "last_post": "2026-01-03",
+   "verified_via": "channel description names ГУ МЧС России by region",
+   "max": null,
+   "telegram_inactive_since": "2026-01-03"
+  },
+  "other": [],
+  "note": "MChS link not on 74.mchs.gov.ru (site did not load); @mchs_74 verified by its description 'Официальный канал ГУ МЧС России по Челябинской области'. MChS MAX not found."
+ },
+ "Республика Дагестан": {
+  "governor": {
+   "handle": "Glava_RD",
+   "url": "https://t.me/Glava_RD",
+   "title": "Фёдор Щукин",
+   "subscribers": "7.96K",
+   "last_post": "2026-10-16",
+   "last_post_matching_opasnost": null
+  },
+  "mchs": {
+   "handle": "mchsdagestan",
+   "url": "https://t.me/mchsdagestan",
+   "title": "Главное управление МЧС России по Республике Дагестан",
+   "subscribers": "4.99K",
+   "last_post": "2026-10-18",
+   "verified_via": "link on official site 05.mchs.gov.ru",
+   "max": {
+    "name": "Главное управление МЧС России по Республике Дагестан (MAX)",
+    "url": "https://max.ru/id562059034_gos",
+    "title_seen": "Главное управление МЧС России по Республике Дагестан"
+   }
+  },
+  "other": [],
+  "note": "Acting head Shchukin since May 2026 (@Glava_RD); former head Melikov's @melikov05 is inactive. Small channel, few alert posts found."
+ },
+ "Чеченская Республика": {
+  "governor": {
+   "handle": "RKadyrov_95",
+   "url": "https://t.me/RKadyrov_95",
+   "title": "Kadyrov_95",
+   "subscribers": "2.05M",
+   "last_post": "2026-10-18",
+   "last_post_matching_opasnost": "2026-08-04"
+  },
+  "mchs": {
+   "handle": "mchs_95",
+   "url": "https://t.me/mchs_95",
+   "title": "МЧС Чеченской Республики",
+   "subscribers": "1.78K",
+   "last_post": "2026-10-09",
+   "verified_via": "channel description names ГУ МЧС России by region",
+   "max": {
+    "name": "МЧС Чеченской Республики (MAX)",
+    "url": "https://max.ru/mchs_95",
+    "title_seen": "МЧС Чеченской Республики"
+   }
+  },
+  "other": [],
+  "note": "Kadyrov's channel is personal/political, not an alert service."
+ },
+ "Республика Северная Осетия — Алания": {
+  "governor": {
+   "handle": "sergeimeniaylo",
+   "url": "https://t.me/sergeimeniaylo",
+   "title": "Сергей Меняйло",
+   "subscribers": "17.7K",
+   "last_post": "2026-10-18",
+   "last_post_matching_opasnost": "2026-10-16"
+  },
+  "mchs": {
+   "handle": "mchs_rso_a",
+   "url": "https://t.me/mchs_rso_a",
+   "title": "МЧС Северной Осетии",
+   "subscribers": "7.04K",
+   "last_post": "2026-10-18",
+   "verified_via": "channel description names ГУ МЧС России by region",
+   "max": {
+    "name": "МЧС Северной Осетии (MAX)",
+    "url": "https://max.ru/mchs_rso_a",
+    "title_seen": "МЧС Северной Осетии"
+   }
+  },
+  "other": [],
+  "note": ""
+ },
+ "Кабардино-Балкарская Республика": {
+  "governor": {
+   "handle": "Kokov_Kazbek",
+   "url": "https://t.me/Kokov_Kazbek",
+   "title": "Казбек Коков",
+   "subscribers": "19.4K",
+   "last_post": "2026-10-18",
+   "last_post_matching_opasnost": "2026-10-15"
+  },
+  "mchs": {
+   "handle": "mchskbr",
+   "url": "https://t.me/mchskbr",
+   "title": "МЧС Кабардино-Балкарии",
+   "subscribers": "7.14K",
+   "last_post": "2026-10-18",
+   "verified_via": "link on official site 07.mchs.gov.ru",
+   "max": {
+    "name": "МЧС Кабардино-Балкарии (MAX)",
+    "url": "https://max.ru/id721009401_gos",
+    "title_seen": "МЧС Кабардино-Балкарии"
+   }
+  },
+  "other": [],
+  "note": ""
+ },
+ "Карачаево-Черкесская Республика": {
+  "governor": {
+   "handle": "rashid_temrezov",
+   "url": "https://t.me/rashid_temrezov",
+   "title": "Рашид Темрезов",
+   "subscribers": "12.7K",
+   "last_post": "2026-10-18",
+   "last_post_matching_opasnost": "2026-09-03"
+  },
+  "mchs": {
+   "handle": "mchskchr",
+   "url": "https://t.me/mchskchr",
+   "title": "МЧС Карачаево-Черкесии",
+   "subscribers": "2.31K",
+   "last_post": "2026-09-10",
+   "verified_via": "channel description names ГУ МЧС России by region",
+   "max": {
+    "name": "МЧС Карачаево-Черкесии (MAX)",
+    "url": "https://max.ru/id914000638_gos",
+    "title_seen": "МЧС Карачаево-Черкесии"
+   }
+  },
+  "other": [],
+  "note": ""
+ },
+ "Республика Ингушетия": {
+  "governor": {
+   "handle": "MAKalimatovvv",
+   "url": "https://t.me/MAKalimatovvv",
+   "title": "Махмуд-Али Калиматов",
+   "subscribers": "6.81K",
+   "last_post": "2026-10-18",
+   "last_post_matching_opasnost": "2026-02-07"
+  },
+  "mchs": {
+   "handle": "mchsri",
+   "url": "https://t.me/mchsri",
+   "title": "ГУ МЧС России по Республике Ингушетия",
+   "subscribers": "1.24K",
+   "last_post": "2026-10-18",
+   "verified_via": "link on official site 06.mchs.gov.ru",
+   "max": {
+    "name": "МЧС Республики Ингушетия (MAX)",
+    "url": "https://max.ru/id606013463_gos",
+    "title_seen": "МЧС Республики Ингушетия"
+   }
+  },
+  "other": [],
+  "note": ""
+ },
+ "_federal": [
+  {
+   "title": "МЧС России — official Telegram channel",
+   "url": "https://t.me/mchs_official"
+  },
+  {
+   "title": "МЧС России — official MAX channel",
+   "url": "https://max.ru/mchs_official"
+  },
+  {
+   "title": "МЧС России mobile app (push alerts about drone/missile danger), App Store",
+   "url": "https://apps.apple.com/app/id1530044766"
+  },
+  {
+   "title": "МЧС России mobile app, Google Play",
+   "url": "https://play.google.com/store/apps/details?id=io.citizens.security"
+  },
+  {
+   "title": "МЧС России mobile app, RuStore",
+   "url": "https://www.rustore.ru/catalog/app/io.citizens.security"
+  },
+  {
+   "title": "Памятка МЧС России «Как защитить себя при беспилотной, авиационной или ракетной атаке» (page)",
+   "url": "https://mchs.gov.ru/dokumenty/8090"
+  },
+  {
+   "title": "Same памятка, PDF (2025-11-26)",
+   "url": "https://mchs.gov.ru/uploads/document/2025-11-26/c599c5cffdd784b1815618912e323af1.pdf"
+  },
+  {
+   "title": "ГУ МЧС по Липецкой области: порядок действий при угрозе атаки БПЛА и ракетной опасности",
+   "url": "https://48.mchs.gov.ru/deyatelnost/press-centr/novosti/5485315"
+  },
+  {
+   "title": "ГУ МЧС по Оренбургской области: памятка при угрозе атаки БПЛА",
+   "url": "https://56.mchs.gov.ru/rekomendacii-naseleniyu/pamyatka-pri-ugroze-ataki-bpla"
+  },
+  {
+   "title": "ГУ МЧС по Московской области: звук сирен — сигнал «ВНИМАНИЕ ВСЕМ!»",
+   "url": "https://50.mchs.gov.ru/deyatelnost/grazhdanskaya-oborona/grazhdanskaya-oborona/zvuk-siren-eto-signal-vnimanie-vsem"
+  },
+  {
+   "title": "Directory of regional MChS directorates (each NN.mchs.gov.ru site links its official channels)",
+   "url": "https://mchs.gov.ru/ministerstvo/glavnye-upravleniya-po-subektam-rossiyskoy-federacii"
+  },
+  {
+   "title": "Emergency number",
+   "url": null,
+   "phone": "112"
+  }
+ ],
+ "_method": "Telegram handles checked by fetching https://t.me/s/<handle> (title, subscribers, newest post date) on 2026-10-19. Governor handles from public listings, cross-checked against current office holders (Mediologia Aug 2026, Kremlin decrees May 2026). MChS handles taken from the footer links of each official NN.mchs.gov.ru site, otherwise from a channel description naming the ГУ МЧС. MAX pages checked by their <title>. 'last_post_matching_opasnost' = newest post found by Telegram's channel search for 'опасност' (rough: also matches fire danger). Context: since spring 2026 Telegram is heavily throttled in Russia and many official bodies post alerts first or only in MAX; the dedicated 'РСЧС <регион>' MAX channels are the official alert channels where they exist (only some were found and verified here). Unofficial aggregators (radar/'оповещения' channels, bplaalert, Lpr1 etc.) deliberately excluded.",
+ "_checked": "2026-10-19"
+}

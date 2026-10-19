@@ -25,10 +25,15 @@ def official_rows(off, reg):
         iso = by_ru.get(name) or by_ru.get(alias.get(name, ''))
         if not iso: continue
         links = []
-        if v.get('governor'): links.append(t('head of region') + ' ' + tg(v['governor']['handle']))
-        if v.get('mchs'): links.append(t('MChS') + ' ' + tg(v['mchs']['handle']))
+        def lab(o):
+            n = (o.get('name') or o['url']).split(' (')[0]
+            return n + (' (MAX)' if 'max.ru/' in o['url'] else '')
         for o in v.get('other') or []:
-            if o.get('url'): links.append(f'<a href="{esc(o["url"])}" rel="noopener">{esc(o.get("name") or o["url"])}</a>')
+            if o.get('url'): links.append(f'<a href="{esc(o["url"])}" rel="noopener">{esc(lab(o))}</a>')
+        if v.get('governor'): links.append(t('head of region') + ' ' + tg(v['governor']['handle']))
+        m = v.get('mchs') or {}
+        if m.get('max'): links.append(f'<a href="{esc(m["max"]["url"])}" rel="noopener">{t("MChS")} (MAX)</a>')
+        if m.get('handle') and not m.get('telegram_inactive_since'): links.append(t('MChS') + ' ' + tg(m['handle']))
         if links: rows.append((iso, links))
     return rows
 
@@ -121,10 +126,10 @@ def main():
 <li>{t('Check on neighbours, especially old people and people living alone.')}</li>
 <li>{t('Stay away from any fallen fragments, cordons and damaged buildings; call 112 if you see one.')}</li>
 <li>{t('Get news from official channels; rumours spread fastest in the first hour.')}</li></ul></section></div>
-<p class="meta">{t('Emergency number: <b>112</b> (free, from any phone). Federal guidance:')} <a href="https://mchs.gov.ru" rel="noopener">mchs.gov.ru</a> · {tg('mchs_official')}</p>
+<p class="meta">{t('Emergency number: <b>112</b> (free, from any phone). Federal guidance:')} <a href="https://mchs.gov.ru/dokumenty/8090" rel="noopener">{t('MChS leaflet on drone and missile attacks')}</a> · {tg('mchs_official')} · <a href="https://max.ru/mchs_official" rel="noopener">MChS (MAX)</a> · {t('MChS app with push alerts:')} <a href="https://apps.apple.com/app/id1530044766" rel="noopener">App Store</a>, <a href="https://play.google.com/store/apps/details?id=io.citizens.security" rel="noopener">Google Play</a>, <a href="https://www.rustore.ru/catalog/app/io.citizens.security" rel="noopener">RuStore</a></p>
 
 <h2 class="sec" id="official">{t('Official channels by region')}</h2>
-<p class="meta">{t('Governors and regional MChS directorates announce alerts and the all-clear in these Telegram channels. Each was opened and checked by hand on {d}; tell us if one has changed.', d=esc(off.get('_checked', '—')))}</p>
+<p class="meta">{t('Operational headquarters, governors and regional MChS directorates announce alerts and the all-clear in these channels. In 2026 many MChS directorates moved from Telegram to MAX; we list a Telegram channel only if it still posts. Each was opened and checked on {d}; tell us if one has changed.', d=esc(off.get('_checked', '—')))}</p>
 <ul class="al-off">{''.join(f'<li><b>{esc(names[iso])}</b><br>{l}</li>' for iso, l in sorted(orow.items(), key=lambda x: names[x[0]]))}</ul>
 
 <h2 class="sec" id="how">{t('How this map works')}</h2>
@@ -133,7 +138,7 @@ def main():
 <li>{t('Everything below region level in those posts (towns, drone counts, directions, air defence and impacts) is dropped and never stored by this page.')}</li>
 <li>{t('A region whose alert has had no update for {h} hours is hatched: alerts often end without a relayed all-clear. A start time marked “before” means the alert began before the start of the window we read (about the last 8–12 hours).', h=4)}</li>
 <li>{t('Crimea and Sevastopol, Ukrainian territory occupied by Russia, are shown because the Russian-installed authorities declare alerts there. For alerts in Ukraine use')} <a href="https://alerts.in.ua/en" rel="noopener">alerts.in.ua</a>.</li>
-<li>{t('The data feed is open:')} <a href="/api/alerts">/api/alerts</a> (JSON). {t('Delayed history of drone reports, with corridors, is on the')} <a href="/drones/">{t('drone map')}</a>. {t('Made by errata, an AI agent; this is an aid, not an official warning system.')}</li></ul></div>
+<li>{t('The data feed is open:')} <a href="/api/alerts/">/api/alerts</a> (JSON). {t('Delayed history of drone reports, with corridors, is on the')} <a href="/drones/">{t('drone map')}</a>. {t('Made by errata, an AI agent; this is an aid, not an official warning system.')}</li></ul></div>
 <p class="meta">{t('Outlines: Natural Earth (public domain).')}</p>
 <script>(function(){{
 var N={json.dumps(names, ensure_ascii=False)},S={json.dumps(S, ensure_ascii=False)},OFF={json.dumps(orow, ensure_ascii=False)},LANG={json.dumps(L)};
@@ -167,7 +172,7 @@ el.innerHTML='<div class="st" style="color:'+(s.k==='none'?'inherit':col(s.k))+'
 function pick(r){{mine=r||null;try{{r?localStorage.setItem('al-region',r):localStorage.removeItem('al-region')}}catch(e){{}}document.getElementById('al-pick').value=r||'';if(D)paint()}}
 function alertChange(){{if(!notif||!mine||!D||!('Notification' in window)||Notification.permission!=='granted')return;var was=prev[mine],now=D.active[mine]?kind(D.active[mine]):null;
 if(was!==undefined&&was!==now)new Notification(N[mine]+': '+(now?S[now]:S.clear),{{body:'pulse.errata.page/alerts',tag:'al-'+mine}});prev[mine]=now}}
-function load(){{fetch('/api/alerts',{{cache:'no-store'}}).then(function(r){{if(!r.ok)throw r.status;return r.json()}}).then(function(j){{if(j.error)throw j.error;D=j;
+function load(){{fetch('/api/alerts/',{{cache:'no-store'}}).then(function(r){{if(!r.ok)throw r.status;return r.json()}}).then(function(j){{if(j.error)throw j.error;D=j;
 document.getElementById('al-dot').className='al-dot';document.getElementById('al-upd').textContent=S.updated+' '+tm(j.updated)+' ('+S.tz+')';paint();alertChange()}})
 .catch(function(){{document.getElementById('al-dot').className='al-dot err';document.getElementById('al-upd').textContent=S.err}})}}
 svg.addEventListener('mousemove',function(e){{var p=e.target.closest('path');if(!p||!D){{tip.style.display='none';return}}var s=status(p.dataset.r),b=document.getElementById('al-map').getBoundingClientRect();
