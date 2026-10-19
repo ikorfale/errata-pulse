@@ -462,7 +462,7 @@ location.replace('/'+c+'/'+location.search+location.hash)}})()</script><noscript
     # IndexNow: the key is public by design (same key as errata.page); the file must sit on this host for submissions
     if os.path.exists(os.path.join(ROOT, 'indexnow.key')):
         k = open(os.path.join(ROOT, 'indexnow.key')).read().strip(); open(os.path.join(OUT, k + '.txt'), 'w').write(k)
-    old = ['signals', 'reports', 'archive', 'methodology', 'how-to-read', 'telegram', 'mobilization', 'forecasts', 'claims', 'alerts']   # pre-language URLs, still linked from posts
+    old = ['signals', 'reports', 'archive', 'methodology', 'how-to-read', 'telegram', 'mobilization', 'forecasts', 'claims', 'alerts', 'corrections']   # pre-language URLs, still linked from posts
     redirects = [{"source": f"/{o}", "destination": f"/en/{o}/", "permanent": True} for o in old] + [{"source": f"/{o}/:rest(.*)", "destination": f"/en/{o}/:rest", "permanent": True} for o in old]
     redirects = [r for r in redirects if r['source'] not in ('/telegram/:rest(.*)', '/mobilization/:rest(.*)')] + [
         {"source": "/telegram/:rest((?!latest\\.json).*)", "destination": "/en/telegram/:rest", "permanent": True},
