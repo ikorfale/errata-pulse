@@ -33,3 +33,15 @@ not an adopted rule.
 **Limits:** quiet windows may hold unlisted strikes, so their rate is an upper bound on false alarms. The "no fire"
 negatives rest on official statements; R2 flagging 6 of 14 of them is either false alarms or fires that were not
 admitted, and this data cannot say which. 27 of 45 positives have unknown fire size.
+
+## Addendum 2026-10-19 23:20 UTC: sensitivity by depth
+
+`by_depth.py` (needs `raw/` from `fetch.py`, which needs your own FIRMS MAP_KEY). Fire-confirmed strikes split by distance from the Ukrainian border (same border line as `../alert-depth-2026-10-19`):
+
+| depth | R0 | R2 |
+|---|---|---|
+| 0-300 km | 4/15 | 8/15 |
+| 300-600 km | 4/12 | 8/12 |
+| 600+ km | 4/18 | 8/18 |
+
+No depth bias. Over 45 confirmed fires from Jan 2025 to Oct 2026 that is about 7 (R0) to 14 (R2) flagged strikes a year: enough to check strike points, too thin for a monthly depth series.
