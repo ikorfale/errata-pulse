@@ -55,10 +55,10 @@ def main():
         'stale': 'No update for {h} h: may have ended without a reported all-clear', 'since': 'since', 'for': 'for', 'ago': 'ago',
         'before': 'before', 'h': 'h', 'min': 'min', 'updated': 'Updated', 'now_n': 'regions under alert now', 'none_now': 'No region is under a declared alert right now.',
         'err': 'The live feed is not answering right now. Rely on official channels and sirens; the page will retry in a minute.',
-        'cleared_list': 'All-clear in the last 3 hours', 'active_list': 'Under alert now', 'your': 'Your region',
+        'cleared_list': 'All-clear in the last 3 hours', 'active_list': 'Under alert now (last update)', 'your': 'Your region',
         'pick': 'Choose your region', 'notify': 'Notify me while this tab is open', 'notify_on': 'Notifications on for', 'official': 'Official channels',
         'nochan': 'No verified official channel in our list yet: use the regional government site and MChS.',
-        'n_uav': 'UAV', 'n_mis': 'missile', 'n_stale': 'more with no update for 4 h', 'tz': 'your time', 'chart': 'Regions under alert, last 12 hours (10-minute steps)'}.items()}
+        'last': 'last update', 'feed': 'latest relayed report', 'n_uav': 'UAV', 'n_mis': 'missile', 'n_stale': 'more with no update for 4 h', 'tz': 'your time', 'chart': 'Regions under alert, last 12 hours (10-minute steps)'}.items()}
     body = f"""<style>
 .al-top{{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:36px;align-items:start;margin-top:8px}}
 .al-live{{display:inline-flex;align-items:center;gap:8px;font:500 .78rem/1.4 var(--sans);color:var(--mute);letter-spacing:.06em;text-transform:uppercase}}
@@ -149,7 +149,7 @@ function dur(s){{var m=Math.max(0,Math.round((Date.now()-new Date(s))/60000)),h=
 function kind(a){{return a.uav&&a.missile?'both':a.missile?'missile':'uav'}}
 function col(k){{return k==='missile'||k==='both'?'#b3261e':k==='clear'?'#3f8f5a':'#e08a1e'}}
 function status(iso){{if(!D)return null;var a=D.active[iso];if(a){{var k=kind(a),early=a.since<=D.covered_from;
-return {{k:k,txt:S[k],sub:(early?S.before+' ':S.since+' ')+tm(early?D.covered_from:a.since)+(early?'':' · '+S['for']+' '+dur(a.since)),stale:a.stale}}}}
+return {{k:k,txt:S[k],sub:(early?S.before+' ':S.since+' ')+tm(early?D.covered_from:a.since)+(early?'':' · '+S['for']+' '+dur(a.since))+' · '+S.last+' '+tm(a.last)+' ('+dur(a.last)+' '+S.ago+')',stale:a.stale}}}}
 var c=D.cleared[iso];if(c)return {{k:'clear',txt:S.clear,sub:tm(c)+' · '+dur(c)+' '+S.ago}};return {{k:'none',txt:S.none,sub:''}}}}
 function paint(){{var act=D.active,n=0,u=0,mi=0,st=0;for(var r0 in act){{if(act[r0].stale){{st++;continue}}n++;if(act[r0].uav)u++;if(act[r0].missile)mi++}}
 svg.querySelectorAll('path').forEach(function(p){{var r=p.dataset.r,a=act[r],c=D.cleared[r];p.setAttribute('class','');
@@ -158,7 +158,7 @@ else if(c&&Date.now()-new Date(c)<3600e3)p.classList.add('clear');if(r===mine)p.
 document.getElementById('al-n').firstChild.nodeValue=n;
 document.getElementById('al-split').innerHTML=n?'<b style="color:#e08a1e">'+u+'</b> '+S.n_uav+' · <b style="color:#b3261e">'+mi+'</b> '+S.n_mis+(st?' · <span style="color:var(--mute)">'+st+' '+S.n_stale+'</span>':''):S.none_now+(st?' <span style="color:var(--mute)">('+st+' '+S.n_stale+')</span>':'');
 var A=Object.keys(act).sort(function(a,b){{return act[a].stale-act[b].stale||(act[a].since<act[b].since?-1:1)}});
-document.getElementById('al-act').innerHTML=A.map(function(r){{var s=status(r);return '<li data-r="'+r+'"><span><span class="k" style="background:'+col(s.k)+(s.stale?';opacity:.45':'')+'"></span>'+N[r]+'</span><span'+(s.stale?' style="opacity:.6"':'')+'>'+(act[r].since<=D.covered_from?'&gt;':'')+dur(act[r].since<=D.covered_from?D.covered_from:act[r].since)+'</span></li>'}}).join('')||'<li>—</li>';
+document.getElementById('al-act').innerHTML=A.map(function(r){{var s=status(r);return '<li data-r="'+r+'"><span><span class="k" style="background:'+col(s.k)+(s.stale?';opacity:.45':'')+'"></span>'+N[r]+'</span><span title="'+s.sub+'"'+(s.stale?' style="opacity:.6"':'')+'>'+dur(act[r].last)+' '+S.ago+'</span></li>'}}).join('')||'<li>—</li>';
 var C=Object.keys(D.cleared).sort(function(a,b){{return D.cleared[a]<D.cleared[b]?1:-1}});
 document.getElementById('al-clr').innerHTML=C.map(function(r){{return '<li data-r="'+r+'"><span><span class="k" style="background:#3f8f5a"></span>'+N[r]+'</span><span>'+tm(D.cleared[r])+'</span></li>'}}).join('')||'<li>—</li>';
 document.querySelectorAll('.al-list li[data-r]').forEach(function(li){{li.onclick=function(){{pick(li.dataset.r)}}}});
@@ -173,7 +173,7 @@ function pick(r){{mine=r||null;try{{r?localStorage.setItem('al-region',r):localS
 function alertChange(){{if(!notif||!mine||!D||!('Notification' in window)||Notification.permission!=='granted')return;var was=prev[mine],now=D.active[mine]?kind(D.active[mine]):null;
 if(was!==undefined&&was!==now)new Notification(N[mine]+': '+(now?S[now]:S.clear),{{body:'pulse.errata.page/alerts',tag:'al-'+mine}});prev[mine]=now}}
 function load(){{fetch('/api/alerts/',{{cache:'no-store'}}).then(function(r){{if(!r.ok)throw r.status;return r.json()}}).then(function(j){{if(j.error)throw j.error;D=j;
-document.getElementById('al-dot').className='al-dot';document.getElementById('al-upd').textContent=S.updated+' '+tm(j.updated)+' ('+S.tz+')';paint();alertChange()}})
+document.getElementById('al-dot').className='al-dot';document.getElementById('al-upd').textContent=S.updated+' '+tm(j.updated)+' ('+S.tz+')'+(function(){{var L='';for(var k in j.active)if(j.active[k].last>L)L=j.active[k].last;for(var k2 in j.cleared)if(j.cleared[k2]>L)L=j.cleared[k2];return L?' · '+S.feed+' '+tm(L)+' ('+dur(L)+' '+S.ago+')':''}})();paint();alertChange()}})
 .catch(function(){{document.getElementById('al-dot').className='al-dot err';document.getElementById('al-upd').textContent=S.err}})}}
 svg.addEventListener('mousemove',function(e){{var p=e.target.closest('path');if(!p||!D){{tip.style.display='none';return}}var s=status(p.dataset.r),b=document.getElementById('al-map').getBoundingClientRect();
 tip.innerHTML='<b>'+N[p.dataset.r]+'</b><br>'+s.txt+(s.sub?'<br>'+s.sub:'');tip.style.display='block';tip.style.left=Math.min(e.clientX-b.left+12,b.width-200)+'px';tip.style.top=(e.clientY-b.top+12)+'px'}});

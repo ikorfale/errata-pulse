@@ -1613,5 +1613,8 @@
  "₽": "₽",
  "₽/$": "₽/$",
  "₽/month": "₽/мес.",
- "◦ marks a Wikipedia page with under 30 readers a day: drawn faint, because ten extra readers move it as far as thousands move a big page.": "◦ — страница Википедии, которую читают меньше 30 человек в день: она бледнее, потому что десять лишних читателей сдвигают её так же далеко, как тысячи — большую страницу."
+ "◦ marks a Wikipedia page with under 30 readers a day: drawn faint, because ten extra readers move it as far as thousands move a big page.": "◦ — страница Википедии, которую читают меньше 30 человек в день: она бледнее, потому что десять лишних читателей сдвигают её так же далеко, как тысячи — большую страницу.",
+ "last update": "последнее сообщение",
+ "latest relayed report": "последнее сообщение в каналах",
+ "Under alert now (last update)": "Тревога сейчас (последнее сообщение)"
 }
