@@ -21,7 +21,7 @@ without fire are descriptive only.
 quiet windows, above the 5% limit. So the collector does **not** switch to R2.
 
 **What "no clear fire" meant:** almost nothing. The current rule misses about three of every four fires that the
-local governor himself confirmed. A flag is strong evidence (likelihood ratio ~22), its absence is weak evidence
+local officials confirmed. A flag is strong evidence (likelihood ratio ~22), its absence is weak evidence
 (likelihood ratio 0.74: odds of a fire drop by a quarter). Even the most permissive rule, any detection within 3
 km, misses 14 of 45 confirmed fires: small or quickly extinguished fires, clouds, and the gap between overpasses.
 
