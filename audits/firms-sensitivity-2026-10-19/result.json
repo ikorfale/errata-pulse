@@ -1,0 +1,200 @@
+{
+ "R0 current (20 km, 2 sats, mean+3sd)": {
+  "sens": [
+   12,
+   45
+  ],
+  "neg": [
+   1,
+   14
+  ],
+  "quiet": [
+   9,
+   752
+  ],
+  "quiet_sites": 32,
+  "by_size": {
+   "unknown": [
+    7,
+    27
+   ],
+   "brief": [
+    2,
+    12
+   ],
+   "long": [
+    1,
+    2
+   ],
+   "multi-day": [
+    2,
+    4
+   ]
+  }
+ },
+ "R1 current + NOAA-21": {
+  "sens": [
+   15,
+   45
+  ],
+  "neg": [
+   1,
+   14
+  ],
+  "quiet": [
+   11,
+   752
+  ],
+  "quiet_sites": 32,
+  "by_size": {
+   "unknown": [
+    10,
+    27
+   ],
+   "brief": [
+    2,
+    12
+   ],
+   "long": [
+    1,
+    2
+   ],
+   "multi-day": [
+    2,
+    4
+   ]
+  }
+ },
+ "R2 5 km, 3 sats, Poisson p<0.01": {
+  "sens": [
+   24,
+   45
+  ],
+  "neg": [
+   6,
+   14
+  ],
+  "quiet": [
+   45,
+   752
+  ],
+  "quiet_sites": 32,
+  "by_size": {
+   "unknown": [
+    16,
+    27
+   ],
+   "brief": [
+    4,
+    12
+   ],
+   "long": [
+    2,
+    2
+   ],
+   "multi-day": [
+    2,
+    4
+   ]
+  }
+ },
+ "R3 5 km, 3 sats, brightest FRP of the month": {
+  "sens": [
+   25,
+   45
+  ],
+  "neg": [
+   4,
+   14
+  ],
+  "quiet": [
+   34,
+   752
+  ],
+  "quiet_sites": 32,
+  "by_size": {
+   "unknown": [
+    16,
+    27
+   ],
+   "brief": [
+    5,
+    12
+   ],
+   "long": [
+    2,
+    2
+   ],
+   "multi-day": [
+    2,
+    4
+   ]
+  }
+ },
+ "R4 R2 with window -1..+2": {
+  "sens": [
+   23,
+   45
+  ],
+  "neg": [
+   3,
+   14
+  ],
+  "quiet": [
+   30,
+   348
+  ],
+  "quiet_sites": 32,
+  "by_size": {
+   "unknown": [
+    15,
+    27
+   ],
+   "brief": [
+    4,
+    12
+   ],
+   "long": [
+    2,
+    2
+   ],
+   "multi-day": [
+    2,
+    4
+   ]
+  }
+ },
+ "R5 any detection within 3 km": {
+  "sens": [
+   31,
+   45
+  ],
+  "neg": [
+   7,
+   14
+  ],
+  "quiet": [
+   183,
+   752
+  ],
+  "quiet_sites": 32,
+  "by_size": {
+   "unknown": [
+    22,
+    27
+   ],
+   "brief": [
+    5,
+    12
+   ],
+   "long": [
+    2,
+    2
+   ],
+   "multi-day": [
+    2,
+    4
+   ]
+  }
+ }
+}

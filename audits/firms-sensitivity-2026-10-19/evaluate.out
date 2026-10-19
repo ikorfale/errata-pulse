@@ -1,0 +1,9 @@
+excluded as circular (source cites satellite data): 0
+ground truth: 45 fire-confirmed, 14 no-fire; raw for 59; events with masked baseline days: 7; with missing days: 0
+coordinate offsets >2 km: ['kirishi 2026-03-26: detections centre 2.1 km from stored point', 'ufa 2026-08-19: detections centre 2.1 km from stored point', 'krasnodar 2025-08-30: detections centre 4.3 km from stored point', 'novoshakhtinsk 2025-08-21: detections centre 2.5 km from stored point', 'novorossiysk-sheskharis 2025-11-14: detections centre 4.4 km from stored point', 'ufa 2026-03-22: detections centre 3.8 km from stored point', 'ufa-novoil 2026-04-02: detections centre 3.2 km from stored point']
+R0 current (20 km, 2 sats, mean+3sd)           sens  12/45  (0.16-0.41)  no-fire  1/14   quiet   9/752 (0.012, 32 sites)  by size {'unknown': [7, 27], 'brief': [2, 12], 'long': [1, 2], 'multi-day': [2, 4]}
+R1 current + NOAA-21                           sens  15/45  (0.21-0.48)  no-fire  1/14   quiet  11/752 (0.015, 32 sites)  by size {'unknown': [10, 27], 'brief': [2, 12], 'long': [1, 2], 'multi-day': [2, 4]}
+R2 5 km, 3 sats, Poisson p<0.01                sens  24/45  (0.39-0.67)  no-fire  6/14   quiet  45/752 (0.060, 32 sites)  by size {'unknown': [16, 27], 'brief': [4, 12], 'long': [2, 2], 'multi-day': [2, 4]}
+R3 5 km, 3 sats, brightest FRP of the month    sens  25/45  (0.41-0.69)  no-fire  4/14   quiet  34/752 (0.045, 32 sites)  by size {'unknown': [16, 27], 'brief': [5, 12], 'long': [2, 2], 'multi-day': [2, 4]}
+R4 R2 with window -1..+2                       sens  23/45  (0.37-0.65)  no-fire  3/14   quiet  30/348 (0.086, 32 sites)  by size {'unknown': [15, 27], 'brief': [4, 12], 'long': [2, 2], 'multi-day': [2, 4]}
+R5 any detection within 3 km                   sens  31/45  (0.54-0.80)  no-fire  7/14   quiet 183/752 (0.243, 32 sites)  by size {'unknown': [22, 27], 'brief': [5, 12], 'long': [2, 2], 'multi-day': [2, 4]}
