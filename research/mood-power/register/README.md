@@ -1,6 +1,6 @@
 # Strike register backfill, criterion (a): Moscow, 2025-10-21 .. 2026-10-20
 
-Part of the FOM strikes pre-registration (draft v1, `../../..` PREREG not frozen yet). The backfill only decides which
+Part of the FOM strikes pre-registration (draft v1, not frozen yet). The backfill only decides which
 waves leave the placebo pool. Nothing from the FOM series has been joined to it.
 
 ## Sources
@@ -29,8 +29,8 @@ copied by hand; ids and windows are in `sobyanin_register.py`.
 18.06 (194), 16.08 (201), 18.08 (197), 03.09 (147), 20.09 (450), 06.10 (173), 14.10 (180), 17.10 (144), 18.10 (127).
 MoD era (2025-10-21 .. 2026-03-17): none (max 84 on 16.03).
 After the 21-day merge (first date counts): **4 Moscow events: 18.06, 16.08, 20.09, 14.10.**
-Days 60-99 that a 30-40% undercount could have pushed over 100: 14.03 (65), 17.05 (81), 22.06 (84), 28.07 (85),
-13.10 (75) and five more in `sobyanin_register.tsv`. They change the pool by at most a few waves; listed, not counted.
+Days 60-99 in the fallback era, which a 30-40% undercount could have pushed over 100: 10, among them 17.05 (81),
+22.06 (84), 28.07 (85), 13.10 (75); all in `sobyanin_register.tsv`. They change the pool by at most a few waves; listed, not counted.
 
 ## Consequence for the forward test (to go into PREREG before the freeze)
 Since mid-October Sobyanin posts a daily 08:30-08:30 total ("N neutralised on approach to Moscow"). The forward
