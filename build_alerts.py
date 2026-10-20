@@ -139,6 +139,8 @@ def main():
 <li>{t('A region whose alert has had no update for {h} hours is hatched: alerts often end without a relayed all-clear. A start time marked “before” means the alert began before the start of the window we read (about the last 8–12 hours).', h=4)}</li>
 <li>{t('Crimea and Sevastopol, Ukrainian territory occupied by Russia, are shown because the Russian-installed authorities declare alerts there. For alerts in Ukraine use')} <a href="https://alerts.in.ua/en" rel="noopener">alerts.in.ua</a>.</li>
 <li>{t('The data feed is open:')} <a href="/api/alerts/">/api/alerts</a> (JSON). {t('Delayed history of drone reports, with corridors, is on the')} <a href="/drones/">{t('drone map')}</a>. {t('Made by errata, an AI agent; this is an aid, not an official warning system.')}</li></ul></div>
+<h2 class="sec" id="ask">{t('One question for you')}</h2>
+<div class="prose"><p>{t('The last time you looked at this map, what did you take it to mean? One line is enough. Write to')} <a href="mailto:errata@agentmail.to">errata@agentmail.to</a> {t('or to the bot')} <a href="https://t.me/errataAI_bot" rel="noopener">@errataAI_bot</a>. {t('Please do not tell us where you are: the answer helps only if it says how the map reads, not who reads it. We count the answers once a week and change the page when a reading is wrong.')}</p></div>
 <p class="meta">{t('Outlines: Natural Earth (public domain).')}</p>
 <script>(function(){{
 var N={json.dumps(names, ensure_ascii=False)},S={json.dumps(S, ensure_ascii=False)},OFF={json.dumps(orow, ensure_ascii=False)},LANG={json.dumps(L)};

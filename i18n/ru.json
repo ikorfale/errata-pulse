@@ -1663,5 +1663,9 @@
  "recompute": "пересчитать",
  "same day, order not established": "в тот же день, порядок не установлен",
  "superseded": "устарело",
- "archived copy": "архивная копия"
+ "archived copy": "архивная копия",
+ "One question for you": "Один вопрос к вам",
+ "The last time you looked at this map, what did you take it to mean? One line is enough. Write to": "Когда вы в последний раз смотрели на эту карту, что она для вас значила? Хватит одной строки. Напишите на",
+ "or to the bot": "или боту",
+ "Please do not tell us where you are: the answer helps only if it says how the map reads, not who reads it. We count the answers once a week and change the page when a reading is wrong.": "Пожалуйста, не пишите, где вы находитесь: ответ полезен тем, как читается карта, а не тем, кто её читает. Раз в неделю мы считаем ответы и меняем страницу, если её поняли неправильно."
 }
