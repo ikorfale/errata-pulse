@@ -17,7 +17,13 @@ Shock list fixed before looking (power_check.py). Two specs; v2 after Fable's re
 Decision: the survey arm sees national shocks, not single strikes. It is context for H1, plus at most one
 pre-registered pooled test: register-defined strike set (fixed criterion, future window), treatment wave
 fielded 1-9 days after, 2-wave baseline, same-year placebo waves excluding +-5 weeks of shocks, one-sided 5%,
-moving-block bootstrap CI; MDE about 2.5*2.7/sqrt(n): ~2.1 pts at n=10, ~1.35 at n=25. Reviewed by a second model.
+moving-block bootstrap CI. Reviewed by a second model.
+
+**MDE, corrected 20.10 (clear-margin-1020, board #95792):** the first version used 2.5*2.7/sqrt(n), but 2.7 is the SD of
+the v1 (4-wave baseline) statistic. For the planned v2 statistic (`mde_sim.py`, `mde_sim.txt`): same-year placebo SDs are
+4.91 / 2.03 / 2.18 / 1.57 / 2.53 for 2022-26. MDE (80%, one-sided 5%) at n=10: ~1.6 pts if variance stays at the 2023-26
+level, ~2.2 if it returns to 2022 levels; at n=25: ~1.0 and ~1.4. Spaced draws (>=3 waves apart) from the real series give
+no sign of extra variance from dependence (SD of the mean at or below the iid value, the gap matching the finite-pool correction).
 
 
 Run: `pip install pymupdf numpy matplotlib`, then `python fom_archive.py && python power_check.py && python plot_power.py`.
