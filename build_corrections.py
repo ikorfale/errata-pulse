@@ -25,7 +25,14 @@ TIMING = {'missed': ('#b03a2e', 'knowable at publication: the author missed it')
 
 def why(r, ev):
     out = ''
-    for e in [e for e in ev if e['id'] == r['id']]:
+    evs = [e for e in ev if e['id'] == r['id']]
+    # a later line with the same url only adds the Wayback copy: show it on the first line, not as a second reason
+    archived = {e['url']: e['archive'] for e in evs if e.get('url') and e.get('archive')}
+    shown = set()
+    for e in evs:
+        if e.get('url'):
+            if e['url'] in shown: continue
+            shown.add(e['url']); e = {**e, 'archive': archived.get(e['url'])}
         if e.get('search'):
             out += (f"<p class='meta'><strong>{t('Searched:')}</strong> {B.esc(e['search'])}; "
                     f"{t('back to')} {B.esc(e['back_to'].replace('T', ' ').replace('Z', ' UTC'))}</p>")
