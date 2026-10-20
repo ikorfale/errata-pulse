@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-19T22:42:38.620772+00:00",
+ "generated": "2026-10-20T22:44:28.164631+00:00",
  "counts": {
   "open": 27,
   "resolved": 2,
@@ -167,6 +167,10 @@
     {
      "date": "2026-10-19",
      "p": 0.07
+    },
+    {
+     "date": "2026-10-20",
+     "p": 0.069
     }
    ],
    "crowd_urls": {
@@ -297,6 +301,10 @@
     {
      "date": "2026-10-19",
      "p": 0.093
+    },
+    {
+     "date": "2026-10-20",
+     "p": 0.096
     }
    ],
    "crowd_urls": {
@@ -409,6 +417,10 @@
     },
     {
      "date": "2026-10-19",
+     "p": 0.086
+    },
+    {
+     "date": "2026-10-20",
      "p": 0.086
     }
    ],
@@ -563,6 +575,10 @@
     {
      "date": "2026-10-19",
      "p": 0.235
+    },
+    {
+     "date": "2026-10-20",
+     "p": 0.235
     }
    ],
    "crowd_urls": {
@@ -664,6 +680,10 @@
     },
     {
      "date": "2026-10-19",
+     "p": 0.02
+    },
+    {
+     "date": "2026-10-20",
      "p": 0.02
     }
    ],
@@ -813,6 +833,10 @@
     {
      "date": "2026-10-19",
      "p": 0.305
+    },
+    {
+     "date": "2026-10-20",
+     "p": 0.305
     }
    ],
    "crowd_urls": {
@@ -899,6 +923,10 @@
     {
      "date": "2026-10-19",
      "p": 0.147
+    },
+    {
+     "date": "2026-10-20",
+     "p": 0.128
     }
    ],
    "crowd_urls": {
@@ -1029,6 +1057,10 @@
     {
      "date": "2026-10-19",
      "p": 0.285
+    },
+    {
+     "date": "2026-10-20",
+     "p": 0.275
     }
    ],
    "crowd_urls": {
@@ -1106,6 +1138,10 @@
     {
      "date": "2026-10-19",
      "p": 0.277
+    },
+    {
+     "date": "2026-10-20",
+     "p": 0.272
     }
    ],
    "crowd_urls": {
@@ -1203,6 +1239,10 @@
     },
     {
      "date": "2026-10-19",
+     "p": 0.205
+    },
+    {
+     "date": "2026-10-20",
      "p": 0.205
     }
    ],
@@ -1529,7 +1569,7 @@
    "index": "pulse",
    "opened": "2026-10-17",
    "status": "open",
-   "p": 0.75,
+   "p": 0.15,
    "base_rate": 0.9,
    "method": "Batch 17.10: my number written before asking Claude Fable blind (it never saw mine); ensemble = log-odds mean of base and the two judgements.",
    "history": [
@@ -1547,6 +1587,16 @@
      "date": "2026-10-18",
      "p": 0.75,
      "reason": "18.10: parliament debated but postponed the vote to 19.10 (MEE citing Reuters); delay, not rejection",
+     "models": {
+      "base": 0.9,
+      "mine": 0.88,
+      "fable": 0.85
+     }
+    },
+    {
+     "date": "2026-10-19",
+     "p": 0.15,
+     "reason": "19.10: House adjourned the mandate session a second time; Reuters (via Straits Times 19.10) says the vote is expected next week, Arabic outlets (alsaudi.news, Roayah 19.10) say discussions resume 26.10, after the 25.10 deadline. AFP (via SOFX) said deliberations continue Tuesday 20.10, so an early vote is not excluded.",
      "models": {
       "base": 0.9,
       "mine": 0.88,
