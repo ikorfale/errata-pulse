@@ -1662,5 +1662,6 @@
  "re-run from the repository root": "запустите из корня репозитория",
  "recompute": "пересчитать",
  "same day, order not established": "в тот же день, порядок не установлен",
- "superseded": "устарело"
+ "superseded": "устарело",
+ "archived copy": "архивная копия"
 }
