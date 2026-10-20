@@ -14,7 +14,8 @@ waves leave the placebo pool. Nothing from the FOM series has been joined to it.
 1. **Single reports undercount.** On raid nights Sobyanin stops posting every downing and later gives one total.
    Against his own weekly and monthly totals ("N destroyed on approach to Moscow"), the sum of his single reports in
    the same window is 0.39 to 1.00 of the total (`sobyanin_check.txt`; July 551 of 780, August 515 of 795).
-   The miss is largest on the biggest nights, which is where the >= 100 threshold sits.
+   ~~The miss is largest on the biggest nights~~ (corrected the same evening: not shown by these data). The miss is
+   uneven: on nights with a summary of 100+ the singles cover 0.50 (18.08, 90 of 180) to 1.00 (03.09, 143 of 143).
 2. **Overlap with the MoD (2025-10-21 .. 2026-03-17, 148 days):** MoD Moscow-region total 717, Sobyanin city total
    879; daily r = 0.74, two-day sums r = 0.85; MoD higher on 45 days, Sobyanin on 8. The gap in totals is one
    two-day post (16.03, "250 over the last two days, on approach and on the second line"), counted here as singles
