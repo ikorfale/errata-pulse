@@ -1,0 +1,28 @@
+n total 1604 Q30 codes [1, 2, 98, 99]
+all: n=1484 anxious=0.512 se=0.014
+rail/airport disruptions     yes n= 478 0.578  no n=1006 0.481  diff +0.097 (se 0.029)
+shelling, drone attacks      yes n= 700 0.556  no n= 784 0.472  diff +0.084 (se 0.027)
+mobile internet outages      yes n=1069 0.537  no n= 415 0.447  diff +0.090 (se 0.030)
+power/water outages          yes n= 439 0.593  no n=1045 0.476  diff +0.117 (se 0.030)
+petrol shortages             yes n= 319 0.572  no n=1165 0.496  diff +0.076 (se 0.033)
+medicine shortages           yes n= 185 0.776  no n=1299 0.472  diff +0.304 (se 0.036)
+missing Q15_97
+
+adjusted (n=1484):
+  const                        +0.260 (se 0.047)
+  rail/airport disruptions     +0.075 (se 0.030)
+  shelling, drone attacks      +0.047 (se 0.029)
+  mobile internet outages      +0.069 (se 0.032)
+  power/water outages          +0.070 (se 0.030)
+  petrol shortages             +0.044 (se 0.033)
+  medicine shortages           +0.275 (se 0.037)
+  age 30-39                    -0.036 (se 0.048)
+  age 40-49                    +0.062 (se 0.047)
+  age 50-59                    +0.171 (se 0.050)
+  age 60+                      +0.181 (se 0.047)
+  events reported = 0: n=195 anxious=0.366 (se 0.036)
+  events reported = 1: n=324 anxious=0.441 (se 0.029)
+  events reported = 2: n=381 anxious=0.489 (se 0.027)
+  events reported = 3: n=330 anxious=0.585 (se 0.029)
+  events reported = 4: n=174 anxious=0.618 (se 0.039)
+  events reported = 5: n=62 anxious=0.682 (se 0.062)
