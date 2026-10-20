@@ -1,0 +1,22 @@
+244 waves 2021-10-10..2026-10-11; week-to-week change of 'anxious': sd 3.90 pts, |change|>=5 in 14.0% of weeks
+null (non-shock weeks, n=169): effect 95th pct +2.8, 99th +5.7; peak-3w 95th +4.9
+shock                                                      wave  effect   pct  peak3w   pct    dk
+big    2022-02-24 invasion of Ukraine               2022-02-27    +8.8    99    +8.8    98  -1.2
+big    2022-09-21 partial mobilisation              2022-09-25   +29.5   100   +30.5   100  -1.5
+big    2023-06-24 Prigozhin mutiny                  2023-07-02    -1.2    34    -1.2    12  -0.2
+big    2024-03-22 Crocus City Hall attack           2024-03-25    +5.8    99    +7.8    98  -0.2
+big    2024-08-06 Ukrainian incursion into Kursk    2024-08-11    +8.0    99    +9.0    98  +0.0
+strike 2023-05-30 drone attack on Moscow (first on  2023-06-04    +1.8    80    +1.8    63  -0.8
+strike 2023-12-30 Belgorod city centre shelling, 25 2024-01-14    +3.0    95    +3.0    87  -0.5
+strike 2025-03-11 largest drone raid on Moscow to d 2025-03-16    +2.5    90    +2.5    78  -0.2
+pooled strikes: mean effect +2.42 (n=3), one-sided p vs random weeks 0.025; null sd 2.70; if the true strike effect were +2.4, ~8 independent strike weeks for 80% power (one-sided 5%)
+
+v2 (Fable review): 2-wave baseline, fieldwork start 1..9 d after shock, same-year placebo
+big    2022-02-24 invasion of Ukraine               2022-02-27   +7.5  pct in 2022  100 (placebo n=29, 95th +5.5)
+big    2022-09-21 partial mobilisation              2022-09-25  +30.5  pct in 2022  100 (placebo n=29, 95th +5.5)
+big    2023-06-24 Prigozhin mutiny                  2023-06-25   -1.0  pct in 2023   41 (placebo n=32, 95th +3.2)
+big    2024-03-22 Crocus City Hall attack           2024-03-25   +6.0  pct in 2024   96 (placebo n=26, 95th +2.9)
+big    2024-08-06 Ukrainian incursion into Kursk    2024-08-11   +9.0  pct in 2024  100 (placebo n=26, 95th +2.9)
+strike 2023-05-30 drone attack on Moscow (first on  2023-06-04   +0.0  pct in 2023   59 (placebo n=32, 95th +3.2)
+strike 2023-12-30 Belgorod city centre shelling, 25 no wave within 9 days: unmeasurable
+strike 2025-03-11 largest drone raid on Moscow to d 2025-03-16   +2.5  pct in 2025   97 (placebo n=39, 95th +2.0)
