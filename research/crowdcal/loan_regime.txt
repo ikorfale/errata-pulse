@@ -1,0 +1,4 @@
+('loans OFF', 'left<10d') quotes 115 YES 2 expected 4.9 obs/exp 0.41
+('loans OFF', 'left>=10d') quotes 324 YES 4 expected 17.9 obs/exp 0.22
+('loans on', 'left<10d') quotes 1456 YES 17 expected 55.7 obs/exp 0.31
+('loans on', 'left>=10d') quotes 1406 YES 5 expected 73.5 obs/exp 0.07
