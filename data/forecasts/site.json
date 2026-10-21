@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-20T23:29:56.416639+00:00",
+ "generated": "2026-10-21T22:41:41.248835+00:00",
  "counts": {
   "open": 27,
   "resolved": 2,
@@ -74,8 +74,8 @@
   }
  ],
  "models": {
-  "base": 0.4412,
-  "signals": 0.1715
+  "signals": 0.1715,
+  "base": 0.4412
  },
  "questions": [
   {
@@ -171,6 +171,10 @@
     {
      "date": "2026-10-20",
      "p": 0.069
+    },
+    {
+     "date": "2026-10-21",
+     "p": 0.067
     }
    ],
    "crowd_urls": {
@@ -213,7 +217,7 @@
    "index": "mri",
    "opened": "2026-10-09",
    "status": "open",
-   "p": 0.37,
+   "p": 0.34,
    "base_rate": 0.35,
    "method": "base: judgmental reference class = MoD-drafted presidential decrees put up for public discussion; most are signed, but a minority within ~7-8 weeks of publication; I put that share at 35% (no count yet: method gap to fill). signals: LR 1.2 rising desertion/unauthorised-absence caseload gives the MoD a reason to hurry; LR 1.0 no public statement of a timetable.",
    "history": [
@@ -221,6 +225,15 @@
      "date": "2026-10-09",
      "p": 0.37,
      "reason": "Opening: draft published 8 Oct (RBC, MK, Izvestia); signing speed is the open question.",
+     "models": {
+      "base": 0.35,
+      "signals": 0.39
+     }
+    },
+    {
+     "date": "2026-10-21",
+     "p": 0.34,
+     "reason": "13 days after the draft was published, still not signed; no new signal for speed. Time decay only.",
      "models": {
       "base": 0.35,
       "signals": 0.39
@@ -305,6 +318,10 @@
     {
      "date": "2026-10-20",
      "p": 0.096
+    },
+    {
+     "date": "2026-10-21",
+     "p": 0.103
     }
    ],
    "crowd_urls": {
@@ -421,6 +438,10 @@
     },
     {
      "date": "2026-10-20",
+     "p": 0.086
+    },
+    {
+     "date": "2026-10-21",
      "p": 0.086
     }
    ],
@@ -579,6 +600,10 @@
     {
      "date": "2026-10-20",
      "p": 0.235
+    },
+    {
+     "date": "2026-10-21",
+     "p": 0.27
     }
    ],
    "crowd_urls": {
@@ -684,6 +709,10 @@
     },
     {
      "date": "2026-10-20",
+     "p": 0.02
+    },
+    {
+     "date": "2026-10-21",
      "p": 0.02
     }
    ],
@@ -837,6 +866,10 @@
     {
      "date": "2026-10-20",
      "p": 0.305
+    },
+    {
+     "date": "2026-10-21",
+     "p": 0.305
     }
    ],
    "crowd_urls": {
@@ -927,6 +960,10 @@
     {
      "date": "2026-10-20",
      "p": 0.128
+    },
+    {
+     "date": "2026-10-21",
+     "p": 0.123
     }
    ],
    "crowd_urls": {
@@ -1061,6 +1098,10 @@
     {
      "date": "2026-10-20",
      "p": 0.275
+    },
+    {
+     "date": "2026-10-21",
+     "p": 0.305
     }
    ],
    "crowd_urls": {
@@ -1142,6 +1183,10 @@
     {
      "date": "2026-10-20",
      "p": 0.272
+    },
+    {
+     "date": "2026-10-21",
+     "p": 0.267
     }
    ],
    "crowd_urls": {
@@ -1244,6 +1289,10 @@
     {
      "date": "2026-10-20",
      "p": 0.205
+    },
+    {
+     "date": "2026-10-21",
+     "p": 0.207
     }
    ],
    "crowd_urls": {
@@ -1543,7 +1592,7 @@
    "index": "mri",
    "opened": "2026-10-11",
    "status": "open",
-   "p": 0.56,
+   "p": 0.5,
    "base_rate": 0.55,
    "method": "base: reference class = government bills on military service introduced to the Duma, share passing first reading within about 7 weeks of introduction; my rough estimate from the 2023-2025 pattern of such bills (often fast-tracked) about 0.55, not a counted sample. signals: LR 1.2 government/MoD bill framed as social guarantees, uncontroversial in the Duma; LR 0.85 the autumn session is crowded with the 2027-2029 budget. No crowd market.",
    "history": [
@@ -1551,6 +1600,15 @@
      "date": "2026-10-11",
      "p": 0.56,
      "reason": "Opened from the MRI report of 11 Oct: the bill was introduced on 9 Oct; first reading would be the next observable step of the legal-readiness component. Pre-mortem (it is 30 Nov and I was wrong): the Duma prioritised the budget and scheduled the bill for December, or it was sent back for revision after public attention to the mobilisation side effect.",
+     "models": {
+      "base": 0.55,
+      "signals": 0.555
+     }
+    },
+    {
+     "date": "2026-10-21",
+     "p": 0.5,
+     "reason": "12 days after introduction, no committee movement; the autumn session is busy with the 2027-2029 budget. Time decay, back-loaded hazard.",
      "models": {
       "base": 0.55,
       "signals": 0.555
