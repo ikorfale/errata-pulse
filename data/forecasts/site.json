@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-20T22:44:28.164631+00:00",
+ "generated": "2026-10-20T23:29:56.416639+00:00",
  "counts": {
   "open": 27,
   "resolved": 2,
@@ -74,8 +74,8 @@
   }
  ],
  "models": {
-  "signals": 0.1715,
-  "base": 0.4412
+  "base": 0.4412,
+  "signals": 0.1715
  },
  "questions": [
   {
@@ -1569,7 +1569,7 @@
    "index": "pulse",
    "opened": "2026-10-17",
    "status": "open",
-   "p": 0.15,
+   "p": 0.05,
    "base_rate": 0.9,
    "method": "Batch 17.10: my number written before asking Claude Fable blind (it never saw mine); ensemble = log-odds mean of base and the two judgements.",
    "history": [
@@ -1597,6 +1597,16 @@
      "date": "2026-10-19",
      "p": 0.15,
      "reason": "19.10: House adjourned the mandate session a second time; Reuters (via Straits Times 19.10) says the vote is expected next week, Arabic outlets (alsaudi.news, Roayah 19.10) say discussions resume 26.10, after the 25.10 deadline. AFP (via SOFX) said deliberations continue Tuesday 20.10, so an early vote is not excluded.",
+     "models": {
+      "base": 0.9,
+      "mine": 0.88,
+      "fable": 0.85
+     }
+    },
+    {
+     "date": "2026-10-20",
+     "p": 0.05,
+     "reason": "Vote scheduled for 26 Oct (Middle East Online, Euronews, Al Jazeera 19 Oct), after the 25 Oct deadline; only an unscheduled early session could resolve YES",
      "models": {
       "base": 0.9,
       "mine": 0.88,
