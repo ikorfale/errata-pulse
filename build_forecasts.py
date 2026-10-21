@@ -159,6 +159,27 @@ def brier_bars(rows):
 # ---------- blocks ----------
 def mean(vs): vs = [v for v in vs if v is not None]; return (sum(vs) / len(vs), len(vs)) if vs else (None, 0)
 
+def skill_block(res):
+    """errata minus base rates, with questions blocked by deadline month: questions due in the same month share shocks,
+    so the interval resamples whole months (same rule as tools/forecast score; crowdcal rho_check 16.10)."""
+    pairs = [(q['deadline'][:7], q['scores']['brier'] - q['scores']['brier_base']) for q in res
+             if (q.get('scores') or {}).get('brier') is not None and q['scores'].get('brier_base') is not None]
+    if not pairs: return ''
+    blocks = {}
+    for m, v in pairs: blocks.setdefault(m, []).append(v)
+    d = sum(v for _, v in pairs) / len(pairs)
+    if len(blocks) >= 3:
+        import random; rnd = random.Random(7); Bk = list(blocks.values()); bs = []
+        for _ in range(2000):
+            vs = [v for b in (rnd.choice(Bk) for _ in Bk) for v in b]; bs.append(sum(vs) / len(vs))
+        bs.sort(); iv = t('95% interval, resampling whole deadline months: {a} to {b}.', a=f'{bs[49]:+.3f}', b=f'{bs[1949]:+.3f}')
+    else:
+        iv = t('Only {m} deadline months so far; questions due in the same month share shocks, so no interval is shown until there are at least 3. This is not evidence of skill.', m=len(blocks))
+    rows = ''.join(f'<tr><td>{B.esc(m)}</td><td class="n">{len(v)}</td><td class="n">{sum(v) / len(v):+.3f}</td></tr>' for m, v in sorted(blocks.items()))
+    return (f'<div class="fq-skill"><h3 class="smh3">{t("errata against base rates")}</h3><p class="meta">'
+            + t('Brier of errata minus Brier of the base rate on the same {n} questions: {d} (negative = better than the base rate).', n=len(pairs), d=f'{d:+.3f}')
+            + ' ' + iv + f'</p><div class="tscroll"><table class="howt"><thead><tr><th>{t("Deadline month")}</th><th class="n">{t("resolved")}</th><th class="n">{t("errata − base rate")}</th></tr></thead><tbody>{rows}</tbody></table></div></div>')
+
 def track_record(d, qs):
     c = d.get('counts', {}); nres = c.get('resolved', 0); res = [q for q in qs if q['status'] in ('yes', 'no')]
     br = d.get('brier') or {}
@@ -186,7 +207,7 @@ def track_record(d, qs):
         r = [q for q in qq if q['status'] in ('yes', 'no')]; v, m = mean([(q.get('scores') or {}).get('brier') for q in r]); vb, _ = mean([(q.get('scores') or {}).get('brier_base') for q in r])
         crows += f'<tr><td>{t(n)}</td><td class="n">{dec(v)}</td><td class="n">{dec(vb)}</td><td class="n">{len(r)}</td><td class="n">{sum(1 for q in qq if q["status"] == "open")}</td></tr>'
     return (f'<h2 class="sec" id="record">{t("Track record")}</h2>'
-            + (f'<p class="fq-short">{short}</p>' if short else '') + facts
+            + (f'<p class="fq-short">{short}</p>' if short else '') + facts + skill_block(res)
             + f'<div class="fq-rec"><div><h3 class="smh3">{t("Brier score: lower is better")}</h3><p class="meta">{t("The mean squared distance between the probability and what happened, averaged over every day a question was open. 0 is perfect; 0.25 is what saying 50% to everything earns.")}</p>{brier_bars(rows)}'
             + f'<p class="meta">{t("“Every day” scores each day’s standing probability, so early, confident and right beats late. “Final call” scores only the last probability before the deadline. Base rates and crowds are scored on the same questions, the crowd only where a market existed.")}</p></div>'
             + f'<div><h3 class="smh3">{t("Calibration")}</h3><p class="meta">{t("Of everything said at about 30%, about 30% should happen. Points on the diagonal are well calibrated; above it, errata was too cautious; below it, too confident. Bigger points hold more questions.")}</p><div class="chart fq-calbox">{calib_svg(d.get("calibration") or [], nres)}</div></div></div>'
@@ -218,9 +239,12 @@ def closed_list(qs):
     ann = sorted([q for q in qs if q['status'] == 'annulled'], key=lambda q: q.get('resolved_at') or '', reverse=True)
     out = f'<h2 class="sec" id="resolved">{t("Resolved")}</h2>'
     if res:
-        out += '<ul class="fq-closed">' + ''.join(
+        groups = {}
+        for q in sorted(res, key=lambda q: q['deadline'], reverse=True): groups.setdefault(q['deadline'][:7], []).append(q)
+        for mon, grp in groups.items():
+            out += f'<h3 class="smh3">{t("Deadline {m}", m=B.esc(mon))} · {len(grp)}</h3><ul class="fq-closed">' + ''.join(
             f'<li><a href="{qpath(q)}">{outcome_badge(q)}<span class="fq-ct"><strong>{en(q["title"])}</strong><span class="meta">{cat_name(q["category"])} · {t("resolved {d}", d=B.fmt_date(q["resolved_at"]))} · {t("final probability {p}", p=pct(q["p"]))}</span></span>'
-            f'<span class="fq-cs"><span class="small">Brier</span>{dec((q.get("scores") or {}).get("brier"))}</span></a></li>' for q in res) + '</ul>'
+            f'<span class="fq-cs"><span class="small">Brier</span>{dec((q.get("scores") or {}).get("brier"))}</span></a></li>' for q in grp) + '</ul>'
     else: out += f'<p class="meta">{t("Nothing has resolved yet. Every question will appear here with its outcome, its score and the source that decided it, whether errata was right or wrong.")}</p>'
     out += f'<h3 class="smh3" id="annulled">{t("Annulled")}</h3>'
     if ann:
