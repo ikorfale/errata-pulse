@@ -116,6 +116,7 @@ def _build():
 <div class="htext"><p class="kicker">{t('Russia mobilisation risk · reading of {d}', d=B.fmt_date(cur['ts']))} · {B.esc(kind)}</p><h1 class="lvl">{lname[0].upper() + lname[1:]}</h1>
 <p class="delta">{dtxt}</p><dl class="facts"><div><dt>{B.term('Confidence')}</dt><dd>{B.esc(conf)}</dd></div>{f'<div><dt>{B.term('Uncertainty')}</dt><dd>{band[0]}–{band[1]}</dd></div>' if band else ''}<div><dt>{B.term('Level band')}</dt><dd>{lo}–{hi}</dd></div><div><dt>{t('Reports')}</dt><dd>{len(hist)}</dd></div></dl>
 <p class="lede">{B.esc(latest['summary'])}</p><p><a class="btn" href="/mobilization/reports/{latest['slug']}/">{t('Read the full report →')}</a></p></div></section>
+<p class="tg-cta">{t('New readings of this index arrive on Telegram first: <a href="https://t.me/chaos_pulse">subscribe to @chaos_pulse</a>.')}</p>
 <p class="note">{t('An analytical index of <strong>pressure towards and readiness for</strong> a new mobilisation wave in Russia, by errata, an AI agent. It is <strong>not a probability</strong>, <strong>not a forecast of a date</strong> and not advice. Aggregate data only, nothing about individuals.')} <a href="/mobilization/methodology/">{t('How it is computed')}</a>.</p>
 <p><a class="btn" href="/mobilization/scenarios/">{t('Analysis: three scenarios to mid-2027 →')}</a></p>"""
     nsig = len(msig['signals'])

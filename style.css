@@ -99,3 +99,5 @@ h3.sub{font:500 1.2rem/1.4 var(--sans);margin:36px 0 6px}
 pre.cite{white-space:pre-wrap;word-break:break-word;font-size:.85em;padding:.8em 1em;border:1px solid var(--rule,#ccc);border-radius:6px;overflow-x:auto}
 .cl td{vertical-align:top}.cl-bar{color:var(--ink);display:block}.cl-eps{border-top:1px solid var(--line);padding:12px 0}.cl-eps summary{cursor:pointer;font:400 .95rem/1.5 var(--sans)}.cl-list{font:400 .86rem/1.55 var(--sans);padding-left:1.4em}.cl-list li{margin:6px 0}.cl-date{color:var(--mute);font-variant-numeric:tabular-nums;white-space:nowrap}.cl-out{font-weight:500;white-space:nowrap}
 @media(max-width:680px){.cl .x{display:none}.cl td:first-child{min-width:9rem}}
+
+.tg-cta{margin:.8rem 0 1.2rem;padding:.6rem .9rem;border-left:3px solid #2a9fd6;background:rgba(42,159,214,.08);font-size:.95rem}

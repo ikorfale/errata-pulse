@@ -88,6 +88,7 @@ def main():
 <p class="kicker">{t('Live · region level · official announcements')}</p>
 <h1 class="ptitle">{t('Air-raid alerts in Russia, live')}</h1>
 <p class="lede">{t('Which Russian regions are under an officially declared UAV or missile danger right now, and where the all-clear was given. Updated every minute, region by region, with the official channels to follow and what to do when an alert is declared.')}</p>
+<p class="tg-cta">{t('Get each Chaos Pulse and mobilisation report on Telegram: <a href="https://t.me/chaos_pulse">@chaos_pulse</a> (no alerts spam, one post per report).')}</p>
 <div class="al-top"><div>
 <div class="al-live"><span class="al-dot" id="al-dot"></span><span id="al-upd">{t('Loading…')}</span></div>
 <div class="al-count" id="al-n">–<small>{S['now_n']}</small></div>
