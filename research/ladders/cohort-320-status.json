@@ -1,12 +1,12 @@
 {
  "cohort_day": "2026-10-16",
- "cutoff": "2026-10-20",
+ "cutoff": "2026-10-21",
  "pairs": {
   "I8X5vPa7vS8TfjwmO1Vc|p0mSvUwyzruumWS20Rr6": {
    "kind": "binary",
    "verdict": "state",
    "gap0": 0.187,
-   "last_flagged": "2026-10-20",
+   "last_flagged": "2026-10-21",
    "first_unflagged": null,
    "status": "open"
   },
@@ -14,7 +14,7 @@
    "kind": "binary",
    "verdict": "ladder",
    "gap0": 0.1073,
-   "last_flagged": "2026-10-20",
+   "last_flagged": "2026-10-21",
    "first_unflagged": null,
    "status": "open"
   },
@@ -22,7 +22,7 @@
    "kind": "binary",
    "verdict": "criteria-differ",
    "gap0": 0.0577,
-   "last_flagged": "2026-10-20",
+   "last_flagged": "2026-10-21",
    "first_unflagged": null,
    "status": "open"
   },
@@ -30,7 +30,7 @@
    "kind": "binary",
    "verdict": "state",
    "gap0": 0.0472,
-   "last_flagged": "2026-10-20",
+   "last_flagged": "2026-10-21",
    "first_unflagged": null,
    "status": "open"
   },
@@ -38,7 +38,7 @@
    "kind": "binary",
    "verdict": "ladder",
    "gap0": 0.0454,
-   "last_flagged": "2026-10-20",
+   "last_flagged": "2026-10-21",
    "first_unflagged": null,
    "status": "open"
   },
@@ -46,7 +46,7 @@
    "kind": "binary",
    "verdict": "ladder",
    "gap0": 0.033,
-   "last_flagged": "2026-10-20",
+   "last_flagged": "2026-10-21",
    "first_unflagged": null,
    "status": "open"
   },
@@ -54,7 +54,7 @@
    "kind": "mc",
    "verdict": "ladder",
    "gap0": 0.0959,
-   "last_flagged": "2026-10-20",
+   "last_flagged": "2026-10-21",
    "first_unflagged": null,
    "status": "open"
   },
@@ -62,7 +62,7 @@
    "kind": "mc",
    "verdict": "ladder",
    "gap0": 0.0959,
-   "last_flagged": "2026-10-20",
+   "last_flagged": "2026-10-21",
    "first_unflagged": null,
    "status": "open"
   },
@@ -70,7 +70,7 @@
    "kind": "mc",
    "verdict": "ladder",
    "gap0": 0.0959,
-   "last_flagged": "2026-10-20",
+   "last_flagged": "2026-10-21",
    "first_unflagged": null,
    "status": "open"
   },
@@ -78,7 +78,7 @@
    "kind": "mc",
    "verdict": "ladder",
    "gap0": 0.09,
-   "last_flagged": "2026-10-20",
+   "last_flagged": "2026-10-21",
    "first_unflagged": null,
    "status": "open"
   },
@@ -86,7 +86,7 @@
    "kind": "mc",
    "verdict": "ladder",
    "gap0": 0.087,
-   "last_flagged": "2026-10-20",
+   "last_flagged": "2026-10-21",
    "first_unflagged": null,
    "status": "open"
   },
@@ -94,7 +94,7 @@
    "kind": "mc",
    "verdict": "ladder",
    "gap0": 0.0864,
-   "last_flagged": "2026-10-20",
+   "last_flagged": "2026-10-21",
    "first_unflagged": null,
    "status": "open"
   },
@@ -102,7 +102,7 @@
    "kind": "mc",
    "verdict": "ladder",
    "gap0": 0.08,
-   "last_flagged": "2026-10-20",
+   "last_flagged": "2026-10-21",
    "first_unflagged": null,
    "status": "open"
   },
@@ -110,7 +110,7 @@
    "kind": "mc",
    "verdict": "ladder",
    "gap0": 0.0797,
-   "last_flagged": "2026-10-20",
+   "last_flagged": "2026-10-21",
    "first_unflagged": null,
    "status": "open"
   },
@@ -118,7 +118,7 @@
    "kind": "mc",
    "verdict": "ladder",
    "gap0": 0.0792,
-   "last_flagged": "2026-10-20",
+   "last_flagged": "2026-10-21",
    "first_unflagged": null,
    "status": "open"
   },
@@ -126,7 +126,7 @@
    "kind": "mc",
    "verdict": "ladder",
    "gap0": 0.0642,
-   "last_flagged": "2026-10-20",
+   "last_flagged": "2026-10-21",
    "first_unflagged": null,
    "status": "open"
   },
@@ -134,7 +134,7 @@
    "kind": "mc",
    "verdict": "ladder",
    "gap0": 0.0637,
-   "last_flagged": "2026-10-20",
+   "last_flagged": "2026-10-21",
    "first_unflagged": null,
    "status": "open"
   },
@@ -142,7 +142,7 @@
    "kind": "mc",
    "verdict": "ladder",
    "gap0": 0.0624,
-   "last_flagged": "2026-10-20",
+   "last_flagged": "2026-10-21",
    "first_unflagged": null,
    "status": "open"
   },
@@ -150,7 +150,7 @@
    "kind": "mc",
    "verdict": "ladder",
    "gap0": 0.0608,
-   "last_flagged": "2026-10-20",
+   "last_flagged": "2026-10-21",
    "first_unflagged": null,
    "status": "open"
   },
@@ -158,7 +158,7 @@
    "kind": "mc",
    "verdict": "ladder",
    "gap0": 0.0602,
-   "last_flagged": "2026-10-20",
+   "last_flagged": "2026-10-21",
    "first_unflagged": null,
    "status": "open"
   },
@@ -166,7 +166,7 @@
    "kind": "mc",
    "verdict": "ladder",
    "gap0": 0.0555,
-   "last_flagged": "2026-10-20",
+   "last_flagged": "2026-10-21",
    "first_unflagged": null,
    "status": "open"
   },
@@ -174,7 +174,7 @@
    "kind": "mc",
    "verdict": "ladder",
    "gap0": 0.0555,
-   "last_flagged": "2026-10-20",
+   "last_flagged": "2026-10-21",
    "first_unflagged": null,
    "status": "open"
   },
@@ -182,7 +182,7 @@
    "kind": "mc",
    "verdict": "ladder",
    "gap0": 0.0555,
-   "last_flagged": "2026-10-20",
+   "last_flagged": "2026-10-21",
    "first_unflagged": null,
    "status": "open"
   },
@@ -190,7 +190,7 @@
    "kind": "mc",
    "verdict": "ladder",
    "gap0": 0.0551,
-   "last_flagged": "2026-10-20",
+   "last_flagged": "2026-10-21",
    "first_unflagged": null,
    "status": "open"
   },
@@ -198,7 +198,7 @@
    "kind": "mc",
    "verdict": "ladder",
    "gap0": 0.054,
-   "last_flagged": "2026-10-20",
+   "last_flagged": "2026-10-21",
    "first_unflagged": null,
    "status": "open"
   },
@@ -206,7 +206,7 @@
    "kind": "mc",
    "verdict": "ladder",
    "gap0": 0.0535,
-   "last_flagged": "2026-10-20",
+   "last_flagged": "2026-10-21",
    "first_unflagged": null,
    "status": "open"
   },
@@ -214,7 +214,7 @@
    "kind": "mc",
    "verdict": "ladder",
    "gap0": 0.0497,
-   "last_flagged": "2026-10-20",
+   "last_flagged": "2026-10-21",
    "first_unflagged": null,
    "status": "open"
   },
@@ -222,7 +222,7 @@
    "kind": "mc",
    "verdict": "ladder",
    "gap0": 0.0478,
-   "last_flagged": "2026-10-20",
+   "last_flagged": "2026-10-21",
    "first_unflagged": null,
    "status": "open"
   },
@@ -230,7 +230,7 @@
    "kind": "mc",
    "verdict": "ladder",
    "gap0": 0.0477,
-   "last_flagged": "2026-10-20",
+   "last_flagged": "2026-10-21",
    "first_unflagged": null,
    "status": "open"
   },
@@ -238,7 +238,7 @@
    "kind": "mc",
    "verdict": "ladder",
    "gap0": 0.0467,
-   "last_flagged": "2026-10-20",
+   "last_flagged": "2026-10-21",
    "first_unflagged": null,
    "status": "open"
   },
@@ -246,7 +246,7 @@
    "kind": "mc",
    "verdict": "ladder",
    "gap0": 0.0441,
-   "last_flagged": "2026-10-20",
+   "last_flagged": "2026-10-21",
    "first_unflagged": null,
    "status": "open"
   },
@@ -254,7 +254,7 @@
    "kind": "mc",
    "verdict": "ladder",
    "gap0": 0.0435,
-   "last_flagged": "2026-10-20",
+   "last_flagged": "2026-10-21",
    "first_unflagged": null,
    "status": "open"
   },
@@ -262,7 +262,7 @@
    "kind": "mc",
    "verdict": "ladder",
    "gap0": 0.0424,
-   "last_flagged": "2026-10-20",
+   "last_flagged": "2026-10-21",
    "first_unflagged": null,
    "status": "open"
   },
@@ -270,7 +270,7 @@
    "kind": "mc",
    "verdict": "ladder",
    "gap0": 0.0405,
-   "last_flagged": "2026-10-20",
+   "last_flagged": "2026-10-21",
    "first_unflagged": null,
    "status": "open"
   },
@@ -278,7 +278,7 @@
    "kind": "mc",
    "verdict": "ladder",
    "gap0": 0.0404,
-   "last_flagged": "2026-10-20",
+   "last_flagged": "2026-10-21",
    "first_unflagged": null,
    "status": "open"
   },
@@ -286,7 +286,7 @@
    "kind": "mc",
    "verdict": "ladder",
    "gap0": 0.0403,
-   "last_flagged": "2026-10-20",
+   "last_flagged": "2026-10-21",
    "first_unflagged": null,
    "status": "open"
   },
@@ -294,7 +294,7 @@
    "kind": "mc",
    "verdict": "ladder",
    "gap0": 0.0396,
-   "last_flagged": "2026-10-20",
+   "last_flagged": "2026-10-21",
    "first_unflagged": null,
    "status": "open"
   },
@@ -302,7 +302,7 @@
    "kind": "mc",
    "verdict": "ladder",
    "gap0": 0.0373,
-   "last_flagged": "2026-10-20",
+   "last_flagged": "2026-10-21",
    "first_unflagged": null,
    "status": "open"
   },
@@ -310,7 +310,7 @@
    "kind": "mc",
    "verdict": "ladder",
    "gap0": 0.0368,
-   "last_flagged": "2026-10-20",
+   "last_flagged": "2026-10-21",
    "first_unflagged": null,
    "status": "open"
   },
@@ -318,7 +318,7 @@
    "kind": "mc",
    "verdict": "ladder",
    "gap0": 0.0365,
-   "last_flagged": "2026-10-20",
+   "last_flagged": "2026-10-21",
    "first_unflagged": null,
    "status": "open"
   },
@@ -326,7 +326,7 @@
    "kind": "mc",
    "verdict": "ladder",
    "gap0": 0.0362,
-   "last_flagged": "2026-10-20",
+   "last_flagged": "2026-10-21",
    "first_unflagged": null,
    "status": "open"
   },
@@ -334,7 +334,7 @@
    "kind": "mc",
    "verdict": "ladder",
    "gap0": 0.033,
-   "last_flagged": "2026-10-20",
+   "last_flagged": "2026-10-21",
    "first_unflagged": null,
    "status": "open"
   },
@@ -342,7 +342,7 @@
    "kind": "mc",
    "verdict": "ladder",
    "gap0": 0.0312,
-   "last_flagged": "2026-10-20",
+   "last_flagged": "2026-10-21",
    "first_unflagged": null,
    "status": "open"
   }
