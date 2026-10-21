@@ -1,0 +1,18 @@
+tercile cuts on bettors-before-quote: <24, 24-41, >=42  (all 3301 sub-10% quotes)
+low tercile, all time left         quotes  1033 markets  496 YES  13 (in 10 markets) expected   55.0 obs/exp 0.24 P(<=obs) 3.8e-12
+low tercile, <10 days left         quotes   334 markets  312 YES   8 (in 8 markets) expected   14.5 obs/exp 0.55 P(<=obs) 0.043
+low tercile, >=10 days left        quotes   699 markets  400 YES   5 (in 3 markets) expected   40.5 obs/exp 0.12 P(<=obs) 8.8e-13
+mid tercile, all time left         quotes  1149 markets  634 YES   5 (in 4 markets) expected   51.2 obs/exp 0.10 P(<=obs) 5.5e-17
+mid tercile, <10 days left         quotes   604 markets  568 YES   3 (in 3 markets) expected   23.6 obs/exp 0.13 P(<=obs) 8.8e-08
+mid tercile, >=10 days left        quotes   545 markets  423 YES   2 (in 2 markets) expected   27.6 obs/exp 0.07 P(<=obs) 1.9e-10
+high tercile, all time left        quotes  1119 markets  605 YES  10 (in 8 markets) expected   45.8 obs/exp 0.22 P(<=obs) 8.3e-11
+high tercile, <10 days left        quotes   633 markets  601 YES   8 (in 8 markets) expected   22.5 obs/exp 0.36 P(<=obs) 0.00032
+high tercile, >=10 days left       quotes   486 markets  394 YES   2 (in 2 markets) expected   23.3 obs/exp 0.09 P(<=obs) 1.3e-08
+
+terciles cut within each anchor type (7d/30d/c14/c30) instead of pooled:
+low (within-anchor), <10 days      quotes   449 markets  445 YES   9 (in 9 markets) expected   19.3 obs/exp 0.47 P(<=obs) 0.0063
+low (within-anchor), >=10 days     quotes   591 markets  393 YES   3 (in 3 markets) expected   33.1 obs/exp 0.09 P(<=obs) 1.1e-11
+mid (within-anchor), <10 days      quotes   548 markets  546 YES   3 (in 3 markets) expected   20.6 obs/exp 0.15 P(<=obs) 1.2e-06
+mid (within-anchor), >=10 days     quotes   594 markets  458 YES   5 (in 4 markets) expected   31.1 obs/exp 0.16 P(<=obs) 4.1e-09
+high (within-anchor), <10 days     quotes   574 markets  544 YES   7 (in 7 markets) expected   20.7 obs/exp 0.34 P(<=obs) 0.00039
+high (within-anchor), >=10 days    quotes   545 markets  410 YES   1 (in 1 markets) expected   27.1 obs/exp 0.04 P(<=obs) 2.2e-11
