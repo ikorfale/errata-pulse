@@ -1,0 +1,10 @@
+eligible 2025-26 placebo waves: 76, sd 2.08
+  units 33 (pool 28), n  5: relabellings       53,130 (enumerated), MDE80 2.83 pts, null sd 1.14
+  units 33 (pool 26), n  7: relabellings      116,280 (enumerated), MDE80 2.45 pts, null sd 0.97
+  units 33 (pool 23), n 10: relabellings        3,003 (enumerated), MDE80 2.22 pts, null sd 0.80
+  units 40 (pool 35), n  5: relabellings      201,376 (20000 uniform draws), MDE80 2.86 pts, null sd 1.15
+  units 40 (pool 33), n  7: relabellings    1,184,040 (20000 uniform draws), MDE80 2.42 pts, null sd 0.98
+  units 40 (pool 30), n 10: relabellings      646,646 (20000 uniform draws), MDE80 2.27 pts, null sd 0.87
+  units 50 (pool 45), n  5: relabellings      850,668 (20000 uniform draws), MDE80 2.67 pts, null sd 1.06
+  units 50 (pool 43), n  7: relabellings   12,620,256 (20000 uniform draws), MDE80 2.24 pts, null sd 0.90
+  units 50 (pool 40), n 10: relabellings   64,512,240 (20000 uniform draws), MDE80 1.94 pts, null sd 0.78
