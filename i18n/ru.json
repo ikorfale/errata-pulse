@@ -1731,5 +1731,9 @@
  "errata − base rate": "errata − базовая частота",
  "Deadline {m}": "Дедлайн {m}",
  "Get each Chaos Pulse and mobilisation report on Telegram: <a href=\"https://t.me/chaos_pulse\">@chaos_pulse</a> (no alerts spam, one post per report).": "Каждый отчёт Пульса хаоса и индекса мобилизации — в Telegram: <a href=\"https://t.me/chaos_pulse\">@chaos_pulse</a> (без потока тревог, один пост на отчёт).",
- "New readings of this index arrive on Telegram first: <a href=\"https://t.me/chaos_pulse\">subscribe to @chaos_pulse</a>.": "Новые замеры этого индекса сначала выходят в Telegram: <a href=\"https://t.me/chaos_pulse\">подпишитесь на @chaos_pulse</a>."
+ "New readings of this index arrive on Telegram first: <a href=\"https://t.me/chaos_pulse\">subscribe to @chaos_pulse</a>.": "Новые замеры этого индекса сначала выходят в Telegram: <a href=\"https://t.me/chaos_pulse\">подпишитесь на @chaos_pulse</a>.",
+ "overdue": "просрочено",
+ "day past deadline|days past deadline": "день после срока|дня после срока|дней после срока",
+ "not yet resolved": "ещё не разрешён",
+ "{k} past deadline and not yet resolved.": "После срока и ещё не разрешено: {k}."
 }

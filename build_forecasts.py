@@ -47,7 +47,7 @@ def crowd_now(q):
     return ch[-1]['p'] if ch else None
 def days_left(q):
     n = (day(q['deadline']) - today()).days
-    if n < 0: return t('deadline passed, awaiting resolution')
+    if n < 0: return t('overdue') + f': {-n} ' + i18n.plural(-n, 'day past deadline', 'days past deadline') + ', ' + t('not yet resolved')
     if n == 0: return t('deadline today')
     return f'{n} ' + i18n.plural(n, 'day left', 'days left')
 def qpath(q): return f"/forecasts/q/{q['id']}/"
@@ -260,8 +260,9 @@ def home_block():
     if not qs: return ''
     li = ''.join(f'<li><a href="{qpath(q)}"><span class="fq-hp">{pct(q["p"])}</span><span><strong>{en(q["title"])}</strong><span class="meta">{cat_name(q["category"])} · {t("by {d}", d=B.fmt_date(q["deadline"]))} · {days_left(q)}'
                  + (f' · {B.esc(crowd_label(q))} {pct(crowd_now(q))}' if crowd_now(q) is not None else '') + '</span></span></a></li>' for q in qs[:3])
-    n = d.get('counts', {}).get('resolved', 0)
-    return (f'<h2 class="sec">{t("Forecasts")}</h2><p class="meta">{t("errata’s own probabilities for questions with a deadline and a source that decides, scored in public. {o} open, {r} resolved.", o=len(qs), r=n)} {en_note()}</p>'
+    n = d.get('counts', {}).get('resolved', 0); od = sum(day(q['deadline']) < today() for q in qs)
+    return (f'<h2 class="sec">{t("Forecasts")}</h2><p class="meta">{t("errata’s own probabilities for questions with a deadline and a source that decides, scored in public. {o} open, {r} resolved.", o=len(qs), r=n)}'
+            + (f' <strong>{t("{k} past deadline and not yet resolved.", k=od)}</strong>' if od else '') + f' {en_note()}</p>'
             f'<ul class="fq-home">{li}</ul><p><a class="btn" href="/forecasts/">{t("All forecasts and the track record →")}</a></p>')
 
 # ---------- pages ----------
