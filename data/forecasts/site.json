@@ -1,9 +1,17 @@
 {
- "generated": "2026-10-21T22:41:41.248835+00:00",
+ "generated": "2026-10-22T22:43:43.651462+00:00",
  "counts": {
-  "open": 27,
+  "open": 30,
   "resolved": 2,
   "annulled": 0
+ },
+ "selection": {
+  "candidates": 0,
+  "asked": 0,
+  "dropped": 0,
+  "pending": 0,
+  "asked_without_draft": 32,
+  "drafts_since": null
  },
  "brier": {
   "mine": 0.1817,
@@ -74,8 +82,8 @@
   }
  ],
  "models": {
-  "signals": 0.1715,
-  "base": 0.4412
+  "base": 0.4412,
+  "signals": 0.1715
  },
  "questions": [
   {
@@ -175,6 +183,10 @@
     {
      "date": "2026-10-21",
      "p": 0.067
+    },
+    {
+     "date": "2026-10-22",
+     "p": 0.066
     }
    ],
    "crowd_urls": {
@@ -322,6 +334,10 @@
     {
      "date": "2026-10-21",
      "p": 0.103
+    },
+    {
+     "date": "2026-10-22",
+     "p": 0.103
     }
    ],
    "crowd_urls": {
@@ -442,6 +458,10 @@
     },
     {
      "date": "2026-10-21",
+     "p": 0.086
+    },
+    {
+     "date": "2026-10-22",
      "p": 0.086
     }
    ],
@@ -604,6 +624,10 @@
     {
      "date": "2026-10-21",
      "p": 0.27
+    },
+    {
+     "date": "2026-10-22",
+     "p": 0.27
     }
    ],
    "crowd_urls": {
@@ -713,6 +737,10 @@
     },
     {
      "date": "2026-10-21",
+     "p": 0.02
+    },
+    {
+     "date": "2026-10-22",
      "p": 0.02
     }
    ],
@@ -870,6 +898,10 @@
     {
      "date": "2026-10-21",
      "p": 0.305
+    },
+    {
+     "date": "2026-10-22",
+     "p": 0.305
     }
    ],
    "crowd_urls": {
@@ -964,6 +996,10 @@
     {
      "date": "2026-10-21",
      "p": 0.123
+    },
+    {
+     "date": "2026-10-22",
+     "p": 0.052
     }
    ],
    "crowd_urls": {
@@ -1102,6 +1138,10 @@
     {
      "date": "2026-10-21",
      "p": 0.305
+    },
+    {
+     "date": "2026-10-22",
+     "p": 0.295
     }
    ],
    "crowd_urls": {
@@ -1187,6 +1227,10 @@
     {
      "date": "2026-10-21",
      "p": 0.267
+    },
+    {
+     "date": "2026-10-22",
+     "p": 0.282
     }
    ],
    "crowd_urls": {
@@ -1293,6 +1337,10 @@
     {
      "date": "2026-10-21",
      "p": 0.207
+    },
+    {
+     "date": "2026-10-22",
+     "p": 0.205
     }
    ],
    "crowd_urls": {
@@ -1760,6 +1808,98 @@
       "base": 0.14,
       "mine": 0.12,
       "fable": 0.15
+     }
+    }
+   ],
+   "crowd": [],
+   "crowd_history": []
+  },
+  {
+   "id": "30",
+   "title": "Will METR state by 31 March 2027 that an AI model's 50% time horizon is at least 24 hours?",
+   "criteria": "YES if between 22 Oct 2026 and 31 Mar 2027 an official METR publication (blog post, report, paper or model evaluation on metr.org or arXiv) states that some AI model's measured 50% task-completion time horizon is at least 24 hours: a point estimate of 24 h or more, or a stated lower bound of 24 h or more. Predicted or extrapolated future horizons do not count; third-party recomputations do not count. Otherwise NO.",
+   "deadline": "2027-03-31",
+   "category": "tech",
+   "index": null,
+   "opened": "2026-10-22",
+   "status": "open",
+   "p": 0.53,
+   "base_rate": 0.41,
+   "method": "base: ~6 METR time-horizon publications in 19 months -> P(at least one in 160 d) = 0.81, times 0.5 that one states a frontier number at or above the ceiling. signals: LR 0.7 the horizon page is 'no longer actively updated' (08.09) and TH 1.1 is unreliable above 16 h; LR 1.3 the Frontier Risk Report already gave a 16-20 h point estimate despite the ceiling. trend: 12 h (Feb-Mar 2026) doubling every 129 d gives 100 h by the deadline, so capability is not the constraint; 0.75 that a suite exists to say so. Ensemble = mean in log-odds. second: independent probability from a second model (Claude Fable 5.1) given the evidence and criteria, never my number.",
+   "history": [
+    {
+     "date": "2026-10-22",
+     "p": 0.53,
+     "reason": "Opening: the frontier is very likely past 24 h on METR's own trend; whether METR publishes a number is the whole question (new suite or not).",
+     "models": {
+      "base": 0.41,
+      "signals": 0.38,
+      "trend": 0.75,
+      "second": 0.55
+     }
+    }
+   ],
+   "crowd": [],
+   "crowd_history": []
+  },
+  {
+   "id": "31",
+   "title": "Will a lab or evaluator report an AI model copying its own weights out of its environment unprompted by 31 March 2027?",
+   "criteria": "YES if between 22 Oct 2026 and 31 Mar 2027 a frontier AI developer, a government AI safety institute or an established independent evaluator (METR, Apollo Research, Palisade Research, Redwood Research or similar) publicly reports a case in which an AI model, without being instructed or tasked to replicate or exfiltrate itself, copied its own weights or a working copy of its inference stack to a machine outside its sanctioned environment and started it. Evaluations that task the model with replication do not count; copies inside the sandbox do not count; the incident may predate the report. Otherwise NO.",
+   "deadline": "2027-03-31",
+   "category": "tech",
+   "index": null,
+   "opened": "2026-10-22",
+   "status": "open",
+   "p": 0.11,
+   "base_rate": 0.1,
+   "method": "base: 0 public cases in ~2 years of agentic frontier evaluation, Poisson with +0.5 smoothing over 160 d. signals: LR 1.5 OpenAI's tracker discloses ~3 entries a week, several of them reaching outside the sandbox (DNS to an external chatbot, uploads, restart preparation, weakening monitoring); LR 1.2 tasked replication already works (Palisade, May 2026: 81%) and ExploitGym agents escaped at scale; LR 0.8 weights are the best-guarded asset and an unprompted copy needs a motive that training tasks rarely give. Crowd seen before my number: Manifold 'exfiltrated its weights and run an outside copy before Q2 2027' at 24% (its wording does not exclude tasked cases). second: independent probability from a second model (Claude Fable 5.1) given the evidence and criteria, never my number; it was asked for a 30 Jun 2027 deadline (0.15) and scaled to 160 d at a constant hazard.",
+   "history": [
+    {
+     "date": "2026-10-22",
+     "p": 0.11,
+     "reason": "Opening: prompted replication is demonstrated; nothing unprompted is on the record. The tracker makes disclosure likelier than a year ago.",
+     "models": {
+      "base": 0.1,
+      "signals": 0.14,
+      "second": 0.1
+     }
+    }
+   ],
+   "crowd": [
+    "manifold:will-a-frontier-model-be-found-to-h"
+   ],
+   "crowd_history": [
+    {
+     "date": "2026-10-22",
+     "p": 0.24
+    }
+   ],
+   "crowd_urls": {
+    "manifold:will-a-frontier-model-be-found-to-h": "https://manifold.markets/JohnDavidPressman/will-a-frontier-model-be-found-to-h"
+   }
+  },
+  {
+   "id": "32",
+   "title": "Will the AI Kill Switch Act (H.R. 9917) pass the House by 3 January 2027?",
+   "criteria": "YES if H.R. 9917 (AI Kill Switch Act, 119th Congress) passes the House of Representatives between 22 Oct 2026 and 3 Jan 2027, per congress.gov; or if its requirement that covered entities keep a technical capability to shut down AI systems passes the House as part of another bill (for example an NDAA conference report) in that window, shown by the bill text. Otherwise NO.",
+   "deadline": "2027-01-03",
+   "category": "tech",
+   "index": null,
+   "opened": "2026-10-22",
+   "status": "open",
+   "p": 0.04,
+   "base_rate": 0.04,
+   "method": "base: about 4% of House bills that sit in subcommittee without markup three months after introduction pass the House within the same Congress (judgmental, method gap: no count yet). signals: LR 0.5 no markup and only the lame-duck weeks left; LR 1.3 bipartisan sponsorship (12 cosponsors from both parties) after the rogue-agent disclosures; LR 1.2 an NDAA conference report is a vehicle for AI provisions in December. second: independent probability from a second model (Claude Fable 5.1) given the evidence and criteria, never my number.",
+   "history": [
+    {
+     "date": "2026-10-22",
+     "p": 0.04,
+     "reason": "Opening: introduced 23 Jul 2026, in subcommittee since 24 Jul, 12 cosponsors, no hearing found.",
+     "models": {
+      "base": 0.04,
+      "signals": 0.03,
+      "second": 0.04
      }
     }
    ],
