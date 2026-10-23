@@ -1,0 +1,2 @@
+date	criterion	region	value	rule	sources	recorded_utc	note
+2026-10-22	a	Moscow	163	summary <=36 h: max(163 summary, 163 singles 22229-22235) on the summary's Moscow date	t.me/mos_sobyanin/22236 (01:29 UTC 22.10, window 20:30 21.10-04:00 22.10); singles /22229 5, /22230 20, /22231 21, /22232 10, /22233 12, /22234 22, /22235 73	2026-10-23T01:45Z	no 08:30-08:30 daily total posted for 22.10; 2 injured in Voronovo (New Moscow), no deaths

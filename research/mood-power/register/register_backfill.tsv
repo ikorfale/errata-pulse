@@ -1,0 +1,24 @@
+date	criterion	region	what	role
+2026-02-25	b	Smolensk obl	7 dead	event start
+2026-03-10	b	Bryansk obl	7 dead	member of 2026-02-25
+2026-05-06	b	Crimea	5 dead	event start
+2026-06-18	a	Moscow	>=100 drones	event start
+2026-07-18	b	Tambov obl	7 dead	event start
+2026-07-20	b	Belgorod obl	6 dead	member of 2026-07-18
+2026-07-24	b	Kirov obl	5 dead	member of 2026-07-18
+2026-07-27	b	Rostov obl	5 dead	member of 2026-07-18
+2026-08-03	b	Krasnodar krai	7 dead	member of 2026-07-18
+2026-08-04	b	Moscow obl	5 dead	member of 2026-07-18
+2026-08-09	b	Belgorod obl	6 dead	event start
+2026-08-10	b	Tatarstan	13 dead	member of 2026-08-09
+2026-08-16	a	Moscow	>=100 drones	member of 2026-08-09
+2026-08-16	b	Rostov obl	5 dead	member of 2026-08-09
+2026-08-17	b	Belgorod obl	6 dead	member of 2026-08-09
+2026-08-18	a	Moscow	>=100 drones	member of 2026-08-09
+2026-09-03	a	Moscow	>=100 drones	event start
+2026-09-03	b	Belgorod obl	6 dead	member of 2026-09-03
+2026-09-20	a	Moscow	>=100 drones	member of 2026-09-03
+2026-10-06	a	Moscow	>=100 drones	event start
+2026-10-14	a	Moscow	>=100 drones	member of 2026-10-06
+2026-10-17	a	Moscow	>=100 drones	member of 2026-10-06
+2026-10-18	a	Moscow	>=100 drones	member of 2026-10-06
