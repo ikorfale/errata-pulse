@@ -1,0 +1,50 @@
+MoD keys not matched to a survey region (sea areas expected): ['Азовского моря', 'Черного моря']
+regions in wave 15: 83; with n >= 15: 35; of those with X > 0: 19
+   2507  Белгородская область               n= 23  drone item 0.95  anxious 0.81
+   1309  Крым                               n= 34  drone item 0.81  anxious 0.65
+   1180  Ростовская область                 n= 46  drone item 0.78  anxious 0.63
+    888  Воронежская область                n= 30  drone item 0.72  anxious 0.59
+    534  Московская область                 n=112  drone item 0.57  anxious 0.39
+    534  Москва                             n=117  drone item 0.56  anxious 0.54
+    406  Краснодарский край                 n= 55  drone item 0.69  anxious 0.38
+    345  Тульская область                   n= 24  drone item 0.78  anxious 0.45
+    270  Волгоградская область              n= 23  drone item 0.74  anxious 0.27
+    134  Саратовская область                n= 24  drone item 0.74  anxious 0.74
+    131  Нижегородская область              n= 37  drone item 0.59  anxious 0.38
+    114  Ленинградская область              n= 21  drone item 0.57  anxious 0.47
+     57  Самарская область                  n= 60  drone item 0.71  anxious 0.62
+     35  Ставропольский край                n= 43  drone item 0.64  anxious 0.45
+     28  Владимирская область               n= 16  drone item 0.50  anxious 0.72
+     23  Республика Татарстан               n= 26  drone item 0.76  anxious 0.36
+     15  Оренбургская область               n= 22  drone item 0.76  anxious 0.62
+      8  Ярославская область                n= 16  drone item 0.51  anxious 0.56
+      7  Республика Башкортостан            n= 42  drone item 0.50  anxious 0.49
+      0  Хабаровский край                   n= 29  drone item 0.04  anxious 0.48
+      0  Свердловская область               n= 69  drone item 0.13  anxious 0.49
+      0  Калининградская область            n= 18  drone item 0.05  anxious 0.37
+      0  Томская область                    n= 15  drone item 0.00  anxious 0.45
+      0  Омская область                     n= 20  drone item 0.05  anxious 0.60
+      0  Новосибирская область              n= 28  drone item 0.00  anxious 0.57
+      0  Кемеровская область                n= 27  drone item 0.02  anxious 0.61
+      0  Иркутская область                  n= 33  drone item 0.49  anxious 0.59
+      0  Красноярский край                  n= 21  drone item 0.00  anxious 0.41
+      0  Алтайский край                     n= 27  drone item 0.00  anxious 0.60
+      0  Челябинская область                n= 47  drone item 0.06  anxious 0.57
+      0  Ханты-Мансийский автономный округ  n= 15  drone item 0.04  anxious 0.35
+      0  Кировская область                  n= 16  drone item 0.13  anxious 0.55
+      0  Пермский край                      n= 27  drone item 0.44  anxious 0.42
+      0  Республика Дагестан                n= 30  drone item 0.22  anxious 0.59
+      0  Санкт-Петербург                    n= 61  drone item 0.67  anxious 0.46
+A validation: n-weighted corr(log1p X, drone self-report share) = +0.77, permutation p 0.0000 (35 regions)
+C between regions: n-weighted corr(log1p X, anxious share) = +0.03, permutation p 0.8856
+
+B individual (n=1484, 83 regions, clustered by region):
+  self-report only   coef +0.047 (CR1 se 0.030), wild-cluster p 0.138
+  objective only     coef -0.002 (CR1 se 0.006), wild-cluster p 0.803  [per log unit; Belgorod-level vs 0 ~ 7.8 units]
+  both: self-report  coef +0.060 (CR1 se 0.031), wild-cluster p 0.081
+  both: objective    coef -0.005 (CR1 se 0.006), wild-cluster p 0.423  [per log unit; Belgorod-level vs 0 ~ 7.8 units]
+
+v2 validation, test A on days-exposure: all 35: corr +0.60 (perm p 0.0001, 35 regions); without frontline five: corr +0.57 (perm p 0.0002, 33 regions); 
+v2 B: anxious ~ exposure days + Q15_2 + regional mean Q15_2 + other Q15 + age, weighted, no FE:
+  main (without frontline five): n=1397, 77 units; exposure coef -0.011 per 30 days (CR1 se 0.022); self-report +0.060, regional mean self-report -0.068; Webb wild p 0.638; randomization p 0.651; leave-one-out -0.034 (without Ростовская область) .. -0.004 (without Самарская область); MDE80 ~ 0.061 per 30 days; exposure days: max 100, units with > 0: 35
+  full sample: n=1484, 82 units; exposure coef +0.026 per 30 days (CR1 se 0.015); self-report +0.064, regional mean self-report -0.113; Webb wild p 0.206; randomization p 0.066; leave-one-out +0.011 (without Белгородская область) .. +0.031 (without Самарская область); MDE80 ~ 0.043 per 30 days; exposure days: max 177, units with > 0: 39
