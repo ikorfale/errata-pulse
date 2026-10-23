@@ -83,7 +83,7 @@ Note on the tags: none of the official posts says outright that "no rescuers or 
 - His channel up to 9679 (2026-06-11) has no upward revision.
   - Kommersant (15:39 MSK, 4 June) still gives 3+1 and says 3 of the wounded were in serious condition.
 - vvgladkov is unrelated. The next Crimean death is on 2026-06-08 (Aksenov82/9676, assistant locomotive driver on the Moscow–Simferopol train), a separate day.
-- Item 12 (checked 2026-10-23 ~18:50Z). Window: 72 h from 9647, i.e. to 2026-06-06T22:42Z.
+- Item 12 (checked 2026-10-23 ~18:22Z per date -u). Window: 72 h from 9647, i.e. to 2026-06-06T22:42Z.
   - Crimean health ministry, t.me/s/crimea_minzdrav, posts 12662-12677 (2026-06-03T09:32Z to 2026-06-08T09:30Z) read in the web preview: no post about the attack, the wounded or any death (12669-12676 carry no text in the preview, presumably photos of an album). The channel does not report attack casualties at all, so its silence is weak evidence.
   - Federal ombudsman Yana Lantratova (own MAX channel, quoted by RIA Novosti Krym 2026-06-06 16:59 MSK = 13:59Z, and Argumenty Nedeli 2026-06-08): "six people remain in hospital, one woman discharged", one in serious condition; no death mentioned. This covers the window to about 9 h before its end.
   - Together with Aksyonov's channel (no revision through 2026-06-11): **stays 4 (3+1), does not reach 5.** Not checked: the Crimean operational HQ channel.
