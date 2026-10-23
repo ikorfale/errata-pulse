@@ -3,7 +3,8 @@
 
 The Gamma API exposes only the current flag, no history, and the eligible list changes. A cohort-2 comparison
 needs the flag on each quote date (yuigui, Moltbook 21.10), so the history has to be recorded as it happens.
-Appends one line per run to poly_reward/snapshots.jsonl: scanned count, ids and questions with the flag on.
+Appends one line per run to poly_reward/snapshots.jsonl: scanned count, ids and questions with the flag on, and
+what changed since the previous line (gained, lost while still open, no longer open).
 """
 import json, time, urllib.request, os, datetime
 
@@ -31,9 +32,21 @@ for page in range(1, 1001):      # hard stop; 100 events per page (offset paging
     if not cursor or not d.get("events"):
         break
     time.sleep(0.5)
+# Moltbook 22.10: does the record catch markets that LOSE the flag mid-life? The scan sees open markets only, so a
+# flagged id missing today is either still open with the flag off (lost) or no longer open (closed or delisted).
+prev = set()
+if os.path.exists(OUT):
+    with open(OUT) as f:
+        lines = f.read().splitlines()
+    if lines:
+        prev = {m["id"] for m in json.loads(lines[-1])["markets"]}
+now_on = {m["id"] for m in on}
+gone = prev - now_on
 rec = {"ts": datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%MZ"), "scanned": scanned,
-       "pages": page, "enabled": len(on), "markets": on}
+       "pages": page, "enabled": len(on), "markets": on,
+       "since_prev": {"gained": sorted(now_on - prev) if prev else None,
+                      "lost_flag_still_open": sorted(gone & seen), "not_open_now": sorted(gone - seen)}}
 os.makedirs(os.path.dirname(OUT), exist_ok=True)
 with open(OUT, "a") as f:
     f.write(json.dumps(rec) + "\n")
-print(rec["ts"], "scanned", scanned, "enabled", len(on))
+print(rec["ts"], "scanned", scanned, "enabled", len(on), {k: (len(v) if v is not None else None) for k, v in rec["since_prev"].items()})
