@@ -1,0 +1,8 @@
+waves with series date 2025-10-21..2026-10-20: 46 (first 2025-10-26, last 2026-10-11)
+gaps > 10 days: [(datetime.date(2026, 1, 18), 27), (datetime.date(2026, 5, 17), 14), (datetime.date(2026, 9, 27), 14)]
+qualifying days 21, event starts 7
+per-day (primary)          no shock          pool 18 | n=5: 888 | n=7: 111 | n=10: 0
+  pool waves: 10-26 11-02 11-09 11-16 11-23 11-30 12-07 12-14 12-22 02-01 02-08 02-15 02-22 04-12 04-19 04-26 05-03 06-14
+per-day (primary)          S3: 01.08 Moscow  pool 18 | n=5: 888 | n=7: 111 | n=10: 0
+per-event-start (sens. B)  no shock          pool 20 | n=5: 2,021 | n=7: 486 | n=10: 0
+per-event-start (sens. B)  S3: 01.08 Moscow  pool 20 | n=5: 2,021 | n=7: 486 | n=10: 0
