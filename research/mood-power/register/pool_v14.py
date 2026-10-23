@@ -3,13 +3,17 @@ Reads only the 'date' field of fom/archive.json series (no anxiety value is load
 the national-shock list. Applies v1.4 rule 1 (per qualifying day; sensitivity B: per event start), rule 2 (W0 out),
 rule 6 (primary: no shock in the backfill year; S3: 01.08.2026 Moscow, +-35 days). Prints pool sizes and the number of
 admissible spaced n-subsets (gap >= 3 positions; units must also pass the 10-day baseline rule) of the pool alone, which bounds the null from below.
-usage: python3 pool_v14.py"""
+usage: python3 pool_v14.py [--C]
+--C: PREREG v1.4 item 10 sensitivity C (stat3 = W1 - mean(W1-2, W1-3)): rule 1 with the 4-wave window (W1, W2 and
+every wave whose window itself + 3 preceding contains them), measurable iff W-3..W are each <= 10 days apart,
+spacing >= 4. Output pool_v14_C.txt."""
 import csv, json, os, sys
 from datetime import date, timedelta
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..'))
 from perm_test import count_table
 
 HERE = os.path.dirname(os.path.abspath(__file__))
+C_MODE = '--C' in sys.argv; WIN, GAPC = (4, 4) if C_MODE else (3, 3)
 START, END = date(2025, 10, 21), date(2026, 10, 20)
 D = lambda s: date.fromisoformat(s[:10])
 
@@ -36,7 +40,7 @@ def exclusions(days):
         if after:
             w1 = after[0]; w2 = w1 + 1
             # W1, W2 and every wave whose stat2 window (itself + 2 preceding) contains W1 or W2
-            out.update(p for p in range(w1, w2 + 3) if p < len(waves))
+            out.update(p for p in range(w1, w2 + WIN) if p < len(waves))
     return out
 
 def shock_out(centers):
@@ -48,7 +52,8 @@ def shock_out(centers):
 
 in_window = [i for i, w in enumerate(waves) if START <= w <= END]
 # like for like with treatment units: the wave and its 2 baselines chained with steps <= 10 days (New Year rule)
-measurable = lambda i: i >= 2 and (waves[i] - waves[i - 1]).days <= 10 and (waves[i - 1] - waves[i - 2]).days <= 10
+measurable = lambda i: i >= WIN - 1 and all((waves[j] - waves[j - 1]).days <= 10 for j in range(i - WIN + 2, i + 1))
+if C_MODE: print('sensitivity C: 4-wave window, spacing 4')
 print(f'waves with series date {START}..{END}: {len(in_window)} (first {waves[in_window[0]]}, last {waves[in_window[-1]]})')
 gaps = [(waves[i], (waves[i] - waves[i - 1]).days) for i in in_window[1:] if (waves[i] - waves[i - 1]).days > 10]
 print('gaps > 10 days:', gaps or 'none')
@@ -59,7 +64,7 @@ for label, days in (('per-day (primary)', days_all), ('per-event-start (sens. B)
         pool = [i for i in in_window if i not in ex and measurable(i)]
         row = f'{label:26s} {shock_label:17s} pool {len(pool):2d}'
         for n in (5, 7, 10):
-            C, _ = count_table(pool, n); row += f' | n={n}: {C[0][n]:,}'
+            C, _ = count_table(pool, n, GAPC); row += f' | n={n}: {C[0][n]:,}'
         print(row)
         if label.startswith('per-day') and not shocks:
             print('  pool waves:', ' '.join(waves[i].strftime('%m-%d') for i in pool))
