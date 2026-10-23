@@ -3,3 +3,4 @@ __pycache__/
 i18n/tmp/
 i18n/missing.*.json
 embed_cache.json
+research/mood-power/fom/weekly/

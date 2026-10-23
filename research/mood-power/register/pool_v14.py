@@ -16,7 +16,12 @@ D = lambda s: date.fromisoformat(s[:10])
 series = json.load(open(os.path.join(HERE, '..', 'fom', 'archive.json')))['series']
 waves = sorted({D(w['date']) for w in series})            # dates only
 waves = [w for w in waves if START - timedelta(days=30) <= w <= END + timedelta(days=9)]
-field = lambda w: (w - timedelta(days=2), w)              # fieldwork interval (series date - 2 .. series date)
+# fieldwork interval read from each weekly PDF (fieldwork_dates.py -> fieldwork.tsv, PREREG v1.4 item 11); no fallback:
+# a wave without a recorded interval stops the run. 2 of 51 waves break the old 'series date - 2' convention (12-22, 07-29).
+FW = {D(r['field_end']): (D(r['field_start']), D(r['field_end'])) for r in csv.DictReader(open(os.path.join(HERE, 'fieldwork.tsv')), delimiter='\t') if r['field_end']}
+_nofw = [w for w in waves if w not in FW]
+if _nofw: sys.exit(f'no recorded fieldwork interval for waves {_nofw}: run fieldwork_dates.py')
+field = lambda w: FW[w]
 
 reg = list(csv.DictReader(open(os.path.join(HERE, 'register_backfill.tsv')), delimiter='\t'))
 days_all = sorted({D(r['date']) for r in reg})
