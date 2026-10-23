@@ -83,13 +83,16 @@ Note on the tags: none of the official posts says outright that "no rescuers or 
 - His channel up to 9679 (2026-06-11) has no upward revision.
   - Kommersant (15:39 MSK, 4 June) still gives 3+1 and says 3 of the wounded were in serious condition.
 - vvgladkov is unrelated. The next Crimean death is on 2026-06-08 (Aksenov82/9676, assistant locomotive driver on the Moscow–Simferopol train), a separate day.
-- Not checked: the Crimean health ministry and the operational HQ channels, in case they posted a hospital death within 72 h.
+- Item 12 (checked 2026-10-23 ~18:50Z). Window: 72 h from 9647, i.e. to 2026-06-06T22:42Z.
+  - Crimean health ministry, t.me/s/crimea_minzdrav, posts 12662-12677 (2026-06-03T09:32Z to 2026-06-08T09:30Z) read in the web preview: no post about the attack, the wounded or any death (12669-12676 carry no text in the preview, presumably photos of an album). The channel does not report attack casualties at all, so its silence is weak evidence.
+  - Federal ombudsman Yana Lantratova (own MAX channel, quoted by RIA Novosti Krym 2026-06-06 16:59 MSK = 13:59Z, and Argumenty Nedeli 2026-06-08): "six people remain in hospital, one woman discharged", one in serious condition; no death mentioned. This covers the window to about 9 h before its end.
+  - Together with Aksyonov's channel (no revision through 2026-06-11): **stays 4 (3+1), does not reach 5.** Not checked: the Crimean operational HQ channel.
 
 ## Gaps
 - Item 1: whether Bogomaz's spoken toll of 8 on 13 March counts (about 2 minutes inside the window, if the media timestamps are right).
 - Item 2: Aksyonov's posts after 9519 were not read.
 - Item 4: I have no own channel URL for the Minnikhanov press-service toll; it is quoted via RIA and Interfax.
-- Item 9: the Crimean health ministry and operational HQ were not checked.
+- Item 9: the Crimean operational HQ channel was not checked (health ministry and ombudsman checked 23.10, item 12: no later death).
 
 ## Addendum (23.10, main pass): Belgorod 29.04.2026
 Gladkov posts 20959 (bus at Voznesenovka, 3 women dead, 8 wounded, 2 serious) through ~21061 (4 May) read as page
