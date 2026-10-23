@@ -13,6 +13,8 @@ for r in csv.DictReader(open('criterion_b_backfill.tsv'), delimiter='\t'):
     rp = int(r['rescuers_police'].rstrip('?') or 0)
     if sensA and int(r['toll_72h']) - rp < 5: continue
     rows.append(('b', r['date'], r['region'], f"{r['toll_72h']} dead"))
+unres = [r['date'] for r in csv.DictReader(open('criterion_b_backfill.tsv'), delimiter='\t') if '?' in r['rescuers_police'] or r['target'] == 'unknown']
+if unres: print(f'DRAFT: unresolved tags on {len(unres)} rows: {", ".join(unres)} (Fable review 23.10 #12)')
 rows.sort(key=lambda x: (x[1], x[0]))
 D = lambda s: dt.date.fromisoformat(s)
 events, out = [], []

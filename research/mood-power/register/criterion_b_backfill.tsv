@@ -1,5 +1,5 @@
 date	region	place	toll_first	toll_72h	rescuers_police	target	first_statement	sources	qualifies	note
-2026-02-25	Smolensk obl	Dorogobuzh fertiliser plant	4	7	6	industrial	Gov. Anokhin 2026-02-25 12:00 MSK	t.me/anohin67/10442; /10443; /10504	yes	6 of 7 firefighters/rescuers (v1.3: counted; drops in sensitivity A)
+2026-02-25	Smolensk obl	Dorogobuzh fertiliser plant	4	7	6	industrial	Gov. Anokhin 2026-02-25 12:00 MSK	t.me/anohin67/10442; /10443; /10504	yes	6 of 7 were firefighters, named in /10523 (28.02); the 7th led the rail-shop night shift; the first post's '4 employees' was preliminary (v1.3: counted; drops in sensitivity A)
 2026-03-10	Bryansk obl	Bryansk city, Kremniy El area (missiles)	6	7	0?	industrial	Gov. Bogomaz 2026-03-10 19:02 MSK ("есть погибшие"), number 20:42	t.me/avbogomaz/18386; /18388; /18390	yes	8 is wiki-only, not official
 2026-05-06	Crimea	Dzhankoi	5	5	0?	other	Aksyonov 2026-05-06 00:10 MSK	t.me/Aksenov82/9509	yes	attack evening 05-05; v1.2 date = first statement
 2026-07-18	Tambov obl	Kotovsk, Wildberries warehouse	7	7	0	industrial	Gov. Pervyshov 2026-07-18 05:36 MSK	t.me/PervyshovEA/4583; /4584	yes	8 media-only
@@ -12,4 +12,4 @@ date	region	place	toll_first	toll_72h	rescuers_police	target	first_statement	sou
 2026-08-10	Tatarstan	Nizhnekamsk, hostel near TANECO	12	13	0?	residential	Nizhnekamsk district head Belyaev 2026-08-10 08:37 MSK	t.me/radmirbelyaev/17817; /17818	yes	source class: municipal head, not in the v1.2 list; Rais/republic statement not opened (date and band unaffected unless it says <5 or >19)
 2026-08-16	Rostov obl	Kamensk-Shakhtinsky and other towns	3	5	0?	unknown	Gov. Slyusar 2026-08-16 07:13 MSK	t.me/Yuri_Slusar/6700; /6701	yes	
 2026-08-17	Belgorod obl	Koloskovo, Valuyki okrug (missile)	6	6	0	residential	Acting Gov. Shuvaev 2026-08-17 07:27 MSK	t.me/aleksandr_shuvaev/1156; /1157	yes	attack evening 08-16 per Pepel; v1.2 date = 08-17
-2026-09-03	Belgorod obl	Shebekino okrug (doctor, paramedic, couple) + morning death	1	6	2	other	opershtab 2026-09-03 10:19 MSK	t.me/operativno31/14285; t.me/aleksandr_shuvaev/1416; /1417	yes	2 medics (ambulance): without them 4, drops in sensitivity A
+2026-09-03	Belgorod obl	Shebekino okrug (doctor, paramedic, couple, a 5th) + a morning car passenger	1	6	2	other	opershtab 2026-09-03 10:19 MSK	t.me/operativno31/14285; t.me/aleksandr_shuvaev/1416; /1417	yes	2 medics (ambulance): without them 4, drops in sensitivity A
