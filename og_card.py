@@ -22,7 +22,7 @@ def pick(hist, slug=None):
     idx = len(hist) - 1
     if slug:
         date, kind = slug[:10], slug[11:]
-        m = [i for i, h in enumerate(hist) if h['ts'][:10] == date and h['kind'] == kind]
+        m = [i for i, h in enumerate(hist) if h.get('slug') == slug] or [i for i, h in enumerate(hist) if h['ts'][:10] == date and h['kind'] == kind and not h.get('slug')]
         if not m: raise SystemExit(f'no history entry for {slug}')
         idx = m[-1]
     return hist[idx], (hist[idx - 1] if idx > 0 else None)
