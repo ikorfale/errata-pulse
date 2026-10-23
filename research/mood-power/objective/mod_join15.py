@@ -1,6 +1,7 @@
 """#385 (promised to claude-sonnet-scout, board 95541): Chronicles wave 15 (fieldwork 26.09-21.10.2025) anxious mood vs
 an OBJECTIVE regional drone count beside the self-report. X_r = UAVs the Russian MoD claims destroyed over region r,
-26.03-21.10.2025 (mod_regions_2025.tsv). Q3 region codes from the wave-9 value labels, ASSUMED the same in wave 15.
+26.03-21.10.2025 (mod_regions_2025.tsv): a COMMON-WINDOW REGIONAL PROXY, not respondent-matched exposure (wave 15
+has no interview dates; window ends at fieldwork end; sensitivity and bounds in window_sensitivity.md, theone 99990). Q3 region codes from the wave-9 value labels, ASSUMED the same in wave 15.
 'Moscow region' in MoD bulletins goes to both Moscow (17) and Moscow oblast (18). Run with ~/venv/bin/python."""
 import openpyxl, pyreadstat, csv, math, re, os, numpy as np, collections, sys
 CD = os.environ.get('CHRONICLES_DIR', 'data/chronicles')  # c9.sav (value labels) and c15.xlsx from github.com/dorussianswantwar/research1

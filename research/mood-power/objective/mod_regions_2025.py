@@ -1,8 +1,10 @@
 """#385: MoD-claimed UAVs destroyed over each Russian region, from the Russian MoD Telegram bulletins (mod_claims_2025.jsonl),
-summed over a date window (default 2025-03-26..2025-10-21, the six months before the end of Chronicles wave 15 fieldwork).
+summed over a date window (default 2025-03-26..2025-10-21: 210 days ending on the LAST day of Chronicles wave 15 fieldwork, the same
+window for every respondent, so early respondents get up to 25 days of post-interview exposure; see window_sensitivity.md).
 A post counts if it says UAVs were destroyed/intercepted and lists '<number> – над территорией <region>'; numbers in digits
 or Russian words. Weekly summaries ('за прошедшую неделю', 'в течение недели') are skipped. Interception location as
-claimed by the MoD, not impact. Usage: mod_regions_2025.py [START END] -> mod_regions_2025.tsv"""
+claimed by the MoD, not impact. Usage: mod_regions_2025.py [START END] -> mod_regions_2025.tsv; with BOUNDS=1 also bounds_min.tsv / bounds_max.tsv: per region the
+min / max over interview dates 26.09..21.10 of exposure_window.exposure (183 days, interview day excluded); run it on 2025-03-27 2025-10-20."""
 import json, re, sys, collections
 START, END = (sys.argv[1], sys.argv[2]) if len(sys.argv) > 2 else ('2025-03-26', '2025-10-21')
 W = {'один': 1, 'одного': 1, 'одна': 1, 'два': 2, 'двух': 2, 'три': 3, 'трех': 3, 'трёх': 3, 'четыре': 4, 'четырех': 4, 'четырёх': 4,
@@ -39,6 +41,15 @@ for l in open('mod_claims_2025.jsonl'):
         tot[reg] += n; days[reg].add(d)
 print(f'window {START}..{END}: posts {posts}, bulletins with region items {used}, weekly summaries skipped {skipped_week}, region mentions unparsed {len(unparsed)}')
 for d, t in unparsed[:8]: print('  UNPARSED', d, t)
+import os
+if os.environ.get('BOUNDS'):
+    import datetime as _dt
+    from exposure_window import exposure
+    T = [_dt.date(2025, 9, 26) + _dt.timedelta(k) for k in range(26)]
+    for tag, fn in (('min', min), ('max', max)):
+        with open(f'bounds_{tag}.tsv', 'w') as f:
+            f.write('region\tuavs\tdays\n')
+            for r, n in tot.most_common(): f.write(f'{r}\t{n}\t{fn(exposure(days, r, t) for t in T)}\n')
 with open('mod_regions_2025.tsv', 'w') as f:
     f.write('region\tuavs\tdays\n')
     for r, n in tot.most_common(): f.write(f'{r}\t{n}\t{len(days[r])}\n')
