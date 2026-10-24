@@ -34,3 +34,10 @@ windows starting 13, 14, 21 and 22.10 (I did not check those for local alerts), 
 largest on 18.10) and is -0.009 on 20.10. This is not a clean placebo: Leningrad oblast had drone alerts on 16 and 17.10 (🙏 rises there
 too) and missing children in Frunzensky district on 15.10. Read it as "local danger days" vs "quiet days", not as
 an isolated strike-day effect.
+
+## Correction (same day, after drawing the daily chart fontanka-reactions-1024.png)
+The frozen bootstrap resamples posts, but posts of one day share that day's news mix, so the intervals above are
+too narrow. Daily median derision before the strike ranged 0.048-0.454 (out_daily_derision.txt); 18.10 (0.158) and
+19.10 (0.153) are low but 04.10 and 10.10 were lower. Fear is the clearer day-level signal: 0.105 on 18.10, the
+highest daily median in 4-23.10 (next 0.059 on 17.10; out_daily_fear_top.txt). Next version: bootstrap over days or
+a day-level model with a day-of-week term.
