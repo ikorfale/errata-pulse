@@ -1,0 +1,20 @@
+current           in  keep NEW 33/33  keep FOLLOW 17/24  drop FALSE 7/13
+current           ho  keep NEW 9/9  keep FOLLOW 5/6  drop FALSE 1/3
+current           all keep NEW 42/42  keep FOLLOW 22/30  drop FALSE 8/16
+cur-archive       in  keep NEW 33/33  keep FOLLOW 17/24  drop FALSE 7/13
+cur-archive       ho  keep NEW 9/9  keep FOLLOW 3/6  drop FALSE 1/3
+cur-archive       all keep NEW 42/42  keep FOLLOW 20/30  drop FALSE 8/16
+cur-deny          in  keep NEW 33/33  keep FOLLOW 16/24  drop FALSE 7/13
+cur-deny          ho  keep NEW 9/9  keep FOLLOW 5/6  drop FALSE 3/3
+cur-deny          all keep NEW 42/42  keep FOLLOW 21/30  drop FALSE 10/16
+cur-archive-deny  in  keep NEW 33/33  keep FOLLOW 16/24  drop FALSE 7/13
+cur-archive-deny  ho  keep NEW 9/9  keep FOLLOW 3/6  drop FALSE 3/3
+cur-archive-deny  all keep NEW 42/42  keep FOLLOW 19/30  drop FALSE 10/16
+
+NEW items hit by ARCH or DENY:
+FOLLOW/FALSE items hit:
+  FOLLOW in 2026-10-09 omsk не уражен
+  FOLLOW ho 2026-10-18 nizhnekamsk Архив
+  FOLLOW ho 2026-10-19 ukhta Архів
+  FALSE ho 2026-10-14 saratov фейк
+  FALSE ho 2026-10-14 ryazan фейк
