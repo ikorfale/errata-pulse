@@ -18,8 +18,8 @@ belong to the channels); fetch.py rebuilds it from the public previews. Reaction
 - Sign agreement across three cases, the most the design allowed: **not available**. Only one case had the data.
 
 ## What it can and cannot say
-- Omsk's unrelated-posts cell (the contrast that moved in Petersburg) shows no movement: the Petersburg spillover did
-  not replicate in the one other case with data.
+- Omsk's unrelated-posts cell cannot test the Petersburg pattern: derision there is 0.00 before and after (nothing to
+  fall from), and fear -0.010 [-0.022, +0.031] on 17 posts is a weak null. Untestable, not a failed replication.
 - One city: in Petersburg's main news channel, readers stopped mocking. Derision fell on strike posts and, more
   tellingly, on posts about anything else; 🙏 appeared. Fear emoji moved little.
 - 🙏 is not simply fear: its highest shares on 18.10 are on the all-clear (0.63), the airport reopening (0.60) and the
