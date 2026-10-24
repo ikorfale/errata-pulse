@@ -1,0 +1,52 @@
+== spb-1018: fontankaspb, strike day 2026-10-18 (UTC+3); base 10 days, missing base days none
+  emoji seen only in base: 🎃🎅👨‍💻💅😇😘😴🤝🤩 | only in out: -
+  n posts strike base: 38
+  n posts strike out : 43
+  n posts other  base: 273
+  n posts other  out : 57
+  strike fear     median out-base +0.071 [-0.008, +0.342] (base median 0.027)
+  strike anger    median out-base +0.002 [-0.026, +0.032] (base median 0.038)
+  strike derision median out-base -0.128 [-0.273, -0.042] (base median 0.301)
+  strike support  median out-base -0.065 [-0.145, -0.004] (base median 0.175)
+  strike pray     median out-base +0.087 [+0.051, +0.134] (base median 0.000)
+  strike per1k    median out-base +0.07 [-1.60, +1.84] (base median 4.775)
+  other  fear     median out-base +0.024 [+0.004, +0.088] (base median 0.005)
+  other  anger    median out-base +0.013 [-0.013, +0.034] (base median 0.013)
+  other  derision median out-base -0.105 [-0.188, -0.011] (base median 0.232)
+  other  support  median out-base +0.014 [-0.051, +0.134] (base median 0.153)
+  other  pray     median out-base +0.000 [+0.000, +0.007] (base median 0.000)
+  other  per1k    median out-base -2.08 [-3.20, -0.66] (base median 6.472)
+== omsk-1008: Om1_Omsk, strike day 2026-10-08 (UTC+6); base 10 days, missing base days none
+  emoji seen only in base: 😘 | only in out: -
+  n posts strike base: 11
+  n posts strike out : 13
+  n posts other  base: 111
+  n posts other  out : 17
+  strike: below minimum (need >=10 out, >=20 base) -> no claim
+  other  fear     median out-base -0.010 [-0.022, +0.031] (base median 0.010)
+  other  anger    median out-base +0.000 [+0.000, +0.000] (base median 0.000)
+  other  derision median out-base +0.000 [+0.000, +0.000] (base median 0.000)
+  other  support  median out-base -0.174 [-0.357, +0.243] (base median 0.406)
+  other  pray     median out-base -0.001 [-0.006, +0.009] (base median 0.020)
+  other  per1k    median out-base -1.90 [-4.21, +0.80] (base median 8.383)
+== ryazan-1015: ryazan_chp62, strike day 2026-10-15 (UTC+3); base 10 days, missing base days none
+  emoji seen only in base: ⚡✍🎃🎉🏆👀👨‍💻💊💘💯🗿😎😐🙈🤪🤮🤷‍♂🥱 | only in out: 💔😍🤝🤩
+  n posts strike base: 15
+  n posts strike out : 9
+  n posts other  base: 57
+  n posts other  out : 8
+  strike: below minimum (need >=10 out, >=20 base) -> no claim
+  other: below minimum (need >=10 out, >=20 base) -> no claim
+== sign agreement across cases (CI excludes 0 counts as a sign):
+  strike fear     0 n/a n/a
+  strike anger    0 n/a n/a
+  strike derision - n/a n/a
+  strike support  - n/a n/a
+  strike pray     + n/a n/a
+  strike per1k    0 n/a n/a
+  other  fear     + 0 n/a
+  other  anger    0 0 n/a
+  other  derision - 0 n/a
+  other  support  0 0 n/a
+  other  pray     0 0 n/a
+  other  per1k    - 0 n/a

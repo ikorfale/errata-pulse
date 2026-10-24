@@ -1,0 +1,10 @@
+2026-10-13 other derision +0.024 | other fear +0.003 | strike derision   n/a  | strike pray   n/a 
+2026-10-14 other derision +0.015 | other fear -0.004 | strike derision   n/a  | strike pray   n/a 
+2026-10-15 other derision -0.076 | other fear -0.001 | strike derision +0.154 | strike pray +0.000
+2026-10-16 other derision -0.055 | other fear +0.005 | strike derision +0.006 | strike pray +0.098
+2026-10-17 other derision -0.059 | other fear +0.067 | strike derision -0.085 | strike pray +0.090
+2026-10-18 other derision -0.105 | other fear +0.024 | strike derision -0.128 | strike pray +0.087
+2026-10-19 other derision -0.099 | other fear +0.000 | strike derision +0.021 | strike pray -0.033
+2026-10-20 other derision -0.009 | other fear -0.004 | strike derision   n/a  | strike pray   n/a 
+2026-10-21 other derision +0.038 | other fear -0.003 | strike derision +0.035 | strike pray -0.038
+2026-10-22 other derision +0.028 | other fear +0.002 | strike derision +0.034 | strike pray -0.047
