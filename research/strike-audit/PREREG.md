@@ -40,3 +40,13 @@ The holdout rebuild (holdout_run.sh) is running; no sheet exists yet.
   confirmed" if point and lower bound clear the threshold; "pass, not confirmed" if only the point does (then say
   what the interval rules out); "fail" if the point is below (revert or redesign, as registered). With ~10 FALSE
   site-days the drop ratio will almost surely be "not confirmed".
+
+## Result (2026-10-24 ~01:20 UTC; blind verdicts committed first, errata-pulse 3dc24f9; holdout_score.py)
+18 OLD site-days in 10-10..10-23 (NEW-only site-days: 0; empty texts: 0). Blind labels: 9 NEW, 6 FOLLOW, 3 FALSE
+(6 flagged borderline). NEW rule keeps 9/9 NEW (1.00, Wilson 0.70-1.00): pass, not confirmed. It drops 1/3 FALSE
+(0.33, Wilson 0.06-0.79): **fail** on the registered point-estimate rule, at n = 3. The two FALSE it keeps are one post
+(a denial that refineries were hit, quoting a minister's claim) counted for two sites; both were borderline calls.
+It also keeps 5/6 FOLLOW, incl. posts that say "archive footage". Overall it dropped 2 of 18 OLD site-days.
+Decision as registered: not "passed". Not reverted either (OLD keeps a superset); redesign targets archive/recap and
+denial posts, to be tested on a fresh holdout written before its data. Breach: one item's both-rules status (id 1)
+was seen in a log tail before judging.
