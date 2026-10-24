@@ -1,8 +1,8 @@
 {
- "generated": "2026-10-23T22:41:31.363156+00:00",
+ "generated": "2026-10-24T22:39:28.780295+00:00",
  "counts": {
-  "open": 30,
-  "resolved": 2,
+  "open": 29,
+  "resolved": 3,
   "annulled": 0
  },
  "selection": {
@@ -14,9 +14,9 @@
   "drafts_since": null
  },
  "brier": {
-  "mine": 0.1817,
-  "final": 0.0913,
-  "base": 0.4412,
+  "mine": 0.1252,
+  "final": 0.0649,
+  "base": 0.2975,
   "crowd": null
  },
  "calibration": [
@@ -28,9 +28,9 @@
   },
   {
    "bin": "10-20%",
-   "n": 0,
-   "mean_p": null,
-   "freq_yes": null
+   "n": 1,
+   "mean_p": 0.11,
+   "freq_yes": 0.0
   },
   {
    "bin": "20-30%",
@@ -82,8 +82,8 @@
   }
  ],
  "models": {
-  "signals": 0.1715,
-  "base": 0.4412
+  "base": 0.2975,
+  "signals": 0.1191
  },
  "questions": [
   {
@@ -191,6 +191,10 @@
     {
      "date": "2026-10-23",
      "p": 0.067
+    },
+    {
+     "date": "2026-10-24",
+     "p": 0.064
     }
    ],
    "crowd_urls": {
@@ -346,6 +350,10 @@
     {
      "date": "2026-10-23",
      "p": 0.098
+    },
+    {
+     "date": "2026-10-24",
+     "p": 0.103
     }
    ],
    "crowd_urls": {
@@ -474,6 +482,10 @@
     },
     {
      "date": "2026-10-23",
+     "p": 0.086
+    },
+    {
+     "date": "2026-10-24",
      "p": 0.086
     }
    ],
@@ -644,6 +656,10 @@
     {
      "date": "2026-10-23",
      "p": 0.285
+    },
+    {
+     "date": "2026-10-24",
+     "p": 0.235
     }
    ],
    "crowd_urls": {
@@ -762,6 +778,10 @@
     {
      "date": "2026-10-23",
      "p": 0.02
+    },
+    {
+     "date": "2026-10-24",
+     "p": 0.02
     }
    ],
    "crowd_urls": {
@@ -777,7 +797,7 @@
    "index": "pulse",
    "opened": "2026-10-09",
    "status": "open",
-   "p": 0.19,
+   "p": 0.25,
    "base_rate": 0.45,
    "method": "threshold: lognormal from estimated spot ~119.9 (EIA spot 115.22 on 20.10 scaled by futures move to 22.10), vol 0.6, 8 days; second: Fable independent; equal-weight log-odds",
    "history": [
@@ -793,11 +813,11 @@
     },
     {
      "date": "2026-10-23",
-     "p": 0.19,
-     "reason": "Spot fell from 126.55 (14.10) to 115.22 (20.10); futures rose to 113.17 on 22.10, but 30 now needs ~9% in six trading days.",
+     "p": 0.25,
+     "reason": "Brent December futures closed at 116.72 on 23.10 (+7.5 since 20.10, when EIA spot was 115.22 at a ~6 dollar premium); spot is likely ~122, so 130 on 30.10 needs ~6% in five trading days at ~3% daily volatility (threshold model ~0.21), plus jump risk from Gulf attacks.",
      "models": {
-      "threshold": 0.17,
-      "second": 0.22
+      "threshold": 0.21,
+      "second": 0.28
      }
     }
    ],
@@ -935,6 +955,10 @@
     {
      "date": "2026-10-23",
      "p": 0.17
+    },
+    {
+     "date": "2026-10-24",
+     "p": 0.195
     }
    ],
    "crowd_urls": {
@@ -1037,6 +1061,10 @@
     {
      "date": "2026-10-23",
      "p": 0.067
+    },
+    {
+     "date": "2026-10-24",
+     "p": 0.062
     }
    ],
    "crowd_urls": {
@@ -1052,7 +1080,7 @@
    "category": "economy",
    "index": null,
    "opened": "2026-10-09",
-   "status": "open",
+   "status": "no",
    "p": 0.11,
    "base_rate": 0.1,
    "method": "base: reference class = Bank of Russia meetings right after it paused an easing cycle (2017-2025): reversals to a hike at the next meeting are rare, about 1 in 10. signals: LR 1.5 underlying inflation re-accelerated to 5-6% annualised, fuel shortages, second-round effects, possible bigger budget deficit; LR 0.8 Nabiullina framed September as a 'pause' in cutting, not a turn.",
@@ -1068,7 +1096,22 @@
     }
    ],
    "crowd": [],
-   "crowd_history": []
+   "crowd_history": [],
+   "resolved_at": "2026-10-23",
+   "resolution_source": "https://www.cbr.ru/eng/press/pr?file=23102026_133000key_e.htm",
+   "resolution_note": "Board kept the key rate at 14.00% on 23 Oct 2026 and raised the 2027 average key rate path to 12.5-13.5%.",
+   "scores": {
+    "brier": 0.0121,
+    "brier_final": 0.0121,
+    "models": {
+     "base": 0.010000000000000002,
+     "signals": 0.0144
+    },
+    "brier_base": 0.010000000000000002,
+    "brier_crowd": null,
+    "days": 15,
+    "outcome": 0.0
+   }
   },
   {
    "id": "15",
@@ -1183,6 +1226,10 @@
     {
      "date": "2026-10-23",
      "p": 0.305
+    },
+    {
+     "date": "2026-10-24",
+     "p": 0.285
     }
    ],
    "crowd_urls": {
@@ -1276,6 +1323,10 @@
     {
      "date": "2026-10-23",
      "p": 0.277
+    },
+    {
+     "date": "2026-10-24",
+     "p": 0.272
     }
    ],
    "crowd_urls": {
@@ -1390,6 +1441,10 @@
     {
      "date": "2026-10-23",
      "p": 0.222
+    },
+    {
+     "date": "2026-10-24",
+     "p": 0.21
     }
    ],
    "crowd_urls": {
@@ -1935,6 +1990,10 @@
     },
     {
      "date": "2026-10-23",
+     "p": 0.24
+    },
+    {
+     "date": "2026-10-24",
      "p": 0.24
     }
    ],
