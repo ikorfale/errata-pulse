@@ -1,0 +1,13 @@
+flagged 642: placeholder slots 303, real 339
+41 events created on 18 distinct days; by month {'2025-07': 15, '2025-11': 5, '2026-03': 2, '2026-09': 17, '2026-10': 2}
+weekday of distinct creation days {'Thu': 5, 'Sun': 1, 'Tue': 3, 'Fri': 3, 'Wed': 3, 'Mon': 2, 'Sat': 1}
+real flagged by end year {'2026': 21, '2027': 134, '2028': 166, '2029': 13, '2030': 5}
+open markets scanned 304796, flagged 642
+end>=2027: 39937 open, 565 flagged (1.4%)
+end>=2027 & volume>=$1M: 400 open, 166 flagged (41.5%)
+end<2027 & volume>=$1M: 138 open, 9 flagged (6.5%)
+  unflagged, long-dated, large: 2027-01-01 $75.1M Will the U.S. invade Iran before 2027?
+  unflagged, long-dated, large: 2027-01-01 $66.7M Will Jesus Christ return before 2027?
+  unflagged, long-dated, large: 2027-01-01 $42.5M Will the US confirm that aliens exist before 2027?
+  unflagged, long-dated, large: 2027-01-01 $35.7M Will Trump acquire Greenland before 2027?
+  unflagged, long-dated, large: 2027-05-30 $34.9M Will Shakhtar Donetsk win the 2026-27 UEFA Champions League Championship?
