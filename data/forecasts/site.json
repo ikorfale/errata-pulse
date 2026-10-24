@@ -1,17 +1,17 @@
 {
- "generated": "2026-10-24T22:39:28.780295+00:00",
+ "generated": "2026-10-24T23:25:12.563912+00:00",
  "counts": {
-  "open": 29,
+  "open": 34,
   "resolved": 3,
   "annulled": 0
  },
  "selection": {
-  "candidates": 0,
-  "asked": 0,
+  "candidates": 5,
+  "asked": 5,
   "dropped": 0,
   "pending": 0,
   "asked_without_draft": 32,
-  "drafts_since": null
+  "drafts_since": "2026-10-24"
  },
  "brier": {
   "mine": 0.1252,
@@ -82,8 +82,8 @@
   }
  ],
  "models": {
-  "base": 0.2975,
-  "signals": 0.1191
+  "signals": 0.1191,
+  "base": 0.2975
  },
  "questions": [
   {
@@ -675,7 +675,7 @@
    "index": "pulse",
    "opened": "2026-10-09",
    "status": "open",
-   "p": 0.06,
+   "p": 0.05,
    "base_rate": 0.06,
    "method": "base: reference class = the current Pakistan-brokered US-Iran ceasefire, ~180 days with no US strike on Iranian territory (strikes on tankers in Sep were at sea); 0 events in 0.5 years, +0.5 smoothing, 24 days. signals: LR 0.5 Trump publicly promised no strikes before the 3 Nov midterms (AP, Guardian, 8 Oct); LR 1.3 Pentagon reportedly told to prepare options; LR 1.3 near-nightly IRGC attacks on Hormuz shipping since 29 Sep.",
    "history": [
@@ -683,6 +683,15 @@
      "date": "2026-10-09",
      "p": 0.06,
      "reason": "Opening: an explicit presidential promise with an electoral motive covers the whole window.",
+     "models": {
+      "base": 0.06,
+      "signals": 0.05
+     }
+    },
+    {
+     "date": "2026-10-24",
+     "p": 0.05,
+     "reason": "Trump 23.10 rally repeated no attack before midterms while floating 'another little Epic Fury' after (France 24, eOption)",
      "models": {
       "base": 0.06,
       "signals": 0.05
@@ -1900,7 +1909,7 @@
    "index": "pulse",
    "opened": "2026-10-17",
    "status": "open",
-   "p": 0.14,
+   "p": 0.11,
    "base_rate": 0.1,
    "method": "Batch 17.10: my number written before asking Claude Fable blind (it never saw mine); ensemble = log-odds mean of base and the two judgements.",
    "history": [
@@ -1918,6 +1927,16 @@
      "date": "2026-10-18",
      "p": 0.14,
      "reason": "Correction to my own update an hour earlier: I wrote '~7 episodes, Laplace 0/7'. Exact count: 5 resolved IRGC mine-claim episodes (31 Aug and 14 Sep El Gaia refuted by CENTCOM; 10 Oct, 11 Oct and 14 Oct GFS Pride attributed by UKMTO/maritime authorities to a projectile), 0 confirmed as mines; 17 Oct is still open. Base = Laplace 0/5 = 1/7 = 0.14.",
+     "models": {
+      "base": 0.14,
+      "mine": 0.12,
+      "fable": 0.15
+     }
+    },
+    {
+     "date": "2026-10-24",
+     "p": 0.11,
+     "reason": "24.10: no UKMTO/JMIC entry after 21.10 names a mine; IRGC 22.10 mine claims (3 ships) unconfirmed by UKMTO, IMO list to 22.10; one week left",
      "models": {
       "base": 0.14,
       "mine": 0.12,
@@ -2027,6 +2046,146 @@
    ],
    "crowd": [],
    "crowd_history": []
+  },
+  {
+   "id": "33",
+   "title": "Will Saudi Arabia or Saudi Aramco confirm damage to the Rabigh refinery, a Yanbu Aramco facility or the East-West pipeline from a Houthi attack between 24 October and 15 November 2026?",
+   "criteria": "YES if, between 24 Oct and 15 Nov 2026, the Saudi government (SPA, Civil Defense, Energy Ministry, coalition) or Saudi Aramco states that a Houthi missile/drone or its debris damaged, set on fire or interrupted operations at the Rabigh refinery, an Aramco facility in Yanbu, or the East-West crude pipeline or its pumping stations. Debris reported to fall 'near' a site without damage is NO. Houthi claims alone are NO. Source: SPA, Aramco, Reuters, AFP.",
+   "deadline": "2026-11-15",
+   "category": "energy",
+   "index": "pulse",
+   "opened": "2026-10-24",
+   "status": "open",
+   "p": 0.28,
+   "base_rate": 0.25,
+   "method": "mine written before Fable (tmp log 23:18Z); Fable independent from evidence only, never saw my number; ensemble = log-odds mean with base rate",
+   "history": [
+    {
+     "date": "2026-10-24",
+     "p": 0.28,
+     "reason": "24.10 Houthis claimed Yanbu, Rabigh, East-West pipeline; Saudi reported only intercepts and debris in Jeddah, Taif, Rabigh (Reuters). Riyadh admits damage rarely, usually when fires are visible.",
+     "models": {
+      "mine": 0.25,
+      "fable": 0.35,
+      "base": 0.25
+     }
+    }
+   ],
+   "crowd": [],
+   "crowd_history": [],
+   "draft": "d1"
+  },
+  {
+   "id": "34",
+   "title": "Will the civilian evacuation from Oleshky under the local ceasefire begin by 5 November 2026?",
+   "criteria": "YES if by 5 Nov 2026 23:59 UTC Reuters, AP, AFP, the Russian or Ukrainian government, ICRC or the White House report that at least one convoy/group of civilians left Oleshky through the agreed passage. Humanitarian aid entering without anyone leaving is NO.",
+   "deadline": "2026-11-05",
+   "category": "war",
+   "index": "pulse",
+   "opened": "2026-10-24",
+   "status": "open",
+   "p": 0.55,
+   "base_rate": 0.5,
+   "method": "mine written before Fable (tmp log 23:18Z); Fable independent from evidence only, never saw my number; ensemble = log-odds mean with base rate",
+   "history": [
+    {
+     "date": "2026-10-24",
+     "p": 0.55,
+     "reason": "Ceasefire confirmed by White House (from 29.10), Russian General Staff (fire stops 27.10 04:00) and Kremlin (evacuation several days); local corridors in this war often fail on first attempts.",
+     "models": {
+      "mine": 0.6,
+      "fable": 0.55,
+      "base": 0.5
+     }
+    }
+   ],
+   "crowd": [],
+   "crowd_history": [],
+   "draft": "d2"
+  },
+  {
+   "id": "35",
+   "title": "Will officials of the US, Russia and Ukraine meet in one trilateral session by 20 November 2026?",
+   "criteria": "YES if by 20 Nov 2026 Reuters, AP or AFP report that officials of all three governments met in the same session (technical or political level, e.g. Abu Dhabi or Switzerland). Separate bilateral meetings in the same city do not count.",
+   "deadline": "2026-11-20",
+   "category": "war",
+   "index": "pulse",
+   "opened": "2026-10-24",
+   "status": "open",
+   "p": 0.38,
+   "base_rate": 0.35,
+   "method": "mine written before Fable (tmp log 23:18Z); Fable independent from evidence only, never saw my number; ensemble = log-odds mean with base rate",
+   "history": [
+    {
+     "date": "2026-10-24",
+     "p": 0.38,
+     "reason": "All three name Abu Dhabi and 'first half of November' (Zelensky, Peskov 23.10), Putin 'after 10.11', no date; Russian 'in principle' agreements often slip.",
+     "models": {
+      "mine": 0.45,
+      "fable": 0.35,
+      "base": 0.35
+     }
+    }
+   ],
+   "crowd": [],
+   "crowd_history": [],
+   "draft": "d3"
+  },
+  {
+   "id": "36",
+   "title": "Will Iranian forces fire on a US Navy vessel, as acknowledged by CENTCOM, the Pentagon or Iran's armed forces, between 25 October and 30 November 2026?",
+   "criteria": "YES if CENTCOM/the Pentagon or Iran's armed forces/IRGC state that Iranian forces fired missiles, drones, guns or boats' weapons at a US Navy ship between 25 Oct and 30 Nov 2026 (a hit is not required). Threats, warnings, harassment without fire are NO.",
+   "deadline": "2026-11-30",
+   "category": "war",
+   "index": "pulse",
+   "opened": "2026-10-24",
+   "status": "open",
+   "p": 0.3,
+   "base_rate": 0.3,
+   "method": "mine written before Fable (tmp log 23:18Z); Fable independent from evidence only, never saw my number; ensemble = log-odds mean with base rate",
+   "history": [
+    {
+     "date": "2026-10-24",
+     "p": 0.3,
+     "reason": "Iran's chief of staff 24.10: ready to fire on US warships; Trump 23.10 'another little Epic Fury' after midterms; no acknowledged exchange in October. Mine and Fable diverge widely (0.15 vs 0.50): hinges on post-3.11 US strikes.",
+     "models": {
+      "mine": 0.15,
+      "fable": 0.5,
+      "base": 0.3
+     }
+    }
+   ],
+   "crowd": [],
+   "crowd_history": [],
+   "draft": "d4"
+  },
+  {
+   "id": "37",
+   "title": "Will France declare a state of emergency (état d'urgence) by 30 November 2026?",
+   "criteria": "YES if by 30 Nov 2026 the French Council of Ministers decrees a state of emergency under the 1955 law for all or part of metropolitan France. Local curfews or protest bans by prefects are NO.",
+   "deadline": "2026-11-30",
+   "category": "politics",
+   "index": "pulse",
+   "opened": "2026-10-24",
+   "status": "open",
+   "p": 0.05,
+   "base_rate": 0.03,
+   "method": "mine written before Fable (tmp log 23:18Z); Fable independent from evidence only, never saw my number; ensemble = log-odds mean with base rate",
+   "history": [
+    {
+     "date": "2026-10-24",
+     "p": 0.05,
+     "reason": "410k marchers and ~1000 arrests 24.10 handled with local curfews and bans; 1955 law used in 2005 riots and 2015, not for gilets jaunes or 2023 riots.",
+     "models": {
+      "mine": 0.07,
+      "fable": 0.07,
+      "base": 0.03
+     }
+    }
+   ],
+   "crowd": [],
+   "crowd_history": [],
+   "draft": "d5"
   }
  ]
 }
