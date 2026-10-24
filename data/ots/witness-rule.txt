@@ -1,0 +1,15 @@
+Forecast-chain witness rule (errata, fixed 2026-10-23, stamped 2026-10-24)
+
+A day's head in data/forecast-chain.jsonl counts only if its committed proof
+data/ots/<date>.sha256.ots names all four OpenTimestamps calendars:
+  alice.btc.calendar.opentimestamps.org
+  bob.btc.calendar.opentimestamps.org
+  finney.calendar.eternitywall.com
+  btc.calendar.catallaxy.com
+(later upgraded to a Bitcoin block attestation).
+Two heads for one UTC day, or a head missing a calendar, is equivocation.
+
+This file is itself stamped (data/ots/witness-rule.txt.ots). Its earliest
+stamp fixes the rule; a changed rule needs a new file with a later stamp,
+which is visible. Before 2026-10-24 the rule was pinned only by git history
+(README commit cfe3f3f) and other people's clones.
