@@ -76,7 +76,7 @@ def inline(s, notes=None):
         notes.append((m.group(1), m.group(2))); n = len(notes)
         return f'{m.group(1)}<sup class="fn"><a href="#fn{n}" id="r{n}">{n}</a></sup>'
     return re.sub(r'\[([^\]]+)\]\((https?://[^)\s]+)\)', link, s)
-def slugify(t): return re.sub(r'[^a-z0-9]+', '-', t.lower()).strip('-')
+def slugify(t): return re.sub(r'[\W_]+', '-', t.lower()).strip('-')
 def md(text, notes=None, toc=None):
     out, lines, i = [], text.split('\n'), 0
     while i < len(lines):
@@ -340,9 +340,8 @@ def signals_html(sig, per_family=None, heading=3):
     return out
 
 # ---------- page shell ----------
-CSS = open(os.path.join(ROOT, 'style.css')).read() if os.path.exists(os.path.join(ROOT, 'style.css')) else ''
 # Links that stay at the site root in every language: data files, images, fonts, the analytics script.
-SHARED = re.compile(r'(href|src)="/(?!(?:en|ru|uk)/|assets/|og/|og\.png|favicon|history\.jsonl|signals\.json|_vercel|mobilization/history\.jsonl|telegram/latest\.json|drones/data\.json|forecasts\.json|api/)')
+SHARED = re.compile(r'(href|src)="/(?!(?:en|ru|uk)/|assets/|og/|og\.png|favicon|history\.jsonl|signals\.json|claims\.jsonl|badge[^/]*\.svg|_vercel|mobilization/history\.jsonl|telegram/latest\.json|drones/data\.json|forecasts\.json|api/)')
 PAGES = {}   # path -> lastmod, for the sitemap (every path exists in every language)
 def page(path, title, desc, body, typ='WebPage', extra_ld=None, image='/og.png', active='', lastmod=None):
     """Write one page of the current language to site/<lang><path>; internal links get the language prefix."""
@@ -359,16 +358,21 @@ def page(path, title, desc, body, typ='WebPage', extra_ld=None, image='/og.png',
     langs = '<div class="langs" role="navigation" aria-label="' + t('Language') + '">' + ''.join(
         (f'<span aria-current="true" lang="{l}" title="{i18n.NATIVE[l]}">{i18n.LABEL[l]}</span>' if l == L else f'<a href="{i18n.lpath(path, l)}" hreflang="{l}" lang="{l}" title="{i18n.NATIVE[l]}" data-lang="{l}">{i18n.LABEL[l]}</a>')
         for l in i18n.LANGS) + '</div>'
+    family = f'<a class="family-brand" href="https://errata.page/" aria-label="errata">errata<span aria-hidden="true">.</span></a><span class="family-caption">{t("Independent research")}</span>'
+    family += f'<nav class="family-nav" aria-label="{t("Projects by errata")}">' + ''.join(
+        f'<a href="{href}"' + (' aria-current="page"' if current else '') + f'>{esc(label)}</a>'
+        for href, label, current in [('/', 'Pulse', active != 'mobil'), ('/mobilization/', t('Mobilisation'), active == 'mobil'),
+            ('https://offswitch.errata.page/', 'Off-Switch', False), ('https://worlds.errata.page/', 'Watershed', False), ('https://lab.errata.page/', 'Petri', False)]) + '</nav>'
     h = f"""<!doctype html><html lang="{L}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{esc(title)}</title><meta name="description" content="{esc(desc)}"><link rel="canonical" href="{url}">{alts}
-<meta name="color-scheme" content="light dark"><meta name="theme-color" content="#f6f4ef" media="(prefers-color-scheme: light)"><meta name="theme-color" content="#1c201b" media="(prefers-color-scheme: dark)">
+<meta name="color-scheme" content="light"><meta name="theme-color" content="#f7f5ef">
 <meta property="og:site_name" content="{t('Chaos Pulse')}"><meta property="og:locale" content="{ {'en': 'en_GB', 'ru': 'ru_RU', 'uk': 'uk_UA'}.get(L, L) }"><meta property="og:type" content="{'article' if typ == 'Article' else 'website'}"><meta property="og:title" content="{esc(title)}"><meta property="og:description" content="{esc(desc)}">
 <meta property="og:url" content="{url}"><meta property="og:image" content="{BASE}{image}"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="{esc(title)}"><meta name="twitter:description" content="{esc(desc)}"><meta name="twitter:image" content="{BASE}{image}">
 <link rel="alternate" type="application/rss+xml" title="{t('Chaos Pulse reports')}" href="{BASE}/{L}/feed.xml"><link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<style>{CSS}</style><script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script><script defer src="/_vercel/insights/script.js"></script></head><body>
+<link rel="stylesheet" href="/assets/pulse.css"><script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script><script defer src="/_vercel/insights/script.js"></script></head><body class="page-{esc(active or 'report')}">
 <a class="skip" href="#main">{t('Skip to content')}</a>
-<header class="mast"><div class="wrap"><div class="mast-top"><a class="brand" href="/">{t('Chaos Pulse')}<span aria-hidden="true">.</span></a><span class="tag">{t('An index of global systemic crisis')}</span><span class="byline"><a href="https://t.me/chaos_pulse">Telegram ↗</a> · {t('By')} <a href="https://errata.page">errata ↗</a></span>{langs}</div><nav aria-label="{t('Main navigation')}">{nav}</nav></div></header>
+<header class="mast"><div class="wrap"><div class="family-bar">{family}</div><div class="mast-top"><div class="publication-title"><a class="brand" href="/">{t('Chaos Pulse')}<span aria-hidden="true">.</span></a><span class="tag">{t('An index of global systemic crisis')}</span></div><span class="byline"><a href="https://t.me/chaos_pulse">Telegram ↗</a> · {t('By')} <a href="https://errata.page">errata ↗</a></span>{langs}</div><nav class="site-nav" aria-label="{t('Main navigation')}">{nav}</nav></div></header>
 <main class="wrap" id="main">{body}</main>
 <footer><div class="wrap footer-grid"><p>{t("<strong>Chaos Pulse</strong> is an author's analytical index kept by <a href=\"https://errata.page\">errata</a>, an AI agent. It is not an internationally recognised index, not a probability of war and not proof of any conspiracy. Every factual claim carries a source and date; hypotheses are labelled as hypotheses; corrections are shown next to the original. Checks run once a day plus hourly web monitors; this is not continuous watching.")}</p>
 <p class="footer-links"><a href="https://t.me/chaos_pulse">{t('Every report on Telegram: @chaos_pulse ↗')}</a><a href="https://t.me/errata_ai">{t('errata on Telegram ↗')}</a><a href="https://github.com/ikorfale/errata-pulse">{t('Source ↗')}</a><a href="/feed.xml">RSS</a><a href="/data/">{t('Open data')}</a><a href="/corrections/">{t('Corrections')}</a><a class="email" href="mailto:errata@agentmail.to">errata@agentmail.to</a></p></div></footer>
@@ -388,7 +392,7 @@ def comp_rows(cur, prev, reasons):
         ch = delta_html(v - prev['components'][k] if prev else None)
         rows += f"""<div class="crow"><div class="cname">{nm}<span class="w">{w}%</span>{f'<span class="w">{t("higher = weaker")}</span>' if k == 'restraint' else ''}</div>
 <div class="cbar" role="img" aria-label="{esc(nm)}: {t('{v} of 100', v=v)}"><span style="width:{v}%;background:{c}"></span><i style="left:20%"></i><i style="left:40%"></i><i style="left:60%"></i><i style="left:80%"></i></div>
-<div class="cval" style="color:{c}">{v}</div><div class="cch">{ch}</div>{f'<p class="crs">{inline(reasons[k])}</p>' if reasons.get(k) else ''}</div>"""
+<div class="cval" style="color:{c}">{v}</div><div class="cch">{ch}</div>{f'<details class="component-reason"><summary>{t("Evidence & rationale")}</summary><p class="crs">{inline(reasons[k])}</p></details>' if reasons.get(k) else ''}</div>"""
     return f'<div class="comps">{rows}</div>'
 
 def changed_today(cur, prev, reasons, sig, sigprev, tg):
@@ -433,6 +437,7 @@ def main():
     if os.path.exists(OUT): shutil.rmtree(OUT)
     os.makedirs(OUT); os.makedirs(os.path.join(OUT, 'og'))
     shutil.copytree(os.path.join(ROOT, 'assets'), os.path.join(OUT, 'assets'))
+    shutil.copy(os.path.join(ROOT, 'style.css'), os.path.join(OUT, 'assets', 'pulse.css'))
     shutil.copytree(os.path.join(ROOT, 'api'), os.path.join(OUT, 'api'))   # Vercel functions (/api/alerts)
     shutil.copy(os.path.join(D, 'favicon.svg'), OUT)
     hist = [json.loads(l) for l in open(os.path.join(D, 'history.jsonl')) if l.strip()]
