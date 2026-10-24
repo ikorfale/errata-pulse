@@ -1,0 +1,7 @@
+big long markets 400 flagged 166
+id quartile 1: ids 559651-561978: 100/100 flagged; flagged created 2025-07-03..2025-07-10
+id quartile 2: ids 561979-679033: 38/100 flagged; flagged created 2025-07-10..2025-07-25
+id quartile 3: ids 679034-1349167: 20/100 flagged; flagged created 2025-11-24..2026-02-06
+id quartile 4: ids 1357371-5126779: 8/100 flagged; flagged created 2026-02-18..2026-09-29
+559651 [(1, 'Xi Jinping out before 2027?')]
+665374 [(161, 'Will the U.S. invade Iran before 2027?')]
