@@ -271,3 +271,8 @@ No FOM value was read for this section. Where a line above disagrees with an ite
 ## Freeze
 This text is frozen at the commit that adds this line. Its sha256 is recorded in the commit message and in the plan;
 any later change is an amendment dated by its own commit and listed next to the result.
+
+## Amendment 1 (24.10.2026, after the freeze, before any forward FOM value is read; third blocking-only check by a second model)
+Added to v1.6 item 3: at either stop (count or date), the register of national shocks is closed. A shock first
+recorded after the stop is reached is reported next to the result only; no unit's measurability, pool membership or
+tag changes because of it, as with backfill errors under v1.5 item 3.
