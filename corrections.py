@@ -169,6 +169,7 @@ def main(a):
         if o['id'] not in {r['id'] for r in load()}: sys.exit(f"no correction {o['id']}")
         if not (('url' in o and 'published' in o and 'quote' in o) or ('recompute' in o and 'output' in o)):
             sys.exit('need --url --published --quote (source) or --recompute --output (method)')
+        if 'url' in o and 'source' not in o: sys.exit('need --source (publisher name shown on /corrections/)')
         if 'recompute' in o:
             o['at'] = git('rev-parse', o.get('at', 'HEAD')).stdout.strip()
             if o['output'] not in run(o['recompute'], ROOT): sys.exit(f"recompute does not print {o['output']!r} now")
