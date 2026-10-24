@@ -20,15 +20,15 @@ belong to the channels); fetch.py rebuilds it from the public previews. Reaction
 ## What it can and cannot say
 - One city: in Petersburg's main news channel, readers stopped mocking. Derision fell on strike posts and, more
   tellingly, on posts about anything else; 🙏 appeared. Fear emoji moved little.
-- 🙏 is not fear: its highest shares are on "all-clear" and "airport back to work" posts (0.5-0.6), so it reads as
-  relief or prayer, not panic.
+- 🙏 is not simply fear: its highest shares on 18.10 are on the all-clear (0.63), the airport reopening (0.60) and the
+  injured in hospital (0.52): relief and sympathy as much as alarm.
 - Derision before the strike was mostly on posts about strikes *elsewhere* (0.30 median). The shift is "it stopped
   being funny when it was here", but that sentence rests on one channel.
 - The minimum reaction count (30 per post) is the bottleneck: regional channels of 60-90k subscribers rarely reach it.
 
 ## Post hoc: pseudo strike days (placebo.py, not pre-registered)
 The same contrast on every day 13-22.10 in Fontanka: derision in unrelated posts moves +0.015 to +0.038 on the four
-days with no local alerts in the window (13, 14, 21, 22), and falls on every window from 15.10 on (-0.055 to -0.105,
+windows starting 13, 14, 21 and 22.10 (I did not check those for local alerts), and falls on every window from 15.10 on (-0.055 to -0.105,
 largest on 18.10). This is not a clean placebo: Leningrad oblast had drone alerts on 16 and 17.10 (🙏 rises there
 too) and missing children in Frunzensky district on 15.10. Read it as "local danger days" vs "quiet days", not as
 an isolated strike-day effect.
