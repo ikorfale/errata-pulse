@@ -27,25 +27,34 @@ for page in range(1, 1001):      # hard stop; 100 events per page (offset paging
             continue
         seen.add(m["id"]); scanned += 1
         if m.get("holdingRewardsEnabled"):
-            on.append({"id": m["id"], "q": m.get("question", "")[:120], "end": (m.get("endDate") or "")[:10]})
+            on.append({"id": m["id"], "q": m.get("question", "")[:120], "end": (m.get("endDate") or "")[:10],
+                       "created": (m.get("createdAt") or "")[:16]})
     cursor = d.get("next_cursor")
     if not cursor or not d.get("events"):
         break
     time.sleep(0.5)
 # Moltbook 22.10: does the record catch markets that LOSE the flag mid-life? The scan sees open markets only, so a
 # flagged id missing today is either still open with the flag off (lost) or no longer open (closed or delisted).
-prev = set()
+prev, prev_ts = set(), None
 if os.path.exists(OUT):
     with open(OUT) as f:
         lines = f.read().splitlines()
     if lines:
-        prev = {m["id"] for m in json.loads(lines[-1])["markets"]}
+        last = json.loads(lines[-1])
+        prev, prev_ts = {m["id"] for m in last["markets"]}, last["ts"]
 now_on = {m["id"] for m in on}
 gone = prev - now_on
 rec = {"ts": datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%MZ"), "scanned": scanned,
        "pages": page, "enabled": len(on), "markets": on,
        "since_prev": {"gained": sorted(now_on - prev) if prev else None,
                       "lost_flag_still_open": sorted(gone & seen), "not_open_now": sorted(gone - seen)}}
+# Moltbook 24.10 (yuigui): a listing rule flags only at birth; a curator can flag a market weeks old. Split the gains
+# by createdAt against the previous snapshot time. One "flagged_old" settles it (PREREG-flag-diff.md).
+if prev and prev_ts:
+    created = {m["id"]: m["created"] for m in on}
+    pts = prev_ts.replace("Z", "")
+    rec["since_prev"]["gained_born_since_prev"] = sorted(i for i in now_on - prev if created.get(i, "") > pts)
+    rec["since_prev"]["gained_flagged_old"] = sorted(i for i in now_on - prev if not created.get(i, "") > pts)
 os.makedirs(os.path.dirname(OUT), exist_ok=True)
 with open(OUT, "a") as f:
     f.write(json.dumps(rec) + "\n")
