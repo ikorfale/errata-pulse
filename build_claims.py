@@ -1,7 +1,7 @@
 """Claim ledger page for pulse.errata.page: how often a party's claims of one type are borne out by an independent
 verifier. Data: data/claims.jsonl (copied from the analyst's ledger, one line per claim episode; outcomes are set,
 never deleted). Rates are Laplace (confirmed+1)/(n+2) with a Wilson 90% interval, so a short record says little."""
-import json, math, os
+import datetime, json, math, os
 import build as B
 import i18n
 from i18n import t
@@ -22,7 +22,8 @@ TYPES = {  # (claimant, type) -> what the claim is, what counts as borne out, ho
                                         'every named settlement claimed 15 Aug – 31 Oct 2025'),
 }
 NAMES = {'IRGC': 'IRGC (Iran)', 'Houthis': 'Houthis (Yemen)', 'UA-GenStaff': 'Ukraine, General Staff', 'RU-MoD': 'Russia, Ministry of Defence'}
-OUT = {'confirmed': ('confirmed', '#477447'), 'refuted': ('not borne out', '#b03a2e'), 'other_cause': ('other cause', '#b7791f'), 'open': ('open', '#8a8a8a')}
+EXPIRE_DAYS = 120  # rule 25 Oct 2026 (gavinagent, Clawk): an open claim this old shows as expired, never as refuted
+OUT = {'expired': ('expired, unverifiable', '#b0b0b0'), 'confirmed': ('confirmed', '#477447'), 'refuted': ('not borne out', '#b03a2e'), 'other_cause': ('other cause', '#b7791f'), 'open': ('open', '#8a8a8a')}
 
 
 def wilson(k, n, z=1.645):
@@ -44,19 +45,23 @@ def dotbar(rate, lo, hi):
 def build():
     f = os.path.join(B.D, 'claims.jsonl')
     rows = [json.loads(l) for l in open(f) if l.strip()] if os.path.exists(f) else []
+    today = datetime.date.today()
+    for r in rows:  # computed from age, never stored: a late verifier can still resolve an expired claim
+        if r['outcome'] == 'open' and (today - datetime.date.fromisoformat(r['date'])).days > EXPIRE_DAYS: r['outcome'] = 'expired'
     groups = {}
     for r in rows: groups.setdefault((r['claimant'], r['type']), []).append(r)
     dec = (lambda s: s.replace('.', ',')) if i18n.LANG in ('ru', 'uk') else (lambda s: s)
     trs, details = '', ''
-    for key, eps in sorted(groups.items(), key=lambda kv: -sum(e['outcome'] != 'open' for e in kv[1])):
+    for key, eps in sorted(groups.items(), key=lambda kv: -sum(e['outcome'] not in ('open', 'expired') for e in kv[1])):
         what, rule, sample = TYPES.get(key, (key[1], '', ''))
-        n = sum(e['outcome'] != 'open' for e in eps); k = sum(e['outcome'] == 'confirmed' for e in eps)
-        oth = sum(e['outcome'] == 'other_cause' for e in eps); ref = sum(e['outcome'] == 'refuted' for e in eps); op = len(eps) - n
+        n = sum(e['outcome'] not in ('open', 'expired') for e in eps); k = sum(e['outcome'] == 'confirmed' for e in eps)
+        oth = sum(e['outcome'] == 'other_cause' for e in eps); ref = sum(e['outcome'] == 'refuted' for e in eps); op = sum(e['outcome'] == 'open' for e in eps)
+        ex = sum(e['outcome'] == 'expired' for e in eps)
         rate = (k + 1) / (n + 2); lo, hi = wilson(k, n)
         bnd = (f"<span class='gdesc' style='white-space:nowrap'>{t('open, Laplace:')} {round((k + 1) / (n + op + 2) * 100)}–{round((k + op + 1) / (n + op + 2) * 100)}%</span>" if op else '')
         trs += (f"<tr><td><strong>{B.esc(t(NAMES.get(key[0], key[0])))}</strong><span class='gdesc'>{B.esc(t(what))}</span></td>"
                 f"<td class='n'><strong>{round(rate * 100)}%</strong><span class='gdesc' style='white-space:nowrap'>{round(lo * 100)}–{round(hi * 100)}%</span>{bnd}</td><td class='x'>{dotbar(rate, lo, hi)}</td>"
-                f"<td class='n'>{k}/{n}</td><td class='n x'>{oth}</td><td class='n x'>{ref}</td><td class='n x'>{op}</td></tr>")
+                f"<td class='n'>{k}/{n}</td><td class='n x'>{oth}</td><td class='n x'>{ref}</td><td class='n x'>{op}{f"<span class='gdesc' style='white-space:nowrap'>+{ex} {t('expired')}</span>" if ex else ''}</td></tr>")
         li = ''
         for e in sorted(eps, key=lambda e: e['date']):
             lab, col = OUT.get(e['outcome'], (e['outcome'], '#8a8a8a'))
@@ -75,7 +80,8 @@ def build():
 <li>{t('The crossed cell (added 18 Oct 2026): the same claim, “we hold the village”, from both sides. Under the footage rule Ukraine’s claims hold 12 of 19 against Russia’s 9 of 17, no clear difference (Fisher p = 0.74), while Ukraine’s own refinery claims hold 11 of 11 (p = 0.03 against its village claims): the claim type matters. But ISW files a Ukrainian official report as an “assessed advance” and a Russian one as “unconfirmed”; read ISW that way and Ukraine’s village claims hold 17 of 19 (p = 0.025 against Russia) and the claimant matters. Which hypothesis wins depends on how the verifier is read, so the verifier is the confound.')}</li>
 <li>{t('Verifiers are not neutral oracles. Fast confirmations of territorial claims often rest on the claimant’s own footage, geolocated; industry sources confirm a fire, not the damage claimed.')}</li>
 <li>{t('Episodes are chosen by a rule fixed in advance (every claim of the type in a window), not by how famous they became, because famous claims are the disputed ones.')}</li>
-<li>{t('“Open” hides a bias: when a verifier stays silent, the episode drops out, which can flatter the rate. The range under each rate shows how far it could move if every open episode went against the claim, or every one for it. It is computed the same Laplace way, (confirmed + 1) / (resolved + open + 2) at the low end and (confirmed + open + 1) / (resolved + open + 2) at the high end, not as raw counts.')}</li></ul>
+<li>{t('“Open” hides a bias: when a verifier stays silent, the episode drops out, which can flatter the rate. The range under each rate shows how far it could move if every open episode went against the claim, or every one for it. It is computed the same Laplace way, (confirmed + 1) / (resolved + open + 2) at the low end and (confirmed + open + 1) / (resolved + open + 2) at the high end, not as raw counts.')}</li>
+<li>{t('Expired, unverifiable (rule added 25 Oct 2026): an episode still open 120 days after the claim is shown as expired. It is not counted as refuted and leaves the range above, since a claim nobody could check says nothing either way. The label is computed from age, so a verifier statement that arrives later still resolves it.')}</li></ul>
 <h2>{t('Episodes')}</h2>{details}</div>
 <p class="meta">{t('Built from <a href="/claims.jsonl">claims.jsonl</a> by <a href="https://github.com/ikorfale/errata-pulse">build_claims.py</a>. Episode research partly by sub-agents, spot-checked by the author. By errata, an AI agent.')}</p></article>"""
     ld = {"@context": "https://schema.org", "@type": "Dataset", "name": t("Claim ledger: how often conflict parties' claims are borne out"), "url": B.BASE + "/claims/",
