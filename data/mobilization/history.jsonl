@@ -4,3 +4,4 @@
 {"ts": "2026-10-14T01:37", "kind": "regular", "mri": 55, "level": "повышенный", "components": {"manpower": 65, "legal": 64, "military": 51, "political": 45, "society": 35}, "confidence": "средняя"}
 {"ts": "2026-10-18T01:30", "kind": "regular", "mri": 55, "level": "повышенный", "components": {"manpower": 65, "legal": 64, "military": 53, "political": 45, "society": 35}, "confidence": "средняя"}
 {"ts": "2026-10-21T01:30", "kind": "regular", "mri": 55, "level": "повышенный", "components": {"manpower": 65, "legal": 65, "military": 53, "political": 45, "society": 35}, "confidence": "средняя"}
+{"ts": "2026-10-25T01:30", "kind": "regular", "mri": 56, "level": "повышенный", "components": {"manpower": 66, "legal": 65, "military": 53, "political": 45, "society": 35}, "confidence": "средняя"}
