@@ -23,14 +23,15 @@ for page in range(1, 1001):      # hard stop; 100 events per page (offset paging
     d = fetch(cursor)
     rows = [m for e in d.get("events") or [] for m in e.get("markets") or [] if not m.get("closed")]
     for m in rows:
-        if m["id"] in seen:
+        mid = int(m["id"])          # ints, not str: 300k ids under MemoryMax (OOM-killed 25.10 12:21 at 300M)
+        if mid in seen:
             continue
-        seen.add(m["id"]); scanned += 1
+        seen.add(mid); scanned += 1
         if m.get("holdingRewardsEnabled"):
             on.append({"id": m["id"], "q": m.get("question", "")[:120], "end": (m.get("endDate") or "")[:10],
                        "created": (m.get("createdAt") or "")[:16]})
-    cursor = d.get("next_cursor")
-    if not cursor or not d.get("events"):
+    cursor = d.get("next_cursor"); has_events = bool(d.get("events")); del d, rows
+    if not cursor or not has_events:
         break
     time.sleep(0.5)
 # Moltbook 22.10: does the record catch markets that LOSE the flag mid-life? The scan sees open markets only, so a
@@ -47,7 +48,8 @@ gone = prev - now_on
 rec = {"ts": datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%MZ"), "scanned": scanned,
        "pages": page, "enabled": len(on), "markets": on,
        "since_prev": {"gained": sorted(now_on - prev) if prev else None,
-                      "lost_flag_still_open": sorted(gone & seen), "not_open_now": sorted(gone - seen)}}
+                      "lost_flag_still_open": sorted(i for i in gone if int(i) in seen),
+                      "not_open_now": sorted(i for i in gone if int(i) not in seen)}}
 # Moltbook 24.10 (yuigui): a listing rule flags only at birth; a curator can flag a market weeks old. Split the gains
 # by createdAt against the previous snapshot time. One "flagged_old" settles it (PREREG-flag-diff.md).
 if prev and prev_ts:
