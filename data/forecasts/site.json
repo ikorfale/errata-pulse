@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-24T23:25:12.563912+00:00",
+ "generated": "2026-10-25T22:45:20.676385+00:00",
  "counts": {
   "open": 34,
   "resolved": 3,
@@ -95,7 +95,7 @@
    "index": "mri",
    "opened": "2026-10-09",
    "status": "open",
-   "p": 0.013,
+   "p": 0.01,
    "base_rate": 0.02,
    "method": "base: reference class = declared mobilisations during the current war, 1 (Sep 2022) in 4.6 years, Poisson with +0.5 smoothing over 22 days. signals: LR 1.3 mobilisation risk index 54 'elevated' (legal readiness 62, rising); LR 0.8 the rumoured post-election '1 October window' passed with no decree; LR 0.8 the state keeps substituting (quotas, foreigners, coercion of conscripts) and recruitment is only ~10% below 2025; official denials taken as LR 1.0 (they preceded 2022 too).",
    "history": [
@@ -121,6 +121,15 @@
      "date": "2026-10-18",
      "p": 0.013,
      "reason": "MRI 18 Oct: 55, unchanged. 13 days left: the base rate shrinks with the window. Evidence both ways is weak: the energy truce collapsed and Putin (16 Oct) ruled out concessions (LR 1.15), while Kluge and Massicot (RFE/RL 16 Oct) see steady recruitment and no emergent manpower deficit (LR 0.9). No decree, no mass summons to reservists, no exit closure.",
+     "models": {
+      "base": 0.017,
+      "signals": 0.016
+     }
+    },
+    {
+     "date": "2026-10-25",
+     "p": 0.01,
+     "reason": "6 days left, no threshold events, CIT 20 Oct: no signs of preparation",
      "models": {
       "base": 0.017,
       "signals": 0.016
@@ -195,6 +204,10 @@
     {
      "date": "2026-10-24",
      "p": 0.064
+    },
+    {
+     "date": "2026-10-25",
+     "p": 0.044
     }
    ],
    "crowd_urls": {
@@ -237,7 +250,7 @@
    "index": "mri",
    "opened": "2026-10-09",
    "status": "open",
-   "p": 0.34,
+   "p": 0.31,
    "base_rate": 0.35,
    "method": "base: judgmental reference class = MoD-drafted presidential decrees put up for public discussion; most are signed, but a minority within ~7-8 weeks of publication; I put that share at 35% (no count yet: method gap to fill). signals: LR 1.2 rising desertion/unauthorised-absence caseload gives the MoD a reason to hurry; LR 1.0 no public statement of a timetable.",
    "history": [
@@ -254,6 +267,15 @@
      "date": "2026-10-21",
      "p": 0.34,
      "reason": "13 days after the draft was published, still not signed; no new signal for speed. Time decay only.",
+     "models": {
+      "base": 0.35,
+      "signals": 0.39
+     }
+    },
+    {
+     "date": "2026-10-25",
+     "p": 0.31,
+     "reason": "17 days after the 8 Oct draft without signing; komandiry.org 21 Oct finds no confirmation either way; MRI 56 (+1, manpower) does not bear on decree timing",
      "models": {
       "base": 0.35,
       "signals": 0.39
@@ -353,6 +375,10 @@
     },
     {
      "date": "2026-10-24",
+     "p": 0.103
+    },
+    {
+     "date": "2026-10-25",
      "p": 0.103
     }
    ],
@@ -487,6 +513,10 @@
     {
      "date": "2026-10-24",
      "p": 0.086
+    },
+    {
+     "date": "2026-10-25",
+     "p": 0.082
     }
    ],
    "crowd_urls": {
@@ -660,6 +690,10 @@
     {
      "date": "2026-10-24",
      "p": 0.235
+    },
+    {
+     "date": "2026-10-25",
+     "p": 0.255
     }
    ],
    "crowd_urls": {
@@ -790,6 +824,10 @@
     },
     {
      "date": "2026-10-24",
+     "p": 0.02
+    },
+    {
+     "date": "2026-10-25",
      "p": 0.02
     }
    ],
@@ -968,6 +1006,10 @@
     {
      "date": "2026-10-24",
      "p": 0.195
+    },
+    {
+     "date": "2026-10-25",
+     "p": 0.205
     }
    ],
    "crowd_urls": {
@@ -1074,6 +1116,10 @@
     {
      "date": "2026-10-24",
      "p": 0.062
+    },
+    {
+     "date": "2026-10-25",
+     "p": 0.067
     }
    ],
    "crowd_urls": {
@@ -1239,6 +1285,10 @@
     {
      "date": "2026-10-24",
      "p": 0.285
+    },
+    {
+     "date": "2026-10-25",
+     "p": 0.315
     }
    ],
    "crowd_urls": {
@@ -1336,6 +1386,10 @@
     {
      "date": "2026-10-24",
      "p": 0.272
+    },
+    {
+     "date": "2026-10-25",
+     "p": 0.267
     }
    ],
    "crowd_urls": {
@@ -1380,6 +1434,15 @@
      "date": "2026-10-14",
      "p": 0.07,
      "reason": "MRI 14 Oct: 55, unchanged. Kept at 7%: recruitment steady (Kluge, Sept 29.9k), cost per recruit +30% y/y and bonuses stagnating at Q4 start push slowly up; energy-truce contacts and US pressure on Kyiv lower near-term motive. No threshold event.",
+     "models": {
+      "base": 0.05,
+      "signals": 0.08
+     }
+    },
+    {
+     "date": "2026-10-25",
+     "p": 0.07,
+     "reason": "Unchanged: MRI 56 (+1 manpower, budget strain on contract payouts) vs November trilateral talks in UAE confirmed by Kremlin; no threshold events",
      "models": {
       "base": 0.05,
       "signals": 0.08
@@ -1454,6 +1517,10 @@
     {
      "date": "2026-10-24",
      "p": 0.21
+    },
+    {
+     "date": "2026-10-25",
+     "p": 0.111
     }
    ],
    "crowd_urls": {
@@ -1763,7 +1830,7 @@
    "index": "mri",
    "opened": "2026-10-11",
    "status": "open",
-   "p": 0.5,
+   "p": 0.55,
    "base_rate": 0.55,
    "method": "base: reference class = government bills on military service introduced to the Duma, share passing first reading within about 7 weeks of introduction; my rough estimate from the 2023-2025 pattern of such bills (often fast-tracked) about 0.55, not a counted sample. signals: LR 1.2 government/MoD bill framed as social guarantees, uncontroversial in the Duma; LR 0.85 the autumn session is crowded with the 2027-2029 budget. No crowd market.",
    "history": [
@@ -1780,6 +1847,15 @@
      "date": "2026-10-21",
      "p": 0.5,
      "reason": "12 days after introduction, no committee movement; the autumn session is busy with the 2027-2029 budget. Time decay, back-loaded hazard.",
+     "models": {
+      "base": 0.55,
+      "signals": 0.555
+     }
+    },
+    {
+     "date": "2026-10-25",
+     "p": 0.55,
+     "reason": "Correction: Duma defence committee took bill 8108-9 into work on 14 Oct (duma.gov.ru news 64245); my 21 Oct cut for 'no movement in committee' was wrong. Government bill, autumn session busy with budget",
      "models": {
       "base": 0.55,
       "signals": 0.555
@@ -2013,6 +2089,10 @@
     },
     {
      "date": "2026-10-24",
+     "p": 0.24
+    },
+    {
+     "date": "2026-10-25",
      "p": 0.24
     }
    ],
