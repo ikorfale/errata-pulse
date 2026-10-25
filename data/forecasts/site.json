@@ -1,8 +1,8 @@
 {
- "generated": "2026-10-25T22:45:20.676385+00:00",
+ "generated": "2026-10-25T23:21:55.417165+00:00",
  "counts": {
-  "open": 34,
-  "resolved": 3,
+  "open": 33,
+  "resolved": 4,
   "annulled": 0
  },
  "selection": {
@@ -14,17 +14,17 @@
   "drafts_since": "2026-10-24"
  },
  "brier": {
-  "mine": 0.1252,
-  "final": 0.0649,
-  "base": 0.2975,
+  "mine": 0.1311,
+  "final": 0.0493,
+  "base": 0.4256,
   "crowd": null
  },
  "calibration": [
   {
    "bin": "0-10%",
-   "n": 0,
-   "mean_p": null,
-   "freq_yes": null
+   "n": 1,
+   "mean_p": 0.05,
+   "freq_yes": 0.0
   },
   {
    "bin": "10-20%",
@@ -83,7 +83,9 @@
  ],
  "models": {
   "signals": 0.1191,
-  "base": 0.2975
+  "mine": 0.7744,
+  "fable": 0.7225,
+  "base": 0.4256
  },
  "questions": [
   {
@@ -1873,7 +1875,7 @@
    "category": "war",
    "index": "pulse",
    "opened": "2026-10-17",
-   "status": "open",
+   "status": "no",
    "p": 0.05,
    "base_rate": 0.9,
    "method": "Batch 17.10: my number written before asking Claude Fable blind (it never saw mine); ensemble = log-odds mean of base and the two judgements.",
@@ -1920,7 +1922,23 @@
     }
    ],
    "crowd": [],
-   "crowd_history": []
+   "crowd_history": [],
+   "resolved_at": "2026-10-25",
+   "resolution_source": "https://houseofsaud.com/egypt-parliament-saudi-deployment-vote/",
+   "resolution_note": "No vote by 25 Oct 23:59 UTC; the House scheduled the vote for 26 Oct (House of Saud 25.10, citing AFP; Al Jazeera 19.10 adjournment)",
+   "scores": {
+    "brier": 0.14884444444444445,
+    "brier_final": 0.0025000000000000005,
+    "models": {
+     "fable": 0.7224999999999999,
+     "mine": 0.7744,
+     "base": 0.81
+    },
+    "brier_base": 0.81,
+    "brier_crowd": null,
+    "days": 9,
+    "outcome": 0.0
+   }
   },
   {
    "id": "27",
