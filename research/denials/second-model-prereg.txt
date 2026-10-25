@@ -1,0 +1,13 @@
+**1. Inclusion rule.** Speaker on a fixed list: Putin; Peskov; Defence Minister or MoD spokesperson; chair or deputy chairs of the Duma and Federation Council defence committees; Lavrov or Zakharova. Statement must explicitly negate a new mobilisation wave ("no plans", "not discussed", "no need", "contract recruitment suffices"). Exclude regional officials, pundits, and statements only about contract numbers. Dedup: one row per speaker per utterance event, cite the earliest timestamped source; the same speaker repeating the next day is a new row. Do not inherit the iStories count. Recount under your rule.
+
+**2. Code per row.** Date, speaker, rank tier (1 Putin, 2 Peskov/ministers, 3 committees/MFA), verbatim quote, source URL, trigger (named report / journalist question / foreign official / unprompted), trigger date, scope denied (general / partial / any), and hedge ("currently", "at this time", "no need now" versus categorical).
+
+**3. Allowed comparisons.** With one outcome, no predictive or calibration test exists. Permitted descriptive claims: denials per week in A versus B; triggered share; hedged share; rank distribution; days from last denial to decree in A. Also count triggers as a denominator, so you can report denials per rumour. Forbidden: any sentence of the form "denials predict X".
+
+**4. Decision rule for the MRI component.** Change it only if A shows a wording shift (categorical to hedged, or "general" to narrower scope) in the final weeks, and you can state that pattern before checking B. Even then, log it as an untested hypothesis with weight near zero, not a validated indicator. Do not change on counts, silence after 18 Sep, or rank mix.
+
+**5. Attacks on your prior.**
+- Reactive does not mean uninformative. Officials still choose wording. The choice is the signal, not the fact of replying.
+- In 2022 they denied "general" mobilisation and declared "partial". They may have been literally truthful. Scope coding decides this.
+- Rumour pressure partly reflects leaks from inside the system, so a rumour proxy is not zero information.
+- Post-election silence is confounded. Fewer questions, not fewer answers, may explain it. Only the trigger denominator distinguishes them.

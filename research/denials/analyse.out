@@ -1,0 +1,21 @@
+== 2022: window 2022-02-24..2022-09-20 (29.9 weeks)
+in-rule denials 11 = 0.37/week; trigger-only rows 8
+triggered (not unprompted/unknown) 9/11
+hedge words in quote 3/11; narrowed to general/mass 3/11
+last in-rule denial 2022-09-20 (Andrei Kartapolov (chair, Duma defence committee)); later triggers: 
+   2022-07-26 Russian Ministry of De | - | - | Ряд зарубежных СМИ распространяет недостоверную информацию о проведени
+   2022-09-06 Dmitry Peskov | - | - | По мобилизации я тут, честно говоря, испытываю трудности с пониманием,
+   2022-09-13 Dmitry Peskov | hedge | - | В настоящий момент — нет, об этом речь не идет. [Q: рассматривается ли
+   2022-09-20 Andrei Kartapolov (cha | - | narrow | Неоправданны абсолютно. Всеобщей мобилизации не будет. Об этом не раз 
+== 2026: window 2026-06-01..2026-10-25 (21.0 weeks)
+in-rule denials 8 = 0.38/week; trigger-only rows 17
+triggered (not unprompted/unknown) 8/8
+hedge words in quote 1/8; narrowed to general/mass 0/8
+last in-rule denial 2026-09-28 (Andrei Krasov (first deputy chair, Duma defence committee, 8th convocation)); later triggers: 2026-10-06 Rumour of 'mobilisation from 15 October' (conscrip; 2026-10-06 Ukrainian USF commander Brovdi: 'covert mobilisati; 2026-10-15 GUR to Ukrainska Pravda: Russia may mobilise ~600,; 2026-10-16 The Economist (via TodayPress): Kremlin may use co
+   2026-09-01 Vladimir Putin | - | - | Это чушь собачья, это информационная атака на Россию
+   2026-09-03 Vladimir Putin | hedge | - | Нет такого сценария на сегодня, который потребовал бы мобилизации
+   2026-09-18 Dmitry Peskov (Kremlin | - | - | Нет. Таких планов нет
+   2026-09-28 Andrei Krasov (first d | - | - | Оснований для мобилизации нет никаких, активно идет набор контрактнико
+== strict reading (explicit negation in the quote)
+2022: 10 = 0.33/week; longest gap (57, '2022-03-08', '2022-05-04'); open gap to window end 0 d
+2026: 6 = 0.29/week; longest gap (36, '2026-07-27', '2026-09-01'); open gap to window end 27 d

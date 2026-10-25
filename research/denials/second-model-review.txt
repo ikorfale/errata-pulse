@@ -1,0 +1,13 @@
+Checked all four claims against both ledgers, the script, and the prereg.
+
+1. **Claim 3 miscount.** The longest 2022 gap is 8 Mar → 4 May, 57 days (Putin → Peskov, with the 22 Mar GUR trigger inside it), not 26 Jul → 6 Sep (42). Conclusion survives, the number does not.
+
+2. **Claim 1 inclusion inconsistency.** Four counted rows have no explicit negation in the verbatim quote: 2022 Peskov 6 Sep ("почему вы задаете эти вопросы"); 2026 Kartapolov 27 Jul ("полет фантазии"), Peskov 25 Aug and Zakharova 28 Aug (both flagged "unsure" by the helper). Strict rule gives 10/29.9 = 0.33 vs 5/21 = 0.24. State which reading you publish.
+
+3. **Claim 2 hedge count.** The Kartapolov 27 Jul row's quote is not the denial; its hedge_words cite CEPA "currently no need", a time hedge the regex cannot see. "One of 8" may be two. Get the Vedomosti/Mayak verbatim first.
+
+4. **Claim 2 "none narrowed"** rests on the regex only. The helper coded Peskov 18 Sep scope=partial ("Таких планов нет", answering a 300k report). Under the prereg's "general → narrower" that is arguably a narrowing. Decide and say so.
+
+5. **Claim 2 refusal element.** The 2026 ledger does not record whether any in-rule speaker was asked in October. Post "no refusal logged", not "no refusal".
+
+Non-blocking: regex false positives (Shvytkin "ни сейчас", the English gloss "mass" in Peskov 21 Jun) inflate analyse.out's 2022 3/11 figures but none of the four claims use them. A-PATTERN's "8 of 9 pre-September" is 7 of 8. Claim 4 follows the prereg.
