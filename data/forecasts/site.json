@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-26T22:42:49.130513+00:00",
+ "generated": "2026-10-26T23:21:39.303923+00:00",
  "counts": {
   "open": 33,
   "resolved": 4,
@@ -82,10 +82,10 @@
   }
  ],
  "models": {
-  "signals": 0.1191,
-  "fable": 0.7225,
   "mine": 0.7744,
-  "base": 0.4256
+  "signals": 0.1191,
+  "base": 0.4256,
+  "fable": 0.7225
  },
  "questions": [
   {
@@ -866,7 +866,7 @@
    "index": "pulse",
    "opened": "2026-10-09",
    "status": "open",
-   "p": 0.25,
+   "p": 0.12,
    "base_rate": 0.45,
    "method": "threshold: lognormal from estimated spot ~119.9 (EIA spot 115.22 on 20.10 scaled by futures move to 22.10), vol 0.6, 8 days; second: Fable independent; equal-weight log-odds",
    "history": [
@@ -887,6 +887,15 @@
      "models": {
       "threshold": 0.21,
       "second": 0.28
+     }
+    },
+    {
+     "date": "2026-10-26",
+     "p": 0.12,
+     "reason": "Brent Dec futures settled 115.81 on 26.10 (-0.8%); with the ~6 dollar spot premium seen 20.10, spot ~122, so 130 on 30.10 needs ~+7% in four trading days (threshold model at 50% vol: 0.10); Tehran talks and Trump deferring strikes past 3.11 lean against a spike; independent second model 0.13.",
+     "models": {
+      "threshold": 0.1,
+      "second": 0.13
      }
     }
    ],
