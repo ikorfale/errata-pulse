@@ -1,5 +1,5 @@
 {
- "built_at": "2026-10-25T07:51Z",
+ "built_at": "2026-10-26T07:51Z",
  "runs": [
   "2026-10-16",
   "2026-10-17",
@@ -10,7 +10,8 @@
   "2026-10-22",
   "2026-10-23",
   "2026-10-24",
-  "2026-10-25"
+  "2026-10-25",
+  "2026-10-26"
  ],
  "excluded": {
   "new-detector": 4,
@@ -18,5 +19,23 @@
   "no-snapshot": 0,
   "over-threshold-at-t": 0
  },
- "incidents": {}
+ "incidents": {
+  "2026-10-26|HQObM8ZeuU0YQ3HUdGZ2|qfbmVECblEwwPj50qJ46": {
+   "kind": "binary",
+   "what": "Will we get AGI before 2028? / Will we get AGI before 2029?",
+   "url": "https://manifold.markets/RemNi/will-we-get-agi-before-2028-ff560f9e9346",
+   "gap_before": 0.0166,
+   "gap_after": 0.0435,
+   "coherent_at": "2026-10-25T07:43Z",
+   "broken_at": "2026-10-26T07:43Z",
+   "order": {
+    "status": "open",
+    "last_flagged": "2026-10-26"
+   },
+   "next_trade": {
+    "status": "censored",
+    "hours": 5.2
+   }
+  }
+ }
 }
