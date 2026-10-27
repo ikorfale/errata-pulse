@@ -1,0 +1,27 @@
+Review done. Headline first: the dataset on disk is not the dataset the question describes, so nothing should be published from it yet.
+
+**Blocking**
+
+1. **posts.jsonl holds 10 channels, not 27.** The only handles present are the ten in collect.log (vvgladkov, kurskadm, avbogomaz, gusev_36, Yuri_Slusar, kondratyevvi, opershtab23, mos_sobyanin, vorobiev_live, drozdenko_au_lo). The other 17 verified handles, including both successors, return zero rows. report.py would silently run on these ten and print "channels 10". Add an assertion that every KEEP handle is present, and a per-handle row count check (the log sums to 6578 rows, the file has 6172).
+
+2. **The 80-page cap is far tighter than it looks.** A preview page holds about 20 message ids, not 20 posts, and albums burn up to 10 ids each. vorobiev_live got 290 posts from 80 pages. Of the ten collected channels only three reach April. Sobyanin starts 30 June, Drozdenko 8 July, Slyusar 28 May, kurskadm 9 September (so it is skipped). Walk to the date, not to a page count, with a large hard cap, and run that for every channel before computing anything.
+
+3. **Three channels are not governor channels.** kurskadm is the regional government feed, opershtab23 is the Krasnodar operational HQ (its volume is literally drone-strike load), pul69 is "Tver region, officially". Either restrict the published number to personal governor channels or label it as "regional official channels".
+
+4. **"Old channels went silent" is contradicted by the data.** avbogomaz posted on 25 October and vvgladkov on 24 October. Dropping them is still right if the unit is the office holder, but say that, not "silent". Also add a per-channel valid-from date: a successor who already had a channel before 13 May gets his pre-governor posting counted as baseline.
+
+5. **Oryol: the verified sheet shows the last post on 3 July.** Once collected it will appear as posts/week collapsing to zero in the last four weeks. That is either the strongest migration case in the set or a resignation; it must be classified by hand, not averaged in.
+
+6. **The boolean max_link throws away the thing you need for question 3.** vorobiev_live has the flag on nearly every post from April, which is a footer, and the share saturates at one, so it cannot move. Store the matched URLs per post, then classify: profile link (max.ru/name) repeated on most posts is a footer, a URL unique to the post is a cross-post, max.ru/join is an invite. The current substring also matches reply quotes, link-preview cards, forwarded text, and any host ending in max.ru such as remax.ru. Use a regex anchored on the scheme or a non-word boundary.
+
+**Improvements, in answer to the four questions**
+
+7. **Posts/week alone is not a migration measure.** It confounds with news load, the May holidays, summer, and above all the September 2026 election season: the last four weeks fall right after voting day, when governors' output normally dips. The cleanest control is the same governor on VK. VK walls are public via the API, and a within-governor difference between Telegram and VK weekly counts removes news load, travel, and replacement effects. A matched set of non-governmental regional channels is a weaker second control, because media were also pushed to MAX. The direct test is to count the MAX channels themselves and report MAX-only posts versus Telegram-only posts.
+
+8. **First-4 vs last-4 with per-channel starts is biased.** The channels that hit the cap are the busy, album-heavy ones, and they get baselines months later than the others. Use one common window for all channels after the deep walk, or a channel-by-week panel with channel fixed effects, and report the median per-channel log ratio with a paired sign or Wilcoxon test. With 24 or so channels, publish the per-channel table rather than a pooled mean.
+
+9. **First-MAX-link date is left-censored for everyone.** The walk stops at the first pre-April page, and the "<=" marker only fires when the first link is on the very oldest day. MAX channels were mandated in 2025, so the true first link is usually before the window. Report it only when at least some number of earlier link-free posts exist, otherwise print "before window".
+
+10. **Smaller correctness items.** Timestamps are UTC, so a Sunday-evening Moscow post lands in the previous ISO week; convert to Moscow time before bucketing. Set SINCE to the Monday 30 March so week 14 is not nearly always dropped. The running-week drop is global; it only works because all ten channels were collected on the same day, so write the collection date per handle and drop that week per channel. Log channels that end by error or an empty page separately from channels that reached the date, since both are treated as a clean end now.
+
+11. **What would make a published number wrong today.** Items 1 to 3 above, the mixed baselines in 8, a footer-saturated link share read as "no change", a dead channel read as a volume drop, and the election-cycle dip in the final window read as migration.

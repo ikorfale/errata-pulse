@@ -1,0 +1,38 @@
+Baseline weeks 14-17 (30 Mar-26 Apr), end weeks 39-42 of 2026, Moscow time.
+posts/week base -> end, log ratio; link shares base -> end: own MAX channel (footer), post links (cross-post or repost)
+Note: the end window follows the September 2026 election season, when governors' output normally dips; no VK control yet.
+
+radiyhabirov           Bashkortostan    10.8 ->   9.5  -0.12   own 0.00->0.00  post 0.05->0.00  other 0.00->0.00  first link before window
+aleksandr_shuvaev      Belgorod        channel starts 2026-05-13 (successor): no baseline, not pooled
+E_V_Kovalchuk          Bryansk         channel starts 2026-05-14 (successor): no baseline, not pooled
+alexeytexlerofficial   Chelyabinsk      12.5 ->   6.5  -0.62   own 0.86->1.00  post 0.10->0.00  other 0.02->0.00  first link before window
+Aksenov82              Crimea           15.8 ->   9.8  -0.46   own 0.00->0.00  post 0.00->0.00  other 0.00->0.00  first link -
+kobzevii               Irkutsk          30.0 ->  33.2  +0.10   own 0.06->1.00  post 0.97->0.01  other 0.00->0.01  first link before window
+Shapsha_VV             Kaluga           22.2 ->  24.5  +0.09   own 0.84->0.40  post 0.00->0.01  other 0.00->0.22  first link before window
+kondratyevvi           Krasnodar        12.8 ->  12.5  -0.02   own 0.88->0.98  post 0.00->0.00  other 0.00->0.00  first link before window
+drozdenko_au_lo        Leningrad        36.5 ->  23.0  -0.45   own 0.63->0.75  post 0.01->0.00  other 0.01->0.00  first link before window
+igor_artamonov48       Lipetsk          26.2 ->   8.8  -1.06   own 0.18->0.00  post 0.01->0.03  other 0.03->0.00  first link before window
+mos_sobyanin           Moscow           24.2 ->  38.2  +0.45   own 1.00->1.00  post 0.01->0.00  other 0.00->0.00  first link before window
+vorobiev_live          Moscow-obl        6.5 ->   5.8  -0.11   own 0.85->0.74  post 0.00->0.00  other 0.00->0.00  first link before window
+glebnikitin_nn         NizhnyNovgorod   13.2 ->  14.8  +0.10   own 1.00->0.93  post 0.02->0.05  other 0.00->0.08  first link before window
+TravnikovAndrey        Novosibirsk       8.8 ->   7.0  -0.21   own 0.00->0.00  post 0.00->0.00  other 0.00->0.00  first link 2026-06-15
+HocenkoVP              Omsk             26.8 ->  27.0  +0.01   own 0.95->0.99  post 0.00->0.00  other 0.03->0.01  first link before window
+Klychkov_Andrey        Oryol           MOVED TO MAX on 1 Apr 2026 (Kommersant 9 Apr, doc/8572550: "all tasks are done by the MAX channel"); Telegram since: 6 posts Apr-Jul, last 3 Jul, none in the end window. By hand, not pooled
+omelnichenko           Penza            35.8 ->  33.0  -0.08   own 1.00->1.00  post 0.00->0.00  other 0.00->0.00  first link before window
+Yuri_Slusar            Rostov           20.0 ->  23.0  +0.14   own 0.60->0.68  post 0.00->0.00  other 0.00->0.01  first link before window
+pavelmalkov_official   Ryazan           13.5 ->  16.8  +0.21   own 0.67->1.00  post 0.07->0.22  other 0.06->0.03  first link before window
+busargin_r             Saratov          21.8 ->  19.5  -0.11   own 0.91->0.71  post 0.01->0.03  other 0.05->0.05  first link before window
+anohin67               Smolensk         28.0 ->  35.5  +0.23   own 0.88->0.82  post 0.00->0.00  other 0.00->0.00  first link before window
+a_beglov               StPetersburg     19.0 ->  19.2  +0.01   own 0.97->0.96  post 0.00->0.00  other 0.00->0.01  first link before window
+dmilyaev               Tula             79.2 -> 108.8  +0.31   own 0.78->0.60  post 0.00->0.09  other 0.01->0.01  first link before window
+av_moor                Tyumen           14.5 ->  13.0  -0.11   own 1.00->0.94  post 0.00->0.00  other 0.02->0.00  first link before window
+gusev_36               Voronezh         43.8 ->  55.5  +0.24   own 0.01->0.00  post 0.01->0.00  other 0.01->0.00  first link 2026-04-02
+opershtab23            Krasnodar        57.2 ->  11.5  -1.57   own 0.00->0.39  post 0.05->0.02  other 0.03->0.04  first link before window [Krasnodar operational HQ]
+kurskadm               Kursk            79.5 ->  72.0  -0.10   own 0.75->0.69  post 0.01->0.01  other 0.12->0.11  first link before window [regional government feed]
+pul69                  Tver             38.2 ->  41.0  +0.07   own 0.99->0.63  post 0.01->0.37  other 0.03->0.36  first link before window [Tver region official feed]
+
+personal: 22 channels, median log ratio -0.00 (x1.00, sign-based 95% CI x0.89..x1.15), 11 of 22 down, two-sided sign test p = 1.000
+
+official: 3 channels, median log ratio -0.10 (x0.91, sign-based 95% CI x0.21..x1.07), 2 of 3 down, two-sided sign test p = 1.000
+
+posts 24821; verified handles 28; walks ended by error: none

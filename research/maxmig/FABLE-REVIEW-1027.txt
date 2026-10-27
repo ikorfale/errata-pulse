@@ -1,0 +1,44 @@
+Review complete. Short version: v3 fixes five of the six blocking items cleanly, one (links) only in form. The volume number is sound for what it is. The headline is overstated in three places, two of which I would block.
+
+## 1. The 25 Oct blocking items in v3
+
+1. **Missing handles.** Fixed. The assertion is there, all 28 verified handles have rows, and walks.jsonl has one line per handle. The two error-ended walks pass the assertion only because partial rows exist, and the walk-end check correctly removes them.
+2. **Page cap.** Fixed. Hard cap 1200, and every one of the 26 usable walks ended by "reached date" or "channel start" (largest walk 387 pages). The deep-walk override in report.py is live but posts_deep.jsonl is empty, so it currently does nothing.
+3. **Non-governor channels.** Fixed. The three feeds are pooled separately. Note that Tver has no personal channel in the set at all, which matters below.
+4. **Dead channels and successor baselines.** Fixed. Gladkov and Bogomaz are gone from the sheet, the successors are excluded by channel start date, and their pre-window posting cannot leak in.
+5. **Oryol.** Half fixed. It is excluded and printed as "classify by hand", but nobody classified it. The data say something specific: the channel has only 13 posts from 24 Mar to 3 Jul and just 2 in the baseline, so it was dormant before the window opened. This is not a within-window migration case. Whether Klychkov still holds office I could not check, as web search was denied this session. One sentence of hand classification is still owed.
+6. **Links.** Fixed in form, not in substance. URLs are stored, the regex is anchored, classification exists. But "own" is one profile per channel chosen over the whole window, and the "other" share is never printed. Tver's feed carried max.ru/pul69 in April and max.ru/korolev plus Korolev post links in October, so part of its "footer dropped" reading is a profile switch. Saratov shows the same pattern with max.ru/pool_64. BLOCKING for the link half of the headline, not for the volume half.
+
+Non-blocking items 8, 9, 10 are done (common window, Moscow time, per-channel collection week, first-link censoring). Item 7, the VK control, is acknowledged in a note and not done.
+
+## 2. Attacking the headline
+
+**The push predates the window. BLOCKING.** 18 of 20 channels show a MAX link "before window". The design observes April to October 2026 only. If the directive you mean was issued before 30 March, the headline tests the wrong period and should say "a year after". If there is a specific 2026 directive, name it and its date, and show it falls inside the window.
+
+**Power.** The sign test is fine against a broad drop and weak against a partial one. Using the observed spread of log ratios (SD about 0.35):
+
+| Alternative | Approx. power, n=20, two-sided 0.05 |
+|---|---|
+| All channels down 30% | 0.9 |
+| Half the channels down 30%, rest flat | 0.3 |
+| All channels down 15% | 0.3 |
+
+The sign-based 95% CI for the median ratio runs from x0.90 to x1.15 (6th and 15th order statistics). So the data exclude a broad median drop of 30%, and nothing more. Three channels are down by 36% or more: Lipetsk (26.2 to 8.8, and it dropped its MAX link entirely), Chelyabinsk, Leningrad. Lipetsk's monthly counts step down in July and August rather than drifting, which is what a deliberate change looks like. "No exodus" must not be read as "nobody moved". Not blocking if the CI and the three names are in the text.
+
+**Election confound.** Weeks 39 to 42 open the day after the Duma vote. A post-vote lull deflates the end window, which biases toward finding a drop. For a null headline that is the conservative direction. The risk runs the other way only if autumn news load or Telegram throttling in Russia changed posting; I could not verify the throttling timeline. Not blocking, state it in one line.
+
+**Own-profile heuristic.** It worked where I checked a known handle (Omsk, max.ru/VPKhotcenko matches the channel description). It fails when a channel switches profile, as Tver and partly Saratov did. The fix is to print the "other" share and pick "own" per window, or set it by hand from the channel descriptions. BLOCKING for the link sentence only.
+
+**"Several channels moved from per-post links to a footer" is one channel.** Only Irkutsk made that move. The footer share rose in three channels and fell in five. Ryazan's and Tula's per-post links went up. The honest link story is mixed. BLOCKING as worded.
+
+**Exclusions and sample.** The successors are not just excluded, they are evidence: two governors appointed in May 2026 opened Telegram channels and posted 755 and 1061 times. Say so. The bigger hole is selection. Three regions on the sheet are marked "no" (Sverdlovsk, Altai, Kemerovo), and Tver's sitting governor has no personal Telegram in the set while the official feed now relays his MAX posts. If any of those four heads are MAX-only, the sample excludes exactly the exodus. BLOCKING for any generalization beyond "these 20".
+
+**Code.** Nothing silently mis-buckets the volume number. Week edges, Moscow time, the sign test and the window arithmetic are right. Small items: the "(successor)" label is applied to any channel starting after 30 March, so a re-walked Aksenov82 that still only reaches May would be labelled a successor. A plain re-run of collect.py will skip a_beglov and Aksenov82 because their partial rows mark them done, so the re-walk must use --deep. Service messages in the preview may be counted as posts.
+
+## 3. Wording I would allow, and the one check
+
+Allowed: "Among 20 heads of Russian regions who ran a personal Telegram channel through all of 2026, posts per week in 21 Sep to 18 Oct versus 30 Mar to 26 Apr have a median ratio of 1.00 (95% CI 0.90 to 1.15), 10 of 20 down. Three channels fell by a third or more (Lipetsk, Chelyabinsk, Leningrad). Two governors appointed in May opened new Telegram channels. Most channels already linked MAX before April; one (Irkutsk) switched from per-post MAX links to a standing profile link, and Tver's official feed began relaying the governor's MAX posts. The end window follows the September election and no cross-platform control exists, so this is descriptive."
+
+Not allowed: "no exodus among governors" without the sample caveat, "several channels moved to a footer", and any wording implying the window brackets the push.
+
+The single most valuable check is the direct one: count posts in the public MAX channels of the same governors for weeks 39 to 42 and compare them with Telegram, starting with Lipetsk, Chelyabinsk, Leningrad and Oryol. If MAX carries posts that Telegram does not, that is migration regardless of the Telegram ratio. If the two feeds mirror, the null headline becomes a finding rather than an absence.
