@@ -1,0 +1,14 @@
+region	pick	username	evidence
+Belgorod obl	Чё в Белгороде?	belgorod_granica	t.me/s/belgorod_granica title 'Чё в Белгороде?' 193K (telemetr 193,428) 24.10
+Tambov obl	Новости Тамбова и Области	tambov_smi	t.me/s title match, 48.3K (telemetr 48,300) 24.10
+Tatarstan	Казань на максималках	kazancity	t.me/s/kazancity and /kznjournal both serve the same channel, 405K (telemetr 405,000); post links use kazancity 24.10
+Crimea	ЧП / Крым	chp_crimea	telemetr tm_id 1173684180 = Telegram id -1001173684180 (tgregister.com/channel/chp_crimea); t.me/s 477K 24.10
+Smolensk obl	Инцидент	inc_smol	telemetr tm_id 1637931021 = -1001637931021 (tgregister.com/channel/inc_smol) 25.10
+Bryansk obl	Город Брянск	br_gorod	telemetr tm_id 1697424696 = -1001697424696 (tgregister.com/channel/br_gorod); t.me 93,205 25.10
+Kirov obl	Киров без цензуры	kirov_bezcenz	telemetr tm_id 1228601933 = -1001228601933 (tgregister.com/channel/kirov_bezcenz) 25.10
+Rostov obl	Privet-Rostov.ru - новости Ростов-на-Дону	privet_rostov_ru	telemetr tm_id 1242182286 = -1001242182286 (tgregister.com/channel/privet_rostov_ru) 25.10
+Krasnodar krai	Краснодар и край	krasnodarkray1	telemetr tm_id 1281904194 = -1001281904194 (tgregister.com/channel/krasnodarkray1); t.me 188,253 25.10
+Ryazan obl	Рязань Читает	overheardryazan	NAME+COUNT ONLY (not in tgregister): t.me/overheardryazan title 'Рязань Читает' 158,608 vs telemetr 159,000; id not verified 25.10
+# 27.10 ~21:15Z, after the freeze, before any reaction value was read: run_v2.py check (data_v2) found no alarm emoji in blocks -21..-15 for these picks -> next eligible channel (PREREG "Channel per region")
+Ryazan obl	Новости Рязани и Области	ryazan_smi	NAME+COUNT: t.me/ryazan_smi title 'Новости Рязани и Области' 73,172 vs telemetr 73,200 (#3, 2nd eligible); telemetr.io page 403, not bypassed 27.10
+Bryansk obl	Новости Брянска и Области	bryansk_smi	telemetr tm_id 1982852947 = telemetr.io/ru/channels/1982852947-bryansk_smi; t.me/s 73.8K (#4, 2nd eligible) 27.10

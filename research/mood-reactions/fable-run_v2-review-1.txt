@@ -1,0 +1,28 @@
+**Blocking**
+
+1. **(C) Do not make reading (1) primary. The frozen text already decides Bryansk, and it decides it as a drop.** PREREG-v2.md:109-110 ("By the coverage rule (block 0 without a strike post = not covered) the Bryansk event drops before any reaction is read") and PREREG-v2.md:90 ("K = 10 events, the most that can enter after #514 (Bryansk dropped)") were written with full knowledge of the zero-post window and signed off in four rounds. A specific pre-freeze ruling on a known case overrides the general rule's literal application to that case. The rules alone also favour (2): the alarm-set rule (PREREG-v2.md:36-37) exists to confirm the channel offers 😱/😨, and an empty window says nothing about that; the rule written for "no strike posts on the pick" is the coverage rule, and it says "dropped", not "next eligible channel". Your own D8 (`run_v2.py:28`) implements (2). Promoting (1) is a post-freeze change of the analysis set that adds an event, triggered by a check output. It is blind to outcomes, so it is not p-hacking, but it is a fork and cannot carry the claim.
+   Minimal fix: keep the code as is (Bryansk drops). Before `run`, record in a dated file that the bryansk_smi variant is a post-freeze sensitivity analysis decided before any reaction read, report it beside the primary whatever it shows, and let the claim rest on the frozen primary only. Note that bryansk_smi already enters the pre-registered second-channel robustness run (PREREG-v2.md:45-46, pick #4), so that line largely exists already.
+
+**(A) Deviations: none found.** Checked against the frozen text:
+- Block edges: `run_v2.py:84` half-open [h0+24k, h0+24(k+1)); "Event block = hours 0..24; baseline = the 14 preceding 24-hour blocks".
+- Floor before block 0: `run_v2.py:158-161` drops on the baseline count before `value(b[0])` at line 162; "floor (computed before the event block is extracted)".
+- Missing block: `run_v2.py:97`, `166-167`, n = present blocks + 1; "an event's list is whatever blocks remain, with no minimum".
+- Mid-rank direction and null: `run_v2.py:103-118`, rank 1 = highest share, p = P(S ≤ S_obs), uniform on 1..n, doubled ranks; "Mid-rank (from top)", one-sided.
+- Placebo: `run_v2.py:197`, baseline -29..-16, pseudo-event -15, own floor, missing -15 drops; PREREG-v2.md:57-58, 89.
+- Minimum ≥ 2 for test and placebo: `run_v2.py:173`. Drop order: fetch coverage (182), block-0 coverage (185-191), floor (159), block 0 missing (163); PREREG-v2.md:56.
+- Classification: `run_v2.py:68-72` is `regex_v2_check.py:15-16` verbatim, coverage uses the same class (139, 187); 30-letter rule via the frozen `letters()`.
+- Fetch reach: `run_v2.py:134-135`, post older than h0 − 29 d. Alarm set: lines 144-148, all posts, set only, first event per region.
+- Register: EVENTS matches civ_verify_b.tsv tolls and timestamps; 14-day exclusion asserted (Rostov 20 d, Krasnodar 37 d apart).
+- Parser: `parse_v2r.py:28` flattens tags to spaces exactly as `fetch.py:24`, so the frozen `[^\n]*` behaves identically (to end of text) on both data sets. I checked text only: everything after the Krasnodar and Rostov footer is boilerplate (links, "Уже подписано N человек"), so eating to the end is correct.
+
+**(B) D1-D8 are defensible; none picks the favourable reading.** D1 follows the tsv timestamps literally; for events 5 and 10 the later hour 0 puts the strike's first hours into block −1, which works against the hypothesis. D4 is the reading the text supports: a placebo with its own floor and its own missing rule is not "the test's entering set". It is direction-neutral, since the placebo must be non-significant and its p is uniform under the null for any K. D6 is the literal reading; the PREREG never mentions 600 characters. More text moves posts out of the primary cell, which is direction-neutral. D5 and D7 are standard. D8 checks out against the tsv.
+
+**(D) Nothing beyond reporting.** The register section defines the set; the power sentence miscounted windows as events. Report 11 events on 10 windows. Power recomputed with the same approximation:
+K = 11 needs mean event rank ≈ 4.8 of 15 (4.6 at K = 10, 4.9 at K = 12).
+
+**Non-blocking notes**
+- D6: re-run the frozen 50-post check on data_v2r text (same ids, frozen labels, only the glob changed) before `run`; report any change, do not touch the regex.
+- D4: also print the placebo restricted to the events that enter the test; declare it in the docstring now.
+- Rostov event 17's placebo baseline (−29..−16) contains 27 July, event 11's block 0; report it, no rule exists to change it.
+- Hash run_v2.py, parse_v2r.py, usernames-v2.tsv and civ_verify_b.tsv into a post-freeze record before `run`; FROZEN-v2.sha256 covers none of them.
+- Both parsers take the first `tgme_widget_message_text` div, which on reply posts is the quoted text; verify on one fetched page, news channels rarely reply.
