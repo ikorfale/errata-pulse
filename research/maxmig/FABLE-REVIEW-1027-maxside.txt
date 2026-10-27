@@ -1,0 +1,19 @@
+Search was declined, so this is based on your data alone.
+
+Blocking issues:
+
+1. **Oryol is counted out of the denominator but used as a finding.** You checked 18 governors, not 17. Three diverge (Lipetsk, Kaluga, Oryol), not two, and Oryol is the largest divergence. "15 of 17... Two diverge... Oryol posts only on MAX" is internally inconsistent. Say 15 of 18, three diverge.
+
+2. **"Oryol posts only on MAX" is overstated twice.** It ignores VK, which Polilog says nearly all governors mirror. And 0 Telegram posts in the window is only a "move" if Oryol's Telegram had posts in the spring window. State the spring count. If it was already near zero, Oryol is a dead channel, not a move, and drops from the "moved" group.
+
+3. **"Real partial move" for Lipetsk is a causal claim the counts don't support.** The data show the linked MAX profile carries 3.3 times as many posts. You have not checked that the extra 93 posts are personal content that used to go to Telegram rather than a regional feed, forwarded ministry posts, or split albums. You excluded Voronezh for exactly this reason, so Lipetsk needs the same check. Until then say "consistent with a partial move".
+
+4. **Samara is not evidence that your sample "missed" anything.** Samara is outside the sample and you made no counts there. A renamed channel that keeps posting operational items could show no drop at all in a post count, which is the real limitation, but you have not measured it. Either count Samara's Telegram and MAX posts, or say it as a method caveat, not as a found case.
+
+5. **Counting methods differ between the two sides.** Telegram is your own walk, MAX is LiveDune's count, and all 15 "matched" ratios sit at or above 1.00. That uniform offset is a counting artefact signature (window length, albums, deleted posts, or reposts). It does not threaten "within 10%", but "the same feed, posted twice" should be stated as a count equivalence, not verified content identity. Also note that the Rostov window ends 23 Oct while your Telegram count ends 21 Oct, as you did for Kaluga.
+
+Corrected sentence:
+
+"The MAX side: for 15 of the 18 governors whose linked MAX profile LiveDune covers, the MAX post count for roughly 22 Sep-21 Oct is within 10% of my Telegram count for the same window, so the two channels carry the same volume. Three differ: Lipetsk's MAX profile has 3.3 times as many posts as his Telegram (133 vs 40), Kaluga's 1.4 times (same-window check 1.39), and Oryol's Telegram had no posts at all against 61 on MAX (spring Telegram count: N). These are consistent with a partial move to MAX, though I have not checked that the extra MAX posts are the personal content that used to go to Telegram. Outside my sample, Samara's governor renamed his Telegram channel after the election and said personal content now goes only to MAX and VK; a post count on that channel would not detect this, which is a limit of my method, not a measured case."
+
+Fill in N from your spring data, and drop Oryol from "differ" if N is near zero.

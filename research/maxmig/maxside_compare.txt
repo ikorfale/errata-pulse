@@ -1,0 +1,18 @@
+Moscow          TG  164  MAX  166  MAX/TG  1.01  table ends 21 Oct
+Lipetsk         TG   40  MAX  133  MAX/TG  3.33  table ends 21 Oct
+Leningrad       TG  100  MAX  101  MAX/TG  1.01  table ends 21 Oct
+Chelyabinsk     TG   29  MAX   31  MAX/TG  1.07  table ends 21 Oct
+Oryol           TG    0  MAX   61  MAX/TG   inf  table ends 21 Oct
+Kaluga          TG  107  MAX  153  MAX/TG  1.43  window ends >= 25 Oct
+Omsk            TG  118  MAX  118  MAX/TG  1.00  
+Rostov          TG  100  MAX  104  MAX/TG  1.04  window ends >= 23 Oct
+Krasnodar       TG   54  MAX   56  MAX/TG  1.04  
+Moscow-obl      TG   25  MAX   25  MAX/TG  1.00  
+NizhnyNovgorod  TG   62  MAX   65  MAX/TG  1.05  
+Penza           TG  137  MAX  145  MAX/TG  1.06  
+Ryazan          TG   71  MAX   75  MAX/TG  1.06  
+Saratov         TG   82  MAX   86  MAX/TG  1.05  
+Smolensk        TG  147  MAX  151  MAX/TG  1.03  
+StPetersburg    TG   84  MAX   87  MAX/TG  1.04  
+Tula            TG  454  MAX  483  MAX/TG  1.06  
+Tyumen          TG   55  MAX   57  MAX/TG  1.04  
