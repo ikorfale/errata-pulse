@@ -1,0 +1,3 @@
+NONE
+
+Non-blocking, for the record only: line 100 says "largest 2 on 07-06" while the attached scan prints `sum=3` for that day. The scanner's over-count explanation is in your message but not in the draft. One clause at line 100 ("scanner shows 3, counting 'двое получили ранения'; deaths 2") would make the frozen file match its evidence. The decision is unchanged either way.

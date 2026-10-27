@@ -1,0 +1,51 @@
+# hand labels 27.10 ~20:55Z, read from regex_v2_sample.tsv text only (no reactions): S = about a strike/attack/air alert/its aftermath, O = other
+1	O	sea transport stopped, raid closed; cause not stated in text
+2	S
+3	S
+4	O
+5	O	criminal "смертельный удар"
+6	O
+7	S
+8	O
+9	O
+10	O
+11	O
+12	O	discrediting the army, court case
+13	O	power outage, technical fault
+14	S	promo for attack-news channel
+15	O
+16	O
+17	O
+18	O
+19	O
+20	S
+21	O
+22	O
+23	O
+24	O	flood
+25	S
+26	O
+27	O	mobilisation statement, no strike
+28	O
+29	O	wildfire
+30	O
+31	S
+32	O
+33	S
+34	O
+35	O
+36	O
+37	S
+38	O
+39	O	WWII hero mural
+40	O
+41	O
+42	S
+43	O	Iran threats, not a strike on Russia
+44	S
+45	O
+46	O
+47	S
+48	S
+49	S
+50	O

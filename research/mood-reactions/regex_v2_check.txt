@@ -1,0 +1,7 @@
+FP #5 tambov_smi 29403: 'т под суд за смертельный удар из-за помятого капота   '
+EMPTY #14 krasnodarkray1 84155 (label S): no strike word, under 30 letters: excluded from both cells
+FP #39 privet_rostov_ru 89952: 'ком-разведчиком, а после ранения продолжил службу в кон'
+FP #43 privet_rostov_ru 88414: 'стоке законной целью для ударов , — пресс-служба КСИР '
+EMPTY #49 privet_rostov_ru 89187 (label S): no strike word, under 30 letters: excluded from both cells
+classified on text with the promo footer removed (PREREG-v2 amendment 27.10)
+n=50 TP 12 FP 3 FN 0 TN 33

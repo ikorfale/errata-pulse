@@ -1,0 +1,7 @@
+Three remaining blocking issues. Everything else, including the regex evidence, matches the file.
+
+- **Line 97 contradicts the rule on line 18.** The rule requires walking the governor's channel plus the regional HQ for every baseline day of a kept Belgorod event. The evidence says event 9's baseline (07-06..07-19) rests on the governor channel only and the opershtab was not walked before 07-23. As written, the rule was not applied to the one Belgorod event that survives. Minimal fix: either walk the opershtab for 07-06..07-19 before the freeze and record the result, or state on line 97 that the opershtab channel has no posts before 07-23 (with the oldest post id as evidence), which satisfies "where it posted that day".
+
+- **Line 34 is ambiguous where it matters.** "Must include a fear emoji" can mean any of the four fear codepoints or only an alarm one. A channel offering 😢 but not 😱/😨 passes under the first reading and then fails the alarm floor, so the event drops. Under the second reading the next eligible channel is picked instead. Minimal fix: replace "a fear emoji" with "an alarm emoji (U+1F631 or U+1F628)".
+
+- **Lines 72–73 leave the secondary grief analysis steerable.** "Grief (secondary)" does not say whether the secondary block value is grief over all reactions or alarm plus grief over all, and whether it has its own floor. Minimal fix: add one sentence, for example "Secondary: block value = grief / all reactions, same posts, same test, floor >= 50 grief reactions over the 14 baseline blocks."
