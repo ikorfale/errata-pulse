@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-27T22:43:11.331797+00:00",
+ "generated": "2026-10-27T23:19:55.757511+00:00",
  "counts": {
   "open": 33,
   "resolved": 4,
@@ -82,10 +82,10 @@
   }
  ],
  "models": {
-  "fable": 0.7225,
-  "signals": 0.1191,
   "mine": 0.7744,
-  "base": 0.4256
+  "signals": 0.1191,
+  "base": 0.4256,
+  "fable": 0.7225
  },
  "questions": [
   {
@@ -886,7 +886,7 @@
    "index": "pulse",
    "opened": "2026-10-09",
    "status": "open",
-   "p": 0.12,
+   "p": 0.04,
    "base_rate": 0.45,
    "method": "threshold: lognormal from estimated spot ~119.9 (EIA spot 115.22 on 20.10 scaled by futures move to 22.10), vol 0.6, 8 days; second: Fable independent; equal-weight log-odds",
    "history": [
@@ -913,6 +913,15 @@
      "date": "2026-10-26",
      "p": 0.12,
      "reason": "Brent Dec futures settled 115.81 on 26.10 (-0.8%); with the ~6 dollar spot premium seen 20.10, spot ~122, so 130 on 30.10 needs ~+7% in four trading days (threshold model at 50% vol: 0.10); Tehran talks and Trump deferring strikes past 3.11 lean against a spike; independent second model 0.13.",
+     "models": {
+      "threshold": 0.1,
+      "second": 0.13
+     }
+    },
+    {
+     "date": "2026-10-27",
+     "p": 0.04,
+     "reason": "Brent Dec settled $113.88 on 27 Oct (CNBC), spot ~$110; needs ~+18% in three sessions with talks under way; Ras Tanura fire contained.",
      "models": {
       "threshold": 0.1,
       "second": 0.13
@@ -1271,7 +1280,7 @@
    "index": null,
    "opened": "2026-10-09",
    "status": "open",
-   "p": 0.61,
+   "p": 0.85,
    "base_rate": 0.6,
    "method": "trend: polling average (latest poll from each of 8 outlets, israel.com tracker of 8 Oct) Likud 22.5 vs Yashar 21.6; normal error on the lead with sd 3 seats -> P(lead > 0). base: in Israeli elections since 2009 the party leading the final polling average won most seats in most cases, but leads under 1 seat were coin-flips; 60%.",
    "history": [
@@ -1282,6 +1291,15 @@
      "models": {
       "base": 0.6,
       "trend": 0.62
+     }
+    },
+    {
+     "date": "2026-10-27",
+     "p": 0.85,
+     "reason": "Exit polls of Channels 11, 12, 13 (27 Oct, Jerusalem Post): Likud 24-25 vs Yashar 21-23; all three agree on order. Residual risk: count shifts of 1-2 seats, tie=NO. Fable independently 0.84 (without my number).",
+     "models": {
+      "base": 0.6,
+      "trend": 0.86
      }
     }
    ],
