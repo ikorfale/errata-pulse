@@ -94,6 +94,31 @@ def main():
     try: _build()
     finally: B.LEVELS, B.COMP = saved
 
+def mood_html():
+    """#341: Levada's monthly 'right direction / wrong path' (face-to-face, n about 1600), from 2021, with the
+    September 2022 mobilisation marked. Context for the 'society' component, not an input to the index."""
+    f = os.path.join(B.D, 'mood', 'levada_direction.jsonl')
+    if not os.path.exists(f): return ''
+    rows = [json.loads(l) for l in open(f) if l.strip()]
+    ser = {k: sorted((r['month'], r['value']) for r in rows if r['series'] == k and r['month'] >= '2021-01')
+           for k in ('В правильном направлении', 'По неверному пути')}
+    if not all(ser.values()): return ''
+    W, H, L, R, T, Bm = 880, 260, 44, 20, 16, 34
+    m0 = ser['По неверному пути'][0][0]; mi = lambda m: (int(m[:4]) - int(m0[:4])) * 12 + int(m[5:7]) - int(m0[5:7])
+    n = max(mi(m) for v in ser.values() for m, _ in v)
+    X = lambda m: L + mi(m) / max(n, 1) * (W - L - R); Y = lambda v: T + (100 - v) / 100 * (H - T - Bm)
+    s = ''.join(f'<line x1="{L}" x2="{W - R}" y1="{Y(v):.1f}" y2="{Y(v):.1f}" class="grid"/><text x="{L - 8}" y="{Y(v) + 4:.1f}" class="ax" text-anchor="end">{v}%</text>' for v in range(0, 101, 20))
+    s += ''.join(f'<text x="{X(f"{y}-01"):.1f}" y="{H - 10}" class="ax" text-anchor="middle">{y}</text>' for y in range(int(m0[:4]), int(max(m for m, _ in ser["По неверному пути"])[:4]) + 1))
+    s += f'<line x1="{X("2022-09"):.1f}" x2="{X("2022-09"):.1f}" y1="{T}" y2="{H - Bm}" class="ev"/><text x="{X("2022-09") + 4:.1f}" y="{T + 12}" class="evlab">{t("mobilisation, Sep 2022")}</text>'
+    for (k, lab), col in zip([('В правильном направлении', t('right direction')), ('По неверному пути', t('wrong path'))], ('#4a7c59', '#b8452f')):
+        v = ser[k]; s += '<path d="M' + ' L'.join(f'{X(m):.1f},{Y(x):.1f}' for m, x in v) + f'" fill="none" stroke="{col}" stroke-width="2.2"/>'
+        ly = T + 14 + 18 * (col == '#b8452f')   # legend top left, in the 85-100% band no line reaches
+        s += f'<line x1="{L + 10}" x2="{L + 30}" y1="{ly - 4}" y2="{ly - 4}" stroke="{col}" stroke-width="2.2"/><text x="{L + 36}" y="{ly}" class="ptlab" fill="{col}">{lab}: {v[-1][1]:.0f}% ({v[-1][0]})</text>'
+    last = ser['По неверному пути'][-1][0]
+    return (f'<h2 class="sec">{t("Public mood: surveys")}</h2><p class="meta">' + t('Levada Center, monthly face-to-face poll: “Are things in the country going in the right direction, or is the country on the wrong path?” Share of respondents, %, to {m}. Context for the “society” component, not an input to the index. Polls under wartime censorship measure what people are willing to say to an interviewer, not only what they think.', m=last) + '</p>'
+            + f'<div class="chart" tabindex="0" role="region" aria-label="{t("Levada right direction and wrong path chart")}"><svg class="hist" viewBox="0 0 {W} {H}" role="img" aria-label="{t("Levada right direction and wrong path chart")}">{s}</svg></div>'
+            + f'<p class="meta">{t("Source:")} <a href="https://www.levada.ru/indikatory/polozhenie-del-v-strane/">Levada Center</a>.</p>')
+
 def _build():
     hist = [json.loads(l) for l in open(os.path.join(MD, 'history.jsonl')) if l.strip()]
     cur = hist[-1]; prev = hist[-2] if len(hist) > 1 else None
@@ -126,7 +151,7 @@ def _build():
     def rep_v(r): return next((h['mri'] for h in hist if h['ts'][:10] == r['date'] and h['kind'] == r['kind']), '–')
     body = hero + f"""<h2 class="sec">{t('Five components')}</h2><p class="meta">{t('Score 0–100 against fixed anchors; reasons quoted from the latest report.')}</p>{B.comp_rows(cur_c, prev_c, reasons)}
 <h2 class="sec">{t('Signals')}</h2>{sig_intro}{grouped(msig['signals'], build_telegram.mobil_block()) if nsig else f'<p>{t("No signal data yet.")}</p>'}
-<h2 class="sec">{t('History')}</h2><div class="chart" tabindex="0" role="region" aria-label="{t('Mobilisation risk history chart')}">{series_svg(hpts, t('Mobilisation risk index values from {n} published report(s)', n=len(hist)))}</div><p class="meta">{t('Only values from reports that were actually written. Raw data:')} <a href="/mobilization/history.jsonl">history.jsonl</a>.</p>
+""" + mood_html() + f"""<h2 class="sec">{t('History')}</h2><div class="chart" tabindex="0" role="region" aria-label="{t('Mobilisation risk history chart')}">{series_svg(hpts, t('Mobilisation risk index values from {n} published report(s)', n=len(hist)))}</div><p class="meta">{t('Only values from reports that were actually written. Raw data:')} <a href="/mobilization/history.jsonl">history.jsonl</a>.</p>
 <h3 class="smh3">{t('The five components over time')}</h3><p class="meta">{t('One panel each, same 0–100 scale; only real reports are drawn.')}</p>{B.comp_multiples(hist, COMP)}
 <h2 class="sec">{t('Backtest: 2022')}</h2><p class="meta">{t('<strong>A check of the method, not index history.</strong> What the same method would have scored from signals visible in July–September 2022, before the partial mobilisation decree of 21 September 2022. It was late: “elevated” only about eight days before the decree.')}</p>
 <div class="chart" tabindex="0" role="region" aria-label="{t('2022 method backtest chart')}">{series_svg(bpts, t('Backtest of the method on 2022 signals, not index history'), dashed=True, mark=(bpts[-1][0], t('decree 21 Sep 2022')))}</div>
