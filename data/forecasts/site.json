@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-27T23:19:55.757511+00:00",
+ "generated": "2026-10-28T22:42:00.142132+00:00",
  "counts": {
   "open": 33,
   "resolved": 4,
@@ -83,9 +83,9 @@
  ],
  "models": {
   "mine": 0.7744,
+  "fable": 0.7225,
   "signals": 0.1191,
-  "base": 0.4256,
-  "fable": 0.7225
+  "base": 0.4256
  },
  "questions": [
   {
@@ -132,6 +132,15 @@
      "date": "2026-10-25",
      "p": 0.01,
      "reason": "6 days left, no threshold events, CIT 20 Oct: no signs of preparation",
+     "models": {
+      "base": 0.017,
+      "signals": 0.016
+     }
+    },
+    {
+     "date": "2026-10-28",
+     "p": 0.01,
+     "reason": "28.10: three days left, no decree, no mass summons, local ceasefire holding",
      "models": {
       "base": 0.017,
       "signals": 0.016
@@ -218,6 +227,10 @@
     {
      "date": "2026-10-27",
      "p": 0.038
+    },
+    {
+     "date": "2026-10-28",
+     "p": 0.039
     }
    ],
    "crowd_urls": {
@@ -260,7 +273,7 @@
    "index": "mri",
    "opened": "2026-10-09",
    "status": "open",
-   "p": 0.31,
+   "p": 0.29,
    "base_rate": 0.35,
    "method": "base: judgmental reference class = MoD-drafted presidential decrees put up for public discussion; most are signed, but a minority within ~7-8 weeks of publication; I put that share at 35% (no count yet: method gap to fill). signals: LR 1.2 rising desertion/unauthorised-absence caseload gives the MoD a reason to hurry; LR 1.0 no public statement of a timetable.",
    "history": [
@@ -286,6 +299,15 @@
      "date": "2026-10-25",
      "p": 0.31,
      "reason": "17 days after the 8 Oct draft without signing; komandiry.org 21 Oct finds no confirmation either way; MRI 56 (+1, manpower) does not bear on decree timing",
+     "models": {
+      "base": 0.35,
+      "signals": 0.39
+     }
+    },
+    {
+     "date": "2026-10-28",
+     "p": 0.29,
+     "reason": "20 days since publication without signing; no movement reported (mobil report 28.10)",
      "models": {
       "base": 0.35,
       "signals": 0.39
@@ -398,6 +420,10 @@
     {
      "date": "2026-10-27",
      "p": 0.102
+    },
+    {
+     "date": "2026-10-28",
+     "p": 0.097
     }
    ],
    "crowd_urls": {
@@ -542,6 +568,10 @@
     },
     {
      "date": "2026-10-27",
+     "p": 0.082
+    },
+    {
+     "date": "2026-10-28",
      "p": 0.082
     }
    ],
@@ -728,6 +758,10 @@
     {
      "date": "2026-10-27",
      "p": 0.26
+    },
+    {
+     "date": "2026-10-28",
+     "p": 0.195
     }
    ],
    "crowd_urls": {
@@ -870,6 +904,10 @@
     },
     {
      "date": "2026-10-27",
+     "p": 0.02
+    },
+    {
+     "date": "2026-10-28",
      "p": 0.02
     }
    ],
@@ -1078,6 +1116,10 @@
     {
      "date": "2026-10-27",
      "p": 0.245
+    },
+    {
+     "date": "2026-10-28",
+     "p": 0.225
     }
    ],
    "crowd_urls": {
@@ -1196,6 +1238,10 @@
     {
      "date": "2026-10-27",
      "p": 0.052
+    },
+    {
+     "date": "2026-10-28",
+     "p": 0.07
     }
    ],
    "crowd_urls": {
@@ -1382,6 +1428,10 @@
     {
      "date": "2026-10-27",
      "p": 0.915
+    },
+    {
+     "date": "2026-10-28",
+     "p": 0.995
     }
    ],
    "crowd_urls": {
@@ -1491,6 +1541,10 @@
     {
      "date": "2026-10-27",
      "p": 0.271
+    },
+    {
+     "date": "2026-10-28",
+     "p": 0.381
     }
    ],
    "crowd_urls": {
@@ -1544,6 +1598,15 @@
      "date": "2026-10-25",
      "p": 0.07,
      "reason": "Unchanged: MRI 56 (+1 manpower, budget strain on contract payouts) vs November trilateral talks in UAE confirmed by Kremlin; no threshold events",
+     "models": {
+      "base": 0.05,
+      "signals": 0.08
+     }
+    },
+    {
+     "date": "2026-10-28",
+     "p": 0.07,
+     "reason": "28.10: coercion confirmed in 33+ regions is an alternative to a declared wave, not a precursor; local ceasefire; no declared-wave signals",
      "models": {
       "base": 0.05,
       "signals": 0.08
@@ -1630,6 +1693,10 @@
     {
      "date": "2026-10-27",
      "p": 0.101
+    },
+    {
+     "date": "2026-10-28",
+     "p": 0.108
     }
    ],
    "crowd_urls": {
@@ -2226,6 +2293,10 @@
     },
     {
      "date": "2026-10-27",
+     "p": 0.24
+    },
+    {
+     "date": "2026-10-28",
      "p": 0.24
     }
    ],
