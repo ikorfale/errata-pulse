@@ -1,8 +1,8 @@
 {
- "generated": "2026-10-28T22:42:00.142132+00:00",
+ "generated": "2026-10-28T23:20:08.349967+00:00",
  "counts": {
-  "open": 33,
-  "resolved": 4,
+  "open": 32,
+  "resolved": 5,
   "annulled": 0
  },
  "selection": {
@@ -14,10 +14,10 @@
   "drafts_since": "2026-10-24"
  },
  "brier": {
-  "mine": 0.1311,
-  "final": 0.0493,
-  "base": 0.4256,
-  "crowd": null
+  "mine": 0.1414,
+  "final": 0.0799,
+  "base": 0.381,
+  "crowd": 0.0235
  },
  "calibration": [
   {
@@ -46,9 +46,9 @@
   },
   {
    "bin": "40-50%",
-   "n": 0,
-   "mean_p": null,
-   "freq_yes": null
+   "n": 1,
+   "mean_p": 0.45,
+   "freq_yes": 0.0
   },
   {
    "bin": "50-60%",
@@ -82,10 +82,10 @@
   }
  ],
  "models": {
-  "mine": 0.7744,
+  "base": 0.381,
   "fable": 0.7225,
-  "signals": 0.1191,
-  "base": 0.4256
+  "signals": 0.1063,
+  "mine": 0.7744
  },
  "questions": [
   {
@@ -777,7 +777,7 @@
    "index": "pulse",
    "opened": "2026-10-09",
    "status": "open",
-   "p": 0.05,
+   "p": 0.03,
    "base_rate": 0.06,
    "method": "base: reference class = the current Pakistan-brokered US-Iran ceasefire, ~180 days with no US strike on Iranian territory (strikes on tankers in Sep were at sea); 0 events in 0.5 years, +0.5 smoothing, 24 days. signals: LR 0.5 Trump publicly promised no strikes before the 3 Nov midterms (AP, Guardian, 8 Oct); LR 1.3 Pentagon reportedly told to prepare options; LR 1.3 near-nightly IRGC attacks on Hormuz shipping since 29 Sep.",
    "history": [
@@ -794,6 +794,15 @@
      "date": "2026-10-24",
      "p": 0.05,
      "reason": "Trump 23.10 rally repeated no attack before midterms while floating 'another little Epic Fury' after (France 24, eOption)",
+     "models": {
+      "base": 0.06,
+      "signals": 0.05
+     }
+    },
+    {
+     "date": "2026-10-28",
+     "p": 0.03,
+     "reason": "WSJ/AP 28.10: campaign framed for after 3 Nov; Trump says no attack before the midterms; 5 days left.",
      "models": {
       "base": 0.06,
       "signals": 0.05
@@ -924,7 +933,7 @@
    "index": "pulse",
    "opened": "2026-10-09",
    "status": "open",
-   "p": 0.04,
+   "p": 0.02,
    "base_rate": 0.45,
    "method": "threshold: lognormal from estimated spot ~119.9 (EIA spot 115.22 on 20.10 scaled by futures move to 22.10), vol 0.6, 8 days; second: Fable independent; equal-weight log-odds",
    "history": [
@@ -960,6 +969,15 @@
      "date": "2026-10-27",
      "p": 0.04,
      "reason": "Brent Dec settled $113.88 on 27 Oct (CNBC), spot ~$110; needs ~+18% in three sessions with talks under way; Ras Tanura fire contained.",
+     "models": {
+      "threshold": 0.1,
+      "second": 0.13
+     }
+    },
+    {
+     "date": "2026-10-28",
+     "p": 0.02,
+     "reason": "Brent Dec 16.24 on 28.10 (ICE); needs +12% in two sessions.",
      "models": {
       "threshold": 0.1,
       "second": 0.13
@@ -1134,7 +1152,7 @@
    "category": "economy",
    "index": null,
    "opened": "2026-10-09",
-   "status": "open",
+   "status": "no",
    "p": 0.45,
    "base_rate": 0.45,
    "method": "base: reference class = the meeting right after the first hike of a cycle (2004: hike, 2015: no, 2022: hike, 1999: no); about half; 45%. signals: LR 0.6 Governor Waller (8 Oct) left the door open to a pause; LR 0.6 weak September payrolls (+29k, unemployment 4.2%); LR 1.2 core PCE 3%, energy shock. Honesty note: a search snippet summarising market pricing was visible before I wrote this number, so this question's errata-vs-crowd comparison is contaminated.",
@@ -1247,6 +1265,21 @@
    "crowd_urls": {
     "polymarket:will-the-fed-increase-interest-rates-by-25-bps-after-the-october-2026-meeting-20260617190324032": "https://polymarket.com/event/will-the-fed-increase-interest-rates-by-25-bps-after-the-october-2026-meeting-20260617190324032",
     "manifold:-will-the-fed-raise-interest-rates-Z62t6ZhEy5": "https://manifold.markets/MAKER/-will-the-fed-raise-interest-rates-Z62t6ZhEy5"
+   },
+   "resolved_at": "2026-10-28",
+   "resolution_source": "https://www.federalreserve.gov/monetarypolicy/files/monetary20261028a1.pdf",
+   "resolution_note": "FOMC 28.10: range kept at 3.75-4%, vote 10-2 (Cook, Hammack for +25bp)",
+   "scores": {
+    "brier": 0.1825,
+    "brier_final": 0.2025,
+    "models": {
+     "signals": 0.06760000000000001,
+     "base": 0.20250000000000004
+    },
+    "brier_base": 0.2025,
+    "brier_crowd": 0.023453300000000003,
+    "days": 20,
+    "outcome": 0.0
    }
   },
   {
@@ -1326,7 +1359,7 @@
    "index": null,
    "opened": "2026-10-09",
    "status": "open",
-   "p": 0.85,
+   "p": 0.96,
    "base_rate": 0.6,
    "method": "trend: polling average (latest poll from each of 8 outlets, israel.com tracker of 8 Oct) Likud 22.5 vs Yashar 21.6; normal error on the lead with sd 3 seats -> P(lead > 0). base: in Israeli elections since 2009 the party leading the final polling average won most seats in most cases, but leads under 1 seat were coin-flips; 60%.",
    "history": [
@@ -1343,6 +1376,15 @@
      "date": "2026-10-27",
      "p": 0.85,
      "reason": "Exit polls of Channels 11, 12, 13 (27 Oct, Jerusalem Post): Likud 24-25 vs Yashar 21-23; all three agree on order. Residual risk: count shifts of 1-2 seats, tie=NO. Fable independently 0.84 (without my number).",
+     "models": {
+      "base": 0.6,
+      "trend": 0.86
+     }
+    },
+    {
+     "date": "2026-10-28",
+     "p": 0.96,
+     "reason": "CEC count ~85-88%: Likud ~27 seats vs Yashar ~21-22 (JPost, Times of Israel 28.10); only double envelopes left. Mine 97%, Fable independent 96%.",
      "models": {
       "base": 0.6,
       "trend": 0.86
@@ -1713,7 +1755,7 @@
    "index": "pulse",
    "opened": "2026-10-09",
    "status": "open",
-   "p": 0.42,
+   "p": 0.56,
    "base_rate": 0.15,
    "method": "signals: prior 0.32 x LR1.4 (State Dept ordered departure from Saudi Arabia 21.10, an action) x LR1.2 (NYT 21.10: detailed US-Israel plans for after 3 Nov; plans themselves known since 8.10, so small LR); second: Fable independent estimate from the evidence alone, without my number; ensemble log-odds weights 1,2,2",
    "history": [
@@ -1731,6 +1773,16 @@
      "date": "2026-10-23",
      "p": 0.42,
      "reason": "US ordered non-emergency staff out of Saudi Arabia (AP 21.10) and NYT reports detailed US-Israeli strike plans for after the midterms; Trump has not authorised, talks via Qatar/Pakistan continue.",
+     "models": {
+      "base": 0.15,
+      "signals": 0.44,
+      "second": 0.58
+     }
+    },
+    {
+     "date": "2026-10-28",
+     "p": 0.56,
+     "reason": "WSJ 27-28.10 and AP 28.10 (independent sources): US told Gulf states to prepare for a short intense campaign after 3 Nov; Patriot moved from Texas, munitions restocked; no decision yet. My number 55% written before Fable; Fable independent 57%; mean 56%.",
      "models": {
       "base": 0.15,
       "signals": 0.44,
