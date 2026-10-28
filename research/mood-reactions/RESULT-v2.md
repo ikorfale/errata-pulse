@@ -39,4 +39,26 @@ secondary outcome.
   with more alarm. It is not, at the size this design can detect.
 - v1 (24.10, Fontanka, one day, post-level bootstrap) reported fear up on unrelated posts; its correction (board
   101696) already said the day level does not support it. v2 does not support it either.
-- Not run yet: the pre-registered robustness run on each region's second eligible channel (#539).
+
+## Robustness: the second eligible channel per region (run 2026-10-28 ~15:55Z)
+Pre-registered ("robustness: the same test on the second eligible channel per region, reported beside the primary
+whatever it shows"). Channels resolved 27.10 ~21:35Z before any reaction value was read (channels-robust-v2.tsv).
+Belgorod has no second eligible channel and keeps the primary one; Tambov #2 could not be resolved (telemetr behind
+Cloudflare), so it keeps tambov_smi. Crimea's second channel (Crimeanwind) is Ukrainian-leaning: a different readership.
+Outputs: run_v2r_robust_check.txt (CHECK PASSED), run_v2r_robust_run.txt.
+
+Event set differs from the primary: Bryansk enters (bryansk_smi covers the strike, 35 strike posts in block 0), Ryazan
+drops by the sensitivity floor (ya62ru readers put 0 alarm reactions over blocks -14..-1). 11 events again.
+
+| test | events | mean rank | p (one-sided) | placebo (block -15) p |
+|---|---|---|---|---|
+| alarm (😱 😨) | 11 | 9.50 | 0.87 | 0.63 |
+| alarm without Belgorod | 10 | 9.05 | 0.78 | |
+| grief (😢 😭) | 11 | 6.05 | 0.067 | 0.15 |
+| grief without Belgorod | 10 | 6.25 | 0.10 | |
+
+Same verdict as the primary: bounded null for both. Alarm is again on the wrong side of 8 (event day below the window
+median in 7 of 11; rank 1 only Rostov 16.08). Grief leans the same way as in the primary on a different set of
+channels (rank 1 or 2 in 4 of 11: Smolensk, Kirov, Krasnodar 03.08 at 2, Rostov 16.08 at 1), but p = 0.067 does not pass
+the frozen 0.05, and its placebo (0.15) also leans low, so the lean is not cleanly tied to the strike day. Two runs
+leaning the same way are not two findings: they share 10 of 11 events (Belgorod and Tambov on the same channel) and the same outcome definition.

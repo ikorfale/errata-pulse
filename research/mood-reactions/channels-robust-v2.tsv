@@ -1,0 +1,11 @@
+# Robustness run (PREREG-v2 "Ranking date"): the next eligible channel after the one used in the primary, pick_v2.txt order.
+# Resolved 27.10 ~21:35Z, before any reaction value was read. Ryazan: primary moved to #3 (alarm-set rule), so robustness = #4.
+# Belgorod has no 2nd eligible channel: it keeps belgorod_granica (same as primary), reported. Tambov #2 "Тамбов" (tm_id 1675135993) unresolved.
+Smolensk	smolensk_smi	#5 'Новости Смоленска и Области': t.me og:title match, 44,635 vs telemetr 44,700
+Bryansk	bryansk_smi	#4: telemetr.io/ru/channels/1982852947-bryansk_smi = tm_id
+Crimea	Crimeanwind	#3 'Крымский ветер': t.me/s 224K vs telemetr 224,000 (note: Ukrainian-leaning channel; different readership)
+Ryazan	ya62ru	#4 'Новости Рязани YA62': t.me og:title match, 59,528 vs 59,600
+Kirov	kirov_smi	#3 'Новости Кирова и Области': og:title match, 48,753 vs 48,800
+Rostov	rostov_smi	#3 'Новости Ростова и Области': og:title match, 151,849 vs 152,000
+Krasnodar	krasnodar_smi	#5 'Новости Краснодара и края': og:title match, 137,139 vs 141,000
+Tatarstan	kazan	#2 'КазаньДА': telemetr.me catalog row 2 analytics name=1553717262 = tm_id; 288,745

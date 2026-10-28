@@ -1,0 +1,24 @@
+# run_v2 check, data=lab/mood_react/data_v2r, PREREG sha ok, regex module sha ok; no reaction counts printed
+event  1 Smolensk   smolensk_smi       h0 2026-02-25 09:00  fetch reaches block -29: True  posts -29..0: 476  empty blocks: none  block-0 strike posts: 3 -> covered  unparsed badges: 0
+event  2 Bryansk    bryansk_smi        h0 2026-03-10 16:02  fetch reaches block -29: True  posts -29..0: 594  empty blocks: none  block-0 strike posts: 35 -> covered  unparsed badges: 0
+event  4 Crimea     Crimeanwind        h0 2026-05-05 21:10  fetch reaches block -29: True  posts -29..0: 1356  empty blocks: none  block-0 strike posts: 16 -> covered  unparsed badges: 0
+event  5 Ryazan     ya62ru             h0 2026-05-15 02:54  fetch reaches block -29: True  posts -29..0: 1683  empty blocks: none  block-0 strike posts: 21 -> covered  unparsed badges: 0
+event  8 Tambov     tambov_smi         h0 2026-07-18 02:36  fetch reaches block -29: True  posts -29..0: 512  empty blocks: none  block-0 strike posts: 22 -> covered  unparsed badges: 0
+event  9 Belgorod   belgorod_granica   h0 2026-07-20 12:11  fetch reaches block -29: True  posts -29..0: 192  empty blocks: none  block-0 strike posts: 6 -> covered  unparsed badges: 0
+event 10 Kirov      kirov_smi          h0 2026-07-24 09:49  fetch reaches block -29: True  posts -29..0: 468  empty blocks: none  block-0 strike posts: 13 -> covered  unparsed badges: 0
+event 11 Rostov     rostov_smi         h0 2026-07-27 02:32  fetch reaches block -29: True  posts -29..0: 545  empty blocks: none  block-0 strike posts: 10 -> covered  unparsed badges: 0
+event 12 Krasnodar  krasnodar_smi      h0 2026-08-03 08:15  fetch reaches block -29: True  posts -29..0: 626  empty blocks: none  block-0 strike posts: 14 -> covered  unparsed badges: 0
+event 15 Tatarstan  kazan              h0 2026-08-10 05:37  fetch reaches block -29: True  posts -29..0: 471  empty blocks: none  block-0 strike posts: 13 -> covered  unparsed badges: 0
+event 17 Rostov     rostov_smi         h0 2026-08-16 04:13  fetch reaches block -29: True  posts -29..0: 533  empty blocks: none  block-0 strike posts: 10 -> covered  unparsed badges: 0
+event 21 Krasnodar  krasnodar_smi      h0 2026-09-09 05:48  fetch reaches block -29: True  posts -29..0: 717  empty blocks: none  block-0 strike posts: 22 -> covered  unparsed badges: 0
+alarm-emoji set, Smolensk   smolensk_smi       blocks -21..-15 of event 1: present
+alarm-emoji set, Bryansk    bryansk_smi        blocks -21..-15 of event 2: present
+alarm-emoji set, Crimea     Crimeanwind        blocks -21..-15 of event 4: present
+alarm-emoji set, Ryazan     ya62ru             blocks -21..-15 of event 5: present
+alarm-emoji set, Tambov     tambov_smi         blocks -21..-15 of event 8: present
+alarm-emoji set, Belgorod   belgorod_granica   blocks -21..-15 of event 9: present
+alarm-emoji set, Kirov      kirov_smi          blocks -21..-15 of event 10: present
+alarm-emoji set, Rostov     rostov_smi         blocks -21..-15 of event 11: present
+alarm-emoji set, Krasnodar  krasnodar_smi      blocks -21..-15 of event 12: present
+alarm-emoji set, Tatarstan  kazan              blocks -21..-15 of event 15: present
+CHECK PASSED
