@@ -1,0 +1,24 @@
+# run_v2 check, data=data_v2r, PREREG sha ok, regex module sha ok; no reaction counts printed
+event  1 Smolensk   inc_smol           h0 2026-02-25 09:00  fetch reaches block -29: True  posts -29..0: 382  empty blocks: none  block-0 strike posts: 7 -> covered  unparsed badges: 0
+event  2 Bryansk    br_gorod           h0 2026-03-10 16:02  fetch reaches block -29: True  posts -29..0: 0  empty blocks: [-29, -28, -27, -26, -25, -24, -23, -22, -21, -20, -19, -18, -17, -16, -15, -14, -13, -12, -11, -10, -9, -8, -7, -6, -5, -4, -3, -2, -1, 0]  block-0 strike posts: 0 -> NOT COVERED (drops)  unparsed badges: 0
+event  4 Crimea     chp_crimea         h0 2026-05-05 21:10  fetch reaches block -29: True  posts -29..0: 846  empty blocks: none  block-0 strike posts: 9 -> covered  unparsed badges: 0
+event  5 Ryazan     ryazan_smi         h0 2026-05-15 02:54  fetch reaches block -29: True  posts -29..0: 573  empty blocks: none  block-0 strike posts: 20 -> covered  unparsed badges: 0
+event  8 Tambov     tambov_smi         h0 2026-07-18 02:36  fetch reaches block -29: True  posts -29..0: 512  empty blocks: none  block-0 strike posts: 22 -> covered  unparsed badges: 0
+event  9 Belgorod   belgorod_granica   h0 2026-07-20 12:11  fetch reaches block -29: True  posts -29..0: 192  empty blocks: none  block-0 strike posts: 6 -> covered  unparsed badges: 0
+event 10 Kirov      kirov_bezcenz      h0 2026-07-24 09:49  fetch reaches block -29: True  posts -29..0: 218  empty blocks: none  block-0 strike posts: 9 -> covered  unparsed badges: 0
+event 11 Rostov     privet_rostov_ru   h0 2026-07-27 02:32  fetch reaches block -29: True  posts -29..0: 813  empty blocks: none  block-0 strike posts: 19 -> covered  unparsed badges: 0
+event 12 Krasnodar  krasnodarkray1     h0 2026-08-03 08:15  fetch reaches block -29: True  posts -29..0: 1560  empty blocks: none  block-0 strike posts: 30 -> covered  unparsed badges: 0
+event 15 Tatarstan  kazancity          h0 2026-08-10 05:37  fetch reaches block -29: True  posts -29..0: 586  empty blocks: none  block-0 strike posts: 15 -> covered  unparsed badges: 0
+event 17 Rostov     privet_rostov_ru   h0 2026-08-16 04:13  fetch reaches block -29: True  posts -29..0: 814  empty blocks: none  block-0 strike posts: 17 -> covered  unparsed badges: 0
+event 21 Krasnodar  krasnodarkray1     h0 2026-09-09 05:48  fetch reaches block -29: True  posts -29..0: 1696  empty blocks: none  block-0 strike posts: 41 -> covered  unparsed badges: 0
+alarm-emoji set, Smolensk   inc_smol           blocks -21..-15 of event 1: present
+alarm-emoji set, Bryansk    br_gorod           blocks -21..-15 of event 2: no posts (event drops by block-0 coverage)
+alarm-emoji set, Crimea     chp_crimea         blocks -21..-15 of event 4: present
+alarm-emoji set, Ryazan     ryazan_smi         blocks -21..-15 of event 5: present
+alarm-emoji set, Tambov     tambov_smi         blocks -21..-15 of event 8: present
+alarm-emoji set, Belgorod   belgorod_granica   blocks -21..-15 of event 9: present
+alarm-emoji set, Kirov      kirov_bezcenz      blocks -21..-15 of event 10: present
+alarm-emoji set, Rostov     privet_rostov_ru   blocks -21..-15 of event 11: present
+alarm-emoji set, Krasnodar  krasnodarkray1     blocks -21..-15 of event 12: present
+alarm-emoji set, Tatarstan  kazancity          blocks -21..-15 of event 15: present
+CHECK PASSED

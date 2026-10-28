@@ -1,0 +1,147 @@
+# run_v2 check, data=data_v2r, PREREG sha ok, regex module sha ok; no reaction counts printed
+event  1 Smolensk   inc_smol           h0 2026-02-25 09:00  fetch reaches block -29: True  posts -29..0: 382  empty blocks: none  block-0 strike posts: 7 -> covered  unparsed badges: 0
+event  2 Bryansk    br_gorod           h0 2026-03-10 16:02  fetch reaches block -29: True  posts -29..0: 0  empty blocks: [-29, -28, -27, -26, -25, -24, -23, -22, -21, -20, -19, -18, -17, -16, -15, -14, -13, -12, -11, -10, -9, -8, -7, -6, -5, -4, -3, -2, -1, 0]  block-0 strike posts: 0 -> NOT COVERED (drops)  unparsed badges: 0
+event  4 Crimea     chp_crimea         h0 2026-05-05 21:10  fetch reaches block -29: True  posts -29..0: 846  empty blocks: none  block-0 strike posts: 9 -> covered  unparsed badges: 0
+event  5 Ryazan     ryazan_smi         h0 2026-05-15 02:54  fetch reaches block -29: True  posts -29..0: 573  empty blocks: none  block-0 strike posts: 20 -> covered  unparsed badges: 0
+event  8 Tambov     tambov_smi         h0 2026-07-18 02:36  fetch reaches block -29: True  posts -29..0: 512  empty blocks: none  block-0 strike posts: 22 -> covered  unparsed badges: 0
+event  9 Belgorod   belgorod_granica   h0 2026-07-20 12:11  fetch reaches block -29: True  posts -29..0: 192  empty blocks: none  block-0 strike posts: 6 -> covered  unparsed badges: 0
+event 10 Kirov      kirov_bezcenz      h0 2026-07-24 09:49  fetch reaches block -29: True  posts -29..0: 218  empty blocks: none  block-0 strike posts: 9 -> covered  unparsed badges: 0
+event 11 Rostov     privet_rostov_ru   h0 2026-07-27 02:32  fetch reaches block -29: True  posts -29..0: 813  empty blocks: none  block-0 strike posts: 19 -> covered  unparsed badges: 0
+event 12 Krasnodar  krasnodarkray1     h0 2026-08-03 08:15  fetch reaches block -29: True  posts -29..0: 1560  empty blocks: none  block-0 strike posts: 30 -> covered  unparsed badges: 0
+event 15 Tatarstan  kazancity          h0 2026-08-10 05:37  fetch reaches block -29: True  posts -29..0: 586  empty blocks: none  block-0 strike posts: 15 -> covered  unparsed badges: 0
+event 17 Rostov     privet_rostov_ru   h0 2026-08-16 04:13  fetch reaches block -29: True  posts -29..0: 814  empty blocks: none  block-0 strike posts: 17 -> covered  unparsed badges: 0
+event 21 Krasnodar  krasnodarkray1     h0 2026-09-09 05:48  fetch reaches block -29: True  posts -29..0: 1696  empty blocks: none  block-0 strike posts: 41 -> covered  unparsed badges: 0
+alarm-emoji set, Smolensk   inc_smol           blocks -21..-15 of event 1: present
+alarm-emoji set, Bryansk    br_gorod           blocks -21..-15 of event 2: no posts (event drops by block-0 coverage)
+alarm-emoji set, Crimea     chp_crimea         blocks -21..-15 of event 4: present
+alarm-emoji set, Ryazan     ryazan_smi         blocks -21..-15 of event 5: present
+alarm-emoji set, Tambov     tambov_smi         blocks -21..-15 of event 8: present
+alarm-emoji set, Belgorod   belgorod_granica   blocks -21..-15 of event 9: present
+alarm-emoji set, Kirov      kirov_bezcenz      blocks -21..-15 of event 10: present
+alarm-emoji set, Rostov     privet_rostov_ru   blocks -21..-15 of event 11: present
+alarm-emoji set, Krasnodar  krasnodarkray1     blocks -21..-15 of event 12: present
+alarm-emoji set, Tatarstan  kazancity          blocks -21..-15 of event 15: present
+CHECK PASSED
+
+# block-0 coverage (manipulation check with a consequence) and strike-post counts
+  event  1 Smolensk   strike posts block 0: 7, baseline mean 1.8/block
+  event  2 Bryansk    strike posts block 0: 0, baseline mean 0.0/block
+  event  2 Bryansk    drops: not covered (no strike post in block 0)
+  event  4 Crimea     strike posts block 0: 9, baseline mean 12.1/block
+  event  5 Ryazan     strike posts block 0: 20, baseline mean 3.7/block
+  event  8 Tambov     strike posts block 0: 22, baseline mean 2.9/block
+  event  9 Belgorod   strike posts block 0: 6, baseline mean 3.7/block
+  event 10 Kirov      strike posts block 0: 9, baseline mean 0.6/block
+  event 11 Rostov     strike posts block 0: 19, baseline mean 7.8/block
+  event 12 Krasnodar  strike posts block 0: 30, baseline mean 22.9/block
+  event 15 Tatarstan  strike posts block 0: 15, baseline mean 4.9/block
+  event 17 Rostov     strike posts block 0: 17, baseline mean 9.1/block
+  event 21 Krasnodar  strike posts block 0: 41, baseline mean 21.1/block
+
+## PRIMARY alarm: block 0 vs blocks -14..-1: 11 events enter: 1,4,5,8,9,10,11,12,15,17,21
+  event  1 Smolensk   block 0 share 0.0303  baseline median 0.0508  rank 8 of 15  (alarm floor 583)
+  event  4 Crimea     block 0 share 0.1081  baseline median 0.0422  rank 1 of 15  (alarm floor 3455)
+  event  5 Ryazan     block 0 share 0.0031  baseline median 0.0170  rank 13 of 15  (alarm floor 1072)
+  event  8 Tambov     block 0 share 0.0000  baseline median 0.0228  rank 11.5 of 15  (alarm floor 111)
+  event  9 Belgorod   block 0 share 0.0558  baseline median 0.0854  rank 14 of 15  (alarm floor 788)
+  event 10 Kirov      block 0 share 0.0000  baseline median 0.0020  rank 11.5 of 15  (alarm floor 501)
+  event 11 Rostov     block 0 share 0.0563  baseline median 0.0694  rank 9 of 15  (alarm floor 2056)
+  event 12 Krasnodar  block 0 share 0.0763  baseline median 0.1060  rank 10 of 15  (alarm floor 1854)
+  event 15 Tatarstan  block 0 share 0.0269  baseline median 0.0414  rank 10 of 15  (alarm floor 9665)
+  event 17 Rostov     block 0 share 0.0629  baseline median 0.0424  rank 4 of 15  (alarm floor 872)
+  event 21 Krasnodar  block 0 share 0.1239  baseline median 0.1473  rank 9 of 15  (alarm floor 3197)
+  statistic S = 101 (null mean 88; mean rank 9.18, null mean rank 8.00), one-sided exact p = 0.8246
+## PLACEBO alarm: block -15 vs blocks -29..-16: 10 events enter: 1,4,5,9,10,11,12,15,17,21
+  event  1 Smolensk   block -15 share 0.0075  baseline median 0.0427  rank 12 of 15  (alarm floor 578)
+  event  4 Crimea     block -15 share 0.0267  baseline median 0.0531  rank 9 of 15  (alarm floor 4876)
+  event  5 Ryazan     block -15 share 0.0302  baseline median 0.0286  rank 6 of 15  (alarm floor 224)
+  event  8 Tambov     drops: alarm floor 30 < 50 over blocks -29..-16
+  event  9 Belgorod   block -15 share 0.0601  baseline median 0.0792  rank 14 of 15  (alarm floor 944)
+  event 10 Kirov      block -15 share 0.0155  baseline median 0.0156  rank 9 of 15  (alarm floor 307)
+  event 11 Rostov     block -15 share 0.0000  baseline median 0.0288  rank 15 of 15  (alarm floor 1129)
+  event 12 Krasnodar  block -15 share 0.1126  baseline median 0.1281  rank 8 of 15  (alarm floor 2396)
+  event 15 Tatarstan  block -15 share 0.1469  baseline median 0.0589  rank 2 of 15  (alarm floor 15296)
+  event 17 Rostov     block -15 share 0.0976  baseline median 0.0350  rank 5 of 15  (alarm floor 1619)
+  event 21 Krasnodar  block -15 share 0.1836  baseline median 0.1123  rank 5 of 15  (alarm floor 2366)
+  statistic S = 85 (null mean 80; mean rank 8.50, null mean rank 8.00), one-sided exact p = 0.6543
+## PLACEBO alarm, only the events that entered the test (D4 note, descriptive): 10 events enter: 1,4,5,9,10,11,12,15,17,21
+  event  1 Smolensk   block -15 share 0.0075  baseline median 0.0427  rank 12 of 15  (alarm floor 578)
+  event  4 Crimea     block -15 share 0.0267  baseline median 0.0531  rank 9 of 15  (alarm floor 4876)
+  event  5 Ryazan     block -15 share 0.0302  baseline median 0.0286  rank 6 of 15  (alarm floor 224)
+  event  8 Tambov     drops: alarm floor 30 < 50 over blocks -29..-16
+  event  9 Belgorod   block -15 share 0.0601  baseline median 0.0792  rank 14 of 15  (alarm floor 944)
+  event 10 Kirov      block -15 share 0.0155  baseline median 0.0156  rank 9 of 15  (alarm floor 307)
+  event 11 Rostov     block -15 share 0.0000  baseline median 0.0288  rank 15 of 15  (alarm floor 1129)
+  event 12 Krasnodar  block -15 share 0.1126  baseline median 0.1281  rank 8 of 15  (alarm floor 2396)
+  event 15 Tatarstan  block -15 share 0.1469  baseline median 0.0589  rank 2 of 15  (alarm floor 15296)
+  event 17 Rostov     block -15 share 0.0976  baseline median 0.0350  rank 5 of 15  (alarm floor 1619)
+  event 21 Krasnodar  block -15 share 0.1836  baseline median 0.1123  rank 5 of 15  (alarm floor 2366)
+  statistic S = 85 (null mean 80; mean rank 8.50, null mean rank 8.00), one-sided exact p = 0.6543
+## PRIMARY alarm without Belgorod: 10 events enter: 1,4,5,8,10,11,12,15,17,21
+  event  1 Smolensk   block 0 share 0.0303  baseline median 0.0508  rank 8 of 15  (alarm floor 583)
+  event  4 Crimea     block 0 share 0.1081  baseline median 0.0422  rank 1 of 15  (alarm floor 3455)
+  event  5 Ryazan     block 0 share 0.0031  baseline median 0.0170  rank 13 of 15  (alarm floor 1072)
+  event  8 Tambov     block 0 share 0.0000  baseline median 0.0228  rank 11.5 of 15  (alarm floor 111)
+  event 10 Kirov      block 0 share 0.0000  baseline median 0.0020  rank 11.5 of 15  (alarm floor 501)
+  event 11 Rostov     block 0 share 0.0563  baseline median 0.0694  rank 9 of 15  (alarm floor 2056)
+  event 12 Krasnodar  block 0 share 0.0763  baseline median 0.1060  rank 10 of 15  (alarm floor 1854)
+  event 15 Tatarstan  block 0 share 0.0269  baseline median 0.0414  rank 10 of 15  (alarm floor 9665)
+  event 17 Rostov     block 0 share 0.0629  baseline median 0.0424  rank 4 of 15  (alarm floor 872)
+  event 21 Krasnodar  block 0 share 0.1239  baseline median 0.1473  rank 9 of 15  (alarm floor 3197)
+  statistic S = 87 (null mean 80; mean rank 8.70, null mean rank 8.00), one-sided exact p = 0.7059
+
+## SECONDARY grief: block 0 vs blocks -14..-1: 11 events enter: 1,4,5,8,9,10,11,12,15,17,21
+  event  1 Smolensk   block 0 share 0.0636  baseline median 0.0079  rank 1 of 15  (grief floor 161)
+  event  4 Crimea     block 0 share 0.0014  baseline median 0.0106  rank 13 of 15  (grief floor 2729)
+  event  5 Ryazan     block 0 share 0.0373  baseline median 0.0355  rank 6 of 15  (grief floor 249)
+  event  8 Tambov     block 0 share 0.0000  baseline median 0.0040  rank 11.5 of 15  (grief floor 98)
+  event  9 Belgorod   block 0 share 0.0929  baseline median 0.0803  rank 4 of 15  (grief floor 736)
+  event 10 Kirov      block 0 share 0.1209  baseline median 0.0028  rank 2 of 15  (grief floor 213)
+  event 11 Rostov     block 0 share 0.0148  baseline median 0.0291  rank 9 of 15  (grief floor 599)
+  event 12 Krasnodar  block 0 share 0.1475  baseline median 0.0732  rank 2 of 15  (grief floor 1436)
+  event 15 Tatarstan  block 0 share 0.0174  baseline median 0.0270  rank 10 of 15  (grief floor 5718)
+  event 17 Rostov     block 0 share 0.1595  baseline median 0.0151  rank 1 of 15  (grief floor 484)
+  event 21 Krasnodar  block 0 share 0.0319  baseline median 0.0733  rank 12 of 15  (grief floor 1987)
+  statistic S = 71.5 (null mean 88; mean rank 6.50, null mean rank 8.00), one-sided exact p = 0.1266
+## PLACEBO grief: block -15 vs blocks -29..-16: 10 events enter: 1,4,5,9,10,11,12,15,17,21
+  event  1 Smolensk   block -15 share 0.0000  baseline median 0.0117  rank 13.5 of 15  (grief floor 183)
+  event  4 Crimea     block -15 share 0.0165  baseline median 0.0080  rank 6 of 15  (grief floor 2047)
+  event  5 Ryazan     block -15 share 0.0360  baseline median 0.0490  rank 10 of 15  (grief floor 347)
+  event  8 Tambov     drops: grief floor 31 < 50 over blocks -29..-16
+  event  9 Belgorod   block -15 share 0.0749  baseline median 0.0780  rank 9 of 15  (grief floor 927)
+  event 10 Kirov      block -15 share 0.0014  baseline median 0.1012  rank 10 of 15  (grief floor 275)
+  event 11 Rostov     block -15 share 0.0011  baseline median 0.0150  rank 14 of 15  (grief floor 616)
+  event 12 Krasnodar  block -15 share 0.0382  baseline median 0.0514  rank 11 of 15  (grief floor 1346)
+  event 15 Tatarstan  block -15 share 0.1126  baseline median 0.0371  rank 2 of 15  (grief floor 11981)
+  event 17 Rostov     block -15 share 0.0012  baseline median 0.0296  rank 15 of 15  (grief floor 673)
+  event 21 Krasnodar  block -15 share 0.0685  baseline median 0.0585  rank 7 of 15  (grief floor 1273)
+  statistic S = 97.5 (null mean 80; mean rank 9.75, null mean rank 8.00), one-sided exact p = 0.8983
+## PLACEBO grief, only the events that entered the test (D4 note, descriptive): 10 events enter: 1,4,5,9,10,11,12,15,17,21
+  event  1 Smolensk   block -15 share 0.0000  baseline median 0.0117  rank 13.5 of 15  (grief floor 183)
+  event  4 Crimea     block -15 share 0.0165  baseline median 0.0080  rank 6 of 15  (grief floor 2047)
+  event  5 Ryazan     block -15 share 0.0360  baseline median 0.0490  rank 10 of 15  (grief floor 347)
+  event  8 Tambov     drops: grief floor 31 < 50 over blocks -29..-16
+  event  9 Belgorod   block -15 share 0.0749  baseline median 0.0780  rank 9 of 15  (grief floor 927)
+  event 10 Kirov      block -15 share 0.0014  baseline median 0.1012  rank 10 of 15  (grief floor 275)
+  event 11 Rostov     block -15 share 0.0011  baseline median 0.0150  rank 14 of 15  (grief floor 616)
+  event 12 Krasnodar  block -15 share 0.0382  baseline median 0.0514  rank 11 of 15  (grief floor 1346)
+  event 15 Tatarstan  block -15 share 0.1126  baseline median 0.0371  rank 2 of 15  (grief floor 11981)
+  event 17 Rostov     block -15 share 0.0012  baseline median 0.0296  rank 15 of 15  (grief floor 673)
+  event 21 Krasnodar  block -15 share 0.0685  baseline median 0.0585  rank 7 of 15  (grief floor 1273)
+  statistic S = 97.5 (null mean 80; mean rank 9.75, null mean rank 8.00), one-sided exact p = 0.8983
+## SECONDARY grief without Belgorod: 10 events enter: 1,4,5,8,10,11,12,15,17,21
+  event  1 Smolensk   block 0 share 0.0636  baseline median 0.0079  rank 1 of 15  (grief floor 161)
+  event  4 Crimea     block 0 share 0.0014  baseline median 0.0106  rank 13 of 15  (grief floor 2729)
+  event  5 Ryazan     block 0 share 0.0373  baseline median 0.0355  rank 6 of 15  (grief floor 249)
+  event  8 Tambov     block 0 share 0.0000  baseline median 0.0040  rank 11.5 of 15  (grief floor 98)
+  event 10 Kirov      block 0 share 0.1209  baseline median 0.0028  rank 2 of 15  (grief floor 213)
+  event 11 Rostov     block 0 share 0.0148  baseline median 0.0291  rank 9 of 15  (grief floor 599)
+  event 12 Krasnodar  block 0 share 0.1475  baseline median 0.0732  rank 2 of 15  (grief floor 1436)
+  event 15 Tatarstan  block 0 share 0.0174  baseline median 0.0270  rank 10 of 15  (grief floor 5718)
+  event 17 Rostov     block 0 share 0.1595  baseline median 0.0151  rank 1 of 15  (grief floor 484)
+  event 21 Krasnodar  block 0 share 0.0319  baseline median 0.0733  rank 12 of 15  (grief floor 1987)
+  statistic S = 67.5 (null mean 80; mean rank 6.75, null mean rank 8.00), one-sided exact p = 0.1828
+
+# verdict (PREREG: claim only if test p <= 0.05 AND placebo p > 0.05)
+  alarm: p = 0.8246 > 0.05, placebo p = 0.6543 -> bounded null (no effect of the size the design can see)
+  grief: p = 0.1266 > 0.05, placebo p = 0.8983 -> bounded null (no effect of the size the design can see)
