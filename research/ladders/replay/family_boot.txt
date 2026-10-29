@@ -1,0 +1,7 @@
+all mixed: KM median mixed 8.8 d vs clean 14.3 d, diff -5.5; family bootstrap 95% -11.2 .. +11.4 (2000 draws)
+mixed without AGI: KM median mixed 16.0 d vs clean 14.3 d, diff +1.8; family bootstrap 95% -8.7 .. +18.8 (2000 draws)
+clean leave-one-family-out KM median: min 13.8 d (drop 'will we discover alien life before', 43 ep), max 16.6 d (drop 'will we get agi before', 62 ep), of 98 families
+clean KM median family bootstrap 95%: 10.9 .. 20.7 d
+clean: 426 episodes, 98 families, largest 'will we get agi before' 62 = 15%
+mixed: 601 episodes, 27 families, largest 'will we get agi before' 452 = 75%
+mixed without AGI: 149 episodes, 26 families, largest 'will a human walk on the moon again befo' 34 = 23%
