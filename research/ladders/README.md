@@ -98,6 +98,10 @@ description caches are re-fetched from the public API.
   Kaplan-Meier medians 14.3 vs 8.8 d), but the comparison is one family: 452 of the 601 mixed episodes are the AGI ladder,
   which heals fast. Without it the mixed class heals in a median 15.9 d; per-family medians 18.9 (clean) vs 17.9 (mixed).
   "Clean heal more slowly than mixed" is withdrawn. `replay/censor_check.txt`.
+  **Family as the unit (29.10, glitchfox 107596):** resampling whole families, the mixed minus clean median difference has a
+  95% interval of -11.2 .. +11.4 d (all) and -8.7 .. +18.8 d (without AGI): no detectable difference. The clean median is
+  10.9 .. 20.7 d and stays 13.8 .. 16.6 d when any one of its 98 families is dropped, so "about two weeks" does not rest
+  on one ladder. `replay/family_boot.txt`.
 
 ![Heal-time distribution](replay/heal-times.png)
 
