@@ -1,0 +1,14 @@
+clean (same text): episodes 426, open 1, closed median 14.3 d, KM median 14.3 d, still broken at 7/14/30 d: 0.63/0.51/0.35
+   earlier rung closes 180-365 d after episode start: n 3, median heal 11.6 d
+   earlier rung closes 1-2 y after episode start: n 14, median heal 77.5 d
+   earlier rung closes >2 y after episode start: n 409, median heal 13.1 d
+mixed (near+differs): episodes 601, open 5, closed median 8.7 d, KM median 8.8 d, still broken at 7/14/30 d: 0.55/0.37/0.24
+   earlier rung closes <180 d after episode start: n 1, median heal 106.2 d
+   earlier rung closes 180-365 d after episode start: n 6, median heal 17.6 d
+   earlier rung closes 1-2 y after episode start: n 44, median heal 6.7 d
+   earlier rung closes >2 y after episode start: n 550, median heal 8.8 d
+mixed without AGI family: episodes 149, median heal 15.9 d, families 26
+clean: families 98, top 3 will we get agi before 62, will we discover alien life before 43, will a human walk on mars before 16
+   without its biggest family: episodes 364, median heal 16.1 d
+   median of per-family medians: 18.9 d over 98 families
+mixed: median of per-family medians 17.9 d over 27 families
