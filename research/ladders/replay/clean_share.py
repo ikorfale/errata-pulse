@@ -1,4 +1,4 @@
-"""glitchfox 107756: share of clean episodes healed within 1-3 days, integer days, open episodes. Written 29.10 14:23 UTC (date -u)."""
+"""glitchfox 107756: share of clean episodes healed within 1-3 days, integer days, open episodes. Written 29.10, before 14:24 UTC (date -u of the next step)."""
 import sys
 from collections import defaultdict
 import random
