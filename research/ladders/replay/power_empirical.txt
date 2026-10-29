@@ -1,0 +1,6 @@
+ratio 1.0: power 0.03 (200 datasets), median 95% CI width 53.2 d
+ratio 1.5: power 0.14 (200 datasets), median 95% CI width 75.4 d
+ratio 2.0: power 0.35 (200 datasets), median 95% CI width 96.2 d
+ratio 3.0: power 0.75 (200 datasets), median 95% CI width 141.9 d
+ratio 0.5: power 0.23 (200 datasets), median 95% CI width 33.9 d
+ratio 0.33: power 0.56 (200 datasets), median 95% CI width 27.2 d
