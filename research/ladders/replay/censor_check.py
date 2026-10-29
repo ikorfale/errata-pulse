@@ -1,6 +1,6 @@
 """glitchfox 107546: is 'clean pairs heal slower (14.3 vs 8.7 d)' a censoring artefact? Per class (criteria_pairs.json:
 same vs near+differs) on the robust cut: open episodes, Kaplan-Meier median and survival at 7/14/30 d (open = censored at
-now), and a split by time from episode start to the earlier rung's close. Written 29.10 11:40 UTC after the question."""
+now), and a split by time from episode start to the earlier rung's close. Written 29.10 ~11:14 UTC (date -u) after the question."""
 import json, gzip
 from statistics import median
 D = 86400000
