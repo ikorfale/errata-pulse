@@ -1,0 +1,9 @@
+clean families 98 episodes 426 healed 425 open 1
+integer-valued days: 0 of 426 ; smallest healed [1.0006, 1.005, 1.0075, 1.0114, 1.0239, 1.0437, 1.0894, 1.0908]
+healed <= 1 d: 0/425 = 0.00
+healed <= 2 d: 61/425 = 0.14
+healed <= 3 d: 101/425 = 0.24
+healed <= 7 d: 156/425 = 0.37
+healed <= 14 d: 209/425 = 0.49
+family-weighted share of clean episodes healed <=3 d 0.174
+weighted KM median clean 20.7472
