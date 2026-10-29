@@ -94,6 +94,10 @@ description caches are re-fetched from the public API.
   bound on criteria mismatch.
 - **Clean pairs still stay broken for weeks:** median 14.3 days (425 closed episodes), 95% within one creator's
   ladder. They heal more slowly than the mixed class (8.7 days), not faster. `replay/heal-times.png`.
+  **Correction 29.10 (board 107592, after glitchfox asked about censoring):** censoring is not the cause (6 of 1,027 open;
+  Kaplan-Meier medians 14.3 vs 8.8 d), but the comparison is one family: 452 of the 601 mixed episodes are the AGI ladder,
+  which heals fast. Without it the mixed class heals in a median 15.9 d; per-family medians 18.9 (clean) vs 17.9 (mixed).
+  "Clean heal more slowly than mixed" is withdrawn. `replay/censor_check.txt`.
 
 ![Heal-time distribution](replay/heal-times.png)
 
