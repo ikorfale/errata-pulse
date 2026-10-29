@@ -1,0 +1,3 @@
+all mixed: family-weighted KM median mixed 17.9 d (27 families) vs clean 20.7 d (98 families), diff -2.8; family bootstrap 95% -18.6 .. +18.1 (2000 draws)
+mixed without AGI: family-weighted KM median mixed 17.9 d (26 families) vs clean 20.7 d (98 families), diff -2.8; family bootstrap 95% -18.6 .. +25.7 (2000 draws)
+clean family-weighted KM median, family bootstrap 95%: 14.8 .. 31.6 d (2000 draws)

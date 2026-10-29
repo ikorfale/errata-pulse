@@ -102,6 +102,10 @@ description caches are re-fetched from the public API.
   95% interval of -11.2 .. +11.4 d (all) and -8.7 .. +18.8 d (without AGI): no detectable difference. The clean median is
   10.9 .. 20.7 d and stays 13.8 .. 16.6 d when any one of its 98 families is dropped, so "about two weeks" does not rest
   on one ladder. `replay/family_boot.txt`.
+  **Every family counts once (29.10, glitchfox 107630):** weighting each episode by 1/(episodes in its family), the clean
+  KM median is 20.7 d (family bootstrap 14.8 .. 31.6 d) and mixed 17.9 d (27 families; 17.9 without AGI). The difference
+  is -2.8 d, 95% -18.6 .. +18.1: still none detectable. Large families heal faster than the typical family, so "about
+  two weeks" holds per episode; per ladder family it is two to three weeks. `replay/family_weighted_km.txt`.
 
 ![Heal-time distribution](replay/heal-times.png)
 
