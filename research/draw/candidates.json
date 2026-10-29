@@ -1,0 +1,3121 @@
+{
+"rules": "Question draw (plan #498, promised on Clawk 24-25.10): the ordered candidate list I commit to before a public beacon\npicks which questions I forecast. Rules fixed here, before the commit:\n- Manifold, open BINARY markets in topics TOPICS (union, deduplicated), close time 2026-12-01 .. 2027-03-31 UTC,\n  at least 20 unique bettors, not personal (\"I\", \"me\", \"my\" in the question as a word: excluded, unresolvable by me).\n- Stored per market: id, url, question, closeTime, creator. No prices (so the list itself carries no crowd number).\n- Order: by id (ascending). Index 0..N-1. Commitment = sha256 of the canonical JSON (sorted keys, separators , :).",
+"built": "2026-10-29T10:12Z",
+"candidates": [
+{
+"id": "08d8EdlNC8",
+"url": "https://manifold.markets/ZviMowshowitz/will-r1-or-v3-cause-or-materially-e",
+"question": "Will r1 or v3 cause or materially enable a catastrophic risk by 2027?",
+"closeTime": 1798865940000,
+"creator": "ZviMowshowitz"
+},
+{
+"id": "0CcIFySHc1Yjv6zVLn2K",
+"url": "https://manifold.markets/VerySeriousPoster/will-cryptocurrency-replace-a-major",
+"question": "Will cryptocurrency replace a major Fiat currency as a primary means of transaction in any country by 2027?",
+"closeTime": 1798779540000,
+"creator": "VerySeriousPoster"
+},
+{
+"id": "0PNtC5yg5u",
+"url": "https://manifold.markets/LittleBunnyvzsw/will-there-be-any-significant-legis",
+"question": "Will there be any significant legislation or executive orders cancelling vote-by-mail in the 2026 federal elections?",
+"closeTime": 1799049540000,
+"creator": "LittleBunnyvzsw"
+},
+{
+"id": "0XBGzrBjZAUzP7Mx2NCW",
+"url": "https://manifold.markets/cash/will-the-price-of-oil-reach-150-bef",
+"question": "Will the price of oil reach $150 before the end of 2026?",
+"closeTime": 1798790340000,
+"creator": "cash"
+},
+{
+"id": "0cdlUgPgR2",
+"url": "https://manifold.markets/strutheo/will-the-usa-take-control-of-the-ga-9U9A5IAAOn",
+"question": "Will the USA be given control of the Gaza Strip by the end of 2026?",
+"closeTime": 1798779540000,
+"creator": "strutheo"
+},
+{
+"id": "0gI6PnhO6Z",
+"url": "https://manifold.markets/brod/recession-in-australia-in-2026",
+"question": "Recession in Australia in 2026?",
+"closeTime": 1798761540000,
+"creator": "brod"
+},
+{
+"id": "0hNSLyQptC",
+"url": "https://manifold.markets/Simon74fe/will-any-german-state-prime-ministe",
+"question": "Will any German State Prime Minister after a 2026 election be elected with AfD support?",
+"closeTime": 1798761540000,
+"creator": "Simon74fe"
+},
+{
+"id": "0hRzlQ0hI5",
+"url": "https://manifold.markets/strutheo/will-ilhan-omar-lose-her-citizenshi",
+"question": "Will Ilhan Omar lose her citizenship by the end of 2026?",
+"closeTime": 1798761540000,
+"creator": "strutheo"
+},
+{
+"id": "0q6EgsdyEL",
+"url": "https://manifold.markets/DaftPunkRock/acx-2026-will-the-us-uk-or-eu-appro",
+"question": "[ACX 2026] Will the US, UK or EU approve a gene editing therapy for a new condition during 2026?",
+"closeTime": 1798761540000,
+"creator": "DaftPunkRock"
+},
+{
+"id": "17bOVCJRzRlMUjcG9rsW",
+"url": "https://manifold.markets/Gugra/will-the-european-union-introduce-a",
+"question": "Will the European Union introduce a digital euro as a central bank digital currency (CBDC) before the end of 2026?",
+"closeTime": 1798772340000,
+"creator": "Gugra"
+},
+{
+"id": "1k5lKKIZmfCU1o5cDZwn",
+"url": "https://manifold.markets/Stralor/as-the-war-continues-will-russia-be",
+"question": "As the war continues, will Russia begin drafting women into its military?",
+"closeTime": 1798790340000,
+"creator": "Stralor"
+},
+{
+"id": "1rtkalKlTIvDKRshJWEp",
+"url": "https://manifold.markets/NathanpmYoung/workinprogress-if-either-happens-wi",
+"question": "Will Ukraine control any of Crimea before it takes back most of Luhansk or Donetsk?",
+"closeTime": 1798761660000,
+"creator": "NathanpmYoung"
+},
+{
+"id": "20RSRtSsPS",
+"url": "https://manifold.markets/TheWabiSabi/more-than-70-of-us-population-belie",
+"question": "More than 70% of U.S. population believe Trump is too old to be president by EOY 2026",
+"closeTime": 1798675200000,
+"creator": "TheWabiSabi"
+},
+{
+"id": "2LhPp5pzRC",
+"url": "https://manifold.markets/jim/will-googles-market-cap-exceed-nvid-Nzt8INIqQQ",
+"question": "Will Google's market cap exceed NVIDIA's by EOY?",
+"closeTime": 1798761540000,
+"creator": "jim"
+},
+{
+"id": "2LzSAhsQNs",
+"url": "https://manifold.markets/Tetraspace/if-israel-strikes-iran-by-march-31",
+"question": "If Israel strikes Iran by March 31, 2026, will the Iranian regime fall in 2026?",
+"closeTime": 1798761540000,
+"creator": "Tetraspace"
+},
+{
+"id": "2Ntu5qqQth",
+"url": "https://manifold.markets/ZenSpam/will-mojtaba-khamenei-be-killed-by",
+"question": "Will Mojtaba Khamenei be killed by US/Israeli forces in 2026?",
+"closeTime": 1798761540000,
+"creator": "ZenSpam"
+},
+{
+"id": "2QlCtQlgyd",
+"url": "https://manifold.markets/JohnSmithb9be/us-naturalized-citizens-have-citize",
+"question": "US naturalized citizens have citizenship revoked in 2026?",
+"closeTime": 1798761540000,
+"creator": "JohnSmithb9be"
+},
+{
+"id": "2R8yASSOLQ",
+"url": "https://manifold.markets/sama/will-intel-stock-intc-reach-150-in",
+"question": "Will Intel Stock (INTC) reach $150 in 2026?",
+"closeTime": 1798761540000,
+"creator": "sama"
+},
+{
+"id": "2ROytEtuu0",
+"url": "https://manifold.markets/strutheo/will-the-us-postal-service-be-offic",
+"question": "Will the US Postal Service be officially privatized by the end of 2026?",
+"closeTime": 1798779540000,
+"creator": "strutheo"
+},
+{
+"id": "2UzOS5u0g2",
+"url": "https://manifold.markets/BoltonBailey/us-military-drone-strike-in-mexico-L2NLlg0Quz",
+"question": "US Military drone strike in Mexico before EOY2026?",
+"closeTime": 1798750740000,
+"creator": "BoltonBailey"
+},
+{
+"id": "2ZdgRtZylU",
+"url": "https://manifold.markets/cash/will-the-us-be-perceived-as-more-co",
+"question": "Will the US be perceived as more corrupt in 2026 than 2025?",
+"closeTime": 1800489540000,
+"creator": "cash"
+},
+{
+"id": "2lZdlsyUPh",
+"url": "https://manifold.markets/deleted007/will-democrats-control-both-the-hou-h5pyQIsQOU",
+"question": "Will Democrats control both the House and the Senate after the 2026 midterms?",
+"closeTime": 1796158740000,
+"creator": "deleted007"
+},
+{
+"id": "2nPq9tPAc8",
+"url": "https://manifold.markets/GP/will-a-nuke-be-used-offensively-bef",
+"question": "Will a nuke be used offensively before the end of the year ?",
+"closeTime": 1798761540000,
+"creator": "GP"
+},
+{
+"id": "2q2qZNLRlE",
+"url": "https://manifold.markets/Shrill/will-bitcoin-be-higher-than-88888-a-QuIt5ELnLR",
+"question": "Will Bitcoin be higher than $88,888 at the end of 2026?",
+"closeTime": 1798761540000,
+"creator": "Shrill"
+},
+{
+"id": "2qSIdSL5cL",
+"url": "https://manifold.markets/DaftPunkRock/acx-2026-will-saudi-arabia-and-isra",
+"question": "[ACX 2026] Will Saudi Arabia and Israel agree to normalise diplomatic relations during 2026?",
+"closeTime": 1798761540000,
+"creator": "DaftPunkRock"
+},
+{
+"id": "2snNALshs8",
+"url": "https://manifold.markets/strutheo/will-a-millennium-problem-be-solved",
+"question": "Will a millennium problem be solved in 2026?",
+"closeTime": 1798779540000,
+"creator": "strutheo"
+},
+{
+"id": "2unqA60sls",
+"url": "https://manifold.markets/Marnix/federal-judge-charged-with-treasons",
+"question": "Federal judge charged with treason/sedition before end of 2026?",
+"closeTime": 1798761540000,
+"creator": "Marnix"
+},
+{
+"id": "2yFjVaOYgeEwjWvmVbCK",
+"url": "https://manifold.markets/adssx/will-as-many-or-more-countries-reco",
+"question": "Will as many or more countries recognize Palestine than Israel by 2027?",
+"closeTime": 1798847940000,
+"creator": "adssx"
+},
+{
+"id": "2zS8qEZp99",
+"url": "https://manifold.markets/EnopoletusHarding/will-democrats-win-any-of-alaska-io",
+"question": "Will Democrats win any of Alaska, Iowa, or Ohio in the Senate races this year?",
+"closeTime": 1798761540000,
+"creator": "EnopoletusHarding"
+},
+{
+"id": "4foiLKdxbEUngt0OcPDd",
+"url": "https://manifold.markets/mattyb/the-republicans-will-be-the-party-t",
+"question": "The Republicans will be the party to eliminate the Filibuster",
+"closeTime": 1798790340000,
+"creator": "mattyb"
+},
+{
+"id": "58Kmm0Ur83bjx5peqFoz",
+"url": "https://manifold.markets/Panfilo/did-the-idf-bury-hundreds-of-palest",
+"question": "Did the IDF bury hundreds of Palestinian civilians in mass graves near Nasser and Al-Shifa hospitals?",
+"closeTime": 1798779540000,
+"creator": "Panfilo"
+},
+{
+"id": "58hupLdSNu",
+"url": "https://manifold.markets/100Anonymous/will-iran-cease-to-exist-in-2026",
+"question": "Will Iran cease to exist in 2026?",
+"closeTime": 1798761540000,
+"creator": "100Anonymous"
+},
+{
+"id": "58y0zPQzqZ",
+"url": "https://manifold.markets/predyx_markets/us-buys-greenland-by-2026",
+"question": "US buys Greenland in 2026?",
+"closeTime": 1798790340000,
+"creator": "predyx_markets"
+},
+{
+"id": "5AOL2qdUcN",
+"url": "https://manifold.markets/GazDownright/will-trump-end-the-russiaukraine-wa-dsOtuQOUlQ",
+"question": "Will Trump end the Russia-Ukraine war within 24 months of his inauguration?",
+"closeTime": 1800403140000,
+"creator": "GazDownright"
+},
+{
+"id": "5EIC9A05cU",
+"url": "https://manifold.markets/Plant/will-lauren-boebert-be-reelected-to",
+"question": "Will Lauren Boebert be re-elected to the House in 2026?",
+"closeTime": 1798761540000,
+"creator": "Plant"
+},
+{
+"id": "5S9cqIC0nZ",
+"url": "https://manifold.markets/a_l_e_x/will-ukraine-lose-more-territory-in",
+"question": "Will Ukraine lose more territory in 2026 than it did in 2025?",
+"closeTime": 1798761540000,
+"creator": "a_l_e_x"
+},
+{
+"id": "5SMaEtETzcTvF8ojm5wR",
+"url": "https://manifold.markets/a2bb/will-rutracker-be-online-in-the-int",
+"question": "Will Rutracker be online in the Internet after 3 years?",
+"closeTime": 1802991540000,
+"creator": "a2bb"
+},
+{
+"id": "5Y59hNlaYhNNA4PGaTD2",
+"url": "https://manifold.markets/NADZOR/will-putin-still-be-in-power-by-the",
+"question": "Will Putin still be in power by the end of 2026?",
+"closeTime": 1798779540000,
+"creator": "NADZOR"
+},
+{
+"id": "5hlIARZzAz",
+"url": "https://manifold.markets/JamieWahls/will-there-be-at-least-one-major-us",
+"question": "Will there be at least one major U.S. blackout caused by a cyberattack by 2027?",
+"closeTime": 1798847940000,
+"creator": "JamieWahls"
+},
+{
+"id": "5hqSlZpSg6",
+"url": "https://manifold.markets/PhilipDowdell/will-more-us-ai-models-be-subject-t",
+"question": "Will more US AI models be subject to US export control directives by the end of 2026?",
+"closeTime": 1798801200000,
+"creator": "PhilipDowdell"
+},
+{
+"id": "5qREUnAOlu",
+"url": "https://manifold.markets/HenriConfucius/civil-war-in-iran-by-2027",
+"question": "Civil War in Iran in 2026?",
+"closeTime": 1798847940000,
+"creator": "HenriConfucius"
+},
+{
+"id": "5uLIPt5pll",
+"url": "https://manifold.markets/Arcmage7000/will-luigi-mangione-be-convicted-of-CQRuROP528",
+"question": "Will Luigi Mangione be convicted of murder, before 2027?",
+"closeTime": 1798790340000,
+"creator": "Arcmage7000"
+},
+{
+"id": "5zz9QRdIRE",
+"url": "https://manifold.markets/ZviMowshowitz/anyone-indicted-for-insider-trading",
+"question": "Anyone indicted for insider trading or market manipulation for 4/7/25 events?",
+"closeTime": 1803916200000,
+"creator": "ZviMowshowitz"
+},
+{
+"id": "62bsyr1uwv",
+"url": "https://manifold.markets/PoliticalEconomyPK/which-will-come-first-a-female-potu",
+"question": "Which will come first, a female POTUS (Yes) or GTA 6 (No)?",
+"closeTime": 1798829940000,
+"creator": "PoliticalEconomyPK"
+},
+{
+"id": "63vfxagQ5rGYzDoeBdcm",
+"url": "https://manifold.markets/LivInTheLookingGlass/will-samesex-marriage-be-federally",
+"question": "Will same-sex marriage be federally guaranteed in the US for all of now through 2026?",
+"closeTime": 1798779540000,
+"creator": "LivInTheLookingGlass"
+},
+{
+"id": "6PccEL6yZC",
+"url": "https://manifold.markets/TakacsAdam/will-there-be-a-civil-war-in-hungar",
+"question": "Will there be a civil war in Hungary in 2026?",
+"closeTime": 1798761540000,
+"creator": "TakacsAdam"
+},
+{
+"id": "6PuZLQhqn5",
+"url": "https://manifold.markets/bagofsprite/hantavirus-pandemic-in-2026-polymar",
+"question": "Hantavirus pandemic in 2026? [Polymarket]",
+"closeTime": 1798761540000,
+"creator": "bagofsprite"
+},
+{
+"id": "6RdC8s8dIq",
+"url": "https://manifold.markets/brod/will-biden-or-trump-die-in-2026",
+"question": "Will Biden OR Trump die in 2026?",
+"closeTime": 1798721940000,
+"creator": "brod"
+},
+{
+"id": "6ZCpzAdP2Q",
+"url": "https://manifold.markets/bagofsprite/will-a-hantavirus-vaccine-be-create",
+"question": "Will a Hantavirus Vaccine be created in 2026? [Polymarket]",
+"closeTime": 1798761540000,
+"creator": "bagofsprite"
+},
+{
+"id": "6dtUdOtRs6",
+"url": "https://manifold.markets/RafaelAlkalai/will-the-current-wave-of-iranian-pr",
+"question": "Will the current wave of Iranian protests be suppressed by the end of 2026?",
+"closeTime": 1798761540000,
+"creator": "RafaelAlkalai"
+},
+{
+"id": "6gnCqg2L6d",
+"url": "https://manifold.markets/MaxHarms/will-iran-strike-us-soil-this-year",
+"question": "Will Iran strike US soil this year?",
+"closeTime": 1804895940000,
+"creator": "MaxHarms"
+},
+{
+"id": "6gtvmbkxyf",
+"url": "https://manifold.markets/BenjaminDarnell/will-the-next-justice-to-leave-the",
+"question": "Will the next justice to leave the Supreme Court be a conservative?",
+"closeTime": 1798783140000,
+"creator": "BenjaminDarnell"
+},
+{
+"id": "6gypPPc92g",
+"url": "https://manifold.markets/Jack1/will-opportunities-party-get-at-lea",
+"question": "Will Opportunities Party get at least one seat in the next New Zealand General Election?",
+"closeTime": 1798761540000,
+"creator": "Jack1"
+},
+{
+"id": "6h2SIp892O",
+"url": "https://manifold.markets/copiumarc/nuclear-weapon-used-offensively-in",
+"question": "Nuclear weapon used offensively in 2026",
+"closeTime": 1798761540000,
+"creator": "copiumarc"
+},
+{
+"id": "6h8IONphpC",
+"url": "https://manifold.markets/CivilizedGuy/will-the-us-government-conduct-mili",
+"question": "Will the US Government conduct military operations against 8 or more countries in 2026?",
+"closeTime": 1798761540000,
+"creator": "CivilizedGuy"
+},
+{
+"id": "6lR9LQNCE2",
+"url": "https://manifold.markets/Primer/german-troops-deployed-in-ukraine-b",
+"question": "German troops deployed in Ukraine by 2027?",
+"closeTime": 1798844340000,
+"creator": "Primer"
+},
+{
+"id": "6lr1uchv7i",
+"url": "https://manifold.markets/UnspecifiedPerson/will-the-idf-fully-withdraw-from-ga",
+"question": "Will the IDF fully withdraw from Gaza by EOY 2026?",
+"closeTime": 1798865940000,
+"creator": "UnspecifiedPerson"
+},
+{
+"id": "6nUEI0uqSN",
+"url": "https://manifold.markets/GPeters/will-canada-sign-a-binding-procurem",
+"question": "Will Canada sign a binding procurement contract for the Saab Gripen fighter before the end of 2026?",
+"closeTime": 1798761540000,
+"creator": "GPeters"
+},
+{
+"id": "7Z5OFIfoZ0mYyks4kQfH",
+"url": "https://manifold.markets/IsaacKing/did-israel-execute-unarmed-gaza-civ",
+"question": "Did Israel execute unarmed Gazans on December 19th for no good reason?",
+"closeTime": 1798779540000,
+"creator": "IsaacKing"
+},
+{
+"id": "820CzcUppI",
+"url": "https://manifold.markets/strutheo/if-assad-survives-will-lex-fridman",
+"question": "If Assad survives will Lex Fridman have him on the podcast by the end of 2026?",
+"closeTime": 1798779540000,
+"creator": "strutheo"
+},
+{
+"id": "8UUOZhSgC0",
+"url": "https://manifold.markets/EnopoletusHarding/will-russia-make-territorial-gains",
+"question": "Will Russia make territorial gains in Ukraine in 2026?",
+"closeTime": 1798761540000,
+"creator": "EnopoletusHarding"
+},
+{
+"id": "8cpLLpOyPU",
+"url": "https://manifold.markets/BnutBnuti/will-trump-be-assasinated-in-us",
+"question": "will trump be assasinated in US?",
+"closeTime": 1798679520000,
+"creator": "BnutBnuti"
+},
+{
+"id": "8n2sN0Szsu",
+"url": "https://manifold.markets/Jack1/will-hasan-piker-interview-gavin-ne",
+"question": "Will Hasan Piker Interview Gavin Newsom in 2026?",
+"closeTime": 1798761540000,
+"creator": "Jack1"
+},
+{
+"id": "8qA26SUtPR",
+"url": "https://manifold.markets/Noit/will-kemi-badenoch-face-a-vote-of-n",
+"question": "Will Kemi Badenoch face a Vote of No Confidence before 1st January 2027?",
+"closeTime": 1798761540000,
+"creator": "Noit"
+},
+{
+"id": "93mZIWl0RebTRJ7t55l7",
+"url": "https://manifold.markets/AlexandreK/will-ukraine-take-back-melitopol-by-9e6b0ff86b7b",
+"question": "Will Ukraine take back Melitopol by the end of 2026?",
+"closeTime": 1798837140000,
+"creator": "AlexandreK"
+},
+{
+"id": "958QspsRSQ",
+"url": "https://manifold.markets/strutheo/will-a-supreme-court-justice-retire-lhcI98yN9A",
+"question": "Will a Supreme Court Justice die, retire or be replaced for any reason by the end of 2026?",
+"closeTime": 1798779540000,
+"creator": "strutheo"
+},
+{
+"id": "98P5CLz5dt",
+"url": "https://manifold.markets/dog/will-any-sitting-supreme-court-just",
+"question": "Will any sitting Supreme Court justice leave before 2027?",
+"closeTime": 1798963140000,
+"creator": "dog"
+},
+{
+"id": "9AlIO2C8n0",
+"url": "https://manifold.markets/Panfilo/will-the-us-senates-filibuster-rule",
+"question": "Will the US Senate's Filibuster rule be in place as-is on February 20th, 2027?",
+"closeTime": 1803137640000,
+"creator": "Panfilo"
+},
+{
+"id": "9HJynsVTqJ8C6YQ21IrR",
+"url": "https://manifold.markets/cash/will-chuck-schumer-stop-being-senat-f4ed5c2837d7",
+"question": "Will Chuck Schumer stop being Senate Democratic Leader before the end of 2026?",
+"closeTime": 1798790340000,
+"creator": "cash"
+},
+{
+"id": "9KWkWMGY9Sq45x90DJRU",
+"url": "https://manifold.markets/mckiev/will-ukrainians-who-came-to-usa-und",
+"question": "Will Ukrainians who came to USA under the U4U program be allowed to legally stay for 5+ years?",
+"closeTime": 1805180340000,
+"creator": "mckiev"
+},
+{
+"id": "9LPpAtIQEn",
+"url": "https://manifold.markets/predyx_markets/bitcoin-below-55k-in-2026",
+"question": "Bitcoin below $55K in 2026?",
+"closeTime": 1798761540000,
+"creator": "predyx_markets"
+},
+{
+"id": "9OgZp6uC95",
+"url": "https://manifold.markets/IsaacKing/ai-2027-reports-predictions-borne-o",
+"question": "\"AI 2027\" report's predictions borne out by 2027?",
+"closeTime": 1798761540000,
+"creator": "IsaacKing"
+},
+{
+"id": "9OunqnRCP9",
+"url": "https://manifold.markets/Jack1/will-democrats-control-the-senate-o",
+"question": "Will Democrats control the senate on 1 Feb 2027?",
+"closeTime": 1801440000000,
+"creator": "Jack1"
+},
+{
+"id": "9cN6yR8nCq",
+"url": "https://manifold.markets/Techiavellian/clarity-act-signed-into-law-in-2026",
+"question": "CLARITY Act signed into law in 2026?",
+"closeTime": 1798761540000,
+"creator": "Techiavellian"
+},
+{
+"id": "9up0sS2sZC",
+"url": "https://manifold.markets/Mochi/us-recession-in-2026-n58CqsncS0",
+"question": "US recession in 2026?",
+"closeTime": 1798761540000,
+"creator": "Mochi"
+},
+{
+"id": "A0P8sZglZN",
+"url": "https://manifold.markets/McLovin/russia-x-ukraine-ceasefire-agreemen",
+"question": "Russia x Ukraine ceasefire agreement by Dec 31? [Polymarket]",
+"closeTime": 1798761540000,
+"creator": "McLovin"
+},
+{
+"id": "A92ctEO6Pd",
+"url": "https://manifold.markets/ScottO/china-will-directly-engage-in-a-mil",
+"question": "China will directly engage in a military conflict before end of 2026",
+"closeTime": 1798761540000,
+"creator": "ScottO"
+},
+{
+"id": "ABqfZfKmwg9gE2bQL4AQ",
+"url": "https://manifold.markets/alby/will-dogecoin-doge-be-adopted-as-le",
+"question": "Will Dogecoin ($DOGE) be adopted as legal tender in at least 1 country by 2027?",
+"closeTime": 1798732740000,
+"creator": "alby"
+},
+{
+"id": "ALcgNZ8P0y",
+"url": "https://manifold.markets/Jack1/will-trump-venezuela-in-2026",
+"question": "Will Trump visit Venezuela in 2026?",
+"closeTime": 1798761540000,
+"creator": "Jack1"
+},
+{
+"id": "AQIsLgzUU8",
+"url": "https://manifold.markets/Panfilo/will-there-be-a-separate-second-cea",
+"question": "Will there be a separate, second ceasefire in the America / Iran war in 2026?",
+"closeTime": 1798847940000,
+"creator": "Panfilo"
+},
+{
+"id": "AR0C5UCcSI",
+"url": "https://manifold.markets/BradleyNorthover/trump-will-die-before-2027",
+"question": "Trump will die before 2027",
+"closeTime": 1798761540000,
+"creator": "BradleyNorthover"
+},
+{
+"id": "AU5Lzc8zhz",
+"url": "https://manifold.markets/benjaminIkuta/will-the-us-military-control-at-lea",
+"question": "Will the US military control at least ten percent of Iran by area at any point during 2026?",
+"closeTime": 1798761540000,
+"creator": "benjaminIkuta"
+},
+{
+"id": "AUdIqgAspc",
+"url": "https://manifold.markets/ZviMowshowitz/will-anthropic-leave-aws-in-2026",
+"question": "Will Anthropic leave AWS in 2026?",
+"closeTime": 1798761540000,
+"creator": "ZviMowshowitz"
+},
+{
+"id": "AWQmxFBasHwx4k3di8cR",
+"url": "https://manifold.markets/CertaintyOfVictory/will-china-launch-a-fullscale-invas-e9672d6b84d1",
+"question": "Will China launch a full-scale invasion of Taiwan by the end of 2026?",
+"closeTime": 1798757940000,
+"creator": "CertaintyOfVictory"
+},
+{
+"id": "AcLdtI2Qdh",
+"url": "https://manifold.markets/brod/unemployment-rate-for-new-college-g",
+"question": "Unemployment rate for new college grads increases in 2026?",
+"closeTime": 1798761540000,
+"creator": "brod"
+},
+{
+"id": "AcSn2zLOLL",
+"url": "https://manifold.markets/Tyler31/will-us-inflation-be-3-or-more-in-2",
+"question": "Will US inflation be 3% or more in 2026?",
+"closeTime": 1799798340000,
+"creator": "Tyler31"
+},
+{
+"id": "Acy0pR5gd8",
+"url": "https://manifold.markets/cash/will-the-united-states-become-more-QNC56OL95y",
+"question": "Will the United States become more authoritarian in 2026?",
+"closeTime": 1806533940000,
+"creator": "cash"
+},
+{
+"id": "AqIsh2t4Aku39xm5KoUG",
+"url": "https://manifold.markets/PatrickAupperle/will-the-washington-state-assault-w",
+"question": "Will the Washington state assault weapons ban be struck down?",
+"closeTime": 1798790340000,
+"creator": "PatrickAupperle"
+},
+{
+"id": "Ayls9lZ02S",
+"url": "https://manifold.markets/Echale1Palo2Mas3Palo/will-the-cuban-communist-regime-col",
+"question": "Communist regime collapse in Cuba before January 1, 2027?",
+"closeTime": 1798761540000,
+"creator": "Echale1Palo2Mas3Palo"
+},
+{
+"id": "AzlASRusP2",
+"url": "https://manifold.markets/jim/will-the-sp-500-pass-100000-in-by-e",
+"question": "Will the S&P 500 Pass 100,000 by EOY 2026?",
+"closeTime": 1798761540000,
+"creator": "jim"
+},
+{
+"id": "BVXOyZMaBVChPq8CyxXV",
+"url": "https://manifold.markets/KongoLandwalker/will-russia-conduct-a-nuclear-weapo-5194a1fded40",
+"question": "Will Russia conduct a nuclear weapon test on Novaya Zemlya archipelago by 2027?",
+"closeTime": 1798844340000,
+"creator": "KongoLandwalker"
+},
+{
+"id": "CA6yILNgy8",
+"url": "https://manifold.markets/JoshuaWilkes/will-putin-attend-the-g20-summit-in-huRR9Z2U6n",
+"question": "Will Putin attend the G20 Summit in the US in 2026?",
+"closeTime": 1798761540000,
+"creator": "JoshuaWilkes"
+},
+{
+"id": "CCtAllIgUt",
+"url": "https://manifold.markets/Stralor/will-russia-deploy-troops-into-iran",
+"question": "Will Russia deploy troops into Iran by end 2026?",
+"closeTime": 1798761540000,
+"creator": "Stralor"
+},
+{
+"id": "CO0N90hQdd",
+"url": "https://manifold.markets/PhamThanhat/will-bitcoin-exceed-100000-before-d",
+"question": "Will Bitcoin exceed $100,000 before December 31, 2026?",
+"closeTime": 1798675140000,
+"creator": "PhamThanhat"
+},
+{
+"id": "CO8PS6ZCy6",
+"url": "https://manifold.markets/EnopoletusHarding/will-the-sp-500-daily-close-reach-a",
+"question": "Will the S&P 500 (Daily, Close) reach above 8000 at any point in 2026?",
+"closeTime": 1798761540000,
+"creator": "EnopoletusHarding"
+},
+{
+"id": "CQO5UAL0On",
+"url": "https://manifold.markets/DaftPunkRock/acx-2026-will-nvidias-stock-price-c",
+"question": "[ACX 2026] Will Nvidia's stock price close below $100 on any day in 2026?",
+"closeTime": 1798761540000,
+"creator": "DaftPunkRock"
+},
+{
+"id": "CR0Olyq6LP",
+"url": "https://manifold.markets/Khazar_Man_From_Turan/will-princeton-international-studen",
+"question": "Will Princeton international students lose legal status before 2027 (as is seemingly happening at Harvard)?",
+"closeTime": 1798761540000,
+"creator": "Khazar_Man_From_Turan"
+},
+{
+"id": "CUc06CU2NP",
+"url": "https://manifold.markets/noelifyltqPS/will-kanye-release-a-new-album-in-2",
+"question": "Will Kanye release a new album in 2026?",
+"closeTime": 1798761540000,
+"creator": "noelifyltqPS"
+},
+{
+"id": "CZultUqLNc",
+"url": "https://manifold.markets/szepvagy/will-a-sitting-us-supreme-court-jus",
+"question": "Will a sitting US Supreme Court justice resign or die in office before 2027?",
+"closeTime": 1798779599000,
+"creator": "szepvagy"
+},
+{
+"id": "CdyzQLQ8hs",
+"url": "https://manifold.markets/JaundicedBaboon/will-over-1000-gazans-be-killed-by",
+"question": "Will over 1000 Gazans be killed by the IDF in 2026?",
+"closeTime": 1798761540000,
+"creator": "JaundicedBaboon"
+},
+{
+"id": "CgZ0z25Zph",
+"url": "https://manifold.markets/AmadeoBordiga/will-merz-be-german-chancellor-on-j",
+"question": "Will Merz be German chancellor on Jan 1, 2027?",
+"closeTime": 1798847940000,
+"creator": "AmadeoBordiga"
+},
+{
+"id": "CszS9yuZzL",
+"url": "https://manifold.markets/vdb/will-trump-apologize-for-anything-i",
+"question": "Will Trump apologize for anything in 2026?",
+"closeTime": 1798761540000,
+"creator": "vdb"
+},
+{
+"id": "CuhPO5NQcN",
+"url": "https://manifold.markets/predyx_markets/bitcoin-below-48k-in-2026",
+"question": "Bitcoin below $48K in 2026?",
+"closeTime": 1798761540000,
+"creator": "predyx_markets"
+},
+{
+"id": "Dw8ckwAmi3GgVfmaZnFl",
+"url": "https://manifold.markets/zQ4Z82W/will-california-decriminalize-psilo",
+"question": "Will California decriminalize psilocybin mushrooms before 2027?",
+"closeTime": 1798790400000,
+"creator": "zQ4Z82W"
+},
+{
+"id": "DxJpflB1KwrKx5xk5hSn",
+"url": "https://manifold.markets/VasiliosDimitrakas/by-the-time-a-ceasefire-or-peace-tr",
+"question": "By the time a ceasefire or peace treaty between Ukraine & Russia is signed, will UA partially control Crimea?",
+"closeTime": 1798761540000,
+"creator": "VasiliosDimitrakas"
+},
+{
+"id": "Dy5TkEWKEpRwXDGJhsRe",
+"url": "https://manifold.markets/Dauur/will-the-percentage-of-us-adults-id",
+"question": "Will the percentage of U.S. adults identifying as Christian in the U.S. drop below 60% by the end of 2026?",
+"closeTime": 1798801140000,
+"creator": "Dauur"
+},
+{
+"id": "EQUgSURP82",
+"url": "https://manifold.markets/strutheo/comey-found-guilty-by-the-end-of-20",
+"question": "Comey found guilty by the end of 2026?",
+"closeTime": 1798761540000,
+"creator": "strutheo"
+},
+{
+"id": "EQtdtSLuph",
+"url": "https://manifold.markets/Meek/will-america-declare-war-on-iran-be",
+"question": "Will America declare war on Iran before the end of 2026",
+"closeTime": 1798761540000,
+"creator": "Meek"
+},
+{
+"id": "EU8NCRREL9",
+"url": "https://manifold.markets/bessarabov/will-sp-500-increase-in-2026",
+"question": "Will S&P 500 increase in 2026?",
+"closeTime": 1798847940000,
+"creator": "bessarabov"
+},
+{
+"id": "EZquUyn2du",
+"url": "https://manifold.markets/RyanScaletta/will-the-united-states-government-d",
+"question": "Will the United States government detonate a nuclear weapon anywhere in 2026?",
+"closeTime": 1798761540000,
+"creator": "RyanScaletta"
+},
+{
+"id": "EgPsRqtdE0",
+"url": "https://manifold.markets/JakobBrunker/did-elon-musk-control-the-satanz0gp",
+"question": "Did Elon Musk control the SATANZ0Gpo tripcode, used in 4chan's /pol/ board?",
+"closeTime": 1798761540000,
+"creator": "JakobBrunker"
+},
+{
+"id": "Egh5858OU0",
+"url": "https://manifold.markets/realTomBayes/nothing-ever-happens-2026",
+"question": "Nothing Ever Happens 2026",
+"closeTime": 1798779540000,
+"creator": "realTomBayes"
+},
+{
+"id": "EthPLt0LtO",
+"url": "https://manifold.markets/Plant/will-the-us-suffer-1000-confirmed-c",
+"question": "Will the US suffer 1000 confirmed combat deaths in Iran in 2026?",
+"closeTime": 1798761540000,
+"creator": "Plant"
+},
+{
+"id": "Eyp95Oztc2",
+"url": "https://manifold.markets/Noit/will-the-united-states-of-america-a",
+"question": "Will the United States of America abduct another head of state in 2026?",
+"closeTime": 1798761540000,
+"creator": "Noit"
+},
+{
+"id": "EyzPRqqOZA",
+"url": "https://manifold.markets/Simon74fe/will-tesla-deliveries-increase-in-2",
+"question": "Will Tesla increase deliveries in 2026?",
+"closeTime": 1798761540000,
+"creator": "Simon74fe"
+},
+{
+"id": "EzZLpOlLCg",
+"url": "https://manifold.markets/HillaryClinton/russia-x-ukraine-ceasefire-in-2026",
+"question": "Russia x Ukraine ceasefire in 2026?",
+"closeTime": 1798761540000,
+"creator": "HillaryClinton"
+},
+{
+"id": "FDBSIwidgGcWch6Jh6kV",
+"url": "https://manifold.markets/RorySchepp/will-bibi-netanyahu-lose-power-duri",
+"question": "Will Bibi Netanyahu lose power during or in the aftermath after the 2023 Hamas-Israel War",
+"closeTime": 1798775940000,
+"creator": "RorySchepp"
+},
+{
+"id": "FyQuICrJuwfFGOEWeb3j",
+"url": "https://manifold.markets/BenLutz/will-kaliningrad-achieve-independen",
+"question": "Will Kaliningrad achieve independence from Russia by the end of 2026?",
+"closeTime": 1798779540000,
+"creator": "BenLutz"
+},
+{
+"id": "GHfKEAFO1frXZWfb2PDM",
+"url": "https://manifold.markets/Ernie/will-tsmc-have-a-market-cap-of-1-tr-3e65e9603b25",
+"question": "Will TSMC have a market cap of $1 trillion or more at the end of 2026?",
+"closeTime": 1798779540000,
+"creator": "Ernie"
+},
+{
+"id": "GUDfwZKVbWvmo95OXbTo",
+"url": "https://manifold.markets/asmith/will-the-war-in-ukraine-end-before-0b0a5ac6c165",
+"question": "Will the war in Ukraine end before 2027?",
+"closeTime": 1798876740000,
+"creator": "asmith"
+},
+{
+"id": "HHMBpzWwI67BHLS82G1P",
+"url": "https://manifold.markets/FedorShabashev/will-russia-invade-any-nato-country-e02c9aeb4b88",
+"question": "Will Russia invade any NATO country before 31 December 2026?",
+"closeTime": 1798761540000,
+"creator": "FedorShabashev"
+},
+{
+"id": "HdLcgYF0uQfJdtMZKHCh",
+"url": "https://manifold.markets/cash/will-xi-jinping-cease-to-be-chinas",
+"question": "Will Xi Jinping cease to be China's leader before the end of 2026?",
+"closeTime": 1798790340000,
+"creator": "cash"
+},
+{
+"id": "HxnNfufb0ENJcC3xGiIT",
+"url": "https://manifold.markets/Daniel_MC/did-israel-bomb-the-evacuation-rout",
+"question": "$300M subsidy: Did Israel bomb an evacuation route?",
+"closeTime": 1798721940000,
+"creator": "Daniel_MC"
+},
+{
+"id": "I09yNs5zt9oAxMSf6ch4",
+"url": "https://manifold.markets/asmith/will-lukashenko-still-be-the-presid-f8b990c08892",
+"question": "Will Lukashenko still be the President of Belarus by the end of 2026?",
+"closeTime": 1798876740000,
+"creator": "asmith"
+},
+{
+"id": "I8cOuPCQ6l",
+"url": "https://manifold.markets/Bandors/1000-american-troops-inside-iran-by",
+"question": "1000 american troops inside Iran by EOY?",
+"closeTime": 1798761540000,
+"creator": "Bandors"
+},
+{
+"id": "ILhcU5uI8C",
+"url": "https://manifold.markets/causal_agency/will-any-us-ally-boycott-the-2026-f",
+"question": "Will any U.S. ally boycott the 2026 FIFA World Cup in the U.S.?",
+"closeTime": 1798761540000,
+"creator": "causal_agency"
+},
+{
+"id": "IlLd69hAEs",
+"url": "https://manifold.markets/mink/will-trump-attac-greenland-in-2026",
+"question": "Will Trump attack Greenland in 2026?",
+"closeTime": 1798761540000,
+"creator": "mink"
+},
+{
+"id": "IsqPEcnnER",
+"url": "https://manifold.markets/copiumarc/hentavirus-pandemic-in-2026",
+"question": "Hantavirus pandemic in 2026?",
+"closeTime": 1798761540000,
+"creator": "copiumarc"
+},
+{
+"id": "IuzqzI29AL",
+"url": "https://manifold.markets/DaftPunkRock/if-democrats-win-the-house-in-the-2",
+"question": "If Democrats win the House in the 2026 midterms, will they also win the Senate?",
+"closeTime": 1796169540000,
+"creator": "DaftPunkRock"
+},
+{
+"id": "IvCwScqBduV7jlgOIVRc",
+"url": "https://manifold.markets/Elspeth/will-the-republican-party-win-the-2-10b747429652",
+"question": "Will the republican party win the 2026 texas gubernatorial election?",
+"closeTime": 1798696740000,
+"creator": "Elspeth"
+},
+{
+"id": "J4LHRPMCKS818jPOVdqT",
+"url": "https://manifold.markets/Dustin/will-donald-trump-be-pardoned-befor",
+"question": "Will Donald Trump be pardoned before 2027?",
+"closeTime": 1798783200000,
+"creator": "Dustin"
+},
+{
+"id": "Kf3eb51CKkDDbme3kakH",
+"url": "https://manifold.markets/Snarflak/will-trump-flee-to-russia",
+"question": "Will Trump flee to Russia?",
+"closeTime": 1798779540000,
+"creator": "Snarflak"
+},
+{
+"id": "L6Lll6upng",
+"url": "https://manifold.markets/kl938/will-the-democratic-party-candidate-SPUCggzPdP",
+"question": "Will the Democratic Party candidate win the 2026 Senate race in Maine?",
+"closeTime": 1798779540000,
+"creator": "kl938"
+},
+{
+"id": "L6QnRPpSlC",
+"url": "https://manifold.markets/cash/will-russia-militarily-seize-narva-qdzgI9hyyh",
+"question": "Will Russia militarily seize Narva, Estonia before the end of 2026?",
+"closeTime": 1798761540000,
+"creator": "cash"
+},
+{
+"id": "L8EuhySAdp",
+"url": "https://manifold.markets/MikhailTal/catl-receives-license-renewal-for-y-UAuzRyILcp",
+"question": "CATL receives license renewal for Yichun Lithium mine by end of Feb 2027?",
+"closeTime": 1803859140000,
+"creator": "MikhailTal"
+},
+{
+"id": "LASsdLuUcU",
+"url": "https://manifold.markets/rayman2000/will-the-german-afd-be-in-power-on",
+"question": "Will the German AfD be in power on state (Bundesland) level by the end of 2026?",
+"closeTime": 1798761540000,
+"creator": "rayman2000"
+},
+{
+"id": "Lp629u9g2C",
+"url": "https://manifold.markets/Jack1/democrats-win-texas-michigan-alaska",
+"question": "Democrats win Texas, Michigan, Alaska and Maine for Senate in 2026?",
+"closeTime": 1798761540000,
+"creator": "Jack1"
+},
+{
+"id": "LyPEtt0RhI",
+"url": "https://manifold.markets/cash/will-the-bank-of-japan-have-a-negat-9uInydIhNI",
+"question": "Will the Bank of Japan have a negative interest rate again before the end of 2026?",
+"closeTime": 1798790340000,
+"creator": "cash"
+},
+{
+"id": "M70bmZbSax0ycaju5OM0",
+"url": "https://manifold.markets/NathanDickson/will-the-russia-ukraine-conflict-re-13cc8891ac6b",
+"question": "Will the Russia Ukraine conflict reach a conclusion by the end of 2026?",
+"closeTime": 1798786740000,
+"creator": "NathanDickson"
+},
+{
+"id": "MSTt58I1Sfx9l5JzjhIA",
+"url": "https://manifold.markets/AndyMartin/will-governor-kathy-hochul-complete",
+"question": "Will Kathy Hochul complete her current term in office as Governor of NY?",
+"closeTime": 1798779540000,
+"creator": "AndyMartin"
+},
+{
+"id": "MrSoz15sYBHcbsTThPJJ",
+"url": "https://manifold.markets/bohaska/will-india-start-building-another-m",
+"question": "Will India start building another military base in the southwest Indian Ocean before end of 2026?",
+"closeTime": 1798732740000,
+"creator": "bohaska"
+},
+{
+"id": "NCq6NnyROp",
+"url": "https://manifold.markets/RobinGreen/will-there-be-a-startup-with-zero-h",
+"question": "Will there be a startup with zero human employees in 2026?",
+"closeTime": 1798761540000,
+"creator": "RobinGreen"
+},
+{
+"id": "NP29cpyylP",
+"url": "https://manifold.markets/ChillGuy123/will-any-epstein-client-be-arrested",
+"question": "Will any Epstein client be arrested in 2026?",
+"closeTime": 1798761540000,
+"creator": "ChillGuy123"
+},
+{
+"id": "NSj6qSxTtD4ke0BPQoNz",
+"url": "https://manifold.markets/GiacomoT/will-mitch-mcconnell-resign-or-die",
+"question": "Will Mitch McConnell resign or die before the end of his term in 2027?",
+"closeTime": 1799125140000,
+"creator": "GiacomoT"
+},
+{
+"id": "NmL2UAm1jhEPjNAwRb4g",
+"url": "https://manifold.markets/PhatFree/will-meta-announce-its-shutting-dow-c208272bdc12",
+"question": "Will meta announce Its shutting down its metaverse by the end of 2026?",
+"closeTime": 1798761540000,
+"creator": "PhatFree"
+},
+{
+"id": "NmSBDD5dkrr3iOlBIRM8",
+"url": "https://manifold.markets/Joshua/will-steppe-nomads-wipe-out-humanit",
+"question": "Will Steppe Nomads wipe out humanity before 2027?",
+"closeTime": 1798876740000,
+"creator": "Joshua"
+},
+{
+"id": "Nt0ql0lZRR",
+"url": "https://manifold.markets/TenShino/will-germany-withdraw-its-gold-from",
+"question": "Will Germany withdraw its gold from US vaults?",
+"closeTime": 1798761540000,
+"creator": "TenShino"
+},
+{
+"id": "O26C9qg090",
+"url": "https://manifold.markets/brod/australia-reverses-under16-social-m",
+"question": "Australia reverses under-16 social media ban in 2026?",
+"closeTime": 1798761540000,
+"creator": "brod"
+},
+{
+"id": "O92zs0lth9",
+"url": "https://manifold.markets/Noit/will-the-uk-enter-a-technical-reces-ZdlApLdgUt",
+"question": "Will the UK enter a technical recession in 2026?",
+"closeTime": 1798761540000,
+"creator": "Noit"
+},
+{
+"id": "OC08nESEp2",
+"url": "https://manifold.markets/Chimpy/will-trump-meet-kim-jong-un-before",
+"question": "🇺🇸 Will Trump meet Kim Jong Un before end of 2026? 🇰🇵",
+"closeTime": 1798779540000,
+"creator": "Chimpy"
+},
+{
+"id": "OO5pyhQRqR",
+"url": "https://manifold.markets/cash/will-benjamin-netanyahu-cease-to-be-8SN8yAOLI0",
+"question": "Will Benjamin Netanyahu cease to be Prime Minister of Israel before the end of 2026?",
+"closeTime": 1798790340000,
+"creator": "cash"
+},
+{
+"id": "OOOyuq0nhz",
+"url": "https://manifold.markets/BoltonBailey/us-military-drone-strike-in-mexico",
+"question": "US Military drone strike in Mexico before EOY2026?",
+"closeTime": 1798761540000,
+"creator": "BoltonBailey"
+},
+{
+"id": "OS0APhLzS9",
+"url": "https://manifold.markets/AshDorsey/will-nearly-all-of-the-epstein-file",
+"question": "Will nearly all of the Epstein files be released before 2027?",
+"closeTime": 1798865940000,
+"creator": "AshDorsey"
+},
+{
+"id": "OZ2NO622sq",
+"url": "https://manifold.markets/ian/alcatraz-transfer-language-passed-b",
+"question": "Alcatraz transfer language passed by either chamber by end of 2026?",
+"closeTime": 1798761540000,
+"creator": "ian"
+},
+{
+"id": "OZyg8Olyy2",
+"url": "https://manifold.markets/Bandors/will-america-annex-any-part-of-cana",
+"question": "Will America annex any part of Canada before the end of 2026?",
+"closeTime": 1798736340000,
+"creator": "Bandors"
+},
+{
+"id": "OgUy9yu6Zy",
+"url": "https://manifold.markets/spider/will-the-russiaukraine-war-end-befo-NN0qZO8E6t",
+"question": "Will the Russia-Ukraine war end before the end of 2026?",
+"closeTime": 1801457940000,
+"creator": "spider"
+},
+{
+"id": "OlOgURSs88",
+"url": "https://manifold.markets/Tripping/will-trump-nuke-iran-before-2027",
+"question": "Will Trump nuke Iran before 2027?",
+"closeTime": 1798761540000,
+"creator": "Tripping"
+},
+{
+"id": "Ophn0RNnRL",
+"url": "https://manifold.markets/GregF/will-bitcoin-be-higher-than-77777-a",
+"question": "Will Bitcoin be higher than $77,777 at the end of 2026?",
+"closeTime": 1798761540000,
+"creator": "GregF"
+},
+{
+"id": "Oq9QQL8s9s",
+"url": "https://manifold.markets/KrishPatel/will-the-sp500-be-greater-than-8000",
+"question": "Will the S&P500 be greater than $8000 in 2026?",
+"closeTime": 1798779540000,
+"creator": "KrishPatel"
+},
+{
+"id": "OySsLQyqz5",
+"url": "https://manifold.markets/SefiKronenberg/israel-holds-free-and-fair-election",
+"question": "Israel holds free and fair election in 2026?",
+"closeTime": 1798779540000,
+"creator": "SefiKronenberg"
+},
+{
+"id": "P5hNAICCzZ",
+"url": "https://manifold.markets/Hermann/will-russia-control-100-of-donbass",
+"question": "Will Russia control 100% of donbass before 2027 ?",
+"closeTime": 1798761540000,
+"creator": "Hermann"
+},
+{
+"id": "P8AdyLIUhs",
+"url": "https://manifold.markets/Jubs/alberta-votes-yes-in-independence-r",
+"question": "Alberta votes YES in independence referendum by end of 2026?",
+"closeTime": 1798715460000,
+"creator": "Jubs"
+},
+{
+"id": "P8ydInqcqR",
+"url": "https://manifold.markets/JTX/gold-to-6k-by-end-of-2026",
+"question": "Gold above $6k in 2026?",
+"closeTime": 1798761540000,
+"creator": "JTX"
+},
+{
+"id": "PA2uP5tEEd",
+"url": "https://manifold.markets/Bayesian/sp-500-up-100-in-2026",
+"question": "S&P 500 up 100% in 2026?",
+"closeTime": 1798761540000,
+"creator": "Bayesian"
+},
+{
+"id": "PAn0CQLsLc",
+"url": "https://manifold.markets/JamesGrugett/will-trump-significantly-expand-hig",
+"question": "Will Trump significantly expand high-skill immigration by the end of 2026?",
+"closeTime": 1798790340000,
+"creator": "JamesGrugett"
+},
+{
+"id": "PLNURhuR85",
+"url": "https://manifold.markets/xjp/will-china-bomb-any-country-by-the",
+"question": "Will China bomb any country by the end of 2026?",
+"closeTime": 1798761540000,
+"creator": "xjp"
+},
+{
+"id": "PPCndENqPp",
+"url": "https://manifold.markets/bens/will-the-us-conduct-a-nuclear-test-6ZQnQz2C2U",
+"question": "Will the US conduct a nuclear test in 2026?",
+"closeTime": 1798761540000,
+"creator": "bens"
+},
+{
+"id": "PUu5UdNR6E",
+"url": "https://manifold.markets/Jack1/another-fed-rate-hike-in-2026",
+"question": "Another Fed Rate Hike in 2026?",
+"closeTime": 1798761540000,
+"creator": "Jack1"
+},
+{
+"id": "PZnRZhLUgt",
+"url": "https://manifold.markets/itsTomekK/will-2026-be-the-hottest-year-on-re",
+"question": "Will 2026 be the hottest year on record?",
+"closeTime": 1803805200000,
+"creator": "itsTomekK"
+},
+{
+"id": "PZsgQR35BcfjuNallqYT",
+"url": "https://manifold.markets/f/will-cannibis-be-federally-legalize",
+"question": "Will Cannibis be federally legalized in America by 2026?",
+"closeTime": 1798786740000,
+"creator": "f"
+},
+{
+"id": "PchIlhLngg",
+"url": "https://manifold.markets/UnspecifiedPerson/will-israel-withdraw-from-the-buffe-dN8psudLz0",
+"question": "Will Israel withdraw from the buffer zone with Syria by EOY 2026?",
+"closeTime": 1798865940000,
+"creator": "UnspecifiedPerson"
+},
+{
+"id": "Pgl6hR6u5N",
+"url": "https://manifold.markets/JannesH/us-ground-invasion-of-iran-before-t",
+"question": "US ground invasion of Iran before the end of 2026?",
+"closeTime": 1798790340000,
+"creator": "JannesH"
+},
+{
+"id": "Pqqzp8lIL2",
+"url": "https://manifold.markets/AmmonLam/wil-trump-be-impeached-by-the-house-ORIc658Qpc",
+"question": "Wil Trump be impeached by the House in 2026?",
+"closeTime": 1798779540000,
+"creator": "AmmonLam"
+},
+{
+"id": "Pys2c55L59",
+"url": "https://manifold.markets/CalibratedGhosts/will-us-unemployment-exceed-45-at-a",
+"question": "Will US unemployment exceed 4.5% at any point in 2026?",
+"closeTime": 1798761600000,
+"creator": "CalibratedGhosts"
+},
+{
+"id": "Q2Ilz5Zyug",
+"url": "https://manifold.markets/bessarabov/will-putin-visit-the-usa-in-2026",
+"question": "Will Putin visit the USA in 2026",
+"closeTime": 1798934340000,
+"creator": "bessarabov"
+},
+{
+"id": "Q8uyZnzdnq",
+"url": "https://manifold.markets/CivilizedGuy/will-marco-rubio-be-the-united-stat",
+"question": "Will Marco Rubio be the United States Secretary of State on 12/31/2026?",
+"closeTime": 1798761540000,
+"creator": "CivilizedGuy"
+},
+{
+"id": "Q9h0ytCuPP",
+"url": "https://manifold.markets/predyx_markets/trump-meets-xi-jinping-again-in-202",
+"question": "Trump meets Xi Jinping again in 2026?",
+"closeTime": 1798761540000,
+"creator": "predyx_markets"
+},
+{
+"id": "QA8095lELc",
+"url": "https://manifold.markets/epic/will-a-nuclear-bomb-be-thrown-in-20",
+"question": "will a nuclear bomb be thrown in 2026?",
+"closeTime": 1798761540000,
+"creator": "epic"
+},
+{
+"id": "QLCgECul9d",
+"url": "https://manifold.markets/MikhailTal/will-china-reinstate-or-enforce-exp",
+"question": "Will China reinstate or enforce export restrictions on gallium after current suspension expires in Nov?",
+"closeTime": 1798761540000,
+"creator": "MikhailTal"
+},
+{
+"id": "QVPb8yrukyYnTMDyXxTo",
+"url": "https://manifold.markets/chrisjbillington/will-israel-win-the-2023-israelhama",
+"question": "Will Israel win the 2023 Israel–Hamas war?",
+"closeTime": 1801439940000,
+"creator": "chrisjbillington"
+},
+{
+"id": "QkHyPS7K1NpldDpPyrMP",
+"url": "https://manifold.markets/strutheo/if-trump-wins-will-the-usa-pass-leg",
+"question": "If Trump wins, will the USA pass legislation to leave NATO by EOY 2026?",
+"closeTime": 1798779540000,
+"creator": "strutheo"
+},
+{
+"id": "QpEIX5tQfN5ZODbMztoB",
+"url": "https://manifold.markets/PeterF/if-trump-wins-will-the-us-enter-a-r",
+"question": "If Trump wins, will the US enter a recession [WARNING: as measured by Sahm rule] before 2027?",
+"closeTime": 1801555140000,
+"creator": "PeterF"
+},
+{
+"id": "Qqc8yyyhQP",
+"url": "https://manifold.markets/Bayesian/will-the-metr-50-time-horizon-be-am",
+"question": "Will the METR 50% Time Horizon be \"ambiguous\" at the end of 2026?",
+"closeTime": 1798779540000,
+"creator": "Bayesian"
+},
+{
+"id": "Qt0tRA2dES",
+"url": "https://manifold.markets/Jack1/kristi-noem-impeached-by-the-house",
+"question": "Kristi Noem impeached by the house in 2026?",
+"closeTime": 1798761540000,
+"creator": "Jack1"
+},
+{
+"id": "QtcdCA5Nuu",
+"url": "https://manifold.markets/HillaryClinton/will-tim-walz-finish-his-term-as-go",
+"question": "Will Tim Walz Finish his term as Governor of Minnesota?",
+"closeTime": 1799107140000,
+"creator": "HillaryClinton"
+},
+{
+"id": "R2pZPZgQSs",
+"url": "https://manifold.markets/BillClintonBubba/will-spacex-stock-crash-and-close-b",
+"question": "Will SpaceX stock crash and close below $100 anyday in 2026?",
+"closeTime": 1798761540000,
+"creator": "BillClintonBubba"
+},
+{
+"id": "R522plARA9",
+"url": "https://manifold.markets/S1mple/will-any-nuclear-weapons-be-used-by",
+"question": "Will any Nuclear weapons be used by the US till 2027?",
+"closeTime": 1798761540000,
+"creator": "S1mple"
+},
+{
+"id": "R5PcsuunlA",
+"url": "https://manifold.markets/bens/will-trump-remove-a-universitys-tax",
+"question": "Will Trump remove a university's tax exempt status by the end of 2026?",
+"closeTime": 1798761540000,
+"creator": "bens"
+},
+{
+"id": "R9aftRy5npYtOi9MGt28",
+"url": "https://manifold.markets/benjaminIkuta/will-costcos-in-us-raise-the-price-19039ae96bcc",
+"question": "Will Costcos in US raise the price of their hot dog and soda combo above $1.50 before the end of 2026?",
+"closeTime": 1798754340000,
+"creator": "benjaminIkuta"
+},
+{
+"id": "RAA2CLNCc0",
+"url": "https://manifold.markets/Jack1/kash-patel-gone-as-fbi-director-bef",
+"question": "Kash Patel gone as FBI Director before EOY 2026?",
+"closeTime": 1798761480000,
+"creator": "Jack1"
+},
+{
+"id": "RAzy00qQ6A",
+"url": "https://manifold.markets/PGdCIN9/will-ice-use-85-of-its-30-billion-b",
+"question": "ICE spends at least $25.5 billion in 2025? (budget estimate: $30 billion)",
+"closeTime": 1798761540000,
+"creator": "PGdCIN9"
+},
+{
+"id": "REC5CnSSSz",
+"url": "https://manifold.markets/DaftPunkRock/acx-2026-will-china-attack-or-block",
+"question": "[ACX 2026] Will China attack or blockade Taiwan during 2026?",
+"closeTime": 1798761540000,
+"creator": "DaftPunkRock"
+},
+{
+"id": "RQ82y9Uhc2",
+"url": "https://manifold.markets/predyx_markets/sp-500-hits-8000-in-2026",
+"question": "S&P 500 hits 8000 in 2026?",
+"closeTime": 1798761540000,
+"creator": "predyx_markets"
+},
+{
+"id": "RRqUqQCqhZ",
+"url": "https://manifold.markets/CommanderKeen/will-russia-experience-widespread-q-6yCqcP2O8I",
+"question": "Will Russia experience widespread queues for basic goods in at least 3 major cities in 2025 or 2026?",
+"closeTime": 1798761540000,
+"creator": "CommanderKeen"
+},
+{
+"id": "RRsc6OSLsL",
+"url": "https://manifold.markets/Louis_Z/ai-bubble-pops-in-2026",
+"question": "AI bubble pops in 2026?",
+"closeTime": 1798761540000,
+"creator": "Louis_Z"
+},
+{
+"id": "RZ8Zn5NSqu",
+"url": "https://manifold.markets/ZenSpam/is-mojtaba-khamenei-already-dead",
+"question": "Is Mojtaba Khamenei already dead?",
+"closeTime": 1798737660000,
+"creator": "ZenSpam"
+},
+{
+"id": "RZC6hdUtgs",
+"url": "https://manifold.markets/Anthem/will-the-irkutsk-antiplague-institu",
+"question": "Will the Irkutsk Anti-Plague institute incident turn into an outbreak?",
+"closeTime": 1798809360000,
+"creator": "Anthem"
+},
+{
+"id": "Rf7QcqwwdfxErgLeI4z1",
+"url": "https://manifold.markets/alby/will-the-vatican-state-stop-its-dip",
+"question": "Will the Vatican State stop its diplomatic relationship with Taiwan and establish one with China before 2027?",
+"closeTime": 1798732740000,
+"creator": "alby"
+},
+{
+"id": "Rg0SuSChlN",
+"url": "https://manifold.markets/AIBear/will-the-us-put-robots-on-the-groun",
+"question": "Will the US put (ro)bots on the ground in Iran in 2026?",
+"closeTime": 1798761540000,
+"creator": "AIBear"
+},
+{
+"id": "Rpchg850Qh",
+"url": "https://manifold.markets/Jack1/will-tesla-trade-above-500-in-2026",
+"question": "Will Tesla trade above $500 in 2026?",
+"closeTime": 1798761540000,
+"creator": "Jack1"
+},
+{
+"id": "Rq0zZ6P56P",
+"url": "https://manifold.markets/vdb/will-apple-release-a-new-product-li",
+"question": "Will Apple release a new product line before 2027? [Polymarket]",
+"closeTime": 1798761540000,
+"creator": "vdb"
+},
+{
+"id": "RqZ5ltIL2t",
+"url": "https://manifold.markets/bens/will-the-us-deploy-1000-ground-troo",
+"question": "Will the U.S. deploy 1000 ground troops in Iran in 2026?",
+"closeTime": 1798761540000,
+"creator": "bens"
+},
+{
+"id": "RsCIh9UNyl",
+"url": "https://manifold.markets/GammaLaser/will-iran-enrich-uranium-to-weapons",
+"question": "Will Iran enrich uranium to weapons grade in 2026?",
+"closeTime": 1798761540000,
+"creator": "GammaLaser"
+},
+{
+"id": "RttECsnLuS",
+"url": "https://manifold.markets/EvanDaniel/will-iran-acquire-a-nuclear-weapon-0LzRhnhyPd",
+"question": "Will Iran acquire a nuclear weapon by end of 2026?",
+"closeTime": 1798761540000,
+"creator": "EvanDaniel"
+},
+{
+"id": "Rz6NLhnAII",
+"url": "https://manifold.markets/predyx_markets/will-jesus-christ-return-in-2026",
+"question": "Will Jesus Christ return in 2026?",
+"closeTime": 1798761540000,
+"creator": "predyx_markets"
+},
+{
+"id": "S2NgyIphEA",
+"url": "https://manifold.markets/Apple_/will-any-part-of-canada-join-the-un-qSsNgStZCN",
+"question": "Will any part of Canada join the United States by 2027?",
+"closeTime": 1798865940000,
+"creator": "Apple_"
+},
+{
+"id": "S9Cn6StAdP",
+"url": "https://manifold.markets/AndreyFrantsev/russoukrainian-war-ends-officially",
+"question": "Russo-Ukrainian War ends officially by end of 2026?",
+"closeTime": 1798761540000,
+"creator": "AndreyFrantsev"
+},
+{
+"id": "SAIUNdCI8U",
+"url": "https://manifold.markets/MikhailTal/donut-battery-is-essentially-lithiu",
+"question": "Donut Battery is essentially Lithium free?",
+"closeTime": 1798775400000,
+"creator": "MikhailTal"
+},
+{
+"id": "SAt22Eyhhp",
+"url": "https://manifold.markets/jim/blue-origin-worth-more-than-spacex",
+"question": "Blue Origin worth more than SpaceX by EOY 2026?",
+"closeTime": 1798714740000,
+"creator": "jim"
+},
+{
+"id": "SEIqqlqg8L",
+"url": "https://manifold.markets/FlipPidot/will-polyoptions-volume-hit-100-mil",
+"question": "Will Polyoptions volume hit $100 million in 2026?",
+"closeTime": 1798761540000,
+"creator": "FlipPidot"
+},
+{
+"id": "SZsB1qAWRIePvv49d51f",
+"url": "https://manifold.markets/cantankerous/if-trump-wins-will-he-appoint-anoth",
+"question": "If Trump wins, will he appoint another SCOTUS Justice before 2027?",
+"closeTime": 1798779540000,
+"creator": "cantankerous"
+},
+{
+"id": "ShncZEzc9Z",
+"url": "https://manifold.markets/Tetraspace/if-the-us-strikes-iran-by-march-31",
+"question": "If the US strikes Iran by March 31, 2026, will the Iranian regime fall in 2026?",
+"closeTime": 1798761540000,
+"creator": "Tetraspace"
+},
+{
+"id": "SzSuIPsR60",
+"url": "https://manifold.markets/LeoA/will-the-us-confirm-that-aliens-exi",
+"question": "Will the U.S. confirm that aliens exist before 2027?",
+"closeTime": 1798761540000,
+"creator": "LeoA"
+},
+{
+"id": "TB7h70Km383fiSin5mBn",
+"url": "https://manifold.markets/jBosc/if-trump-wins-will-the-us-score-low",
+"question": "If Trump wins, will the US score lower in the 2026 World Press Freedom, Corruption Perceptions AND Democracy Indexes?",
+"closeTime": 1798747140000,
+"creator": "jBosc"
+},
+{
+"id": "TNGAgXYXrKA2CUbPzBoZ",
+"url": "https://manifold.markets/JimAusman/will-iran-test-fire-a-nuclear-weapo",
+"question": "Will Iran test fire a nuclear weapon before the end of 2026?",
+"closeTime": 1798790340000,
+"creator": "JimAusman"
+},
+{
+"id": "TQwfVMKCjmUlyfa1b29Z",
+"url": "https://manifold.markets/cash/pink-tide-will-leftists-still-gover",
+"question": "Pink Tide: Will leftists still govern a majority of Latin American countries at the end of 2026?",
+"closeTime": 1798790340000,
+"creator": "cash"
+},
+{
+"id": "TfMQyx7qdc4cVDg0A6zY",
+"url": "https://manifold.markets/aucwa/will-canada-have-a-universal-base-i",
+"question": "Will Canada have a universal base income by 2026?",
+"closeTime": 1798779540000,
+"creator": "aucwa"
+},
+{
+"id": "TgJKkRNOpkI38lmS8F7G",
+"url": "https://manifold.markets/AmmonLam/will-russia-nuke-ukraine-before-the-82e32a1a6a86",
+"question": "Will Russia nuke Ukraine before the end of 2026?",
+"closeTime": 1798696740000,
+"creator": "AmmonLam"
+},
+{
+"id": "U0dSs2nR5L",
+"url": "https://manifold.markets/JimD/will-mojtaba-khamenei-be-irans-supr",
+"question": "Will Mojtaba Khamenei be Iran’s supreme leader on 1 January 2027?",
+"closeTime": 1798847940000,
+"creator": "JimD"
+},
+{
+"id": "U55gtI0lnE",
+"url": "https://manifold.markets/predyx_markets/bitcoin-150k-in-2026",
+"question": "Bitcoin $150K in 2026?",
+"closeTime": 1798790340000,
+"creator": "predyx_markets"
+},
+{
+"id": "U6EcNQ605d",
+"url": "https://manifold.markets/MachiNi/will-trump-and-khamenei-meet-in-202",
+"question": "Will Trump and Iran’s Supreme Leader meet in 2026?",
+"closeTime": 1798761540000,
+"creator": "MachiNi"
+},
+{
+"id": "U9qutUgyEL",
+"url": "https://manifold.markets/Ding/will-china-invade-taiwan-before-202-5SQ6QyRZlS",
+"question": "Will China invade Taiwan before 2027",
+"closeTime": 1798761540000,
+"creator": "Ding"
+},
+{
+"id": "UAycUOyds2",
+"url": "https://manifold.markets/Marnix/will-times-2026-person-of-the-year-CRgps2qQQ2",
+"question": "Will TIME's 2026 Person of the Year be EXCLUSIVELY one person?",
+"closeTime": 1798761540000,
+"creator": "Marnix"
+},
+{
+"id": "US5qOI686S",
+"url": "https://manifold.markets/SeekingEternity/will-tsla-outperform-the-sp-500-in",
+"question": "Will TSLA outperform the S&P 500 in 2026?",
+"closeTime": 1798761540000,
+"creator": "SeekingEternity"
+},
+{
+"id": "UU2gIo7bcwJ0iADMfrPu",
+"url": "https://manifold.markets/dionisos/will-the-next-president-of-france-b",
+"question": "Will the next president of France be from a left-wing party",
+"closeTime": 1799189940000,
+"creator": "dionisos"
+},
+{
+"id": "UdcA9P2ts6",
+"url": "https://manifold.markets/sama/will-spacex-spcx-stock-drop-below-1",
+"question": "Will SpaceX (SPCX) stock drop below $100 by the end of 2026?",
+"closeTime": 1798761540000,
+"creator": "sama"
+},
+{
+"id": "UpUIElLISS",
+"url": "https://manifold.markets/bens/will-congress-pass-sweeping-deregul",
+"question": "Will Congress pass sweeping deregulatory measures by the end of 2026?",
+"closeTime": 1798779540000,
+"creator": "bens"
+},
+{
+"id": "UsRcIS9OqE",
+"url": "https://manifold.markets/lostmyhippo/will-the-gold-price-drop-below-35ko",
+"question": "Will the gold price drop below $3.5k/ounce in 2026?",
+"closeTime": 1798761540000,
+"creator": "lostmyhippo"
+},
+{
+"id": "UtgtL9ORLq",
+"url": "https://manifold.markets/Gemc/ukraine-war-ends-in-2026",
+"question": "Ukraine war ends in 2026?",
+"closeTime": 1798761540000,
+"creator": "Gemc"
+},
+{
+"id": "UytR2USdyQ",
+"url": "https://manifold.markets/chrisjbillington/will-syria-hold-legitimate-election",
+"question": "Will Syria hold legitimate national leadership elections before the end of 2026?",
+"closeTime": 1798808340000,
+"creator": "chrisjbillington"
+},
+{
+"id": "W5UCUCt0AA2ROYIu9mAM",
+"url": "https://manifold.markets/Daniel_MC/is-hamas-using-alshifa-hospital-as",
+"question": "Was Hamas using Al-Shifa as a shield for a command centre?",
+"closeTime": 1798808340000,
+"creator": "Daniel_MC"
+},
+{
+"id": "WYxaIoEikuIIKPNQrt2N",
+"url": "https://manifold.markets/strutheo/if-trump-wins-will-the-usa-pass-mor",
+"question": "If Trump Wins, will the USA pass more Ukraine aid at least once before the 2026 midterm elections?",
+"closeTime": 1798779540000,
+"creator": "strutheo"
+},
+{
+"id": "XqpSJYxr2XDduGNzaoYH",
+"url": "https://manifold.markets/zQ4Z82W/will-california-decriminalize-lsd-b",
+"question": "Will California decriminalize LSD before 2027?",
+"closeTime": 1798790400000,
+"creator": "zQ4Z82W"
+},
+{
+"id": "YzttMKaVgyUSZqHUTBI9",
+"url": "https://manifold.markets/Gabrielle/will-apple-face-any-nonmonetary-con",
+"question": "Will Apple face any non-monetary consequences in United States of America v. Apple Inc.?",
+"closeTime": 1798786740000,
+"creator": "Gabrielle"
+},
+{
+"id": "Z3YrkK2HfxgpSPnEtuny",
+"url": "https://manifold.markets/Predictor/will-prince-william-be-crowned-king-922d619271db",
+"question": "Will Prince William be crowned King by the end of 2026?",
+"closeTime": 1798779540000,
+"creator": "Predictor"
+},
+{
+"id": "Z3mCdoUp4X47qCKyHS64",
+"url": "https://manifold.markets/TobiasSowaaed/will-a-human-mission-successfully-l-7fdd8a8e8033",
+"question": "Will a human mission successfully land on the Moon again by the end of 2026?",
+"closeTime": 1798844340000,
+"creator": "TobiasSowaaed"
+},
+{
+"id": "Z8IZEA9zPO",
+"url": "https://manifold.markets/PlasmaPower/will-iran-become-more-authoritarian-0qhugPqPdQ",
+"question": "Will Iran become more authoritarian in 2026?",
+"closeTime": 1798761540000,
+"creator": "PlasmaPower"
+},
+{
+"id": "ZEhZugy0nz",
+"url": "https://manifold.markets/HenriConfucius/will-the-us-invade-irans-kharg-isla",
+"question": "Will the US invade Iran's Kharg Island  by the end of 2026?",
+"closeTime": 1798761540000,
+"creator": "HenriConfucius"
+},
+{
+"id": "ZO86EOyS9O",
+"url": "https://manifold.markets/goober/will-there-be-a-large-violent-dispu",
+"question": "Will there be a large violent dispute between protesters and ICE in 2026?",
+"closeTime": 1798761540000,
+"creator": "goober"
+},
+{
+"id": "ZOusqItSpL",
+"url": "https://manifold.markets/Jack1/will-benjamin-netanyahu-be-alive-on",
+"question": "Will Benjamin Netanyahu be alive on December 31 2026?",
+"closeTime": 1798761540000,
+"creator": "Jack1"
+},
+{
+"id": "ZRONZcZ26y",
+"url": "https://manifold.markets/Alfie/will-rootclaim-win-their-1000000-co",
+"question": "Will Rootclaim win their $1,000,000 Covid vaccine debate with Steve Kirsch?",
+"closeTime": 1798723740000,
+"creator": "Alfie"
+},
+{
+"id": "ZZLRuEZpZl",
+"url": "https://manifold.markets/Gabrielle/will-venezuelans-be-better-off-at-t",
+"question": "Will Venezuelans be better off at the end of 2026?",
+"closeTime": 1798761540000,
+"creator": "Gabrielle"
+},
+{
+"id": "ZZRAP59Egn",
+"url": "https://manifold.markets/waterlilly/will-there-be-an-ai-loss-of-control",
+"question": "Will there be an AI loss of control incident that causes over $100 million in damages in 2026?",
+"closeTime": 1798761540000,
+"creator": "waterlilly"
+},
+{
+"id": "ZhnP5QUt89",
+"url": "https://manifold.markets/MachiNi/will-jd-vance-assume-presidential-p",
+"question": "Will JD Vance assume presidential powers in 2026?",
+"closeTime": 1798779540000,
+"creator": "MachiNi"
+},
+{
+"id": "Zn8qzU9ERZ",
+"url": "https://manifold.markets/GeorgElgeback/will-trump-change-his-mind-on-ai-be",
+"question": "Will Trump change his mind on AI before 2027?",
+"closeTime": 1798761540000,
+"creator": "GeorgElgeback"
+},
+{
+"id": "ZqrdRKgvg3d2B65uEWAx",
+"url": "https://manifold.markets/wispyartichoke/will-the-supreme-court-strike-down",
+"question": "Will the Supreme Court strike down the FTC’s attempt to ban noncompete agreements before the end of 2026?",
+"closeTime": 1798779540000,
+"creator": "wispyartichoke"
+},
+{
+"id": "Zqtp0ASOg6",
+"url": "https://manifold.markets/Gemc/will-china-invade-taiwan-by-years-e",
+"question": "Will China invade Taiwan by year's end?",
+"closeTime": 1798761540000,
+"creator": "Gemc"
+},
+{
+"id": "Zz9I8tZO02",
+"url": "https://manifold.markets/AdamK/will-a-highlevel-trump-admin-member",
+"question": "Will a high-level Trump admin member mention Zizians before 2027?",
+"closeTime": 1798876740000,
+"creator": "AdamK"
+},
+{
+"id": "ao2gbs4k21",
+"url": "https://manifold.markets/NickAllenc961/will-belarus-invade-ukraine-by-the-nffvex1p9b",
+"question": "Will Belarus invade Ukraine by the end of 2026?",
+"closeTime": 1798779540000,
+"creator": "NickAllenc961"
+},
+{
+"id": "bFa8yeVNl2k61C4arsEl",
+"url": "https://manifold.markets/Ernie/will-definitive-evidence-emerge-tha-b222368e9d18",
+"question": "Will definitive evidence emerge that Justin Trudeau is actually Fidel Castro’s biological son any time through 2026?",
+"closeTime": 1798869540000,
+"creator": "Ernie"
+},
+{
+"id": "c2CEyuLIEZ",
+"url": "https://manifold.markets/MachiNi/will-we-learn-by-2027-that-maduros",
+"question": "Will we learn by 2027 that Maduro’s ouster was an internal coup with US assistance?",
+"closeTime": 1798761540000,
+"creator": "MachiNi"
+},
+{
+"id": "c2p6sUpg9E",
+"url": "https://manifold.markets/DaniellqdC6/will-europe-find-a-peaceful-agreeme",
+"question": "Will Europe find a peaceful agreement with Iran to pass the Strait of Hormuz in 2026 while the US/Iran war continues?",
+"closeTime": 1798761540000,
+"creator": "DaniellqdC6"
+},
+{
+"id": "c50R56syhZ",
+"url": "https://manifold.markets/CalibratedGhosts/will-the-us-enter-a-recession-in-20",
+"question": "Will the US enter a recession in 2026?",
+"closeTime": 1798761600000,
+"creator": "CalibratedGhosts"
+},
+{
+"id": "c9lzLlRulZ",
+"url": "https://manifold.markets/kamn/will-us-unemployment-get-above-6-in",
+"question": "Will US unemployment get above 6% in 2026?",
+"closeTime": 1798761540000,
+"creator": "kamn"
+},
+{
+"id": "cRI7oy4KlvcrlYgdtbMZ",
+"url": "https://manifold.markets/strutheo/if-trump-wins-will-china-attack-tai",
+"question": "If Trump wins, will China attack Taiwan before the end of 2026?",
+"closeTime": 1798779540000,
+"creator": "strutheo"
+},
+{
+"id": "cScRNpqApp",
+"url": "https://manifold.markets/BoltonBailey/musk-party-member-elected-to-us-con",
+"question": "Musk party member elected to US congress in 2026?",
+"closeTime": 1798761540000,
+"creator": "BoltonBailey"
+},
+{
+"id": "cSlEqt0nZU",
+"url": "https://manifold.markets/afekelbaz/will-benjamin-netanyahu-still-be-pr",
+"question": "Will Benjamin Netanyahu still be Prime Minister at the end of 2026?",
+"closeTime": 1798761540000,
+"creator": "afekelbaz"
+},
+{
+"id": "cUUldgccAc",
+"url": "https://manifold.markets/ZaneMiller/will-a-muskbacked-thirdparty-candid",
+"question": "Will Musk-backed third-party candidate(s) win any seats in Congress by the end of 2026?",
+"closeTime": 1798761540000,
+"creator": "ZaneMiller"
+},
+{
+"id": "cZqE66AhN0",
+"url": "https://manifold.markets/jim/will-the-sp-500-reach-1000000-by-eo",
+"question": "Will the S&P 500 pass 1,000,000 by EOY 2026?",
+"closeTime": 1798761540000,
+"creator": "jim"
+},
+{
+"id": "cdzE85PIEz",
+"url": "https://manifold.markets/Plant/will-susan-collins-win-reelection-t",
+"question": "Will Susan Collins win re-election to Maine's Senate seat in 2026?",
+"closeTime": 1798761540000,
+"creator": "Plant"
+},
+{
+"id": "ckEThIMLfTNz2EO6R40V",
+"url": "https://manifold.markets/Jx/will-marc-andreessen-be-right-in-pr",
+"question": "Will Marc Andreessen be right that a replacement to the Francis Scott Key Bridge will not open before Mar 26 2027?",
+"closeTime": 1806130740000,
+"creator": "Jx"
+},
+{
+"id": "clElgqN80E",
+"url": "https://manifold.markets/Gemc/putin-dies-by-end-of-2026",
+"question": "Putin dies by end of 2026?",
+"closeTime": 1798761540000,
+"creator": "Gemc"
+},
+{
+"id": "clnEdSCuQR",
+"url": "https://manifold.markets/skibidist/will-there-be-a-doge-dividend-by-th",
+"question": "Will there be a 'DOGE Dividend' by the end of 2026?",
+"closeTime": 1798757940000,
+"creator": "skibidist"
+},
+{
+"id": "cnEERuIZOA",
+"url": "https://manifold.markets/SamuelKnoche/will-the-iranian-protests-end-tragi",
+"question": "Will the Iranian protests end tragically?",
+"closeTime": 1798761540000,
+"creator": "SamuelKnoche"
+},
+{
+"id": "cppdlAuLz2",
+"url": "https://manifold.markets/musteval/ai-bypass-coding-entirely-by-eoy-20-h9ytqdgCqP",
+"question": "AI bypass coding entirely by EOY 2026?",
+"closeTime": 1798761540000,
+"creator": "musteval"
+},
+{
+"id": "cwQjGiIHkOyaqzcR2Efr",
+"url": "https://manifold.markets/strutheo/will-palestine-be-fully-recognized-cfm30qv59l",
+"question": "Will Palestine be fully recognized as a United Nations member state by the end of 2026?",
+"closeTime": 1798779540000,
+"creator": "strutheo"
+},
+{
+"id": "cyPtphStzp",
+"url": "https://manifold.markets/PoliticalEconomyPK/will-hamas-actually-disarm-in-2026",
+"question": "Will Hamas actually disarm in 2026?",
+"closeTime": 1798761540000,
+"creator": "PoliticalEconomyPK"
+},
+{
+"id": "cz0dUzug8A",
+"url": "https://manifold.markets/DaftPunkRock/acx-2026-will-donald-trump-cease-to",
+"question": "[ACX 2026] Will Donald Trump cease to exercise presidential powers for 48 hours during 2026?",
+"closeTime": 1798761540000,
+"creator": "DaftPunkRock"
+},
+{
+"id": "d2Npg068t5",
+"url": "https://manifold.markets/Gemc/will-america-send-troops-to-iran",
+"question": "Will America send troops to Iran?",
+"closeTime": 1798735320000,
+"creator": "Gemc"
+},
+{
+"id": "d52sO5Rtlu",
+"url": "https://manifold.markets/DanBorthwick/will-nigel-farage-face-a-second-cla",
+"question": "Will Nigel Farage face a second Clacton byelection in 2026?",
+"closeTime": 1798761540000,
+"creator": "DanBorthwick"
+},
+{
+"id": "d66zdpEsES",
+"url": "https://manifold.markets/Jack1/will-the-sp500-trade-below-6100-thi",
+"question": "Will the s&p500 trade below 6,100 this year? (Kalshi)",
+"closeTime": 1798761540000,
+"creator": "Jack1"
+},
+{
+"id": "dAguAPChZZ",
+"url": "https://manifold.markets/Tetraspace/if-the-us-strikes-iran-by-june-30th",
+"question": "If the US strikes Iran by June 30th, 2026, will the Iranian regime fall in 2026?",
+"closeTime": 1798761540000,
+"creator": "Tetraspace"
+},
+{
+"id": "dISlPtAINQ",
+"url": "https://manifold.markets/DaftPunkRock/acx-2026-will-the-composition-of-th",
+"question": "[ACX 2026] Will the composition of the US Supreme Court change in 2026?",
+"closeTime": 1798761540000,
+"creator": "DaftPunkRock"
+},
+{
+"id": "dLopWVvBmL68UrhfmO4f",
+"url": "https://manifold.markets/zQ4Z82W/will-california-decriminalize-mdma",
+"question": "Will California decriminalize and/or legalize MDMA before 2027?",
+"closeTime": 1798790400000,
+"creator": "zQ4Z82W"
+},
+{
+"id": "dRAPp0ALgL",
+"url": "https://manifold.markets/OnlySlides/bitcoin-above-90k-before-2027",
+"question": "Bitcoin above 90k before 2027?",
+"closeTime": 1798761540000,
+"creator": "OnlySlides"
+},
+{
+"id": "dnQz9Qddgy",
+"url": "https://manifold.markets/OnlySlides/will-elon-musk-be-worth-more-than-2-EUStcIS0Qg",
+"question": "Will Elon Musk be worth more than 2 Trillion Dollars before 2027?",
+"closeTime": 1798761540000,
+"creator": "OnlySlides"
+},
+{
+"id": "eAi22XXUzipXaZa7yhOz",
+"url": "https://manifold.markets/MP/will-jack-ma-return-as-a-senior-exe",
+"question": "Will Jack MA return as a senior executive to Alibaba by 2026 year end?",
+"closeTime": 1796957940000,
+"creator": "MP"
+},
+{
+"id": "el2oeAPlwm4u0LBKLQXx",
+"url": "https://manifold.markets/benjaminIkuta/will-ukraine-have-partial-control-o",
+"question": "Will Ukraine have partial control over Crimea by the end of 2026?",
+"closeTime": 1798754340000,
+"creator": "benjaminIkuta"
+},
+{
+"id": "fELKc8A5AFcSYOItVco5",
+"url": "https://manifold.markets/AutopoieticErgodicity/will-russia-capture-kramatorsk-at-l",
+"question": "Will Russia capture Kramatorsk at least once before EOY 2026?",
+"closeTime": 1798779540000,
+"creator": "AutopoieticErgodicity"
+},
+{
+"id": "fo3Koo4ySJvi4xOgmTcX",
+"url": "https://manifold.markets/strutheo/will-russia-conduct-military-operat-59672397e5c4",
+"question": "Will Russia conduct military operations in any another country against ISIS-K before the end of 2026?",
+"closeTime": 1798779540000,
+"creator": "strutheo"
+},
+{
+"id": "fqudqs3nn0",
+"url": "https://manifold.markets/ChristianRenner/will-israel-exist-at-the-end-of-202",
+"question": "Will Israel exist at the end of 2026?",
+"closeTime": 1798779540000,
+"creator": "ChristianRenner"
+},
+{
+"id": "g4qkq9edww",
+"url": "https://manifold.markets/mfow/hong-kong-to-change-its-hk-peg-away",
+"question": "Hong Kong to change its HK$ peg away from USD by end of 2026?",
+"closeTime": 1798721940000,
+"creator": "mfow"
+},
+{
+"id": "g69nyOd5Cc",
+"url": "https://manifold.markets/chrisjbillington/will-x-twitter-be-banned-in-austral",
+"question": "Will X (Twitter) be banned in Australia in 2026?",
+"closeTime": 1798761540000,
+"creator": "chrisjbillington"
+},
+{
+"id": "gII9PpRSsR",
+"url": "https://manifold.markets/DanielPolak/waymo-available-in-european-union-b",
+"question": "Waymo available in European Union before 2027?",
+"closeTime": 1798761540000,
+"creator": "DanielPolak"
+},
+{
+"id": "gR0Dfa7gC7MLgn1vwaZe",
+"url": "https://manifold.markets/asmith/vote-rigging-scandal-in-uk-ca-germa",
+"question": "Vote rigging scandal in UK, CA, Germany, Netherlands, Norway, DK, Sweden, Finland, or Ireland before 2027?",
+"closeTime": 1798876740000,
+"creator": "asmith"
+},
+{
+"id": "ghdgS5tSsc",
+"url": "https://manifold.markets/PhilosophyBear/will-america-lose-its-war-against-i",
+"question": "Will America lose its war against Iran?",
+"closeTime": 1798683780000,
+"creator": "PhilosophyBear"
+},
+{
+"id": "gnuPtLn8E9",
+"url": "https://manifold.markets/HillaryClinton/will-100-or-more-ships-cross-the-st-9QdR0pqRLU",
+"question": "Will 100 or more ships cross the straight of Hormuz in a day in 2026?",
+"closeTime": 1798761540000,
+"creator": "HillaryClinton"
+},
+{
+"id": "gzcgZZOzRd",
+"url": "https://manifold.markets/KrilariaSpace/will-the-crimean-bridge-be-damaged",
+"question": "Will the Crimean bridge be damaged in 2026?",
+"closeTime": 1798761540000,
+"creator": "KrilariaSpace"
+},
+{
+"id": "h0QQ6AlzZ5",
+"url": "https://manifold.markets/JimAusman/will-there-be-a-serious-attempt-by",
+"question": "Will there be a serious attempt by the GOP to overturn the election?",
+"closeTime": 1799625540000,
+"creator": "JimAusman"
+},
+{
+"id": "h2Iz8ZLpzO",
+"url": "https://manifold.markets/Gabrielle/will-wikipedia-be-unavailable-in-th",
+"question": "Will Wikipedia be unavailable in the UK before 2027 due to the OSA?",
+"closeTime": 1798761540000,
+"creator": "Gabrielle"
+},
+{
+"id": "h58ZgnnhcO",
+"url": "https://manifold.markets/Daniel_MC/will-us-public-opinion-shift-toward-Sutpz92uyA",
+"question": "Will US public opinion shift towards Israel during 2026 (according to gallop)?",
+"closeTime": 1798761540000,
+"creator": "Daniel_MC"
+},
+{
+"id": "h5pCgpQqp9",
+"url": "https://manifold.markets/Gabrielle/will-there-be-a-food-shortage-relat",
+"question": "Will there be a food shortage related to the closure of the Strait of Hormuz?",
+"closeTime": 1798734060000,
+"creator": "Gabrielle"
+},
+{
+"id": "hAI6cS0Rlu",
+"url": "https://manifold.markets/Byte/will-donald-trump-annex-greenland-i",
+"question": "Will Donald Trump annex Greenland into the US before 2027?",
+"closeTime": 1798847940000,
+"creator": "Byte"
+},
+{
+"id": "hAzElOyPns",
+"url": "https://manifold.markets/Jack1/zohran-mamdani-snl-host-before-end",
+"question": "Zohran Mamdani SNL Host before end of 2026?",
+"closeTime": 1798761540000,
+"creator": "Jack1"
+},
+{
+"id": "hGuxFPAXXulEv11o0WDw",
+"url": "https://manifold.markets/RemNi/will-a-nato-aircraft-shoot-down-a-m",
+"question": "Will a NATO aircraft shoot down a missile or drone fired towards a target in Ukraine before 2027?",
+"closeTime": 1804287540000,
+"creator": "RemNi"
+},
+{
+"id": "hISQySnLnu",
+"url": "https://manifold.markets/DaftPunkRock/acx-2026-will-the-sp-500-close-abov",
+"question": "[ACX 2026] Will the S&P 500 close above 7,500 at the end of 2026?",
+"closeTime": 1798761540000,
+"creator": "DaftPunkRock"
+},
+{
+"id": "hNNg0Pu280",
+"url": "https://manifold.markets/Tetraspace/will-miguel-diazcanel-be-leader-of",
+"question": "Will Miguel Díaz-Canel be leader of Cuba on January 1st 2027?",
+"closeTime": 1798761600000,
+"creator": "Tetraspace"
+},
+{
+"id": "hPzCNhccnL",
+"url": "https://manifold.markets/CryptoNeoLiberalist/us-x-iran-permanent-peace-deal-by-d",
+"question": "US x Iran permanent peace deal by December 31 ? [Not Polymarket]",
+"closeTime": 1798779540000,
+"creator": "CryptoNeoLiberalist"
+},
+{
+"id": "hQulsnctqU",
+"url": "https://manifold.markets/strutheo/will-usa-leave-nato-by-the-end-of-2-dnRR2EZsnQ",
+"question": "Will USA leave NATO by the end of 2026?",
+"closeTime": 1798779540000,
+"creator": "strutheo"
+},
+{
+"id": "hS5cg06hdz",
+"url": "https://manifold.markets/MarcoMar/will-the-democratic-party-win-a-maj",
+"question": "Will the Democratic Party win a majority in the Senate in the 2026 mid-term election",
+"closeTime": 1798675140000,
+"creator": "MarcoMar"
+},
+{
+"id": "hZquCUqOP6",
+"url": "https://manifold.markets/hidetzugu/will-trump-claim-election-fraud-in",
+"question": "Will Trump claim election fraud in the 2026 midterms?",
+"closeTime": 1798761540000,
+"creator": "hidetzugu"
+},
+{
+"id": "ha8y7qa1ux",
+"url": "https://manifold.markets/TeresaAsma/will-gay-marriage-be-legal-in-every",
+"question": "Will gay marriage be legal in every US state in 2026",
+"closeTime": 1798876740000,
+"creator": "TeresaAsma"
+},
+{
+"id": "htIqzhS2Zn",
+"url": "https://manifold.markets/Jack1/will-the-sp-500-finish-2026-at-6850",
+"question": "Will the S&P 500 finish 2026 at 6850.00 or higher?",
+"closeTime": 1798761540000,
+"creator": "Jack1"
+},
+{
+"id": "ieMLDK7zmGpjq9sQGgQD",
+"url": "https://manifold.markets/strutheo/will-russia-conduct-military-operat",
+"question": "Will Russia conduct military operations in Afghanistan against ISIS-K before the end of 2026?",
+"closeTime": 1798779540000,
+"creator": "strutheo"
+},
+{
+"id": "ih0tgT6bJ6zc0nLZVtpf",
+"url": "https://manifold.markets/Panfilo/has-israel-used-recordings-of-cryin",
+"question": "Has Israel used recordings of crying children or distressed women to lure Palestinians out of hiding?",
+"closeTime": 1798779540000,
+"creator": "Panfilo"
+},
+{
+"id": "j43cDqW6GgkUm1KZrThg",
+"url": "https://manifold.markets/case/will-a-big-mac-cost-more-than-10-in-f520144387f9",
+"question": "Will a Big Mac cost more than $10 in 2026?",
+"closeTime": 1798790340000,
+"creator": "case"
+},
+{
+"id": "jDQFvNKZjUzEI9ckZDKx",
+"url": "https://manifold.markets/benjaminIkuta/will-ukraine-hold-a-presidential-el-0de2cf17915d",
+"question": "Will Ukraine hold a presidential election in 2026?",
+"closeTime": 1798754340000,
+"creator": "benjaminIkuta"
+},
+{
+"id": "jHwdwWs0QNZZZykrKRej",
+"url": "https://manifold.markets/strutheo/will-antarctica-be-connected-to-hig",
+"question": "Will Antarctica be connected to high-speed fiber optic cable by the end of 2026?",
+"closeTime": 1798779540000,
+"creator": "strutheo"
+},
+{
+"id": "jNsS5q5am2dcVD4aRyrY",
+"url": "https://manifold.markets/Stralor/will-putin-still-be-russias-preside",
+"question": "Will Putin still be Russia's President when the war in Ukraine ends?",
+"closeTime": 1798876740000,
+"creator": "Stralor"
+},
+{
+"id": "jXtkHkERT7d0JdKUPHV3",
+"url": "https://manifold.markets/vgnsh/will-mitch-mcconnell-complete-his-t",
+"question": "Will Mitch McConnell complete his current term as Senator from Kentucky?",
+"closeTime": 1799049540000,
+"creator": "vgnsh"
+},
+{
+"id": "kMgcyUxJQi0S3pcwUqbb",
+"url": "https://manifold.markets/Jarom/will-global-greenhouse-gas-emission-q40c6le2qi",
+"question": "Will global greenhouse gas emissions in 2026 be lower than global greenhouse gas emissions in 2025?",
+"closeTime": 1798779540000,
+"creator": "Jarom"
+},
+{
+"id": "kPfD0VG4TSxHBiKBEeaK",
+"url": "https://manifold.markets/Lorelai/is-kim-dotcom-a-russian-agent",
+"question": "Is Kim Dotcom a Russian agent?",
+"closeTime": 1804204740000,
+"creator": "Lorelai"
+},
+{
+"id": "kh8luVibr55QVhBPjMLj",
+"url": "https://manifold.markets/strutheo/will-sonia-sotomayor-still-be-on-th",
+"question": "Will Sonia Sotomayor still be on the Supreme Court at the end of 2026?",
+"closeTime": 1798779540000,
+"creator": "strutheo"
+},
+{
+"id": "kxyvfcpege",
+"url": "https://manifold.markets/Jarom/will-asml-still-be-the-worlds-only",
+"question": "Will ASML remain the world’s only producer of EUV machines until the end of 2026?",
+"closeTime": 1798779540000,
+"creator": "Jarom"
+},
+{
+"id": "l09gunOg6s",
+"url": "https://manifold.markets/Gemc/will-ukraine-cede-land-to-russia",
+"question": "Will Ukraine cede land to russia?",
+"closeTime": 1798693320000,
+"creator": "Gemc"
+},
+{
+"id": "l2a0f11k33",
+"url": "https://manifold.markets/NathanpmYoung/will-china-have-a-nuclear-supertank",
+"question": "Will China have a nuclear supertanker by 2027?",
+"closeTime": 1798847940000,
+"creator": "NathanpmYoung"
+},
+{
+"id": "l52E9LtA06",
+"url": "https://manifold.markets/robert/will-trump-or-his-family-benefit-fi",
+"question": "Will Trump or his family benefit financially from US control of Venezuela by end of year?",
+"closeTime": 1798761540000,
+"creator": "robert"
+},
+{
+"id": "l56uqNIP9R",
+"url": "https://manifold.markets/strutheo/will-marjorie-taylor-greene-and-tru",
+"question": "Will Marjorie Taylor Greene and Trump be on good terms at the end of 2026?",
+"closeTime": 1798761540000,
+"creator": "strutheo"
+},
+{
+"id": "l6Spn8Epcc",
+"url": "https://manifold.markets/Jack1/gianni-infantino-announces-he-is-ou",
+"question": "Gianni Infantino announces he is out as FIFA President before end of 2026?",
+"closeTime": 1798761540000,
+"creator": "Jack1"
+},
+{
+"id": "lC2OstCSty",
+"url": "https://manifold.markets/DaftPunkRock/acx-2026-will-the-us-enact-an-ai-sa",
+"question": "[ACX 2026] Will the U.S. enact an AI safety federal statute or executive order in 2026?",
+"closeTime": 1798761540000,
+"creator": "DaftPunkRock"
+},
+{
+"id": "lCN5y60y9L",
+"url": "https://manifold.markets/benjaminIkuta/will-saudi-arabia-and-israel-announ-LlqczPNll2",
+"question": "Will Saudi Arabia and Israel announce the establishment of official diplomatic relations before the end of 2026?",
+"closeTime": 1798779540000,
+"creator": "benjaminIkuta"
+},
+{
+"id": "lCqAZRdLAR",
+"url": "https://manifold.markets/LukeShadwell/will-russia-win-the-russoukrainian",
+"question": "Will Russia win the Russo-Ukrainian War?",
+"closeTime": 1801519140000,
+"creator": "LukeShadwell"
+},
+{
+"id": "lEzIAQz2pL",
+"url": "https://manifold.markets/konga/will-the-us-confirm-that-aliens-exi-cNZPl6hAEu",
+"question": "Will the US confirm that aliens exist before 2027?",
+"closeTime": 1798761540000,
+"creator": "konga"
+},
+{
+"id": "lP86stsquE",
+"url": "https://manifold.markets/OnlySlides/will-the-us-invade-iran-before-2027",
+"question": "Will the U.S. invade Iran before 2027?",
+"closeTime": 1798761540000,
+"creator": "OnlySlides"
+},
+{
+"id": "lQZdyZCLZZ",
+"url": "https://manifold.markets/ZviMowshowitz/will-the-worst-day-in-cyber-securit",
+"question": "Will the worst day in cyber security in 2026 be after 10/21/2026?",
+"closeTime": 1798761540000,
+"creator": "ZviMowshowitz"
+},
+{
+"id": "lUZch5zqZu",
+"url": "https://manifold.markets/cash/will-venezuela-become-more-authorit-55hEzs2ls9",
+"question": "Will Venezuela become more authoritarian in 2026?",
+"closeTime": 1803974340000,
+"creator": "cash"
+},
+{
+"id": "lZPARPS0un",
+"url": "https://manifold.markets/spiderduckpig/will-the-usa-control-greenland-by-e",
+"question": "Will the USA control Greenland by EOY2026?",
+"closeTime": 1798865940000,
+"creator": "spiderduckpig"
+},
+{
+"id": "lp6LI2Cu9A",
+"url": "https://manifold.markets/kl938/will-the-democratic-party-win-more-Sh65d0959n",
+"question": "Will the Democratic party win more than 240 US house seats in the 2026 election?",
+"closeTime": 1798779540000,
+"creator": "kl938"
+},
+{
+"id": "ltnOQQNtgy",
+"url": "https://manifold.markets/rothific/will-prompt-injection-be-effectivel",
+"question": "Will prompt injection be effectively solved by end of 2026?",
+"closeTime": 1798761540000,
+"creator": "rothific"
+},
+{
+"id": "lzhSU2ZnA8",
+"url": "https://manifold.markets/FlipPidot/will-polyoptions-volume-hit-1-billi",
+"question": "Will Polyoptions volume hit $1 billion in 2026?",
+"closeTime": 1801439940000,
+"creator": "FlipPidot"
+},
+{
+"id": "m04EtPbqEO4mRerLmz8p",
+"url": "https://manifold.markets/Skittercat/will-elon-muskx-prevail-in-a-lawsui",
+"question": "Will Elon Musk/X prevail in a lawsuit against Media Matters?",
+"closeTime": 1798790340000,
+"creator": "Skittercat"
+},
+{
+"id": "mO9u1PSqeJBNsXgq2GcR",
+"url": "https://manifold.markets/xyz/will-israeli-lgbt-rights-be-discern",
+"question": "Will Israeli LGBT rights be discernibly eroded by 2026?",
+"closeTime": 1798761540000,
+"creator": "xyz"
+},
+{
+"id": "mZ3tlpO2qt5lX1IUBRbP",
+"url": "https://manifold.markets/ChadwickMiller/will-astronauts-walk-on-the-moon-be",
+"question": "Will Astronauts walk on the moon before the end of 2026.",
+"closeTime": 1798865940000,
+"creator": "ChadwickMiller"
+},
+{
+"id": "mejhn9q4y6",
+"url": "https://manifold.markets/PaulHan/will-the-catholic-church-train-a-po",
+"question": "Will the Catholic Church train a PopeGPT and endorse it as doctrinally sound by end of 2027?",
+"closeTime": 1798876740000,
+"creator": "PaulHan"
+},
+{
+"id": "nAqNZEZsLN",
+"url": "https://manifold.markets/BillClintonBubba/strait-of-hormuz-traffic-returns-to-USAU6h89IP",
+"question": "Strait of Hormuz traffic returns to normal by December 31? [Polymarket]",
+"closeTime": 1798675140000,
+"creator": "BillClintonBubba"
+},
+{
+"id": "nIlPl8ttAR",
+"url": "https://manifold.markets/CivilizedGuy/before-december-31-2026-will-an-ice",
+"question": "Before December 31, 2026, will an ICE agent kill another American citizen?",
+"closeTime": 1798759620000,
+"creator": "CivilizedGuy"
+},
+{
+"id": "nNLlU0tdQh",
+"url": "https://manifold.markets/predyx_markets/trump-invokes-insurrection-act-by-e",
+"question": "Trump invokes Insurrection Act by EOY 2026?",
+"closeTime": 1798790340000,
+"creator": "predyx_markets"
+},
+{
+"id": "nPd5ul0zU9",
+"url": "https://manifold.markets/JimAusman/will-the-democrats-hold-53-or-more",
+"question": "Will the Democrats hold 53 or more Senate seats in the next Congress?",
+"closeTime": 1801526400000,
+"creator": "JimAusman"
+},
+{
+"id": "nPhdNdqI6S",
+"url": "https://manifold.markets/Plant/will-the-sp-500-close-above-788334",
+"question": "Will the S&P 500 close above 7883.34 on December 31, 2026?",
+"closeTime": 1798761540000,
+"creator": "Plant"
+},
+{
+"id": "ngN8cULCyO",
+"url": "https://manifold.markets/SG/will-mnx-hit-100m-in-volume-2026",
+"question": "Will MNX hit $100m in volume 2026?",
+"closeTime": 1798761540000,
+"creator": "SG"
+},
+{
+"id": "nlAsIzRQsy",
+"url": "https://manifold.markets/brod/trump-golfs-on-25-of-days-in-2026",
+"question": "Trump golfs on >25% of days in 2026?",
+"closeTime": 1798761540000,
+"creator": "brod"
+},
+{
+"id": "nollit5on8",
+"url": "https://manifold.markets/singer/will-the-us-give-out-a-stimulus-che-do25j6fklu",
+"question": "Will the US give out a stimulus check in 2026?",
+"closeTime": 1798876740000,
+"creator": "singer"
+},
+{
+"id": "npS8qgnSNQ",
+"url": "https://manifold.markets/jcb/will-the-sp-500-close-up-or-down-by",
+"question": "Will the S&P 500 close up or down by more than 5% in a day in 2026?",
+"closeTime": 1798786740000,
+"creator": "jcb"
+},
+{
+"id": "nstnlghn29",
+"url": "https://manifold.markets/SemioticRivalry/will-trump-balance-the-budget",
+"question": "Will Trump balance the budget before 2027?",
+"closeTime": 1800507540000,
+"creator": "SemioticRivalry"
+},
+{
+"id": "nuLpyL0En8",
+"url": "https://manifold.markets/vdb/new-pandemic-in-2026-polymarket",
+"question": "New pandemic in 2026? [Polymarket]",
+"closeTime": 1798761540000,
+"creator": "vdb"
+},
+{
+"id": "nyQhnCP069",
+"url": "https://manifold.markets/ManiPart/will-nvidia-have-the-highest-market-U0csqsuzPh",
+"question": "Will Nvidia have the highest market cap at the end of 2026?",
+"closeTime": 1799482920000,
+"creator": "ManiPart"
+},
+{
+"id": "nyyupACZLR",
+"url": "https://manifold.markets/DaftPunkRock/acx-2026-will-benjamin-netanyahu-ce",
+"question": "[ACX 2026] Will Benjamin Netanyahu cease to be Prime Minister of Israel during 2026?",
+"closeTime": 1798761540000,
+"creator": "DaftPunkRock"
+},
+{
+"id": "nzzscn8ICs",
+"url": "https://manifold.markets/Jack1/will-any-republican-vote-to-impeach",
+"question": "Will any Republican Vote to Impeach Trump in 2026?",
+"closeTime": 1798761540000,
+"creator": "Jack1"
+},
+{
+"id": "o2ujncsaie",
+"url": "https://manifold.markets/pluffASMR/will-a-us-civil-war-occur-before-ja",
+"question": "Will a U.S. Civil War occur before January 1st, 2027?",
+"closeTime": 1798865940000,
+"creator": "pluffASMR"
+},
+{
+"id": "o7nKiycFgXS1Tj9iGeEo",
+"url": "https://manifold.markets/MatthewBarnett/will-the-world-economy-grow-by-more",
+"question": "Will the world economy grow by more than 30% in a single year before 2027?",
+"closeTime": 1798876740000,
+"creator": "MatthewBarnett"
+},
+{
+"id": "oBMxxaaT8GVa3pvYnCT8",
+"url": "https://manifold.markets/RemNi/will-xi-jinping-be-the-leader-of-ch-6297433c3df1",
+"question": "Will Xi Jinping be the leader of China at the end of 2026?",
+"closeTime": 1799017140000,
+"creator": "RemNi"
+},
+{
+"id": "p3UsYkHmZ6Xj09ybEo08",
+"url": "https://manifold.markets/benjaminIkuta/will-ukraine-have-full-control-over",
+"question": "Will Ukraine have full control over Crimea by the end of 2026?",
+"closeTime": 1798754340000,
+"creator": "benjaminIkuta"
+},
+{
+"id": "p6N282qhNq",
+"url": "https://manifold.markets/BoltonBailey/will-the-cpiu-show-higher-inflation-CqLgZy2L0l",
+"question": "Will the CPI-U show higher inflation over the course of 2026 than over 2025?",
+"closeTime": 1798761540000,
+"creator": "BoltonBailey"
+},
+{
+"id": "p7k8zQVaOLmsrqsMPSdI",
+"url": "https://manifold.markets/cash/will-tesla-cease-to-be-the-most-val",
+"question": "Will Tesla cease to be the most valuable automaker by market cap for any amount of time before the end of 2026?",
+"closeTime": 1798790340000,
+"creator": "cash"
+},
+{
+"id": "pIRQ6LCPyP",
+"url": "https://manifold.markets/Chimpy/will-us-congress-pass-a-law-that-su",
+"question": "🏛️ Will US Congress pass a law that substantially preempts state AI regulation before January 1, 2027? 🏛️",
+"closeTime": 1798761540000,
+"creator": "Chimpy"
+},
+{
+"id": "pLfv9ojDYFr1GpjiFWTJ",
+"url": "https://manifold.markets/DanEllis/will-there-be-self-driving-taxis-in-5f5ad7fbb169",
+"question": "Will there be self driving taxis in London, UK by the end of 2026?",
+"closeTime": 1798761540000,
+"creator": "DanEllis"
+},
+{
+"id": "pTRtUNRJvUWNBOYajdub",
+"url": "https://manifold.markets/PeterF/if-trump-wins-will-activeduty-milit",
+"question": "If Trump wins, will active-duty military be used to control protests/riots in DC?",
+"closeTime": 1798790340000,
+"creator": "PeterF"
+},
+{
+"id": "pUncsZnp2u",
+"url": "https://manifold.markets/morallawwithin/will-the-us-and-iran-be-at-war-on-j",
+"question": "Will the US and Iran be at war on January 1st, 2027?",
+"closeTime": 1798847940000,
+"creator": "morallawwithin"
+},
+{
+"id": "pcNnNE6ZUL",
+"url": "https://manifold.markets/strutheo/will-usa-troops-set-foot-in-panama",
+"question": "Will USA troops set foot in panama with aggressive intention by the end of 2026?",
+"closeTime": 1798779540000,
+"creator": "strutheo"
+},
+{
+"id": "ppzzyIqs2y",
+"url": "https://manifold.markets/EvanDaniel/will-there-be-a-newly-major-war-in",
+"question": "Will there be a new(ly) major war in 2026?",
+"closeTime": 1798761540000,
+"creator": "EvanDaniel"
+},
+{
+"id": "pqQ5l2lCAn",
+"url": "https://manifold.markets/jim/will-googles-market-cap-exceed-nvid-EpLtgC0sLs",
+"question": "Will Google's market cap exceed NVIDIA's by EOY 2026?",
+"closeTime": 1798761540000,
+"creator": "jim"
+},
+{
+"id": "puQQLPIL9g",
+"url": "https://manifold.markets/AhmetGokcay/will-china-launch-a-military-operat",
+"question": "Will China launch a military operation against Taiwan in 2026?",
+"closeTime": 1798761540000,
+"creator": "AhmetGokcay"
+},
+{
+"id": "pzh8pttu5q",
+"url": "https://manifold.markets/bbno/will-a-soccer-final-between-spain-a",
+"question": "Will a soccer final between Spain and Argentina be repeated before 2027?",
+"closeTime": 1798772400000,
+"creator": "bbno"
+},
+{
+"id": "q25IZnNZsq",
+"url": "https://manifold.markets/SemioticRivalry/will-elon-musk-successfully-primary",
+"question": "Will Elon Musk successfully primary any incumbent Democrats in the next election?",
+"closeTime": 1798520340000,
+"creator": "SemioticRivalry"
+},
+{
+"id": "q2CZUhn500",
+"url": "https://manifold.markets/cash/will-the-us-invade-iran-before-the-zs06u6hptc",
+"question": "Will the US invade Iran before the end of 2026?",
+"closeTime": 1798790340000,
+"creator": "cash"
+},
+{
+"id": "q9dCRAsESc",
+"url": "https://manifold.markets/Gemc/ukraine-holds-elections-in-2026",
+"question": "Ukraine holds elections in 2026?",
+"closeTime": 1798761540000,
+"creator": "Gemc"
+},
+{
+"id": "qECy0N56RZ",
+"url": "https://manifold.markets/Tumbles/at-the-end-of-2026-will-tumbles-thi",
+"question": "End of 2026, will Tumbles think it was good Trump unilaterally removed Maduro?",
+"closeTime": 1798761540000,
+"creator": "Tumbles"
+},
+{
+"id": "qIdLn56ECI",
+"url": "https://manifold.markets/Bayesian/will-openai-rename-to-opensi-in-202",
+"question": "Will OpenAI rename to OpenSI in 2026?",
+"closeTime": 1798761540000,
+"creator": "Bayesian"
+},
+{
+"id": "qSR6cZh028",
+"url": "https://manifold.markets/web3nafee/israel-x-turkey-military-clash-befo",
+"question": "Israel x Turkey military clash before 2027?",
+"closeTime": 1798761540000,
+"creator": "web3nafee"
+},
+{
+"id": "qsrwYPm9VURt4KysHDfd",
+"url": "https://manifold.markets/97ec/will-bibi-still-be-the-prime-minist",
+"question": "Will Bibi still be the prime minister of Israel in 2027?",
+"closeTime": 1798840740000,
+"creator": "97ec"
+},
+{
+"id": "r8pPurlDEuz6HYfxl1V4",
+"url": "https://manifold.markets/BoltonBailey/will-democrats-lose-control-of-the",
+"question": "Will Democrats regain control of the Senate in 2026?",
+"closeTime": 1796104740000,
+"creator": "BoltonBailey"
+},
+{
+"id": "r9WBbcLqWc5kMOE2mLDL",
+"url": "https://manifold.markets/Shump/will-china-have-a-commercial-domest",
+"question": "Will China have a commercial, domestically-built EUV machine by the end of 2026?",
+"closeTime": 1798779540000,
+"creator": "Shump"
+},
+{
+"id": "rKY4QMcCO51g7nIwklAk",
+"url": "https://manifold.markets/JamesF/will-twitter-still-be-called-x-at-t",
+"question": "Will twitter still be called X at the end of 2026",
+"closeTime": 1798779540000,
+"creator": "JamesF"
+},
+{
+"id": "rM15ip6TmPMB54EUUhKy",
+"url": "https://manifold.markets/cash/will-the-world-become-more-secular",
+"question": "Will the world become more secular in the next World Values Survey?",
+"closeTime": 1803887940000,
+"creator": "cash"
+},
+{
+"id": "rShL1wo5h8qoRcyoRyWC",
+"url": "https://manifold.markets/EternalSunrise/will-the-us-enter-a-recession-by-th",
+"question": "Will the US enter a recession by the end of 2025?",
+"closeTime": 1798793100000,
+"creator": "EternalSunrise"
+},
+{
+"id": "riNXTtjLmNOSxW1bLu8S",
+"url": "https://manifold.markets/RemNi/will-vladimir-putin-be-president-of-db3a43202784",
+"question": "Will Vladimir Putin be the leader of Russia at the end of 2026?",
+"closeTime": 1803941940000,
+"creator": "RemNi"
+},
+{
+"id": "s1sb2v5t9m",
+"url": "https://manifold.markets/pluffASMR/will-mrbeast-jimmy-donaldson-be-con",
+"question": "Will MrBeast (Jimmy Donaldson) be convicted of a crime before the end of 2026?",
+"closeTime": 1798779540000,
+"creator": "pluffASMR"
+},
+{
+"id": "s6IqZzANht",
+"url": "https://manifold.markets/CalibratedGhosts/will-anyone-be-criminally-charged-b",
+"question": "Will anyone be criminally charged based on evidence from the Epstein files in 2026?",
+"closeTime": 1798761600000,
+"creator": "CalibratedGhosts"
+},
+{
+"id": "s6Z9SShR6l",
+"url": "https://manifold.markets/Ding/from-now-march-21-2026-will-bitcoin",
+"question": "from now march 21 2026 Will Bitcoin hit $100,000 before 2027?”",
+"closeTime": 1798761540000,
+"creator": "Ding"
+},
+{
+"id": "s8uqRyg2U0",
+"url": "https://manifold.markets/DannyOBrien/if-democrats-win-the-house-or-senat",
+"question": "If Dems win the House or Senate in 2026, will officials try to block a working Democratic majority from being seated?",
+"closeTime": 1799020740000,
+"creator": "DannyOBrien"
+},
+{
+"id": "sAuUnQOIh8",
+"url": "https://manifold.markets/bens/will-trump-go-a-full-week-without-s",
+"question": "Will Trump go a full week without speaking live on camera before the end of 2026?",
+"closeTime": 1798761540000,
+"creator": "bens"
+},
+{
+"id": "sE0nnPpuh8",
+"url": "https://manifold.markets/Plant/will-the-sp-500-dip-below-6000-in-2",
+"question": "Will the S&P 500 dip below 6000 in 2026?",
+"closeTime": 1798761540000,
+"creator": "Plant"
+},
+{
+"id": "sIgPyL82nt",
+"url": "https://manifold.markets/cash/will-elon-musk-cease-to-be-ceo-of-t-Ag80UCls5S",
+"question": "Will Elon Musk cease to be CEO of Tesla before the end of 2026?",
+"closeTime": 1798790340000,
+"creator": "cash"
+},
+{
+"id": "sPlnd2E6u0",
+"url": "https://manifold.markets/Floodlines/will-china-and-the-us-become-ai-par",
+"question": "Will China and the US become AI partners in 2026? Removal of chips sanction or a co-developed LLM. ",
+"closeTime": 1798761540000,
+"creator": "Floodlines"
+},
+{
+"id": "sPyzsLLZnd",
+"url": "https://manifold.markets/predyx_markets/trump-meets-kim-jong-un-in-2026",
+"question": "Trump meets Kim Jong Un in 2026?",
+"closeTime": 1798790340000,
+"creator": "predyx_markets"
+},
+{
+"id": "sQSLCEuqIO",
+"url": "https://manifold.markets/SaiVazquez/trump-impeached-before-iran-wars-en",
+"question": "Trump impeached before Iran war's end?",
+"closeTime": 1806004080000,
+"creator": "SaiVazquez"
+},
+{
+"id": "snghsuu52d",
+"url": "https://manifold.markets/WhiteyBulger/will-trump-die-in-2026",
+"question": "Will Trump Die in 2026?",
+"closeTime": 1798761540000,
+"creator": "WhiteyBulger"
+},
+{
+"id": "tIUcUSQOlA",
+"url": "https://manifold.markets/vdb/will-mojtaba-khamenei-be-alive-on-j",
+"question": "Will Mojtaba Khamenei be alive on Jan 1, 2027?",
+"closeTime": 1798761540000,
+"creator": "vdb"
+},
+{
+"id": "tLPh6uU2l9",
+"url": "https://manifold.markets/waterlilly/will-who-classify-the-current-hanta",
+"question": "Will WHO classify the current hantavirus outbreak as a Public Health Emergency of International Concern by end of 2026?",
+"closeTime": 1798761540000,
+"creator": "waterlilly"
+},
+{
+"id": "tNUnHVatJtlGccnOESKc",
+"url": "https://manifold.markets/cash/will-china-militarily-seize-any-of-6dad798706d5",
+"question": "Will China militarily seize any of Taiwan's outlying islands (Kinmen, Matsu, Wuqiu, Penghu) before the end of 2026?",
+"closeTime": 1798790340000,
+"creator": "cash"
+},
+{
+"id": "tQ25g009n5",
+"url": "https://manifold.markets/Creation/us-market-crash-in-2026",
+"question": "Us market crash in 2026?",
+"closeTime": 1798761540000,
+"creator": "Creation"
+},
+{
+"id": "tc2AdyOyUQ",
+"url": "https://manifold.markets/Jack1/hillary-clinton-files-for-divorce-b",
+"question": "Hillary and Bill Clinton divorce announcement before EOY 2026?",
+"closeTime": 1798761540000,
+"creator": "Jack1"
+},
+{
+"id": "tgZqNznhpc",
+"url": "https://manifold.markets/JosephCaissie/will-there-be-more-than-100-cases-o",
+"question": "Will there be more than 100 cases of ebola in the US in 2026?",
+"closeTime": 1798761540000,
+"creator": "JosephCaissie"
+},
+{
+"id": "tt0Uy260hp",
+"url": "https://manifold.markets/Plant/will-irans-regime-fall-in-2026",
+"question": "Will Iran's regime fall in 2026?",
+"closeTime": 1798761540000,
+"creator": "Plant"
+},
+{
+"id": "ttdOSsIt0g",
+"url": "https://manifold.markets/Panfilo/will-venezuela-enter-a-new-hot-war",
+"question": "Will Venezuela enter a new hot war with anyone by the end of 2026?",
+"closeTime": 1798761540000,
+"creator": "Panfilo"
+},
+{
+"id": "tulpc05hzg",
+"url": "https://manifold.markets/chrisjbillington/will-the-us-refuse-entry-to-nonimmi",
+"question": "Will the US refuse entry to nonimmigrant travellers at at least three times the rate in 2025 than it did in 2024?",
+"closeTime": 1798761540000,
+"creator": "chrisjbillington"
+},
+{
+"id": "tyRylOpNQu",
+"url": "https://manifold.markets/CalibratedGhosts/will-bitcoin-reach-200000-before-ja",
+"question": "Will Bitcoin reach $200,000 before January 1, 2027?",
+"closeTime": 1798761600000,
+"creator": "CalibratedGhosts"
+},
+{
+"id": "u06cyyPqOO",
+"url": "https://manifold.markets/ParkerNotPeter/will-laura-loomers-terrorist-attack",
+"question": "Will Laura Loomer’s terrorist attack prediction be correct?",
+"closeTime": 1798726140000,
+"creator": "ParkerNotPeter"
+},
+{
+"id": "u0Nhh9l2yI",
+"url": "https://manifold.markets/itsTomekK/trump-is-us-president-on-december-3",
+"question": "Trump is US President on December 31, 2026?",
+"closeTime": 1798761540000,
+"creator": "itsTomekK"
+},
+{
+"id": "u2sdCqdUEt",
+"url": "https://manifold.markets/EvanDaniel/will-there-be-a-newly-major-war-inv-2LO0IgPqzz",
+"question": "Will there be a new(ly) major war involving a nuclear power before the end of 2026?",
+"closeTime": 1798847940000,
+"creator": "EvanDaniel"
+},
+{
+"id": "u5Ndu0CpSs",
+"url": "https://manifold.markets/strutheo/will-any-eu-country-or-nato-stop-sh",
+"question": "Will any EU country or NATO stop sharing intelligence with the United States by the end of 2026?",
+"closeTime": 1798779540000,
+"creator": "strutheo"
+},
+{
+"id": "u60N44hdXiJlRaKiwyvn",
+"url": "https://manifold.markets/PietroBorchia/will-the-italian-government-last-fo",
+"question": "Will the italian government last for the entire term of office?",
+"closeTime": 1803898800000,
+"creator": "PietroBorchia"
+},
+{
+"id": "uELA9Uhg0R",
+"url": "https://manifold.markets/BillClintonBubba/will-200-or-more-ships-cross-the-st",
+"question": "Will 200 or more ships cross the straight of Hormuz in a day in 2026?",
+"closeTime": 1798761540000,
+"creator": "BillClintonBubba"
+},
+{
+"id": "uLQul222hz",
+"url": "https://manifold.markets/AaronSimansky/will-charles-iii-remain-the-king-fo-22QqlIgU2q",
+"question": "Will Charles III remain the king for all of 2026?",
+"closeTime": 1798761600000,
+"creator": "AaronSimansky"
+},
+{
+"id": "uMJ1ApMU1goMeQMoPjoY",
+"url": "https://manifold.markets/jack/us-officially-enter-a-recession-in",
+"question": "US officially enter a recession in 2024? (NBER)",
+"closeTime": 1798790340000,
+"creator": "jack"
+},
+{
+"id": "uOE6z8qE6Q",
+"url": "https://manifold.markets/szepvagy/will-gavin-newsom-formally-announce",
+"question": "Will Gavin Newsom formally announce a 2028 presidential campaign before January 1, 2027?",
+"closeTime": 1798761540000,
+"creator": "szepvagy"
+},
+{
+"id": "uQyA5AxOUy2uF2uewXBh",
+"url": "https://manifold.markets/kenakofer/will-lula-finish-his-term-as-presid",
+"question": "Will Lula finish his term as President of Brazil?",
+"closeTime": 1798779540000,
+"creator": "kenakofer"
+},
+{
+"id": "uRRdhCEgs6",
+"url": "https://manifold.markets/CivilizedGuy/will-pete-hegseth-be-the-secretary",
+"question": "Will Pete Hegseth be the Secretary of War on 12/31/2026?",
+"closeTime": 1798675200000,
+"creator": "CivilizedGuy"
+},
+{
+"id": "ulLsRqSEtc",
+"url": "https://manifold.markets/Ding/will-bitcoin-reach-120000-usd-at-an",
+"question": "Will Bitcoin reach $120,000 USD at any point before December 31, 2026?",
+"closeTime": 1798675140000,
+"creator": "Ding"
+},
+{
+"id": "ulOtq8y02Z",
+"url": "https://manifold.markets/DaniellqdC6/will-the-us-run-out-of-weapons-in-2",
+"question": "Will the US run out of weapons in 2026?",
+"closeTime": 1798761540000,
+"creator": "DaniellqdC6"
+},
+{
+"id": "uoV6cl0BTd8TW1Sp5uGH",
+"url": "https://manifold.markets/AmmonLam/if-trump-won-the-election-will-the",
+"question": "If Trump won the election, Will the U.S. be more democratic in 2025 than it was in 2022?",
+"closeTime": 1798696740000,
+"creator": "AmmonLam"
+},
+{
+"id": "uq6zgyhg0Z",
+"url": "https://manifold.markets/Chachachi/will-kazakhstan-experience-mass-mob-R2dczzpAI0",
+"question": "Will Kazakhstan experience mass mobilization, for any reasons, before end of 2026?",
+"closeTime": 1798709280000,
+"creator": "Chachachi"
+},
+{
+"id": "us0cPS0Rsz",
+"url": "https://manifold.markets/UnspecifiedPerson/will-syria-recognize-israel-by-eoy-NInt56Cd2E",
+"question": "Will Syria recognize Israel by EOY 2026?",
+"closeTime": 1798865940000,
+"creator": "UnspecifiedPerson"
+},
+{
+"id": "uuR477ia5pQdFLopMVXO",
+"url": "https://manifold.markets/Ernie/will-xi-jinping-visit-the-us-in-202-024fd2a81e38",
+"question": "Will Xi Jinping visit the US in 2026?",
+"closeTime": 1798729140000,
+"creator": "Ernie"
+},
+{
+"id": "vtNKvWJckWCr3VpPObYv",
+"url": "https://manifold.markets/Jeromee03c/will-emmanuel-macron-change-the-fre",
+"question": "Will Emmanuel Macron change the French constitution to be able to run for a third term in a row?",
+"closeTime": 1798757940000,
+"creator": "Jeromee03c"
+},
+{
+"id": "woxxyyjjym",
+"url": "https://manifold.markets/mfow/china-to-make-the-yuan-freely-conve",
+"question": "China to make the Yuan freely convertible by end of 2026?",
+"closeTime": 1798721940000,
+"creator": "mfow"
+},
+{
+"id": "xXSR7YFm8DpakUSOXxn0",
+"url": "https://manifold.markets/chrisjbillington/will-benjamin-netanyahu-cease-to-be",
+"question": "Will Benjamin Netanyahu cease to be Prime Minister of Israel before the Israel–Hamas war ends?",
+"closeTime": 1799326740000,
+"creator": "chrisjbillington"
+},
+{
+"id": "xwZ9yKJuPAzIrCRWrSVj",
+"url": "https://manifold.markets/GCS/will-any-foreign-military-trainers",
+"question": "Will any foreign military trainers in Ukraine be killed by Russian attacks?",
+"closeTime": 1798865940000,
+"creator": "GCS"
+},
+{
+"id": "y58OysCzPQ",
+"url": "https://manifold.markets/Tripping/will-there-be-more-international-tr-uIpAz5LqLz",
+"question": "Will there be more international travelers to Japan in 2026 than in 2025?",
+"closeTime": 1798761540000,
+"creator": "Tripping"
+},
+{
+"id": "y8LPchUU0h",
+"url": "https://manifold.markets/DaftPunkRock/acx-2026-will-there-be-a-bilateral",
+"question": "[ACX 2026] Will there be a bilateral ceasefire in the Russo-Ukrainian conflict before 2027?",
+"closeTime": 1798761540000,
+"creator": "DaftPunkRock"
+},
+{
+"id": "y9AqUIq0Cz",
+"url": "https://manifold.markets/danftz/will-mykhailo-fedorov-be-reappointe",
+"question": "Will Mykhailo Fedorov be reappointed as Defence Minister of Ukraine?",
+"closeTime": 1798761540000,
+"creator": "danftz"
+},
+{
+"id": "yCgSgcu95q",
+"url": "https://manifold.markets/SG/us-defaults-on-debt-held-by-china-b",
+"question": "US defaults on debt held by China before 2027?",
+"closeTime": 1798761540000,
+"creator": "SG"
+},
+{
+"id": "yCgd5z0UcQ",
+"url": "https://manifold.markets/strutheo/will-another-assassination-of-a-pub",
+"question": "Will another assassination of a public figure happen on a college campus before 2027?",
+"closeTime": 1798761540000,
+"creator": "strutheo"
+},
+{
+"id": "yNC2IcRy0c",
+"url": "https://manifold.markets/Acehnypt/will-ww3-start-before-gta6",
+"question": "Will WW3 start before gta6?",
+"closeTime": 1798761540000,
+"creator": "Acehnypt"
+},
+{
+"id": "yOOAnnpAQU",
+"url": "https://manifold.markets/Echale1Palo2Mas3Palo/will-the-united-states-conduct-a-mi",
+"question": "Will the United States conduct a military strike against Cuba in 2026?",
+"closeTime": 1798779540000,
+"creator": "Echale1Palo2Mas3Palo"
+},
+{
+"id": "yOlSApNOZy",
+"url": "https://manifold.markets/bens/democrats-gain-senate-seats-in-2026",
+"question": "Democrats gain Senate seats in 2026 midterm elections?",
+"closeTime": 1798761540000,
+"creator": "bens"
+},
+{
+"id": "ySq2USO0hq",
+"url": "https://manifold.markets/AnonUser/will-samuel-alito-leave-supreme-cou",
+"question": "Will Samuel Alito leave Supreme Court in 2026?",
+"closeTime": 1798779600000,
+"creator": "AnonUser"
+},
+{
+"id": "yUnSZ55s2t",
+"url": "https://manifold.markets/Jack1/will-reza-pahlavi-lead-iran-this-ye",
+"question": "Will Reza Pahlavi lead Iran this year?",
+"closeTime": 1798761540000,
+"creator": "Jack1"
+},
+{
+"id": "ychRPEdRUq",
+"url": "https://manifold.markets/SHA256/will-the-us-conduct-ground-operatio",
+"question": "Will the US conduct ground operations in mainland Iran before Jan 1, 2027?",
+"closeTime": 1798761540000,
+"creator": "SHA256"
+},
+{
+"id": "ynPNcqLZyn",
+"url": "https://manifold.markets/SteveSokolowski/will-2025-be-referred-to-as-the-sta",
+"question": "Will 2025 be referred to as the start of the second Great Depression?",
+"closeTime": 1798761540000,
+"creator": "SteveSokolowski"
+},
+{
+"id": "yqIc6S82Zl",
+"url": "https://manifold.markets/goober/will-jerome-powell-formally-be-indi",
+"question": "WIll Jerome Powell formally be indicted?",
+"closeTime": 1799719860000,
+"creator": "goober"
+},
+{
+"id": "ytAtdlnP9c",
+"url": "https://manifold.markets/cyrilleT/will-marine-le-pen-be-a-candidate-i",
+"question": "Will Marine Le Pen be a candidate in the 2027 French presidential election?",
+"closeTime": 1805500740000,
+"creator": "cyrilleT"
+},
+{
+"id": "yupS8CZ9Rc",
+"url": "https://manifold.markets/MiguelSanchezB/will-democrats-gain-38-seats-in-the",
+"question": "Will the Democrats gain 38+ seats in the House of Representatives in the 2026 US midterm elections?",
+"closeTime": 1798761540000,
+"creator": "MiguelSanchezB"
+},
+{
+"id": "z6RA9tqSus",
+"url": "https://manifold.markets/JaundicedBaboon/will-over-5000-gazans-be-killed-by",
+"question": "Will over 5000 Gazans be killed by the IDF in 2026?",
+"closeTime": 1798761540000,
+"creator": "JaundicedBaboon"
+},
+{
+"id": "z8gr36drhz",
+"url": "https://manifold.markets/B/will-brazils-2026-election-be-free",
+"question": "Will Brazil's 2026 election be free and fair?",
+"closeTime": 1798876740000,
+"creator": "B"
+},
+{
+"id": "z8ull2A69z",
+"url": "https://manifold.markets/bessarabov/will-trump-visit-moscow-capital-of-lCq8nRNAzE",
+"question": "Will Trump visit Moscow (capital of Russia) in 2026",
+"closeTime": 1798934340000,
+"creator": "bessarabov"
+},
+{
+"id": "zLQdhz9h5A",
+"url": "https://manifold.markets/GnosticGirl/will-anyone-be-charged-under-the-ne",
+"question": "Will anyone be charged under the new Idaho Bathroom Bill?",
+"closeTime": 1798757700000,
+"creator": "GnosticGirl"
+},
+{
+"id": "zP0RynR5pI",
+"url": "https://manifold.markets/PoliticalEconomyPK/will-iranians-be-able-to-overthrow",
+"question": "Will the Iranian regime be overthrown? ",
+"closeTime": 1798761540000,
+"creator": "PoliticalEconomyPK"
+},
+{
+"id": "zSE2S22SCn",
+"url": "https://manifold.markets/Jack1/will-nidal-hasans-execution-be-live",
+"question": "Will Nidal Hasans execution be livestreamed in 2026?",
+"closeTime": 1798761540000,
+"creator": "Jack1"
+},
+{
+"id": "zSR2sCE6RC",
+"url": "https://manifold.markets/MalachiteEagle/will-the-us-enter-a-recession-by-en-lO9pgz2zch",
+"question": "Will the US experience a recession during 2026?",
+"closeTime": 1806533940000,
+"creator": "MalachiteEagle"
+},
+{
+"id": "zSt6UZRAsO",
+"url": "https://manifold.markets/CivilizedGuy/will-donald-trump-be-president-of-t-pdPOCl0Ehp",
+"question": "Will Donald Trump be president of the United States on 12/31/2026?",
+"closeTime": 1798748700000,
+"creator": "CivilizedGuy"
+},
+{
+"id": "zU2LCLSsAS",
+"url": "https://manifold.markets/Gemc/will-a-country-leave-nato-this-year",
+"question": "Will a country leave NATO this year?",
+"closeTime": 1798761540000,
+"creator": "Gemc"
+},
+{
+"id": "zdcOzLZ5qR",
+"url": "https://manifold.markets/AlbanGonzalezPetit/will-donald-trump-die-before-2027",
+"question": "Will Donald Trump Die before 2027",
+"closeTime": 1798761540000,
+"creator": "AlbanGonzalezPetit"
+},
+{
+"id": "znCLUA8ULg",
+"url": "https://manifold.markets/uair01/credible-evidence-of-prearranged-lo",
+"question": "Credible evidence of pre-arranged local support for Venezuela regime change (news media 2026)",
+"closeTime": 1798761540000,
+"creator": "uair01"
+},
+{
+"id": "zsUPAAhqSI",
+"url": "https://manifold.markets/CommanderKeen/will-iran-successfully-attack-the-m",
+"question": "Will Iran successfully attack the mainland US before March 2027",
+"closeTime": 1803859140000,
+"creator": "CommanderKeen"
+}
+]
+}
