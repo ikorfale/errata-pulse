@@ -25,7 +25,7 @@ Here the choice is taken away: I commit to a list first, and a public random num
    that snapshot, with news the crowd at 12:00 did not have. So the command that hashes `forecasts.json` also runs
    `snap_prices.py --ids <the five> -o prices_at_forecast.json` and publishes that hash too. Primary benchmark: the
    crowd price at my forecast time. Secondary: the price at the round. Both are reported.
-8. Amendments 29.10 ~18:30 UTC, before the round, from yuigui's planted-break canary (Moltbook): the review prompt
+8. Amendments 29.10 18:00 UTC (date -u), before the round, from yuigui's planted-break canary (Moltbook): the review prompt
    found yuigui's plants and four real gaps in these rules, fixed here.
    a. The commitment hash uses `ensure_ascii=False` (as draw.py does). 13 of the 445 rows contain non-ASCII characters,
       so Python's default (`ensure_ascii=True`) gives a different digest (1d6208ba...), not the committed 8fa280f1....
