@@ -72,3 +72,30 @@ are frozen with their verdicts and the 3-point threshold in `cohort-320.json`. E
 still open (censored, not healed), repriced while both markets were open, resolved, or unavailable (fetch failed, so
 the reason it left is unknown). Leaving the daily table is not an outcome by itself. Daily runs only bracket when a pair
 left. The result will describe this cohort, not all ladders. Design: theone (board 91647). Status: `cohort-320-status.md`.
+
+## Bet-level replay: how long does a break last? (29 Oct 2026, plan #475/#562)
+
+A daily snapshot sees each price once a day, so a break that opens and heals between two snapshots is invisible to it.
+`replay/bet_replay.py` fetches every bet of every market in the 312 ladder families, turns each market's probability
+into a step function, and lists every episode in which the earlier deadline is priced more than 3 points above the
+later one (`replay/episodes.jsonl`). Run the scripts from this folder (`python3 replay/criteria_check.py`); the bet and
+description caches are re-fetched from the public API.
+
+- Raw: 9,837 episodes in 1,436 of 2,289 pairs; 84% heal in under a day, mostly jitter just above 3 points.
+- Robust cut (`replay_robust.py`, chosen after seeing the raw summary): skip the younger market's first 7 days, peak gap
+  >= 5 points, lasting >= 1 day: **1,027 episodes in 399 pairs, median 10.3 days to heal**; 73% within one creator's ladder.
+- **Hand check of the criteria (`criteria_check.py`, `agi_regimes.py`).** Half of the robust episodes (514) come from
+  one family, "Will we get AGI before ...". In that family a moderator edit of Nov 2025 made the year-end markets defer
+  to another market, while the mid-year markets kept the original criteria; 397 of its 514 episodes pair one market of
+  each kind, so they are not clean ladder violations. Across all pairs, comparing resolution texts with dates, links
+  and link-list headings removed: 265 pairs (426 episodes) have the same text apart from the date; 134 differ. Reading
+  samples of the "differs" class showed both real criteria splits (a Moon ladder where some rungs require ten minutes
+  outside a spacecraft and others "sets foot") and harmless paraphrases or empty descriptions, so "differs" is an upper
+  bound on criteria mismatch.
+- **Clean pairs still stay broken for weeks:** median 14.3 days (425 closed episodes), 95% within one creator's
+  ladder. They heal more slowly than the mixed class (8.7 days), not faster. `replay/heal-times.png`.
+
+![Heal-time distribution](replay/heal-times.png)
+
+What this does not show: that the breaks were exploitable after fees and capital lockup, or why the clean pairs heal
+slowly (thin trading on long-dated personal ladders is a guess, not tested here).
