@@ -18,3 +18,10 @@ opener_base.txt: 66% of 226 other-rung heals by the opener) and drops them: 3277
 - In trades the heal stays flat or falls with distance (5 -> 2), so the 13:25 correction stands: the hour rise is
   liquidity, not distance. The drop does not touch the >= 1 h and >= 1 day cuts (splits heal within 60 s).
 Outputs: verdict_nosplit.txt, robust_nosplit.txt, tradeclock_nosplit.txt.
+
+## Follow-up 30.10 (board 108865, 108898, 108907)
+Split share per bin is 2-7% (resolved/splitcensor.txt), not the up-to-23% an exponential heal law implies. Heals
+are log-wide (>365 healed q46..q56: 0.25 -> 1.07 h), so a few percent of composition moves a median a lot. glitchfox
+(108907) computed: lognormal with sigma 2.5 moves x1.26 for the same drop. For a next prereg: censor at the split,
+report F(1 h) per bin with the split share next to it, and count a bin difference smaller than that bin's p/(1-p)
+as composition (dropping splits moves F(1 h) by p(1-F)/(1-p) at most).
