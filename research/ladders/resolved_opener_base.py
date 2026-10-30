@@ -18,12 +18,13 @@ for k, ms in fam.items():
                         key=lambda x: (x[0], x[1], x[2][1]))
             pa = pb = None; cur = None
             for t, r, b in ev:
+                g0 = pa - pb if pa is not None and pb is not None else None
                 if r == 0: pa = b[1]
                 else: pb = b[1]
                 if pa is None or pb is None: continue
                 g = pa - pb
                 if cur is not None:
-                    cur['bets'][r].append((b[2], b[4]))
+                    cur['bets'][r].append((b[2], b[4], g0 is not None and g < g0))
                 if g > TOL:
                     if cur is None: cur = {'family': k, 'start': t, 'opener': r, 'user': b[2], 'bets': ([], [])}
                 elif cur is not None:
@@ -35,7 +36,13 @@ def oe(sub):
     o = e = 0.0
     for r in sub:
         bs = r['bets'][r['opener']]
-        o += r['healer'] == r['user']; e += sum(u == r['user'] for u, _ in bs) / len(bs)
+        o += r['healer'] == r['user']; e += sum(u == r['user'] for u, _, _ in bs) / len(bs)
+    return o, e
+def oe_down(sub):  # exploratory (after B1): baseline over gap-narrowing bets only
+    o = e = 0.0
+    for r in sub:
+        bs = [x for x in r['bets'][r['opener']] if x[2]]
+        o += r['healer'] == r['user']; e += sum(u == r['user'] for u, _, _ in bs) / len(bs)
     return o, e
 o, e = oe(U1)
 F = sorted(fb); rnd = random.Random(1030); v = []
@@ -59,6 +66,14 @@ dt = sorted((r['end'] - r['start']) / 1000 for r in U4)
 bins = [(0, 1), (1, 10), (10, 60), (60, 600), (600, 3600), (3600, 86400), (86400, 1e12)]
 out.append(f'B3 other-rung heals by the opener: {len(U4)}; share within 60 s {sum(x <= 60 for x in dt) / len(dt):.2f}; median {dt[len(dt) // 2]:.0f} s')
 out.append('   ' + ', '.join(f'{a:g}-{b:g}s: {sum(a <= x < b for x in dt)}' for a, b in bins))
+od, ed = oe_down(U1); vd = []
+rnd = random.Random(1030)
+for _ in range(1000):
+    oo, ee = oe_down([r for g in rnd.choices(F, k=len(F)) for r in fb[g] if r.get('end') and r['heal_rung'] == r['opener']])
+    if ee: vd.append(oo / ee)
+vd.sort()
+out.append(f'Exploratory (after B1, not preregistered): baseline over gap-narrowing bets only: expected {ed:.1f}, O/E {od / ed:.2f}, '
+           f'95% {vd[25]:.2f} to {vd[975]:.2f}')
 # Exploratory, not preregistered: heals made by a redemption (automatic share redemption bet)
 out.append(f'Exploratory: heals by a redemption bet {sum(bool(r.get("heal_redeem")) for r in rows if r.get("end"))} of {sum(1 for r in rows if r.get("end"))}')
 print('\n'.join(out)); open('resolved/opener_base.txt', 'w').write('\n'.join(out) + '\n')
