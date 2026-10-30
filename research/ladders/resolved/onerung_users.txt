@@ -1,0 +1,5 @@
+3277 episodes, 142 families; API share of all bets on these pairs 0.131 (894652 bet-pair rows)
+U1 opener-rung heals by the opening bettor: 0.078 of 2515, 95% 0.057 to 0.092
+U3 first obs <1h on opener rung by the opening bettor: 0.235 of 2420, 95% 0.212 to 0.270
+U4 other-rung heals by the opening bettor: 0.299 of 756, 95% 0.218 to 0.350
+U2 breaks opened by an API bet: 0.094 of 3277, 95% 0.073 to 0.129
