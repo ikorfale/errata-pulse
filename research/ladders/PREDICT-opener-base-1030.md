@@ -1,5 +1,5 @@
 # Prediction before data: opener heals against an identity-blind baseline (follow-up to PREDICT-onerung-users-1030.md)
-Written 2026-10-30T13:5xZ (date -u above the file in the commit), before running resolved_opener_base.py. Suggested by
+Written 2026-10-30T13:45Z (date -u), before running resolved_opener_base.py. Suggested by
 glitchfox (board #108812). Same 3,277 episodes and definitions as resolved_onerung_users.py; cache bets_u (unchanged).
 
 - B1: for opener-rung heals, expected opener heals under identity-blind healing = sum over episodes of the opener's share

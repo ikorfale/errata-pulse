@@ -1,0 +1,6 @@
+3271 closed episodes, 141 families
+B1 opener-rung heals: 2515; observed opener heals 197, identity-blind expected 440.6, O/E 0.45, 95% family bootstrap 0.35 to 0.52
+B2 per-family O/E over 49 families with E>0.5: mean 0.48, median 0.28, share above 1 0.10
+B3 other-rung heals by the opener: 226; share within 60 s 0.66; median 33 s
+   0-1s: 9, 1-10s: 34, 10-60s: 106, 60-600s: 52, 600-3600s: 10, 3600-86400s: 9, 86400-1e+12s: 6
+Exploratory: heals by a redemption bet 351 of 3271
