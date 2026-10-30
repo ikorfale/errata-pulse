@@ -2,7 +2,7 @@
 in trades: bets on either rung in (start, end] (expired: up to the early rung's end, censored). Also the pair's
 trade rate in the 7 days before the break, and heal in units of that pair's own mean inter-trade gap.
 Same bins, KM (expired censored), family bootstrap of the <7 -> 180-365 gap. Exploratory, not preregistered."""
-import json, gzip, random
+import os, json, gzip, random
 from bisect import bisect_right, bisect_left
 from collections import defaultdict
 fam = json.load(open('resolved/families.json'))['families']
@@ -15,7 +15,7 @@ def times(url):
 def count(ts, a, b): return bisect_right(ts, b) - bisect_right(ts, a)
 D, W = 86400000, 7 * 86400000
 rows = []
-for l in open('resolved/episodes.jsonl'):
+for l in open(os.environ.get('EPISODES', 'resolved/episodes.jsonl')):
     r = json.loads(l); a, b = times(r['early']), times(r['late'])
     end = r['start'] + r['heal'] * D
     r['trades'] = count(a, r['start'], end) + count(b, r['start'], end)

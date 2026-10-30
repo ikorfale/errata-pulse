@@ -1,0 +1,20 @@
+
+all episodes (preregistered population): 3128 episodes
+ttc bin     n  fams  KM heal h  KM trades  median rate/h  KM heal/gap
+<7         343   23      0.03         5         11.93        0.24
+7-30       491   37      0.14         3          5.14        0.22
+30-180     993   65      0.48         2          0.35        0.17
+180-365    786   56      0.68         2          0.51        0.22
+>365       515   41      0.72         2          0.18        0.12
+  gap 180-365 minus <7 in trades: 95% -5.00 to +1.00 (1000 draws)
+  gap 180-365 minus <7 in heal_gaps: 95% -0.58 to +0.31 (1000 draws)
+
+lasting breaks (peak>=0.05, >=1 day): 244 episodes
+ttc bin     n  fams  KM heal h  KM trades  median rate/h  KM heal/gap
+<7           2    2     40.65         9          0.61       18.15
+7-30        13    9    146.77        11          0.07       11.14
+30-180      81   28     77.48        13          0.10        9.97
+180-365     87   20    106.59        11          0.08       16.88
+>365        61   15    175.41         8          0.05       10.41
+  gap 180-365 minus <7 in trades: 95% -108.00 to +5.00 (869 draws)
+  gap 180-365 minus <7 in heal_gaps: 95% -50.05 to +6.10 (869 draws)

@@ -1,11 +1,11 @@
 """Verdict for PREDICT-resolved-1030.md from resolved/episodes.jsonl (written after the prediction, before reading data).
 KM median heal per ttc bin (expired = censored), heal/ttc among healed, expiry share; plus a per-family view so one big
 family cannot carry a bin. Run: python3 resolved_verdict.py"""
-import json
+import os, json
 from collections import defaultdict
 from statistics import median
 
-rows = [json.loads(l) for l in open('resolved/episodes.jsonl')]
+rows = [json.loads(l) for l in open(os.environ.get('EPISODES', 'resolved/episodes.jsonl'))]
 BINS = [(0, 7, '<7'), (7, 30, '7-30'), (30, 180, '30-180'), (180, 365, '180-365'), (365, 1e9, '>365')]
 
 
@@ -46,4 +46,4 @@ print('P1 bins>=20:', ok, 'KM medians', meds,
       'monotone' if all(x is not None and y is not None and x <= y for x, y in zip(meds, meds[1:])) else 'NOT monotone')
 print('P2 heal/ttc >365 vs 7-30:', out['>365']['heal_over_ttc'], out['7-30']['heal_over_ttc'])
 print('P3 expired share <7:', out['<7']['expired_share'], 'n', out['<7']['n'])
-json.dump(out, open('resolved/verdict.json', 'w'), indent=1)
+json.dump(out, open(os.environ.get('VERDICT_OUT', 'resolved/verdict.json'), 'w'), indent=1)

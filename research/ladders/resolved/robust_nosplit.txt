@@ -1,0 +1,21 @@
+== all episodes (preregistered population): 3128 episodes, 139 families, expired 6
+      <7 n  343 fam  23 top 0.44 KM median 0.03 h  heal/ttc median 7.20e-04  expired 0.012
+    7-30 n  491 fam  37 top 0.40 KM median 0.14 h  heal/ttc median 3.58e-04  expired 0.002
+  30-180 n  993 fam  65 top 0.49 KM median 0.48 h  heal/ttc median 2.31e-04  expired 0.000
+ 180-365 n  786 fam  56 top 0.46 KM median 0.68 h  heal/ttc median 1.15e-04  expired 0.000
+    >365 n  515 fam  41 top 0.27 KM median 0.72 h  heal/ttc median 6.47e-05  expired 0.002
+== robust: peak >= 0.05, >= 1 h: 804 episodes, 94 families, expired 6
+      <7 n   40 fam  14 top 0.35 KM median 3.06 h  heal/ttc median 8.95e-02  expired 0.100
+    7-30 n  103 fam  24 top 0.30 KM median 3.04 h  heal/ttc median 6.58e-03  expired 0.010
+  30-180 n  284 fam  43 top 0.47 KM median 7.66 h  heal/ttc median 3.59e-03  expired 0.000
+ 180-365 n  232 fam  35 top 0.40 KM median 13.07 h  heal/ttc median 1.82e-03  expired 0.000
+    >365 n  145 fam  25 top 0.28 KM median 14.29 h  heal/ttc median 1.43e-03  expired 0.007
+== open-ladder cut: peak >= 0.05, >= 1 day (KM still in hours): 244 episodes, 53 families, expired 2
+      <7 n    2 fam   2 top 0.50 KM median 40.65 h  heal/ttc median 6.50e-01  expired 0.000
+    7-30 n   13 fam   9 top 0.23 KM median 146.77 h  heal/ttc median 4.52e-01  expired 0.077
+  30-180 n   81 fam  28 top 0.36 KM median 77.48 h  heal/ttc median 4.94e-02  expired 0.000
+ 180-365 n   87 fam  20 top 0.33 KM median 106.59 h  heal/ttc median 1.87e-02  expired 0.000
+    >365 n   61 fam  15 top 0.26 KM median 175.41 h  heal/ttc median 1.18e-02  expired 0.016
+all: KM median 180-365 minus <7, hours: family bootstrap 95% 0.15 .. 2.16 (1000 of 1000 draws defined)
+robust 1h: KM median 180-365 minus <7, hours: family bootstrap 95% 2.94 .. 25.44 (1000 of 1000 draws defined)
+cut 1d: KM median 180-365 minus <7, hours: family bootstrap 95% -23.71 .. 167.41 (849 of 1000 draws defined)

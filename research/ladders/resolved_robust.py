@@ -2,11 +2,11 @@
 behind the open-ladder "about two weeks" figure (censor_check.py: peak >= 0.05 and lasting >= 1 day; also >= 1 hour; the 7-day
 opening-price exclusion is not applied here, market creation times were not fetched). Also P2 with more decimals and
 a family-cluster bootstrap of the <7 vs 180-365 KM-median gap. Run: python3 resolved_robust.py"""
-import json, random
+import os, json, random
 from collections import defaultdict
 from statistics import median
 
-rows = [json.loads(l) for l in open('resolved/episodes.jsonl')]
+rows = [json.loads(l) for l in open(os.environ.get('EPISODES', 'resolved/episodes.jsonl'))]
 BINS = [(0, 7, '<7'), (7, 30, '7-30'), (30, 180, '30-180'), (180, 365, '180-365'), (365, 1e9, '>365')]
 
 
