@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-30T22:44:45.720110+00:00",
+ "generated": "2026-10-30T23:21:18.601741+00:00",
  "counts": {
   "open": 32,
   "resolved": 5,
@@ -82,8 +82,8 @@
   }
  ],
  "models": {
-  "mine": 0.7744,
   "fable": 0.7225,
+  "mine": 0.7744,
   "signals": 0.1063,
   "base": 0.381
  },
@@ -141,6 +141,15 @@
      "date": "2026-10-28",
      "p": 0.01,
      "reason": "28.10: three days left, no decree, no mass summons, local ceasefire holding",
+     "models": {
+      "base": 0.017,
+      "signals": 0.016
+     }
+    },
+    {
+     "date": "2026-10-30",
+     "p": 0.01,
+     "reason": "1 day left; no decree, no official announcement; only reporting on coercive recruitment (Foreign Policy).",
      "models": {
       "base": 0.017,
       "signals": 0.016
@@ -809,7 +818,7 @@
    "index": "pulse",
    "opened": "2026-10-09",
    "status": "open",
-   "p": 0.03,
+   "p": 0.32,
    "base_rate": 0.06,
    "method": "base: reference class = the current Pakistan-brokered US-Iran ceasefire, ~180 days with no US strike on Iranian territory (strikes on tankers in Sep were at sea); 0 events in 0.5 years, +0.5 smoothing, 24 days. signals: LR 0.5 Trump publicly promised no strikes before the 3 Nov midterms (AP, Guardian, 8 Oct); LR 1.3 Pentagon reportedly told to prepare options; LR 1.3 near-nightly IRGC attacks on Hormuz shipping since 29 Sep.",
    "history": [
@@ -838,6 +847,16 @@
      "models": {
       "base": 0.06,
       "signals": 0.05
+     }
+    },
+    {
+     "date": "2026-10-30",
+     "p": 0.32,
+     "reason": "29-30 Oct: IRGC says it fired at a US fighter near Qeshm; unnamed CENTCOM official (via Faytuks) says USAF struck a launcher on Qeshm; Axios' Ravid: 'self defense strikes on launchers'. No on-record US statement or wire confirmation ~24h later. P(strike happened)~0.7 x P(confirmation meets standard by resolution)~0.35 + other strike ~0.04. Fable independent (did not see my number): 0.40.",
+     "models": {
+      "base": 0.06,
+      "signals": 0.28,
+      "fable": 0.4
      }
     }
    ],
@@ -2310,7 +2329,7 @@
    "index": "pulse",
    "opened": "2026-10-17",
    "status": "open",
-   "p": 0.06,
+   "p": 0.04,
    "base_rate": 0.1,
    "method": "Batch 17.10: my number written before asking Claude Fable blind (it never saw mine); ensemble = log-odds mean of base and the two judgements.",
    "history": [
@@ -2348,6 +2367,16 @@
      "date": "2026-10-29",
      "p": 0.06,
      "reason": "29.10: UKMTO 186-26 calls the Khasab tanker hit an 'unknown projectile'; 185-26 update says the burning vessel was a dhow; CENTCOM 28.10 calls Iranian mine claims false; IRGC's new 3-tanker claim names no ship. Two days left.",
+     "models": {
+      "base": 0.14,
+      "mine": 0.12,
+      "fable": 0.15
+     }
+    },
+    {
+     "date": "2026-10-30",
+     "p": 0.04,
+     "reason": "1 day left; IRGC again claims mine hits without ship names (30 Oct); CENTCOM rejects mine claims; no UKMTO mine statement.",
      "models": {
       "base": 0.14,
       "mine": 0.12,
