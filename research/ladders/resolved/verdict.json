@@ -1,0 +1,52 @@
+{
+ "<7": {
+  "n": 349,
+  "families": 24,
+  "top_family_share": 0.44,
+  "km_median": 0.0012,
+  "heal_over_ttc": 0.0007,
+  "expired_share": 0.011,
+  "median_peak": 0.088,
+  "km_median_wo_top": 0.0011
+ },
+ "7-30": {
+  "n": 515,
+  "families": 37,
+  "top_family_share": 0.39,
+  "km_median": 0.0048,
+  "heal_over_ttc": 0.0003,
+  "expired_share": 0.002,
+  "median_peak": 0.069,
+  "km_median_wo_top": 0.0077
+ },
+ "30-180": {
+  "n": 1043,
+  "families": 68,
+  "top_family_share": 0.48,
+  "km_median": 0.0145,
+  "heal_over_ttc": 0.0002,
+  "expired_share": 0.0,
+  "median_peak": 0.065,
+  "km_median_wo_top": 0.0144
+ },
+ "180-365": {
+  "n": 817,
+  "families": 59,
+  "top_family_share": 0.45,
+  "km_median": 0.023,
+  "heal_over_ttc": 0.0001,
+  "expired_share": 0.0,
+  "median_peak": 0.058,
+  "km_median_wo_top": 0.0276
+ },
+ ">365": {
+  "n": 553,
+  "families": 42,
+  "top_family_share": 0.29,
+  "km_median": 0.0186,
+  "heal_over_ttc": 0.0,
+  "expired_share": 0.002,
+  "median_peak": 0.057,
+  "km_median_wo_top": 0.025
+ }
+}
