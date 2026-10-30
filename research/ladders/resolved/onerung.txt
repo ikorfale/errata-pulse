@@ -1,0 +1,16 @@
+
+all episodes: 3277 episodes, 142 families, opener=early rung 2167
+stratum   n_other  P(heal|other)  n_same  P(heal|same)
+<1h           334         0.554    2420         0.391
+1-24h          88         0.500     328         0.369
+>=24h          39         0.462      67         0.627
+P1 stratified other-minus-same: +0.148, 95% +0.046 to +0.215
+P3 heal by other rung 0.231 of 3271 heals vs other-rung share of trades 0.205: +0.026, 95% -0.025 to +0.078
+
+lasting breaks (peak>=0.05, >=1 day): 246 episodes, 55 families, opener=early rung 153
+stratum   n_other  P(heal|other)  n_same  P(heal|same)
+<1h            14         0.000     106         0.000
+1-24h          12         0.000      59         0.000
+>=24h          20         0.200      35         0.371
+P1 stratified other-minus-same: -0.038, 95% -0.072 to +0.022
+P3 heal by other rung 0.383 of 240 heals vs other-rung share of trades 0.330: +0.054, 95% -0.088 to +0.160
