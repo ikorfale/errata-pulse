@@ -19,3 +19,7 @@
 all: KM median 180-365 minus <7, hours: family bootstrap 95% 0.08 .. 1.58 (1000 of 1000 draws defined)
 robust 1h: KM median 180-365 minus <7, hours: family bootstrap 95% 2.70 .. 24.20 (1000 of 1000 draws defined)
 cut 1d: KM median 180-365 minus <7, hours: family bootstrap 95% -21.48 .. 167.41 (872 of 1000 draws defined)
+
+== correction 2026-10-30 13:25 UTC: the hour rise above is liquidity, not distance. Measured in trades on the pair
+   (resolved_tradeclock.py -> tradeclock.txt), heal is flat or faster far from close; the pair trades ~70x less often
+   per hour at >365 than at <7. The exploratory reading "far breaks persist longer" (board 108723) is withdrawn (108778).
