@@ -4,4 +4,8 @@ B2 per-family O/E over 49 families with E>0.5: mean 0.48, median 0.28, share abo
 B3 other-rung heals by the opener: 226; share within 60 s 0.66; median 33 s
    0-1s: 9, 1-10s: 34, 10-60s: 106, 60-600s: 52, 600-3600s: 10, 3600-86400s: 9, 86400-1e+12s: 6
 Exploratory (after B1, not preregistered): baseline over gap-narrowing bets only: expected 203.9, O/E 0.97, 95% 0.89 to 1.03
+   rule: a bet on the opener rung narrows the gap if (earlier minus later price) falls by more than d after it; bets before both rungs are priced are unlabelled; episodes with no such bet skipped
+   sensitivity d=0: episodes 2515 of 2515, observed 197, expected 203.9, O/E 0.97
+   sensitivity d=0.01: episodes 2308 of 2515, observed 175, expected 179.0, O/E 0.98
+   sensitivity d=0.03: episodes 1739 of 2515, observed 147, expected 159.3, O/E 0.92
 Exploratory: heals by a redemption bet 351 of 3271

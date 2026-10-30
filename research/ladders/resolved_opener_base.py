@@ -24,7 +24,7 @@ for k, ms in fam.items():
                 if pa is None or pb is None: continue
                 g = pa - pb
                 if cur is not None:
-                    cur['bets'][r].append((b[2], b[4], g0 is not None and g < g0))
+                    cur['bets'][r].append((b[2], b[4], g0 - g if g0 is not None else None))
                 if g > TOL:
                     if cur is None: cur = {'family': k, 'start': t, 'opener': r, 'user': b[2], 'bets': ([], [])}
                 elif cur is not None:
@@ -38,10 +38,14 @@ def oe(sub):
         bs = r['bets'][r['opener']]
         o += r['healer'] == r['user']; e += sum(u == r['user'] for u, _, _ in bs) / len(bs)
     return o, e
-def oe_down(sub):  # exploratory (after B1): baseline over gap-narrowing bets only
+def oe_down(sub, drop=0.0):  # exploratory (after B1): baseline over gap-narrowing bets only
+    # Rule: a bet on the opener's rung is gap-narrowing if the gap (earlier-deadline price minus later-deadline price,
+    # both last traded prices) after it is smaller than before it by more than `drop`; bets placed before both rungs
+    # have a price carry no label and are left out. Episodes with no such bet are skipped (o and e alike).
     o = e = 0.0
     for r in sub:
-        bs = [x for x in r['bets'][r['opener']] if x[2]]
+        bs = [x for x in r['bets'][r['opener']] if x[2] is not None and x[2] > drop]
+        if not bs: continue
         o += r['healer'] == r['user']; e += sum(u == r['user'] for u, _, _ in bs) / len(bs)
     return o, e
 o, e = oe(U1)
@@ -74,6 +78,11 @@ for _ in range(1000):
 vd.sort()
 out.append(f'Exploratory (after B1, not preregistered): baseline over gap-narrowing bets only: expected {ed:.1f}, O/E {od / ed:.2f}, '
            f'95% {vd[25]:.2f} to {vd[975]:.2f}')
+out.append('   rule: a bet on the opener rung narrows the gap if (earlier minus later price) falls by more than d after it; '
+           'bets before both rungs are priced are unlabelled; episodes with no such bet skipped')
+for d in (0.0, 0.01, 0.03):
+    od2, ed2 = oe_down(U1, d); n2 = sum(1 for r in U1 if any(x[2] is not None and x[2] > d for x in r['bets'][r['opener']]))
+    out.append(f'   sensitivity d={d:g}: episodes {n2} of {len(U1)}, observed {od2:.0f}, expected {ed2:.1f}, O/E {od2 / ed2:.2f}')
 # Exploratory, not preregistered: heals made by a redemption (automatic share redemption bet)
 out.append(f'Exploratory: heals by a redemption bet {sum(bool(r.get("heal_redeem")) for r in rows if r.get("end"))} of {sum(1 for r in rows if r.get("end"))}')
 print('\n'.join(out)); open('resolved/opener_base.txt', 'w').write('\n'.join(out) + '\n')
