@@ -1,20 +1,21 @@
-# H2 draft r3: negative reactions on neutral news after deadly strikes, against control regions (DRAFT, not frozen)
+# H2 draft r4: negative reactions on neutral news after deadly strikes, against control regions (DRAFT, not frozen)
 
 Written 2026-10-31 ~13:55Z for #517; r1 ~13:50Z after the first blocking review (fable-h2-1.txt, 13 points, all
 adopted; r0 in archive_tmp/PREREG-H2-draft-r0.md); r2 ~13:55Z after round 2 (fable-h2-2.txt, 6 points, adopted;
-r1 in archive_tmp/PREREG-H2-draft-r1.md); r3 ~14:02Z after round 3 (fable-h2-3.txt, 5 points, adopted). No H2 outcome value has been read for any channel or date in this
+r1 in archive_tmp/PREREG-H2-draft-r1.md); r3 ~14:02Z after round 3 (fable-h2-3.txt, 5 points, adopted); r4 ~14:10Z after round 4 (fable-h2-4.txt, 4 points,
+adopted). No H2 outcome value has been read for any channel or date in this
 design. Freeze only after blocking-only second-model reviews answer NONE (fable-h2-*.txt next to this file).
 
 ## Why a new event set (the main constraint)
 v2 (PREREG-v2.md, RESULT-v2.md) already read reaction shares of the treated channels on the 11 deadly-strike events of
 Feb-Oct 2026 (alarm and grief, 24 h, non-strike posts): bounded null for both, on the primary and the second channel.
 Those windows are not blind any more, and any outcome chosen now for them would be chosen after seeing alarm and grief.
-So H2 is tested only on **prospective events**: hour 0 after the freeze timestamp, up to 2027-01-31 or K = 12, whichever
+So H2 is tested only on **prospective events**: hour 0 after the freeze timestamp, up to 2027-01-31T00:00Z or K = 12, whichever
 comes first. Events are logged in `h2_events.jsonl` within 72 h of hour 0, from toll data only, before any reaction of
 that window is fetched. No retrospective events (a toll 1-3 set was rejected: near-daily tolls in border regions
 contaminate baselines, and its windows overlap v2 windows on the same channels).
 **v2-read spans.** For every v2 event and channel (primary and robustness), the span from v2 hour 0 minus 30 days to
-plus 24 hours is "read". The table of these spans is committed with the freeze (`v2_read_spans.tsv`). No H2 window,
+the later of (v2 hour 0 + 24 h) and the timestamp of the newest post present in that channel's v2 data file is "read". The table of these spans is committed with the freeze (`v2_read_spans.tsv`). No H2 window,
 norm or pseudo window may touch a read span on its channel.
 v2's null is the prior and is printed beside the H2 result whatever H2 shows.
 
@@ -48,9 +49,10 @@ channel's own 14-day norm by more than the same change on control-region channel
 - **Clustered events:** members are register events (toll >= 2) in regions listed in `h2_regions.tsv`, nothing else.
   They merge transitively: a unit is a maximal chain of hour 0s with gaps <= 48 h. Unit value = mean of the members'
   D_e; K counts the unit once. Control eligibility is per member, at the member's hours.
-- **Stop:** fires when the log holds 12 units that survive the toll-based rules above (exclusions, merging); no
-  reaction data is needed for it. Stop timestamp = hour 0 of the last member of the 12th unit + 48 h, or 2027-01-31
-  if earlier. **K** = units remaining after the floor drops of the Outcome section; the K >= 6 minimum applies to it.
+- **Stop:** membership is a function of hour 0 and the closed register only, never of when an event was logged.
+  Order the toll >= 2 register events in h2_regions.tsv regions by hour 0, apply exclusion and merging; the 12th unit
+  closes at the first gap over 48 h after it; stop timestamp = its last member's hour 0 + 48 h, or 2027-01-31T00:00Z
+  if earlier. Every register event with hour 0 <= stop timestamp is evaluated, whenever it was logged. **K** = units remaining after the floor drops of the Outcome section; the K >= 6 minimum applies to it.
 
 ## Channels
 - Treated: one channel per treated-eligible region, fixed before the freeze: v2 primary where it exists
@@ -81,8 +83,10 @@ channel's own 14-day norm by more than the same change on control-region channel
 - Block value = sum of negative reactions / sum of all reactions over the block's neutral posts with >= 30 reactions.
 - Event block = hours 0..48. Norm = hours -336..0, pooled the same way. Change = block value - norm value.
 - Floor: a channel enters a member only with >= 5 neutral posts (>= 30 reactions) in the event block and >= 30 such
-  posts in the norm, counted before any block value is computed. A member drops if its treated channel fails the floor
-  or it has fewer than 8 eligible controls; a unit drops when no member remains (both reported).
+  posts in the norm, counted before any block value is computed. An **eligible control** for a member is one that is
+  not toll-excluded and passes both floors at the member's hours; the 8 and the median both count these. A member drops
+  if its treated channel fails the floor or it has fewer than 8 eligible controls; a unit drops when no member remains
+  (both reported).
 - Posts are fetched at least 7 days after the block ends, so every post has aged >= 7 days.
 
 ## Statistic
@@ -90,7 +94,8 @@ For a member event: D_e = change(treated) - median over eligible controls of cha
 = mean over its members. D = mean over units. One-sided: H2 predicts D > 0.
 
 ## Null (the shuffled input and what counts as a fail)
-- **Pool:** pool_end = min(stop timestamp, 2027-01-31). The stop is final: no event logged after it enters, nothing is
+- **Pool:** pool_end = min(stop timestamp, 2027-01-31T00:00Z). The stop is final: no event with hour 0 after the stop
+  timestamp enters, nothing is
   added after the fetch. Pseudo hour 0 is drawn from [freeze + 336 h, pool_end - 48 h], uniformly over hours, on the
   member's treated channel, eligible only if its hours -336..48 overlap no toll >= 1 event's hours 0..48 in that region
   (h2_tolls.jsonl) and touch no v2-read span. Pseudo windows of different draws may overlap. No extension before the
@@ -109,8 +114,9 @@ For a member event: D_e = change(treated) - median over eligible controls of cha
   now as the smallest shift in negative share I would call a mood change (three points of share). If the rate is
   < 0.5, the result is "not testable at this K", reported before D is read, not a null. The pipeline also prints the
   smallest delta reaching 80% detection.
-- **Placebo:** hour 0 moved to hour -168. A placebo unit drops (reported) if its hours -504..-120 overlap any toll >= 1
-  event's hours 0..48 in its region (h2_tolls.jsonl) or touch a v2-read span on its channel; control exclusion at the
+- **Placebo:** hour 0 moved to hour -168. Placebo drops are per member: a member drops (reported) if its hours
+  -504..-120 overlap any toll >= 1 event's hours 0..48 in its region (h2_tolls.jsonl), touch a v2-read span on its
+  channel, or fail the floor and eligible-control rule at the placebo hours; a placebo unit drops when no member remains; control exclusion at the
   placebo hour uses the same toll >= 1 rule; otherwise the full pipeline, same null. The placebo has the same minimum:
   fewer than 6 surviving placebo units -> no claim.
 - **Fetch:** no earlier than pool_end + 48 h + 7 days, for treated and control channels over every window they serve
@@ -123,7 +129,7 @@ The test is read only if K >= 6 units enter after all drops. With K < 6 at the s
 units and their D_e, no p.
 
 ## Blindness
-Reaction values of any window are fetched only after the stop (K = 12 or 2027-01-31) and parsed only by the frozen
+Reaction values of any window are fetched only after the stop (the stop timestamp) and parsed only by the frozen
 pipeline. Before that, the event log holds toll data only; channel checks never open a post page inside a logged
 event's hours 0..48 (usernames are resolved before the freeze).
 

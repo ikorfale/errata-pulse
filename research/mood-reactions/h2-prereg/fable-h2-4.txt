@@ -1,0 +1,33 @@
+**Round-3 points**
+
+| # | Point | Status | Lines |
+|---|---|---|---|
+| 1 | Placebo gate below minimum | FIXED | 114-115 |
+| 2 | Precision sample inside H2 windows | FIXED | 71-72 |
+| 3 | Register logs statements, not events; span | FIXED | 39-43 (span at 40) |
+| 4 | Stop not computable, timestamp undefined | FIXED as proposed | 51-53, 93. One residual from the wording, new point 2 |
+| 5 | Member vs unit drops | FIXED | 83-85, 99-102 |
+
+**New blocking problems**
+
+(a) Choices after outcome data
+
+1. **The v2-read span end is asserted, not taken from the data (lines 16-18, 47, 96, 113).** The span is defined as v2 hour 0 minus 30 days to plus 24 hours. What is actually on disk for each v2 channel is whatever the v2 pager returned. If any channel's fetch began at the channel's newest post, which is the default t.me/s behaviour without a before parameter, then data_v2 holds reaction counts for that channel up to the fetch date in late October. Those posts sit in the norm of any H2 event on that channel with hour 0 before fetch date plus 336 h, and in the placebo windows. PREREG-v2 lines 105-110 do not settle which way the pager ran. Fix: in v2_read_spans.tsv, the span end for each channel, primary and robustness, is the timestamp of the newest post present in its data_v2 file, or hour 0 plus 24 h if that is later. Nothing else changes. If the pager was window-bounded the column equals the current value and costs nothing.
+
+(b) Tests that cannot fail or are biased toward H2
+
+NONE. Exclusion, floors, redraws and the toll rules are symmetric between real, pseudo and placebo units. The injected shift adds exactly 0.03 to every D*, so the detection gate is a deterministic function of the null's spread and can fail.
+
+(c) Two analysts compute different D or p
+
+2. **Membership depends on logging time, not hour 0 (lines 13, 48-53, 93).** Events are logged up to 72 h after hour 0. The stop timestamp is the 12th unit's last hour 0 plus 48 h. Line 93 says no event logged after the stop enters. An event in another treated region with hour 0 at last plus 30 h, logged at last plus 60 h, is a member by line 49 (gap 30 h) and not a member by line 93. One analyst includes it, moving the unit value and the stop timestamp; the other does not. The author's logging speed decides. Also "2027-01-31" at lines 12, 52 and 93 has no time of day. Fix: membership is a function of hour 0 and the closed register only. Order the toll ≥ 2 register events in h2_regions regions by hour 0, apply exclusion and merging, close the 12th unit at the first gap over 48 h after it, stop timestamp = its last member's hour 0 + 48 h. Every register event with hour 0 ≤ stop timestamp is evaluated whenever it was logged; "logged after" at line 93 is replaced by "hour 0 after the stop timestamp". Write the calendar end as 2027-01-31T00:00Z.
+
+3. **"Eligible control" mixes the toll rule and the floor (lines 59-61, 83-85, 89).** Line 60 defines a control as excluded by the toll rule. Line 83 says a channel "enters" a member only with the floor. Line 85 drops a member with fewer than 8 eligible controls, and line 89 takes the median over eligible controls. A member with 9 toll-eligible controls of which 5 pass the floor: one analyst keeps it and takes the median over 5, the other drops it. Fix: an eligible control for a member is one that is not toll-excluded and passes both floors at the member's hours. The 8 and the median both count these.
+
+4. **Placebo drops are stated at unit level (lines 112-113).** "A placebo unit drops if its hours -504..-120 overlap any toll ≥ 1 event in its region" has no single region for a merged unit. Member A clean, member B with a toll event at -450 h: one analyst drops the unit, the other drops B and keeps A. Placebo D and the ≥ 6 placebo count both move. Fix: placebo drops are per member by the rule at line 85, with the toll test applied to each member's region at the placebo hours. A placebo unit drops when no member remains.
+
+**Open questions** (the three from round 2, since the draft lists none)
+
+1. **Threshold 2.** Keep.
+2. **Median difference-in-differences with shuffled null.** Keep. It is fully specified once points 2 to 4 pin down membership, eligible controls and placebo drops.
+3. **Injection check.** Fine as written at lines 106-111. Nothing to add.
