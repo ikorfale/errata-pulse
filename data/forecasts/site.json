@@ -1,29 +1,29 @@
 {
- "generated": "2026-10-31T22:44:55.292794+00:00",
+ "generated": "2026-10-31T23:27:11.529629+00:00",
  "counts": {
-  "open": 32,
-  "resolved": 5,
+  "open": 33,
+  "resolved": 8,
   "annulled": 0
  },
  "selection": {
-  "candidates": 5,
-  "asked": 5,
-  "dropped": 0,
+  "candidates": 10,
+  "asked": 9,
+  "dropped": 1,
   "pending": 0,
   "asked_without_draft": 32,
   "drafts_since": "2026-10-24"
  },
  "brier": {
-  "mine": 0.1414,
-  "final": 0.0799,
-  "base": 0.381,
-  "crowd": 0.0235
+  "mine": 0.1086,
+  "final": 0.0568,
+  "base": 0.2707,
+  "crowd": 0.0142
  },
  "calibration": [
   {
    "bin": "0-10%",
-   "n": 1,
-   "mean_p": 0.05,
+   "n": 3,
+   "mean_p": 0.033,
    "freq_yes": 0.0
   },
   {
@@ -64,9 +64,9 @@
   },
   {
    "bin": "70-80%",
-   "n": 0,
-   "mean_p": null,
-   "freq_yes": null
+   "n": 1,
+   "mean_p": 0.77,
+   "freq_yes": 1.0
   },
   {
    "bin": "80-90%",
@@ -82,10 +82,10 @@
   }
  ],
  "models": {
-  "fable": 0.7225,
-  "base": 0.381,
-  "signals": 0.1063,
-  "mine": 0.7744
+  "base": 0.2718,
+  "mine": 0.3015,
+  "signals": 0.0851,
+  "fable": 0.2926
  },
  "questions": [
   {
@@ -96,7 +96,7 @@
    "category": "mobilisation",
    "index": "mri",
    "opened": "2026-10-09",
-   "status": "open",
+   "status": "no",
    "p": 0.01,
    "base_rate": 0.02,
    "method": "base: reference class = declared mobilisations during the current war, 1 (Sep 2022) in 4.6 years, Poisson with +0.5 smoothing over 22 days. signals: LR 1.3 mobilisation risk index 54 'elevated' (legal readiness 62, rising); LR 0.8 the rumoured post-election '1 October window' passed with no decree; LR 0.8 the state keeps substituting (quotas, foreigners, coercion of conscripts) and recruitment is only ~10% below 2025; official denials taken as LR 1.0 (they preceded 2022 too).",
@@ -257,6 +257,21 @@
    "crowd_urls": {
     "manifold:russia-announces-mobilization-befor": "https://manifold.markets/AIBear/russia-announces-mobilization-befor",
     "polymarket:will-russia-announce-a-new-forced-mobilization-by-october-31-2026": "https://polymarket.com/event/will-russia-announce-a-new-forced-mobilization-by-october-31-2026"
+   },
+   "resolved_at": "2026-10-31",
+   "resolution_source": "http://kremlin.ru/acts/bank",
+   "resolution_note": "No mobilisation decree or official announcement 10-31.10.2026 (kremlin.ru acts bank, pravo.gov.ru; wires). Contract roundups (Verstka/Meduza 30.10) do not count by criteria.",
+   "scores": {
+    "brier": 0.00021908695652173913,
+    "brier_final": 0.0001,
+    "models": {
+     "base": 0.00031313043478260874,
+     "signals": 0.00028730434782608694
+    },
+    "brier_base": 0.0004,
+    "brier_crowd": 0.004877304347826087,
+    "days": 23,
+    "outcome": 0.0
    }
   },
   {
@@ -834,7 +849,7 @@
    "index": "pulse",
    "opened": "2026-10-09",
    "status": "open",
-   "p": 0.32,
+   "p": 0.158,
    "base_rate": 0.06,
    "method": "base: reference class = the current Pakistan-brokered US-Iran ceasefire, ~180 days with no US strike on Iranian territory (strikes on tankers in Sep were at sea); 0 events in 0.5 years, +0.5 smoothing, 24 days. signals: LR 0.5 Trump publicly promised no strikes before the 3 Nov midterms (AP, Guardian, 8 Oct); LR 1.3 Pentagon reportedly told to prepare options; LR 1.3 near-nightly IRGC attacks on Hormuz shipping since 29 Sep.",
    "history": [
@@ -873,6 +888,16 @@
       "base": 0.06,
       "signals": 0.28,
       "fable": 0.4
+     }
+    },
+    {
+     "date": "2026-10-31",
+     "p": 0.158,
+     "reason": "Qeshm 29-30.10 still unconfirmed by US gov or two wires after 2 days; Rubio 31.10: no decision to renew strikes; US told allies 'after 3.11'. Mine 0.15, Fable independent 0.25, base 0.10",
+     "models": {
+      "base": 0.1,
+      "mine": 0.15,
+      "fable": 0.25
      }
     }
    ],
@@ -2360,7 +2385,7 @@
    "category": "energy",
    "index": "pulse",
    "opened": "2026-10-17",
-   "status": "open",
+   "status": "no",
    "p": 0.04,
    "base_rate": 0.1,
    "method": "Batch 17.10: my number written before asking Claude Fable blind (it never saw mine); ensemble = log-odds mean of base and the two judgements.",
@@ -2417,7 +2442,23 @@
     }
    ],
    "crowd": [],
-   "crowd_history": []
+   "crowd_history": [],
+   "resolved_at": "2026-10-31",
+   "resolution_source": "https://www.ukmto.org/-/media/ukmto/products/20261029-ukmto_warning-187-26-update-001.pdf",
+   "resolution_note": "No CENTCOM/UKMTO statement of a mine strike after 17.10. UKMTO 187-26 (29.10): limpet explosives from a small boat, not a mine; CENTCOM 28.10 rejected IRGC mine claims, lanes cleared.",
+   "scores": {
+    "brier": 0.015553333333333334,
+    "brier_final": 0.0016,
+    "models": {
+     "base": 0.01896,
+     "fable": 0.0225,
+     "mine": 0.021606666666666666
+    },
+    "brier_base": 0.010000000000000002,
+    "brier_crowd": null,
+    "days": 15,
+    "outcome": 0.0
+   }
   },
   {
    "id": "30",
@@ -2583,7 +2624,7 @@
    "category": "war",
    "index": "pulse",
    "opened": "2026-10-24",
-   "status": "open",
+   "status": "yes",
    "p": 0.77,
    "base_rate": 0.5,
    "method": "mine written before Fable (tmp/forecast_mine_20261029.log 23:40Z); Fable independent from evidence only, never saw my number; ensemble = log-odds mean with base rate",
@@ -2611,7 +2652,23 @@
    ],
    "crowd": [],
    "crowd_history": [],
-   "draft": "d2"
+   "draft": "d2",
+   "resolved_at": "2026-10-31",
+   "resolution_source": "https://www.bbc.co.uk/news/articles/c60me298k1yeo",
+   "resolution_note": "Evacuation of hundreds from Oleshky on 30.10 under the local ceasefire, confirmed by both ombudsmen (BBC 30.10, AFP).",
+   "scores": {
+    "brier": 0.14639999999999997,
+    "brier_final": 0.05289999999999999,
+    "models": {
+     "fable": 0.13289999999999996,
+     "base": 0.25,
+     "mine": 0.10843750000000002
+    },
+    "brier_base": 0.25,
+    "brier_crowd": null,
+    "days": 8,
+    "outcome": 1.0
+   }
   },
   {
    "id": "35",
@@ -2696,6 +2753,118 @@
    "crowd": [],
    "crowd_history": [],
    "draft": "d5"
+  },
+  {
+   "id": "38",
+   "title": "Will US and Iranian government officials hold a publicly confirmed direct meeting by 30 November 2026?",
+   "criteria": "YES if between 1 and 30 Nov 2026 officials of the US government and the Iranian government meet face to face (same room, mediators may be present), as confirmed by either government or by two major wire services. Indirect talks through Qatar, Oman or Pakistan, letters and phone calls do not count. Otherwise NO.",
+   "deadline": "2026-11-30",
+   "category": "war",
+   "index": null,
+   "opened": "2026-10-31",
+   "status": "open",
+   "p": 0.212,
+   "base_rate": 0.15,
+   "method": "mine written before Fable (tmp/my-fc-1031.txt 23:35Z); Fable independent from evidence only, never saw my number; ensemble = log-odds mean with base rate",
+   "history": [
+    {
+     "date": "2026-10-31",
+     "p": 0.212,
+     "reason": "Qatar shuttle with US coordination, Iranian team in Doha 31.10; both sides publicly refuse a direct format (Axios, Tasnim, Araghchi 31.10); strike window after 3.11",
+     "models": {
+      "base": 0.15,
+      "mine": 0.25,
+      "fable": 0.25
+     }
+    }
+   ],
+   "crowd": [],
+   "crowd_history": [],
+   "draft": "d6"
+  },
+  {
+   "id": "39",
+   "title": "Will Russia and Ukraine both confirm an extension of the Kherson-region ceasefire beyond 1 November 2026?",
+   "criteria": "YES if by 23:59 Kyiv time on 3 Nov 2026 official representatives of both Russia and Ukraine (president, government, MoD, ombudsman or negotiators) state that the ceasefire in force in the Kherson frontline region until the end of 1 Nov is extended or replaced by another ceasefire covering that region. Otherwise NO.",
+   "deadline": "2026-11-03",
+   "category": "war",
+   "index": null,
+   "opened": "2026-10-31",
+   "status": "open",
+   "p": 0.333,
+   "base_rate": 0.3,
+   "method": "mine written before Fable (tmp/my-fc-1031.txt 23:35Z); Fable independent from evidence only, never saw my number; ensemble = log-odds mean with base rate",
+   "history": [
+    {
+     "date": "2026-10-31",
+     "p": 0.333,
+     "reason": "evacuation done; ombudsmen want regular missions; Kremlin 30.10: not a sign of wider truce",
+     "models": {
+      "base": 0.3,
+      "mine": 0.35,
+      "fable": 0.35
+     }
+    }
+   ],
+   "crowd": [],
+   "crowd_history": [],
+   "draft": "d7"
+  },
+  {
+   "id": "40",
+   "title": "Will Russia and Ukraine both agree to a limited Black Sea ceasefire for shipping by 31 December 2026?",
+   "criteria": "YES if by 31 Dec 2026 both the Russian and the Ukrainian governments publicly confirm an agreement to stop attacks on merchant shipping (grain and/or energy) in the Black Sea, whether bilateral or via Turkey, India, the US or the UN. Statements of interest or proposals do not count. Otherwise NO.",
+   "deadline": "2026-12-31",
+   "category": "war",
+   "index": null,
+   "opened": "2026-10-31",
+   "status": "open",
+   "p": 0.176,
+   "base_rate": 0.15,
+   "method": "mine written before Fable (tmp/my-fc-1031.txt 23:35Z); Fable independent from evidence only, never saw my number; ensemble = log-odds mean with base rate",
+   "history": [
+    {
+     "date": "2026-10-31",
+     "p": 0.176,
+     "reason": "Rubio 31.10: interest, not momentum; Lavrov unchanged; March 2025 deal stalled on Russian conditions",
+     "models": {
+      "base": 0.15,
+      "mine": 0.18,
+      "fable": 0.2
+     }
+    }
+   ],
+   "crowd": [],
+   "crowd_history": [],
+   "draft": "d8"
+  },
+  {
+   "id": "41",
+   "title": "Will ICE Brent front-month futures settle above $120 on any day between 2 and 30 November 2026?",
+   "criteria": "YES if the front-month ICE Brent futures settlement on any trading day from 2 to 30 Nov 2026 is above $120.00 per barrel, as reported by Reuters, CNBC or ICE. Otherwise NO.",
+   "deadline": "2026-11-30",
+   "category": "energy",
+   "index": null,
+   "opened": "2026-10-31",
+   "status": "open",
+   "p": 0.415,
+   "base_rate": 0.35,
+   "method": "mine written before Fable (tmp/my-fc-1031.txt 23:35Z); Fable independent from evidence only, never saw my number; ensemble = log-odds mean with base rate",
+   "history": [
+    {
+     "date": "2026-10-31",
+     "p": 0.415,
+     "reason": "Jan front 113.43 on 30.10, needs ~+6% in a month at wartime vol; strike risk after 3.11 vs Doha progress",
+     "models": {
+      "base": 0.35,
+      "mine": 0.4,
+      "fable": 0.5
+     }
+    }
+   ],
+   "crowd": [],
+   "crowd_history": [],
+   "draft": "d9"
   }
  ]
 }
