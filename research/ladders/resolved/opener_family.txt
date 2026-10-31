@@ -1,0 +1,13 @@
+common set d=0.03: 1739 episodes, 113 families, observed 147, expected 159.3, O/E 0.92, shortfall 12.3 heals
+families with O<E: 12; their summed shortfall 14.7 (offset by 2.4 from families with O>E)
+largest shortfalls (family, episodes, O, E, O/E without it):
+   will gpt 5 be released before: n=626, O 67, E 72.2, O-E -5.2, O/E without 0.918
+   will china invade taiwan by: n=59, O 4, E 7.7, O-E -3.7, O/E without 0.943
+   will the us government open an investigation into elon musk s drug use by: n=19, O 0, E 1.2, O-E -1.2, O/E without 0.930
+   will elon musk become a trillionaire before: n=134, O 13, E 14.0, O-E -1.0, O/E without 0.922
+   will the us attack iran by: n=24, O 0, E 0.9, O-E -0.9, O/E without 0.928
+   will people be wearing the apple vision pro in public in london by: n=2, O 0, E 0.5, O-E -0.5, O/E without 0.926
+   will at least 10 people die from iranian strikes on israel before: n=18, O 3, E 3.5, O-E -0.5, O/E without 0.924
+   will nintendo release a successor to their switch console before: n=18, O 8, E 8.5, O-E -0.5, O/E without 0.921
+leave-one-family-out O/E range 0.917 to 0.943
+without the 3 largest shortfalls: O/E 0.972
