@@ -1,0 +1,3 @@
+d=0.0: episodes 2515, observed 197, expected 203.9, shortfall 6.9, null SD 5.5 (z -1.26), shuffle 95% range 194 to 215, P(shuffle <= observed) 0.118
+d=0.01: episodes 2308, observed 175, expected 179.0, shortfall 4.0, null SD 5.1 (z -0.79), shuffle 95% range 169 to 189, P(shuffle <= observed) 0.245
+d=0.03: episodes 1739, observed 147, expected 159.3, shortfall 12.3, null SD 3.8 (z -3.21), shuffle 95% range 152 to 167, P(shuffle <= observed) 0.001
