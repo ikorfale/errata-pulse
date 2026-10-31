@@ -1,0 +1,73 @@
+{
+ "made_utc": "2026-10-31T12:08:01+00:00",
+ "draw": "drand quicknet round 33548212",
+ "list_sha256": "8fa280f1d743bee83902200f1f04a31cddd025707a17754ad2786e5ca0fb1ea3",
+ "crowd_price_seen_before": "none of the five (08d8EdlNC8 not drawn); 443 resolution seen",
+ "forecasts": [
+  {
+   "index": 130,
+   "id": "J4LHRPMCKS818jPOVdqT",
+   "question": "Will Donald Trump be pardoned before 2027?",
+   "url": "https://manifold.markets/Dustin/will-donald-trump-be-pardoned-befor",
+   "p_yes": 0.01,
+   "base_rate": "0.01: no sitting or former US president has been pardoned since Nixon (1974); Trump has no live federal case to pardon; his NY conviction is a state matter only the NY governor could pardon",
+   "models": {
+    "base": 0.01,
+    "signals": 0.01
+   },
+   "reason": "Federal cases were dismissed in 2024-25; a NY pardon would need Gov. Hochul (Democrat), no reporting of one; a self-pardon would have nothing federal to cover. Two months left."
+  },
+  {
+   "index": 292,
+   "id": "hAI6cS0Rlu",
+   "question": "Will Donald Trump annex Greenland into the US before 2027?",
+   "url": "https://manifold.markets/Byte/will-donald-trump-annex-greenland-i",
+   "p_yes": 0.04,
+   "base_rate": "0.01: no transfer of a territory of this size between NATO allies in modern times",
+   "models": {
+    "base": 0.01,
+    "signals": 0.06
+   },
+   "reason": "The 22 Sep 2026 US-Denmark-Greenland defence agreement (White House text) reaffirms Danish sovereignty; NYT: 'settled for something much less'. Risk is the criterion 'gains control in any way': the White House calls it 'lasting control over security interests'. The market stayed open five weeks after signing, so the creator did not read it as YES; entry into force after parliamentary steps could reopen that question."
+  },
+  {
+   "index": 291,
+   "id": "h5pCgpQqp9",
+   "question": "Will there be a food shortage related to the closure of the Strait of Hormuz?",
+   "url": "https://manifold.markets/Gabrielle/will-there-be-a-food-shortage-relat",
+   "p_yes": 0.5,
+   "base_rate": "0.35: share of major chokepoint disruptions lasting >6 months that produced media-reported food shortages somewhere (rough, from 1973, 1990, 2022 Black Sea)",
+   "models": {
+    "base": 0.35,
+    "signals": 0.6
+   },
+   "reason": "Reporting exists that comes close: Yemen wholesalers rationing basic goods after the Hormuz closure (The New Arab, 30 May 2026), WFP and UN warnings of acute food shortages (Jun, Oct 2026), IFAD: harvest effects 'now starting to be seen' (Reuters 15 Oct). But the market is still open in late October after all of these, so the creator has not judged any of it a 'food shortage in major media'. Fertilizer pass-through reaches food markets mostly in 2027 (S&P, 19 Oct). Coin-flip on the creator's reading."
+  },
+  {
+   "index": 135,
+   "id": "LASsdLuUcU",
+   "question": "Will the German AfD be in power on state (Bundesland) level by the end of 2026?",
+   "url": "https://manifold.markets/rayman2000/will-the-german-afd-be-in-power-on",
+   "p_yes": 0.27,
+   "base_rate": "0.05: AfD has never been part of a state government; one state election in 2026 gave it 43.8%",
+   "models": {
+    "base": 0.05,
+    "signals": 0.32
+   },
+   "reason": "Saxony-Anhalt: AfD 39 of 83 seats, needs 42 in the first ballot set for mid-December (15 Dec per Siegmund). BSW leadership: abstain (dpa, 16 Oct); CDU leaves the room for ballots 1-2, but Guido Heuer will stay (22 Oct). Secret ballot: AfD's Landtag president got 4 votes more than AfD+BSW seats (6 Oct). Siegmund says one ballot only; Weidel says any ballot. MV: SPD-Left-Green coalition, AfD in opposition. The creator counts an AfD minority government as YES."
+  },
+  {
+   "index": 443,
+   "id": "znCLUA8ULg",
+   "question": "Credible evidence of pre-arranged local support for Venezuela regime change (news media 2026)",
+   "url": "https://manifold.markets/uair01/credible-evidence-of-prearranged-lo",
+   "p_yes": 0.01,
+   "base_rate": "n/a",
+   "models": {
+    "base": null,
+    "signals": null
+   },
+   "reason": "OUTCOME SEEN FIRST: fetching the criteria at 12:06 UTC showed the market already resolved NO (closed early by its creator). Published as DRAW.md rule 5 requires; reported apart, excluded from any skill claim."
+  }
+ ]
+}
