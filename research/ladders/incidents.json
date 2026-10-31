@@ -1,5 +1,5 @@
 {
- "built_at": "2026-10-30T07:51Z",
+ "built_at": "2026-10-31T07:50Z",
  "runs": [
   "2026-10-16",
   "2026-10-17",
@@ -15,7 +15,8 @@
   "2026-10-27",
   "2026-10-28",
   "2026-10-29",
-  "2026-10-30"
+  "2026-10-30",
+  "2026-10-31"
  ],
  "excluded": {
   "new-detector": 4,
@@ -34,7 +35,7 @@
    "broken_at": "2026-10-26T07:43Z",
    "order": {
     "status": "open",
-    "last_flagged": "2026-10-30"
+    "last_flagged": "2026-10-31"
    },
    "next_trade": {
     "status": "traded",
@@ -51,11 +52,11 @@
    "broken_at": "2026-10-30T07:43Z",
    "order": {
     "status": "open",
-    "last_flagged": "2026-10-30"
+    "last_flagged": "2026-10-31"
    },
    "next_trade": {
-    "status": "censored",
-    "hours": 6.9
+    "status": "traded",
+    "hours": 7.3
    }
   },
   "2026-10-30|BKr7KGDSkT6U3dGlqxIk|Swud8FP0KzyzcCm1omWR": {
@@ -68,11 +69,11 @@
    "broken_at": "2026-10-30T07:43Z",
    "order": {
     "status": "open",
-    "last_flagged": "2026-10-30"
+    "last_flagged": "2026-10-31"
    },
    "next_trade": {
-    "status": "censored",
-    "hours": 6.9
+    "status": "traded",
+    "hours": 7.3
    }
   },
   "2026-10-30|BKr7KGDSkT6U3dGlqxIk|ok28bwmkfmUCxRNEq5tw": {
@@ -84,12 +85,14 @@
    "coherent_at": "2026-10-29T07:41Z",
    "broken_at": "2026-10-30T07:43Z",
    "order": {
-    "status": "open",
-    "last_flagged": "2026-10-30"
+    "status": "repriced",
+    "last_flagged": "2026-10-30",
+    "first_unflagged": "2026-10-31",
+    "gap_at_exit": 0.0233
    },
    "next_trade": {
-    "status": "censored",
-    "hours": 6.9
+    "status": "traded",
+    "hours": 7.3
    }
   },
   "2026-10-30|Ide0brMftTAknwNsOSJG|KrygWJ6EmVct1tZXGgXF": {
@@ -102,11 +105,11 @@
    "broken_at": "2026-10-30T07:43Z",
    "order": {
     "status": "open",
-    "last_flagged": "2026-10-30"
+    "last_flagged": "2026-10-31"
    },
    "next_trade": {
     "status": "censored",
-    "hours": 6.9
+    "hours": 30.9
    }
   }
  }
