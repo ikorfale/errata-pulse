@@ -1,23 +1,1279 @@
 {
- "date": "2026-10-29",
- "collected_at": 1793313106,
+ "date": "2026-10-30",
+ "collected_at": 1793399510,
  "signals": [
+  {
+   "family": "energy",
+   "id": "transit:Strait of Hormuz",
+   "label": "Strait of Hormuz: ships per day (7-day avg, data to 2026-10-25)",
+   "value": 3.3,
+   "baseline": 3,
+   "ratio": 1.1,
+   "anomaly": false,
+   "unit": "ships/day",
+   "note": "tankers 0.9/day",
+   "source": "IMF PortWatch",
+   "series": [
+    [
+     "2026-09-26",
+     4
+    ],
+    [
+     "2026-09-27",
+     1
+    ],
+    [
+     "2026-09-28",
+     4
+    ],
+    [
+     "2026-09-29",
+     1
+    ],
+    [
+     "2026-09-30",
+     4
+    ],
+    [
+     "2026-10-01",
+     0
+    ],
+    [
+     "2026-10-02",
+     4
+    ],
+    [
+     "2026-10-03",
+     2
+    ],
+    [
+     "2026-10-04",
+     4
+    ],
+    [
+     "2026-10-05",
+     8
+    ],
+    [
+     "2026-10-06",
+     2
+    ],
+    [
+     "2026-10-07",
+     6
+    ],
+    [
+     "2026-10-08",
+     4
+    ],
+    [
+     "2026-10-09",
+     3
+    ],
+    [
+     "2026-10-10",
+     4
+    ],
+    [
+     "2026-10-11",
+     2
+    ],
+    [
+     "2026-10-12",
+     3
+    ],
+    [
+     "2026-10-13",
+     7
+    ],
+    [
+     "2026-10-14",
+     3
+    ],
+    [
+     "2026-10-15",
+     2
+    ],
+    [
+     "2026-10-16",
+     7
+    ],
+    [
+     "2026-10-17",
+     0
+    ],
+    [
+     "2026-10-18",
+     4
+    ],
+    [
+     "2026-10-19",
+     4
+    ],
+    [
+     "2026-10-20",
+     3
+    ],
+    [
+     "2026-10-21",
+     3
+    ],
+    [
+     "2026-10-22",
+     4
+    ],
+    [
+     "2026-10-23",
+     5
+    ],
+    [
+     "2026-10-24",
+     2
+    ],
+    [
+     "2026-10-25",
+     2
+    ]
+   ],
+   "series_kind": "daily n_total (ships/day, all vessel types), not smoothed",
+   "component": "energy",
+   "means": "Fewer ships through a chokepoint may mean war risk, attacks, insurance withdrawal or a blockade pushing traffic away.",
+   "not_proves": "It does not prove an attack or a closure: weather, seasonality, AIS gaps and the few-day data lag also move it.",
+   "z30": -1.3,
+   "as_of": "2026-10-25"
+  },
+  {
+   "family": "energy",
+   "id": "transit:Bab el-Mandeb Strait",
+   "label": "Bab el-Mandeb Strait: ships per day (7-day avg, data to 2026-10-25)",
+   "value": 28.9,
+   "baseline": 28,
+   "ratio": 1.03,
+   "anomaly": false,
+   "unit": "ships/day",
+   "note": "tankers 9.6/day",
+   "source": "IMF PortWatch",
+   "series": [
+    [
+     "2026-09-26",
+     29
+    ],
+    [
+     "2026-09-27",
+     27
+    ],
+    [
+     "2026-09-28",
+     30
+    ],
+    [
+     "2026-09-29",
+     37
+    ],
+    [
+     "2026-09-30",
+     22
+    ],
+    [
+     "2026-10-01",
+     28
+    ],
+    [
+     "2026-10-02",
+     26
+    ],
+    [
+     "2026-10-03",
+     30
+    ],
+    [
+     "2026-10-04",
+     34
+    ],
+    [
+     "2026-10-05",
+     28
+    ],
+    [
+     "2026-10-06",
+     33
+    ],
+    [
+     "2026-10-07",
+     35
+    ],
+    [
+     "2026-10-08",
+     25
+    ],
+    [
+     "2026-10-09",
+     24
+    ],
+    [
+     "2026-10-10",
+     22
+    ],
+    [
+     "2026-10-11",
+     31
+    ],
+    [
+     "2026-10-12",
+     34
+    ],
+    [
+     "2026-10-13",
+     17
+    ],
+    [
+     "2026-10-14",
+     24
+    ],
+    [
+     "2026-10-15",
+     24
+    ],
+    [
+     "2026-10-16",
+     25
+    ],
+    [
+     "2026-10-17",
+     29
+    ],
+    [
+     "2026-10-18",
+     32
+    ],
+    [
+     "2026-10-19",
+     36
+    ],
+    [
+     "2026-10-20",
+     33
+    ],
+    [
+     "2026-10-21",
+     21
+    ],
+    [
+     "2026-10-22",
+     23
+    ],
+    [
+     "2026-10-23",
+     32
+    ],
+    [
+     "2026-10-24",
+     21
+    ],
+    [
+     "2026-10-25",
+     36
+    ]
+   ],
+   "series_kind": "daily n_total (ships/day, all vessel types), not smoothed",
+   "component": "energy",
+   "means": "Fewer ships through a chokepoint may mean war risk, attacks, insurance withdrawal or a blockade pushing traffic away.",
+   "not_proves": "It does not prove an attack or a closure: weather, seasonality, AIS gaps and the few-day data lag also move it.",
+   "z30": 0.9,
+   "as_of": "2026-10-25"
+  },
+  {
+   "family": "energy",
+   "id": "transit:Suez Canal",
+   "label": "Suez Canal: ships per day (7-day avg, data to 2026-10-25)",
+   "value": 41.3,
+   "baseline": 42,
+   "ratio": 0.98,
+   "anomaly": false,
+   "unit": "ships/day",
+   "note": "tankers 16.3/day",
+   "source": "IMF PortWatch",
+   "series": [
+    [
+     "2026-09-26",
+     48
+    ],
+    [
+     "2026-09-27",
+     37
+    ],
+    [
+     "2026-09-28",
+     28
+    ],
+    [
+     "2026-09-29",
+     40
+    ],
+    [
+     "2026-09-30",
+     45
+    ],
+    [
+     "2026-10-01",
+     55
+    ],
+    [
+     "2026-10-02",
+     42
+    ],
+    [
+     "2026-10-03",
+     46
+    ],
+    [
+     "2026-10-04",
+     46
+    ],
+    [
+     "2026-10-05",
+     36
+    ],
+    [
+     "2026-10-06",
+     48
+    ],
+    [
+     "2026-10-07",
+     32
+    ],
+    [
+     "2026-10-08",
+     37
+    ],
+    [
+     "2026-10-09",
+     55
+    ],
+    [
+     "2026-10-10",
+     41
+    ],
+    [
+     "2026-10-11",
+     43
+    ],
+    [
+     "2026-10-12",
+     50
+    ],
+    [
+     "2026-10-13",
+     36
+    ],
+    [
+     "2026-10-14",
+     54
+    ],
+    [
+     "2026-10-15",
+     42
+    ],
+    [
+     "2026-10-16",
+     43
+    ],
+    [
+     "2026-10-17",
+     42
+    ],
+    [
+     "2026-10-18",
+     43
+    ],
+    [
+     "2026-10-19",
+     36
+    ],
+    [
+     "2026-10-20",
+     39
+    ],
+    [
+     "2026-10-21",
+     40
+    ],
+    [
+     "2026-10-22",
+     43
+    ],
+    [
+     "2026-10-23",
+     44
+    ],
+    [
+     "2026-10-24",
+     41
+    ],
+    [
+     "2026-10-25",
+     46
+    ]
+   ],
+   "series_kind": "daily n_total (ships/day, all vessel types), not smoothed",
+   "component": "energy",
+   "means": "Fewer ships through a chokepoint may mean war risk, attacks, insurance withdrawal or a blockade pushing traffic away.",
+   "not_proves": "It does not prove an attack or a closure: weather, seasonality, AIS gaps and the few-day data lag also move it.",
+   "z30": 0.7,
+   "as_of": "2026-10-25"
+  },
+  {
+   "family": "energy",
+   "id": "transit:Bosporus Strait",
+   "label": "Bosporus Strait: ships per day (7-day avg, data to 2026-10-25)",
+   "value": 53.7,
+   "baseline": 50,
+   "ratio": 1.07,
+   "anomaly": false,
+   "unit": "ships/day",
+   "note": "tankers 15.9/day",
+   "source": "IMF PortWatch",
+   "series": [
+    [
+     "2026-09-26",
+     52
+    ],
+    [
+     "2026-09-27",
+     46
+    ],
+    [
+     "2026-09-28",
+     36
+    ],
+    [
+     "2026-09-29",
+     32
+    ],
+    [
+     "2026-09-30",
+     41
+    ],
+    [
+     "2026-10-01",
+     38
+    ],
+    [
+     "2026-10-02",
+     26
+    ],
+    [
+     "2026-10-03",
+     25
+    ],
+    [
+     "2026-10-04",
+     72
+    ],
+    [
+     "2026-10-05",
+     68
+    ],
+    [
+     "2026-10-06",
+     54
+    ],
+    [
+     "2026-10-07",
+     59
+    ],
+    [
+     "2026-10-08",
+     50
+    ],
+    [
+     "2026-10-09",
+     66
+    ],
+    [
+     "2026-10-10",
+     55
+    ],
+    [
+     "2026-10-11",
+     54
+    ],
+    [
+     "2026-10-12",
+     65
+    ],
+    [
+     "2026-10-13",
+     48
+    ],
+    [
+     "2026-10-14",
+     16
+    ],
+    [
+     "2026-10-15",
+     20
+    ],
+    [
+     "2026-10-16",
+     68
+    ],
+    [
+     "2026-10-17",
+     51
+    ],
+    [
+     "2026-10-18",
+     58
+    ],
+    [
+     "2026-10-19",
+     53
+    ],
+    [
+     "2026-10-20",
+     56
+    ],
+    [
+     "2026-10-21",
+     57
+    ],
+    [
+     "2026-10-22",
+     51
+    ],
+    [
+     "2026-10-23",
+     48
+    ],
+    [
+     "2026-10-24",
+     49
+    ],
+    [
+     "2026-10-25",
+     62
+    ]
+   ],
+   "series_kind": "daily n_total (ships/day, all vessel types), not smoothed",
+   "component": "energy",
+   "means": "Fewer ships through a chokepoint may mean war risk, attacks, insurance withdrawal or a blockade pushing traffic away.",
+   "not_proves": "It does not prove an attack or a closure: weather, seasonality, AIS gaps and the few-day data lag also move it.",
+   "z30": 1.0,
+   "as_of": "2026-10-25"
+  },
+  {
+   "family": "energy",
+   "id": "transit:Kerch Strait",
+   "label": "Kerch Strait: ships per day (7-day avg, data to 2026-10-25)",
+   "value": 0.1,
+   "baseline": 0.0,
+   "ratio": null,
+   "anomaly": null,
+   "unit": "ships/day",
+   "note": "tankers 0.0/day",
+   "source": "IMF PortWatch",
+   "series": [
+    [
+     "2026-09-26",
+     0
+    ],
+    [
+     "2026-09-27",
+     0
+    ],
+    [
+     "2026-09-28",
+     0
+    ],
+    [
+     "2026-09-29",
+     0
+    ],
+    [
+     "2026-09-30",
+     0
+    ],
+    [
+     "2026-10-01",
+     0
+    ],
+    [
+     "2026-10-02",
+     0
+    ],
+    [
+     "2026-10-03",
+     0
+    ],
+    [
+     "2026-10-04",
+     0
+    ],
+    [
+     "2026-10-05",
+     0
+    ],
+    [
+     "2026-10-06",
+     0
+    ],
+    [
+     "2026-10-07",
+     0
+    ],
+    [
+     "2026-10-08",
+     0
+    ],
+    [
+     "2026-10-09",
+     0
+    ],
+    [
+     "2026-10-10",
+     0
+    ],
+    [
+     "2026-10-11",
+     2
+    ],
+    [
+     "2026-10-12",
+     0
+    ],
+    [
+     "2026-10-13",
+     0
+    ],
+    [
+     "2026-10-14",
+     0
+    ],
+    [
+     "2026-10-15",
+     0
+    ],
+    [
+     "2026-10-16",
+     0
+    ],
+    [
+     "2026-10-17",
+     0
+    ],
+    [
+     "2026-10-18",
+     0
+    ],
+    [
+     "2026-10-19",
+     0
+    ],
+    [
+     "2026-10-20",
+     0
+    ],
+    [
+     "2026-10-21",
+     0
+    ],
+    [
+     "2026-10-22",
+     0
+    ],
+    [
+     "2026-10-23",
+     0
+    ],
+    [
+     "2026-10-24",
+     1
+    ],
+    [
+     "2026-10-25",
+     0
+    ]
+   ],
+   "series_kind": "daily n_total (ships/day, all vessel types), not smoothed",
+   "component": "military",
+   "means": "A drop in Kerch Strait traffic may mean strikes, closures or security restrictions in the Black Sea war zone.",
+   "not_proves": "It does not prove an attack: closures for weather and AIS switched off by ships also move it.",
+   "z30": null,
+   "as_of": "2026-10-25"
+  },
+  {
+   "family": "energy",
+   "id": "transit:Taiwan Strait",
+   "label": "Taiwan Strait: ships per day (7-day avg, data to 2026-10-25)",
+   "value": 190,
+   "baseline": 230,
+   "ratio": 0.83,
+   "anomaly": false,
+   "unit": "ships/day",
+   "note": "tankers 43.9/day",
+   "source": "IMF PortWatch",
+   "series": [
+    [
+     "2026-09-26",
+     249
+    ],
+    [
+     "2026-09-27",
+     225
+    ],
+    [
+     "2026-09-28",
+     234
+    ],
+    [
+     "2026-09-29",
+     243
+    ],
+    [
+     "2026-09-30",
+     237
+    ],
+    [
+     "2026-10-01",
+     247
+    ],
+    [
+     "2026-10-02",
+     221
+    ],
+    [
+     "2026-10-03",
+     216
+    ],
+    [
+     "2026-10-04",
+     233
+    ],
+    [
+     "2026-10-05",
+     211
+    ],
+    [
+     "2026-10-06",
+     233
+    ],
+    [
+     "2026-10-07",
+     222
+    ],
+    [
+     "2026-10-08",
+     231
+    ],
+    [
+     "2026-10-09",
+     242
+    ],
+    [
+     "2026-10-10",
+     224
+    ],
+    [
+     "2026-10-11",
+     246
+    ],
+    [
+     "2026-10-12",
+     261
+    ],
+    [
+     "2026-10-13",
+     222
+    ],
+    [
+     "2026-10-14",
+     224
+    ],
+    [
+     "2026-10-15",
+     232
+    ],
+    [
+     "2026-10-16",
+     218
+    ],
+    [
+     "2026-10-17",
+     204
+    ],
+    [
+     "2026-10-18",
+     230
+    ],
+    [
+     "2026-10-19",
+     234
+    ],
+    [
+     "2026-10-20",
+     264
+    ],
+    [
+     "2026-10-21",
+     164
+    ],
+    [
+     "2026-10-22",
+     80
+    ],
+    [
+     "2026-10-23",
+     24
+    ],
+    [
+     "2026-10-24",
+     324
+    ],
+    [
+     "2026-10-25",
+     240
+    ]
+   ],
+   "series_kind": "daily n_total (ships/day, all vessel types), not smoothed",
+   "component": "military",
+   "means": "A drop in Taiwan Strait traffic may mean exercises, exclusion zones or ships avoiding a military risk.",
+   "not_proves": "It does not prove a blockade: weather, AIS gaps and routing choices move it too.",
+   "z30": 0.5,
+   "as_of": "2026-10-25"
+  },
+  {
+   "family": "energy",
+   "id": "transit:Malacca Strait",
+   "label": "Malacca Strait: ships per day (7-day avg, data to 2026-10-25)",
+   "value": 228,
+   "baseline": 221,
+   "ratio": 1.03,
+   "anomaly": false,
+   "unit": "ships/day",
+   "note": "tankers 75.9/day",
+   "source": "IMF PortWatch",
+   "series": [
+    [
+     "2026-09-26",
+     222
+    ],
+    [
+     "2026-09-27",
+     201
+    ],
+    [
+     "2026-09-28",
+     208
+    ],
+    [
+     "2026-09-29",
+     241
+    ],
+    [
+     "2026-09-30",
+     208
+    ],
+    [
+     "2026-10-01",
+     240
+    ],
+    [
+     "2026-10-02",
+     233
+    ],
+    [
+     "2026-10-03",
+     245
+    ],
+    [
+     "2026-10-04",
+     209
+    ],
+    [
+     "2026-10-05",
+     217
+    ],
+    [
+     "2026-10-06",
+     251
+    ],
+    [
+     "2026-10-07",
+     239
+    ],
+    [
+     "2026-10-08",
+     232
+    ],
+    [
+     "2026-10-09",
+     237
+    ],
+    [
+     "2026-10-10",
+     232
+    ],
+    [
+     "2026-10-11",
+     223
+    ],
+    [
+     "2026-10-12",
+     214
+    ],
+    [
+     "2026-10-13",
+     220
+    ],
+    [
+     "2026-10-14",
+     211
+    ],
+    [
+     "2026-10-15",
+     208
+    ],
+    [
+     "2026-10-16",
+     221
+    ],
+    [
+     "2026-10-17",
+     205
+    ],
+    [
+     "2026-10-18",
+     227
+    ],
+    [
+     "2026-10-19",
+     208
+    ],
+    [
+     "2026-10-20",
+     232
+    ],
+    [
+     "2026-10-21",
+     228
+    ],
+    [
+     "2026-10-22",
+     238
+    ],
+    [
+     "2026-10-23",
+     250
+    ],
+    [
+     "2026-10-24",
+     228
+    ],
+    [
+     "2026-10-25",
+     212
+    ]
+   ],
+   "series_kind": "daily n_total (ships/day, all vessel types), not smoothed",
+   "component": "energy",
+   "means": "Fewer ships through a chokepoint may mean war risk, attacks, insurance withdrawal or a blockade pushing traffic away.",
+   "not_proves": "It does not prove an attack or a closure: weather, seasonality, AIS gaps and the few-day data lag also move it.",
+   "z30": -0.8,
+   "as_of": "2026-10-25"
+  },
+  {
+   "family": "energy",
+   "id": "transit:Panama Canal",
+   "label": "Panama Canal: ships per day (7-day avg, data to 2026-10-25)",
+   "value": 28.7,
+   "baseline": 26,
+   "ratio": 1.1,
+   "anomaly": false,
+   "unit": "ships/day",
+   "note": "tankers 12.3/day",
+   "source": "IMF PortWatch",
+   "series": [
+    [
+     "2026-09-26",
+     25
+    ],
+    [
+     "2026-09-27",
+     30
+    ],
+    [
+     "2026-09-28",
+     30
+    ],
+    [
+     "2026-09-29",
+     28
+    ],
+    [
+     "2026-09-30",
+     25
+    ],
+    [
+     "2026-10-01",
+     24
+    ],
+    [
+     "2026-10-02",
+     28
+    ],
+    [
+     "2026-10-03",
+     26
+    ],
+    [
+     "2026-10-04",
+     29
+    ],
+    [
+     "2026-10-05",
+     27
+    ],
+    [
+     "2026-10-06",
+     26
+    ],
+    [
+     "2026-10-07",
+     24
+    ],
+    [
+     "2026-10-08",
+     25
+    ],
+    [
+     "2026-10-09",
+     23
+    ],
+    [
+     "2026-10-10",
+     24
+    ],
+    [
+     "2026-10-11",
+     32
+    ],
+    [
+     "2026-10-12",
+     23
+    ],
+    [
+     "2026-10-13",
+     25
+    ],
+    [
+     "2026-10-14",
+     31
+    ],
+    [
+     "2026-10-15",
+     26
+    ],
+    [
+     "2026-10-16",
+     30
+    ],
+    [
+     "2026-10-17",
+     30
+    ],
+    [
+     "2026-10-18",
+     29
+    ],
+    [
+     "2026-10-19",
+     28
+    ],
+    [
+     "2026-10-20",
+     29
+    ],
+    [
+     "2026-10-21",
+     27
+    ],
+    [
+     "2026-10-22",
+     28
+    ],
+    [
+     "2026-10-23",
+     28
+    ],
+    [
+     "2026-10-24",
+     33
+    ],
+    [
+     "2026-10-25",
+     28
+    ]
+   ],
+   "series_kind": "daily n_total (ships/day, all vessel types), not smoothed",
+   "component": "energy",
+   "means": "Fewer ships through a chokepoint may mean war risk, attacks, insurance withdrawal or a blockade pushing traffic away.",
+   "not_proves": "It does not prove an attack or a closure: weather, seasonality, AIS gaps and the few-day data lag also move it.",
+   "z30": 0.0,
+   "as_of": "2026-10-25"
+  },
+  {
+   "family": "energy",
+   "id": "transit:Cape of Good Hope",
+   "label": "Cape of Good Hope: ships per day (7-day avg, data to 2026-10-25)",
+   "value": 87.1,
+   "baseline": 89,
+   "ratio": 0.98,
+   "anomaly": false,
+   "unit": "ships/day",
+   "note": "tankers 21.9/day",
+   "source": "IMF PortWatch",
+   "series": [
+    [
+     "2026-09-26",
+     91
+    ],
+    [
+     "2026-09-27",
+     75
+    ],
+    [
+     "2026-09-28",
+     91
+    ],
+    [
+     "2026-09-29",
+     65
+    ],
+    [
+     "2026-09-30",
+     89
+    ],
+    [
+     "2026-10-01",
+     95
+    ],
+    [
+     "2026-10-02",
+     99
+    ],
+    [
+     "2026-10-03",
+     76
+    ],
+    [
+     "2026-10-04",
+     99
+    ],
+    [
+     "2026-10-05",
+     92
+    ],
+    [
+     "2026-10-06",
+     75
+    ],
+    [
+     "2026-10-07",
+     84
+    ],
+    [
+     "2026-10-08",
+     82
+    ],
+    [
+     "2026-10-09",
+     99
+    ],
+    [
+     "2026-10-10",
+     66
+    ],
+    [
+     "2026-10-11",
+     90
+    ],
+    [
+     "2026-10-12",
+     93
+    ],
+    [
+     "2026-10-13",
+     81
+    ],
+    [
+     "2026-10-14",
+     93
+    ],
+    [
+     "2026-10-15",
+     98
+    ],
+    [
+     "2026-10-16",
+     88
+    ],
+    [
+     "2026-10-17",
+     69
+    ],
+    [
+     "2026-10-18",
+     78
+    ],
+    [
+     "2026-10-19",
+     90
+    ],
+    [
+     "2026-10-20",
+     88
+    ],
+    [
+     "2026-10-21",
+     73
+    ],
+    [
+     "2026-10-22",
+     89
+    ],
+    [
+     "2026-10-23",
+     80
+    ],
+    [
+     "2026-10-24",
+     90
+    ],
+    [
+     "2026-10-25",
+     100
+    ]
+   ],
+   "series_kind": "daily n_total (ships/day, all vessel types), not smoothed",
+   "component": "energy",
+   "means": "More ships around the Cape usually means traffic rerouted away from the Red Sea and Suez.",
+   "not_proves": "It does not prove a new incident: rerouting decisions lag events and also follow freight rates.",
+   "z30": 0.9,
+   "as_of": "2026-10-25"
+  },
   {
    "family": "anxiety",
    "id": "wiki:en:Potassium_iodide",
    "label": "Wikipedia (en) \"Potassium iodide\": daily readers, last 3 days",
-   "value": 332,
-   "baseline": 332.0,
-   "ratio": 1.0,
+   "value": 337,
+   "baseline": 329.5,
+   "ratio": 1.02,
    "anomaly": false,
    "unit": "views/day",
    "note": "",
    "source": "Wikimedia pageviews",
    "series": [
-    [
-     "2026-09-29",
-     399
-    ],
     [
      "2026-09-30",
      327
@@ -133,31 +1389,31 @@
     [
      "2026-10-28",
      346
+    ],
+    [
+     "2026-10-29",
+     342
     ]
    ],
    "series_kind": "daily views (user agents, all access)",
    "component": "restraint",
    "means": "A jump in readers of a survival or war article means public anxiety is rising before or after news.",
    "not_proves": "It does not prove any real danger: a film, a meme, school homework or a bot can drive page views.",
-   "z30": 0.8,
-   "as_of": "2026-10-28"
+   "z30": 0.7,
+   "as_of": "2026-10-29"
   },
   {
    "family": "anxiety",
    "id": "wiki:en:Fallout_shelter",
    "label": "Wikipedia (en) \"Fallout shelter\": daily readers, last 3 days",
-   "value": 232,
+   "value": 210,
    "baseline": 150.5,
-   "ratio": 1.54,
+   "ratio": 1.4,
    "anomaly": false,
    "unit": "views/day",
    "note": "",
    "source": "Wikimedia pageviews",
    "series": [
-    [
-     "2026-09-29",
-     154
-    ],
     [
      "2026-09-30",
      130
@@ -273,31 +1529,31 @@
     [
      "2026-10-28",
      204
+    ],
+    [
+     "2026-10-29",
+     190
     ]
    ],
    "series_kind": "daily views (user agents, all access)",
    "component": "restraint",
    "means": "A jump in readers of a survival or war article means public anxiety is rising before or after news.",
    "not_proves": "It does not prove any real danger: a film, a meme, school homework or a bot can drive page views.",
-   "z30": 1.1,
-   "as_of": "2026-10-28"
+   "z30": 0.4,
+   "as_of": "2026-10-29"
   },
   {
    "family": "anxiety",
    "id": "wiki:en:Nuclear_warfare",
    "label": "Wikipedia (en) \"Nuclear warfare\": daily readers, last 3 days",
-   "value": 541,
-   "baseline": 458.0,
-   "ratio": 1.18,
+   "value": 550,
+   "baseline": 462.5,
+   "ratio": 1.19,
    "anomaly": false,
    "unit": "views/day",
    "note": "",
    "source": "Wikimedia pageviews",
    "series": [
-    [
-     "2026-09-29",
-     479
-    ],
     [
      "2026-09-30",
      442
@@ -413,31 +1669,31 @@
     [
      "2026-10-28",
      513
+    ],
+    [
+     "2026-10-29",
+     530
     ]
    ],
    "series_kind": "daily views (user agents, all access)",
    "component": "restraint",
    "means": "A jump in readers of a survival or war article means public anxiety is rising before or after news.",
    "not_proves": "It does not prove any real danger: a film, a meme, school homework or a bot can drive page views.",
-   "z30": 1.5,
-   "as_of": "2026-10-28"
+   "z30": 1.7,
+   "as_of": "2026-10-29"
   },
   {
    "family": "anxiety",
    "id": "wiki:en:World_War_III",
    "label": "Wikipedia (en) \"World War III\": daily readers, last 3 days",
-   "value": 1882,
+   "value": 2207,
    "baseline": 1499.0,
-   "ratio": 1.26,
+   "ratio": 1.47,
    "anomaly": false,
    "unit": "views/day",
    "note": "",
    "source": "Wikimedia pageviews",
    "series": [
-    [
-     "2026-09-29",
-     1530
-    ],
     [
      "2026-09-30",
      1368
@@ -553,31 +1809,31 @@
     [
      "2026-10-28",
      2122
+    ],
+    [
+     "2026-10-29",
+     2699
     ]
    ],
    "series_kind": "daily views (user agents, all access)",
    "component": "restraint",
    "means": "A jump in readers of a survival or war article means public anxiety is rising before or after news.",
    "not_proves": "It does not prove any real danger: a film, a meme, school homework or a bot can drive page views.",
-   "z30": 6.5,
-   "as_of": "2026-10-28"
+   "z30": 12.0,
+   "as_of": "2026-10-29"
   },
   {
    "family": "anxiety",
    "id": "wiki:en:Conscription",
    "label": "Wikipedia (en) \"Conscription\": daily readers, last 3 days",
-   "value": 930,
-   "baseline": 836.5,
-   "ratio": 1.11,
+   "value": 951,
+   "baseline": 839.5,
+   "ratio": 1.13,
    "anomaly": false,
    "unit": "views/day",
    "note": "",
    "source": "Wikimedia pageviews",
    "series": [
-    [
-     "2026-09-29",
-     871
-    ],
     [
      "2026-09-30",
      842
@@ -693,31 +1949,31 @@
     [
      "2026-10-28",
      915
+    ],
+    [
+     "2026-10-29",
+     1010
     ]
    ],
    "series_kind": "daily views (user agents, all access)",
    "component": "restraint",
    "means": "A jump in readers of a survival or war article means public anxiety is rising before or after news.",
    "not_proves": "It does not prove any real danger: a film, a meme, school homework or a bot can drive page views.",
-   "z30": 1.8,
-   "as_of": "2026-10-28"
+   "z30": 3.3,
+   "as_of": "2026-10-29"
   },
   {
    "family": "anxiety",
    "id": "wiki:en:Martial_law",
    "label": "Wikipedia (en) \"Martial law\": daily readers, last 3 days",
-   "value": 1054,
-   "baseline": 769.5,
-   "ratio": 1.37,
+   "value": 1082,
+   "baseline": 778.0,
+   "ratio": 1.39,
    "anomaly": false,
    "unit": "views/day",
    "note": "",
    "source": "Wikimedia pageviews",
    "series": [
-    [
-     "2026-09-29",
-     867
-    ],
     [
      "2026-09-30",
      701
@@ -833,31 +2089,31 @@
     [
      "2026-10-28",
      1165
+    ],
+    [
+     "2026-10-29",
+     1013
     ]
    ],
    "series_kind": "daily views (user agents, all access)",
    "component": "restraint",
    "means": "A jump in readers of a survival or war article means public anxiety is rising before or after news.",
    "not_proves": "It does not prove any real danger: a film, a meme, school homework or a bot can drive page views.",
-   "z30": 2.6,
-   "as_of": "2026-10-28"
+   "z30": 1.4,
+   "as_of": "2026-10-29"
   },
   {
    "family": "anxiety",
    "id": "wiki:en:Gas_mask",
    "label": "Wikipedia (en) \"Gas mask\": daily readers, last 3 days",
-   "value": 247,
-   "baseline": 233.5,
+   "value": 248,
+   "baseline": 234.5,
    "ratio": 1.06,
    "anomaly": false,
    "unit": "views/day",
    "note": "",
    "source": "Wikimedia pageviews",
    "series": [
-    [
-     "2026-09-29",
-     206
-    ],
     [
      "2026-09-30",
      233
@@ -973,31 +2229,31 @@
     [
      "2026-10-28",
      257
+    ],
+    [
+     "2026-10-29",
+     255
     ]
    ],
    "series_kind": "daily views (user agents, all access)",
    "component": "restraint",
    "means": "A jump in readers of a survival or war article means public anxiety is rising before or after news.",
    "not_proves": "It does not prove any real danger: a film, a meme, school homework or a bot can drive page views.",
-   "z30": 0.7,
-   "as_of": "2026-10-28"
+   "z30": 0.6,
+   "as_of": "2026-10-29"
   },
   {
    "family": "anxiety",
    "id": "wiki:en:Air_raid_shelter",
    "label": "Wikipedia (en) \"Air raid shelter\": daily readers, last 3 days",
-   "value": 77,
-   "baseline": 89.5,
-   "ratio": 0.86,
+   "value": 79,
+   "baseline": 89.0,
+   "ratio": 0.89,
    "anomaly": false,
    "unit": "views/day",
    "note": "",
    "source": "Wikimedia pageviews",
    "series": [
-    [
-     "2026-09-29",
-     93
-    ],
     [
      "2026-09-30",
      102
@@ -1113,31 +2369,31 @@
     [
      "2026-10-28",
      66
+    ],
+    [
+     "2026-10-29",
+     79
     ]
    ],
    "series_kind": "daily views (user agents, all access)",
    "component": "restraint",
    "means": "A jump in readers of a survival or war article means public anxiety is rising before or after news.",
    "not_proves": "It does not prove any real danger: a film, a meme, school homework or a bot can drive page views.",
-   "z30": -1.4,
-   "as_of": "2026-10-28"
+   "z30": -0.5,
+   "as_of": "2026-10-29"
   },
   {
    "family": "anxiety",
    "id": "wiki:en:Electromagnetic_pulse",
    "label": "Wikipedia (en) \"Electromagnetic pulse\": daily readers, last 3 days",
-   "value": 936,
+   "value": 952,
    "baseline": 608.5,
-   "ratio": 1.54,
+   "ratio": 1.56,
    "anomaly": false,
    "unit": "views/day",
    "note": "",
    "source": "Wikimedia pageviews",
    "series": [
-    [
-     "2026-09-29",
-     607
-    ],
     [
      "2026-09-30",
      487
@@ -1253,31 +2509,31 @@
     [
      "2026-10-28",
      934
+    ],
+    [
+     "2026-10-29",
+     1019
     ]
    ],
    "series_kind": "daily views (user agents, all access)",
    "component": "restraint",
    "means": "A jump in readers of a survival or war article means public anxiety is rising before or after news.",
    "not_proves": "It does not prove any real danger: a film, a meme, school homework or a bot can drive page views.",
-   "z30": 0.3,
-   "as_of": "2026-10-28"
+   "z30": 0.4,
+   "as_of": "2026-10-29"
   },
   {
    "family": "anxiety",
    "id": "wiki:en:Survival_kit",
    "label": "Wikipedia (en) \"Survival kit\": daily readers, last 3 days",
-   "value": 74,
+   "value": 84,
    "baseline": 65.0,
-   "ratio": 1.14,
+   "ratio": 1.29,
    "anomaly": false,
    "unit": "views/day",
    "note": "",
    "source": "Wikimedia pageviews",
    "series": [
-    [
-     "2026-09-29",
-     69
-    ],
     [
      "2026-09-30",
      58
@@ -1393,31 +2649,31 @@
     [
      "2026-10-28",
      89
+    ],
+    [
+     "2026-10-29",
+     92
     ]
    ],
    "series_kind": "daily views (user agents, all access)",
    "component": "restraint",
    "means": "A jump in readers of a survival or war article means public anxiety is rising before or after news.",
    "not_proves": "It does not prove any real danger: a film, a meme, school homework or a bot can drive page views.",
-   "z30": 2.3,
-   "as_of": "2026-10-28"
+   "z30": 2.6,
+   "as_of": "2026-10-29"
   },
   {
    "family": "anxiety",
    "id": "wiki:ru:Иодид_калия",
    "label": "Wikipedia (ru) \"Иодид калия\": daily readers, last 3 days",
-   "value": 21,
+   "value": 16,
    "baseline": 23.0,
-   "ratio": 0.91,
+   "ratio": 0.7,
    "anomaly": false,
    "unit": "views/day",
    "note": "",
    "source": "Wikimedia pageviews",
    "series": [
-    [
-     "2026-09-29",
-     26
-    ],
     [
      "2026-09-30",
      25
@@ -1533,31 +2789,31 @@
     [
      "2026-10-28",
      22
+    ],
+    [
+     "2026-10-29",
+     13
     ]
    ],
    "series_kind": "daily views (user agents, all access)",
    "component": "restraint",
    "means": "A jump in readers of a survival or war article means public anxiety is rising before or after news.",
    "not_proves": "It does not prove any real danger: a film, a meme, school homework or a bot can drive page views.",
-   "z30": 0.0,
-   "as_of": "2026-10-28"
+   "z30": -1.2,
+   "as_of": "2026-10-29"
   },
   {
    "family": "anxiety",
    "id": "wiki:ru:Мобилизация",
    "label": "Wikipedia (ru) \"Мобилизация\": daily readers, last 3 days",
-   "value": 99,
-   "baseline": 116.5,
-   "ratio": 0.85,
+   "value": 91,
+   "baseline": 115.5,
+   "ratio": 0.79,
    "anomaly": false,
    "unit": "views/day",
    "note": "",
    "source": "Wikimedia pageviews",
    "series": [
-    [
-     "2026-09-29",
-     163
-    ],
     [
      "2026-09-30",
      116
@@ -1673,31 +2929,31 @@
     [
      "2026-10-28",
      93
+    ],
+    [
+     "2026-10-29",
+     88
     ]
    ],
    "series_kind": "daily views (user agents, all access)",
    "component": "restraint",
    "means": "A jump in readers of a survival or war article means public anxiety is rising before or after news.",
    "not_proves": "It does not prove any real danger: a film, a meme, school homework or a bot can drive page views.",
-   "z30": -0.4,
-   "as_of": "2026-10-28"
+   "z30": -0.5,
+   "as_of": "2026-10-29"
   },
   {
    "family": "anxiety",
    "id": "wiki:ru:Военное_положение",
    "label": "Wikipedia (ru) \"Военное положение\": daily readers, last 3 days",
-   "value": 32,
+   "value": 30,
    "baseline": 39.0,
-   "ratio": 0.82,
+   "ratio": 0.77,
    "anomaly": false,
    "unit": "views/day",
    "note": "",
    "source": "Wikimedia pageviews",
    "series": [
-    [
-     "2026-09-29",
-     58
-    ],
     [
      "2026-09-30",
      43
@@ -1813,31 +3069,31 @@
     [
      "2026-10-28",
      27
+    ],
+    [
+     "2026-10-29",
+     26
     ]
    ],
    "series_kind": "daily views (user agents, all access)",
    "component": "restraint",
    "means": "A jump in readers of a survival or war article means public anxiety is rising before or after news.",
    "not_proves": "It does not prove any real danger: a film, a meme, school homework or a bot can drive page views.",
-   "z30": -1.2,
-   "as_of": "2026-10-28"
+   "z30": -1.3,
+   "as_of": "2026-10-29"
   },
   {
    "family": "anxiety",
    "id": "wiki:ru:Бомбоубежище",
    "label": "Wikipedia (ru) \"Бомбоубежище\": daily readers, last 3 days",
-   "value": 48,
+   "value": 51,
    "baseline": 44.0,
-   "ratio": 1.09,
+   "ratio": 1.16,
    "anomaly": false,
    "unit": "views/day",
    "note": "",
    "source": "Wikimedia pageviews",
    "series": [
-    [
-     "2026-09-29",
-     29
-    ],
     [
      "2026-09-30",
      28
@@ -1953,31 +3209,31 @@
     [
      "2026-10-28",
      45
+    ],
+    [
+     "2026-10-29",
+     58
     ]
    ],
    "series_kind": "daily views (user agents, all access)",
    "component": "restraint",
    "means": "A jump in readers of a survival or war article means public anxiety is rising before or after news.",
    "not_proves": "It does not prove any real danger: a film, a meme, school homework or a bot can drive page views.",
-   "z30": 0.0,
-   "as_of": "2026-10-28"
+   "z30": 0.9,
+   "as_of": "2026-10-29"
   },
   {
    "family": "anxiety",
    "id": "wiki:ru:Третья_мировая_война",
    "label": "Wikipedia (ru) \"Третья мировая война\": daily readers, last 3 days",
-   "value": 284,
+   "value": 307,
    "baseline": 322.5,
-   "ratio": 0.88,
+   "ratio": 0.95,
    "anomaly": false,
    "unit": "views/day",
    "note": "",
    "source": "Wikimedia pageviews",
    "series": [
-    [
-     "2026-09-29",
-     310
-    ],
     [
      "2026-09-30",
      306
@@ -2093,31 +3349,31 @@
     [
      "2026-10-28",
      258
+    ],
+    [
+     "2026-10-29",
+     347
     ]
    ],
    "series_kind": "daily views (user agents, all access)",
    "component": "restraint",
    "means": "A jump in readers of a survival or war article means public anxiety is rising before or after news.",
    "not_proves": "It does not prove any real danger: a film, a meme, school homework or a bot can drive page views.",
-   "z30": -1.6,
-   "as_of": "2026-10-28"
+   "z30": 0.9,
+   "as_of": "2026-10-29"
   },
   {
    "family": "anxiety",
    "id": "wiki:ru:Ядерная_война",
    "label": "Wikipedia (ru) \"Ядерная война\": daily readers, last 3 days",
    "value": 182,
-   "baseline": 108.0,
-   "ratio": 1.69,
+   "baseline": 107.0,
+   "ratio": 1.7,
    "anomaly": false,
    "unit": "views/day",
    "note": "",
    "source": "Wikimedia pageviews",
    "series": [
-    [
-     "2026-09-29",
-     105
-    ],
     [
      "2026-09-30",
      101
@@ -2233,31 +3489,31 @@
     [
      "2026-10-28",
      89
+    ],
+    [
+     "2026-10-29",
+     103
     ]
    ],
    "series_kind": "daily views (user agents, all access)",
    "component": "restraint",
    "means": "A jump in readers of a survival or war article means public anxiety is rising before or after news.",
    "not_proves": "It does not prove any real danger: a film, a meme, school homework or a bot can drive page views.",
-   "z30": -0.7,
-   "as_of": "2026-10-28"
+   "z30": 0.0,
+   "as_of": "2026-10-29"
   },
   {
    "family": "anxiety",
    "id": "wiki:uk:Воєнний_стан",
    "label": "Wikipedia (uk) \"Воєнний стан\": daily readers, last 3 days",
-   "value": 47,
-   "baseline": 17.5,
-   "ratio": 2.69,
+   "value": 33,
+   "baseline": 18.5,
+   "ratio": 1.78,
    "anomaly": false,
    "unit": "views/day",
    "note": "",
    "source": "Wikimedia pageviews",
    "series": [
-    [
-     "2026-09-29",
-     15
-    ],
     [
      "2026-09-30",
      16
@@ -2373,32 +3629,31 @@
     [
      "2026-10-28",
      36
+    ],
+    [
+     "2026-10-29",
+     25
     ]
    ],
    "series_kind": "daily views (user agents, all access)",
    "component": "restraint",
    "means": "A jump in readers of a survival or war article means public anxiety is rising before or after news.",
    "not_proves": "It does not prove any real danger: a film, a meme, school homework or a bot can drive page views.",
-   "z30": 1.7,
-   "gated": "ratio flag dropped: |z| 1.7 against its own last 30 points is ordinary",
-   "as_of": "2026-10-28"
+   "z30": 0.3,
+   "as_of": "2026-10-29"
   },
   {
    "family": "anxiety",
    "id": "wiki:uk:Мобілізація",
    "label": "Wikipedia (uk) \"Мобілізація\": daily readers, last 3 days",
-   "value": 17,
+   "value": 16,
    "baseline": 14.5,
-   "ratio": 1.17,
+   "ratio": 1.1,
    "anomaly": false,
    "unit": "views/day",
    "note": "",
    "source": "Wikimedia pageviews",
    "series": [
-    [
-     "2026-09-29",
-     29
-    ],
     [
      "2026-09-30",
      10
@@ -2514,31 +3769,31 @@
     [
      "2026-10-28",
      18
+    ],
+    [
+     "2026-10-29",
+     13
     ]
    ],
    "series_kind": "daily views (user agents, all access)",
    "component": "restraint",
    "means": "A jump in readers of a survival or war article means public anxiety is rising before or after news.",
    "not_proves": "It does not prove any real danger: a film, a meme, school homework or a bot can drive page views.",
-   "z30": 0.9,
-   "as_of": "2026-10-28"
+   "z30": 0.0,
+   "as_of": "2026-10-29"
   },
   {
    "family": "anxiety",
    "id": "wiki:he:מרחב_מוגן",
    "label": "Wikipedia (he) \"מרחב מוגן\": daily readers, last 3 days",
-   "value": 9,
+   "value": 10,
    "baseline": 13.0,
-   "ratio": 0.69,
+   "ratio": 0.77,
    "anomaly": false,
    "unit": "views/day",
    "note": "",
    "source": "Wikimedia pageviews",
    "series": [
-    [
-     "2026-09-29",
-     21
-    ],
     [
      "2026-09-30",
      12
@@ -2654,31 +3909,31 @@
     [
      "2026-10-28",
      13
+    ],
+    [
+     "2026-10-29",
+     8
     ]
    ],
    "series_kind": "daily views (user agents, all access)",
    "component": "restraint",
    "means": "A jump in readers of a survival or war article means public anxiety is rising before or after news.",
    "not_proves": "It does not prove any real danger: a film, a meme, school homework or a bot can drive page views.",
-   "z30": 0.0,
-   "as_of": "2026-10-28"
+   "z30": -0.7,
+   "as_of": "2026-10-29"
   },
   {
    "family": "anxiety",
    "id": "wiki:fa:جنگ_جهانی_سوم",
    "label": "Wikipedia (fa) \"جنگ جهانی سوم\": daily readers, last 3 days",
-   "value": 97,
+   "value": 95,
    "baseline": 114.5,
-   "ratio": 0.85,
+   "ratio": 0.83,
    "anomaly": false,
    "unit": "views/day",
    "note": "",
    "source": "Wikimedia pageviews",
    "series": [
-    [
-     "2026-09-29",
-     118
-    ],
     [
      "2026-09-30",
      107
@@ -2794,6 +4049,10 @@
     [
      "2026-10-28",
      100
+    ],
+    [
+     "2026-10-29",
+     100
     ]
    ],
    "series_kind": "daily views (user agents, all access)",
@@ -2801,24 +4060,20 @@
    "means": "A jump in readers of a survival or war article means public anxiety is rising before or after news.",
    "not_proves": "It does not prove any real danger: a film, a meme, school homework or a bot can drive page views.",
    "z30": -0.4,
-   "as_of": "2026-10-28"
+   "as_of": "2026-10-29"
   },
   {
    "family": "anxiety",
    "id": "wiki:zh:第三次世界大戰",
    "label": "Wikipedia (zh) \"第三次世界大戰\": daily readers, last 3 days",
-   "value": 105,
+   "value": 140,
    "baseline": 82.0,
-   "ratio": 1.28,
+   "ratio": 1.71,
    "anomaly": false,
    "unit": "views/day",
    "note": "",
    "source": "Wikimedia pageviews",
    "series": [
-    [
-     "2026-09-29",
-     98
-    ],
     [
      "2026-09-30",
      74
@@ -2934,31 +4189,31 @@
     [
      "2026-10-28",
      133
+    ],
+    [
+     "2026-10-29",
+     197
     ]
    ],
    "series_kind": "daily views (user agents, all access)",
    "component": "restraint",
    "means": "A jump in readers of a survival or war article means public anxiety is rising before or after news.",
    "not_proves": "It does not prove any real danger: a film, a meme, school homework or a bot can drive page views.",
-   "z30": 3.4,
-   "as_of": "2026-10-28"
+   "z30": 7.8,
+   "as_of": "2026-10-29"
   },
   {
    "family": "anxiety",
    "id": "wiki:de:Wehrpflicht",
    "label": "Wikipedia (de) \"Wehrpflicht\": daily readers, last 3 days",
-   "value": 120,
+   "value": 112,
    "baseline": 108.0,
-   "ratio": 1.11,
+   "ratio": 1.04,
    "anomaly": false,
    "unit": "views/day",
    "note": "",
    "source": "Wikimedia pageviews",
    "series": [
-    [
-     "2026-09-29",
-     143
-    ],
     [
      "2026-09-30",
      117
@@ -3074,31 +4329,31 @@
     [
      "2026-10-28",
      135
+    ],
+    [
+     "2026-10-29",
+     110
     ]
    ],
    "series_kind": "daily views (user agents, all access)",
    "component": "restraint",
    "means": "A jump in readers of a survival or war article means public anxiety is rising before or after news.",
    "not_proves": "It does not prove any real danger: a film, a meme, school homework or a bot can drive page views.",
-   "z30": 1.3,
-   "as_of": "2026-10-28"
+   "z30": 0.2,
+   "as_of": "2026-10-29"
   },
   {
    "family": "anxiety",
    "id": "wiki:de:Kaliumiodid",
    "label": "Wikipedia (de) \"Kaliumiodid\": daily readers, last 3 days",
-   "value": 53,
+   "value": 51,
    "baseline": 46.5,
-   "ratio": 1.14,
+   "ratio": 1.1,
    "anomaly": false,
    "unit": "views/day",
    "note": "",
    "source": "Wikimedia pageviews",
    "series": [
-    [
-     "2026-09-29",
-     47
-    ],
     [
      "2026-09-30",
      51
@@ -3214,31 +4469,31 @@
     [
      "2026-10-28",
      53
+    ],
+    [
+     "2026-10-29",
+     48
     ]
    ],
    "series_kind": "daily views (user agents, all access)",
    "component": "restraint",
    "means": "A jump in readers of a survival or war article means public anxiety is rising before or after news.",
    "not_proves": "It does not prove any real danger: a film, a meme, school homework or a bot can drive page views.",
-   "z30": 0.5,
-   "as_of": "2026-10-28"
+   "z30": 0.1,
+   "as_of": "2026-10-29"
   },
   {
    "family": "military",
    "id": "gkg:ARMEDCONFLICT",
    "label": "News share tagged \"armed conflict\" (GDELT themes, last 3 days vs before)",
-   "value": 11.13,
+   "value": 11.192,
    "baseline": 12.121,
    "ratio": 0.92,
    "anomaly": false,
    "unit": "% of news",
-   "note": "3327 of 29881 sampled documents in the last 3 days; machine-tagged themes, one 15-min file per 3 h",
+   "note": "3364 of 30052 sampled documents in the last 3 days; machine-tagged themes, one 15-min file per 3 h",
    "source": "GDELT 2.0 GKG",
    "series": [
-    [
-     "2026-09-30",
-     11.7707
-    ],
     [
      "2026-10-01",
      12.2861
@@ -3354,31 +4609,31 @@
     [
      "2026-10-29",
      10.5848
+    ],
+    [
+     "2026-10-30",
+     11.5288
     ]
    ],
    "series_kind": "daily share of sampled GDELT documents with the theme, %",
    "component": "military",
    "means": "",
    "not_proves": "",
-   "z30": -1.1,
-   "as_of": "2026-10-29"
+   "z30": -0.3,
+   "as_of": "2026-10-30"
   },
   {
    "family": "military",
    "id": "gkg:DRONES",
    "label": "News share tagged \"drones\" (GDELT themes, last 3 days vs before)",
-   "value": 1.384,
+   "value": 1.346,
    "baseline": 2.203,
-   "ratio": 0.63,
+   "ratio": 0.61,
    "anomaly": false,
    "unit": "% of news",
-   "note": "411 of 29881 sampled documents in the last 3 days; machine-tagged themes, one 15-min file per 3 h",
+   "note": "403 of 30052 sampled documents in the last 3 days; machine-tagged themes, one 15-min file per 3 h",
    "source": "GDELT 2.0 GKG",
    "series": [
-    [
-     "2026-09-30",
-     1.5904
-    ],
     [
      "2026-10-01",
      1.4739
@@ -3494,31 +4749,31 @@
     [
      "2026-10-29",
      1.3433
+    ],
+    [
+     "2026-10-30",
+     1.4974
     ]
    ],
    "series_kind": "daily share of sampled GDELT documents with the theme, %",
    "component": "military",
    "means": "",
    "not_proves": "",
-   "z30": -1.1,
-   "as_of": "2026-10-29"
+   "z30": -0.9,
+   "as_of": "2026-10-30"
   },
   {
    "family": "military",
    "id": "gkg:BLOCKADE",
    "label": "News share tagged \"blockades\" (GDELT themes, last 3 days vs before)",
-   "value": 0.452,
-   "baseline": 0.576,
-   "ratio": 0.78,
+   "value": 0.471,
+   "baseline": 0.564,
+   "ratio": 0.84,
    "anomaly": false,
    "unit": "% of news",
-   "note": "136 of 29881 sampled documents in the last 3 days; machine-tagged themes, one 15-min file per 3 h",
+   "note": "142 of 30052 sampled documents in the last 3 days; machine-tagged themes, one 15-min file per 3 h",
    "source": "GDELT 2.0 GKG",
    "series": [
-    [
-     "2026-09-30",
-     1.2054
-    ],
     [
      "2026-10-01",
      0.5737
@@ -3634,31 +4889,31 @@
     [
      "2026-10-29",
      0.606
+    ],
+    [
+     "2026-10-30",
+     0.3455
     ]
    ],
    "series_kind": "daily share of sampled GDELT documents with the theme, %",
    "component": "military",
    "means": "",
    "not_proves": "",
-   "z30": 0.2,
-   "as_of": "2026-10-29"
+   "z30": -1.3,
+   "as_of": "2026-10-30"
   },
   {
    "family": "military",
    "id": "gkg:WMD",
    "label": "News share tagged \"weapons of mass destruction\" (GDELT themes, last 3 days vs before)",
-   "value": 0.541,
+   "value": 0.364,
    "baseline": 0.44,
-   "ratio": 1.23,
+   "ratio": 0.83,
    "anomaly": false,
    "unit": "% of news",
-   "note": "157 of 29881 sampled documents in the last 3 days; machine-tagged themes, one 15-min file per 3 h",
+   "note": "108 of 30052 sampled documents in the last 3 days; machine-tagged themes, one 15-min file per 3 h",
    "source": "GDELT 2.0 GKG",
    "series": [
-    [
-     "2026-09-30",
-     0.6686
-    ],
     [
      "2026-10-01",
      0.5935
@@ -3774,31 +5029,31 @@
     [
      "2026-10-29",
      0.3737
+    ],
+    [
+     "2026-10-30",
+     0.4921
     ]
    ],
    "series_kind": "daily share of sampled GDELT documents with the theme, %",
    "component": "military",
    "means": "",
    "not_proves": "",
-   "z30": -0.3,
-   "as_of": "2026-10-29"
+   "z30": 0.3,
+   "as_of": "2026-10-30"
   },
   {
    "family": "military",
    "id": "gkg:EVACUATION",
    "label": "News share tagged \"evacuations\" (GDELT themes, last 3 days vs before)",
-   "value": 1.186,
+   "value": 0.999,
    "baseline": 1.053,
-   "ratio": 1.13,
+   "ratio": 0.95,
    "anomaly": false,
    "unit": "% of news",
-   "note": "354 of 29881 sampled documents in the last 3 days; machine-tagged themes, one 15-min file per 3 h",
+   "note": "303 of 30052 sampled documents in the last 3 days; machine-tagged themes, one 15-min file per 3 h",
    "source": "GDELT 2.0 GKG",
    "series": [
-    [
-     "2026-09-30",
-     0.7597
-    ],
     [
      "2026-10-01",
      0.643
@@ -3914,31 +5169,31 @@
     [
      "2026-10-29",
      0.606
+    ],
+    [
+     "2026-10-30",
+     0.9843
     ]
    ],
    "series_kind": "daily share of sampled GDELT documents with the theme, %",
    "component": "military",
    "means": "",
    "not_proves": "",
-   "z30": -0.8,
-   "as_of": "2026-10-29"
+   "z30": -0.2,
+   "as_of": "2026-10-30"
   },
   {
    "family": "energy",
    "id": "gkg:FUELPRICES",
    "label": "News share tagged \"fuel prices\" (GDELT themes, last 3 days vs before)",
-   "value": 2.034,
+   "value": 2.1,
    "baseline": 1.962,
-   "ratio": 1.04,
+   "ratio": 1.07,
    "anomaly": false,
    "unit": "% of news",
-   "note": "612 of 29881 sampled documents in the last 3 days; machine-tagged themes, one 15-min file per 3 h",
+   "note": "634 of 30052 sampled documents in the last 3 days; machine-tagged themes, one 15-min file per 3 h",
    "source": "GDELT 2.0 GKG",
    "series": [
-    [
-     "2026-09-30",
-     2.0462
-    ],
     [
      "2026-10-01",
      1.5827
@@ -4054,31 +5309,31 @@
     [
      "2026-10-29",
      1.7069
+    ],
+    [
+     "2026-10-30",
+     2.0838
     ]
    ],
    "series_kind": "daily share of sampled GDELT documents with the theme, %",
    "component": "energy",
    "means": "",
    "not_proves": "",
-   "z30": -0.5,
-   "as_of": "2026-10-29"
+   "z30": 0.2,
+   "as_of": "2026-10-30"
   },
   {
    "family": "energy",
    "id": "gkg:SHORTAGE",
    "label": "News share tagged \"shortages\" (GDELT themes, last 3 days vs before)",
-   "value": 1.481,
+   "value": 1.441,
    "baseline": 1.926,
-   "ratio": 0.77,
+   "ratio": 0.75,
    "anomaly": false,
    "unit": "% of news",
-   "note": "443 of 29881 sampled documents in the last 3 days; machine-tagged themes, one 15-min file per 3 h",
+   "note": "434 of 30052 sampled documents in the last 3 days; machine-tagged themes, one 15-min file per 3 h",
    "source": "GDELT 2.0 GKG",
    "series": [
-    [
-     "2026-09-30",
-     1.3067
-    ],
     [
      "2026-10-01",
      1.6817
@@ -4194,31 +5449,31 @@
     [
      "2026-10-29",
      1.4544
+    ],
+    [
+     "2026-10-30",
+     1.3298
     ]
    ],
    "series_kind": "daily share of sampled GDELT documents with the theme, %",
    "component": "energy",
    "means": "",
    "not_proves": "",
-   "z30": -0.9,
-   "as_of": "2026-10-29"
+   "z30": -1.1,
+   "as_of": "2026-10-30"
   },
   {
    "family": "energy",
    "id": "gkg:POWER_OUTAGE",
    "label": "News share tagged \"power outages\" (GDELT themes, last 3 days vs before)",
-   "value": 0.569,
-   "baseline": 0.506,
-   "ratio": 1.12,
+   "value": 0.294,
+   "baseline": 0.551,
+   "ratio": 0.53,
    "anomaly": false,
    "unit": "% of news",
-   "note": "167 of 29881 sampled documents in the last 3 days; machine-tagged themes, one 15-min file per 3 h",
+   "note": "90 of 30052 sampled documents in the last 3 days; machine-tagged themes, one 15-min file per 3 h",
    "source": "GDELT 2.0 GKG",
    "series": [
-    [
-     "2026-09-30",
-     0.2532
-    ],
     [
      "2026-10-01",
      0.2275
@@ -4334,31 +5589,31 @@
     [
      "2026-10-29",
      0.3333
+    ],
+    [
+     "2026-10-30",
+     0.1257
     ]
    ],
    "series_kind": "daily share of sampled GDELT documents with the theme, %",
    "component": "energy",
    "means": "",
    "not_proves": "",
-   "z30": -0.3,
-   "as_of": "2026-10-29"
+   "z30": -0.7,
+   "as_of": "2026-10-30"
   },
   {
    "family": "control",
    "id": "gkg:MEDIA_CENSORSHIP+INTERNET_CENSORSHIP",
    "label": "News share tagged \"censorship\" (GDELT themes, last 3 days vs before)",
-   "value": 0.467,
-   "baseline": 0.346,
-   "ratio": 1.35,
+   "value": 0.489,
+   "baseline": 0.348,
+   "ratio": 1.41,
    "anomaly": false,
    "unit": "% of news",
-   "note": "140 of 29881 sampled documents in the last 3 days; machine-tagged themes, one 15-min file per 3 h",
+   "note": "147 of 30052 sampled documents in the last 3 days; machine-tagged themes, one 15-min file per 3 h",
    "source": "GDELT 2.0 GKG",
    "series": [
-    [
-     "2026-09-30",
-     0.4153
-    ],
     [
      "2026-10-01",
      0.4748
@@ -4474,31 +5729,31 @@
     [
      "2026-10-29",
      0.505
+    ],
+    [
+     "2026-10-30",
+     0.4712
     ]
    ],
    "series_kind": "daily share of sampled GDELT documents with the theme, %",
    "component": "institutions",
    "means": "",
    "not_proves": "",
-   "z30": 0.9,
-   "as_of": "2026-10-29"
+   "z30": 0.7,
+   "as_of": "2026-10-30"
   },
   {
    "family": "control",
    "id": "gkg:UNREST_CRACKDOWN",
    "label": "News share tagged \"crackdowns\" (GDELT themes, last 3 days vs before)",
-   "value": 0.645,
-   "baseline": 0.816,
-   "ratio": 0.79,
+   "value": 0.602,
+   "baseline": 0.824,
+   "ratio": 0.73,
    "anomaly": false,
    "unit": "% of news",
-   "note": "190 of 29881 sampled documents in the last 3 days; machine-tagged themes, one 15-min file per 3 h",
+   "note": "179 of 30052 sampled documents in the last 3 days; machine-tagged themes, one 15-min file per 3 h",
    "source": "GDELT 2.0 GKG",
    "series": [
-    [
-     "2026-09-30",
-     0.7496
-    ],
     [
      "2026-10-01",
      1.4245
@@ -4614,31 +5869,31 @@
     [
      "2026-10-29",
      0.5959
+    ],
+    [
+     "2026-10-30",
+     0.7749
     ]
    ],
    "series_kind": "daily share of sampled GDELT documents with the theme, %",
    "component": "institutions",
    "means": "",
    "not_proves": "",
-   "z30": -0.8,
-   "as_of": "2026-10-29"
+   "z30": -0.2,
+   "as_of": "2026-10-30"
   },
   {
    "family": "control",
    "id": "gkg:STATE_OF_EMERGENCY+CURFEW",
    "label": "News share tagged \"states of emergency and curfews\" (GDELT themes, last 3 days vs before)",
-   "value": 0.128,
+   "value": 0.131,
    "baseline": 0.292,
-   "ratio": 0.44,
+   "ratio": 0.45,
    "anomaly": false,
    "unit": "% of news",
-   "note": "38 of 29881 sampled documents in the last 3 days; machine-tagged themes, one 15-min file per 3 h",
+   "note": "39 of 30052 sampled documents in the last 3 days; machine-tagged themes, one 15-min file per 3 h",
    "source": "GDELT 2.0 GKG",
    "series": [
-    [
-     "2026-09-30",
-     0.1216
-    ],
     [
      "2026-10-01",
      0.1583
@@ -4754,31 +6009,31 @@
     [
      "2026-10-29",
      0.1717
+    ],
+    [
+     "2026-10-30",
+     0.1361
     ]
    ],
    "series_kind": "daily share of sampled GDELT documents with the theme, %",
    "component": "institutions",
    "means": "",
    "not_proves": "",
-   "z30": -0.4,
-   "as_of": "2026-10-29"
+   "z30": -0.5,
+   "as_of": "2026-10-30"
   },
   {
    "family": "hidden war",
    "id": "gkg:CYBER_ATTACK",
    "label": "News share tagged \"cyber attacks\" (GDELT themes, last 3 days vs before)",
-   "value": 1.515,
+   "value": 1.794,
    "baseline": 1.488,
-   "ratio": 1.02,
+   "ratio": 1.21,
    "anomaly": false,
    "unit": "% of news",
-   "note": "450 of 29881 sampled documents in the last 3 days; machine-tagged themes, one 15-min file per 3 h",
+   "note": "533 of 30052 sampled documents in the last 3 days; machine-tagged themes, one 15-min file per 3 h",
    "source": "GDELT 2.0 GKG",
    "series": [
-    [
-     "2026-09-30",
-     2.0158
-    ],
     [
      "2026-10-01",
      1.5432
@@ -4894,31 +6149,31 @@
     [
      "2026-10-29",
      1.5453
+    ],
+    [
+     "2026-10-30",
+     2.5445
     ]
    ],
    "series_kind": "daily share of sampled GDELT documents with the theme, %",
    "component": "institutions",
    "means": "",
    "not_proves": "",
-   "z30": 0.0,
-   "as_of": "2026-10-29"
+   "z30": 2.3,
+   "as_of": "2026-10-30"
   },
   {
    "family": "procurement",
    "id": "gkg:FOOD_SECURITY",
    "label": "News share tagged \"food security\" (GDELT themes, last 3 days vs before)",
-   "value": 0.606,
+   "value": 0.836,
    "baseline": 0.906,
-   "ratio": 0.67,
+   "ratio": 0.92,
    "anomaly": false,
    "unit": "% of news",
-   "note": "181 of 29881 sampled documents in the last 3 days; machine-tagged themes, one 15-min file per 3 h",
+   "note": "248 of 30052 sampled documents in the last 3 days; machine-tagged themes, one 15-min file per 3 h",
    "source": "GDELT 2.0 GKG",
    "series": [
-    [
-     "2026-09-30",
-     0.9319
-    ],
     [
      "2026-10-01",
      0.6826
@@ -5034,25 +6289,29 @@
     [
      "2026-10-29",
      0.6464
+    ],
+    [
+     "2026-10-30",
+     1.2775
     ]
    ],
    "series_kind": "daily share of sampled GDELT documents with the theme, %",
    "component": "military",
    "means": "",
    "not_proves": "",
-   "z30": -0.8,
-   "as_of": "2026-10-29"
+   "z30": 1.2,
+   "as_of": "2026-10-30"
   },
   {
    "family": "control",
    "id": "internet:country-outages",
    "label": "Countries with significant internet outages (48 h)",
-   "value": 32,
+   "value": 31,
    "baseline": null,
    "ratio": null,
    "anomaly": null,
    "unit": "countries",
-   "note": "Aland Islands, Anguilla, Antarctica, Bolivia, Botswana, Burundi, Cameroon, Cape Verde, Central African Republic, Chad, China, Comoros, Cook Islands, Eritrea, Falkland Islands (Malvinas)",
+   "note": "Aland Islands, Anguilla, Antarctica, Bolivia, Burundi, Cameroon, Cape Verde, Chad, China, Comoros, Cook Islands, Eritrea, Falkland Islands (Malvinas), Federated States Of Micronesia, Guam",
    "source": "IODA (Georgia Tech)",
    "component": "institutions",
    "means": "More countries with large internet outages may mean shutdowns, attacks on networks or grid failures.",
@@ -5064,25 +6323,21 @@
    "family": "energy",
    "id": "grid:ioda:4377",
    "label": "Kyiv City: networks answering internet probes, % of their 7-day norm (a dip = power cuts)",
-   "value": 99.2,
+   "value": 98.02,
    "baseline": 100,
-   "ratio": 0.99,
+   "ratio": 0.98,
    "anomaly": false,
    "unit": "% of norm",
-   "note": "today so far (2026-10-29); day before 98.88%. Generators and batteries hide part of a blackout; a dip can also be a network fault or a lasting change in what IODA probes (Kyiv City stepped down 4% on 23 Sep and stayed)",
+   "note": "today so far (2026-10-30); day before 99.41%. Generators and batteries hide part of a blackout; a dip can also be a network fault or a lasting change in what IODA probes (Kyiv City stepped down 4% on 23 Sep and stayed)",
    "source": "IODA (Georgia Tech), ping-slash24",
    "series": [
     [
-     "2026-10-03",
-     99.97
-    ],
-    [
      "2026-10-04",
-     100.15
+     100.13
     ],
     [
      "2026-10-05",
-     100.48
+     100.42
     ],
     [
      "2026-10-06",
@@ -5178,39 +6433,39 @@
     ],
     [
      "2026-10-29",
-     99.2
+     99.41
+    ],
+    [
+     "2026-10-30",
+     98.02
     ]
    ],
    "series_kind": "daily mean of responsive /24 blocks, % of the median of the 7 days before",
    "component": "energy",
    "means": "Fewer networks in a region answering internet probes than in the week before usually means power cuts: on 7-8 Oct 2026, when Kyiv had emergency cuts, Kyiv City fell to 94-97% while Lviv stayed within 3%.",
    "not_proves": "It does not measure the blackout itself: generators and batteries hide part of it, and a network fault or a change in what is probed looks the same.",
-   "z30": -0.2,
-   "as_of": "2026-10-29"
+   "z30": -0.7,
+   "as_of": "2026-10-30"
   },
   {
    "family": "energy",
    "id": "grid:ioda:4366",
    "label": "Kyiv oblast: networks answering internet probes, % of their 7-day norm (a dip = power cuts)",
-   "value": 99.95,
+   "value": 98.98,
    "baseline": 100,
-   "ratio": 1.0,
+   "ratio": 0.99,
    "anomaly": false,
    "unit": "% of norm",
-   "note": "today so far (2026-10-29); day before 99.55%. Generators and batteries hide part of a blackout; a dip can also be a network fault or a lasting change in what IODA probes (Kyiv City stepped down 4% on 23 Sep and stayed)",
+   "note": "today so far (2026-10-30); day before 100.12%. Generators and batteries hide part of a blackout; a dip can also be a network fault or a lasting change in what IODA probes (Kyiv City stepped down 4% on 23 Sep and stayed)",
    "source": "IODA (Georgia Tech), ping-slash24",
    "series": [
     [
-     "2026-10-03",
-     99.81
-    ],
-    [
      "2026-10-04",
-     100.26
+     100.32
     ],
     [
      "2026-10-05",
-     100.25
+     100.31
     ],
     [
      "2026-10-06",
@@ -5306,39 +6561,39 @@
     ],
     [
      "2026-10-29",
-     99.95
+     100.12
+    ],
+    [
+     "2026-10-30",
+     98.98
     ]
    ],
    "series_kind": "daily mean of responsive /24 blocks, % of the median of the 7 days before",
    "component": "energy",
    "means": "Fewer networks in a region answering internet probes than in the week before usually means power cuts: on 7-8 Oct 2026, when Kyiv had emergency cuts, Kyiv City fell to 94-97% while Lviv stayed within 3%.",
    "not_proves": "It does not measure the blackout itself: generators and batteries hide part of it, and a network fault or a change in what is probed looks the same.",
-   "z30": 0.3,
-   "as_of": "2026-10-29"
+   "z30": -0.8,
+   "as_of": "2026-10-30"
   },
   {
    "family": "energy",
    "id": "grid:ioda:4373",
    "label": "Kharkiv oblast: networks answering internet probes, % of their 7-day norm (a dip = power cuts)",
-   "value": 99.86,
+   "value": 99.94,
    "baseline": 100,
    "ratio": 1.0,
    "anomaly": false,
    "unit": "% of norm",
-   "note": "today so far (2026-10-29); day before 99.62%. Generators and batteries hide part of a blackout; a dip can also be a network fault or a lasting change in what IODA probes (Kyiv City stepped down 4% on 23 Sep and stayed)",
+   "note": "today so far (2026-10-30); day before 99.91%. Generators and batteries hide part of a blackout; a dip can also be a network fault or a lasting change in what IODA probes (Kyiv City stepped down 4% on 23 Sep and stayed)",
    "source": "IODA (Georgia Tech), ping-slash24",
    "series": [
     [
-     "2026-10-03",
-     100.07
-    ],
-    [
      "2026-10-04",
-     100.13
+     100.17
     ],
     [
      "2026-10-05",
-     100.1
+     100.13
     ],
     [
      "2026-10-06",
@@ -5434,15 +6689,19 @@
     ],
     [
      "2026-10-29",
-     99.86
+     99.91
+    ],
+    [
+     "2026-10-30",
+     99.94
     ]
    ],
    "series_kind": "daily mean of responsive /24 blocks, % of the median of the 7 days before",
    "component": "energy",
    "means": "Fewer networks in a region answering internet probes than in the week before usually means power cuts: on 7-8 Oct 2026, when Kyiv had emergency cuts, Kyiv City fell to 94-97% while Lviv stayed within 3%.",
    "not_proves": "It does not measure the blackout itself: generators and batteries hide part of it, and a network fault or a change in what is probed looks the same.",
-   "z30": -0.2,
-   "as_of": "2026-10-29"
+   "z30": 0.1,
+   "as_of": "2026-10-30"
   },
   {
    "family": "military",
@@ -5525,18 +6784,14 @@
    "family": "energy",
    "id": "fires:refineries:European Russia",
    "label": "Satellite fire detections near major refineries/oil terminals, European Russia (last 3 days)",
-   "value": 10,
-   "baseline": 3.2,
-   "ratio": 3.12,
+   "value": 8.3,
+   "baseline": 3.6,
+   "ratio": 2.31,
    "anomaly": false,
    "unit": "detections/day",
-   "note": "14 sites, data to 2026-10-28",
+   "note": "14 sites, data to 2026-10-29",
    "source": "NASA FIRMS (VIIRS S-NPP NRT)",
    "series": [
-    [
-     "2026-09-29",
-     0
-    ],
     [
      "2026-09-30",
      6
@@ -5652,32 +6907,32 @@
     [
      "2026-10-28",
      11
+    ],
+    [
+     "2026-10-29",
+     5
     ]
    ],
    "series_kind": "daily count of VIIRS fire detections within ~15 km of the sites (incl. routine gas flares)",
    "component": "energy",
    "means": "More satellite fire detections near big refineries may mean strikes, sabotage or accidents at energy sites.",
    "not_proves": "It does not prove an attack or the site hit: gas flaring, field burning and accidents also show as fires.",
-   "z30": 2.7,
-   "gated": "ratio flag dropped: |z| 2.7 against its own last 30 points is ordinary",
-   "as_of": "2026-10-28"
+   "z30": 0.7,
+   "gated": "ratio flag dropped: |z| 0.7 against its own last 30 points is ordinary",
+   "as_of": "2026-10-29"
   },
   {
    "family": "energy",
    "id": "fires:refineries:Urals and Siberia",
    "label": "Satellite fire detections near major refineries/oil terminals, Urals and Siberia (last 3 days)",
-   "value": 23.7,
-   "baseline": 15.2,
-   "ratio": 1.56,
+   "value": 20,
+   "baseline": 15.6,
+   "ratio": 1.28,
    "anomaly": false,
    "unit": "detections/day",
-   "note": "10 sites, data to 2026-10-28",
+   "note": "10 sites, data to 2026-10-29",
    "source": "NASA FIRMS (VIIRS S-NPP NRT)",
    "series": [
-    [
-     "2026-09-29",
-     34
-    ],
     [
      "2026-09-30",
      38
@@ -5793,31 +7048,31 @@
     [
      "2026-10-28",
      9
+    ],
+    [
+     "2026-10-29",
+     34
     ]
    ],
    "series_kind": "daily count of VIIRS fire detections within ~15 km of the sites (incl. routine gas flares)",
    "component": "energy",
    "means": "More satellite fire detections near big refineries may mean strikes, sabotage or accidents at energy sites.",
    "not_proves": "It does not prove an attack or the site hit: gas flaring, field burning and accidents also show as fires.",
-   "z30": -0.4,
-   "as_of": "2026-10-28"
+   "z30": 1.7,
+   "as_of": "2026-10-29"
   },
   {
    "family": "energy",
    "id": "fires:refineries:Persian Gulf",
    "label": "Satellite fire detections near major refineries/oil terminals, Persian Gulf (last 3 days)",
-   "value": 16,
-   "baseline": 22.7,
-   "ratio": 0.7,
+   "value": 18.3,
+   "baseline": 22.9,
+   "ratio": 0.8,
    "anomaly": false,
    "unit": "detections/day",
-   "note": "6 sites, data to 2026-10-28",
+   "note": "6 sites, data to 2026-10-29",
    "source": "NASA FIRMS (VIIRS S-NPP NRT)",
    "series": [
-    [
-     "2026-09-29",
-     15
-    ],
     [
      "2026-09-30",
      13
@@ -5933,14 +7188,18 @@
     [
      "2026-10-28",
      7
+    ],
+    [
+     "2026-10-29",
+     26
     ]
    ],
    "series_kind": "daily count of VIIRS fire detections within ~15 km of the sites (incl. routine gas flares)",
    "component": "energy",
    "means": "More satellite fire detections near big refineries may mean strikes, sabotage or accidents at energy sites.",
    "not_proves": "It does not prove an attack or the site hit: gas flaring, field burning and accidents also show as fires.",
-   "z30": -2.0,
-   "as_of": "2026-10-28"
+   "z30": 0.7,
+   "as_of": "2026-10-29"
   },
   {
    "family": "energy",
@@ -6366,18 +7625,14 @@
    "family": "mobilisation",
    "id": "mob:wiki:ru:Эмиграция_из_России",
    "label": "Wikipedia (ru) \"Эмиграция из России\": daily readers, last 3 days",
-   "value": 49,
+   "value": 50,
    "baseline": 55.0,
-   "ratio": 0.89,
+   "ratio": 0.91,
    "anomaly": false,
    "unit": "views/day",
    "note": "",
    "source": "Wikimedia pageviews",
    "series": [
-    [
-     "2026-09-29",
-     63
-    ],
     [
      "2026-09-30",
      68
@@ -6493,31 +7748,31 @@
     [
      "2026-10-28",
      56
+    ],
+    [
+     "2026-10-29",
+     47
     ]
    ],
    "series_kind": "daily views (user agents, all access)",
    "component": "institutions",
    "means": "More readers of articles on emigration, border crossings, deferment, draft papers or alternative service means people are quietly weighing how to avoid a call-up or leave.",
    "not_proves": "It does not prove a mobilisation is coming: a new law, a rumour, a viral post, school terms or the routine spring and autumn call-ups also drive readers.",
-   "z30": 0.7,
-   "as_of": "2026-10-28"
+   "z30": -0.2,
+   "as_of": "2026-10-29"
   },
   {
    "family": "mobilisation",
    "id": "mob:wiki:ru:Верхний_Ларс",
    "label": "Wikipedia (ru) \"Верхний Ларс\": daily readers, last 3 days",
-   "value": 83,
-   "baseline": 80.0,
-   "ratio": 1.04,
+   "value": 89,
+   "baseline": 76.5,
+   "ratio": 1.16,
    "anomaly": false,
    "unit": "views/day",
    "note": "",
    "source": "Wikimedia pageviews",
    "series": [
-    [
-     "2026-09-29",
-     98
-    ],
     [
      "2026-09-30",
      100
@@ -6633,31 +7888,31 @@
     [
      "2026-10-28",
      103
+    ],
+    [
+     "2026-10-29",
+     82
     ]
    ],
    "series_kind": "daily views (user agents, all access)",
    "component": "institutions",
    "means": "More readers of articles on emigration, border crossings, deferment, draft papers or alternative service means people are quietly weighing how to avoid a call-up or leave.",
    "not_proves": "It does not prove a mobilisation is coming: a new law, a rumour, a viral post, school terms or the routine spring and autumn call-ups also drive readers.",
-   "z30": 2.6,
-   "as_of": "2026-10-28"
+   "z30": 1.2,
+   "as_of": "2026-10-29"
   },
   {
    "family": "mobilisation",
    "id": "mob:wiki:ru:Воинская_обязанность",
    "label": "Wikipedia (ru) \"Воинская обязанность\": daily readers, last 3 days",
-   "value": 167,
-   "baseline": 161.0,
-   "ratio": 1.04,
+   "value": 173,
+   "baseline": 160.5,
+   "ratio": 1.08,
    "anomaly": false,
    "unit": "views/day",
    "note": "",
    "source": "Wikimedia pageviews",
    "series": [
-    [
-     "2026-09-29",
-     148
-    ],
     [
      "2026-09-30",
      169
@@ -6773,31 +8028,31 @@
     [
      "2026-10-28",
      170
+    ],
+    [
+     "2026-10-29",
+     177
     ]
    ],
    "series_kind": "daily views (user agents, all access)",
    "component": "institutions",
    "means": "More readers of articles on emigration, border crossings, deferment, draft papers or alternative service means people are quietly weighing how to avoid a call-up or leave.",
    "not_proves": "It does not prove a mobilisation is coming: a new law, a rumour, a viral post, school terms or the routine spring and autumn call-ups also drive readers.",
-   "z30": 0.7,
-   "as_of": "2026-10-28"
+   "z30": 1.0,
+   "as_of": "2026-10-29"
   },
   {
    "family": "mobilisation",
    "id": "mob:wiki:ru:Военный_билет",
    "label": "Wikipedia (ru) \"Военный билет\": daily readers, last 3 days",
-   "value": 4,
+   "value": 3,
    "baseline": 2.0,
-   "ratio": 2.0,
+   "ratio": 1.5,
    "anomaly": false,
    "unit": "views/day",
    "note": "",
    "source": "Wikimedia pageviews",
    "series": [
-    [
-     "2026-09-29",
-     4
-    ],
     [
      "2026-09-30",
      2
@@ -6913,32 +8168,31 @@
     [
      "2026-10-28",
      5
+    ],
+    [
+     "2026-10-29",
+     2
     ]
    ],
    "series_kind": "daily views (user agents, all access)",
    "component": "institutions",
    "means": "More readers of articles on emigration, border crossings, deferment, draft papers or alternative service means people are quietly weighing how to avoid a call-up or leave.",
    "not_proves": "It does not prove a mobilisation is coming: a new law, a rumour, a viral post, school terms or the routine spring and autumn call-ups also drive readers.",
-   "z30": 2.0,
-   "gated": "ratio flag dropped: |z| 2.0 against its own last 30 points is ordinary",
-   "as_of": "2026-10-28"
+   "z30": 0.0,
+   "as_of": "2026-10-29"
   },
   {
    "family": "mobilisation",
    "id": "mob:wiki:ru:Повестка",
    "label": "Wikipedia (ru) \"Повестка\": daily readers, last 3 days",
-   "value": 13,
+   "value": 14,
    "baseline": 23.5,
-   "ratio": 0.55,
+   "ratio": 0.6,
    "anomaly": false,
    "unit": "views/day",
    "note": "",
    "source": "Wikimedia pageviews",
    "series": [
-    [
-     "2026-09-29",
-     42
-    ],
     [
      "2026-09-30",
      23
@@ -7054,31 +8308,31 @@
     [
      "2026-10-28",
      14
+    ],
+    [
+     "2026-10-29",
+     16
     ]
    ],
    "series_kind": "daily views (user agents, all access)",
    "component": "institutions",
    "means": "More readers of articles on emigration, border crossings, deferment, draft papers or alternative service means people are quietly weighing how to avoid a call-up or leave.",
    "not_proves": "It does not prove a mobilisation is coming: a new law, a rumour, a viral post, school terms or the routine spring and autumn call-ups also drive readers.",
-   "z30": -0.9,
-   "as_of": "2026-10-28"
+   "z30": -0.7,
+   "as_of": "2026-10-29"
   },
   {
    "family": "mobilisation",
    "id": "mob:wiki:ru:Альтернативная_гражданская_служба",
    "label": "Wikipedia (ru) \"Альтернативная гражданская служба\": daily readers, last 3 days",
-   "value": 24,
+   "value": 26,
    "baseline": 24.0,
-   "ratio": 1.0,
+   "ratio": 1.08,
    "anomaly": false,
    "unit": "views/day",
    "note": "",
    "source": "Wikimedia pageviews",
    "series": [
-    [
-     "2026-09-29",
-     26
-    ],
     [
      "2026-09-30",
      31
@@ -7194,31 +8448,31 @@
     [
      "2026-10-28",
      26
+    ],
+    [
+     "2026-10-29",
+     31
     ]
    ],
    "series_kind": "daily views (user agents, all access)",
    "component": "institutions",
    "means": "More readers of articles on emigration, border crossings, deferment, draft papers or alternative service means people are quietly weighing how to avoid a call-up or leave.",
    "not_proves": "It does not prove a mobilisation is coming: a new law, a rumour, a viral post, school terms or the routine spring and autumn call-ups also drive readers.",
-   "z30": 0.0,
-   "as_of": "2026-10-28"
+   "z30": 0.7,
+   "as_of": "2026-10-29"
   },
   {
    "family": "mobilisation",
    "id": "mob:wiki:ru:Мобилизация_в_России_(с_2022)",
    "label": "Wikipedia (ru) \"Мобилизация в России (с 2022)\": daily readers, last 3 days",
    "value": 175,
-   "baseline": 254.5,
-   "ratio": 0.69,
+   "baseline": 242.0,
+   "ratio": 0.72,
    "anomaly": false,
    "unit": "views/day",
    "note": "",
    "source": "Wikimedia pageviews",
    "series": [
-    [
-     "2026-09-29",
-     472
-    ],
     [
      "2026-09-30",
      307
@@ -7334,31 +8588,31 @@
     [
      "2026-10-28",
      175
+    ],
+    [
+     "2026-10-29",
+     163
     ]
    ],
    "series_kind": "daily views (user agents, all access)",
    "component": "institutions",
    "means": "More readers of articles on emigration, border crossings, deferment, draft papers or alternative service means people are quietly weighing how to avoid a call-up or leave.",
    "not_proves": "It does not prove a mobilisation is coming: a new law, a rumour, a viral post, school terms or the routine spring and autumn call-ups also drive readers.",
-   "z30": -0.8,
-   "as_of": "2026-10-28"
+   "z30": -1.0,
+   "as_of": "2026-10-29"
   },
   {
    "family": "mobilisation",
    "id": "mob:wiki:ru:Реестр_повесток",
    "label": "Wikipedia (ru) \"Реестр повесток\": daily readers, last 3 days",
-   "value": 183,
+   "value": 187,
    "baseline": 141.0,
-   "ratio": 1.3,
+   "ratio": 1.33,
    "anomaly": false,
    "unit": "views/day",
    "note": "",
    "source": "Wikimedia pageviews",
    "series": [
-    [
-     "2026-09-29",
-     193
-    ],
     [
      "2026-09-30",
      143
@@ -7474,31 +8728,31 @@
     [
      "2026-10-28",
      217
+    ],
+    [
+     "2026-10-29",
+     169
     ]
    ],
    "series_kind": "daily views (user agents, all access)",
    "component": "institutions",
    "means": "More readers of articles on emigration, border crossings, deferment, draft papers or alternative service means people are quietly weighing how to avoid a call-up or leave.",
    "not_proves": "It does not prove a mobilisation is coming: a new law, a rumour, a viral post, school terms or the routine spring and autumn call-ups also drive readers.",
-   "z30": 2.4,
-   "as_of": "2026-10-28"
+   "z30": 1.0,
+   "as_of": "2026-10-29"
   },
   {
    "family": "mobilisation",
    "id": "mob:wiki:ru:Военный_комиссариат",
    "label": "Wikipedia (ru) \"Военный комиссариат\": daily readers, last 3 days",
-   "value": 85,
-   "baseline": 66.5,
-   "ratio": 1.28,
+   "value": 79,
+   "baseline": 67.5,
+   "ratio": 1.17,
    "anomaly": false,
    "unit": "views/day",
    "note": "",
    "source": "Wikimedia pageviews",
    "series": [
-    [
-     "2026-09-29",
-     57
-    ],
     [
      "2026-09-30",
      62
@@ -7614,14 +8868,18 @@
     [
      "2026-10-28",
      105
+    ],
+    [
+     "2026-10-29",
+     61
     ]
    ],
    "series_kind": "daily views (user agents, all access)",
    "component": "institutions",
    "means": "More readers of articles on emigration, border crossings, deferment, draft papers or alternative service means people are quietly weighing how to avoid a call-up or leave.",
    "not_proves": "It does not prove a mobilisation is coming: a new law, a rumour, a viral post, school terms or the routine spring and autumn call-ups also drive readers.",
-   "z30": 1.0,
-   "as_of": "2026-10-28"
+   "z30": -0.7,
+   "as_of": "2026-10-29"
   },
   {
    "family": "mobilisation",
@@ -7635,10 +8893,6 @@
    "note": "",
    "source": "Wikimedia pageviews",
    "series": [
-    [
-     "2026-09-19",
-     0
-    ],
     [
      "2026-09-20",
      2
@@ -7754,31 +9008,31 @@
     [
      "2026-10-28",
      1
+    ],
+    [
+     "2026-10-29",
+     0
     ]
    ],
    "series_kind": "daily views (user agents, all access)",
    "component": "institutions",
    "means": "More readers of articles on emigration, border crossings, deferment, draft papers or alternative service means people are quietly weighing how to avoid a call-up or leave.",
    "not_proves": "It does not prove a mobilisation is coming: a new law, a rumour, a viral post, school terms or the routine spring and autumn call-ups also drive readers.",
-   "z30": 0.0,
-   "as_of": "2026-10-28"
+   "z30": -0.7,
+   "as_of": "2026-10-29"
   },
   {
    "family": "mobilisation",
    "id": "mob:wiki:uk:Мобілізація_в_Україні",
    "label": "Wikipedia (uk) \"Мобілізація в Україні\": daily readers, last 3 days",
-   "value": 7,
+   "value": 6,
    "baseline": 7.0,
-   "ratio": 1.0,
+   "ratio": 0.86,
    "anomaly": false,
    "unit": "views/day",
    "note": "",
    "source": "Wikimedia pageviews",
    "series": [
-    [
-     "2026-09-29",
-     5
-    ],
     [
      "2026-09-30",
      6
@@ -7894,31 +9148,31 @@
     [
      "2026-10-28",
      6
+    ],
+    [
+     "2026-10-29",
+     2
     ]
    ],
    "series_kind": "daily views (user agents, all access)",
    "component": "institutions",
    "means": "More readers of articles on emigration, border crossings, deferment, draft papers or alternative service means people are quietly weighing how to avoid a call-up or leave.",
    "not_proves": "It does not prove a mobilisation is coming: a new law, a rumour, a viral post, school terms or the routine spring and autumn call-ups also drive readers.",
-   "z30": 0.0,
-   "as_of": "2026-10-28"
+   "z30": -2.7,
+   "as_of": "2026-10-29"
   },
   {
    "family": "mobilisation",
    "id": "mob:wiki:en:Conscription_in_Russia",
    "label": "Wikipedia (en) \"Conscription in Russia\": daily readers, last 3 days",
-   "value": 144,
+   "value": 134,
    "baseline": 137.5,
-   "ratio": 1.05,
+   "ratio": 0.97,
    "anomaly": false,
    "unit": "views/day",
    "note": "",
    "source": "Wikimedia pageviews",
    "series": [
-    [
-     "2026-09-29",
-     145
-    ],
     [
      "2026-09-30",
      128
@@ -8034,31 +9288,31 @@
     [
      "2026-10-28",
      130
+    ],
+    [
+     "2026-10-29",
+     151
     ]
    ],
    "series_kind": "daily views (user agents, all access)",
    "component": "institutions",
    "means": "More readers of articles on emigration, border crossings, deferment, draft papers or alternative service means people are quietly weighing how to avoid a call-up or leave.",
    "not_proves": "It does not prove a mobilisation is coming: a new law, a rumour, a viral post, school terms or the routine spring and autumn call-ups also drive readers.",
-   "z30": -0.2,
-   "as_of": "2026-10-28"
+   "z30": 0.9,
+   "as_of": "2026-10-29"
   },
   {
    "family": "mobilisation",
    "id": "mob:wiki:en:Conscription_in_Ukraine",
    "label": "Wikipedia (en) \"Conscription in Ukraine\": daily readers, last 3 days",
-   "value": 123,
+   "value": 124,
    "baseline": 126.5,
-   "ratio": 0.97,
+   "ratio": 0.98,
    "anomaly": false,
    "unit": "views/day",
    "note": "",
    "source": "Wikimedia pageviews",
    "series": [
-    [
-     "2026-09-29",
-     105
-    ],
     [
      "2026-09-30",
      95
@@ -8174,31 +9428,31 @@
     [
      "2026-10-28",
      109
+    ],
+    [
+     "2026-10-29",
+     132
     ]
    ],
    "series_kind": "daily views (user agents, all access)",
    "component": "institutions",
    "means": "More readers of articles on emigration, border crossings, deferment, draft papers or alternative service means people are quietly weighing how to avoid a call-up or leave.",
    "not_proves": "It does not prove a mobilisation is coming: a new law, a rumour, a viral post, school terms or the routine spring and autumn call-ups also drive readers.",
-   "z30": -0.5,
-   "as_of": "2026-10-28"
+   "z30": 0.7,
+   "as_of": "2026-10-29"
   },
   {
    "family": "mobilisation",
    "id": "mob:wiki:en:Conscription_in_Israel",
    "label": "Wikipedia (en) \"Conscription in Israel\": daily readers, last 3 days",
-   "value": 765,
-   "baseline": 241.5,
-   "ratio": 3.17,
+   "value": 789,
+   "baseline": 243.0,
+   "ratio": 3.25,
    "anomaly": true,
    "unit": "views/day",
    "note": "",
    "source": "Wikimedia pageviews",
    "series": [
-    [
-     "2026-09-29",
-     238
-    ],
     [
      "2026-09-30",
      423
@@ -8314,31 +9568,31 @@
     [
      "2026-10-28",
      960
+    ],
+    [
+     "2026-10-29",
+     581
     ]
    ],
    "series_kind": "daily views (user agents, all access)",
    "component": "institutions",
    "means": "More readers of articles on emigration, border crossings, deferment, draft papers or alternative service means people are quietly weighing how to avoid a call-up or leave.",
    "not_proves": "It does not prove a mobilisation is coming: a new law, a rumour, a viral post, school terms or the routine spring and autumn call-ups also drive readers.",
-   "z30": 9.1,
-   "as_of": "2026-10-28"
+   "z30": 3.9,
+   "as_of": "2026-10-29"
   },
   {
    "family": "mobilisation",
    "id": "mob:wiki:en:Conscription_in_Taiwan",
    "label": "Wikipedia (en) \"Conscription in Taiwan\": daily readers, last 3 days",
-   "value": 74,
+   "value": 50,
    "baseline": 47.0,
-   "ratio": 1.57,
+   "ratio": 1.06,
    "anomaly": false,
    "unit": "views/day",
    "note": "",
    "source": "Wikimedia pageviews",
    "series": [
-    [
-     "2026-09-29",
-     41
-    ],
     [
      "2026-09-30",
      44
@@ -8454,31 +9708,31 @@
     [
      "2026-10-28",
      47
+    ],
+    [
+     "2026-10-29",
+     40
     ]
    ],
    "series_kind": "daily views (user agents, all access)",
    "component": "institutions",
    "means": "More readers of articles on emigration, border crossings, deferment, draft papers or alternative service means people are quietly weighing how to avoid a call-up or leave.",
    "not_proves": "It does not prove a mobilisation is coming: a new law, a rumour, a viral post, school terms or the routine spring and autumn call-ups also drive readers.",
-   "z30": 0.0,
-   "as_of": "2026-10-28"
+   "z30": -0.7,
+   "as_of": "2026-10-29"
   },
   {
    "family": "mobilisation",
    "id": "mob:wiki:en:Conscription_in_Germany",
    "label": "Wikipedia (en) \"Conscription in Germany\": daily readers, last 3 days",
-   "value": 132,
-   "baseline": 98.5,
-   "ratio": 1.34,
+   "value": 116,
+   "baseline": 101.5,
+   "ratio": 1.14,
    "anomaly": false,
    "unit": "views/day",
    "note": "",
    "source": "Wikimedia pageviews",
    "series": [
-    [
-     "2026-09-29",
-     179
-    ],
     [
      "2026-09-30",
      137
@@ -8594,31 +9848,31 @@
     [
      "2026-10-28",
      116
+    ],
+    [
+     "2026-10-29",
+     109
     ]
    ],
    "series_kind": "daily views (user agents, all access)",
    "component": "institutions",
    "means": "More readers of articles on emigration, border crossings, deferment, draft papers or alternative service means people are quietly weighing how to avoid a call-up or leave.",
    "not_proves": "It does not prove a mobilisation is coming: a new law, a rumour, a viral post, school terms or the routine spring and autumn call-ups also drive readers.",
-   "z30": 0.3,
-   "as_of": "2026-10-28"
+   "z30": 0.2,
+   "as_of": "2026-10-29"
   },
   {
    "family": "mobilisation",
    "id": "mob:wiki:en:Conscientious_objector",
    "label": "Wikipedia (en) \"Conscientious objector\": daily readers, last 3 days",
-   "value": 582,
+   "value": 568,
    "baseline": 554.5,
-   "ratio": 1.05,
+   "ratio": 1.02,
    "anomaly": false,
    "unit": "views/day",
    "note": "",
    "source": "Wikimedia pageviews",
    "series": [
-    [
-     "2026-09-29",
-     536
-    ],
     [
      "2026-09-30",
      503
@@ -8734,31 +9988,31 @@
     [
      "2026-10-28",
      515
+    ],
+    [
+     "2026-10-29",
+     563
     ]
    ],
    "series_kind": "daily views (user agents, all access)",
    "component": "institutions",
    "means": "More readers of articles on emigration, border crossings, deferment, draft papers or alternative service means people are quietly weighing how to avoid a call-up or leave.",
    "not_proves": "It does not prove a mobilisation is coming: a new law, a rumour, a viral post, school terms or the routine spring and autumn call-ups also drive readers.",
-   "z30": -0.6,
-   "as_of": "2026-10-28"
+   "z30": 0.1,
+   "as_of": "2026-10-29"
   },
   {
    "family": "mobilisation",
    "id": "mob:wiki:he:צו_8",
    "label": "Wikipedia (he) \"צו 8\": daily readers, last 3 days",
-   "value": 13,
+   "value": 10,
    "baseline": 5.0,
-   "ratio": 2.6,
+   "ratio": 2.0,
    "anomaly": false,
    "unit": "views/day",
    "note": "",
    "source": "Wikimedia pageviews",
    "series": [
-    [
-     "2026-09-29",
-     1
-    ],
     [
      "2026-09-30",
      6
@@ -8874,32 +10128,32 @@
     [
      "2026-10-28",
      9
+    ],
+    [
+     "2026-10-29",
+     11
     ]
    ],
    "series_kind": "daily views (user agents, all access)",
    "component": "institutions",
    "means": "More readers of articles on emigration, border crossings, deferment, draft papers or alternative service means people are quietly weighing how to avoid a call-up or leave.",
    "not_proves": "It does not prove a mobilisation is coming: a new law, a rumour, a viral post, school terms or the routine spring and autumn call-ups also drive readers.",
-   "z30": 0.7,
-   "gated": "ratio flag dropped: |z| 0.7 against its own last 30 points is ordinary",
-   "as_of": "2026-10-28"
+   "z30": 0.3,
+   "gated": "ratio flag dropped: |z| 0.3 against its own last 30 points is ordinary",
+   "as_of": "2026-10-29"
   },
   {
    "family": "mobilisation",
    "id": "mob:wiki:he:שירות_המילואים_בישראל",
    "label": "Wikipedia (he) \"שירות המילואים בישראל\": daily readers, last 3 days",
-   "value": 30,
+   "value": 24,
    "baseline": 27.5,
-   "ratio": 1.09,
+   "ratio": 0.87,
    "anomaly": false,
    "unit": "views/day",
    "note": "",
    "source": "Wikimedia pageviews",
    "series": [
-    [
-     "2026-09-29",
-     29
-    ],
     [
      "2026-09-30",
      29
@@ -9015,31 +10269,31 @@
     [
      "2026-10-28",
      28
+    ],
+    [
+     "2026-10-29",
+     26
     ]
    ],
    "series_kind": "daily views (user agents, all access)",
    "component": "institutions",
    "means": "More readers of articles on emigration, border crossings, deferment, draft papers or alternative service means people are quietly weighing how to avoid a call-up or leave.",
    "not_proves": "It does not prove a mobilisation is coming: a new law, a rumour, a viral post, school terms or the routine spring and autumn call-ups also drive readers.",
-   "z30": 0.0,
-   "as_of": "2026-10-28"
+   "z30": -0.1,
+   "as_of": "2026-10-29"
   },
   {
    "family": "mobilisation",
    "id": "mob:wiki:de:Wehrdienst",
    "label": "Wikipedia (de) \"Wehrdienst\": daily readers, last 3 days",
-   "value": 57,
+   "value": 59,
    "baseline": 54.5,
-   "ratio": 1.05,
+   "ratio": 1.08,
    "anomaly": false,
    "unit": "views/day",
    "note": "",
    "source": "Wikimedia pageviews",
    "series": [
-    [
-     "2026-09-29",
-     55
-    ],
     [
      "2026-09-30",
      57
@@ -9155,31 +10409,31 @@
     [
      "2026-10-28",
      60
+    ],
+    [
+     "2026-10-29",
+     64
     ]
    ],
    "series_kind": "daily views (user agents, all access)",
    "component": "institutions",
    "means": "More readers of articles on emigration, border crossings, deferment, draft papers or alternative service means people are quietly weighing how to avoid a call-up or leave.",
    "not_proves": "It does not prove a mobilisation is coming: a new law, a rumour, a viral post, school terms or the routine spring and autumn call-ups also drive readers.",
-   "z30": 0.7,
-   "as_of": "2026-10-28"
+   "z30": 1.0,
+   "as_of": "2026-10-29"
   },
   {
    "family": "mobilisation",
    "id": "mob:wiki:de:Musterung",
    "label": "Wikipedia (de) \"Musterung\": daily readers, last 3 days",
-   "value": 34,
-   "baseline": 30.0,
-   "ratio": 1.13,
+   "value": 31,
+   "baseline": 29.5,
+   "ratio": 1.05,
    "anomaly": false,
    "unit": "views/day",
    "note": "",
    "source": "Wikimedia pageviews",
    "series": [
-    [
-     "2026-09-29",
-     44
-    ],
     [
      "2026-09-30",
      36
@@ -9295,31 +10549,31 @@
     [
      "2026-10-28",
      30
+    ],
+    [
+     "2026-10-29",
+     23
     ]
    ],
    "series_kind": "daily views (user agents, all access)",
    "component": "institutions",
    "means": "More readers of articles on emigration, border crossings, deferment, draft papers or alternative service means people are quietly weighing how to avoid a call-up or leave.",
    "not_proves": "It does not prove a mobilisation is coming: a new law, a rumour, a viral post, school terms or the routine spring and autumn call-ups also drive readers.",
-   "z30": 0.7,
-   "as_of": "2026-10-28"
+   "z30": -0.3,
+   "as_of": "2026-10-29"
   },
   {
    "family": "mobilisation",
    "id": "mob:wiki:de:Kriegsdienstverweigerung",
    "label": "Wikipedia (de) \"Kriegsdienstverweigerung\": daily readers, last 3 days",
-   "value": 31,
+   "value": 26,
    "baseline": 35.0,
-   "ratio": 0.89,
+   "ratio": 0.74,
    "anomaly": false,
    "unit": "views/day",
    "note": "",
    "source": "Wikimedia pageviews",
    "series": [
-    [
-     "2026-09-29",
-     28
-    ],
     [
      "2026-09-30",
      48
@@ -9435,6 +10689,10 @@
     [
      "2026-10-28",
      26
+    ],
+    [
+     "2026-10-29",
+     25
     ]
    ],
    "series_kind": "daily views (user agents, all access)",
@@ -9442,24 +10700,20 @@
    "means": "More readers of articles on emigration, border crossings, deferment, draft papers or alternative service means people are quietly weighing how to avoid a call-up or leave.",
    "not_proves": "It does not prove a mobilisation is coming: a new law, a rumour, a viral post, school terms or the routine spring and autumn call-ups also drive readers.",
    "z30": -0.8,
-   "as_of": "2026-10-28"
+   "as_of": "2026-10-29"
   },
   {
    "family": "mobilisation",
    "id": "mob:wiki:zh:後備軍事動員",
    "label": "Wikipedia (zh) \"後備軍事動員\": daily readers, last 3 days",
-   "value": 12,
+   "value": 11,
    "baseline": 7.5,
-   "ratio": 1.6,
+   "ratio": 1.47,
    "anomaly": false,
    "unit": "views/day",
    "note": "",
    "source": "Wikimedia pageviews",
    "series": [
-    [
-     "2026-09-29",
-     2
-    ],
     [
      "2026-09-30",
      10
@@ -9575,14 +10829,18 @@
     [
      "2026-10-28",
      13
+    ],
+    [
+     "2026-10-29",
+     8
     ]
    ],
    "series_kind": "daily views (user agents, all access)",
    "component": "institutions",
    "means": "More readers of articles on emigration, border crossings, deferment, draft papers or alternative service means people are quietly weighing how to avoid a call-up or leave.",
    "not_proves": "It does not prove a mobilisation is coming: a new law, a rumour, a viral post, school terms or the routine spring and autumn call-ups also drive readers.",
-   "z30": 0.9,
-   "as_of": "2026-10-28"
+   "z30": -0.2,
+   "as_of": "2026-10-29"
   },
   {
    "family": "mobilisation",
@@ -9596,10 +10854,6 @@
    "note": "",
    "source": "Wikimedia pageviews",
    "series": [
-    [
-     "2026-09-29",
-     6
-    ],
     [
      "2026-09-30",
      7
@@ -9715,6 +10969,10 @@
     [
      "2026-10-28",
      1
+    ],
+    [
+     "2026-10-29",
+     1
     ]
    ],
    "series_kind": "daily views (user agents, all access)",
@@ -9722,24 +10980,20 @@
    "means": "More readers of articles on emigration, border crossings, deferment, draft papers or alternative service means people are quietly weighing how to avoid a call-up or leave.",
    "not_proves": "It does not prove a mobilisation is coming: a new law, a rumour, a viral post, school terms or the routine spring and autumn call-ups also drive readers.",
    "z30": -0.7,
-   "as_of": "2026-10-28"
+   "as_of": "2026-10-29"
   },
   {
    "family": "mobilisation",
    "id": "mob:wiki:fa:خدمت_نظامی",
    "label": "Wikipedia (fa) \"خدمت نظامی\": daily readers, last 3 days",
-   "value": 42,
+   "value": 40,
    "baseline": 53.0,
-   "ratio": 0.79,
+   "ratio": 0.75,
    "anomaly": false,
    "unit": "views/day",
    "note": "",
    "source": "Wikimedia pageviews",
    "series": [
-    [
-     "2026-09-29",
-     41
-    ],
     [
      "2026-09-30",
      53
@@ -9855,22 +11109,26 @@
     [
      "2026-10-28",
      27
+    ],
+    [
+     "2026-10-29",
+     47
     ]
    ],
    "series_kind": "daily views (user agents, all access)",
    "component": "institutions",
    "means": "More readers of articles on emigration, border crossings, deferment, draft papers or alternative service means people are quietly weighing how to avoid a call-up or leave.",
    "not_proves": "It does not prove a mobilisation is coming: a new law, a rumour, a viral post, school terms or the routine spring and autumn call-ups also drive readers.",
-   "z30": -2.2,
-   "as_of": "2026-10-28"
+   "z30": -0.3,
+   "as_of": "2026-10-29"
   },
   {
    "family": "mobilisation",
    "id": "mob:pravo:ru-president",
    "label": "Russia: presidential acts on call-up, mobilisation, reserves, military registration or exit (last 30 days)",
    "value": 2,
-   "baseline": 2.69,
-   "ratio": 0.74,
+   "baseline": 2.66,
+   "ratio": 0.75,
    "anomaly": false,
    "unit": "acts/30 days",
    "note": "2026-10-15 Указ Президента Российской Федерации от 15.10.2026 № 744 \"О штатной численности органов прокуратуры Российской; 2026-10-12 Указ Президента Российской Федерации от 12.10.2026 № 730 \"О временном порядке въезда в Российскую Федерацию и ",
@@ -9920,12 +11178,12 @@
    "family": "mobilisation",
    "id": "bsky-mobilisation",
    "label": "Bluesky talk of mobilisation",
-   "value": 0.37,
+   "value": 0.59,
    "baseline": 0.39,
-   "ratio": 0.95,
+   "ratio": 1.51,
    "anomaly": false,
    "unit": "per 10k posts",
-   "note": "13 matches in 48 samples",
+   "note": "21 matches in 48 samples",
    "source": "Bluesky Jetstream, 3-min samples every 30 min",
    "series": [
     [
@@ -9971,6 +11229,10 @@
     [
      "2026-10-28",
      0.37
+    ],
+    [
+     "2026-10-29",
+     0.59
     ]
    ],
    "series_kind": "rate",
@@ -9978,18 +11240,18 @@
    "means": "",
    "not_proves": "",
    "z30": null,
-   "as_of": "2026-10-28"
+   "as_of": "2026-10-29"
   },
   {
    "family": "military",
    "id": "bsky-escalation",
    "label": "Bluesky talk of escalation",
-   "value": 1.09,
-   "baseline": 1.61,
-   "ratio": 0.68,
+   "value": 2.08,
+   "baseline": 1.53,
+   "ratio": 1.36,
    "anomaly": false,
    "unit": "per 10k posts",
-   "note": "38 matches in 48 samples",
+   "note": "74 matches in 48 samples",
    "source": "Bluesky Jetstream, 3-min samples every 30 min",
    "series": [
     [
@@ -10035,6 +11297,10 @@
     [
      "2026-10-28",
      1.09
+    ],
+    [
+     "2026-10-29",
+     2.08
     ]
    ],
    "series_kind": "rate",
@@ -10042,18 +11308,18 @@
    "means": "",
    "not_proves": "",
    "z30": null,
-   "as_of": "2026-10-28"
+   "as_of": "2026-10-29"
   },
   {
    "family": "energy",
    "id": "bsky-energy",
    "label": "Bluesky talk of energy strikes",
-   "value": 3.47,
+   "value": 3.86,
    "baseline": 3.14,
-   "ratio": 1.11,
+   "ratio": 1.23,
    "anomaly": false,
    "unit": "per 10k posts",
-   "note": "121 matches in 48 samples",
+   "note": "137 matches in 48 samples",
    "source": "Bluesky Jetstream, 3-min samples every 30 min",
    "series": [
     [
@@ -10099,6 +11365,10 @@
     [
      "2026-10-28",
      3.47
+    ],
+    [
+     "2026-10-29",
+     3.86
     ]
    ],
    "series_kind": "rate",
@@ -10106,18 +11376,18 @@
    "means": "",
    "not_proves": "",
    "z30": null,
-   "as_of": "2026-10-28"
+   "as_of": "2026-10-29"
   },
   {
    "family": "control",
    "id": "bsky-control",
    "label": "Bluesky talk of internet control",
-   "value": 0.2,
-   "baseline": 0.17,
-   "ratio": 1.18,
+   "value": 0.11,
+   "baseline": 0.18,
+   "ratio": 0.61,
    "anomaly": false,
    "unit": "per 10k posts",
-   "note": "7 matches in 48 samples",
+   "note": "4 matches in 48 samples",
    "source": "Bluesky Jetstream, 3-min samples every 30 min",
    "series": [
     [
@@ -10163,6 +11433,10 @@
     [
      "2026-10-28",
      0.2
+    ],
+    [
+     "2026-10-29",
+     0.11
     ]
    ],
    "series_kind": "rate",
@@ -10170,15 +11444,15 @@
    "means": "",
    "not_proves": "",
    "z30": null,
-   "as_of": "2026-10-28"
+   "as_of": "2026-10-29"
   },
   {
    "family": "control",
    "id": "bsky-ru-share",
    "label": "Russian-language share of Bluesky posts",
-   "value": 2.77,
+   "value": 2.64,
    "baseline": 2.93,
-   "ratio": 0.95,
+   "ratio": 0.9,
    "anomaly": false,
    "unit": "per 1000 posts",
    "note": "a fall may mean throttling in Russia, a rise a Russian-language event",
@@ -10227,6 +11501,10 @@
     [
      "2026-10-28",
      2.77
+    ],
+    [
+     "2026-10-29",
+     2.64
     ]
    ],
    "series_kind": "rate",
@@ -10234,18 +11512,18 @@
    "means": "",
    "not_proves": "",
    "z30": null,
-   "as_of": "2026-10-28"
+   "as_of": "2026-10-29"
   },
   {
    "family": "mobilisation",
    "id": "mob:vac_total",
    "label": "Russia: open contract-service vacancies on the official job portal (Работа России)",
-   "value": 1673,
-   "baseline": 1702.5,
-   "ratio": 0.98,
+   "value": 1676,
+   "baseline": 1700,
+   "ratio": 0.99,
    "anomaly": false,
    "unit": "vacancies",
-   "note": "top regions: Мурманская область 190, Костромская область 179, Калужская область 144, Кабардино-Балкарская Республика 130, Липецкая область 104",
+   "note": "top regions: Костромская область 179, Мурманская область 178, Калужская область 146, Кабардино-Балкарская Республика 130, Липецкая область 106",
    "source": "Работа России open data (opendata.trudvsem.ru)",
    "series": [
     [
@@ -10339,21 +11617,25 @@
     [
      "2026-10-29",
      1673
+    ],
+    [
+     "2026-10-30",
+     1676
     ]
    ],
    "series_kind": "daily value",
    "component": "military",
    "means": "More ads for contract soldiers means the state needs more men than volunteers bring in.",
    "not_proves": "Ads are re-posted and padded; a count is not recruits, and a fall can mean a new channel, not less need.",
-   "date": "2026-10-29"
+   "date": "2026-10-30"
   },
   {
    "family": "mobilisation",
    "id": "mob:vac_new7",
    "label": "Russia: contract-service vacancies posted in the last 7 days",
-   "value": 72,
-   "baseline": 41.5,
-   "ratio": 1.73,
+   "value": 74,
+   "baseline": 42,
+   "ratio": 1.76,
    "anomaly": true,
    "unit": "vacancies",
    "note": "",
@@ -10450,20 +11732,24 @@
     [
      "2026-10-29",
      72
+    ],
+    [
+     "2026-10-30",
+     74
     ]
    ],
    "series_kind": "daily value",
    "component": "military",
    "means": "A surge of new ads is a recruiting push, often before or instead of coercion.",
    "not_proves": "Regional campaigns are seasonal and budget-driven.",
-   "date": "2026-10-29"
+   "date": "2026-10-30"
   },
   {
    "family": "mobilisation",
    "id": "mob:vac_pay_median",
    "label": "Russia: median advertised monthly pay for contract service",
    "value": 210000,
-   "baseline": 210000.0,
+   "baseline": 210000,
    "ratio": 1.0,
    "anomaly": false,
    "unit": "₽/month",
@@ -10561,24 +11847,28 @@
     [
      "2026-10-29",
      210000
+    ],
+    [
+     "2026-10-30",
+     210000
     ]
    ],
    "series_kind": "daily value",
    "component": "military",
    "means": "Rising pay means volunteers are getting scarcer at the old price.",
    "not_proves": "Ads show the headline, not what is paid; inflation lifts all wages.",
-   "date": "2026-10-29"
+   "date": "2026-10-30"
   },
   {
    "family": "mobilisation",
    "id": "mob:reg_hits",
    "label": "Russian regions: new acts on contract payouts, call-up, military registration or mobilisation tasks (since last run)",
-   "value": 8,
-   "baseline": 2.0,
-   "ratio": 4.0,
-   "anomaly": true,
+   "value": 1,
+   "baseline": 2,
+   "ratio": 0.5,
+   "anomaly": false,
    "unit": "acts",
-   "note": "2026-10-29 Указ Губернатора Алтайского края от 28.10.2026 № 284 \"Об утверждении Порядка учета мер поддержки, предоставляемых лицам, принимающим (принимавшим) участие в специальной военной операции, и другим категориям лиц в Алтайск; 2026-10-29 Приказ Министерства образования Камчатского края от 28.10.2026 № 44-Н \"О внесении изменений в приложение к приказу Министерства образования Камчатского края от 31.08.2026 № 33-Н \"Об установлении меры социальной поддержки; 2026-10-29 Постановление Правительства Ставропольского края от 22.10.2026 № 557-п \"О внесении изменений в постановление Правительства Ставропольского края от 27 марта 2023 г. № 146-п \"Об утверждении Порядка предоставления дополните; 2026-10-29 Постановление Правительства Хабаровского края от 28.10.2026 № 410-пр \"О внесении изменений в Порядок предоставления единовременной денежной выплаты отдельным категориям граждан, осуществляющих задачи в ходе проведения сп; 2026-10-29 Приказ Департамента культуры Брянской области от 22.10.2026 № 0111/517 \"О внесении изменений в приказ департамента культуры Брянской области от 25 мая 2026 года № 0111/323 \"Об утверждении Порядка предоставления участника",
+   "note": "2026-10-30 Закон Новосибирской области от 30.10.2026 № 163-ОЗ \"О внесении изменений в отдельные законы Новосибирской области, связанных с реализацией Указа Президента Российской Федерации от 15 мая 2026 года № 327 \"О единых базовых",
    "source": "publication.pravo.gov.ru (regions)",
    "series": [
     [
@@ -10672,22 +11962,19 @@
     [
      "2026-10-29",
      8
+    ],
+    [
+     "2026-10-30",
+     1
     ]
    ],
    "series_kind": "daily value",
    "component": "military",
    "means": "Regions raising payouts or issuing mobilisation tasks is the state reaching for men at the regional level.",
    "not_proves": "Many acts are routine budget amendments; read the titles.",
-   "date": "2026-10-29",
+   "date": "2026-10-30",
    "items": [
-    "2026-10-29 Указ Губернатора Алтайского края от 28.10.2026 № 284 \"Об утверждении Порядка учета мер поддержки, предоставляемых лицам, принимающим (принимавшим) участие в специальной военной операции, и другим категориям лиц в Алтайск",
-    "2026-10-29 Приказ Министерства образования Камчатского края от 28.10.2026 № 44-Н \"О внесении изменений в приложение к приказу Министерства образования Камчатского края от 31.08.2026 № 33-Н \"Об установлении меры социальной поддержки",
-    "2026-10-29 Постановление Правительства Ставропольского края от 22.10.2026 № 557-п \"О внесении изменений в постановление Правительства Ставропольского края от 27 марта 2023 г. № 146-п \"Об утверждении Порядка предоставления дополните",
-    "2026-10-29 Постановление Правительства Хабаровского края от 28.10.2026 № 410-пр \"О внесении изменений в Порядок предоставления единовременной денежной выплаты отдельным категориям граждан, осуществляющих задачи в ходе проведения сп",
-    "2026-10-29 Приказ Департамента культуры Брянской области от 22.10.2026 № 0111/517 \"О внесении изменений в приказ департамента культуры Брянской области от 25 мая 2026 года № 0111/323 \"Об утверждении Порядка предоставления участника",
-    "2026-10-29 Постановление Правительства Самарской области от 29.10.2026 № 716 \"О внесении изменений в постановление Правительства Самарской области от 22.01.2025 № 12 \"Об отдельных вопросах предоставления гражданам, принимавшим учас",
-    "2026-10-29 Постановление Правительства Челябинской области от 27.10.2026 № 45-П \"О Методике распределения в 2026 году иных межбюджетных трансфертов местным бюджетам на реализацию комплекса мер по развитию региональных систем поддер",
-    "2026-10-29 Постановление Правительства Челябинской области от 27.10.2026 № 44-П \"О Порядке определения объема и условиях предоставления в 2026 - 2027 годах областным государственным бюджетным и автономным учреждениям, подведомствен"
+    "2026-10-30 Закон Новосибирской области от 30.10.2026 № 163-ОЗ \"О внесении изменений в отдельные законы Новосибирской области, связанных с реализацией Указа Президента Российской Федерации от 15 мая 2026 года № 327 \"О единых базовых"
    ]
   },
   {
@@ -10695,7 +11982,7 @@
    "id": "mob:fed_hits",
    "label": "Russian federal bodies: new acts on call-up, military registration or mobilisation (since last run)",
    "value": 0,
-   "baseline": 0.0,
+   "baseline": 0,
    "ratio": null,
    "anomaly": false,
    "unit": "acts",
@@ -10793,21 +12080,25 @@
     [
      "2026-10-29",
      0
+    ],
+    [
+     "2026-10-30",
+     0
     ]
    ],
    "series_kind": "daily value",
    "component": "military",
    "means": "Federal ministries changing call-up and registration rules prepares the machinery.",
    "not_proves": "Ministries publish technical orders all year.",
-   "date": "2026-10-29"
+   "date": "2026-10-30"
   },
   {
    "family": "mobilisation",
    "id": "mob:p2p_premium_pct",
    "label": "Rouble: premium of P2P USDT over the official dollar rate (Bybit vs CBR)",
-   "value": 1.8,
+   "value": 1.91,
    "baseline": 1.28,
-   "ratio": 1.41,
+   "ratio": 1.49,
    "anomaly": false,
    "unit": "%",
    "note": "",
@@ -10904,19 +12195,23 @@
     [
      "2026-10-29",
      1.8
+    ],
+    [
+     "2026-10-30",
+     1.91
     ]
    ],
    "series_kind": "daily value",
    "component": "society",
    "means": "A rising premium means people pay extra to move money out of roubles: a classic sign of fear of leaving or of controls.",
    "not_proves": "Crypto spreads also move with exchange rules, bank blocks and fees.",
-   "date": "2026-10-29"
+   "date": "2026-10-30"
   },
   {
    "family": "mobilisation",
    "id": "mob:usd_cbr",
    "label": "Rouble: official dollar rate (CBR)",
-   "value": 80.68,
+   "value": 80.56,
    "baseline": 83.62,
    "ratio": 0.96,
    "anomaly": false,
@@ -11015,20 +12310,24 @@
     [
      "2026-10-29",
      80.68
+    ],
+    [
+     "2026-10-30",
+     80.56
     ]
    ],
    "series_kind": "daily value",
    "component": "society",
    "means": "A sharp fall of the rouble often accompanies capital flight and panic.",
    "not_proves": "The rate is managed and moves with oil and policy rates.",
-   "date": "2026-10-29"
+   "date": "2026-10-30"
   },
   {
    "family": "mobilisation",
    "id": "mob:duma_news7",
    "label": "State Duma official news: items on mobilisation, call-up, military registration, deferment, exit limits or contract service, last 7 days",
    "value": 1,
-   "baseline": 0.0,
+   "baseline": 0,
    "ratio": null,
    "anomaly": false,
    "unit": "news items",
@@ -11126,24 +12425,28 @@
     [
      "2026-10-29",
      1
+    ],
+    [
+     "2026-10-30",
+     1
     ]
    ],
    "series_kind": "daily value",
    "component": "institutions",
    "means": "The Duma talking publicly about these laws (bills passed, introduced, explained) shows what it is preparing.",
    "not_proves": "News is chosen by the Duma press service; one session day can produce several items on one law.",
-   "date": "2026-10-29"
+   "date": "2026-10-30"
   },
   {
    "family": "mobilisation",
    "id": "mob:ee_wait_cars_h",
    "label": "Estonia-Russia border: longest daily waiting time for cars heading into Russia (Koidula/Luhamaa, GoSwift)",
-   "value": 133.0,
+   "value": 151.0,
    "baseline": 150.0,
-   "ratio": 0.89,
+   "ratio": 1.01,
    "anomaly": false,
    "unit": "hours",
-   "note": "Estonia->Russia (GoSwift): Koidula 214 cars queued; Luhamaa 217 cars queued; max car wait 133 h on 2026-10-28",
+   "note": "Estonia->Russia (GoSwift): Koidula 212 cars queued; Luhamaa 214 cars queued; max car wait 151 h on 2026-10-29",
    "source": "Estonian border queue system (GoSwift, eestipiir.ee)",
    "series": [
     [
@@ -11237,24 +12540,28 @@
     [
      "2026-10-29",
      133.0
+    ],
+    [
+     "2026-10-30",
+     151.0
     ]
    ],
    "series_kind": "daily value",
    "component": "society",
    "means": "A sudden jump means the Russian side is processing travellers slowly or more people are crossing: friction at Russia's western land border.",
    "not_proves": "Direction is into Russia, not out of it; holidays, Russian checks and staffing move it. Not a count of people leaving Russia. The site does not state the unit; hours is inferred.",
-   "date": "2026-10-29"
+   "date": "2026-10-30"
   },
   {
    "family": "mobilisation",
    "id": "mob:ee_wait_cars_h_7d",
    "label": "Estonia-Russia border: 7-day mean of the daily maximum car waiting time (GoSwift)",
-   "value": 228.3,
-   "baseline": 142.9,
+   "value": 229.6,
+   "baseline": 143.9,
    "ratio": 1.6,
    "anomaly": true,
    "unit": "hours",
-   "note": "Estonia->Russia (GoSwift): Koidula 214 cars queued; Luhamaa 217 cars queued; max car wait 133 h on 2026-10-28",
+   "note": "Estonia->Russia (GoSwift): Koidula 212 cars queued; Luhamaa 214 cars queued; max car wait 151 h on 2026-10-29",
    "source": "Estonian border queue system (GoSwift, eestipiir.ee)",
    "series": [
     [
@@ -11348,24 +12655,28 @@
     [
      "2026-10-29",
      228.3
+    ],
+    [
+     "2026-10-30",
+     229.6
     ]
    ],
    "series_kind": "daily value",
    "component": "society",
    "means": "A sustained rise in waiting time is a slower, steadier sign of tighter Russian border control or heavier traffic.",
    "not_proves": "Seasonal travel and Russian processing capacity dominate; not specific to mobilisation.",
-   "date": "2026-10-29"
+   "date": "2026-10-30"
   },
   {
    "family": "mobilisation",
    "id": "mob:ee_cars_queue",
    "label": "Estonia-Russia border: cars in the full GoSwift queue (live + booked)",
-   "value": 431,
-   "baseline": 560.5,
+   "value": 426,
+   "baseline": 554,
    "ratio": 0.77,
    "anomaly": false,
    "unit": "vehicles",
-   "note": "Estonia->Russia (GoSwift): Koidula 214 cars queued; Luhamaa 217 cars queued; max car wait 133 h on 2026-10-28",
+   "note": "Estonia->Russia (GoSwift): Koidula 212 cars queued; Luhamaa 214 cars queued; max car wait 151 h on 2026-10-29",
    "source": "Estonian border queue system (GoSwift, eestipiir.ee)",
    "series": [
     [
@@ -11459,24 +12770,28 @@
     [
      "2026-10-29",
      431
+    ],
+    [
+     "2026-10-30",
+     426
     ]
    ],
    "series_kind": "daily value",
    "component": "society",
    "means": "More cars queued means more demand to cross into Russia or slower processing.",
    "not_proves": "Booked queue includes reservations weeks ahead.",
-   "date": "2026-10-29"
+   "date": "2026-10-30"
   },
   {
    "family": "mobilisation",
    "id": "mob:ee_cross_cars_7d",
    "label": "Estonia-Russia border: cars let through per day, 7-day mean (GoSwift)",
-   "value": 10.0,
-   "baseline": 15.75,
-   "ratio": 0.63,
+   "value": 9.1,
+   "baseline": 15.6,
+   "ratio": 0.58,
    "anomaly": true,
    "unit": "vehicles/day",
-   "note": "Estonia->Russia (GoSwift): Koidula 214 cars queued; Luhamaa 217 cars queued; max car wait 133 h on 2026-10-28",
+   "note": "Estonia->Russia (GoSwift): Koidula 212 cars queued; Luhamaa 214 cars queued; max car wait 151 h on 2026-10-29",
    "source": "Estonian border queue system (GoSwift, eestipiir.ee)",
    "series": [
     [
@@ -11570,24 +12885,28 @@
     [
      "2026-10-29",
      10.0
+    ],
+    [
+     "2026-10-30",
+     9.1
     ]
    ],
    "series_kind": "daily value",
    "component": "society",
    "means": "A collapse in throughput with a growing queue means the Russian side is slowing or closing the crossing.",
    "not_proves": "Low throughput can be a technical or staffing issue.",
-   "date": "2026-10-29"
+   "date": "2026-10-30"
   },
   {
    "family": "mobilisation",
    "id": "mob:ge_ru_visits_yoy_pct",
    "label": "Georgia: visits by Russian citizens, latest quarter vs same quarter a year earlier (Geostat)",
-   "value": 5.1,
+   "value": 4.7,
    "baseline": 5.1,
-   "ratio": 1.0,
+   "ratio": 0.92,
    "anomaly": false,
    "unit": "% y/y",
-   "note": "Georgia (Geostat): Russian citizens made 126.7k visits/month in 2026 Q2, +5.1% year on year (quarterly, published ~1 month after quarter end)",
+   "note": "Georgia (Geostat): Russian citizens made 231.9k visits/month in 2026 Q3, +4.7% year on year (quarterly, published ~1 month after quarter end)",
    "source": "Geostat (Georgia), quarterly",
    "series": [
     [
@@ -11681,24 +13000,28 @@
     [
      "2026-10-29",
      5.1
+    ],
+    [
+     "2026-10-30",
+     4.7
     ]
    ],
    "series_kind": "daily value",
    "component": "society",
    "means": "A strong year-on-year rise, as in late 2022, can mean men leaving Russia through Upper Lars.",
    "not_proves": "Quarterly and survey-weighted; mostly tourism and family visits; arrives a month or more after the quarter.",
-   "date": "2026-10-29"
+   "date": "2026-10-30"
   },
   {
    "family": "mobilisation",
    "id": "mob:ge_ru_visits_k",
    "label": "Georgia: visits by Russian citizens per month, latest quarter average (Geostat)",
-   "value": 126.7,
+   "value": 231.9,
    "baseline": 126.7,
-   "ratio": 1.0,
+   "ratio": 1.83,
    "anomaly": false,
    "unit": "thousand/month",
-   "note": "Georgia (Geostat): Russian citizens made 126.7k visits/month in 2026 Q2, +5.1% year on year (quarterly, published ~1 month after quarter end)",
+   "note": "Georgia (Geostat): Russian citizens made 231.9k visits/month in 2026 Q3, +4.7% year on year (quarterly, published ~1 month after quarter end)",
    "source": "Geostat (Georgia), quarterly",
    "series": [
     [
@@ -11792,24 +13115,28 @@
     [
      "2026-10-29",
      126.7
+    ],
+    [
+     "2026-10-30",
+     231.9
     ]
    ],
    "series_kind": "daily value",
    "component": "society",
    "means": "The level of Russian arrivals in the main nearby visa-free destination.",
    "not_proves": "Strongly seasonal (summer peak); compare year on year, not quarter on quarter.",
-   "date": "2026-10-29"
+   "date": "2026-10-30"
   },
   {
    "family": "mobilisation",
    "id": "mob:court_337_matched",
    "label": "Russian garrison courts (fixed panel of 15): new art. 337 cases received, last 28 days",
-   "value": 168,
-   "baseline": 182,
-   "ratio": 0.92,
+   "value": 155,
+   "baseline": 181.5,
+   "ratio": 0.85,
    "anomaly": false,
    "unit": "cases",
-   "note": "15/15 garrison courts answered (art.338: 15), cases received 2026-10-01..2026-10-28: art.337 168, art.338 32; matched panel of 15: art.337 168 (0 carried), art.338 32 (0 carried); largest: moskovskygvs.msk 29, habargvs.hbr 20, gvs.ros 20",
+   "note": "15/15 garrison courts answered (art.338: 15), cases received 2026-10-02..2026-10-29: art.337 155, art.338 31; matched panel of 15: art.337 155 (0 carried), art.338 31 (0 carried); largest: moskovskygvs.msk 24, habargvs.hbr 20, gvs.ros 19",
    "source": "garrison military courts (sudrf.ru), panel of courts without captcha",
    "series": [
     [
@@ -11875,24 +13202,28 @@
     [
      "2026-10-29",
      168
+    ],
+    [
+     "2026-10-30",
+     155
     ]
    ],
    "series_kind": "daily value",
    "component": "military",
    "means": "The same 15 courts every day, so a change is not a change of which courts answered; the headline court series since 11 Oct 2026.",
    "not_proves": "A court that did not answer stands in with its own value from up to 3 days earlier; shown only when 10+ courts answered today.",
-   "date": "2026-10-29"
+   "date": "2026-10-30"
   },
   {
    "family": "mobilisation",
    "id": "mob:court_338_matched",
    "label": "Russian garrison courts (fixed panel of 15): new desertion cases (art. 338), last 28 days",
-   "value": 32,
-   "baseline": 27,
-   "ratio": 1.19,
+   "value": 31,
+   "baseline": 27.5,
+   "ratio": 1.13,
    "anomaly": false,
    "unit": "cases",
-   "note": "15/15 garrison courts answered (art.338: 15), cases received 2026-10-01..2026-10-28: art.337 168, art.338 32; matched panel of 15: art.337 168 (0 carried), art.338 32 (0 carried); largest: moskovskygvs.msk 29, habargvs.hbr 20, gvs.ros 20",
+   "note": "15/15 garrison courts answered (art.338: 15), cases received 2026-10-02..2026-10-29: art.337 155, art.338 31; matched panel of 15: art.337 155 (0 carried), art.338 31 (0 carried); largest: moskovskygvs.msk 24, habargvs.hbr 20, gvs.ros 19",
    "source": "garrison military courts (sudrf.ru), panel of courts without captcha",
    "series": [
     [
@@ -11934,24 +13265,28 @@
     [
      "2026-10-29",
      32
+    ],
+    [
+     "2026-10-30",
+     31
     ]
    ],
    "series_kind": "daily value",
    "component": "military",
    "means": "Desertion (intent to leave service for good) on a fixed panel of courts.",
    "not_proves": "Small numbers: a single group case moves it; carried values as for art. 337.",
-   "date": "2026-10-29"
+   "date": "2026-10-30"
   },
   {
    "family": "mobilisation",
    "id": "mob:court_337_per_court",
    "label": "Russian garrison courts (panel): new cases of unauthorised leaving of a unit (art. 337), last 28 days, per court",
-   "value": 11.2,
+   "value": 10.33,
    "baseline": 12.33,
-   "ratio": 0.91,
+   "ratio": 0.84,
    "anomaly": false,
    "unit": "cases/court",
-   "note": "15/15 garrison courts answered (art.338: 15), cases received 2026-10-01..2026-10-28: art.337 168, art.338 32; matched panel of 15: art.337 168 (0 carried), art.338 32 (0 carried); largest: moskovskygvs.msk 29, habargvs.hbr 20, gvs.ros 20",
+   "note": "15/15 garrison courts answered (art.338: 15), cases received 2026-10-02..2026-10-29: art.337 155, art.338 31; matched panel of 15: art.337 155 (0 carried), art.338 31 (0 carried); largest: moskovskygvs.msk 24, habargvs.hbr 20, gvs.ros 19",
    "source": "garrison military courts (sudrf.ru), panel of courts without captcha",
    "series": [
     [
@@ -12045,24 +13380,28 @@
     [
      "2026-10-29",
      11.2
+    ],
+    [
+     "2026-10-30",
+     10.33
     ]
    ],
    "series_kind": "daily value",
    "component": "military",
    "means": "More soldiers prosecuted for leaving their units means the army holds men against their will and morale is eroding; a jump preceded and followed the 2022 mobilisation.",
    "not_proves": "Court cards appear with delays and many cases are hidden or never opened (deserters are often sent back to the front instead); a panel of large courts, not all of Russia.",
-   "date": "2026-10-29"
+   "date": "2026-10-30"
   },
   {
    "family": "mobilisation",
    "id": "mob:court_337_28d",
    "label": "Russian garrison courts (panel): new art. 337 cases received, last 28 days",
-   "value": 168,
-   "baseline": 175.5,
-   "ratio": 0.96,
+   "value": 155,
+   "baseline": 175,
+   "ratio": 0.89,
    "anomaly": false,
    "unit": "cases",
-   "note": "15/15 garrison courts answered (art.338: 15), cases received 2026-10-01..2026-10-28: art.337 168, art.338 32; matched panel of 15: art.337 168 (0 carried), art.338 32 (0 carried); largest: moskovskygvs.msk 29, habargvs.hbr 20, gvs.ros 20",
+   "note": "15/15 garrison courts answered (art.338: 15), cases received 2026-10-02..2026-10-29: art.337 155, art.338 31; matched panel of 15: art.337 155 (0 carried), art.338 31 (0 carried); largest: moskovskygvs.msk 24, habargvs.hbr 20, gvs.ros 19",
    "source": "garrison military courts (sudrf.ru), panel of courts without captcha",
    "series": [
     [
@@ -12156,24 +13495,28 @@
     [
      "2026-10-29",
      168
+    ],
+    [
+     "2026-10-30",
+     155
     ]
    ],
    "series_kind": "daily value",
    "component": "military",
    "means": "The raw count behind the per-court figure.",
    "not_proves": "Changes when panel courts fail to answer, so never flagged as an anomaly; read the fixed-panel series.",
-   "date": "2026-10-29"
+   "date": "2026-10-30"
   },
   {
    "family": "mobilisation",
    "id": "mob:court_338_28d",
    "label": "Russian garrison courts (panel): new desertion cases (art. 338), last 28 days",
-   "value": 32,
-   "baseline": 27.5,
-   "ratio": 1.16,
+   "value": 31,
+   "baseline": 28,
+   "ratio": 1.11,
    "anomaly": false,
    "unit": "cases",
-   "note": "15/15 garrison courts answered (art.338: 15), cases received 2026-10-01..2026-10-28: art.337 168, art.338 32; matched panel of 15: art.337 168 (0 carried), art.338 32 (0 carried); largest: moskovskygvs.msk 29, habargvs.hbr 20, gvs.ros 20",
+   "note": "15/15 garrison courts answered (art.338: 15), cases received 2026-10-02..2026-10-29: art.337 155, art.338 31; matched panel of 15: art.337 155 (0 carried), art.338 31 (0 carried); largest: moskovskygvs.msk 24, habargvs.hbr 20, gvs.ros 19",
    "source": "garrison military courts (sudrf.ru), panel of courts without captcha",
    "series": [
     [
@@ -12203,20 +13546,24 @@
     [
      "2026-10-29",
      32
+    ],
+    [
+     "2026-10-30",
+     31
     ]
    ],
    "series_kind": "daily value",
    "component": "military",
    "means": "Desertion (intent to leave service for good) is charged rarely; a rise signals men trying to escape the army entirely.",
    "not_proves": "Small numbers: a single group case moves it.",
-   "date": "2026-10-29"
+   "date": "2026-10-30"
   },
   {
    "family": "mobilisation",
    "id": "mob:pay_reg_median",
    "label": "Russian regions: median regional one-time payout for signing a military contract",
    "value": 2100000,
-   "baseline": 2100000.0,
+   "baseline": 2100000,
    "ratio": 1.0,
    "anomaly": false,
    "unit": "₽",
@@ -12314,20 +13661,24 @@
     [
      "2026-10-29",
      2100000
+    ],
+    [
+     "2026-10-30",
+     2100000
     ]
    ],
    "series_kind": "daily value",
    "component": "military",
    "means": "Regions paying more to sign one man means volunteers are scarcer at the old price: the cost of avoiding mobilisation rises.",
    "not_proves": "A recruiting site's table, not an official register; rows may be stale or include municipal top-ups. Inflation lifts all payouts.",
-   "date": "2026-10-29"
+   "date": "2026-10-30"
   },
   {
    "family": "mobilisation",
    "id": "mob:pay_reg_ge2m",
    "label": "Russian regions: regional centres/cities paying 2 million roubles or more just for the regional sign-up bonus",
    "value": 74,
-   "baseline": 74.0,
+   "baseline": 74,
    "ratio": 1.0,
    "anomaly": false,
    "unit": "regions",
@@ -12425,20 +13776,24 @@
     [
      "2026-10-29",
      74
+    ],
+    [
+     "2026-10-30",
+     74
     ]
    ],
    "series_kind": "daily value",
    "component": "military",
    "means": "More regions in the top bracket means a bidding war for recruits across the country.",
    "not_proves": "Same table caveats; a falling count can mean budget strain rather than less need for men.",
-   "date": "2026-10-29"
+   "date": "2026-10-30"
   },
   {
    "family": "mobilisation",
    "id": "mob:pay_reg_max",
    "label": "Russian regions: highest regional one-time payout for a military contract",
    "value": 4100000,
-   "baseline": 4100000.0,
+   "baseline": 4100000,
    "ratio": 1.0,
    "anomaly": false,
    "unit": "₽",
@@ -12535,6 +13890,10 @@
     ],
     [
      "2026-10-29",
+     4100000
+    ],
+    [
+     "2026-10-30",
      4100000
     ]
    ],
@@ -12542,14 +13901,14 @@
    "component": "military",
    "means": "The top of the market shows how far the most desperate or richest region goes.",
    "not_proves": "One region's special track can set it.",
-   "date": "2026-10-29"
+   "date": "2026-10-30"
   },
   {
    "family": "mobilisation",
    "id": "mob:pay_reg_p25",
    "label": "Russian regions: lower quartile of regional one-time payouts",
    "value": 1000000,
-   "baseline": 1000000.0,
+   "baseline": 1000000,
    "ratio": 1.0,
    "anomaly": false,
    "unit": "₽",
@@ -12647,21 +14006,25 @@
     [
      "2026-10-29",
      1000000
+    ],
+    [
+     "2026-10-30",
+     1000000
     ]
    ],
    "series_kind": "daily value",
    "component": "military",
    "means": "When even the cheapest regions raise payouts, the pressure is national.",
    "not_proves": "Same table caveats.",
-   "date": "2026-10-29"
+   "date": "2026-10-30"
   },
   {
    "family": "mobilisation",
    "id": "mob:tg_analysis-ru",
    "label": "Telegram (analysis-ru): share of posts about mobilisation, last 24 h",
-   "value": 0.0,
-   "baseline": 1.5,
-   "ratio": 0.0,
+   "value": 2.6,
+   "baseline": 0.0,
+   "ratio": null,
    "anomaly": false,
    "unit": "% of posts",
    "note": "",
@@ -12758,19 +14121,23 @@
     [
      "2026-10-29",
      0.0
+    ],
+    [
+     "2026-10-30",
+     2.6
     ]
    ],
    "series_kind": "daily value",
    "component": "society",
    "means": "When this group suddenly talks more about summons and call-up, something is moving.",
    "not_proves": "Topic share follows news cycles; one viral story can lift it.",
-   "date": "2026-10-29"
+   "date": "2026-10-30"
   },
   {
    "family": "mobilisation",
    "id": "mob:tg_border-relocation",
    "label": "Telegram (border-relocation): share of posts about mobilisation, last 24 h",
-   "value": 16.7,
+   "value": 0.0,
    "baseline": 0.0,
    "ratio": null,
    "anomaly": false,
@@ -12869,21 +14236,25 @@
     [
      "2026-10-29",
      16.7
+    ],
+    [
+     "2026-10-30",
+     0.0
     ]
    ],
    "series_kind": "daily value",
    "component": "society",
    "means": "When this group suddenly talks more about summons and call-up, something is moving.",
    "not_proves": "Topic share follows news cycles; one viral story can lift it.",
-   "date": "2026-10-29"
+   "date": "2026-10-30"
   },
   {
    "family": "mobilisation",
    "id": "mob:tg_independent-ru",
    "label": "Telegram (independent-ru): share of posts about mobilisation, last 24 h",
-   "value": 2.1,
+   "value": 0.7,
    "baseline": 1.5,
-   "ratio": 1.4,
+   "ratio": 0.47,
    "anomaly": false,
    "unit": "% of posts",
    "note": "",
@@ -12980,21 +14351,25 @@
     [
      "2026-10-29",
      2.1
+    ],
+    [
+     "2026-10-30",
+     0.7
     ]
    ],
    "series_kind": "daily value",
    "component": "society",
    "means": "When this group suddenly talks more about summons and call-up, something is moving.",
    "not_proves": "Topic share follows news cycles; one viral story can lift it.",
-   "date": "2026-10-29"
+   "date": "2026-10-30"
   },
   {
    "family": "mobilisation",
    "id": "mob:tg_leaks-ru",
    "label": "Telegram (leaks-ru): share of posts about mobilisation, last 24 h",
-   "value": 0.0,
-   "baseline": 0.7,
-   "ratio": 0.0,
+   "value": 0.6,
+   "baseline": 0.6,
+   "ratio": 1.0,
    "anomaly": false,
    "unit": "% of posts",
    "note": "",
@@ -13091,21 +14466,25 @@
     [
      "2026-10-29",
      0.0
+    ],
+    [
+     "2026-10-30",
+     0.6
     ]
    ],
    "series_kind": "daily value",
    "component": "society",
    "means": "When this group suddenly talks more about summons and call-up, something is moving.",
    "not_proves": "Topic share follows news cycles; one viral story can lift it.",
-   "date": "2026-10-29"
+   "date": "2026-10-30"
   },
   {
    "family": "mobilisation",
    "id": "mob:tg_milblog-ru",
    "label": "Telegram (milblog-ru): share of posts about mobilisation, last 24 h",
-   "value": 2.4,
-   "baseline": 2.3,
-   "ratio": 1.04,
+   "value": 4.0,
+   "baseline": 2.4,
+   "ratio": 1.67,
    "anomaly": false,
    "unit": "% of posts",
    "note": "",
@@ -13202,13 +14581,17 @@
     [
      "2026-10-29",
      2.4
+    ],
+    [
+     "2026-10-30",
+     4.0
     ]
    ],
    "series_kind": "daily value",
    "component": "society",
    "means": "When this group suddenly talks more about summons and call-up, something is moving.",
    "not_proves": "Topic share follows news cycles; one viral story can lift it.",
-   "date": "2026-10-29"
+   "date": "2026-10-30"
   },
   {
    "family": "mobilisation",
@@ -13313,19 +14696,23 @@
     [
      "2026-10-29",
      0.4
+    ],
+    [
+     "2026-10-30",
+     0.4
     ]
    ],
    "series_kind": "daily value",
    "component": "society",
    "means": "When this group suddenly talks more about summons and call-up, something is moving.",
    "not_proves": "Topic share follows news cycles; one viral story can lift it.",
-   "date": "2026-10-29"
+   "date": "2026-10-30"
   },
   {
    "family": "mobilisation",
    "id": "mob:tg_official-ru-regional",
    "label": "Telegram (official-ru-regional): share of posts about mobilisation, last 24 h",
-   "value": 0.0,
+   "value": 1.4,
    "baseline": 0.0,
    "ratio": null,
    "anomaly": false,
@@ -13424,21 +14811,25 @@
     [
      "2026-10-29",
      0.0
+    ],
+    [
+     "2026-10-30",
+     1.4
     ]
    ],
    "series_kind": "daily value",
    "component": "society",
    "means": "When this group suddenly talks more about summons and call-up, something is moving.",
    "not_proves": "Topic share follows news cycles; one viral story can lift it.",
-   "date": "2026-10-29"
+   "date": "2026-10-30"
   },
   {
    "family": "mobilisation",
    "id": "mob:tg_regional-ru",
    "label": "Telegram (regional-ru): share of posts about mobilisation, last 24 h",
-   "value": 0.0,
+   "value": 0.5,
    "baseline": 1.2,
-   "ratio": 0.0,
+   "ratio": 0.42,
    "anomaly": false,
    "unit": "% of posts",
    "note": "",
@@ -13535,31 +14926,31 @@
     [
      "2026-10-29",
      0.0
+    ],
+    [
+     "2026-10-30",
+     0.5
     ]
    ],
    "series_kind": "daily value",
    "component": "society",
    "means": "When this group suddenly talks more about summons and call-up, something is moving.",
    "not_proves": "Topic share follows news cycles; one viral story can lift it.",
-   "date": "2026-10-29"
+   "date": "2026-10-30"
   },
   {
    "family": "energy",
    "id": "strikes:ru-oil:week",
    "label": "Russia: oil refineries, terminals and pumping stations reported hit, last 7 days",
    "value": 2,
-   "baseline": 5.17,
-   "ratio": 0.39,
+   "baseline": 5,
+   "ratio": 0.4,
    "anomaly": false,
    "unit": "facilities",
    "note": "2 also reported by a Russian source; 0 with satellite fire detections (NASA FIRMS) on the day or the day after",
    "source": "public Telegram previews: 12 channels (Ukrainian General Staff, SBU, SSO, Unmanned Systems Forces; Exilenova+, Supernova+, Crimean Wind; ASTRA, Shot, Baza, Mash, a pro-Kremlin milblogger)",
    "series": [
     [
-     "2026-09-28",
-     6
-    ],
-    [
      "2026-09-29",
      5
     ],
@@ -13674,34 +15065,34 @@
     [
      "2026-10-28",
      2
+    ],
+    [
+     "2026-10-29",
+     2
     ]
    ],
    "series_kind": "distinct facilities named in strike reports over the 7 days to each date",
    "component": "energy",
-   "date": "2026-10-28",
+   "date": "2026-10-29",
    "means": "More named Russian refineries, terminals and pumping stations reported hit means a stronger campaign against fuel supply and exports.",
    "not_proves": "It does not prove damage or lost output: Ukrainian channels claim hits, Russian channels report fires and \"debris\", both are biased, and a name in a post can be wrong.",
    "items": [
-    "Ryazan refinery — last reported 2026-10-27, also reported by a Russian source",
+    "Ryazan refinery — last reported 2026-10-29, also reported by a Russian source",
     "Omsk refinery — last reported 2026-10-25, also reported by a Russian source"
    ]
   },
   {
    "family": "energy",
    "id": "strikes:ru-oil:day",
-   "label": "Russia: oil facilities reported hit on 2026-10-28",
-   "value": 0,
+   "label": "Russia: oil facilities reported hit on 2026-10-29",
+   "value": 1,
    "baseline": 0.97,
-   "ratio": 0.0,
+   "ratio": 1.03,
    "anomaly": false,
    "unit": "facilities",
-   "note": "2 strike posts about oil sites, 2 without a facility named",
+   "note": "3 strike posts about oil sites, 2 without a facility named",
    "source": "public Telegram previews: 12 channels (Ukrainian General Staff, SBU, SSO, Unmanned Systems Forces; Exilenova+, Supernova+, Crimean Wind; ASTRA, Shot, Baza, Mash, a pro-Kremlin milblogger)",
    "series": [
-    [
-     "2026-09-28",
-     0
-    ],
     [
      "2026-09-29",
      0
@@ -13817,11 +15208,15 @@
     [
      "2026-10-28",
      0
+    ],
+    [
+     "2026-10-29",
+     1
     ]
    ],
    "series_kind": "distinct facilities named in strike reports that day",
    "component": "energy",
-   "date": "2026-10-28",
+   "date": "2026-10-29",
    "means": "More named Russian refineries, terminals and pumping stations reported hit means a stronger campaign against fuel supply and exports.",
    "not_proves": "It does not prove damage or lost output: Ukrainian channels claim hits, Russian channels report fires and \"debris\", both are biased, and a name in a post can be wrong."
   },
@@ -13829,18 +15224,14 @@
    "family": "military",
    "id": "strikes:dc:ru",
    "label": "Russia: data centres reported hit (strike posts, last 7 days)",
-   "value": 5,
-   "baseline": 27.37,
-   "ratio": 0.18,
+   "value": 7,
+   "baseline": 27.53,
+   "ratio": 0.25,
    "anomaly": false,
    "unit": "posts",
-   "note": "operators or places named: yandex",
+   "note": "operators or places named: vk, yandex",
    "source": "public Telegram previews: 12 channels (Ukrainian General Staff, SBU, SSO, Unmanned Systems Forces; Exilenova+, Supernova+, Crimean Wind; ASTRA, Shot, Baza, Mash, a pro-Kremlin milblogger)",
    "series": [
-    [
-     "2026-09-28",
-     0
-    ],
     [
      "2026-09-29",
      0
@@ -13956,11 +15347,15 @@
     [
      "2026-10-28",
      5
+    ],
+    [
+     "2026-10-29",
+     7
     ]
    ],
    "series_kind": "data-centre strike posts over the 7 days to each date (a post count, not a count of strikes)",
    "component": "military",
-   "date": "2026-10-28",
+   "date": "2026-10-29",
    "means": "Strikes on Russian data centres reach civilian digital infrastructure: cloud, banking, maps and state services.",
    "not_proves": "It does not prove a data centre was hit or went down: one strike makes many posts, the side is read from the operator or city named near the word, and a few posts name neither."
   },
@@ -13969,17 +15364,13 @@
    "id": "strikes:dc:ua",
    "label": "Ukraine: data centres reported hit (strike posts, last 7 days)",
    "value": 0,
-   "baseline": 6.33,
+   "baseline": 5.5,
    "ratio": 0.0,
    "anomaly": false,
    "unit": "posts",
    "note": "operators or places named: none",
    "source": "public Telegram previews: 12 channels (Ukrainian General Staff, SBU, SSO, Unmanned Systems Forces; Exilenova+, Supernova+, Crimean Wind; ASTRA, Shot, Baza, Mash, a pro-Kremlin milblogger)",
    "series": [
-    [
-     "2026-09-28",
-     27
-    ],
     [
      "2026-09-29",
      27
@@ -14095,17 +15486,20 @@
     [
      "2026-10-28",
      0
+    ],
+    [
+     "2026-10-29",
+     0
     ]
    ],
    "series_kind": "data-centre strike posts over the 7 days to each date (a post count, not a count of strikes)",
    "component": "military",
-   "date": "2026-10-28",
+   "date": "2026-10-29",
    "means": "Russian strikes on Ukrainian data centres and telecoms aim at connectivity and the civilian economy.",
    "not_proves": "It does not prove a data centre was hit or went down: one strike makes many posts, the side is read from the operator or city named near the word, and a few posts name neither."
   }
  ],
  "errors": [
-  "portwatch: KeyError 'features'",
   "gdelt_bulk arms deals: median 2 docs/day, too rare",
   "yandex_cloud: HTTPError HTTP Error 403: Forbidden",
   "mobil flights: no Travelpayouts key (travelpayouts.key absent), skipped",
