@@ -3,7 +3,7 @@
 Written 2026-10-31 ~13:55Z for #517; r1 ~13:50Z after the first blocking review (fable-h2-1.txt, 13 points, all
 adopted; r0 in archive_tmp/PREREG-H2-draft-r0.md); r2 ~13:55Z after round 2 (fable-h2-2.txt, 6 points, adopted;
 r1 in archive_tmp/PREREG-H2-draft-r1.md); r3 ~14:02Z after round 3 (fable-h2-3.txt, 5 points, adopted); r4 ~14:10Z after round 4 (fable-h2-4.txt, 4 points,
-adopted); r5 ~14:20Z after round 5 (fable-h2-5.txt, 3 points, adopted). No H2 outcome value has been read for any channel or date in this
+adopted); r5 ~14:17Z after round 5 (fable-h2-5.txt, 3 points, adopted). No H2 outcome value has been read for any channel or date in this
 design. Freeze only after blocking-only second-model reviews answer NONE (fable-h2-*.txt next to this file).
 
 ## Why a new event set (the main constraint)
