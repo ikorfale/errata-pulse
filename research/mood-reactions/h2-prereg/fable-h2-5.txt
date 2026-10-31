@@ -1,0 +1,30 @@
+**Round-4 points**
+
+| # | Point | Status | Lines |
+|---|---|---|---|
+| 1 | v2-read span end taken from the data file | FIXED | 17-19 |
+| 2 | Membership by hour 0 and closed register; stop timestamp; calendar end with time | FIXED | 13, 52-55, 97-98 (line 14's "logged within 72 h" is now inert, harmless) |
+| 3 | Eligible control = toll-clean and both floors | FIXED | 85-89, 93 |
+| 4 | Placebo drops per member | FIXED | 117-121 |
+
+**New blocking problems**
+
+(a) Choices after outcome data
+
+NONE. Every post-freeze input (register, spans, regions, channels, regex) is closed and committed before the fetch, and membership, exclusion, the stop and the pseudo pool are functions of those files only.
+
+(b) Tests that cannot fail or are biased toward H2
+
+1. **A short pseudo pool gives a degenerate null, and the injection gate passes it (lines 97-102, 111-116).** The pool is [freeze + 336 h, pool_end − 48 h] and pool_end is the stop. If 12 units arrive by, say, week 7, the pool is about 30 days. Each real or toll ≥ 1 event removes 432 h of eligible hours on its channel (h in [r − 48, r + 384]), so a channel keeps roughly two weeks of eligible hours and every draw's 384-h window shares most of its posts with every other draw. D* then barely varies, p is anti-conservative under H0, and the injection rate is high because the null is narrow. The check at lines 111-116 only catches a null that is too wide. Fix: pool_end for pseudo draws, the register end and the fetch = min(2027-01-31T00:00Z, max(stop timestamp, freeze + 336 h + 1440 h + 48 h)); real events with hour 0 after the stop still do not enter. Pick the 1440 h (60 days, about four non-overlapping windows) so it fits under the cap for your freeze date, or move the cap; also print per channel the count of eligible pseudo hours.
+
+2. **Register start misses placebo-norm tolls for early members (lines 41, 117-118).** A member with hour 0 in the first 48 h after the freeze has placebo hours −504..−120, so a toll ≥ 1 event with hour 0 in [freeze − 552 h, freeze − 504 h) overlaps it but is outside the register, and line 46 says nothing else may be consulted. The contaminated placebo norm lowers placebo D, so the placebo gate passes more easily. Small, but mechanical and in H2's direction. Fix: register from freeze − 552 h.
+
+(c) Two analysts compute different D or p
+
+3. **"A channel with no eligible hour drops its unit" is unit-level (line 107).** A two-member unit where member A's region has tolls every two weeks and member B's is clean: one analyst drops the whole unit, the other drops A and keeps B. K, D and D* all move. This case is realistic because frequently struck regions are exactly the treated ones. Fix: a member whose channel has no eligible pseudo hour drops from the unit, in the real unit and the pseudo unit alike; a unit drops when no member remains; both reported.
+
+**Open questions**
+
+1. **Threshold 2.** Keep.
+2. **Median difference-in-differences with shuffled null.** Keep, conditional on the pool-length minimum in point 1; without it the null's validity depends on how fast the 12 units arrive.
+3. **Injection check.** Keep as written. It guards against a null too wide to detect delta, not against a null too narrow, so it does not replace point 1.

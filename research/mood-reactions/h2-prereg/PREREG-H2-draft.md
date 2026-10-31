@@ -1,9 +1,9 @@
-# H2 draft r4: negative reactions on neutral news after deadly strikes, against control regions (DRAFT, not frozen)
+# H2 draft r5: negative reactions on neutral news after deadly strikes, against control regions (DRAFT, not frozen)
 
 Written 2026-10-31 ~13:55Z for #517; r1 ~13:50Z after the first blocking review (fable-h2-1.txt, 13 points, all
 adopted; r0 in archive_tmp/PREREG-H2-draft-r0.md); r2 ~13:55Z after round 2 (fable-h2-2.txt, 6 points, adopted;
 r1 in archive_tmp/PREREG-H2-draft-r1.md); r3 ~14:02Z after round 3 (fable-h2-3.txt, 5 points, adopted); r4 ~14:10Z after round 4 (fable-h2-4.txt, 4 points,
-adopted). No H2 outcome value has been read for any channel or date in this
+adopted); r5 ~14:20Z after round 5 (fable-h2-5.txt, 3 points, adopted). No H2 outcome value has been read for any channel or date in this
 design. Freeze only after blocking-only second-model reviews answer NONE (fable-h2-*.txt next to this file).
 
 ## Why a new event set (the main constraint)
@@ -38,7 +38,7 @@ channel's own 14-day norm by more than the same change on control-region channel
   the first statement, in a treated-eligible region. Toll printed beside each D_e; no second test by toll.
 - Hour 0 = timestamp of the first official death statement (the post itself, linked).
 - **Toll >= 1 register** (`h2_tolls.jsonl`): one entry per strike, keyed by region and the strike the statements
-  describe, in every treated-eligible and control region, from freeze - 504 h to pool_end + 48 h. Hour 0 = the first
+  describe, in every treated-eligible and control region, from freeze - 552 h to pool_end + 48 h. Hour 0 = the first
   statement by the officials above of >= 1 civilian killed by that strike; toll = the highest official count within
   72 h; later statements update the entry, never open a new one. v2's civilian definition (rescuers count).
   "Another event" anywhere below means a different entry.
@@ -94,7 +94,10 @@ For a member event: D_e = change(treated) - median over eligible controls of cha
 = mean over its members. D = mean over units. One-sided: H2 predicts D > 0.
 
 ## Null (the shuffled input and what counts as a fail)
-- **Pool:** pool_end = min(stop timestamp, 2027-01-31T00:00Z). The stop is final: no event with hour 0 after the stop
+- **Pool:** pool_end = min(2027-01-31T00:00Z, max(stop timestamp, freeze + 336 h + 1440 h + 48 h)), so the pseudo pool
+  covers at least 60 days (about four non-overlapping windows) even if the 12 units arrive early; the toll register
+  and the fetch run to the same pool_end. Real events with hour 0 after the stop timestamp still never enter. The
+  pipeline prints, per channel, the count of eligible pseudo hours. The stop is final: no event with hour 0 after the stop
   timestamp enters, nothing is
   added after the fetch. Pseudo hour 0 is drawn from [freeze + 336 h, pool_end - 48 h], uniformly over hours, on the
   member's treated channel, eligible only if its hours -336..48 overlap no toll >= 1 event's hours 0..48 in that region
@@ -104,7 +107,8 @@ For a member event: D_e = change(treated) - median over eligible controls of cha
 - **Pseudo events run the full pipeline** at the pseudo hour: control exclusion and floors. A pseudo unit carries the
   real unit's surviving members, offset from the pseudo hour as in the real unit; it is redrawn if any of them fails
   at the pseudo hour, up to 20 times; after that the draw skips that unit and the skip count is
-  reported. A channel with no eligible hour drops its unit from the test, reported.
+  reported. A member whose channel has no eligible pseudo hour drops from the unit, in the real and the pseudo unit alike; a
+  unit drops when no member remains; both reported.
 - 5000 draws of the full set of units, D* each time; seed = freeze date (numpy default_rng). p = (1 + #{D* >= D}) / 5001.
 - **Claim only if p <= 0.05** and the placebo is not p <= 0.05. Otherwise a null, printed with D and the null's
   5th-95th percentile.
