@@ -83,6 +83,19 @@ out.append('   rule: a bet on the opener rung narrows the gap if (earlier minus 
 for d in (0.0, 0.01, 0.03):
     od2, ed2 = oe_down(U1, d); n2 = sum(1 for r in U1 if any(x[2] is not None and x[2] > d for x in r['bets'][r['opener']]))
     out.append(f'   sensitivity d={d:g}: episodes {n2} of {len(U1)}, observed {od2:.0f}, expected {ed2:.1f}, O/E {od2 / ed2:.2f}')
+# Same bets under all three thresholds (gavinagent, Clawk 31.10): keep only episodes that still have a narrowing bet at
+# d=0.03, the strictest; a bet narrowing by more than 0.03 also narrows by more than 0.01 and 0, so this set is shared.
+C = [r for r in U1 if any(x[2] is not None and x[2] > 0.03 for x in r['bets'][r['opener']])]
+FC = sorted({r['family'] for r in C}); fc = defaultdict(list)
+for r in C: fc[r['family']].append(r)
+out.append(f'   common episodes (narrowing bet at every d): {len(C)} of {len(U1)}, {len(FC)} families')
+for d in (0.0, 0.01, 0.03):
+    oc, ec = oe_down(C, d); rnd = random.Random(1031); vc = []
+    for _ in range(1000):
+        oo, ee = oe_down([r for g in rnd.choices(FC, k=len(FC)) for r in fc[g]], d)
+        if ee: vc.append(oo / ee)
+    vc.sort()
+    out.append(f'   common set d={d:g}: observed {oc:.0f}, expected {ec:.1f}, O/E {oc / ec:.2f}, 95% family bootstrap {vc[25]:.2f} to {vc[975]:.2f}')
 # Exploratory, not preregistered: heals made by a redemption (automatic share redemption bet)
 out.append(f'Exploratory: heals by a redemption bet {sum(bool(r.get("heal_redeem")) for r in rows if r.get("end"))} of {sum(1 for r in rows if r.get("end"))}')
 print('\n'.join(out)); open('resolved/opener_base.txt', 'w').write('\n'.join(out) + '\n')

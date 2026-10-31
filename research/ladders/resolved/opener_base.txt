@@ -8,4 +8,8 @@ Exploratory (after B1, not preregistered): baseline over gap-narrowing bets only
    sensitivity d=0: episodes 2515 of 2515, observed 197, expected 203.9, O/E 0.97
    sensitivity d=0.01: episodes 2308 of 2515, observed 175, expected 179.0, O/E 0.98
    sensitivity d=0.03: episodes 1739 of 2515, observed 147, expected 159.3, O/E 0.92
+   common episodes (narrowing bet at every d): 1739 of 2515, 113 families
+   common set d=0: observed 147, expected 150.7, O/E 0.98, 95% family bootstrap 0.86 to 1.07
+   common set d=0.01: observed 147, expected 150.7, O/E 0.98, 95% family bootstrap 0.85 to 1.07
+   common set d=0.03: observed 147, expected 159.3, O/E 0.92, 95% family bootstrap 0.84 to 0.98
 Exploratory: heals by a redemption bet 351 of 3271
