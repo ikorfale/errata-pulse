@@ -1,0 +1,42 @@
+All four files read. Verdicts on the six round-2 points first, then new blocking problems, then the open questions.
+
+## Round-2 points
+
+| # | Point | Status | Where in draft |
+|---|---|---|---|
+| 1 | Toll ≥ 1 register unsourced | FIXED | lines 39-45, 57-58, 91, 108-110. Span and entry unit still open, see new point 3 |
+| 2 | Pool end, bounds, stop, extension | FIXED | lines 89-93, 111. The stop timestamp itself is still undefined, see new point 4 |
+| 3 | Merging ambiguous | FIXED | lines 46-50 |
+| 4 | Placebo rules | FIXED | lines 108-110 |
+| 5 | Fetch coverage | FIXED | lines 111-114 |
+| 6 | Norm floor wording | FIXED | lines 79-80 |
+
+The injection line from open question 3 is in at lines 103-104.
+
+## New blocking problems
+
+### (a) Choices after outcome data
+
+1. **Placebo gate undefined when the placebo falls below the minimum (lines 100, 108-110, 117).** Placebo windows reach 21 days back, so more placebo units drop than real units. If 7 real units enter and 4 placebo units survive with placebo p = 0.04, one analyst says no claim and another says the placebo is unreadable and the gate is passed. That choice is made after seeing both p values. Fix: the placebo has the same minimum, K ≥ 6 surviving placebo units. Below that, no claim. This is v2's rule.
+
+2. **Precision sample opens control reactions inside H2 windows (line 68, against line 121).** The sample is drawn from control channels' posts in Sep-Oct 2026. A pager over October returns reaction counts for posts that sit in the norm windows of the first H2 events, which start at freeze minus 336 h, and in their placebo windows, which start at freeze minus 504 h. Fix: draw the sample from posts dated before freeze minus 504 h, and have the sampler drop the reaction fields at fetch so only text is stored.
+
+### (b) Tests that cannot fail or are biased toward H2
+
+NONE. Floors, toll exclusions, redraws and the injection check are applied the same way to real, pseudo and placebo units, and the detection-rate gate can fail.
+
+### (c) Two analysts compute different D or p
+
+3. **The toll register logs statements, but the rules read events (lines 39-45, 57-58, 91, 108).** Line 39 makes every statement of ≥ 1 killed an entry with its own hour 0. A governor posts "one killed" at 10:00 and "two killed" at 12:00. If entries are events, line 44's "another toll ≥ 1 event" matches the event's own update and the event excludes itself. Pseudo eligibility and control exclusion also widen by one 48 h block per update. The register span is also short at both ends. Placebo windows reach freeze minus 504 h, but the register starts at freeze minus 336 h. The last member's own hours 0..48, and its controls' exclusion, need tolls up to pool_end plus 48 h, but the register ends at pool_end. Fix: one entry per strike, keyed by region and the strike the statement describes. Hour 0 is the first statement of ≥ 1 killed, the toll field is the highest official count within 72 h, later statements update the entry. "Another event" means a different entry. The register runs from freeze minus 504 h to pool_end plus 48 h.
+
+4. **The stop cannot be computed as written (lines 12, 49-50, 89, 117, 121).** The stop fires at K = 12 "after all drops", but floor drops need reaction counts, which are fetched only after the stop. The stop timestamp is also undefined. If it is the 12th unit's hour 0, the pseudo pool ends 48 h before that unit's block, the register ends before its hours 0..48, and the fetch lands 5 days after its block instead of 7. Fix: the stop fires when the log holds 12 units surviving the toll-based rules of lines 44-48. Stop timestamp = hour 0 of the last member of that unit plus 48 h. The K ≥ 6 minimum applies to the count after floor drops.
+
+5. **Member-level and unit-level drops are mixed (lines 79-81, 96-97).** Line 79 lets a member's treated channel fail alone, but line 80 drops a whole unit for "fewer than 8 eligible controls", while control eligibility is per member. A unit with member A at 10 controls and member B at 7: one analyst drops the unit, another drops B and keeps A. On the pseudo side, "failing a floor is redrawn" keeps full membership while the real unit may have lost a member. Fix: a member drops if its treated channel fails the floor or it has fewer than 8 eligible controls. A unit drops when no member remains. A pseudo unit carries the real unit's surviving members and is redrawn if any of them fails at the pseudo hour.
+
+## Open questions
+
+The r2 draft no longer lists them, so these are the three from round 2.
+
+1. **Threshold 2.** Keep. Nothing changed.
+2. **Median DiD with shuffled null.** Keep. It is fully specified once points 3 to 5 pin down entries, the stop and member drops, since those define both the real D and the pool.
+3. **Injection check.** Fine as now written at lines 102-107. Nothing to add.

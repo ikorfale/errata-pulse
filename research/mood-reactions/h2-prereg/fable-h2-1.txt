@@ -1,0 +1,36 @@
+Read all four files. Findings below, blocking only.
+
+## (a) Choices after outcome data, unblinding, v2 leaks
+
+- **Null pool overlaps v2-read data, lines 65-68.** The pseudo hours come from the treated channels' 120 days before the freeze. v2 read day-level alarm and grief shares for blocks -29..0 of every v2 event on these same channels, and most of those windows fall in Jul-Oct 2026. The pool bounds, the 120-day span and the toll >= 1 exclusion were all chosen after that reading. Fix: draw pseudo hours from the study period itself, freeze to 2027-01-31, on the treated channels, with the window clear of events as in (b) below. If a channel has fewer than 10 non-overlapping eligible windows there, extend back to 2026-07-01 but exclude any hour whose window touches a v2-read span, that is v2 hour 0 minus 30 days through plus 24 hours. State the rule now.
+
+- **Norm windows of early events overlap v2-read windows, lines 10-13 and 54.** An event in the first two weeks after the freeze has a norm reaching into October, which may be inside a v2-read span for that channel. The file's own standard is "windows I have not read". Fix: an event enters only if its hours -336..48 do not overlap any v2-read span on that channel. Mechanical, toll and date based.
+
+- **Picking a new treated channel after its event, lines 34-35.** Resolving a username on t.me/s shows the latest posts with their reactions, which within 72 hours of hour 0 is the event block itself. The pick rule has human judgment calls, so this is a choice made while seeing outcome data. Fix: before the freeze, run pick_v2.py and resolve usernames for every region that can become treated under the register rule, and commit that table. A region not in the table does not enter.
+
+## (b) Tests that cannot fail or are biased toward H2
+
+- **Neutral set mixes categories with different base rates, lines 41-42 and 53.** The block value is pooled over weather, sport, culture and crime posts. After a deadly strike, culture and sport posting drops, often by declared mourning, while crime-and-courts posting rises with security content: FSB detentions, "теракт", "диверсант", "наводчик", "корректировщик". None of those words are in STRIKE_V2. Crime posts draw 😡 and 😱 at baseline. So the negative share rises from mix shift alone, in the direction of H2, with no change in reader mood. Fix: drop crime-and-courts from neutral, and add a frozen never-neutral list: теракт, диверс, СБУ, ФСБ, агент, наводч, корректир, трагед, скорб, памят, отмен, перенес. Put the regex file and its sha in the freeze bundle. Without the file, no second analyst can compute D.
+
+- **Classifier check does not test the leak it exists for, line 45.** Precision is measured on control channels in quiet weeks. The failure mode is strike-adjacent text on treated channels in hours 0..48. Fix: a second blind sample of 100 classifier-neutral posts drawn from the treated channels' hours 0..48 of the 11 v2 events, text only. Require that at most 5 are labelled strike-related in any way by consensus. v2 text is already read and these events are not in the H2 set, so this costs nothing.
+
+- **Pseudo windows can contain real event blocks, line 66.** "At least 14 days away" lets a pseudo hour sit 14 days after an event. Its norm then covers that event's hours 0..48. If H2 is true, this inflates the pseudo norm, lowers D*, and shrinks p. Fix: a pseudo hour is eligible only if its hours -336..48 do not overlap any toll >= 1 event's hours 0..48 in that region.
+
+- **Clustered events are treated as independent, lines 61-62 and 65-68.** Combined strike nights hit several regions in one night. Two D_e from the same night share hours and controls, but the null draws their pseudo hours independently, so it is too narrow. Fix: events with hour 0 within 48 hours of each other merge into one event whose D_e is the mean, and K counts the merged event once. Pseudo draws follow the same merging.
+
+## (c) Two analysts compute different D or p
+
+- **Null procedure is underspecified, lines 65-68 and 85.** Not stated: whether the per-event control exclusion and the control floor are applied at the pseudo hour, what happens when a pseudo event fails the treated floor, and what happens when a treated channel has no eligible pseudo hours. Line 85 also says control reactions for Sep-Oct are fetched, while the pool is 120 days, which is July onward. Fix: pseudo events use the full eligibility pipeline at the pseudo hour; a pseudo event failing the floor is redrawn, up to a stated cap, after which the event's draw is skipped and the draw count is reported; a channel with no eligible hours drops its event from the test and is reported. Make the fetch span match the pool.
+
+- **Region universe is open, lines 24-30.** Officials in Donetsk, Luhansk, Zaporizhzhia and Kherson issue near-daily civilian death statements, which the "Russian region" wording covers. One analyst includes them, another does not, and K and D differ. Fix: list the eligible regions explicitly, for example the v2 register's regions plus others in the Russian Federation's pre-2022 borders including Crimea and Sevastopol, and exclude the four 2022 oblasts for the Belgorod reason.
+
+- **Control region struck, lines 36-38.** A control region with a toll >= 2 event is both treated-eligible and a control. It is not stated whether it becomes treated, with which channel. Fix: regions in usernames-controls.tsv are never treated; their events are logged, excluded as controls per the existing rule, and reported.
+
+- **What K counts, lines 11-12 and 29-30.** Belgorod, Kursk and Bryansk events are "listed and counted". If they count toward K = 12, the stop can fire with four testable events. Fix: K counts only events in a treated-eligible, non-excluded region, and the stop is on logged events of that kind.
+
+- **Placebo eligibility, lines 75-76.** "Still inside no other event's window" has no stated consequence, and the placebo's floor and control set are not specified. Fix: a placebo event whose hours -504..-120 overlap another event's hours 0..48 drops from the placebo, reported; otherwise the placebo runs the full pipeline with hour 0 moved.
+
+**Open questions.**
+1. Keep threshold 2. Prospective, so no fork. The shock-size caveat is already stated. Print toll beside each D_e; add no second test.
+2. Keep the median DiD with the shuffled null. With K <= 12 a fixed-effects regression adds weighting and clustering choices without adding power. The shuffle is only sound if the pool is fixed as above.
+3. The injection check is fair. It uses no real-event data and can fail. Its weakness is that delta = 0.03 and the 0.5 detection bar are unanchored. State 0.03 as the smallest effect you would call a mood change, and have the pipeline print the smallest delta reaching 80 percent detection next to the pass or fail.

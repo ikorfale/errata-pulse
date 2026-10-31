@@ -1,0 +1,47 @@
+All four files read. Verdict on the 13 round-1 points first, then new blocking problems, then the three open questions.
+
+## Round-1 points
+
+| # | Point | Status | Where in draft |
+|---|---|---|---|
+| 1 | Null pool overlaps v2-read data | FIXED | lines 15-17, 82-85 |
+| 2 | Early events' norms overlap v2-read windows | FIXED | lines 38-39 |
+| 3 | Treated channel picked after its event | FIXED | lines 46-48 |
+| 4 | Neutral set mixes base rates (crime) | FIXED | lines 54-59 |
+| 5 | Classifier check does not test the leak | FIXED | lines 63-64 |
+| 6 | Pseudo windows contain real event blocks | FIXED | lines 83-84 |
+| 7 | Clustered events treated as independent | FIXED | lines 40-41, 86-87 |
+| 8 | Null procedure underspecified, fetch span | FIXED | lines 86-89, 100-101 |
+| 9 | Region universe open | FIXED | lines 26-30 |
+| 10 | Control region struck | FIXED | lines 31-32, 49-51 |
+| 11 | What K counts | FIXED | lines 42-43 |
+| 12 | Placebo eligibility | FIXED as proposed, but see new point 4 | lines 98-99 |
+| 13 | Open questions (threshold, statistic, injection) | FIXED | lines 36, 78-79, 93-97 |
+
+## New blocking problems
+
+### (a) Choices after outcome data
+
+1. **The toll ≥ 1 register has no source, scope, timing or commit (lines 38, 50, 83, 98).** Four rules depend on "a toll ≥ 1 official death statement" in a region, but only toll ≥ 2 events are logged (line 12) and only control-region events are said to be logged (line 31). Toll ≥ 1 statements in treated-eligible regions that never reach 2, and every toll ≥ 1 statement from 2026-07-01 to the freeze for the extension pool, are not logged anywhere. As written, that register gets compiled after the fetch. Borderline cases are judgment calls: death from injuries days later, a fire caused by debris, a mayor rather than a governor, rescuer versus civilian. Each call moves pseudo eligibility and control exclusion while D is on screen. Two analysts also compile different registers. Fix: a file `h2_tolls.jsonl` holding every statement by the line-35 official list of ≥ 1 civilian killed by a strike, in every treated-eligible and control region, with the statement timestamp as its hour 0 and v2's civilian definition (rescuers count, Kirov-style corrections at statement time). The 2026-07-01 to freeze part is committed with its sha at the freeze. The prospective part is appended within 72 h like the event log and closed at stop + 72 h, before any fetch.
+
+### (b) Tests that cannot fail or are biased toward H2
+
+NONE new. The injection check, the floor, the redraw and the control exclusion are all applied symmetrically to real and pseudo units.
+
+### (c) Two analysts compute different D or p
+
+2. **Pool end, pool bounds and the stop are inconsistent (lines 11, 82-85, 100-101, 108).** The pool is "freeze to 2027-01-31", but the stop fires at K = 12 and the fetch happens "after the stop". If K = 12 arrives in December, one analyst fetches then and draws from a pool that is partly unobserved, another waits until February. It is also unstated whether a pseudo hour may sit within 336 h of the pool start or within 48 h of its end. And the extension trigger, which is my round-1 wording, can never be unmet: a window is 16 days and the study period is 92, so at most 5 non-overlapping windows fit, and the extension to 2026-07-01 always fires. That is deterministic but not what the text implies. Fix: pool_end = min(stop timestamp, 2027-01-31). Pseudo hour 0 is drawn from [pool_start + 336 h, pool_end − 48 h]. Fetch no earlier than pool_end + 48 h + 7 days. The stop is final: no event logged after it enters, and nothing is added after the fetch. Either state that the pool always starts 2026-07-01 or change the trigger to a count of eligible hours.
+
+3. **Merging is ambiguous in two ways (lines 29-32, 40-43, 50, 78).** First, chaining: events at 0 h, 40 h and 80 h are pairwise within 48 h for neighbours only, so one analyst makes one unit and another makes two, and D and K differ. Second, membership: "any regions" on line 40 lets a Belgorod or control-region toll event become a member, but it has no channel and no D_e, and line 42 ("at least one member in a treated-eligible region") implies such members exist. Control exclusion is also stated per unit on line 50 but D_e is per member on line 78, and members have different hour 0s. Fix: members are register events (toll ≥ 2) in regions listed in `h2_regions.tsv`, nothing else. Merge transitively, so a unit is a maximal chain of hour 0s with gaps ≤ 48 h. Control eligibility is per member at the member's hours.
+
+4. **Placebo window rules are underspecified (lines 98-99).** "Another event's hours 0..48" does not say toll ≥ 1 or register event, and the −504..−120 window is not checked against v2-read spans although line 17 says no H2 window may touch one. Two analysts drop different placebo units, and the placebo gates the claim. Fix: a placebo unit drops if its hours −504..−120 overlap any toll ≥ 1 event's hours 0..48 in its region or touch a v2-read span on its channel; control exclusion at the placebo hour uses the same toll ≥ 1 rule.
+
+5. **No fetch-coverage rule (lines 75, 100-101).** v2 needed one after a pager stopped a day short and after the br_gorod hole. H2 fetches seven months on about 60 channels, so truncated pagers are likely. A truncated norm can still pass the floor and gives a different D from a complete one. Fix: carry v2's rule over. A channel's fetch must contain a post older than the earliest window start it serves, else re-fetch before anything is parsed. Any 72-h stretch with zero posts inside a used window is reported as empty.
+
+6. **Norm floor wording (line 72).** "≥ 30 in the norm" can be read as 30 posts or 30 reactions. Write "≥ 30 such posts".
+
+## Open questions
+
+1. **Threshold 2.** Keep. Prospective, toll printed, no second test by toll. Nothing new.
+2. **Median DiD with shuffled null.** Keep. It is sound once points 1 and 2 above fix the pool, since the pool is what the shuffle draws from.
+3. **Injection check.** Fair and can fail as written. One line to add: each injected draw's p is computed against the same 5000-draw null, not a nested one, so two runs with the freeze seed give the same detection rate.
