@@ -2096,5 +2096,14 @@
  "The latest report gives no explicit range; read its confidence instead.": "В последнем отчёте нет явного диапазона; ориентируйтесь на уверенность оценки.",
  "partisan media aligned with one side": "партийные СМИ, связанные с одной из сторон",
  "top regions: Костромская область 181, Мурманская область 178, Калужская область 146, Кабардино-Балкарская Республика 130, Липецкая область 106": "больше всего: Костромская область 181, Мурманская область 178, Калужская область 146, Кабардино-Балкарская Республика 130, Липецкая область 106",
- "Each reading in Telegram →": "Каждый отчёт в Telegram →"
+ "Each reading in Telegram →": "Каждый отчёт в Telegram →",
+ "Russia: distinct contract-service ads posted in the last 7 days (same poster, title and pay counted once)": "Россия: уникальные объявления о контрактной службе за 7 дней (один автор, заголовок и выплата считаются один раз)",
+ "A surge of new ads can be a recruiting push.": "Всплеск новых объявлений может означать усиление вербовки.",
+ "Raw count: one agency posting the same ad in many regions, or one office re-posting its list, makes a \"surge\"; check the deduplicated count and who posted. Tens of ads against ~1,000 recruits a day: the portal is a minor channel.": "Сырой счёт: одно агентство, разместившее одно объявление во многих регионах, или один офис, перевыложивший список, дают «всплеск»; смотрите счёт без дублей и кто разместил. Десятки объявлений против ~1000 завербованных в день: портал — второстепенный канал.",
+ "More distinct new ads from more posters is a broader recruiting push than a raw spike.": "Больше уникальных объявлений от большего числа авторов — более широкая вербовочная кампания, чем сырой всплеск.",
+ "Small numbers (tens): a single regional office can still move it; ads are not recruits.": "Малые числа (десятки): их может сдвинуть один региональный офис; объявления — не завербованные.",
+ "Russia: contract-service vacancies posted in the last 7 days (raw)": "Россия: вакансии контрактной службы за последние 7 дней (сырой счёт)",
+ "Russia: oil facilities reported hit on 2026-10-31": "Россия: нефтяные объекты, о поражении которых сообщалось 31.10.2026",
+ "ads": "объявления",
+ "Isle Of Man": "Остров Мэн"
 }
