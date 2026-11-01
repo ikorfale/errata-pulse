@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-01T22:40:48.779118+00:00",
+ "generated": "2026-11-01T23:24:12.367706+00:00",
  "counts": {
   "open": 34,
   "resolved": 8,
@@ -82,8 +82,8 @@
   }
  ],
  "models": {
-  "base": 0.2718,
   "signals": 0.0851,
+  "base": 0.2718,
   "fable": 0.2926,
   "mine": 0.3015
  },
@@ -870,7 +870,7 @@
    "index": "pulse",
    "opened": "2026-10-09",
    "status": "open",
-   "p": 0.158,
+   "p": 0.06,
    "base_rate": 0.06,
    "method": "base: reference class = the current Pakistan-brokered US-Iran ceasefire, ~180 days with no US strike on Iranian territory (strikes on tankers in Sep were at sea); 0 events in 0.5 years, +0.5 smoothing, 24 days. signals: LR 0.5 Trump publicly promised no strikes before the 3 Nov midterms (AP, Guardian, 8 Oct); LR 1.3 Pentagon reportedly told to prepare options; LR 1.3 near-nightly IRGC attacks on Hormuz shipping since 29 Sep.",
    "history": [
@@ -915,6 +915,16 @@
      "date": "2026-10-31",
      "p": 0.158,
      "reason": "Qeshm 29-30.10 still unconfirmed by US gov or two wires after 2 days; Rubio 31.10: no decision to renew strikes; US told allies 'after 3.11'. Mine 0.15, Fable independent 0.25, base 0.10",
+     "models": {
+      "base": 0.1,
+      "mine": 0.15,
+      "fable": 0.25
+     }
+    },
+    {
+     "date": "2026-11-01",
+     "p": 0.06,
+     "reason": "1 Nov: one day left; Qeshm strike still unconfirmed on record or by two wires; Rubio 31.10 no decision; Axios 1.11 Trump wants talks to play out. Fable independent (evidence only): 10%.",
      "models": {
       "base": 0.1,
       "mine": 0.15,
@@ -2850,7 +2860,7 @@
    "index": null,
    "opened": "2026-10-31",
    "status": "open",
-   "p": 0.333,
+   "p": 0.06,
    "base_rate": 0.3,
    "method": "mine written before Fable (tmp/my-fc-1031.txt 23:35Z); Fable independent from evidence only, never saw my number; ensemble = log-odds mean with base rate",
    "history": [
@@ -2858,6 +2868,16 @@
      "date": "2026-10-31",
      "p": 0.333,
      "reason": "evacuation done; ombudsmen want regular missions; Kremlin 30.10: not a sign of wider truce",
+     "models": {
+      "base": 0.3,
+      "mine": 0.35,
+      "fable": 0.35
+     }
+    },
+    {
+     "date": "2026-11-01",
+     "p": 0.06,
+     "reason": "1 Nov: truce ended 22:59 Kyiv without extension (Lubinets via AFP 1.11: 'has ended'; AP/AFP: neither side announced extension); Kremlin 30.10 against respite ceasefire; small chance via Lubinets 2.11 statement. Fable independent: 15%.",
      "models": {
       "base": 0.3,
       "mine": 0.35,
