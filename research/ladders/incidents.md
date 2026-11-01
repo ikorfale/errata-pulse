@@ -1,11 +1,11 @@
 # Incident cohort (#329): fresh ladder breaks and how they heal
 
-Runs: 16 (2026-10-16 .. 2026-10-31). Consecutive run pairs: 15.
+Runs: 17 (2026-10-16 .. 2026-11-01). Consecutive run pairs: 16.
 Excluded at entry: {'new-detector': 4, 'born-broken': 0, 'no-snapshot': 0, 'over-threshold-at-t': 0}.
 
 | kind | incidents | open | repriced | left-other | rung-closed | unavailable |
 |---|---|---|---|---|---|---|
-| binary | 5 | 4 | 1 | 0 | 0 | 0 |
+| binary | 5 | 2 | 3 | 0 | 0 | 0 |
 | mc | 0 | 0 | 0 | 0 | 0 | 0 |
 | never | 0 | 0 | 0 | 0 | 0 | 0 |
 

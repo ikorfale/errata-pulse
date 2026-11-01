@@ -1,5 +1,5 @@
 {
- "built_at": "2026-10-31T07:50Z",
+ "built_at": "2026-11-01T07:50Z",
  "runs": [
   "2026-10-16",
   "2026-10-17",
@@ -16,7 +16,8 @@
   "2026-10-28",
   "2026-10-29",
   "2026-10-30",
-  "2026-10-31"
+  "2026-10-31",
+  "2026-11-01"
  ],
  "excluded": {
   "new-detector": 4,
@@ -35,7 +36,7 @@
    "broken_at": "2026-10-26T07:43Z",
    "order": {
     "status": "open",
-    "last_flagged": "2026-10-31"
+    "last_flagged": "2026-11-01"
    },
    "next_trade": {
     "status": "traded",
@@ -51,8 +52,10 @@
    "coherent_at": "2026-10-29T07:41Z",
    "broken_at": "2026-10-30T07:43Z",
    "order": {
-    "status": "open",
-    "last_flagged": "2026-10-31"
+    "status": "repriced",
+    "last_flagged": "2026-10-31",
+    "first_unflagged": "2026-11-01",
+    "gap_at_exit": 0.0247
    },
    "next_trade": {
     "status": "traded",
@@ -68,8 +71,10 @@
    "coherent_at": "2026-10-29T07:41Z",
    "broken_at": "2026-10-30T07:43Z",
    "order": {
-    "status": "open",
-    "last_flagged": "2026-10-31"
+    "status": "repriced",
+    "last_flagged": "2026-10-31",
+    "first_unflagged": "2026-11-01",
+    "gap_at_exit": 0.02
    },
    "next_trade": {
     "status": "traded",
@@ -105,11 +110,11 @@
    "broken_at": "2026-10-30T07:43Z",
    "order": {
     "status": "open",
-    "last_flagged": "2026-10-31"
+    "last_flagged": "2026-11-01"
    },
    "next_trade": {
     "status": "censored",
-    "hours": 30.9
+    "hours": 54.9
    }
   }
  }
