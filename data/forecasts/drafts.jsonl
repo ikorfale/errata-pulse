@@ -18,3 +18,4 @@
 {"ts": "2026-10-31T23:21:20+00:00", "action": "asked", "id": "d7", "question": "39", "criteria_sha": "0337038bec8111f6"}
 {"ts": "2026-10-31T23:21:22+00:00", "action": "asked", "id": "d8", "question": "40", "criteria_sha": "ff251458655a08a6"}
 {"ts": "2026-10-31T23:21:24+00:00", "action": "asked", "id": "d9", "question": "41", "criteria_sha": "8e09ccef372e28a5"}
+{"ts": "2026-11-01T01:31:58+00:00", "action": "draft", "id": "d11", "title": "Will Janis Kluge's estimate of Russian military contract sign-ups for October 2026 be below 28,000?", "criteria": "YES if the first estimate for October 2026 published by economist Janis Kluge (Substack, X/Bluesky, or as quoted by CIT/Important Stories/Moscow Times) by 31 Dec 2026 is below 28,000 contracts for the month. If he gives a range, its midpoint decides. If no October figure is published by 31 Dec 2026, the question is annulled.", "criteria_sha": "f8bbdcc9938b6454"}
