@@ -1,13 +1,13 @@
 {
- "generated": "2026-10-31T23:27:11.529629+00:00",
+ "generated": "2026-11-01T22:40:48.779118+00:00",
  "counts": {
-  "open": 33,
+  "open": 34,
   "resolved": 8,
   "annulled": 0
  },
  "selection": {
-  "candidates": 10,
-  "asked": 9,
+  "candidates": 11,
+  "asked": 10,
   "dropped": 1,
   "pending": 0,
   "asked_without_draft": 32,
@@ -83,9 +83,9 @@
  ],
  "models": {
   "base": 0.2718,
-  "mine": 0.3015,
   "signals": 0.0851,
-  "fable": 0.2926
+  "fable": 0.2926,
+  "mine": 0.3015
  },
  "questions": [
   {
@@ -309,7 +309,7 @@
    "index": "mri",
    "opened": "2026-10-09",
    "status": "open",
-   "p": 0.29,
+   "p": 0.27,
    "base_rate": 0.35,
    "method": "base: judgmental reference class = MoD-drafted presidential decrees put up for public discussion; most are signed, but a minority within ~7-8 weeks of publication; I put that share at 35% (no count yet: method gap to fill). signals: LR 1.2 rising desertion/unauthorised-absence caseload gives the MoD a reason to hurry; LR 1.0 no public statement of a timetable.",
    "history": [
@@ -344,6 +344,15 @@
      "date": "2026-10-28",
      "p": 0.29,
      "reason": "20 days since publication without signing; no movement reported (mobil report 28.10)",
+     "models": {
+      "base": 0.35,
+      "signals": 0.39
+     }
+    },
+    {
+     "date": "2026-11-01",
+     "p": 0.27,
+     "reason": "26 days since the draft decree 171657 was posted, still unsigned; no signal of imminent signing",
      "models": {
       "base": 0.35,
       "signals": 0.39
@@ -472,6 +481,10 @@
     {
      "date": "2026-10-31",
      "p": 0.092
+    },
+    {
+     "date": "2026-11-01",
+     "p": 0.082
     }
    ],
    "crowd_urls": {
@@ -632,6 +645,10 @@
     },
     {
      "date": "2026-10-31",
+     "p": 0.082
+    },
+    {
+     "date": "2026-11-01",
      "p": 0.082
     }
    ],
@@ -834,6 +851,10 @@
     {
      "date": "2026-10-31",
      "p": 0.25
+    },
+    {
+     "date": "2026-11-01",
+     "p": 0.21
     }
    ],
    "crowd_urls": {
@@ -1021,6 +1042,10 @@
     },
     {
      "date": "2026-10-31",
+     "p": 0.02
+    },
+    {
+     "date": "2026-11-01",
      "p": 0.02
     }
    ],
@@ -1262,6 +1287,10 @@
     },
     {
      "date": "2026-10-31",
+     "p": 0.225
+    },
+    {
+     "date": "2026-11-01",
      "p": 0.225
     }
    ],
@@ -1732,6 +1761,10 @@
     {
      "date": "2026-10-31",
      "p": 0.449
+    },
+    {
+     "date": "2026-11-01",
+     "p": 0.402
     }
    ],
    "crowd_urls": {
@@ -1794,6 +1827,15 @@
      "date": "2026-10-28",
      "p": 0.07,
      "reason": "28.10: coercion confirmed in 33+ regions is an alternative to a declared wave, not a precursor; local ceasefire; no declared-wave signals",
+     "models": {
+      "base": 0.05,
+      "signals": 0.08
+     }
+    },
+    {
+     "date": "2026-11-01",
+     "p": 0.07,
+     "reason": "no change: coercion in 33+ regions and new Omsk reports are the alternative to a declared wave; Kherson truce ends 01.11, talks in Abu Dhabi expected after 04.11",
      "models": {
       "base": 0.05,
       "signals": 0.08
@@ -1896,6 +1938,10 @@
     {
      "date": "2026-10-31",
      "p": 0.091
+    },
+    {
+     "date": "2026-11-01",
+     "p": 0.086
     }
    ],
    "crowd_urls": {
@@ -2245,6 +2291,15 @@
       "base": 0.55,
       "signals": 0.555
      }
+    },
+    {
+     "date": "2026-11-01",
+     "p": 0.55,
+     "reason": "no change: comments due 03.11, bill on the November programme and the autumn priority list (22.10); no first-reading date yet",
+     "models": {
+      "base": 0.55,
+      "signals": 0.555
+     }
     }
    ],
    "crowd": [],
@@ -2554,6 +2609,10 @@
     },
     {
      "date": "2026-10-31",
+     "p": 0.24
+    },
+    {
+     "date": "2026-11-01",
      "p": 0.24
     }
    ],
@@ -2865,6 +2924,34 @@
    "crowd": [],
    "crowd_history": [],
    "draft": "d9"
+  },
+  {
+   "id": "42",
+   "title": "Will Janis Kluge's estimate of Russian military contract sign-ups for October 2026 be below 28,000?",
+   "criteria": "YES if the first estimate for October 2026 published by economist Janis Kluge (Substack, X/Bluesky, or as quoted by CIT/Important Stories/Moscow Times) by 31 Dec 2026 is below 28,000 contracts for the month. If he gives a range, its midpoint decides. If no October figure is published by 31 Dec 2026, the question is annulled.",
+   "deadline": "2026-12-31",
+   "category": "mobilisation",
+   "index": "mri",
+   "opened": "2026-11-01",
+   "status": "open",
+   "p": 0.32,
+   "base_rate": 0.33,
+   "method": "base: share of 2026 months near or under 28k given Jan-Sep mean 29.2k and Sep 29.9k (rough, ~1 in 3); signals: payout cuts in St Petersburg, Novosibirsk, Samara push down, coercion in 33+ regions pushes up; trend: Sep 29.9k, -5..-10% y/y, no sharp break",
+   "history": [
+    {
+     "date": "2026-11-01",
+     "p": 0.32,
+     "reason": "October sign-ups near the 28-30k band; payout cuts vs coercion roughly offset",
+     "models": {
+      "base": 0.33,
+      "signals": 0.35,
+      "trend": 0.28
+     }
+    }
+   ],
+   "crowd": [],
+   "crowd_history": [],
+   "draft": "d11"
   }
  ]
 }
