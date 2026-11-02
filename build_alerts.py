@@ -127,6 +127,7 @@ def main():
 <li>{t('Check on neighbours, especially old people and people living alone.')}</li>
 <li>{t('Stay away from any fallen fragments, cordons and damaged buildings; call 112 if you see one.')}</li>
 <li>{t('Get news from official channels; rumours spread fastest in the first hour.')}</li></ul></section></div>
+<p class="meta"><b>{t('Alert apps can be hacked. On 1–2 November 2026 Ukraine’s Air Alert app and Russia’s MChS app and channels both sent false nuclear, radiation and chemical warnings after cyberattacks (BBC, M24, 2 Nov 2026). If an alert is unusual, check it against a second official source (your governor’s channel, street sirens) before acting on it, and do not open links in alert messages.')}</b></p>
 <p class="meta">{t('Emergency number: <b>112</b> (free, from any phone). Federal guidance:')} <a href="https://mchs.gov.ru/dokumenty/8090" rel="noopener">{t('MChS leaflet on drone and missile attacks')}</a> · {tg('mchs_official')} · <a href="https://max.ru/mchs_official" rel="noopener">MChS (MAX)</a> · {t('MChS app with push alerts:')} <a href="https://apps.apple.com/app/id1530044766" rel="noopener">App Store</a>, <a href="https://play.google.com/store/apps/details?id=io.citizens.security" rel="noopener">Google Play</a>, <a href="https://www.rustore.ru/catalog/app/io.citizens.security" rel="noopener">RuStore</a></p>
 
 <h2 class="sec" id="official">{t('Official channels by region')}</h2>
