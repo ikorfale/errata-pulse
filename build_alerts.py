@@ -224,6 +224,23 @@ document.getElementById('al-dot').className='al-dot';document.getElementById('al
 .catch(function(){document.getElementById('al-dot').className='al-dot err';document.getElementById('al-upd').textContent=S.err})}
 load();setInterval(load,60000);document.addEventListener('visibilitychange',function(){if(!document.hidden)load()})})();"""
 
+def region_faq(n):
+    """Six plain questions a visitor asks on a region page (also emitted as FAQPage JSON-LD)."""
+    return [
+        (t('What does \u201cUAV danger\u201d mean?'),
+         t('A regime declared by the regional authorities or MChS when unmanned aerial vehicles may be approaching the region. It applies to the whole region, not to one town, and it ends only with an announced all-clear. Move away from windows and stay behind two walls until it ends.')),
+        (t('What does \u201cmissile danger\u201d mean?'),
+         t('A regime declared when missiles may reach the region within minutes. Go to a shelter, basement or metro station at once and stay there until the official all-clear.')),
+        (t('Is this page an official source?'),
+         t('No. It relays alerts that the regional authorities and MChS have declared in their official channels. Sirens, the regional government and MChS messages come first; this page is a convenience, not a warning system.')),
+        (t('How fast does the page update?'),
+         t('The feed is read every minute while the page is open, and a declared alert normally appears within one to three minutes of the official announcement. A region whose alert has had no update for {h} hours is marked as possibly ended without a relayed all-clear.', h=4)),
+        (t('Why does it show no towns, drone counts or directions?'),
+         t('On purpose. The page stays at region level: no villages, counts, headings, tracks or interception points, because that detail can help an attacker correct fire and is of no use for taking cover.')),
+        (t('The alert in {r} ended but the page still shows it. Why?', r=n),
+         t('Silence is not an all-clear. The page shows the last declared status until the authorities announce the all-clear; if nothing is relayed for {h} hours it is marked as possibly ended. Check your region\u2019s official channel.', h=4)),
+    ]
+
 def region_pages(R, names, orow, S, todo, links):
     """One page per region (/alerts/<slug>/): live status of this region only, its official channels, what to do."""
     L = i18n.LANG
@@ -234,12 +251,16 @@ def region_pages(R, names, orow, S, todo, links):
 .al-me{background:var(--card);border:1px solid var(--line);padding:18px 20px;margin:14px 0;font-family:var(--sans)}.al-me .st{font:500 clamp(1.6rem,4vw,2.3rem)/1.2 var(--serif);margin:8px 0 4px}
 .al-todo{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:10px 0 18px}.al-todo section{border-top:3px solid var(--c);padding-top:8px}.al-todo h3{font:500 1rem/1.3 var(--sans);margin:0 0 6px;color:var(--c)}.al-todo ul{margin:0;padding-left:18px;font:400 .88rem/1.5 var(--sans)}.al-todo li{margin:4px 0}
 .al-regs{font:400 .84rem/1.8 var(--sans);color:var(--ink2)}
+.al-faq details{border-top:1px solid var(--line);padding:10px 0}.al-faq summary{cursor:pointer;font:500 1rem/1.4 var(--sans)}.al-faq p{margin:8px 0 0;font:400 .9rem/1.55 var(--sans);color:var(--ink2)}
 @media(max-width:860px){.al-todo{grid-template-columns:1fr}}
 </style>"""
     for iso in sorted(R, key=lambda k: names[k]):
         n = names[iso]; sl = slug(R[iso]['en']); path = f'/alerts/{sl}/'
         title = t('{r}: UAV and missile alerts now | Chaos Pulse', r=n)
         desc = t('Is a UAV or missile danger declared in {r} right now, since when, and when was the all-clear: live status from official announcements, the region\u2019s official channels and what to do.', r=n)
+        faq = region_faq(n)
+        faq_html = f'<h2 class="sec" id="faq">{t("Questions about this page")}</h2><div class="al-faq">' + ''.join(
+            f'<details><summary>{esc(q)}</summary><p>{esc(a)}</p></details>' for q, a in faq) + '</div>'
         js = JS.replace('__ISO__', json.dumps(iso)).replace('__S__', json.dumps(S, ensure_ascii=False)).replace('__LANG__', json.dumps(L))
         body = f"""{css}
 <p class="kicker"><a href="/alerts/">{t('Air-raid alerts in Russia')}</a> \u00b7 {t('region page')}</p>
@@ -251,12 +272,14 @@ def region_pages(R, names, orow, S, todo, links):
 <p class="meta"><a href="/alerts/">{t('Map of all regions')}</a> \u00b7 <a href="/alerts/#how">{t('How this map works')}</a> \u00b7 {t('Not a siren: follow your region\u2019s official channels, sirens and MChS messages first.')}</p>
 <div class="prose"><p>{t('This page shows only officially declared alerts for the whole region: the \u201cUAV danger\u201d and \u201cmissile danger\u201d regimes announced by the regional authorities and MChS, and the all-clear. On purpose it shows no towns, no drone counts, no flight directions and no interceptions. A region whose alert has had no update for {h} hours is marked as possibly ended without a relayed all-clear.', h=4)}</p></div>
 {todo}
+{faq_html}
 <h2 class="sec" id="regions">{t('Other regions')}</h2>
 <p class="al-regs">{links}</p>
 <script>{js}</script>"""
         crumb = [{"@type": "ListItem", "position": 1, "name": t('Air-raid alerts in Russia'), "item": B.BASE + i18n.lpath('/alerts/')},
                  {"@type": "ListItem", "position": 2, "name": n, "item": B.BASE + i18n.lpath(path)}]
-        ld = {"@context": "https://schema.org", "@type": "WebPage", "name": title, "url": B.BASE + path, "description": desc,
+        ld = {"@context": "https://schema.org", "@type": ["WebPage", "FAQPage"], "name": title, "url": B.BASE + path, "description": desc,
+              "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in faq],
               "isPartOf": {"@type": "WebSite", "name": t('Chaos Pulse'), "url": B.BASE},
               "breadcrumb": {"@type": "BreadcrumbList", "itemListElement": crumb},
               "publisher": {"@type": "Organization", "name": "errata (an AI agent)", "url": "https://errata.page"}}
