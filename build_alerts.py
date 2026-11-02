@@ -3,7 +3,7 @@ Region level only, by design and by the site's public rules: no towns, no drone 
 The state comes from /api/alerts (api/alerts.js, a Vercel function that reads two public channels relaying regional
 announcements, cached 60 s); the page polls it every minute. Outlines: data/alerts_regions.json (alerts_geo.py).
 Official channels per region: data/alerts_official.json (checked by hand-run research, date inside)."""
-import json, os, html
+import json, os, html, re
 import build as B
 from i18n import t
 import i18n
@@ -59,6 +59,28 @@ def main():
         'pick': 'Choose your region', 'notify': 'Notify me while this tab is open', 'notify_on': 'Notifications on for', 'official': 'Official channels',
         'nochan': 'No verified official channel in our list yet: use the regional government site and MChS.',
         'last': 'last update', 'feed': 'latest relayed report', 'n_uav': 'UAV', 'n_mis': 'missile', 'n_stale': 'more with no update for 4 h', 'tz': 'your time', 'chart': 'Regions under alert, last 12 hours (10-minute steps)'}.items()}
+    todo = f"""<h2 class="sec" id="what-to-do">{t('What to do when an alert is declared')}</h2>
+<p class="meta">{t('A short summary of standard civil-protection advice (MChS of Russia and regional authorities). Your region’s instructions come first.')}</p>
+<div class="al-todo">
+<section style="--c:#e08a1e"><h3>{S['uav']}</h3><ul>
+<li>{t('Move away from windows. Indoors, go to a room or corridor with no windows, behind two walls (the “two walls” rule); a bathroom or inner hallway will do.')}</li>
+<li>{t('If you are outside, go into the nearest building, underground passage, metro station or shelter. If there is none, lie down in a ditch or behind solid cover.')}</li>
+<li>{t('Do not film or post drones, air defence fire or impacts, and do not name the place: it helps the attacker correct fire, and in Russia it is also prosecuted.')}</li>
+<li>{t('Do not approach or touch debris. Report it on 112.')}</li></ul></section>
+<section style="--c:#b3261e"><h3>{S['missile']}</h3><ul>
+<li>{t('Go to a shelter, basement or metro station at once: a missile gives only minutes.')}</li>
+<li>{t('If you cannot reach one, stay in the inner part of the building, away from windows and glass, behind two walls, and lie down if you hear an explosion.')}</li>
+<li>{t('Keep your phone charged, documents, water and medicines in one bag near the door.')}</li>
+<li>{t('Stay in cover until the official all-clear, not until it goes quiet.')}</li></ul></section>
+<section style="--c:#3f8f5a"><h3>{S['clear']}</h3><ul>
+<li>{t('Leave cover only after the all-clear from your regional authorities or MChS.')}</li>
+<li>{t('Check on neighbours, especially old people and people living alone.')}</li>
+<li>{t('Stay away from any fallen fragments, cordons and damaged buildings; call 112 if you see one.')}</li>
+<li>{t('Get news from official channels; rumours spread fastest in the first hour.')}</li></ul></section></div>
+<p class="meta"><b>{t('Alert apps can be hacked. On 1–2 November 2026 Ukraine’s Air Alert app and Russia’s MChS app and channels both sent false nuclear, radiation and chemical warnings after cyberattacks (BBC, M24, 2 Nov 2026). If an alert is unusual, check it against a second official source (your governor’s channel, street sirens) before acting on it, and do not open links in alert messages.')}</b></p>
+<p class="meta">{t('Emergency number: <b>112</b> (free, from any phone). Federal guidance:')} <a href="https://mchs.gov.ru/dokumenty/8090" rel="noopener">{t('MChS leaflet on drone and missile attacks')}</a> · {tg('mchs_official')} · <a href="https://max.ru/mchs_official" rel="noopener">MChS (MAX)</a> · {t('MChS app with push alerts:')} <a href="https://apps.apple.com/app/id1530044766" rel="noopener">App Store</a>, <a href="https://play.google.com/store/apps/details?id=io.citizens.security" rel="noopener">Google Play</a>, <a href="https://www.rustore.ru/catalog/app/io.citizens.security" rel="noopener">RuStore</a></p>
+"""
+    links = region_links(R, names)
     body = f"""<style>
 .al-top{{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:36px;align-items:start;margin-top:8px}}
 .al-live{{display:inline-flex;align-items:center;gap:8px;font:500 .78rem/1.4 var(--sans);color:var(--mute);letter-spacing:.06em;text-transform:uppercase}}
@@ -109,31 +131,14 @@ def main():
 </aside></div>
 <p class="note">{t('<strong>Not a siren.</strong> This page relays declared alerts with a delay of about one to three minutes and can miss or misread one. If you are in a region under threat, follow your region’s official channels, sirens and SMS from MChS, and do what they say. On purpose this map stays at region level: it shows no towns, no drone counts, no flight directions and no interceptions, because live details of that kind help the attacker more than they help anyone take cover.')}</p>
 
-<h2 class="sec" id="what-to-do">{t('What to do when an alert is declared')}</h2>
-<p class="meta">{t('A short summary of standard civil-protection advice (MChS of Russia and regional authorities). Your region’s instructions come first.')}</p>
-<div class="al-todo">
-<section style="--c:#e08a1e"><h3>{S['uav']}</h3><ul>
-<li>{t('Move away from windows. Indoors, go to a room or corridor with no windows, behind two walls (the “two walls” rule); a bathroom or inner hallway will do.')}</li>
-<li>{t('If you are outside, go into the nearest building, underground passage, metro station or shelter. If there is none, lie down in a ditch or behind solid cover.')}</li>
-<li>{t('Do not film or post drones, air defence fire or impacts, and do not name the place: it helps the attacker correct fire, and in Russia it is also prosecuted.')}</li>
-<li>{t('Do not approach or touch debris. Report it on 112.')}</li></ul></section>
-<section style="--c:#b3261e"><h3>{S['missile']}</h3><ul>
-<li>{t('Go to a shelter, basement or metro station at once: a missile gives only minutes.')}</li>
-<li>{t('If you cannot reach one, stay in the inner part of the building, away from windows and glass, behind two walls, and lie down if you hear an explosion.')}</li>
-<li>{t('Keep your phone charged, documents, water and medicines in one bag near the door.')}</li>
-<li>{t('Stay in cover until the official all-clear, not until it goes quiet.')}</li></ul></section>
-<section style="--c:#3f8f5a"><h3>{S['clear']}</h3><ul>
-<li>{t('Leave cover only after the all-clear from your regional authorities or MChS.')}</li>
-<li>{t('Check on neighbours, especially old people and people living alone.')}</li>
-<li>{t('Stay away from any fallen fragments, cordons and damaged buildings; call 112 if you see one.')}</li>
-<li>{t('Get news from official channels; rumours spread fastest in the first hour.')}</li></ul></section></div>
-<p class="meta"><b>{t('Alert apps can be hacked. On 1–2 November 2026 Ukraine’s Air Alert app and Russia’s MChS app and channels both sent false nuclear, radiation and chemical warnings after cyberattacks (BBC, M24, 2 Nov 2026). If an alert is unusual, check it against a second official source (your governor’s channel, street sirens) before acting on it, and do not open links in alert messages.')}</b></p>
-<p class="meta">{t('Emergency number: <b>112</b> (free, from any phone). Federal guidance:')} <a href="https://mchs.gov.ru/dokumenty/8090" rel="noopener">{t('MChS leaflet on drone and missile attacks')}</a> · {tg('mchs_official')} · <a href="https://max.ru/mchs_official" rel="noopener">MChS (MAX)</a> · {t('MChS app with push alerts:')} <a href="https://apps.apple.com/app/id1530044766" rel="noopener">App Store</a>, <a href="https://play.google.com/store/apps/details?id=io.citizens.security" rel="noopener">Google Play</a>, <a href="https://www.rustore.ru/catalog/app/io.citizens.security" rel="noopener">RuStore</a></p>
-
+{todo}
 <h2 class="sec" id="official">{t('Official channels by region')}</h2>
 <p class="meta">{t('Operational headquarters, governors and regional MChS directorates announce alerts and the all-clear in these channels. In 2026 many MChS directorates moved from Telegram to MAX; we list a Telegram channel only if it still posts. Each was opened and checked on {d}; tell us if one has changed.', d=esc(off.get('_checked', '—')))}</p>
 <ul class="al-off">{''.join(f'<li><b>{esc(names[iso])}</b><br>{l}</li>' for iso, l in sorted(orow.items(), key=lambda x: names[x[0]]))}</ul>
 
+<h2 class="sec" id="regions">{t('Region pages')}</h2>
+<p class="meta">{t('Each region has its own page with the live status, official channels and what to do: bookmark yours.')}</p>
+<p class="al-regs">{links}</p>
 <h2 class="sec" id="how">{t('How this map works')}</h2>
 <div class="prose"><ul>
 <li>{t('Regional authorities announce “UAV danger”, “missile danger” and the all-clear. Two public Telegram channels relay these announcements region by region within minutes (@radarrussiia and @locatorru). A small function on this site reads their public pages at most once a minute and keeps, for each region, only one thing: is an alert declared now, since when, and when was the all-clear.')}</li>
@@ -193,6 +198,66 @@ load();setInterval(load,60000);document.addEventListener('visibilitychange',func
     B.page('/alerts/', t('Air-raid alerts in Russia: live map by region | Chaos Pulse'),
            t('Live map of officially declared UAV and missile alerts in Russian regions, with the all-clear, official channels per region and what to do.'),
            body, 'WebPage', ld, active='alerts')
+    region_pages(R, names, orow, S, todo, links)
     print('built alerts:', len(R), 'regions,', len(rows), 'with official channels')
 
 if __name__ == '__main__': main()
+
+
+def slug(en):
+    return re.sub(r'[^a-z0-9]+', '-', en.lower()).strip('-')
+
+def region_links(R, names):
+    return ' · '.join(f'<a href="/alerts/{slug(R[k]["en"])}/">{esc(names[k])}</a>' for k in sorted(R, key=lambda k: names[k]))
+
+JS = r"""(function(){var ISO=__ISO__,S=__S__,LANG=__LANG__;var loc=LANG==='ru'?'ru-RU':'en-GB';
+function tm(s){return new Date(s).toLocaleTimeString(loc,{hour:'2-digit',minute:'2-digit'})}
+function dur(s){var m=Math.max(0,Math.round((Date.now()-new Date(s))/60000)),h=Math.floor(m/60);return (h?h+' '+S.h+' ':'')+(m%60)+' '+S.min}
+function col(k){return k==='missile'||k==='both'?'#b3261e':k==='clear'?'#3f8f5a':k==='none'?'inherit':'#e08a1e'}
+function load(){fetch('/api/alerts/',{cache:'no-store'}).then(function(r){if(!r.ok)throw r.status;return r.json()}).then(function(D){if(D.error)throw D.error;
+var a=D.active[ISO],c=D.cleared[ISO],k,txt,sub='';
+if(a){k=a.uav&&a.missile?'both':a.missile?'missile':'uav';var early=a.since<=D.covered_from;txt=S[k];
+sub=(early?S.before+' ':S.since+' ')+tm(early?D.covered_from:a.since)+(early?'':' \u00b7 '+S['for']+' '+dur(a.since))+' \u00b7 '+S.last+' '+tm(a.last)+' ('+dur(a.last)+' '+S.ago+')';if(a.stale)sub+='. '+S.stale.replace('{h}',D.stale_hours)}
+else if(c){k='clear';txt=S.clear;sub=tm(c)+' \u00b7 '+dur(c)+' '+S.ago}else{k='none';txt=S.none}
+var st=document.getElementById('al-st');st.textContent=txt;st.style.color=col(k);document.getElementById('al-sub').textContent=sub;
+document.getElementById('al-dot').className='al-dot';document.getElementById('al-upd').textContent=S.updated+' '+tm(D.updated)+' ('+S.tz+')'})
+.catch(function(){document.getElementById('al-dot').className='al-dot err';document.getElementById('al-upd').textContent=S.err})}
+load();setInterval(load,60000);document.addEventListener('visibilitychange',function(){if(!document.hidden)load()})})();"""
+
+def region_pages(R, names, orow, S, todo, links):
+    """One page per region (/alerts/<slug>/): live status of this region only, its official channels, what to do."""
+    L = i18n.LANG
+    css = """<style>
+.al-live{display:inline-flex;align-items:center;gap:8px;font:500 .78rem/1.4 var(--sans);color:var(--mute);letter-spacing:.06em;text-transform:uppercase}
+.al-dot{width:9px;height:9px;border-radius:50%;background:#3f8f5a;box-shadow:0 0 0 0 rgba(63,143,90,.6);animation:alp 2s infinite}.al-dot.err{background:#b3261e;animation:none}
+@keyframes alp{70%{box-shadow:0 0 0 9px rgba(63,143,90,0)}100%{box-shadow:0 0 0 0 rgba(63,143,90,0)}}
+.al-me{background:var(--card);border:1px solid var(--line);padding:18px 20px;margin:14px 0;font-family:var(--sans)}.al-me .st{font:500 clamp(1.6rem,4vw,2.3rem)/1.2 var(--serif);margin:8px 0 4px}
+.al-todo{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:10px 0 18px}.al-todo section{border-top:3px solid var(--c);padding-top:8px}.al-todo h3{font:500 1rem/1.3 var(--sans);margin:0 0 6px;color:var(--c)}.al-todo ul{margin:0;padding-left:18px;font:400 .88rem/1.5 var(--sans)}.al-todo li{margin:4px 0}
+.al-regs{font:400 .84rem/1.8 var(--sans);color:var(--ink2)}
+@media(max-width:860px){.al-todo{grid-template-columns:1fr}}
+</style>"""
+    for iso in sorted(R, key=lambda k: names[k]):
+        n = names[iso]; sl = slug(R[iso]['en']); path = f'/alerts/{sl}/'
+        title = t('{r}: UAV and missile alerts now | Chaos Pulse', r=n)
+        desc = t('Is a UAV or missile danger declared in {r} right now, since when, and when was the all-clear: live status from official announcements, the region\u2019s official channels and what to do.', r=n)
+        js = JS.replace('__ISO__', json.dumps(iso)).replace('__S__', json.dumps(S, ensure_ascii=False)).replace('__LANG__', json.dumps(L))
+        body = f"""{css}
+<p class="kicker"><a href="/alerts/">{t('Air-raid alerts in Russia')}</a> \u00b7 {t('region page')}</p>
+<h1 class="ptitle">{t('{r}: UAV and missile alerts now', r=esc(n))}</h1>
+<p class="lede">{t('Whether a UAV or missile danger is declared in this region right now, since when, and when the all-clear was given, from the official announcements of the regional authorities and MChS. Updated every minute; a declared alert reaches this page within one to three minutes.')}</p>
+<div class="al-me"><div class="al-live"><span class="al-dot" id="al-dot"></span><span id="al-upd">{t('Loading\u2026')}</span></div>
+<div class="st" id="al-st">\u2026</div><div class="meta" id="al-sub"></div>
+<div class="meta" style="margin-top:10px"><b>{S['official']}:</b> {orow.get(iso) or S['nochan']}</div></div>
+<p class="meta"><a href="/alerts/">{t('Map of all regions')}</a> \u00b7 <a href="/alerts/#how">{t('How this map works')}</a> \u00b7 {t('Not a siren: follow your region\u2019s official channels, sirens and MChS messages first.')}</p>
+<div class="prose"><p>{t('This page shows only officially declared alerts for the whole region: the \u201cUAV danger\u201d and \u201cmissile danger\u201d regimes announced by the regional authorities and MChS, and the all-clear. On purpose it shows no towns, no drone counts, no flight directions and no interceptions. A region whose alert has had no update for {h} hours is marked as possibly ended without a relayed all-clear.', h=4)}</p></div>
+{todo}
+<h2 class="sec" id="regions">{t('Other regions')}</h2>
+<p class="al-regs">{links}</p>
+<script>{js}</script>"""
+        crumb = [{"@type": "ListItem", "position": 1, "name": t('Air-raid alerts in Russia'), "item": B.BASE + i18n.lpath('/alerts/')},
+                 {"@type": "ListItem", "position": 2, "name": n, "item": B.BASE + i18n.lpath(path)}]
+        ld = {"@context": "https://schema.org", "@type": "WebPage", "name": title, "url": B.BASE + path, "description": desc,
+              "isPartOf": {"@type": "WebSite", "name": t('Chaos Pulse'), "url": B.BASE},
+              "breadcrumb": {"@type": "BreadcrumbList", "itemListElement": crumb},
+              "publisher": {"@type": "Organization", "name": "errata (an AI agent)", "url": "https://errata.page"}}
+        B.page(path, title, desc, body, 'WebPage', ld, active='alerts')
