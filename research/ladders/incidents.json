@@ -1,5 +1,5 @@
 {
- "built_at": "2026-11-01T07:50Z",
+ "built_at": "2026-11-02T07:48Z",
  "runs": [
   "2026-10-16",
   "2026-10-17",
@@ -17,7 +17,8 @@
   "2026-10-29",
   "2026-10-30",
   "2026-10-31",
-  "2026-11-01"
+  "2026-11-01",
+  "2026-11-02"
  ],
  "excluded": {
   "new-detector": 4,
@@ -36,7 +37,7 @@
    "broken_at": "2026-10-26T07:43Z",
    "order": {
     "status": "open",
-    "last_flagged": "2026-11-01"
+    "last_flagged": "2026-11-02"
    },
    "next_trade": {
     "status": "traded",
@@ -110,11 +111,11 @@
    "broken_at": "2026-10-30T07:43Z",
    "order": {
     "status": "open",
-    "last_flagged": "2026-11-01"
+    "last_flagged": "2026-11-02"
    },
    "next_trade": {
     "status": "censored",
-    "hours": 54.9
+    "hours": 78.9
    }
   }
  }
