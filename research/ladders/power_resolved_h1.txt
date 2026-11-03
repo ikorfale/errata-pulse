@@ -1,0 +1,32 @@
+estimator: h1 | families per bin: {'<7': 24, '7-30': 37, '30-180': 68, '180-365': 59, '>365': 42}
+120 datasets x 200 family-bootstrap draws, seed 566; power = 95% CI of log(KM med B/A) excludes 0
+
+A. adjacent bins at the real family counts (null = both bins pooled); "CI x" = median half-width as a factor
+      <7 (24) vs 7-30     (37)  r=1.0  power 0.07  (120 ok)  CI x1.2
+      <7 (24) vs 7-30     (37)  r=1.5  power 0.12  (120 ok)  CI x1.2
+      <7 (24) vs 7-30     (37)  r=2.0  power 0.17  (120 ok)  CI x1.2
+      <7 (24) vs 7-30     (37)  r=3.0  power 0.35  (120 ok)  CI x1.3
+    7-30 (37) vs 30-180   (68)  r=1.0  power 0.03  (120 ok)  CI x1.3
+    7-30 (37) vs 30-180   (68)  r=1.5  power 0.05  (120 ok)  CI x1.3
+    7-30 (37) vs 30-180   (68)  r=2.0  power 0.18  (120 ok)  CI x1.3
+    7-30 (37) vs 30-180   (68)  r=3.0  power 0.43  (120 ok)  CI x1.3
+  30-180 (68) vs 180-365  (59)  r=1.0  power 0.07  (120 ok)  CI x1.2
+  30-180 (68) vs 180-365  (59)  r=1.5  power 0.12  (120 ok)  CI x1.2
+  30-180 (68) vs 180-365  (59)  r=2.0  power 0.23  (120 ok)  CI x1.2
+  30-180 (68) vs 180-365  (59)  r=3.0  power 0.41  (120 ok)  CI x1.3
+ 180-365 (59) vs >365     (42)  r=1.0  power 0.07  (120 ok)  CI x1.3
+ 180-365 (59) vs >365     (42)  r=1.5  power 0.07  (120 ok)  CI x1.3
+ 180-365 (59) vs >365     (42)  r=2.0  power 0.12  (120 ok)  CI x1.3
+ 180-365 (59) vs >365     (42)  r=3.0  power 0.24  (120 ok)  CI x1.3
+
+B. stopping rule: power at r = 2 vs families per bin (null = all 230 families pooled)
+n =  25 families per bin  power 0.15  (120 ok)  CI x1.4
+n =  50 families per bin  power 0.17  (120 ok)  CI x1.3
+n = 100 families per bin  power 0.20  (120 ok)  CI x1.2
+n = 200 families per bin  power 0.30  (120 ok)  CI x1.1
+
+C. observed: log-ratio of KM medians for each adjacent pair on the real data, family bootstrap (2000 draws)
+      <7 -> 7-30     ratio x0.89  95% CI x0.75 .. x1.08  (2000 ok)
+    7-30 -> 30-180   ratio x0.77  95% CI x0.67 .. x0.95  (2000 ok)  excludes 1
+  30-180 -> 180-365  ratio x0.95  95% CI x0.76 .. x1.15  (2000 ok)
+ 180-365 -> >365     ratio x1.00  95% CI x0.79 .. x1.26  (2000 ok)
