@@ -1,0 +1,20 @@
+== unit: family (total 142; in 1 bin only: 82)
+boundary            both sides  >=3 eps each side  median eps (A/B) among both
+     <7 | 7-30             16                 10  4.5/4.5
+   7-30 | 30-180           19                 13  5/9
+ 30-180 | 180-365          31                 12  2/3
+180-365 | >365             18                  9  5.0/5.0
+== unit: pair (total 477; in 1 bin only: 343)
+boundary            both sides  >=3 eps each side  median eps (A/B) among both
+     <7 | 7-30             19                  9  4/3
+   7-30 | 30-180           27                 11  3/3
+ 30-180 | 180-365          62                 13  2.0/3.0
+180-365 | >365             42                  9  2.0/3.0
+
+== between-family SD of log heal time (healed episodes, families with >=2 in the bin)
+bin        fams  s_within  s_between(MoM)
+<7          15      2.59      0.41
+7-30        26      2.21      1.80
+30-180      39      2.92      2.55
+180-365     32      2.95      2.01
+>365        24      2.62      2.46
