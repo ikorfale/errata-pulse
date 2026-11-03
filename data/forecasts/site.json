@@ -1,8 +1,8 @@
 {
- "generated": "2026-11-03T22:47:39.016228+00:00",
+ "generated": "2026-11-03T23:22:26.725127+00:00",
  "counts": {
-  "open": 33,
-  "resolved": 9,
+  "open": 32,
+  "resolved": 10,
   "annulled": 0
  },
  "selection": {
@@ -14,16 +14,16 @@
   "drafts_since": "2026-10-24"
  },
  "brier": {
-  "mine": 0.0974,
-  "final": 0.0509,
-  "base": 0.241,
+  "mine": 0.0906,
+  "final": 0.0459,
+  "base": 0.2259,
   "crowd": 0.0142
  },
  "calibration": [
   {
    "bin": "0-10%",
-   "n": 4,
-   "mean_p": 0.04,
+   "n": 5,
+   "mean_p": 0.038,
    "freq_yes": 0.0
   },
   {
@@ -82,10 +82,10 @@
   }
  ],
  "models": {
-  "fable": 0.2412,
-  "base": 0.2421,
-  "mine": 0.2317,
-  "signals": 0.0733
+  "fable": 0.2175,
+  "signals": 0.0733,
+  "mine": 0.2099,
+  "base": 0.2269
  },
  "questions": [
   {
@@ -2041,7 +2041,7 @@
    "index": "pulse",
    "opened": "2026-10-09",
    "status": "open",
-   "p": 0.56,
+   "p": 0.85,
    "base_rate": 0.15,
    "method": "signals: prior 0.32 x LR1.4 (State Dept ordered departure from Saudi Arabia 21.10, an action) x LR1.2 (NYT 21.10: detailed US-Israel plans for after 3 Nov; plans themselves known since 8.10, so small LR); second: Fable independent estimate from the evidence alone, without my number; ensemble log-odds weights 1,2,2",
    "history": [
@@ -2073,6 +2073,16 @@
       "base": 0.15,
       "signals": 0.44,
       "second": 0.58
+     }
+    },
+    {
+     "date": "2026-11-03",
+     "p": 0.85,
+     "reason": "US officials (CNN/NBC/NYT/AP 02-03.11) confirm a limited strike on a Qeshm launcher on 2 Nov and say such self-defence strikes on launchers recur when the IRGC fires at US aircraft; IRGC keeps firing; 58-day window. The 2 Nov strike itself is before the window. Trump's 'no' refers to a campaign. Fable independent: 0.90",
+     "models": {
+      "base": 0.75,
+      "signals": 0.9,
+      "trend": 0.85
      }
     }
    ],
@@ -2829,7 +2839,7 @@
    "index": "pulse",
    "opened": "2026-10-24",
    "status": "open",
-   "p": 0.38,
+   "p": 0.76,
    "base_rate": 0.35,
    "method": "mine written before Fable (tmp log 23:18Z); Fable independent from evidence only, never saw my number; ensemble = log-odds mean with base rate",
    "history": [
@@ -2841,6 +2851,16 @@
       "mine": 0.45,
       "fable": 0.35,
       "base": 0.35
+     }
+    },
+    {
+     "date": "2026-11-03",
+     "p": 0.76,
+     "reason": "Abu Dhabi 10-11 Nov now confirmed by both the US mediator (Witkoff 02.11) and the Kremlin (Peskov 03.11, Medinsky leads); nine days of buffer to 20 Nov; risks: slip after the 03.11 grid strike, proximity format instead of one session. Fable independent: 0.78",
+     "models": {
+      "base": 0.7,
+      "signals": 0.78,
+      "trend": 0.8
      }
     }
    ],
@@ -2940,7 +2960,7 @@
    "category": "war",
    "index": null,
    "opened": "2026-10-31",
-   "status": "open",
+   "status": "no",
    "p": 0.03,
    "base_rate": 0.3,
    "method": "mine written before Fable (tmp/my-fc-1031.txt 23:35Z); Fable independent from evidence only, never saw my number; ensemble = log-odds mean with base rate",
@@ -2978,7 +2998,23 @@
    ],
    "crowd": [],
    "crowd_history": [],
-   "draft": "d7"
+   "draft": "d7",
+   "resolved_at": "2026-11-03",
+   "resolution_source": "https://www.euronews.com/2026/11/02/russia-resumes-attacks-on-ukraines-kherson-region-after-truce-ends-kyiv-says",
+   "resolution_note": "Truce ended 1 Nov; Russia refused Ukraine's offer to extend (AFP via Euronews 02.11); attacks on Kherson resumed 02.11; no extension stated by both sides by 23:59 Kyiv 03.11",
+   "scores": {
+    "brier": 0.029072250000000004,
+    "brier_final": 0.0009,
+    "models": {
+     "mine": 0.12249999999999998,
+     "fable": 0.12249999999999998,
+     "base": 0.09
+    },
+    "brier_base": 0.09,
+    "brier_crowd": null,
+    "days": 4,
+    "outcome": 0.0
+   }
   },
   {
    "id": "40",
