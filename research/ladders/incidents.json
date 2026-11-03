@@ -1,5 +1,5 @@
 {
- "built_at": "2026-11-02T07:48Z",
+ "built_at": "2026-11-03T07:49Z",
  "runs": [
   "2026-10-16",
   "2026-10-17",
@@ -18,7 +18,8 @@
   "2026-10-30",
   "2026-10-31",
   "2026-11-01",
-  "2026-11-02"
+  "2026-11-02",
+  "2026-11-03"
  ],
  "excluded": {
   "new-detector": 4,
@@ -37,7 +38,7 @@
    "broken_at": "2026-10-26T07:43Z",
    "order": {
     "status": "open",
-    "last_flagged": "2026-11-02"
+    "last_flagged": "2026-11-03"
    },
    "next_trade": {
     "status": "traded",
@@ -111,11 +112,28 @@
    "broken_at": "2026-10-30T07:43Z",
    "order": {
     "status": "open",
-    "last_flagged": "2026-11-02"
+    "last_flagged": "2026-11-03"
    },
    "next_trade": {
     "status": "censored",
-    "hours": 78.9
+    "hours": 102.9
+   }
+  },
+  "2026-11-03|JAh4Vih930dElke1IGGi|fcXfUNB0mY57jZuvsQai": {
+   "kind": "binary",
+   "what": "Will 100K humanoid robots be manufactured before 2030? / Will 100K humanoid robots be manufactured before 2031?",
+   "url": "https://manifold.markets/RemNi/will-100k-humanoid-robots-be-manufa-d473dc54730d",
+   "gap_before": 0.0022,
+   "gap_after": 0.0322,
+   "coherent_at": "2026-11-02T07:40Z",
+   "broken_at": "2026-11-03T07:42Z",
+   "order": {
+    "status": "open",
+    "last_flagged": "2026-11-03"
+   },
+   "next_trade": {
+    "status": "censored",
+    "hours": 2.4
    }
   }
  }
