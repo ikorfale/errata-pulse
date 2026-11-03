@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-03T23:22:26.725127+00:00",
+ "generated": "2026-11-03T23:24:49.001052+00:00",
  "counts": {
   "open": 32,
   "resolved": 10,
@@ -14,9 +14,9 @@
   "drafts_since": "2026-10-24"
  },
  "brier": {
-  "mine": 0.0906,
-  "final": 0.0459,
-  "base": 0.2259,
+  "mine": 0.1765,
+  "final": 0.1339,
+  "base": 0.3139,
   "crowd": 0.0142
  },
  "calibration": [
@@ -24,7 +24,7 @@
    "bin": "0-10%",
    "n": 5,
    "mean_p": 0.038,
-   "freq_yes": 0.0
+   "freq_yes": 0.2
   },
   {
    "bin": "10-20%",
@@ -82,10 +82,10 @@
   }
  ],
  "models": {
-  "fable": 0.2175,
-  "signals": 0.0733,
-  "mine": 0.2099,
-  "base": 0.2269
+  "fable": 0.3025,
+  "mine": 0.3499,
+  "base": 0.3139,
+  "signals": 0.2111
  },
  "questions": [
   {
@@ -893,7 +893,7 @@
    "category": "war",
    "index": "pulse",
    "opened": "2026-10-09",
-   "status": "no",
+   "status": "yes",
    "p": 0.06,
    "base_rate": 0.06,
    "method": "base: reference class = the current Pakistan-brokered US-Iran ceasefire, ~180 days with no US strike on Iranian territory (strikes on tankers in Sep were at sea); 0 events in 0.5 years, +0.5 smoothing, 24 days. signals: LR 0.5 Trump publicly promised no strikes before the 3 Nov midterms (AP, Guardian, 8 Oct); LR 1.3 Pentagon reportedly told to prepare options; LR 1.3 near-nightly IRGC attacks on Hormuz shipping since 29 Sep.",
@@ -958,22 +958,28 @@
    ],
    "crowd": [],
    "crowd_history": [],
-   "resolved_at": "2026-11-02",
-   "resolution_source": "https://www.arabnews.com/middle-east/iranian-negotiators-depart-doha-but-talks-with-qatar-not-derailed-says-official-3009389",
-   "resolution_note": "No US strike on Iranian land territory or territorial waters 10 Oct-2 Nov confirmed by the US or two wires; Trump said no new attacks before the vote (Reuters 2 Nov); the Qeshm claim of 29-30 Oct stayed a single anonymous CENTCOM-sourced claim via Faytuks, no on-record confirmation.",
+   "resolved_at": "2026-11-03",
+   "resolution_source": "https://www.nbcnewyork.com/news/national-international/us-military-limited-strikes-iran-qeshm-island/6566560/",
+   "resolution_note": "Resolved NO at 23:22Z on 2 Nov, 38 minutes before the window closed and before reports came out: US officials told CNN, NBC, NYT, AP and Reuters (2-3 Nov) that US forces struck a missile launcher on Qeshm Island on Monday 2 Nov (Iranian state media: explosions late Monday). Confirmed by two major wires (AP, Reuters) citing US officials -> YES under the criteria. Lesson: resolve a question only after its window has closed and the next day's reports are in.",
    "scores": {
-    "brier": 0.00801456,
-    "brier_final": 0.0036,
+    "brier": 0.8673745599999999,
+    "brier_final": 0.8835999999999999,
     "models": {
-     "base": 0.004368,
-     "fable": 0.08687500000000001,
-     "signals": 0.014644,
-     "mine": 0.022500000000000003
+     "signals": 0.841044,
+     "fable": 0.511875,
+     "base": 0.874768,
+     "mine": 0.7224999999999998
     },
-    "brier_base": 0.0036,
+    "brier_base": 0.8835999999999999,
     "brier_crowd": null,
     "days": 25,
-    "outcome": 0.0
+    "outcome": 1.0
+   },
+   "corrected_from": {
+    "outcome": "no",
+    "resolved_at": "2026-11-02",
+    "source": "https://www.arabnews.com/middle-east/iranian-negotiators-depart-doha-but-talks-with-qatar-not-derailed-says-official-3009389",
+    "brier": 0.00801456
    }
   },
   {
