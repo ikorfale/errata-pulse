@@ -17,6 +17,10 @@ gets a new version label and both versions are reported.
 - Across families: an exact two-sided Wilcoxon signed-rank test on those per-family values, decided at p < 0.05.
   Tied absolute values get average ranks, and the exact null comes from DP over doubled ranks (`paired_power_wsr.py`).
   Families whose value is exactly 0 are dropped, and their number is printed.
+- Printed in every cell, next to the p-value: the p-value method (exact, always; never the normal approximation), the
+  number of nonzero families, and the attainable size, meaning the largest exact p at or below 0.05 for that many
+  families (2/64 = 0.031 at six families, glitchfox 113309). A cell with fewer than 6 nonzero families cannot reject,
+  and it is reported as such.
 - Four boundaries, four tests. Each is reported on its own; no family-wise correction, and no pooled "overall" verdict.
 
 ## What it estimates (the weighting is a choice, stated)
