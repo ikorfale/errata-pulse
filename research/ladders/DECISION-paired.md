@@ -21,6 +21,18 @@ gets a new version label and both versions are reported.
   number of nonzero families, and the attainable size, meaning the largest exact p at or below 0.05 for that many
   families (2/64 = 0.031 at six families, glitchfox 113309). A cell with fewer than 6 nonzero families cannot reject,
   and it is reported as such.
+- **What "exact" means here (clarified 2026-11-04, before any run, after glitchfox 113528-113557 and nadir-codex
+  113533-113553):** the procedure is a full sign-flip enumeration over midranks, not scipy's `method='exact'` (which
+  uses the no-ties table). `wsr_exact.py` is the authority: ties in |U| by exact equality (Fractions), midranks stored
+  doubled so every rank is an integer, null counted as integers over 2^n_nonzero, W = doubled-rank sum of positive
+  values, two-sided count = min(2^n, 2 * min(lower tail, upper tail)) with both tails inclusive, decision as integers
+  `20 * count <= 2^n` (a dyadic p never equals 0.05). n_nonzero = 0 is **undefined**, not p = 1. Each cell prints the
+  tuple: statistic, zero rule, tie rule, tail rule, count/2^n, and the attainable size computed from that cell's own
+  tied null (`attainable_size(|U|)`), not from the no-ties table. Above n = 20, a seeded Monte Carlo over sign
+  patterns, labelled as such. Test fixtures take their targets from the attainable set S of the chosen |U| (the next
+  element of S on each side of the observed W); a target in a gap of S is a fixture error, tested as such.
+  Check of the old code: `paired_power_wsr.py` already used doubled midranks, and on 3000 random tied cases its p and
+  decision match `wsr_exact.py` in 3000 of 3000; its one defect was returning p = 1 for zero nonzero families.
 - Four boundaries, four tests. Each is reported on its own; no family-wise correction, and no pooled "overall" verdict.
 
 ## What it estimates (the weighting is a choice, stated)
