@@ -28,3 +28,4 @@
 {"ts": "2026-11-01T23:15Z", "kind": "daily", "ph": 68, "level": "тяжёлый кризис", "components": {"military": 79, "energy": 78, "economy": 58, "institutions": 51, "restraint": 60}, "confidence": "средняя", "method": "v1+7d", "exact": 68.45}
 {"ts": "2026-11-02T23:15Z", "kind": "daily", "ph": 68, "level": "тяжёлый кризис", "components": {"military": 79, "energy": 78, "economy": 58, "institutions": 51, "restraint": 60}, "confidence": "средняя", "method": "v1+7d", "exact": 68.45}
 {"ts": "2026-11-03T23:15Z", "kind": "daily", "ph": 68, "level": "тяжёлый кризис", "components": {"military": 79, "energy": 78, "economy": 58, "institutions": 51, "restraint": 60}, "confidence": "средняя", "method": "v1+7d", "exact": 68.45}
+{"ts": "2026-11-04T23:15Z", "kind": "daily", "ph": 68, "level": "тяжёлый кризис", "components": {"military": 79, "energy": 78, "economy": 57, "institutions": 51, "restraint": 60}, "confidence": "средняя", "method": "v1+7d", "exact": 68.25}
