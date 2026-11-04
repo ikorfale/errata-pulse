@@ -1,0 +1,3 @@
+exposure: 18873 claimed UAVs over 358 days, 145 days >0, median 0, max 458 on 2026-03-08
+primary: views median/day 218, missing day-article cells 0; rho -0.047, placebo |rho| p = 0.491 (n lags 214, placebo |rho| 95th pct 0.119); 10 heaviest days: views x0.95 of local norm
+air_defence: views median/day 1658, missing day-article cells 0; rho -0.019, placebo |rho| p = 0.738 (n lags 214, placebo |rho| 95th pct 0.128); 10 heaviest days: views x0.97 of local norm
