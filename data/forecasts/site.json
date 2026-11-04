@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-03T23:24:49.001052+00:00",
+ "generated": "2026-11-04T22:44:40.071597+00:00",
  "counts": {
   "open": 32,
   "resolved": 10,
@@ -82,10 +82,10 @@
   }
  ],
  "models": {
-  "fable": 0.3025,
-  "mine": 0.3499,
+  "signals": 0.2111,
   "base": 0.3139,
-  "signals": 0.2111
+  "mine": 0.3499,
+  "fable": 0.3025
  },
  "questions": [
   {
@@ -309,7 +309,7 @@
    "index": "mri",
    "opened": "2026-10-09",
    "status": "open",
-   "p": 0.27,
+   "p": 0.24,
    "base_rate": 0.35,
    "method": "base: judgmental reference class = MoD-drafted presidential decrees put up for public discussion; most are signed, but a minority within ~7-8 weeks of publication; I put that share at 35% (no count yet: method gap to fill). signals: LR 1.2 rising desertion/unauthorised-absence caseload gives the MoD a reason to hurry; LR 1.0 no public statement of a timetable.",
    "history": [
@@ -353,6 +353,15 @@
      "date": "2026-11-01",
      "p": 0.27,
      "reason": "26 days since the draft decree 171657 was posted, still unsigned; no signal of imminent signing",
+     "models": {
+      "base": 0.35,
+      "signals": 0.39
+     }
+    },
+    {
+     "date": "2026-11-04",
+     "p": 0.24,
+     "reason": "04.11: 27 days unsigned on regulation.gov.ru/pravo, 26 days left; no sign of signing in CIT 25.10-01.11 brief",
      "models": {
       "base": 0.35,
       "signals": 0.39
@@ -493,6 +502,10 @@
     {
      "date": "2026-11-03",
      "p": 0.082
+    },
+    {
+     "date": "2026-11-04",
+     "p": 0.077
     }
    ],
    "crowd_urls": {
@@ -665,6 +678,10 @@
     },
     {
      "date": "2026-11-03",
+     "p": 0.082
+    },
+    {
+     "date": "2026-11-04",
      "p": 0.082
     }
    ],
@@ -879,6 +896,10 @@
     {
      "date": "2026-11-03",
      "p": 0.175
+    },
+    {
+     "date": "2026-11-04",
+     "p": 0.155
     }
    ],
    "crowd_urls": {
@@ -1112,6 +1133,10 @@
     {
      "date": "2026-11-03",
      "p": 0.02
+    },
+    {
+     "date": "2026-11-04",
+     "p": 0.01
     }
    ],
    "crowd_urls": {
@@ -1365,6 +1390,10 @@
     {
      "date": "2026-11-03",
      "p": 0.25
+    },
+    {
+     "date": "2026-11-04",
+     "p": 0.235
     }
    ],
    "crowd_urls": {
@@ -1846,6 +1875,10 @@
     {
      "date": "2026-11-03",
      "p": 0.319
+    },
+    {
+     "date": "2026-11-04",
+     "p": 0.295
     }
    ],
    "crowd_urls": {
@@ -2031,6 +2064,10 @@
     {
      "date": "2026-11-03",
      "p": 0.083
+    },
+    {
+     "date": "2026-11-04",
+     "p": 0.076
     }
    ],
    "crowd_urls": {
@@ -2720,6 +2757,10 @@
     },
     {
      "date": "2026-11-03",
+     "p": 0.24
+    },
+    {
+     "date": "2026-11-04",
      "p": 0.24
     }
    ],
