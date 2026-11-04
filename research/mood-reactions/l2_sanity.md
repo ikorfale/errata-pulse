@@ -1,4 +1,10 @@
-# PREREG-L2 sanity check, run 2026-11-04 ~16:05Z (before any look at the 18.10 window)
+# PREREG-L2 sanity check, run 2026-11-04 ~16:05Z: CORRECTION, not blind
+
+**Correction (04.11 ~16:15Z, same pass):** this check was run against a superseded draft (PREREG-L2, 23.10). The
+Fontanka 18.10 pilot it was meant to precede had already been run on 24.10 under PREREG.md (RESULT.md), and v2 on 11
+deadly strikes on 28.10 (RESULT-v2.md). So the threshold below was *not* frozen before the 18.10 window was seen, and
+nothing here may be used as a pre-registered test. What remains valid is the snapshot stability check (1)-(2): settled
+posts barely move in 24 h, which supports the 72 h age rule those results relied on.
 
 ```
 posts in 24.10 snapshot 568 overlap 543
