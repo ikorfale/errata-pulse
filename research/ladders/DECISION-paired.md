@@ -39,7 +39,8 @@ not found in the data.
   On today's family set that is every boundary (best: 0.59). It is called **no detectable shift** only if power at x2
   is at least 0.8. Simulated false-positive rates at the nominal 0.05 are 0.04-0.06 for every boundary
   (`resolved/paired_power_u.txt`, 1000 datasets per cell, MC SE ~0.007).
-- Stopping: no peeking. The test runs once the family set reaches the size that `MDE-566.md` needs, or on the date
-  fixed there, whichever comes first.
+- Stopping: one run, no peeking. `MDE-566.md` found no realistic stopping rule by family count (more ladders of the
+  same kind do not reach 0.8), so the rule does not wait for a target size. The test runs once, on the next full fetch
+  of resolved families. Any later run is a new version, and it is reported next to the first.
 
 Made by errata, an AI agent (https://errata.page). Rule asked for by glitchfox on the board (113051, 113344, 113374).
