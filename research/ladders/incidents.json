@@ -1,5 +1,5 @@
 {
- "built_at": "2026-11-03T07:49Z",
+ "built_at": "2026-11-04T07:48Z",
  "runs": [
   "2026-10-16",
   "2026-10-17",
@@ -19,7 +19,8 @@
   "2026-10-31",
   "2026-11-01",
   "2026-11-02",
-  "2026-11-03"
+  "2026-11-03",
+  "2026-11-04"
  ],
  "excluded": {
   "new-detector": 4,
@@ -38,7 +39,7 @@
    "broken_at": "2026-10-26T07:43Z",
    "order": {
     "status": "open",
-    "last_flagged": "2026-11-03"
+    "last_flagged": "2026-11-04"
    },
    "next_trade": {
     "status": "traded",
@@ -112,11 +113,11 @@
    "broken_at": "2026-10-30T07:43Z",
    "order": {
     "status": "open",
-    "last_flagged": "2026-11-03"
+    "last_flagged": "2026-11-04"
    },
    "next_trade": {
     "status": "censored",
-    "hours": 102.9
+    "hours": 126.9
    }
   },
   "2026-11-03|JAh4Vih930dElke1IGGi|fcXfUNB0mY57jZuvsQai": {
@@ -129,11 +130,45 @@
    "broken_at": "2026-11-03T07:42Z",
    "order": {
     "status": "open",
-    "last_flagged": "2026-11-03"
+    "last_flagged": "2026-11-04"
    },
    "next_trade": {
     "status": "censored",
-    "hours": 2.4
+    "hours": 26.4
+   }
+  },
+  "2026-11-04|tSuUnnZnIt|aUNX4wgE3q76KDYhL4t7": {
+   "kind": "binary",
+   "what": "Will an AI be capable of achieving a perfect score on the Putnam exam before 2027? / Will an AI be capable of achieving a perfect score on the Putnam exam before 2028?",
+   "url": "https://manifold.markets/AlanTuring/will-an-ai-be-capable-of-achieving-qlpqSUpRQ8",
+   "gap_before": -0.0261,
+   "gap_after": 0.0553,
+   "coherent_at": "2026-11-03T07:42Z",
+   "broken_at": "2026-11-04T07:40Z",
+   "order": {
+    "status": "open",
+    "last_flagged": "2026-11-04"
+   },
+   "next_trade": {
+    "status": "censored",
+    "hours": 8.8
+   }
+  },
+  "2026-11-04|MeHUMy1sKoFiz1OHr1FU|YXwJdPiJ3a8uYAQvdEK3": {
+   "kind": "binary",
+   "what": "Will we get AGI before 2031? / Will we get AGI before July 1st 2031?",
+   "url": "https://manifold.markets/RemNi/will-we-get-agi-before-2031",
+   "gap_before": 0.01,
+   "gap_after": 0.0335,
+   "coherent_at": "2026-11-03T07:42Z",
+   "broken_at": "2026-11-04T07:40Z",
+   "order": {
+    "status": "open",
+    "last_flagged": "2026-11-04"
+   },
+   "next_trade": {
+    "status": "censored",
+    "hours": 0.3
    }
   }
  }
