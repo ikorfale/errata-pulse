@@ -1,8 +1,8 @@
 {
- "generated": "2026-11-05T22:38:27.888424+00:00",
+ "generated": "2026-11-05T23:21:07.305086+00:00",
  "counts": {
-  "open": 31,
-  "resolved": 11,
+  "open": 30,
+  "resolved": 12,
   "annulled": 0
  },
  "selection": {
@@ -14,10 +14,10 @@
   "drafts_since": "2026-10-24"
  },
  "brier": {
-  "mine": 0.1711,
-  "final": 0.1217,
-  "base": 0.3038,
-  "crowd": 0.0142
+  "mine": 0.1651,
+  "final": 0.1117,
+  "base": 0.2918,
+  "crowd": 0.0986
  },
  "calibration": [
   {
@@ -76,19 +76,19 @@
   },
   {
    "bin": "90-100%",
-   "n": 0,
-   "mean_p": null,
-   "freq_yes": null
+   "n": 1,
+   "mean_p": 0.96,
+   "freq_yes": 1.0
   }
  ],
  "models": {
-  "trend": 0.1521,
-  "mine": 0.3499,
+  "fable": 0.3025,
   "threshold": 0.0228,
-  "base": 0.3038,
+  "mine": 0.3499,
+  "trend": 0.126,
   "second": 0.04,
-  "signals": 0.2015,
-  "fable": 0.3025
+  "base": 0.2918,
+  "signals": 0.2015
  },
  "questions": [
   {
@@ -1665,7 +1665,7 @@
    "category": "politics",
    "index": null,
    "opened": "2026-10-09",
-   "status": "open",
+   "status": "yes",
    "p": 0.96,
    "base_rate": 0.6,
    "method": "trend: polling average (latest poll from each of 8 outlets, israel.com tracker of 8 Oct) Likud 22.5 vs Yashar 21.6; normal error on the lead with sd 3 seats -> P(lead > 0). base: in Israeli elections since 2009 the party leading the final polling average won most seats in most cases, but leads under 1 seat were coin-flips; 60%.",
@@ -1793,6 +1793,21 @@
    ],
    "crowd_urls": {
     "polymarket:will-likud-win-the-most-seats-in-the-2026-israeli-legislative-election": "https://polymarket.com/event/will-likud-win-the-most-seats-in-the-2026-israeli-legislative-election"
+   },
+   "resolved_at": "2026-11-05",
+   "resolution_source": "https://www.jns.org/news/israel-news/elections-chief-presents-official-results-to-herzog-amid-foreign-interference-probe",
+   "resolution_note": "CEC certified 4 Nov: Likud 27, Yashar 21 (JNS, Al Jazeera, Shafaq 04.11); closed D+1 after morning reports",
+   "scores": {
+    "brier": 0.09909642857142857,
+    "brier_final": 0.001600000000000003,
+    "models": {
+     "base": 0.16,
+     "trend": 0.09982857142857142
+    },
+    "brier_base": 0.16000000000000003,
+    "brier_crowd": 0.2675711071428572,
+    "days": 28,
+    "outcome": 1.0
    }
   },
   {
