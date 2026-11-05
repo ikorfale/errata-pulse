@@ -3,7 +3,7 @@ i18n/<lang>.json: {"English string": "translation"}. Interface strings are writt
 t('English {x}', x=...); data strings (signal labels, reading guides, channel groups) go through td().
 A missing translation falls back to English and is listed in i18n/missing.<lang>.json after a build,
 so a new language can be added by copying ru.json, translating it and adding the code to LANGS."""
-import json, os
+import json, os, re
 from datetime import datetime
 HERE = os.path.dirname(os.path.abspath(__file__))
 LANGS = ['en', 'ru']                        # order of the switcher; 'en' is the default and x-default
@@ -30,10 +30,56 @@ def t(s, **kw):
         s = r
     return s.format(**kw) if kw else s
 
+_NUM = re.compile(r'(?<![\w{])\d+(?:[.,]\d+)*')
+_tpls = {}
+
+def _mask(s):
+    """'3 of 40 files' -> ('{0} of {1} files', ['3', '40']): the numbers of a data string become positional slots."""
+    nums = _NUM.findall(s); it = iter(range(len(nums)))
+    return _NUM.sub(lambda m: '{%d}' % next(it), s), nums
+
+def _pcls(nums):
+    """Plural class of each number (one/few/many, Russian rules), so '3 дня' is not reused for 5: a learned template is
+    used as is only when its numbers fall in the same classes."""
+    out = []
+    for x in nums:
+        if not x.isdigit(): out.append('f'); continue
+        n10, n100 = int(x) % 10, int(x) % 100
+        out.append('1' if n10 == 1 and n100 != 11 else '2' if 2 <= n10 <= 4 and not 12 <= n100 <= 14 else '5')
+    return tuple(out)
+
+def _tpl(lang):
+    """Number-free templates learned from the dictionary itself (05.11, #619): a key and its translation that carry the
+    same numbers in the same order (decimal comma allowed) teach one template, so a signal note whose numbers change
+    every day needs no new translation. Explicit template keys ('{0} of {1} ...') in the dictionary win."""
+    if lang not in _tpls:
+        T = {}
+        for k, v in _dict(lang).items():
+            if not isinstance(v, str): continue
+            mk, nk = _mask(k)
+            if not nk or '{' in k.replace('{0}', ''): continue
+            mv, nv = _mask(v)
+            if [x.replace(',', '.') for x in nk] == [x.replace(',', '.') for x in nv]: T.setdefault(mk, {})[_pcls(nk)] = mv
+        T.update({k: {None: v} for k, v in _dict(lang).items() if re.search(r'\{\d+\}', k)})
+        _tpls[lang] = T
+    return _tpls[lang]
+
 def td(s):
-    """Translate a data string (no formatting); untranslated data stays in English."""
+    """Translate a data string (no formatting); untranslated data stays in English. A string missing from the dictionary
+    is tried again with its numbers masked; a miss is then listed as the template, so it is translated once, not daily."""
     if LANG == 'en' or not isinstance(s, str) or not s.strip(): return s
-    return t(s)
+    d = _dict(LANG)
+    if s in d: return d[s]
+    k, nums = _mask(s)
+    if not nums: return t(s)
+    v = _tpl(LANG).get(k) or {}
+    r = v.get(_pcls(nums)) or v.get(None)
+    if r is None and v:                     # learned only for other plural classes: use it, but ask for a template
+        MISSING.setdefault(LANG, set()).add(k); r = next(iter(v.values()))
+    if r is None:
+        MISSING.setdefault(LANG, set()).add(k); return s
+    dec = ',' if LANG in ('ru', 'uk') else '.'
+    return re.sub(r'\{(\d+)\}', lambda m: re.sub(r'^(\d+)\.(\d+)$', r'\1' + dec + r'\2', nums[int(m.group(1))]) if int(m.group(1)) < len(nums) else m.group(0), r)
 
 def plural(n, one, few, many=None):
     """English needs one/other; Russian and Ukrainian need one/few/many. Pass the English forms; translations come from the dictionary."""

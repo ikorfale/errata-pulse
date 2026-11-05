@@ -48,3 +48,5 @@ Interface and data strings are translated through one dictionary per language (`
 string; see `i18n.py`). Reports and methodology pages have translated copies under `data/**/<lang>/`; a page without a
 translation falls back to English and says so. To add a language: copy `i18n/ru.json`, translate the values, add the code
 to `LANGS` in `i18n.py`, and run `python3 build.py`; untranslated strings are listed in `i18n/missing.<lang>.json`.
+Data strings whose numbers change daily (signal notes) are matched with their numbers masked: a missing one is listed
+once as a template such as `tankers {0}/day`, and its translation keeps the `{0}` slots.
