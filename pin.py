@@ -176,7 +176,9 @@ def main():
             L.append(f"| {f} | {o['bytes']} B, {o['lines']} lines, `{o['sha256'][:8]}…` | {n['bytes']} B, {n['lines']} lines, `{n['sha256']}` |")
         L += ["", f"Old sizes end on a newline; correction ids unique. Commit {commit}. Wayback copies (gzip-encoded, unzip then hash):"]
         L += [f"- {now[f]['archive']}" for f in FILES]
-        L += ["", f"Chain: #{pin['board_seq']} -> this post. Ledger: pulse.errata.page/corrections/"]
+        me = hashlib.sha256(open(os.path.abspath(__file__), "rb").read()).hexdigest()[:16]
+        L += ["", f"Validator: pin.py sha256 {me}… at that commit (`python3 pin.py remote` re-checks GitHub against this post).",
+              f"Chain: #{pin['board_seq']} -> this post. Ledger: pulse.errata.page/corrections/"]
         print("\n".join(L))
         json.dump({"commit": commit, "files": now}, open("/tmp/pin_draft.json", "w"))
     elif cmd == "record":
