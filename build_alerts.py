@@ -132,6 +132,7 @@ def main():
 <p class="note">{t('<strong>Not a siren.</strong> This page relays declared alerts with a delay of about one to three minutes and can miss or misread one. If you are in a region under threat, follow your region’s official channels, sirens and SMS from MChS, and do what they say. On purpose this map stays at region level: it shows no towns, no drone counts, no flight directions and no interceptions, because live details of that kind help the attacker more than they help anyone take cover.')}</p>
 
 {todo}
+{hours_top(load_hours(), names, R)}
 <h2 class="sec" id="official">{t('Official channels by region')}</h2>
 <p class="meta">{t('Operational headquarters, governors and regional MChS directorates announce alerts and the all-clear in these channels. In 2026 many MChS directorates moved from Telegram to MAX; we list a Telegram channel only if it still posts. Each was opened and checked on {d}; tell us if one has changed.', d=esc(off.get('_checked', '—')))}</p>
 <ul class="al-off">{''.join(f'<li><b>{esc(names[iso])}</b><br>{l}</li>' for iso, l in sorted(orow.items(), key=lambda x: names[x[0]]))}</ul>
@@ -204,6 +205,56 @@ load();setInterval(load,60000);document.addEventListener('visibilitychange',func
 if __name__ == '__main__': main()
 
 
+def load_hours():
+    f = os.path.join(HERE, 'data', 'alerts_hours.json')
+    return json.load(open(f)) if os.path.exists(f) else None
+
+def _dlabel(day):
+    m = int(day[5:7]); d = int(day[8:])
+    return f'{d:02d}.{m:02d}' if i18n.LANG == 'ru' else f'{d} ' + 'Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec'.split()[m - 1]
+
+def hours_block(iso, H):
+    """Declared-alert hours per Moscow day for one region (last 14 recorded days), as an inline SVG bar chart + totals.
+    Aggregates of our own 5-minute snapshots (alerts_hours.py): region level, delayed to the last site build."""
+    if not H or not H.get('days'): return ''
+    days = H['days'][-14:]; r = H['regions'].get(iso, {}); cov = H['coverage']
+    W, Ht, pad, bw = 560, 150, 28, 560 // max(len(days), 7)
+    bars, lab = [], []
+    for i, d in enumerate(days):
+        h, n = r.get(d, [0, 0]); x = pad + i * (W - pad) / len(days); w = max(4, (W - pad) / len(days) - 6)
+        y = 10 + (Ht - 30) * (1 - min(h, 24) / 24); part = cov.get(d, 0) < 0.98
+        tip = t('{d}: {h} h under declared alert, {n} alert(s) started', d=_dlabel(d), h=f'{h:.1f}', n=n) + (' · ' + t('partial day: recorded {p}% of it', p=round(cov.get(d, 0) * 100)) if part else '')
+        if h > 0:
+            bars.append(f'<path d="M{x:.1f},{Ht-20} V{y+4:.1f} q0,-4 4,-4 h{w-8:.1f} q4,0 4,4 V{Ht-20} Z" fill="#e08a1e"{" fill-opacity=\".45\"" if part else ""}><title>{esc(tip)}</title></path>')
+        bars.append(f'<rect x="{x:.1f}" y="10" width="{w:.1f}" height="{Ht-30}" fill="transparent"><title>{esc(tip)}</title></rect>')
+        lab.append(f'<text x="{x + w/2:.1f}" y="{Ht-5}" text-anchor="middle">{_dlabel(d)}</text>')
+    grid = ''.join(f'<line x1="{pad}" x2="{W}" y1="{10 + (Ht-30)*(1-v/24):.1f}" y2="{10 + (Ht-30)*(1-v/24):.1f}" stroke="var(--line)"/><text x="{pad-6}" y="{14 + (Ht-30)*(1-v/24):.1f}" text-anchor="end">{v}{t(" h")}</text>' for v in (0, 12, 24))
+    last7 = H['days'][-7:]
+    h7 = sum(r.get(d, [0, 0])[0] for d in last7); n7 = sum(r.get(d, [0, 0])[1] for d in last7)
+    full = [d for d in last7 if cov.get(d, 0) >= 0.98]
+    avg = sum(r.get(d, [0, 0])[0] for d in full) / len(full) if full else None
+    first = H['first'][:10]
+    summ = t('Last {k} recorded days: {h} hours under a declared alert, {n} alerts started.', k=len(last7), h=f'{h7:.1f}', n=n7)
+    if avg is not None: summ += ' ' + t('On a fully recorded day, {a} hours on average.', a=f'{avg:.1f}')
+    return f"""<h2 class="sec" id="hours">{t('Hours under alert by day')}</h2>
+<p class="meta">{esc(summ)}</p>
+<figure class="al-hours"><svg viewBox="0 0 {W} {Ht}" role="img" aria-label="{esc(t('Hours under a declared alert per day'))}" style="width:100%;height:auto;font:400 10px var(--sans);fill:var(--mute)">{grid}{''.join(bars)}{''.join(lab)}</svg>
+<figcaption class="meta">{t('Hours per Moscow day under an officially declared UAV or missile danger, from this site’s own snapshots of the alert feed every 5 minutes since {f}. A lower bound: an alert with no update for 4 hours stops counting, and gaps in our recording count as no alert (faded bars: days we recorded only in part). Updated with the site, about once a day; this is history, not live status.', f=esc(first))}</figcaption></figure>"""
+
+def hours_top(H, names, R, k=10):
+    """Regions with the most declared-alert hours over the last 7 recorded days (main /alerts/ page)."""
+    if not H or not H.get('days'): return ''
+    last7 = H['days'][-7:]
+    tot = sorted(((sum(v.get(d, [0, 0])[0] for d in last7), sum(v.get(d, [0, 0])[1] for d in last7), iso)
+                  for iso, v in H['regions'].items() if iso in R), reverse=True)[:k]
+    if not tot: return ''
+    mx = tot[0][0] or 1
+    rows = ''.join(f'<tr><td><a href="{i18n.lpath("/alerts/" + slug(R[iso]["en"]) + "/")}">{esc(names[iso])}</a></td><td class="num">{h:.1f}</td><td class="num">{n}</td>'
+                   f'<td style="width:40%"><span style="display:block;height:8px;border-radius:0 4px 4px 0;background:#e08a1e;width:{100*h/mx:.0f}%"></span></td></tr>' for h, n, iso in tot)
+    return f"""<h2 class="sec" id="hours">{t('Most hours under alert, last 7 recorded days')}</h2>
+<table class="al-top" style="width:100%;border-collapse:collapse;font:400 .9rem/1.6 var(--sans)"><thead><tr><th style="text-align:left">{t('Region')}</th><th class="num">{t('Hours')}</th><th class="num">{t('Alerts')}</th><th></th></tr></thead><tbody>{rows}</tbody></table>
+<p class="meta">{t('From this site’s own 5-minute snapshots since {f} (Moscow days); a lower bound, updated about once a day. Each region page has its day-by-day chart.', f=esc(H['first'][:10]))}</p>"""
+
 def slug(en):
     return re.sub(r'[^a-z0-9]+', '-', en.lower()).strip('-')
 
@@ -242,6 +293,7 @@ def region_faq(n):
     ]
 
 def region_pages(R, names, orow, S, todo, links):
+    H = load_hours()
     """One page per region (/alerts/<slug>/): live status of this region only, its official channels, what to do."""
     L = i18n.LANG
     css = """<style>
@@ -271,6 +323,7 @@ def region_pages(R, names, orow, S, todo, links):
 <div class="meta" style="margin-top:10px"><b>{S['official']}:</b> {orow.get(iso) or S['nochan']}</div></div>
 <p class="meta"><a href="/alerts/">{t('Map of all regions')}</a> \u00b7 <a href="/alerts/#how">{t('How this map works')}</a> \u00b7 {t('Not a siren: follow your region\u2019s official channels, sirens and MChS messages first.')}</p>
 <div class="prose"><p>{t('This page shows only officially declared alerts for the whole region: the \u201cUAV danger\u201d and \u201cmissile danger\u201d regimes announced by the regional authorities and MChS, and the all-clear. On purpose it shows no towns, no drone counts, no flight directions and no interceptions. A region whose alert has had no update for {h} hours is marked as possibly ended without a relayed all-clear.', h=4)}</p></div>
+{hours_block(iso, H)}
 {todo}
 {faq_html}
 <h2 class="sec" id="regions">{t('Other regions')}</h2>
