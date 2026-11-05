@@ -1,5 +1,5 @@
 {
- "built_at": "2026-11-04T07:48Z",
+ "built_at": "2026-11-05T07:49Z",
  "runs": [
   "2026-10-16",
   "2026-10-17",
@@ -20,7 +20,8 @@
   "2026-11-01",
   "2026-11-02",
   "2026-11-03",
-  "2026-11-04"
+  "2026-11-04",
+  "2026-11-05"
  ],
  "excluded": {
   "new-detector": 4,
@@ -39,7 +40,7 @@
    "broken_at": "2026-10-26T07:43Z",
    "order": {
     "status": "open",
-    "last_flagged": "2026-11-04"
+    "last_flagged": "2026-11-05"
    },
    "next_trade": {
     "status": "traded",
@@ -113,11 +114,11 @@
    "broken_at": "2026-10-30T07:43Z",
    "order": {
     "status": "open",
-    "last_flagged": "2026-11-04"
+    "last_flagged": "2026-11-05"
    },
    "next_trade": {
     "status": "censored",
-    "hours": 126.9
+    "hours": 150.9
    }
   },
   "2026-11-03|JAh4Vih930dElke1IGGi|fcXfUNB0mY57jZuvsQai": {
@@ -130,11 +131,11 @@
    "broken_at": "2026-11-03T07:42Z",
    "order": {
     "status": "open",
-    "last_flagged": "2026-11-04"
+    "last_flagged": "2026-11-05"
    },
    "next_trade": {
     "status": "censored",
-    "hours": 26.4
+    "hours": 50.4
    }
   },
   "2026-11-04|tSuUnnZnIt|aUNX4wgE3q76KDYhL4t7": {
@@ -146,12 +147,14 @@
    "coherent_at": "2026-11-03T07:42Z",
    "broken_at": "2026-11-04T07:40Z",
    "order": {
-    "status": "open",
-    "last_flagged": "2026-11-04"
+    "status": "repriced",
+    "last_flagged": "2026-11-04",
+    "first_unflagged": "2026-11-05",
+    "gap_at_exit": 0.0208
    },
    "next_trade": {
-    "status": "censored",
-    "hours": 8.8
+    "status": "traded",
+    "hours": 11.5
    }
   },
   "2026-11-04|MeHUMy1sKoFiz1OHr1FU|YXwJdPiJ3a8uYAQvdEK3": {
@@ -164,11 +167,266 @@
    "broken_at": "2026-11-04T07:40Z",
    "order": {
     "status": "open",
-    "last_flagged": "2026-11-04"
+    "last_flagged": "2026-11-05"
+   },
+   "next_trade": {
+    "status": "traded",
+    "hours": 21.8
+   }
+  },
+  "2026-11-05|BKr7KGDSkT6U3dGlqxIk|KrygWJ6EmVct1tZXGgXF": {
+   "kind": "binary",
+   "what": "Will AI wipe out humanity before the year 2030? / Will AI wipe out humanity before the year 2031?",
+   "url": "https://manifold.markets/MartinRandall/will-ai-wipe-out-humanity-before-th-d8733b2114a8",
+   "gap_before": 0.0239,
+   "gap_after": 0.0347,
+   "coherent_at": "2026-11-04T07:40Z",
+   "broken_at": "2026-11-05T07:42Z",
+   "order": {
+    "status": "open",
+    "last_flagged": "2026-11-05"
    },
    "next_trade": {
     "status": "censored",
-    "hours": 0.3
+    "hours": 14.4
+   }
+  },
+  "2026-11-05|BKr7KGDSkT6U3dGlqxIk|Swud8FP0KzyzcCm1omWR": {
+   "kind": "binary",
+   "what": "Will AI wipe out humanity before the year 2030? / Will AI wipe out humanity before the year 2033?",
+   "url": "https://manifold.markets/MartinRandall/will-ai-wipe-out-humanity-before-th-d8733b2114a8",
+   "gap_before": 0.0192,
+   "gap_after": 0.03,
+   "coherent_at": "2026-11-04T07:40Z",
+   "broken_at": "2026-11-05T07:42Z",
+   "order": {
+    "status": "open",
+    "last_flagged": "2026-11-05"
+   },
+   "next_trade": {
+    "status": "censored",
+    "hours": 14.4
+   }
+  },
+  "2026-11-05|RaUhdxs3ToW4qEOXslFy|Before 2048|Before 2049": {
+   "kind": "mc",
+   "what": "When will the world's Total Fertility Rate be reported to have fallen below replacement level?: Before 2048 / Before 2049",
+   "url": "https://manifold.markets/Tripping/when-will-the-worlds-total-fertilit",
+   "gap_before": -0.0167,
+   "gap_after": 0.0789,
+   "coherent_at": "2026-11-04T07:40Z",
+   "broken_at": "2026-11-05T07:42Z",
+   "order": {
+    "status": "open",
+    "last_flagged": "2026-11-05"
+   }
+  },
+  "2026-11-05|RaUhdxs3ToW4qEOXslFy|Before 2047|Before 2049": {
+   "kind": "mc",
+   "what": "When will the world's Total Fertility Rate be reported to have fallen below replacement level?: Before 2047 / Before 2049",
+   "url": "https://manifold.markets/Tripping/when-will-the-worlds-total-fertilit",
+   "gap_before": -0.025,
+   "gap_after": 0.0705,
+   "coherent_at": "2026-11-04T07:40Z",
+   "broken_at": "2026-11-05T07:42Z",
+   "order": {
+    "status": "open",
+    "last_flagged": "2026-11-05"
+   }
+  },
+  "2026-11-05|RaUhdxs3ToW4qEOXslFy|Before 2036|Before 2049": {
+   "kind": "mc",
+   "what": "When will the world's Total Fertility Rate be reported to have fallen below replacement level?: Before 2036 / Before 2049",
+   "url": "https://manifold.markets/Tripping/when-will-the-worlds-total-fertilit",
+   "gap_before": -0.0255,
+   "gap_after": 0.0701,
+   "coherent_at": "2026-11-04T07:40Z",
+   "broken_at": "2026-11-05T07:42Z",
+   "order": {
+    "status": "open",
+    "last_flagged": "2026-11-05"
+   }
+  },
+  "2026-11-05|RaUhdxs3ToW4qEOXslFy|Before 2048|Before 2050": {
+   "kind": "mc",
+   "what": "When will the world's Total Fertility Rate be reported to have fallen below replacement level?: Before 2048 / Before 2050",
+   "url": "https://manifold.markets/Tripping/when-will-the-worlds-total-fertilit",
+   "gap_before": -0.027,
+   "gap_after": 0.0651,
+   "coherent_at": "2026-11-04T07:40Z",
+   "broken_at": "2026-11-05T07:42Z",
+   "order": {
+    "status": "open",
+    "last_flagged": "2026-11-05"
+   }
+  },
+  "2026-11-05|RaUhdxs3ToW4qEOXslFy|Before 2035|Before 2049": {
+   "kind": "mc",
+   "what": "When will the world's Total Fertility Rate be reported to have fallen below replacement level?: Before 2035 / Before 2049",
+   "url": "https://manifold.markets/Tripping/when-will-the-worlds-total-fertilit",
+   "gap_before": -0.0328,
+   "gap_after": 0.0628,
+   "coherent_at": "2026-11-04T07:40Z",
+   "broken_at": "2026-11-05T07:42Z",
+   "order": {
+    "status": "open",
+    "last_flagged": "2026-11-05"
+   }
+  },
+  "2026-11-05|RaUhdxs3ToW4qEOXslFy|Before 2046|Before 2049": {
+   "kind": "mc",
+   "what": "When will the world's Total Fertility Rate be reported to have fallen below replacement level?: Before 2046 / Before 2049",
+   "url": "https://manifold.markets/Tripping/when-will-the-worlds-total-fertilit",
+   "gap_before": -0.035,
+   "gap_after": 0.0606,
+   "coherent_at": "2026-11-04T07:40Z",
+   "broken_at": "2026-11-05T07:42Z",
+   "order": {
+    "status": "open",
+    "last_flagged": "2026-11-05"
+   }
+  },
+  "2026-11-05|RaUhdxs3ToW4qEOXslFy|Before 2047|Before 2050": {
+   "kind": "mc",
+   "what": "When will the world's Total Fertility Rate be reported to have fallen below replacement level?: Before 2047 / Before 2050",
+   "url": "https://manifold.markets/Tripping/when-will-the-worlds-total-fertilit",
+   "gap_before": -0.0354,
+   "gap_after": 0.0567,
+   "coherent_at": "2026-11-04T07:40Z",
+   "broken_at": "2026-11-05T07:42Z",
+   "order": {
+    "status": "open",
+    "last_flagged": "2026-11-05"
+   }
+  },
+  "2026-11-05|RaUhdxs3ToW4qEOXslFy|Before 2036|Before 2050": {
+   "kind": "mc",
+   "what": "When will the world's Total Fertility Rate be reported to have fallen below replacement level?: Before 2036 / Before 2050",
+   "url": "https://manifold.markets/Tripping/when-will-the-worlds-total-fertilit",
+   "gap_before": -0.0358,
+   "gap_after": 0.0563,
+   "coherent_at": "2026-11-04T07:40Z",
+   "broken_at": "2026-11-05T07:42Z",
+   "order": {
+    "status": "open",
+    "last_flagged": "2026-11-05"
+   }
+  },
+  "2026-11-05|RaUhdxs3ToW4qEOXslFy|Before 2035|Before 2050": {
+   "kind": "mc",
+   "what": "When will the world's Total Fertility Rate be reported to have fallen below replacement level?: Before 2035 / Before 2050",
+   "url": "https://manifold.markets/Tripping/when-will-the-worlds-total-fertilit",
+   "gap_before": -0.0431,
+   "gap_after": 0.049,
+   "coherent_at": "2026-11-04T07:40Z",
+   "broken_at": "2026-11-05T07:42Z",
+   "order": {
+    "status": "open",
+    "last_flagged": "2026-11-05"
+   }
+  },
+  "2026-11-05|RaUhdxs3ToW4qEOXslFy|Before 2034|Before 2049": {
+   "kind": "mc",
+   "what": "When will the world's Total Fertility Rate be reported to have fallen below replacement level?: Before 2034 / Before 2049",
+   "url": "https://manifold.markets/Tripping/when-will-the-worlds-total-fertilit",
+   "gap_before": -0.0483,
+   "gap_after": 0.0473,
+   "coherent_at": "2026-11-04T07:40Z",
+   "broken_at": "2026-11-05T07:42Z",
+   "order": {
+    "status": "open",
+    "last_flagged": "2026-11-05"
+   }
+  },
+  "2026-11-05|RaUhdxs3ToW4qEOXslFy|Before 2046|Before 2050": {
+   "kind": "mc",
+   "what": "When will the world's Total Fertility Rate be reported to have fallen below replacement level?: Before 2046 / Before 2050",
+   "url": "https://manifold.markets/Tripping/when-will-the-worlds-total-fertilit",
+   "gap_before": -0.0453,
+   "gap_after": 0.0468,
+   "coherent_at": "2026-11-04T07:40Z",
+   "broken_at": "2026-11-05T07:42Z",
+   "order": {
+    "status": "open",
+    "last_flagged": "2026-11-05"
+   }
+  },
+  "2026-11-05|RaUhdxs3ToW4qEOXslFy|Before 2045|Before 2049": {
+   "kind": "mc",
+   "what": "When will the world's Total Fertility Rate be reported to have fallen below replacement level?: Before 2045 / Before 2049",
+   "url": "https://manifold.markets/Tripping/when-will-the-worlds-total-fertilit",
+   "gap_before": -0.0501,
+   "gap_after": 0.0455,
+   "coherent_at": "2026-11-04T07:40Z",
+   "broken_at": "2026-11-05T07:42Z",
+   "order": {
+    "status": "open",
+    "last_flagged": "2026-11-05"
+   }
+  },
+  "2026-11-05|RaUhdxs3ToW4qEOXslFy|Before 2033|Before 2049": {
+   "kind": "mc",
+   "what": "When will the world's Total Fertility Rate be reported to have fallen below replacement level?: Before 2033 / Before 2049",
+   "url": "https://manifold.markets/Tripping/when-will-the-worlds-total-fertilit",
+   "gap_before": -0.0517,
+   "gap_after": 0.0439,
+   "coherent_at": "2026-11-04T07:40Z",
+   "broken_at": "2026-11-05T07:42Z",
+   "order": {
+    "status": "open",
+    "last_flagged": "2026-11-05"
+   }
+  },
+  "2026-11-05|RaUhdxs3ToW4qEOXslFy|Before 2044|Before 2049": {
+   "kind": "mc",
+   "what": "When will the world's Total Fertility Rate be reported to have fallen below replacement level?: Before 2044 / Before 2049",
+   "url": "https://manifold.markets/Tripping/when-will-the-worlds-total-fertilit",
+   "gap_before": -0.0551,
+   "gap_after": 0.0404,
+   "coherent_at": "2026-11-04T07:40Z",
+   "broken_at": "2026-11-05T07:42Z",
+   "order": {
+    "status": "open",
+    "last_flagged": "2026-11-05"
+   }
+  },
+  "2026-11-05|RaUhdxs3ToW4qEOXslFy|Before 2034|Before 2050": {
+   "kind": "mc",
+   "what": "When will the world's Total Fertility Rate be reported to have fallen below replacement level?: Before 2034 / Before 2050",
+   "url": "https://manifold.markets/Tripping/when-will-the-worlds-total-fertilit",
+   "gap_before": -0.0586,
+   "gap_after": 0.0335,
+   "coherent_at": "2026-11-04T07:40Z",
+   "broken_at": "2026-11-05T07:42Z",
+   "order": {
+    "status": "open",
+    "last_flagged": "2026-11-05"
+   }
+  },
+  "2026-11-05|RaUhdxs3ToW4qEOXslFy|Before 2045|Before 2050": {
+   "kind": "mc",
+   "what": "When will the world's Total Fertility Rate be reported to have fallen below replacement level?: Before 2045 / Before 2050",
+   "url": "https://manifold.markets/Tripping/when-will-the-worlds-total-fertilit",
+   "gap_before": -0.0604,
+   "gap_after": 0.0317,
+   "coherent_at": "2026-11-04T07:40Z",
+   "broken_at": "2026-11-05T07:42Z",
+   "order": {
+    "status": "open",
+    "last_flagged": "2026-11-05"
+   }
+  },
+  "2026-11-05|RaUhdxs3ToW4qEOXslFy|Before 2033|Before 2050": {
+   "kind": "mc",
+   "what": "When will the world's Total Fertility Rate be reported to have fallen below replacement level?: Before 2033 / Before 2050",
+   "url": "https://manifold.markets/Tripping/when-will-the-worlds-total-fertilit",
+   "gap_before": -0.0621,
+   "gap_after": 0.03,
+   "coherent_at": "2026-11-04T07:40Z",
+   "broken_at": "2026-11-05T07:42Z",
+   "order": {
+    "status": "open",
+    "last_flagged": "2026-11-05"
    }
   }
  }
