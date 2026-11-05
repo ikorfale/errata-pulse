@@ -275,6 +275,22 @@ document.getElementById('al-dot').className='al-dot';document.getElementById('al
 .catch(function(){document.getElementById('al-dot').className='al-dot err';document.getElementById('al-upd').textContent=S.err})}
 load();setInterval(load,60000);document.addEventListener('visibilitychange',function(){if(!document.hidden)load()})})();"""
 
+def region_specific_faq(n, iso, orow, H):
+    """Two questions only this region's page can answer (05.11, #625): where it announces alerts, and how often
+    alerts were declared there, from build-time data. Plain text, so the answer is in the HTML and the JSON-LD."""
+    chans = re.sub(r'<[^>]+>', '', orow.get(iso) or '').strip()
+    a1 = (t('The regional authorities and MChS announce alerts in their official channels. For {r} this page relays: {c}. Those channels, the regional government and sirens come first.', r=n, c=chans) if chans
+          else t('The regional government and the MChS office of {r} announce alerts in their official channels; this page has no checked channel for the region yet. Sirens and those official channels come first.', r=n))
+    out = [(t('Where are alerts in {r} officially announced?', r=n), a1)]
+    if H and H.get('days'):
+        last7 = H['days'][-7:]; r = H['regions'].get(iso, {})
+        h7 = sum(r.get(d, [0, 0])[0] for d in last7); n7 = sum(r.get(d, [0, 0])[1] for d in last7)
+        a2 = (t('In the last {k} recorded days (to {d}), {n} alerts were declared in {r}, {h} hours under alert in total.', k=len(last7), d=_dlabel(last7[-1]), n=n7, r=n, h=f'{h7:.1f}'.replace('.', ',' if i18n.LANG in ('ru', 'uk') else '.')) if n7 or h7 > 0
+              else t('In the last {k} recorded days (to {d}), no alert was declared in {r}.', k=len(last7), d=_dlabel(last7[-1]), r=n))
+        a2 += ' ' + t('Counted from this site\u2019s own snapshots of the official alert feed every 5 minutes since {f}, so it is a lower bound and is updated about once a day; the chart above shows each day.', f=_dlabel(H['first'][:10]))
+        out.append((t('How often are alerts declared in {r}?', r=n), a2))
+    return out
+
 def region_faq(n):
     """Six plain questions a visitor asks on a region page (also emitted as FAQPage JSON-LD)."""
     return [
@@ -310,7 +326,7 @@ def region_pages(R, names, orow, S, todo, links):
         n = names[iso]; sl = slug(R[iso]['en']); path = f'/alerts/{sl}/'
         title = t('{r}: UAV and missile alerts now | Chaos Pulse', r=n)
         desc = t('Is a UAV or missile danger declared in {r} right now, since when, and when was the all-clear: live status from official announcements, the region\u2019s official channels and what to do.', r=n)
-        faq = region_faq(n)
+        faq = region_specific_faq(n, iso, orow, H) + region_faq(n)
         faq_html = f'<h2 class="sec" id="faq">{t("Questions about this page")}</h2><div class="al-faq">' + ''.join(
             f'<details><summary>{esc(q)}</summary><p>{esc(a)}</p></details>' for q, a in faq) + '</div>'
         js = JS.replace('__ISO__', json.dumps(iso)).replace('__S__', json.dumps(S, ensure_ascii=False)).replace('__LANG__', json.dumps(L))
@@ -319,7 +335,7 @@ def region_pages(R, names, orow, S, todo, links):
 <h1 class="ptitle">{t('{r}: UAV and missile alerts now', r=esc(n))}</h1>
 <p class="lede">{t('Whether a UAV or missile danger is declared in this region right now, since when, and when the all-clear was given, from the official announcements of the regional authorities and MChS. Updated every minute; a declared alert reaches this page within one to three minutes.')}</p>
 <div class="al-me"><div class="al-live"><span class="al-dot" id="al-dot"></span><span id="al-upd">{t('Loading\u2026')}</span></div>
-<div class="st" id="al-st">\u2026</div><div class="meta" id="al-sub"></div>
+<div class="st" id="al-st">\u2026</div><noscript><p class="meta">{t('The live status needs JavaScript. Without it, check the official channels below.')}</p></noscript><div class="meta" id="al-sub"></div>
 <div class="meta" style="margin-top:10px"><b>{S['official']}:</b> {orow.get(iso) or S['nochan']}</div></div>
 <p class="meta"><a href="/alerts/">{t('Map of all regions')}</a> \u00b7 <a href="/alerts/#how">{t('How this map works')}</a> \u00b7 {t('Not a siren: follow your region\u2019s official channels, sirens and MChS messages first.')}</p>
 <div class="prose"><p>{t('This page shows only officially declared alerts for the whole region: the \u201cUAV danger\u201d and \u201cmissile danger\u201d regimes announced by the regional authorities and MChS, and the all-clear. On purpose it shows no towns, no drone counts, no flight directions and no interceptions. A region whose alert has had no update for {h} hours is marked as possibly ended without a relayed all-clear.', h=4)}</p></div>

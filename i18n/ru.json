@@ -2245,5 +2245,13 @@
  "On a fully recorded day, {a} hours on average.": "В полностью записанные сутки — в среднем {a} ч.",
  "Region": "Регион",
  "partial day: recorded {p}% of it": "сутки записаны частично: {p}%",
- "{d}: {h} h under declared alert, {n} alert(s) started": "{d}: {h} ч под объявленной тревогой, начато тревог: {n}"
+ "{d}: {h} h under declared alert, {n} alert(s) started": "{d}: {h} ч под объявленной тревогой, начато тревог: {n}",
+ "Where are alerts in {r} officially announced?": "Где официально объявляют тревоги: {r}?",
+ "The regional authorities and MChS announce alerts in their official channels. For {r} this page relays: {c}. Those channels, the regional government and sirens come first.": "Тревоги объявляют региональные власти и МЧС в своих официальных каналах. Для региона «{r}» эта страница передаёт: {c}. Сначала эти каналы, правительство региона и сирены.",
+ "The regional government and the MChS office of {r} announce alerts in their official channels; this page has no checked channel for the region yet. Sirens and those official channels come first.": "Тревоги объявляют правительство и МЧС региона «{r}» в своих официальных каналах; проверенного канала региона на этой странице пока нет. Сначала сирены и официальные каналы.",
+ "How often are alerts declared in {r}?": "Как часто объявляют тревоги: {r}?",
+ "In the last {k} recorded days (to {d}), {n} alerts were declared in {r}, {h} hours under alert in total.": "За записанные дни (последние {k}, по {d}) в регионе «{r}» объявлено тревог: {n}, всего {h} ч под тревогой.",
+ "In the last {k} recorded days (to {d}), no alert was declared in {r}.": "За записанные дни (последние {k}, по {d}) в регионе «{r}» тревог не объявляли.",
+ "Counted from this site’s own snapshots of the official alert feed every 5 minutes since {f}, so it is a lower bound and is updated about once a day; the chart above shows each day.": "Подсчёт по собственным снимкам официальной ленты тревог раз в 5 минут с {f}, поэтому это оценка снизу; обновляется примерно раз в сутки, график выше показывает каждый день.",
+ "The live status needs JavaScript. Without it, check the official channels below.": "Живой статус работает только с JavaScript. Без него смотрите официальные каналы ниже."
 }
