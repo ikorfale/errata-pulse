@@ -1,0 +1,330 @@
+{
+"RU-AL": {
+"ru": "Горно-Алтайск",
+"en": "Gorno-Altaysk"
+},
+"RU-PSK": {
+"ru": "Псков",
+"en": "Pskov"
+},
+"RU-KDA": {
+"ru": "Краснодар",
+"en": "Krasnodar"
+},
+"RU-KC": {
+"ru": "Черкесск",
+"en": "Cherkessk"
+},
+"RU-KB": {
+"ru": "Нальчик",
+"en": "Nalchik"
+},
+"RU-SE": {
+"ru": "Владикавказ",
+"en": "Vladikavkaz"
+},
+"RU-IN": {
+"ru": "Магас",
+"en": "Magas"
+},
+"RU-CE": {
+"ru": "Грозный",
+"en": "Grozny"
+},
+"RU-DA": {
+"ru": "Махачкала",
+"en": "Makhachkala"
+},
+"RU-MUR": {
+"ru": "Мурманск",
+"en": "Murmansk"
+},
+"RU-KR": {
+"ru": "Петрозаводск",
+"en": "Petrozavodsk"
+},
+"RU-KGD": {
+"ru": "Калининград",
+"en": "Kaliningrad"
+},
+"RU-SMO": {
+"ru": "Смоленск",
+"en": "Smolensk"
+},
+"RU-BRY": {
+"ru": "Брянск",
+"en": "Bryansk"
+},
+"RU-KRS": {
+"ru": "Курск",
+"en": "Kursk"
+},
+"RU-BEL": {
+"ru": "Белгород",
+"en": "Belgorod"
+},
+"RU-VOR": {
+"ru": "Воронеж",
+"en": "Voronezh"
+},
+"RU-ROS": {
+"ru": "Ростов-на-Дону",
+"en": "Rostov-on-Don"
+},
+"RU-BU": {
+"ru": "Улан-Удэ",
+"en": "Ulan-Ude"
+},
+"RU-TY": {
+"ru": "Кызыл",
+"en": "Kyzyl"
+},
+"RU-ZAB": {
+"ru": "Чита",
+"en": "Chita"
+},
+"RU-AMU": {
+"ru": "Благовещенск",
+"en": "Blagoveshchensk"
+},
+"RU-YEV": {
+"ru": "Биробиджан",
+"en": "Birobidzhan"
+},
+"RU-KHA": {
+"ru": "Хабаровск",
+"en": "Khabarovsk"
+},
+"RU-PRI": {
+"ru": "Владивосток",
+"en": "Vladivostok"
+},
+"RU-TYU": {
+"ru": "Тюмень",
+"en": "Tyumen"
+},
+"RU-KGN": {
+"ru": "Курган",
+"en": "Kurgan"
+},
+"RU-OMS": {
+"ru": "Омск",
+"en": "Omsk"
+},
+"RU-NVS": {
+"ru": "Новосибирск",
+"en": "Novosibirsk"
+},
+"RU-CHE": {
+"ru": "Челябинск",
+"en": "Chelyabinsk"
+},
+"RU-ALT": {
+"ru": "Барнаул",
+"en": "Barnaul"
+},
+"RU-ORE": {
+"ru": "Оренбург",
+"en": "Orenburg"
+},
+"RU-SAR": {
+"ru": "Саратов",
+"en": "Saratov"
+},
+"RU-AST": {
+"ru": "Астрахань",
+"en": "Astrakhan"
+},
+"RU-VGG": {
+"ru": "Волгоград",
+"en": "Volgograd"
+},
+"RU-MAG": {
+"ru": "Магадан",
+"en": "Magadan"
+},
+"RU-SAK": {
+"ru": "Южно-Сахалинск",
+"en": "Yuzhno-Sakhalinsk"
+},
+"RU-CHU": {
+"ru": "Анадырь",
+"en": "Anadyr"
+},
+"RU-YAN": {
+"ru": "Салехард",
+"en": "Salekhard"
+},
+"RU-NEN": {
+"ru": "Нарьян-Мар",
+"en": "Naryan-Mar"
+},
+"RU-SA": {
+"ru": "Якутск",
+"en": "Yakutsk"
+},
+"RU-ARK": {
+"ru": "Архангельск",
+"en": "Arkhangelsk"
+},
+"RU-KYA": {
+"ru": "Красноярск",
+"en": "Krasnoyarsk"
+},
+"RU-KL": {
+"ru": "Элиста",
+"en": "Elista"
+},
+"RU-KAM": {
+"ru": "Петропавловск-Камчатский",
+"en": "Petropavlovsk-Kamchatsky"
+},
+"RU-BA": {
+"ru": "Уфа",
+"en": "Ufa"
+},
+"RU-SVE": {
+"ru": "Екатеринбург",
+"en": "Yekaterinburg"
+},
+"RU-KHM": {
+"ru": "Ханты-Мансийск",
+"en": "Khanty-Mansiysk"
+},
+"RU-LIP": {
+"ru": "Липецк",
+"en": "Lipetsk"
+},
+"RU-TAM": {
+"ru": "Тамбов",
+"en": "Tambov"
+},
+"RU-TOM": {
+"ru": "Томск",
+"en": "Tomsk"
+},
+"RU-TA": {
+"ru": "Казань",
+"en": "Kazan"
+},
+"RU-ULY": {
+"ru": "Ульяновск",
+"en": "Ulyanovsk"
+},
+"RU-PNZ": {
+"ru": "Пенза",
+"en": "Penza"
+},
+"RU-KEM": {
+"ru": "Кемерово",
+"en": "Kemerovo"
+},
+"RU-ORL": {
+"ru": "Орёл",
+"en": "Oryol"
+},
+"RU-IRK": {
+"ru": "Иркутск",
+"en": "Irkutsk"
+},
+"RU-KK": {
+"ru": "Абакан",
+"en": "Abakan"
+},
+"RU-MO": {
+"ru": "Саранск",
+"en": "Saransk"
+},
+"RU-KLU": {
+"ru": "Калуга",
+"en": "Kaluga"
+},
+"RU-KOS": {
+"ru": "Кострома",
+"en": "Kostroma"
+},
+"RU-YAR": {
+"ru": "Ярославль",
+"en": "Yaroslavl"
+},
+"RU-VLA": {
+"ru": "Владимир",
+"en": "Vladimir"
+},
+"RU-RYA": {
+"ru": "Рязань",
+"en": "Ryazan"
+},
+"RU-IVA": {
+"ru": "Иваново",
+"en": "Ivanovo"
+},
+"RU-NIZ": {
+"ru": "Нижний Новгород",
+"en": "Nizhny Novgorod"
+},
+"RU-TUL": {
+"ru": "Тула",
+"en": "Tula"
+},
+"RU-CU": {
+"ru": "Чебоксары",
+"en": "Cheboksary"
+},
+"RU-VLG": {
+"ru": "Вологда",
+"en": "Vologda"
+},
+"RU-NGR": {
+"ru": "Великий Новгород",
+"en": "Veliky Novgorod"
+},
+"RU-TVE": {
+"ru": "Тверь",
+"en": "Tver"
+},
+"RU-ME": {
+"ru": "Йошкар-Ола",
+"en": "Yoshkar-Ola"
+},
+"RU-KIR": {
+"ru": "Киров",
+"en": "Kirov"
+},
+"RU-UD": {
+"ru": "Ижевск",
+"en": "Izhevsk"
+},
+"RU-KO": {
+"ru": "Сыктывкар",
+"en": "Syktyvkar"
+},
+"RU-PER": {
+"ru": "Пермь",
+"en": "Perm"
+},
+"RU-SAM": {
+"ru": "Самара",
+"en": "Samara"
+},
+"RU-STA": {
+"ru": "Ставрополь",
+"en": "Stavropol"
+},
+"RU-AD": {
+"ru": "Майкоп",
+"en": "Maykop"
+},
+"RU-LEN": {
+"ru": "Ленобласть",
+"en": "Leningrad region"
+},
+"RU-MOW": {
+"ru": "Подмосковье",
+"en": "Moscow region"
+},
+"UA-43": {
+"ru": "Симферополь",
+"en": "Simferopol"
+}
+}

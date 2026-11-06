@@ -6,6 +6,7 @@ Leaflet + OpenStreetMap/CARTO tiles, loaded by the browser; the page itself is s
 import json, os, html
 import build as B
 from i18n import t
+import i18n
 HERE = os.path.dirname(os.path.abspath(__file__)); SRC = os.path.join(HERE, 'data', 'drones.json')
 
 def main():
@@ -25,6 +26,7 @@ def main():
 @keyframes drp{{50%{{opacity:.25}}}}.dr-pulse{{animation:drq 1.4s ease-out infinite}}@keyframes drq{{0%{{stroke-opacity:1}}100%{{stroke-opacity:.1}}}}</style>
 <h1 class="ptitle">{t('Drone and missile alerts over Russia')}</h1>
 <p class="lede">{t('Where public Russian alert aggregators reported drones, missile danger, air defence fire and impacts, and which way the drones were said to fly. A map of how far and how often the air war reaches into Russia, replayed hour by hour, not a live tracker.')}</p>
+<p class="note"><strong>{t('Is there an alert in your region right now?')}</strong> {t('This map is delayed. For the live status of officially declared UAV and missile alerts by region, see the <a href="{u}">live alert map of Russia</a>.', u=i18n.lpath('/alerts/'))}</p>
 <p class="note">{t('<strong>Delayed on purpose.</strong> Nothing newer than {h} hours is shown, and directions are drawn as corridors with their ends rounded to about 50 km: a live map of drone positions and headings would be operational information. Every point and arrow is a report by a channel that relays regional alerts and local chats, not a confirmed fact. Data: {r}; cutoff {c} UTC.', h=d.get('delay_hours', 6), r=esc(rng), c='<span id="dr-cut">' + esc(d.get('cutoff', '')[:16].replace('T', ' ')) + '</span>')}</p>
 <p class="meta"><span class="dr-live"></span>{t('Data updated every 3 hours; the page picks it up by itself')} · {t('Sources')}: @radarrussiia, @locatorru, @radar_plus_bpla</p>
 <div class="dr-tabs" role="tablist"><button data-m="replay" class="on">{t('Replay')}</button><button data-m="corr">{t('Corridors')}</button><button data-m="heat">{t('Where')}</button>
@@ -78,7 +80,7 @@ document.getElementById('dr-h').oninput=function(e){{hi=+e.target.value;frame()}
 function load(first){{fetch('/drones/data.json?'+Date.now()).then(function(r){{return r.json()}}).then(function(j){{var atEnd=!hours.length||hi>=hours.length-1;D=j;document.getElementById('dr-cut').textContent=(j.cutoff||'').slice(0,16).replace('T',' ');
 if(mode=='replay'){{hours=Object.keys(D.timeline||{{}}).filter(function(h){{return days().indexOf(h.slice(0,10))>=0}});if(first||atEnd)hi=Math.max(0,hours.length-1)}}draw();tables()}})}}
 load(true);setInterval(function(){{if(!timer)load(false)}},300000)}})();</script>"""
-    B.page('/drones/', t('Drone and missile alerts over Russia, mapped | Chaos Pulse'), t('Where public alert channels reported drones, missile danger, air defence and impacts across Russia, with reported flight corridors and an hour-by-hour replay. Delayed: the air war’s reach, not a live tracker.'), body, 'Dataset', active='drones')
+    B.page('/drones/', t('Drone attacks on Russia: delayed map and replay | Chaos Pulse'), t('Where public alert channels reported drones, missile danger, air defence and impacts across Russia, with reported flight corridors and an hour-by-hour replay. Delayed: the air war’s reach, not a live tracker.'), body, 'Dataset', active='drones')
     print('built drones:', len(pts), 'points')
 
 def esc(s): return html.escape(str(s))

@@ -308,6 +308,8 @@ def region_faq(n):
          t('Silence is not an all-clear. The page shows the last declared status until the authorities announce the all-clear; if nothing is relayed for {h} hours it is marked as possibly ended. Check your region\u2019s official channel.', h=4)),
     ]
 
+CAPS = json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'data', 'alerts_capitals.json')))
+
 def region_pages(R, names, orow, S, todo, links):
     H = load_hours()
     """One page per region (/alerts/<slug>/): live status of this region only, its official channels, what to do."""
@@ -324,15 +326,18 @@ def region_pages(R, names, orow, S, todo, links):
 </style>"""
     for iso in sorted(R, key=lambda k: names[k]):
         n = names[iso]; sl = slug(R[iso]['en']); path = f'/alerts/{sl}/'
-        title = t('{r}: UAV and missile alerts now | Chaos Pulse', r=n)
-        desc = t('Is a UAV or missile danger declared in {r} right now, since when, and when was the all-clear: live status from official announcements, the region\u2019s official channels and what to do.', r=n)
-        faq = region_specific_faq(n, iso, orow, H) + region_faq(n)
+        cap = CAPS.get(iso, {}).get(L) or CAPS.get(iso, {}).get('en')
+        nn = f'{n} ({cap})' if cap and not re.search(r'(?<!\w)' + re.escape(cap) + r'(?!\w)', n, re.I) else n   # 06.11: people search by city ("тревога воронеж"), so the capital goes in title/h1/description
+        title = t('{r}: UAV and missile alerts now', r=nn)
+        desc = t('Is a UAV or missile danger declared in {r} right now, since when, and when was the all-clear: live status from official announcements, the region\u2019s official channels and what to do.', r=nn)
+        faq = region_specific_faq(n, iso, orow, H) + ([(t('Is there an air-raid alert in {c} now?', c=cap),
+               t('Alerts are declared for the whole region, so an alert in {r} covers {c} too. The live status at the top of this page shows whether a UAV or missile danger is declared now and since when; sirens and the official channels come first.', r=n, c=cap))] if cap and iso not in ('RU-LEN', 'RU-MOW') and not re.search(r'(?<!\w)' + re.escape(cap) + r'(?!\w)', n, re.I) else []) + region_faq(n)
         faq_html = f'<h2 class="sec" id="faq">{t("Questions about this page")}</h2><div class="al-faq">' + ''.join(
             f'<details><summary>{esc(q)}</summary><p>{esc(a)}</p></details>' for q, a in faq) + '</div>'
         js = JS.replace('__ISO__', json.dumps(iso)).replace('__S__', json.dumps(S, ensure_ascii=False)).replace('__LANG__', json.dumps(L))
         body = f"""{css}
 <p class="kicker"><a href="/alerts/">{t('Air-raid alerts in Russia')}</a> \u00b7 {t('region page')}</p>
-<h1 class="ptitle">{t('{r}: UAV and missile alerts now', r=esc(n))}</h1>
+<h1 class="ptitle">{t('{r}: UAV and missile alerts now', r=esc(nn))}</h1>
 <p class="lede">{t('Whether a UAV or missile danger is declared in this region right now, since when, and when the all-clear was given, from the official announcements of the regional authorities and MChS. Updated every minute; a declared alert reaches this page within one to three minutes.')}</p>
 <div class="al-me"><div class="al-live"><span class="al-dot" id="al-dot"></span><span id="al-upd">{t('Loading\u2026')}</span></div>
 <div class="st" id="al-st">\u2026</div><noscript><p class="meta">{t('The live status needs JavaScript. Without it, check the official channels below.')}</p></noscript><div class="meta" id="al-sub"></div>
