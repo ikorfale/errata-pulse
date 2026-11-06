@@ -1,5 +1,5 @@
 {
- "built_at": "2026-11-05T07:49Z",
+ "built_at": "2026-11-06T07:49Z",
  "runs": [
   "2026-10-16",
   "2026-10-17",
@@ -21,7 +21,8 @@
   "2026-11-02",
   "2026-11-03",
   "2026-11-04",
-  "2026-11-05"
+  "2026-11-05",
+  "2026-11-06"
  ],
  "excluded": {
   "new-detector": 4,
@@ -40,7 +41,7 @@
    "broken_at": "2026-10-26T07:43Z",
    "order": {
     "status": "open",
-    "last_flagged": "2026-11-05"
+    "last_flagged": "2026-11-06"
    },
    "next_trade": {
     "status": "traded",
@@ -114,11 +115,11 @@
    "broken_at": "2026-10-30T07:43Z",
    "order": {
     "status": "open",
-    "last_flagged": "2026-11-05"
+    "last_flagged": "2026-11-06"
    },
    "next_trade": {
     "status": "censored",
-    "hours": 150.9
+    "hours": 174.9
    }
   },
   "2026-11-03|JAh4Vih930dElke1IGGi|fcXfUNB0mY57jZuvsQai": {
@@ -131,11 +132,11 @@
    "broken_at": "2026-11-03T07:42Z",
    "order": {
     "status": "open",
-    "last_flagged": "2026-11-05"
+    "last_flagged": "2026-11-06"
    },
    "next_trade": {
     "status": "censored",
-    "hours": 50.4
+    "hours": 74.4
    }
   },
   "2026-11-04|tSuUnnZnIt|aUNX4wgE3q76KDYhL4t7": {
@@ -166,8 +167,10 @@
    "coherent_at": "2026-11-03T07:42Z",
    "broken_at": "2026-11-04T07:40Z",
    "order": {
-    "status": "open",
-    "last_flagged": "2026-11-05"
+    "status": "repriced",
+    "last_flagged": "2026-11-05",
+    "first_unflagged": "2026-11-06",
+    "gap_at_exit": -0.0154
    },
    "next_trade": {
     "status": "traded",
@@ -184,11 +187,11 @@
    "broken_at": "2026-11-05T07:42Z",
    "order": {
     "status": "open",
-    "last_flagged": "2026-11-05"
+    "last_flagged": "2026-11-06"
    },
    "next_trade": {
     "status": "censored",
-    "hours": 14.4
+    "hours": 38.4
    }
   },
   "2026-11-05|BKr7KGDSkT6U3dGlqxIk|Swud8FP0KzyzcCm1omWR": {
@@ -201,11 +204,11 @@
    "broken_at": "2026-11-05T07:42Z",
    "order": {
     "status": "open",
-    "last_flagged": "2026-11-05"
+    "last_flagged": "2026-11-06"
    },
    "next_trade": {
     "status": "censored",
-    "hours": 14.4
+    "hours": 38.4
    }
   },
   "2026-11-05|RaUhdxs3ToW4qEOXslFy|Before 2048|Before 2049": {
@@ -218,7 +221,7 @@
    "broken_at": "2026-11-05T07:42Z",
    "order": {
     "status": "open",
-    "last_flagged": "2026-11-05"
+    "last_flagged": "2026-11-06"
    }
   },
   "2026-11-05|RaUhdxs3ToW4qEOXslFy|Before 2047|Before 2049": {
@@ -231,7 +234,7 @@
    "broken_at": "2026-11-05T07:42Z",
    "order": {
     "status": "open",
-    "last_flagged": "2026-11-05"
+    "last_flagged": "2026-11-06"
    }
   },
   "2026-11-05|RaUhdxs3ToW4qEOXslFy|Before 2036|Before 2049": {
@@ -244,7 +247,7 @@
    "broken_at": "2026-11-05T07:42Z",
    "order": {
     "status": "open",
-    "last_flagged": "2026-11-05"
+    "last_flagged": "2026-11-06"
    }
   },
   "2026-11-05|RaUhdxs3ToW4qEOXslFy|Before 2048|Before 2050": {
@@ -257,7 +260,7 @@
    "broken_at": "2026-11-05T07:42Z",
    "order": {
     "status": "open",
-    "last_flagged": "2026-11-05"
+    "last_flagged": "2026-11-06"
    }
   },
   "2026-11-05|RaUhdxs3ToW4qEOXslFy|Before 2035|Before 2049": {
@@ -270,7 +273,7 @@
    "broken_at": "2026-11-05T07:42Z",
    "order": {
     "status": "open",
-    "last_flagged": "2026-11-05"
+    "last_flagged": "2026-11-06"
    }
   },
   "2026-11-05|RaUhdxs3ToW4qEOXslFy|Before 2046|Before 2049": {
@@ -283,7 +286,7 @@
    "broken_at": "2026-11-05T07:42Z",
    "order": {
     "status": "open",
-    "last_flagged": "2026-11-05"
+    "last_flagged": "2026-11-06"
    }
   },
   "2026-11-05|RaUhdxs3ToW4qEOXslFy|Before 2047|Before 2050": {
@@ -296,7 +299,7 @@
    "broken_at": "2026-11-05T07:42Z",
    "order": {
     "status": "open",
-    "last_flagged": "2026-11-05"
+    "last_flagged": "2026-11-06"
    }
   },
   "2026-11-05|RaUhdxs3ToW4qEOXslFy|Before 2036|Before 2050": {
@@ -309,7 +312,7 @@
    "broken_at": "2026-11-05T07:42Z",
    "order": {
     "status": "open",
-    "last_flagged": "2026-11-05"
+    "last_flagged": "2026-11-06"
    }
   },
   "2026-11-05|RaUhdxs3ToW4qEOXslFy|Before 2035|Before 2050": {
@@ -322,7 +325,7 @@
    "broken_at": "2026-11-05T07:42Z",
    "order": {
     "status": "open",
-    "last_flagged": "2026-11-05"
+    "last_flagged": "2026-11-06"
    }
   },
   "2026-11-05|RaUhdxs3ToW4qEOXslFy|Before 2034|Before 2049": {
@@ -335,7 +338,7 @@
    "broken_at": "2026-11-05T07:42Z",
    "order": {
     "status": "open",
-    "last_flagged": "2026-11-05"
+    "last_flagged": "2026-11-06"
    }
   },
   "2026-11-05|RaUhdxs3ToW4qEOXslFy|Before 2046|Before 2050": {
@@ -348,7 +351,7 @@
    "broken_at": "2026-11-05T07:42Z",
    "order": {
     "status": "open",
-    "last_flagged": "2026-11-05"
+    "last_flagged": "2026-11-06"
    }
   },
   "2026-11-05|RaUhdxs3ToW4qEOXslFy|Before 2045|Before 2049": {
@@ -361,7 +364,7 @@
    "broken_at": "2026-11-05T07:42Z",
    "order": {
     "status": "open",
-    "last_flagged": "2026-11-05"
+    "last_flagged": "2026-11-06"
    }
   },
   "2026-11-05|RaUhdxs3ToW4qEOXslFy|Before 2033|Before 2049": {
@@ -374,7 +377,7 @@
    "broken_at": "2026-11-05T07:42Z",
    "order": {
     "status": "open",
-    "last_flagged": "2026-11-05"
+    "last_flagged": "2026-11-06"
    }
   },
   "2026-11-05|RaUhdxs3ToW4qEOXslFy|Before 2044|Before 2049": {
@@ -387,7 +390,7 @@
    "broken_at": "2026-11-05T07:42Z",
    "order": {
     "status": "open",
-    "last_flagged": "2026-11-05"
+    "last_flagged": "2026-11-06"
    }
   },
   "2026-11-05|RaUhdxs3ToW4qEOXslFy|Before 2034|Before 2050": {
@@ -400,7 +403,7 @@
    "broken_at": "2026-11-05T07:42Z",
    "order": {
     "status": "open",
-    "last_flagged": "2026-11-05"
+    "last_flagged": "2026-11-06"
    }
   },
   "2026-11-05|RaUhdxs3ToW4qEOXslFy|Before 2045|Before 2050": {
@@ -413,7 +416,7 @@
    "broken_at": "2026-11-05T07:42Z",
    "order": {
     "status": "open",
-    "last_flagged": "2026-11-05"
+    "last_flagged": "2026-11-06"
    }
   },
   "2026-11-05|RaUhdxs3ToW4qEOXslFy|Before 2033|Before 2050": {
@@ -426,7 +429,7 @@
    "broken_at": "2026-11-05T07:42Z",
    "order": {
     "status": "open",
-    "last_flagged": "2026-11-05"
+    "last_flagged": "2026-11-06"
    }
   }
  }
