@@ -16454,8 +16454,8 @@
  "errors": [
   "gdelt_bulk arms deals: median 2 docs/day, too rare",
   "yandex_cloud: HTTPError HTTP Error 403: Forbidden",
-  "missing since 2026-11-04 (39): mob:court_337_28d, mob:court_337_matched, mob:court_337_per_court, mob:court_338_28d, mob:court_338_matched, mob:duma_news7, mob:ee_cars_queue, mob:ee_cross_cars_7d, mob:ee_first_slot_days, mob:ee_wait_cars_h, mob:ee_wait_cars_h_7d, mob:fed_hits …",
   "mobil flights: no Travelpayouts key (travelpayouts.key absent), skipped",
-  "mobil duma-api: data stale, newest bill event 2025-02-14; API counts not used"
+  "mobil duma-api: data stale, newest bill event 2025-02-14; API counts not used",
+  "missing since 2026-11-04 (2): mob:wiki:ru:Военный_билет, mob:wiki:uk:ТЦК"
  ]
 }
