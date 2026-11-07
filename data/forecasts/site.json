@@ -1,14 +1,14 @@
 {
- "generated": "2026-11-07T22:38:37.821137+00:00",
+ "generated": "2026-11-07T23:24:53.978310+00:00",
  "counts": {
-  "open": 30,
+  "open": 34,
   "resolved": 12,
   "annulled": 0
  },
  "selection": {
-  "candidates": 11,
-  "asked": 10,
-  "dropped": 1,
+  "candidates": 16,
+  "asked": 14,
+  "dropped": 2,
   "pending": 0,
   "asked_without_draft": 32,
   "drafts_since": "2026-10-24"
@@ -82,13 +82,13 @@
   }
  ],
  "models": {
-  "trend": 0.126,
-  "base": 0.2918,
-  "threshold": 0.0228,
   "second": 0.04,
-  "signals": 0.2015,
+  "threshold": 0.0228,
+  "trend": 0.126,
+  "mine": 0.3499,
   "fable": 0.3025,
-  "mine": 0.3499
+  "base": 0.2918,
+  "signals": 0.2015
  },
  "questions": [
   {
@@ -3028,7 +3028,7 @@
    "index": "pulse",
    "opened": "2026-10-24",
    "status": "open",
-   "p": 0.76,
+   "p": 0.86,
    "base_rate": 0.35,
    "method": "mine written before Fable (tmp log 23:18Z); Fable independent from evidence only, never saw my number; ensemble = log-odds mean with base rate",
    "history": [
@@ -3046,6 +3046,16 @@
      "date": "2026-11-03",
      "p": 0.76,
      "reason": "Abu Dhabi 10-11 Nov now confirmed by both the US mediator (Witkoff 02.11) and the Kremlin (Peskov 03.11, Medinsky leads); nine days of buffer to 20 Nov; risks: slip after the 03.11 grid strike, proximity format instead of one session. Fable independent: 0.78",
+     "models": {
+      "base": 0.7,
+      "signals": 0.78,
+      "trend": 0.8
+     }
+    },
+    {
+     "date": "2026-11-07",
+     "p": 0.86,
+     "reason": "Kremlin confirmed 07.11 an upgraded delegation (Medinsky, Ryabkov, Galuzin, Kostyukov) for 10-11 Nov; Ukraine's led by Umerov (Reuters/Kyiv Independent 07.11). Second model independently 0.85.",
      "models": {
       "base": 0.7,
       "signals": 0.78,
@@ -3298,6 +3308,118 @@
    "crowd": [],
    "crowd_history": [],
    "draft": "d11"
+  },
+  {
+   "id": "43",
+   "title": "Will Iran fire a ballistic missile at a target more than 2,000 km from Iranian territory between 8 November and 31 December 2026?",
+   "criteria": "YES if Iran's armed forces claim, or the US, UK or a targeted government states, that Iran launched a ballistic missile at a target more than 2,000 km from Iran's nearest border, between 8 Nov and 31 Dec 2026 (UTC). Interception does not matter.",
+   "deadline": "2026-12-31",
+   "category": "war",
+   "index": "pulse",
+   "opened": "2026-11-07",
+   "status": "open",
+   "p": 0.06,
+   "base_rate": 0.08,
+   "method": "base: one reported long-range attempt (Diego Garcia) in ~8 months of war, scaled down for the current low-intensity phase; signals: IRGC lifted the limit 07.11 but its adviser says ranges are ~2,000 km; trend: only point US strikes, no Iranian strikes on bases",
+   "history": [
+    {
+     "date": "2026-11-07",
+     "p": 0.06,
+     "reason": "IRGC says the 2,000 km self-limit is lifted (AP 07.11); capability beyond it not shown; requires a resumed full war",
+     "models": {
+      "base": 0.08,
+      "signals": 0.06,
+      "trend": 0.05
+     }
+    }
+   ],
+   "crowd": [],
+   "crowd_history": [],
+   "draft": "d12"
+  },
+  {
+   "id": "44",
+   "title": "Will the ICE BofA US High Yield OAS close above 4.00% on any day by 31 December 2026?",
+   "criteria": "YES if FRED series BAMLH0A0HYM2 shows any daily value above 4.00 for a date from 9 Nov to 31 Dec 2026.",
+   "deadline": "2026-12-31",
+   "category": "economy",
+   "index": "pulse",
+   "opened": "2026-11-07",
+   "status": "open",
+   "p": 0.2,
+   "base_rate": 0.25,
+   "method": "base: lognormal threshold from 3.48, annual vol 0.45, 54 days: end-above 0.19, touch ~0.3; signals: CCC OAS ~13% (99th pct since 2023), AI credit stress (CoreWeave >16%); trend: oil -13% and EM spreads tightening",
+   "history": [
+    {
+     "date": "2026-11-07",
+     "p": 0.2,
+     "reason": "ensemble with second model (independent 0.12: Brent -13% is relief) and my 0.24",
+     "models": {
+      "base": 0.25,
+      "signals": 0.3,
+      "trend": 0.18
+     }
+    }
+   ],
+   "crowd": [],
+   "crowd_history": [],
+   "draft": "d13"
+  },
+  {
+   "id": "45",
+   "title": "Will Ukrenergo announce a day with no hourly outage schedules for household consumers anywhere in Ukraine by 30 November 2026?",
+   "criteria": "YES if Ukrenergo states that on some day between 8 and 30 Nov 2026 no hourly outage schedules for household consumers apply in any region (emergency outages also count as outages).",
+   "deadline": "2026-11-30",
+   "category": "energy",
+   "index": "pulse",
+   "opened": "2026-11-07",
+   "status": "open",
+   "p": 0.17,
+   "base_rate": 0.25,
+   "method": "base: in October there were days without household schedules between strike waves; signals: 07.11 strikes on NPP-to-Kyiv substations, DTEK says long repair; trend: winter load rising, strikes every 1-2 nights",
+   "history": [
+    {
+     "date": "2026-11-07",
+     "p": 0.17,
+     "reason": "ensemble with second model (independent 0.30: schedule-free days happened in past Novembers) and my 0.12",
+     "models": {
+      "base": 0.25,
+      "signals": 0.08,
+      "trend": 0.1
+     }
+    }
+   ],
+   "crowd": [],
+   "crowd_history": [],
+   "draft": "d14"
+  },
+  {
+   "id": "46",
+   "title": "Will UKMTO or JMIC confirm a merchant vessel struck a sea mine in or near the Strait of Hormuz between 8 November and 15 December 2026?",
+   "criteria": "YES if UKMTO or JMIC states that a merchant vessel struck a mine (not an unknown projectile) in the Strait of Hormuz, Gulf of Oman or Persian Gulf, incident date 8 Nov to 15 Dec 2026.",
+   "deadline": "2026-12-15",
+   "category": "energy",
+   "index": "pulse",
+   "opened": "2026-11-07",
+   "status": "open",
+   "p": 0.15,
+   "base_rate": 0.1,
+   "method": "base: CENTCOM and UKMTO have not confirmed any IRGC mine claim in recent weeks; signals: IRGC claims mine hits almost daily 01-07.11; trend: UKMTO incidents are projectiles/limpets, not mines",
+   "history": [
+    {
+     "date": "2026-11-07",
+     "p": 0.15,
+     "reason": "second model independently 0.18; my 0.14",
+     "models": {
+      "base": 0.1,
+      "signals": 0.2,
+      "trend": 0.12
+     }
+    }
+   ],
+   "crowd": [],
+   "crowd_history": [],
+   "draft": "d16"
   }
  ]
 }
