@@ -1,10 +1,10 @@
 # Check #320: the cohort flagged on 2026-10-16 (frozen 2026-10-17T10:10Z)
 
-Follow-up runs: 21, last 2026-11-06. 'open' is censored, not healed.
+Follow-up runs: 22, last 2026-11-07. 'open' is censored, not healed.
 
 | kind | verdict | pairs | open | repriced | resolved | left-other | closed-unknown | unavailable | no-follow-up-run |
 |---|---|---|---|---|---|---|---|---|---|
-| binary | ladder | 3 | 2 | 1 | 0 | 0 | 0 | 0 | 0 |
+| binary | ladder | 3 | 1 | 2 | 0 | 0 | 0 | 0 | 0 |
 | binary | criteria-differ | 1 | 1 | 0 | 0 | 0 | 0 | 0 | 0 |
 | binary | state | 2 | 2 | 0 | 0 | 0 | 0 | 0 | 0 |
 | mc | ladder | 37 | 37 | 0 | 0 | 0 | 0 | 0 | 0 |
