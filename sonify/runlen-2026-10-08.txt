@@ -1,0 +1,6 @@
+families: ['energy', 'military', 'control', 'anxiety', 'hidden war', 'mobilisation'] | known days per family: [30, 30, 30, 29, 30, 29] | top-3 days per family: [3, 8, 3, 6, 3, 3]
+event widths per family: {'energy': [2, 1], 'military': [8], 'control': [1, 1, 1], 'anxiety': [4, 1, 1], 'hidden war': [1, 1, 1], 'mobilisation': [2, 1]}
+chord days              : real 2 | run-length null mean 1.64 sd 0.88 p=0.530 | event-count null mean 0.23 sd 0.45 p=0.011  (N=2000, seed 1108)
+chord events (+-1 day)  : real 2 | run-length null mean 2.25 sd 0.74 p=0.871 | event-count null mean 1.80 sd 0.84 p=0.630  (N=2000, seed 1108)
+longest burst (days)    : real 2 | run-length null mean 1.15 sd 0.55 p=0.203 | event-count null mean 0.22 sd 0.42 p=0.002  (N=2000, seed 1108)
+=== end
