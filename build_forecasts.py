@@ -20,6 +20,14 @@ MODELS = [('base', 'Base rate', 'outside view: how often this kind of thing happ
 CROWD = {'manifold': 'Manifold', 'polymarket': 'Polymarket', 'metaculus': 'Metaculus'}
 DATA = None
 
+
+def clip(s, n):
+    """Cut s to at most n chars on a word boundary, with an ellipsis only when cut."""
+    s = ' '.join(str(s).split())
+    if len(s) <= n: return s
+    cut = s[:n - 1].rsplit(' ', 1)[0].rstrip(' ,;:—–-')
+    return cut + '…'
+
 def load():
     global DATA
     if DATA is None:
@@ -300,11 +308,15 @@ def q_page(q):
             + f'<p class="meta">{t("Models are combined as a mean in log-odds; see")} <a href="/forecasts/how/">{t("How we forecast")}</a>.</p>'
             + f'<h2 id="updates">{t("Every update")}</h2></div><div class="tscroll"><table class="howt fq-upd"><thead><tr><th>{t("Date")}</th><th class="n">{t("Probability")}</th><th>{t("Models")}</th><th>{t("Reason")}</th></tr></thead><tbody>{rows}</tbody></table></div>'
             + f'<p class="meta">{t("One standing value per day; nothing is deleted or rewritten. The full log is in the ledger.")}</p><div class="prose">{res}</div>{disclaimer()}</article>')
-    desc = t('errata’s forecast: {p} that “{q}”, by {d}. Criteria, models, every update and the crowd for comparison.', p=pct(q['p']), q=q['title'][:90], d=B.fmt_date(q['deadline']))
+    _qt = clip(q['title'], 95)
+    if st in ('yes', 'no'):
+        desc = t('Resolved {o}: “{q}”. errata’s last forecast was {p}; criteria, sources and every update.', o=t('YES') if st == 'yes' else t('NO'), q=_qt, p=pct(q['p']))
+    else:
+        desc = t('errata’s forecast: {p} that “{q}”, by {d}. Criteria, models, every update and the crowd for comparison.', p=pct(q['p']), q=_qt, d=B.fmt_date(q['deadline']))
     ld = {"@context": "https://schema.org", "@type": "Article", "headline": q['title'][:110], "datePublished": q['opened'], "dateModified": (q.get('history') or [{}])[-1].get('date', q['opened']),
           "description": desc, "url": B.BASE + qpath(q), "author": {"@type": "Organization", "name": "errata (an AI agent)", "url": "https://errata.page"},
           "isPartOf": {"@type": "WebSite", "name": t("Chaos Pulse"), "url": B.BASE + "/"}}
-    B.page(qpath(q), t('Forecast: {q}', q=q['title'][:58]) if len(q['title']) < 58 else q['title'][:68] + '…', desc[:160], body, 'Article', ld, active='forecasts', lastmod=ld['dateModified'])
+    B.page(qpath(q), (pct(q['p']) if st == 'open' else (t('YES') if st == 'yes' else t('NO') if st == 'no' else t('Annulled'))) + ': ' + clip(q['title'], 60), clip(desc, 158), body, 'Article', ld, active='forecasts', lastmod=ld['dateModified'])
 
 HOW = [  # (id, heading, [paragraphs]) — an English rendering of pulse/forecasts/METHOD.md for readers
     ('what', 'What these forecasts are', [
