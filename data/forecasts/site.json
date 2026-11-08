@@ -1,8 +1,8 @@
 {
- "generated": "2026-11-07T23:24:53.978310+00:00",
+ "generated": "2026-11-08T22:37:10.420260+00:00",
  "counts": {
-  "open": 34,
-  "resolved": 12,
+  "open": 33,
+  "resolved": 13,
   "annulled": 0
  },
  "selection": {
@@ -14,9 +14,9 @@
   "drafts_since": "2026-10-24"
  },
  "brier": {
-  "mine": 0.1651,
-  "final": 0.1117,
-  "base": 0.2918,
+  "mine": 0.1882,
+  "final": 0.1475,
+  "base": 0.3018,
   "crowd": 0.0986
  },
  "calibration": [
@@ -34,9 +34,9 @@
   },
   {
    "bin": "20-30%",
-   "n": 0,
-   "mean_p": null,
-   "freq_yes": null
+   "n": 1,
+   "mean_p": 0.24,
+   "freq_yes": 1.0
   },
   {
    "bin": "30-40%",
@@ -82,13 +82,13 @@
   }
  ],
  "models": {
+  "trend": 0.126,
   "second": 0.04,
   "threshold": 0.0228,
-  "trend": 0.126,
-  "mine": 0.3499,
   "fable": 0.3025,
-  "base": 0.2918,
-  "signals": 0.2015
+  "mine": 0.3499,
+  "signals": 0.2229,
+  "base": 0.3018
  },
  "questions": [
   {
@@ -311,7 +311,7 @@
    "category": "mobilisation",
    "index": "mri",
    "opened": "2026-10-09",
-   "status": "open",
+   "status": "yes",
    "p": 0.24,
    "base_rate": 0.35,
    "method": "base: judgmental reference class = MoD-drafted presidential decrees put up for public discussion; most are signed, but a minority within ~7-8 weeks of publication; I put that share at 35% (no count yet: method gap to fill). signals: LR 1.2 rising desertion/unauthorised-absence caseload gives the MoD a reason to hurry; LR 1.0 no public statement of a timetable.",
@@ -372,7 +372,22 @@
     }
    ],
    "crowd": [],
-   "crowd_history": []
+   "crowd_history": [],
+   "resolved_at": "2026-11-08",
+   "resolution_source": "http://publication.pravo.gov.ru/document/0001202611020037",
+   "resolution_note": "Decree No. 803 of 2 Nov 2026 amending the Military Police Charter (search groups, ambushes, cordons for evading servicemen) published 2 Nov. My 4 Nov update (27%->24%) rested on the false premise that it was still unsigned; found 8 Nov.",
+   "scores": {
+    "brier": 0.4656967741935483,
+    "brier_final": 0.5776,
+    "models": {
+     "signals": 0.3721,
+     "base": 0.42250000000000004
+    },
+    "brier_base": 0.42250000000000004,
+    "brier_crowd": null,
+    "days": 31,
+    "outcome": 1.0
+   }
   },
   {
    "id": "4",
@@ -521,6 +536,10 @@
     {
      "date": "2026-11-07",
      "p": 0.079
+    },
+    {
+     "date": "2026-11-08",
+     "p": 0.077
     }
    ],
    "crowd_urls": {
@@ -709,6 +728,10 @@
     },
     {
      "date": "2026-11-07",
+     "p": 0.082
+    },
+    {
+     "date": "2026-11-08",
      "p": 0.082
     }
    ],
@@ -939,6 +962,10 @@
     {
      "date": "2026-11-07",
      "p": 0.13
+    },
+    {
+     "date": "2026-11-08",
+     "p": 0.1
     }
    ],
    "crowd_urls": {
@@ -1187,6 +1214,10 @@
     },
     {
      "date": "2026-11-07",
+     "p": 0.01
+    },
+    {
+     "date": "2026-11-08",
      "p": 0.01
     }
    ],
@@ -1485,6 +1516,10 @@
     {
      "date": "2026-11-07",
      "p": 0.23
+    },
+    {
+     "date": "2026-11-08",
+     "p": 0.215
     }
    ],
    "crowd_urls": {
@@ -1997,6 +2032,10 @@
     {
      "date": "2026-11-07",
      "p": 0.212
+    },
+    {
+     "date": "2026-11-08",
+     "p": 0.211
     }
    ],
    "crowd_urls": {
@@ -2198,6 +2237,10 @@
     {
      "date": "2026-11-07",
      "p": 0.074
+    },
+    {
+     "date": "2026-11-08",
+     "p": 0.072
     }
    ],
    "crowd_urls": {
@@ -2904,6 +2947,10 @@
     {
      "date": "2026-11-07",
      "p": 0.24
+    },
+    {
+     "date": "2026-11-08",
+     "p": 0.183
     }
    ],
    "crowd_urls": {
