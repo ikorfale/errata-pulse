@@ -1,5 +1,5 @@
 {
- "built_at": "2026-11-07T07:49Z",
+ "built_at": "2026-11-08T07:48Z",
  "runs": [
   "2026-10-16",
   "2026-10-17",
@@ -23,7 +23,8 @@
   "2026-11-04",
   "2026-11-05",
   "2026-11-06",
-  "2026-11-07"
+  "2026-11-07",
+  "2026-11-08"
  ],
  "excluded": {
   "new-detector": 4,
@@ -42,7 +43,7 @@
    "broken_at": "2026-10-26T07:43Z",
    "order": {
     "status": "open",
-    "last_flagged": "2026-11-07"
+    "last_flagged": "2026-11-08"
    },
    "next_trade": {
     "status": "traded",
@@ -116,11 +117,11 @@
    "broken_at": "2026-10-30T07:43Z",
    "order": {
     "status": "open",
-    "last_flagged": "2026-11-07"
+    "last_flagged": "2026-11-08"
    },
    "next_trade": {
     "status": "censored",
-    "hours": 198.9
+    "hours": 222.9
    }
   },
   "2026-11-03|JAh4Vih930dElke1IGGi|fcXfUNB0mY57jZuvsQai": {
@@ -132,12 +133,14 @@
    "coherent_at": "2026-11-02T07:40Z",
    "broken_at": "2026-11-03T07:42Z",
    "order": {
-    "status": "open",
-    "last_flagged": "2026-11-07"
+    "status": "repriced",
+    "last_flagged": "2026-11-07",
+    "first_unflagged": "2026-11-08",
+    "gap_at_exit": 0.0118
    },
    "next_trade": {
-    "status": "censored",
-    "hours": 98.4
+    "status": "traded",
+    "hours": 120.7
    }
   },
   "2026-11-04|tSuUnnZnIt|aUNX4wgE3q76KDYhL4t7": {
@@ -188,11 +191,11 @@
    "broken_at": "2026-11-05T07:42Z",
    "order": {
     "status": "open",
-    "last_flagged": "2026-11-07"
+    "last_flagged": "2026-11-08"
    },
    "next_trade": {
     "status": "censored",
-    "hours": 62.4
+    "hours": 86.3
    }
   },
   "2026-11-05|BKr7KGDSkT6U3dGlqxIk|Swud8FP0KzyzcCm1omWR": {
@@ -205,11 +208,11 @@
    "broken_at": "2026-11-05T07:42Z",
    "order": {
     "status": "open",
-    "last_flagged": "2026-11-07"
+    "last_flagged": "2026-11-08"
    },
    "next_trade": {
     "status": "censored",
-    "hours": 62.4
+    "hours": 86.3
    }
   },
   "2026-11-05|RaUhdxs3ToW4qEOXslFy|Before 2048|Before 2049": {
@@ -222,7 +225,7 @@
    "broken_at": "2026-11-05T07:42Z",
    "order": {
     "status": "open",
-    "last_flagged": "2026-11-07"
+    "last_flagged": "2026-11-08"
    }
   },
   "2026-11-05|RaUhdxs3ToW4qEOXslFy|Before 2047|Before 2049": {
@@ -235,7 +238,7 @@
    "broken_at": "2026-11-05T07:42Z",
    "order": {
     "status": "open",
-    "last_flagged": "2026-11-07"
+    "last_flagged": "2026-11-08"
    }
   },
   "2026-11-05|RaUhdxs3ToW4qEOXslFy|Before 2036|Before 2049": {
@@ -248,7 +251,7 @@
    "broken_at": "2026-11-05T07:42Z",
    "order": {
     "status": "open",
-    "last_flagged": "2026-11-07"
+    "last_flagged": "2026-11-08"
    }
   },
   "2026-11-05|RaUhdxs3ToW4qEOXslFy|Before 2048|Before 2050": {
@@ -261,7 +264,7 @@
    "broken_at": "2026-11-05T07:42Z",
    "order": {
     "status": "open",
-    "last_flagged": "2026-11-07"
+    "last_flagged": "2026-11-08"
    }
   },
   "2026-11-05|RaUhdxs3ToW4qEOXslFy|Before 2035|Before 2049": {
@@ -274,7 +277,7 @@
    "broken_at": "2026-11-05T07:42Z",
    "order": {
     "status": "open",
-    "last_flagged": "2026-11-07"
+    "last_flagged": "2026-11-08"
    }
   },
   "2026-11-05|RaUhdxs3ToW4qEOXslFy|Before 2046|Before 2049": {
@@ -287,7 +290,7 @@
    "broken_at": "2026-11-05T07:42Z",
    "order": {
     "status": "open",
-    "last_flagged": "2026-11-07"
+    "last_flagged": "2026-11-08"
    }
   },
   "2026-11-05|RaUhdxs3ToW4qEOXslFy|Before 2047|Before 2050": {
@@ -300,7 +303,7 @@
    "broken_at": "2026-11-05T07:42Z",
    "order": {
     "status": "open",
-    "last_flagged": "2026-11-07"
+    "last_flagged": "2026-11-08"
    }
   },
   "2026-11-05|RaUhdxs3ToW4qEOXslFy|Before 2036|Before 2050": {
@@ -313,7 +316,7 @@
    "broken_at": "2026-11-05T07:42Z",
    "order": {
     "status": "open",
-    "last_flagged": "2026-11-07"
+    "last_flagged": "2026-11-08"
    }
   },
   "2026-11-05|RaUhdxs3ToW4qEOXslFy|Before 2035|Before 2050": {
@@ -326,7 +329,7 @@
    "broken_at": "2026-11-05T07:42Z",
    "order": {
     "status": "open",
-    "last_flagged": "2026-11-07"
+    "last_flagged": "2026-11-08"
    }
   },
   "2026-11-05|RaUhdxs3ToW4qEOXslFy|Before 2034|Before 2049": {
@@ -339,7 +342,7 @@
    "broken_at": "2026-11-05T07:42Z",
    "order": {
     "status": "open",
-    "last_flagged": "2026-11-07"
+    "last_flagged": "2026-11-08"
    }
   },
   "2026-11-05|RaUhdxs3ToW4qEOXslFy|Before 2046|Before 2050": {
@@ -352,7 +355,7 @@
    "broken_at": "2026-11-05T07:42Z",
    "order": {
     "status": "open",
-    "last_flagged": "2026-11-07"
+    "last_flagged": "2026-11-08"
    }
   },
   "2026-11-05|RaUhdxs3ToW4qEOXslFy|Before 2045|Before 2049": {
@@ -365,7 +368,7 @@
    "broken_at": "2026-11-05T07:42Z",
    "order": {
     "status": "open",
-    "last_flagged": "2026-11-07"
+    "last_flagged": "2026-11-08"
    }
   },
   "2026-11-05|RaUhdxs3ToW4qEOXslFy|Before 2033|Before 2049": {
@@ -378,7 +381,7 @@
    "broken_at": "2026-11-05T07:42Z",
    "order": {
     "status": "open",
-    "last_flagged": "2026-11-07"
+    "last_flagged": "2026-11-08"
    }
   },
   "2026-11-05|RaUhdxs3ToW4qEOXslFy|Before 2044|Before 2049": {
@@ -391,7 +394,7 @@
    "broken_at": "2026-11-05T07:42Z",
    "order": {
     "status": "open",
-    "last_flagged": "2026-11-07"
+    "last_flagged": "2026-11-08"
    }
   },
   "2026-11-05|RaUhdxs3ToW4qEOXslFy|Before 2034|Before 2050": {
@@ -404,7 +407,7 @@
    "broken_at": "2026-11-05T07:42Z",
    "order": {
     "status": "open",
-    "last_flagged": "2026-11-07"
+    "last_flagged": "2026-11-08"
    }
   },
   "2026-11-05|RaUhdxs3ToW4qEOXslFy|Before 2045|Before 2050": {
@@ -417,7 +420,7 @@
    "broken_at": "2026-11-05T07:42Z",
    "order": {
     "status": "open",
-    "last_flagged": "2026-11-07"
+    "last_flagged": "2026-11-08"
    }
   },
   "2026-11-05|RaUhdxs3ToW4qEOXslFy|Before 2033|Before 2050": {
@@ -430,7 +433,7 @@
    "broken_at": "2026-11-05T07:42Z",
    "order": {
     "status": "open",
-    "last_flagged": "2026-11-07"
+    "last_flagged": "2026-11-08"
    }
   }
  }
