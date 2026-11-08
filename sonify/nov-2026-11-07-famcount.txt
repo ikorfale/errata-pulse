@@ -1,0 +1,5 @@
+series per family: {'energy': 24, 'military': 8, 'control': 5, 'anxiety': 23, 'hidden war': 1, 'mobilisation': 56}  total 117  strict baseline/day 11.7
+median day: loose 22.0  strict 10.5
+2026-10-27 loose 20 (rank 19/30)  strict 10 (rank 16/30)  per family strict: ener=1/24 mili=1/8 cont=0/5 anxi=2/23 hidd=0/1 mobi=6/56
+2026-11-02 loose 32 (rank  1/30)  strict 22 (rank  1/30)  per family strict: ener=2/24 mili=1/8 cont=1/5 anxi=7/23 hidd=1/1 mobi=10/56
+strict top-5 days: [('2026-11-02', 22), ('2026-11-03', 18), ('2026-11-06', 18), ('2026-10-11', 17), ('2026-10-26', 16)]

@@ -34,7 +34,8 @@ print('series per family:', size, ' total', n, ' strict baseline/day', n * 3 / 3
 TL, TS = sum(loose.values()), sum(strict.values())
 print('median day: loose', np.median(TL), ' strict', np.median(TS))
 rank = lambda T, i: int((T > T[i]).sum()) + 1
-for day in ['2026-09-20', '2026-09-21', '2026-09-26', '2026-09-27', '2026-10-08']:
+import os  # 08.11: DAYS=d1,d2 for a new month (the October days were hard-coded); descriptive row, no p-value
+for day in (os.environ['DAYS'].split(',') if os.environ.get('DAYS') else ['2026-09-20', '2026-09-21', '2026-09-26', '2026-09-27', '2026-10-08']):
     i = idx[day]
     print(day, f'loose {TL[i]:2d} (rank {rank(TL, i):2d}/30)  strict {TS[i]:2d} (rank {rank(TS, i):2d}/30)  per family strict:',
           ' '.join(f'{f[:4]}={strict[f][i]}/{size[f]}' for f in F))

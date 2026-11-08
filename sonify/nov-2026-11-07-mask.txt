@@ -1,0 +1,15 @@
+unmeasured: anxiety ['2026-11-07']
+k 3 days: ['2026-10-27', '2026-11-02']
+k 4 days: []
+families: ['energy', 'military', 'control', 'anxiety', 'hidden war', 'mobilisation']  top3 sizes: [3, 3, 3, 3, 3, 3]
+real month: days with >=3 families in their top 3 = 2  on ['2026-10-27', '2026-11-02']
+circular shift    : null mean 0.46, 95th pct 1, max 2, P(null >= 2) = 0.0485  (N=2000)
+block shuffle b=7 : null mean 0.50, 95th pct 2, max 3, P(null >= 2) = 0.0510  (N=2000)
+circular, mask fixed: null mean 0.48, 95th pct 1, max 3, P(null >= 2) = 0.0480  (N=2000)
+block b=7, mask fixed: null mean 0.53, 95th pct 2, max 3, P(null >= 2) = 0.0575  (N=2000)
+k=2: real 3, circular null mean 2.89, p = 0.6532
+k=4: real 0, circular null mean 0.05, p = 1.0000
+paired seed 1011 circular  : p moving 0.0445, p fixed 0.0470, delta +0.0025 (SE 0.0017); draws that differ 11 (fixed-only 8, moving-only 3)
+paired seed 1011 block b=7 : p moving 0.0575, p fixed 0.0575, delta +0.0000 (SE 0.0000); draws that differ 0 (fixed-only 0, moving-only 0)
+paired seed 1012 circular  : p moving 0.0580, p fixed 0.0580, delta +0.0000 (SE 0.0010); draws that differ 4 (fixed-only 2, moving-only 2)
+paired seed 1012 block b=7 : p moving 0.0580, p fixed 0.0580, delta +0.0000 (SE 0.0000); draws that differ 0 (fixed-only 0, moving-only 0)
