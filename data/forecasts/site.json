@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-08T22:37:10.420260+00:00",
+ "generated": "2026-11-08T23:24:07.056038+00:00",
  "counts": {
   "open": 33,
   "resolved": 13,
@@ -82,12 +82,12 @@
   }
  ],
  "models": {
-  "trend": 0.126,
-  "second": 0.04,
-  "threshold": 0.0228,
   "fable": 0.3025,
-  "mine": 0.3499,
+  "second": 0.04,
+  "trend": 0.126,
+  "threshold": 0.0228,
   "signals": 0.2229,
+  "mine": 0.3499,
   "base": 0.3018
  },
  "questions": [
@@ -2499,7 +2499,7 @@
    "index": null,
    "opened": "2026-10-10",
    "status": "open",
-   "p": 0.14,
+   "p": 0.05,
    "base_rate": 0.15,
    "method": "base: judgement from 2025-26 campaign which had multi-week lulls a few times a year; signals: bayes x1.5 (US pressure) x0.6 (Kyiv's stated refusal; Russia keeps striking the grid)",
    "history": [
@@ -2552,6 +2552,15 @@
      "date": "2026-10-15",
      "p": 0.14,
      "reason": "The pause ended after 3 days: Ukraine hit the Ryazan refinery on 15 Oct (governor, Russian MoD, a senior Ukrainian official to AP) and Zelensky told the FT the block is lifted. A 14-day window now needs a new pause, against Kyiv's stated position. bayes x0.4.",
+     "models": {
+      "base": 0.15,
+      "signals": 0.135
+     }
+    },
+    {
+     "date": "2026-11-08",
+     "p": 0.05,
+     "reason": "c149 resolved: no 14-day pause 11 Oct–8 Nov (longest gap 2 days in the claims ledger, ≤6 days among ISW/General Staff-confirmed strikes; Saratov hit 7 Nov, 8th time in 2026). Only 22 days remain, so a pause must start by 17 Nov against an active campaign (10 oil sites claimed in 7 days vs norm 5.2). bayes x0.33 on the shrinking window",
      "models": {
       "base": 0.15,
       "signals": 0.135
@@ -3075,7 +3084,7 @@
    "index": "pulse",
    "opened": "2026-10-24",
    "status": "open",
-   "p": 0.86,
+   "p": 0.9,
    "base_rate": 0.35,
    "method": "mine written before Fable (tmp log 23:18Z); Fable independent from evidence only, never saw my number; ensemble = log-odds mean with base rate",
    "history": [
@@ -3103,6 +3112,16 @@
      "date": "2026-11-07",
      "p": 0.86,
      "reason": "Kremlin confirmed 07.11 an upgraded delegation (Medinsky, Ryabkov, Galuzin, Kostyukov) for 10-11 Nov; Ukraine's led by Umerov (Reuters/Kyiv Independent 07.11). Second model independently 0.85.",
+     "models": {
+      "base": 0.7,
+      "signals": 0.78,
+      "trend": 0.8
+     }
+    },
+    {
+     "date": "2026-11-08",
+     "p": 0.9,
+     "reason": "Both delegations named by 7–8 Nov (Russia: Medinsky, Ryabkov, Galuzin, Kostyukov, Zhigarlovsky per Peskov/Interfax; Ukraine: Umerov, Budanov, Arakhamia, Kyslytsia, Hnatov, Skibitsky per RBC-Ukraine); France says Europeans will attend. Two days out, the only remaining risk is a last-minute cancellation. LR x1.5",
      "models": {
       "base": 0.7,
       "signals": 0.78,
@@ -3421,7 +3440,7 @@
    "index": "pulse",
    "opened": "2026-11-07",
    "status": "open",
-   "p": 0.17,
+   "p": 0.12,
    "base_rate": 0.25,
    "method": "base: in October there were days without household schedules between strike waves; signals: 07.11 strikes on NPP-to-Kyiv substations, DTEK says long repair; trend: winter load rising, strikes every 1-2 nights",
    "history": [
@@ -3429,6 +3448,16 @@
      "date": "2026-11-07",
      "p": 0.17,
      "reason": "ensemble with second model (independent 0.30: schedule-free days happened in past Novembers) and my 0.12",
+     "models": {
+      "base": 0.25,
+      "signals": 0.08,
+      "trend": 0.1
+     }
+    },
+    {
+     "date": "2026-11-08",
+     "p": 0.12,
+     "reason": "8 Nov: Ukrenergo announced hourly schedules of 1.5–4 queues in all regions for 9 Nov after the Dnipro (600k) and Kharkiv (250k) outages; emergency outages in Kyiv, Dnipro, Kharkiv, Poltava, Sumy. Grid state widened, not narrowed; a schedule-free day by 30 Nov needs ~3 weeks without major hits. LR x0.7",
      "models": {
       "base": 0.25,
       "signals": 0.08,
