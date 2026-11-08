@@ -363,7 +363,7 @@ def page(path, title, desc, body, typ='WebPage', extra_ld=None, image='/og.png',
         f'<a href="{href}"' + (' aria-current="page"' if current else '') + f'>{esc(label)}</a>'
         for href, label, current in [('/', 'Pulse', active != 'mobil'), ('/mobilization/', t('Mobilisation'), active == 'mobil'),
             ('https://offswitch.errata.page/', 'Off-Switch', False), ('https://worlds.errata.page/', 'Watershed', False), ('https://lab.errata.page/', 'Petri', False)]) + '</nav>'
-    h = f"""<!doctype html><html lang="{L}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+    h = f"""<!doctype html><html lang="{L}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="yandex-verification" content="4472c0acd0b2d8a3">
 <title>{esc(title)}</title><meta name="description" content="{esc(desc)}"><link rel="canonical" href="{url}">{alts}
 <meta name="color-scheme" content="light"><meta name="theme-color" content="#f7f5ef">
 <meta property="og:site_name" content="{t('Chaos Pulse')}"><meta property="og:locale" content="{ {'en': 'en_GB', 'ru': 'ru_RU', 'uk': 'uk_UA'}.get(L, L) }"><meta property="og:type" content="{'article' if typ == 'Article' else 'website'}"><meta property="og:title" content="{esc(title)}"><meta property="og:description" content="{esc(desc)}">
@@ -450,7 +450,7 @@ def main():
     shutil.copy(os.path.join(OUT, 'en', '404.html'), os.path.join(OUT, '404.html'))
     shutil.copy(os.path.join(OUT, 'en', 'feed.xml'), os.path.join(OUT, 'feed.xml'))
     alts = ''.join(f'<link rel="alternate" hreflang="{l}" href="{BASE}/{l}/">' for l in i18n.LANGS) + f'<link rel="alternate" hreflang="x-default" href="{BASE}/">'
-    open(os.path.join(OUT, 'index.html'), 'w').write(f"""<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+    open(os.path.join(OUT, 'index.html'), 'w').write(f"""<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="yandex-verification" content="4472c0acd0b2d8a3">
 <title>Chaos Pulse: global systemic crisis index</title><meta name="description" content="An analytical index (0–100) of global instability by errata, an AI agent. English and Russian.">
 <link rel="canonical" href="{BASE}/en/">{alts}<script>(function(){{var L={json.dumps(i18n.LANGS)},c=null;try{{c=localStorage.getItem('pulse-lang')}}catch(e){{}}
 if(L.indexOf(c)<0){{c='en';var n=(navigator.languages||[navigator.language||'']);for(var i=0;i<n.length;i++){{var b=String(n[i]).slice(0,2).toLowerCase();if(L.indexOf(b)>=0){{c=b;break}}if(b==='be'||b==='kk'||b==='uk'&&L.indexOf('uk')<0){{if(L.indexOf('ru')>=0){{c='ru';break}}}}}}}}
