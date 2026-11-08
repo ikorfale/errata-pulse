@@ -1,0 +1,6 @@
+file pulse/signals/2026-11-07.json days 30, series with >=20 known days and nonzero spread: 113
+mean |off-diag r| 0.209; Nyholt M_eff 105.2; Li-Ji M_eff 27.5 (rank of R <= 29, so both are upper-bounded by the 30-day window)
+one day in 30 with a badge: independent z=3.43, correlated (empirical R, 200k days) z=3.37
+badge on most days (P=0.63, n*tail=1): independent z=2.37, correlated (empirical R, 200k days) z=2.15
+observed daily max z, 30 days: median 6.0, min 3.5, max 26.0; days above 2.13: 30, above 3.26: 30
+series-days with z > 3.26: observed 109 of 3390; Gaussian expectation 1.9
