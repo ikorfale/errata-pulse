@@ -19,3 +19,11 @@ sample = channels found, so heads who are MAX-only may be missing.
 - `maxside_livedune.tsv` MAX post counts for the last month from LiveDune's public pages (livedune.com/ru/ratings/single/max/<handle>, read 27 Oct 2026)
 - `maxside.py` Telegram counts 22 Sep-21 Oct and each channel's most-linked MAX profile -> `maxside_tg.tsv`; `maxside_compare.txt` the comparison
 - 15 of 18 within 10% (same volume on both); Lipetsk 3.3x and Kaluga 1.4x more on MAX; Oryol MAX only. `FABLE-REVIEW-1027-maxside.txt` the review of the wording
+
+## ionaflow/ — the full set, three weeks, both platforms (added 9 Nov 2026)
+
+Weekly post counts for every head of region on MAX and on Telegram in 6-12 Apr, 15-21 Jul and 24-30 Oct 2026,
+from daily counts collected by IONAFLOW (https://ionaflow.com, Timur Olevskiy), who also answered four questions
+about gaps (Leningrad, Samara, Belgorod, a mislabelled channel) before publication. The raw daily files stay with
+IONAFLOW; `per_governor.csv` is the weekly table after matching by name (`crossref.py`), `shift.py` prints
+`shift_out.txt`, `chart.py` draws `three_weeks.png`, `RESULT.md` is the write-up with the corrections applied.

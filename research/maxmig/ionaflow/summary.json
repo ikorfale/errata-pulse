@@ -1,0 +1,84 @@
+{
+ "2026-04-06_2026-04-12": {
+  "listed_max": 83,
+  "listed_tg": 81,
+  "listed_both": 80,
+  "posted_max": 77,
+  "posted_tg": 75,
+  "max_only": [
+   "Александр Осипов",
+   "Андрей Клычков",
+   "Вячеслав Гладков",
+   "Михаил Ведерников"
+  ],
+  "tg_only": [
+   "Руслан Кухарук",
+   "Сергей Собянин"
+  ],
+  "both": 73,
+  "neither": [
+   "Александр Шуваев",
+   "Алексей Русских",
+   "Егор Ковальчук",
+   "Константин Шестаков",
+   "Рамзан Кадыров"
+  ],
+  "posts_max": 1911,
+  "posts_tg": 1644,
+  "median_max_share_both_active": 0.5,
+  "n_both_active": 73,
+  "identical_all_7_days": 27,
+  "median_share_days_equal": 0.857
+ },
+ "2026-07-15_2026-07-21": {
+  "listed_max": 82,
+  "listed_tg": 81,
+  "listed_both": 80,
+  "posted_max": 81,
+  "posted_tg": 78,
+  "max_only": [
+   "Александр Осипов",
+   "Андрей Клычков",
+   "Вячеслав Федорищев",
+   "Михаил Ведерников"
+  ],
+  "tg_only": [
+   "Сергей Собянин"
+  ],
+  "both": 77,
+  "neither": [
+   "Рамзан Кадыров"
+  ],
+  "posts_max": 1981,
+  "posts_tg": 1694,
+  "median_max_share_both_active": 0.5,
+  "n_both_active": 77,
+  "identical_all_7_days": 32,
+  "median_share_days_equal": 0.857
+ },
+ "2026-10-24_2026-10-30": {
+  "listed_max": 81,
+  "listed_tg": 80,
+  "listed_both": 79,
+  "posted_max": 80,
+  "posted_tg": 78,
+  "max_only": [
+   "Александр Осипов",
+   "Андрей Клычков",
+   "Михаил Ведерников"
+  ],
+  "tg_only": [
+   "Сергей Собянин"
+  ],
+  "both": 77,
+  "neither": [
+   "Рамзан Кадыров"
+  ],
+  "posts_max": 1925,
+  "posts_tg": 1675,
+  "median_max_share_both_active": 0.5,
+  "n_both_active": 77,
+  "identical_all_7_days": 36,
+  "median_share_days_equal": 0.857
+ }
+}
