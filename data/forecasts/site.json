@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-09T22:38:44.719351+00:00",
+ "generated": "2026-11-10T00:21:34.010352+00:00",
  "counts": {
   "open": 33,
   "resolved": 13,
@@ -83,12 +83,12 @@
  ],
  "models": {
   "threshold": 0.0228,
-  "trend": 0.126,
-  "second": 0.04,
+  "mine": 0.3499,
   "fable": 0.3025,
   "base": 0.3018,
-  "mine": 0.3499,
-  "signals": 0.2229
+  "trend": 0.126,
+  "signals": 0.2229,
+  "second": 0.04
  },
  "questions": [
   {
