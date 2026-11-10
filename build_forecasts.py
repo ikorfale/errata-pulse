@@ -47,7 +47,17 @@ def dec(x, n=3):
 def en(s, tag='span'):
     """Question texts are written in English; mark them so screen readers and translators know."""
     return f'<{tag} lang="en">{B.esc(s)}</{tag}>' if i18n.LANG != 'en' else B.esc(s)
-def en_note(): return '' if i18n.LANG == 'en' else f'<p class="fq-ennote">{t("Question texts are in English")}</p>'
+def en_note(qs=None):
+    """The 'texts are in English' note; with a list of questions, only when one of their titles has no translation."""
+    if i18n.LANG == 'en' or (qs is not None and all(t(q['title']) != q['title'] for q in qs)): return ''
+    return f'<p class="fq-ennote">{t("Question texts are in English")}</p>'
+def qtitle(q):
+    """Question title in the page language when i18n/<lang>.json has it (#700); an untranslated title stays English and
+    is listed in i18n/missing.<lang>.json by the build."""
+    return t(q['title'])
+def qt(q, tag='span'):
+    s = qtitle(q)
+    return B.esc(s) if s != q['title'] else en(s, tag)
 def crowd_label(q):
     return ' + '.join(CROWD.get(c.partition(':')[0], c.partition(':')[0].capitalize()) for c in q.get('crowd') or [])
 def crowd_now(q):
@@ -129,7 +139,7 @@ def p_chart(q):
         o = 1 if q['status'] == 'yes' else 0; x = X(day(q['resolved_at']))
         s += f'<rect x="{x - 6:.1f}" y="{Y(o) - 6:.1f}" width="12" height="12" class="fq-out"><title>{t("Outcome")}: {t(q["status"].upper())}</title></rect>'
     if ymax < 1: s += f'<text x="{W - R - 6}" y="{T + 28}" class="evlab" text-anchor="end">{t("scale 0–{m}", m=pct(ymax))}</text>'
-    lab = t('Probability of “{q}” over time', q=q['title'][:80])
+    lab = t('Probability of “{q}” over time', q=qtitle(q)[:80])
     legend = (f'<p class="fq-legend"><span><i class="lg-e"></i>errata</span>' + (f'<span><i class="lg-c"></i>{B.esc(t("crowd"))} ({B.esc(crowd_label(q))})</span>' if cs else '')
               + (f'<span><i class="lg-b"></i>{t("base rate")}</span>' if q.get('base_rate') is not None else '') + '</p>')
     return legend + f'<div class="chart" tabindex="0" role="region" aria-label="{B.esc(lab)}"><svg class="hist" viewBox="0 0 {W} {H}" role="img" aria-label="{B.esc(lab)}">{s}</svg></div>'
@@ -232,7 +242,7 @@ def chips(q):
 def card(q):
     r = latest(q).get('reason', '')
     return (f'<article class="fq"><div class="fq-h"><span class="badge">{cat_name(q["category"])}</span><span class="fq-dl">{t("by {d}", d=B.fmt_date(q["deadline"]))} · {days_left(q)}</span></div>'
-            f'<h3><a href="{qpath(q)}">{en(q["title"])}</a></h3>'
+            f'<h3><a href="{qpath(q)}">{qt(q)}</a></h3>'
             f'<div class="fq-p"><span class="fq-big">{pct(q["p"])}</span><span class="fq-pl">{t("errata’s probability")}</span>{spark(q)}</div>{pbar(q)}'
             f'<div class="chips">{chips(q)}</div>'
             + (f'<p class="fq-why"><b>{t("Latest reason")} ({B.fmt_date(latest(q)["date"])}):</b> {en(r)}</p>' if r else '')
@@ -251,13 +261,13 @@ def closed_list(qs):
         for q in sorted(res, key=lambda q: q['deadline'], reverse=True): groups.setdefault(q['deadline'][:7], []).append(q)
         for mon, grp in groups.items():
             out += f'<h3 class="smh3">{t("Deadline {m}", m=B.esc(mon))} · {len(grp)}</h3><ul class="fq-closed">' + ''.join(
-            f'<li><a href="{qpath(q)}">{outcome_badge(q)}<span class="fq-ct"><strong>{en(q["title"])}</strong><span class="meta">{cat_name(q["category"])} · {t("resolved {d}", d=B.fmt_date(q["resolved_at"]))} · {t("final probability {p}", p=pct(q["p"]))}</span></span>'
+            f'<li><a href="{qpath(q)}">{outcome_badge(q)}<span class="fq-ct"><strong>{qt(q)}</strong><span class="meta">{cat_name(q["category"])} · {t("resolved {d}", d=B.fmt_date(q["resolved_at"]))} · {t("final probability {p}", p=pct(q["p"]))}</span></span>'
             f'<span class="fq-cs"><span class="small">Brier</span>{dec((q.get("scores") or {}).get("brier"))}</span></a></li>' for q in grp) + '</ul>'
     else: out += f'<p class="meta">{t("Nothing has resolved yet. Every question will appear here with its outcome, its score and the source that decided it, whether errata was right or wrong.")}</p>'
     out += f'<h3 class="smh3" id="annulled">{t("Annulled")}</h3>'
     if ann:
         out += f'<p class="meta">{t("Questions that could not be resolved fairly, kept in view with the reason. They do not count in the scores.")}</p><ul class="fq-closed">' + ''.join(
-            f'<li><a href="{qpath(q)}">{outcome_badge(q)}<span class="fq-ct"><strong>{en(q["title"])}</strong><span class="meta">{t("annulled {d}", d=B.fmt_date(q["resolved_at"]))}: {en(q.get("resolution_note") or "")}</span></span><span></span></a></li>' for q in ann) + '</ul>'
+            f'<li><a href="{qpath(q)}">{outcome_badge(q)}<span class="fq-ct"><strong>{qt(q)}</strong><span class="meta">{t("annulled {d}", d=B.fmt_date(q["resolved_at"]))}: {en(q.get("resolution_note") or "")}</span></span><span></span></a></li>' for q in ann) + '</ul>'
     else: out += f'<p class="meta">{t("None so far. A question whose criteria turn out ambiguous is annulled with the reason and stays listed here.")}</p>'
     return out
 
@@ -266,11 +276,11 @@ def home_block():
     if not d: return ''
     qs = sorted([q for q in d.get('questions', []) if q['status'] == 'open'], key=lambda q: q['deadline'])
     if not qs: return ''
-    li = ''.join(f'<li><a href="{qpath(q)}"><span class="fq-hp">{pct(q["p"])}</span><span><strong>{en(q["title"])}</strong><span class="meta">{cat_name(q["category"])} · {t("by {d}", d=B.fmt_date(q["deadline"]))} · {days_left(q)}'
+    li = ''.join(f'<li><a href="{qpath(q)}"><span class="fq-hp">{pct(q["p"])}</span><span><strong>{qt(q)}</strong><span class="meta">{cat_name(q["category"])} · {t("by {d}", d=B.fmt_date(q["deadline"]))} · {days_left(q)}'
                  + (f' · {B.esc(crowd_label(q))} {pct(crowd_now(q))}' if crowd_now(q) is not None else '') + '</span></span></a></li>' for q in qs[:3])
     n = d.get('counts', {}).get('resolved', 0); od = sum(day(q['deadline']) < today() for q in qs)
     return (f'<h2 class="sec">{t("Forecasts")}</h2><p class="meta">{t("errata’s own probabilities for questions with a deadline and a source that decides, scored in public. {o} open, {r} resolved.", o=len(qs), r=n)}'
-            + (f' <strong>{t("{k} past deadline and not yet resolved.", k=od)}</strong>' if od else '') + f' {en_note()}</p>'
+            + (f' <strong>{t("{k} past deadline and not yet resolved.", k=od)}</strong>' if od else '') + f' {en_note(qs[:3])}</p>'
             f'<ul class="fq-home">{li}</ul><p><a class="btn" href="/forecasts/">{t("All forecasts and the track record →")}</a></p>')
 
 # ---------- pages ----------
@@ -300,7 +310,7 @@ def q_page(q):
         ms = h.get('models') or {}
         rows += f'<tr><td>{B.fmt_date(h["date"])}</td><td class="n" data-label="{t("Probability")}"><strong>{pct(h["p"])}</strong></td><td>{" ".join(f"<span class=chip>{B.esc(model_name(m))} <b>{pct(v)}</b></span>" for m, v in ms.items())}</td><td>{en(h.get("reason", ""))}</td></tr>'
     body = (f'<article class="report fq-q"><p class="kicker"><a href="/forecasts/">{t("Forecasts")}</a> · {cat_name(q["category"])} · #{B.esc(q["id"])}</p>'
-            f'<h1 class="ptitle">{en(q["title"])}</h1>{en_note()}{facts}' + (pbar(q) if st == 'open' else '')
+            f'<h1 class="ptitle">{qt(q)}</h1>{en_note()}{facts}' + (pbar(q) if st == 'open' else '')
             + f'<div class="prose"><h2 id="criteria">{t("Criteria")}</h2><p>{en(q["criteria"])}</p>'
             + f'<h2 id="chart">{t("Probability over time")}</h2></div>{p_chart(q)}<div class="prose">'
             + (f'<p class="meta">{t("Crowd source:")} {crowd_links}. {t("The crowd is a benchmark: errata writes its own number first.")}</p>' if crowd_links else '')
@@ -308,15 +318,15 @@ def q_page(q):
             + f'<p class="meta">{t("Models are combined as a mean in log-odds; see")} <a href="/forecasts/how/">{t("How we forecast")}</a>.</p>'
             + f'<h2 id="updates">{t("Every update")}</h2></div><div class="tscroll"><table class="howt fq-upd"><thead><tr><th>{t("Date")}</th><th class="n">{t("Probability")}</th><th>{t("Models")}</th><th>{t("Reason")}</th></tr></thead><tbody>{rows}</tbody></table></div>'
             + f'<p class="meta">{t("One standing value per day; nothing is deleted or rewritten. The full log is in the ledger.")}</p><div class="prose">{res}</div>{disclaimer()}</article>')
-    _qt = clip(q['title'], 95)
+    _qt = clip(qtitle(q), 95)
     if st in ('yes', 'no'):
         desc = t('Resolved {o}: “{q}”. errata’s last forecast was {p}; criteria, sources and every update.', o=t('YES') if st == 'yes' else t('NO'), q=_qt, p=pct(q['p']))
     else:
         desc = t('errata’s forecast: {p} that “{q}”, by {d}. Criteria, models, every update and the crowd for comparison.', p=pct(q['p']), q=_qt, d=B.fmt_date(q['deadline']))
-    ld = {"@context": "https://schema.org", "@type": "Article", "headline": q['title'][:110], "datePublished": q['opened'], "dateModified": (q.get('history') or [{}])[-1].get('date', q['opened']),
+    ld = {"@context": "https://schema.org", "@type": "Article", "headline": qtitle(q)[:110], "datePublished": q['opened'], "dateModified": (q.get('history') or [{}])[-1].get('date', q['opened']),
           "description": desc, "url": B.BASE + qpath(q), "author": {"@type": "Organization", "name": "errata (an AI agent)", "url": "https://errata.page"},
           "isPartOf": {"@type": "WebSite", "name": t("Chaos Pulse"), "url": B.BASE + "/"}}
-    B.page(qpath(q), (pct(q['p']) if st == 'open' else (t('YES') if st == 'yes' else t('NO') if st == 'no' else t('Annulled'))) + ': ' + clip(q['title'], 60), clip(desc, 158), body, 'Article', ld, active='forecasts', lastmod=ld['dateModified'])
+    B.page(qpath(q), (pct(q['p']) if st == 'open' else (t('YES') if st == 'yes' else t('NO') if st == 'no' else t('Annulled'))) + ': ' + clip(qtitle(q), 60), clip(desc, 158), body, 'Article', ld, active='forecasts', lastmod=ld['dateModified'])
 
 HOW = [  # (id, heading, [paragraphs]) — an English rendering of pulse/forecasts/METHOD.md for readers
     ('what', 'What these forecasts are', [
@@ -362,7 +372,7 @@ def how_page(d):
 
 def feed(qs):
     L = i18n.LANG; B_ = B.BASE
-    items = ''.join(f"<item><title>{B.esc(t('Forecast: {q}', q=q['title']))} — {pct(q['history'][0]['p'] if q.get('history') else q['p'])}</title><link>{B_}/{L}{qpath(q)}</link><guid>{B_}/{L}{qpath(q)}</guid>"
+    items = ''.join(f"<item><title>{B.esc(t('Forecast: {q}', q=qtitle(q)))} — {pct(q['history'][0]['p'] if q.get('history') else q['p'])}</title><link>{B_}/{L}{qpath(q)}</link><guid>{B_}/{L}{qpath(q)}</guid>"
                     f"<pubDate>{datetime.strptime(q['opened'], '%Y-%m-%d').strftime('%a, %d %b %Y 00:00:00 +0000')}</pubDate><description>{B.esc(q['criteria'])}</description></item>"
                     for q in sorted(qs, key=lambda q: (q['opened'], int(q['id']) if str(q['id']).isdigit() else 0), reverse=True)[:50])
     open(os.path.join(B.OUT, L, 'forecasts', 'feed.xml'), 'w').write(
@@ -379,7 +389,7 @@ def main():
     cards = ''.join(card(q).replace('<article class="fq">', f'<article class="fq" data-cat="{q["category"]}">', 1) for q in opn)
     body = (f'<h1 class="ptitle">{t("Forecasts")}</h1><p class="lede">{t("Falsifiable questions about war, energy, the economy, mobilisation and politics, each with a deadline, a source that decides, and errata’s own probability built from explicit models. Every forecast is scored when it resolves; the record comes first.")}</p>{disclaimer()}'
             + track_record(d, qs)
-            + f'<h2 class="sec" id="open">{t("Open forecasts")}</h2><p class="meta">{t("{n} open, nearest deadline first. The bar is errata’s probability; a marker shows the crowd where a market asks the same question. The small line shows how errata’s number moved.", n=len(opn))} {en_note()}</p>'
+            + f'<h2 class="sec" id="open">{t("Open forecasts")}</h2><p class="meta">{t("{n} open, nearest deadline first. The bar is errata’s probability; a marker shows the crowd where a market asks the same question. The small line shows how errata’s number moved.", n=len(opn))} {en_note(opn)}</p>'
             + filt + (f'<div class="fq-cards">{cards}</div>' if cards else f'<p>{t("No open forecasts yet.")}</p>')
             + closed_list(qs)
             + f'<p class="meta">{t("Data:")} <a href="/forecasts.json">forecasts.json</a> · <a href="/forecasts/feed.xml">RSS</a> · {t("updated {d}", d=B.fmt_date((d.get("generated") or today().isoformat())[:10]))}</p>'

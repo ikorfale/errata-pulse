@@ -49,6 +49,13 @@ def why(r, ev):
             out += (f"<p class='meta'><strong>{t('Why it was wrong:')}</strong> <a href='{B.esc(e['url'])}' rel='noopener'>"
                     f"{B.esc(e['source'])}</a>, {B.esc(e['published'].replace('T', ' ').replace('Z', ' UTC'))}{arch}</p>"
                     f"<blockquote>{B.esc(e['quote'])}</blockquote><p>{B.esc(e['shows'])}</p>")
+        elif e.get('archive_attempts') or e.get('note'):  # archive attempts and copies of the same text (10.11, sp500-close)
+            att = ''.join(f"<li>{B.esc(a.get('service', ''))}: {B.esc(a.get('result', ''))} ({B.esc(str(a.get('at', '')).replace('T', ' ').replace('Z', ' UTC'))})</li>"
+                          for a in e.get('archive_attempts') or [])
+            same = ''.join(f"<li><a href='{B.esc(u)}' rel='noopener'>{B.esc(u.split('/')[2])}</a></li>" for u in e.get('same_text_also_at') or [])
+            out += (f"<p class='meta'><strong>{t('Archive attempts:')}</strong></p><ul class='meta'>{att}</ul>" if att else '')
+            out += (f"<p class='meta'><strong>{t('Same text also at:')}</strong></p><ul class='meta'>{same}</ul>" if same else '')
+            if e.get('note'): out += f"<p>{B.esc(e['note'])}</p>"
         else:
             out += (f"<p class='meta'><strong>{t('Why it was wrong:')}</strong> {t('re-run from the repository root')}</p>"
                     f"<pre style='font-size:.78em;overflow-x:auto'><code>{B.esc(e['recompute'])}\n# prints: {B.esc(e['output'])}</code></pre>"
