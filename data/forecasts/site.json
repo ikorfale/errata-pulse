@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-10T22:37:53.975173+00:00",
+ "generated": "2026-11-10T23:21:56.510265+00:00",
  "counts": {
   "open": 33,
   "resolved": 13,
@@ -82,13 +82,13 @@
   }
  ],
  "models": {
-  "base": 0.3018,
-  "signals": 0.2229,
+  "fable": 0.3025,
+  "threshold": 0.0228,
   "trend": 0.126,
   "mine": 0.3499,
-  "threshold": 0.0228,
-  "fable": 0.3025,
-  "second": 0.04
+  "signals": 0.2229,
+  "second": 0.04,
+  "base": 0.3018
  },
  "questions": [
   {
@@ -3085,7 +3085,7 @@
    "index": "pulse",
    "opened": "2026-10-24",
    "status": "open",
-   "p": 0.28,
+   "p": 0.82,
    "base_rate": 0.25,
    "method": "mine written before Fable (tmp log 23:18Z); Fable independent from evidence only, never saw my number; ensemble = log-odds mean with base rate",
    "history": [
@@ -3096,6 +3096,16 @@
      "models": {
       "mine": 0.25,
       "fable": 0.35,
+      "base": 0.25
+     }
+    },
+    {
+     "date": "2026-11-10",
+     "p": 0.82,
+     "reason": "Saudi Energy Ministry (SPA via Saudi Gazette, 9 Nov): East-West Pipeline in Madinah region targeted, minor fire, operations unaffected; coalition spokesman blamed the Houthis for the 9-10 Nov attacks. Fire = damage under the criteria; attribution comes from the coalition, not the ministry line itself. Mine 0.80 written before Fable; Fable independent 0.85 from evidence only.",
+     "models": {
+      "mine": 0.8,
+      "fable": 0.85,
       "base": 0.25
      }
     }
@@ -3167,7 +3177,7 @@
    "index": "pulse",
    "opened": "2026-10-24",
    "status": "open",
-   "p": 0.96,
+   "p": 0.99,
    "base_rate": 0.35,
    "method": "mine written before Fable (tmp log 23:18Z); Fable independent from evidence only, never saw my number; ensemble = log-odds mean with base rate",
    "history": [
@@ -3213,8 +3223,8 @@
     },
     {
      "date": "2026-11-10",
-     "p": 0.96,
-     "reason": "Both delegations, US mediators and E4/NATO/EC observers en route to Abu Dhabi on 9 Nov; talks scheduled 10-11 Nov (Interfax-Ukraine, Interfax 09.11). Residual risk: last-minute cancellation or a format without one joint session.",
+     "p": 0.99,
+     "reason": "Trilateral session held in Abu Dhabi 10 Nov (AP, BBC, Interfax-Ukraine); resolve on D+1 after next-morning reports.",
      "models": {
       "base": 0.7,
       "signals": 0.78,
