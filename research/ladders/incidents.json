@@ -1,5 +1,5 @@
 {
- "built_at": "2026-11-09T07:49Z",
+ "built_at": "2026-11-10T07:49Z",
  "runs": [
   "2026-10-16",
   "2026-10-17",
@@ -25,7 +25,8 @@
   "2026-11-06",
   "2026-11-07",
   "2026-11-08",
-  "2026-11-09"
+  "2026-11-09",
+  "2026-11-10"
  ],
  "excluded": {
   "new-detector": 4,
@@ -44,7 +45,7 @@
    "broken_at": "2026-10-26T07:43Z",
    "order": {
     "status": "open",
-    "last_flagged": "2026-11-09"
+    "last_flagged": "2026-11-10"
    },
    "next_trade": {
     "status": "traded",
@@ -118,11 +119,11 @@
    "broken_at": "2026-10-30T07:43Z",
    "order": {
     "status": "open",
-    "last_flagged": "2026-11-09"
+    "last_flagged": "2026-11-10"
    },
    "next_trade": {
     "status": "censored",
-    "hours": 246.9
+    "hours": 270.9
    }
   },
   "2026-11-03|JAh4Vih930dElke1IGGi|fcXfUNB0mY57jZuvsQai": {
@@ -192,7 +193,7 @@
    "broken_at": "2026-11-05T07:42Z",
    "order": {
     "status": "open",
-    "last_flagged": "2026-11-09"
+    "last_flagged": "2026-11-10"
    },
    "next_trade": {
     "status": "traded",
@@ -209,7 +210,7 @@
    "broken_at": "2026-11-05T07:42Z",
    "order": {
     "status": "open",
-    "last_flagged": "2026-11-09"
+    "last_flagged": "2026-11-10"
    },
    "next_trade": {
     "status": "traded",
@@ -226,7 +227,7 @@
    "broken_at": "2026-11-05T07:42Z",
    "order": {
     "status": "open",
-    "last_flagged": "2026-11-09"
+    "last_flagged": "2026-11-10"
    }
   },
   "2026-11-05|RaUhdxs3ToW4qEOXslFy|Before 2047|Before 2049": {
@@ -239,7 +240,7 @@
    "broken_at": "2026-11-05T07:42Z",
    "order": {
     "status": "open",
-    "last_flagged": "2026-11-09"
+    "last_flagged": "2026-11-10"
    }
   },
   "2026-11-05|RaUhdxs3ToW4qEOXslFy|Before 2036|Before 2049": {
@@ -252,7 +253,7 @@
    "broken_at": "2026-11-05T07:42Z",
    "order": {
     "status": "open",
-    "last_flagged": "2026-11-09"
+    "last_flagged": "2026-11-10"
    }
   },
   "2026-11-05|RaUhdxs3ToW4qEOXslFy|Before 2048|Before 2050": {
@@ -265,7 +266,7 @@
    "broken_at": "2026-11-05T07:42Z",
    "order": {
     "status": "open",
-    "last_flagged": "2026-11-09"
+    "last_flagged": "2026-11-10"
    }
   },
   "2026-11-05|RaUhdxs3ToW4qEOXslFy|Before 2035|Before 2049": {
@@ -278,7 +279,7 @@
    "broken_at": "2026-11-05T07:42Z",
    "order": {
     "status": "open",
-    "last_flagged": "2026-11-09"
+    "last_flagged": "2026-11-10"
    }
   },
   "2026-11-05|RaUhdxs3ToW4qEOXslFy|Before 2046|Before 2049": {
@@ -291,7 +292,7 @@
    "broken_at": "2026-11-05T07:42Z",
    "order": {
     "status": "open",
-    "last_flagged": "2026-11-09"
+    "last_flagged": "2026-11-10"
    }
   },
   "2026-11-05|RaUhdxs3ToW4qEOXslFy|Before 2047|Before 2050": {
@@ -304,7 +305,7 @@
    "broken_at": "2026-11-05T07:42Z",
    "order": {
     "status": "open",
-    "last_flagged": "2026-11-09"
+    "last_flagged": "2026-11-10"
    }
   },
   "2026-11-05|RaUhdxs3ToW4qEOXslFy|Before 2036|Before 2050": {
@@ -317,7 +318,7 @@
    "broken_at": "2026-11-05T07:42Z",
    "order": {
     "status": "open",
-    "last_flagged": "2026-11-09"
+    "last_flagged": "2026-11-10"
    }
   },
   "2026-11-05|RaUhdxs3ToW4qEOXslFy|Before 2035|Before 2050": {
@@ -330,7 +331,7 @@
    "broken_at": "2026-11-05T07:42Z",
    "order": {
     "status": "open",
-    "last_flagged": "2026-11-09"
+    "last_flagged": "2026-11-10"
    }
   },
   "2026-11-05|RaUhdxs3ToW4qEOXslFy|Before 2034|Before 2049": {
@@ -343,7 +344,7 @@
    "broken_at": "2026-11-05T07:42Z",
    "order": {
     "status": "open",
-    "last_flagged": "2026-11-09"
+    "last_flagged": "2026-11-10"
    }
   },
   "2026-11-05|RaUhdxs3ToW4qEOXslFy|Before 2046|Before 2050": {
@@ -356,7 +357,7 @@
    "broken_at": "2026-11-05T07:42Z",
    "order": {
     "status": "open",
-    "last_flagged": "2026-11-09"
+    "last_flagged": "2026-11-10"
    }
   },
   "2026-11-05|RaUhdxs3ToW4qEOXslFy|Before 2045|Before 2049": {
@@ -369,7 +370,7 @@
    "broken_at": "2026-11-05T07:42Z",
    "order": {
     "status": "open",
-    "last_flagged": "2026-11-09"
+    "last_flagged": "2026-11-10"
    }
   },
   "2026-11-05|RaUhdxs3ToW4qEOXslFy|Before 2033|Before 2049": {
@@ -382,7 +383,7 @@
    "broken_at": "2026-11-05T07:42Z",
    "order": {
     "status": "open",
-    "last_flagged": "2026-11-09"
+    "last_flagged": "2026-11-10"
    }
   },
   "2026-11-05|RaUhdxs3ToW4qEOXslFy|Before 2044|Before 2049": {
@@ -395,7 +396,7 @@
    "broken_at": "2026-11-05T07:42Z",
    "order": {
     "status": "open",
-    "last_flagged": "2026-11-09"
+    "last_flagged": "2026-11-10"
    }
   },
   "2026-11-05|RaUhdxs3ToW4qEOXslFy|Before 2034|Before 2050": {
@@ -408,7 +409,7 @@
    "broken_at": "2026-11-05T07:42Z",
    "order": {
     "status": "open",
-    "last_flagged": "2026-11-09"
+    "last_flagged": "2026-11-10"
    }
   },
   "2026-11-05|RaUhdxs3ToW4qEOXslFy|Before 2045|Before 2050": {
@@ -421,7 +422,7 @@
    "broken_at": "2026-11-05T07:42Z",
    "order": {
     "status": "open",
-    "last_flagged": "2026-11-09"
+    "last_flagged": "2026-11-10"
    }
   },
   "2026-11-05|RaUhdxs3ToW4qEOXslFy|Before 2033|Before 2050": {
@@ -434,7 +435,24 @@
    "broken_at": "2026-11-05T07:42Z",
    "order": {
     "status": "open",
-    "last_flagged": "2026-11-09"
+    "last_flagged": "2026-11-10"
+   }
+  },
+  "2026-11-10|YvayfreXRtBvubSPKgmm|u0ZzZg3x5uD36Du0eDAZ": {
+   "kind": "binary",
+   "what": "Will we get AGI before 2032? / Will we get AGI before 2033?",
+   "url": "https://manifold.markets/RemNi/will-we-get-agi-before-2032",
+   "gap_before": -0.0121,
+   "gap_after": 0.0302,
+   "coherent_at": "2026-11-09T07:43Z",
+   "broken_at": "2026-11-10T07:41Z",
+   "order": {
+    "status": "open",
+    "last_flagged": "2026-11-10"
+   },
+   "next_trade": {
+    "status": "censored",
+    "hours": 8.4
    }
   }
  }
