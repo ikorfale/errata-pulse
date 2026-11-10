@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-10T00:21:34.010352+00:00",
+ "generated": "2026-11-10T00:26:53.528685+00:00",
  "counts": {
   "open": 33,
   "resolved": 13,
@@ -83,11 +83,11 @@
  ],
  "models": {
   "threshold": 0.0228,
-  "mine": 0.3499,
   "fable": 0.3025,
-  "base": 0.3018,
   "trend": 0.126,
+  "base": 0.3018,
   "signals": 0.2229,
+  "mine": 0.3499,
   "second": 0.04
  },
  "questions": [
@@ -1340,7 +1340,7 @@
    "index": "pulse",
    "opened": "2026-10-09",
    "status": "open",
-   "p": 0.55,
+   "p": 0.6,
    "base_rate": 0.25,
    "method": "trend: lognormal, zero drift, from $125.44, annual volatility 0.75, 83 days. base: judgmental 25%: a 20% fall needs a Hormuz reopening or demand destruction; in 2022 Brent fell from $120+ to under $100 within ~3 months of its peak. signals: LR 0.8 no reopening deal in sight, attacks continue; LR 1.2 demand destruction and IEA stock releases (~100 mb) plus Saudi East-West pipeline at 5.8 mb/d.",
    "history": [
@@ -1358,6 +1358,16 @@
      "date": "2026-11-04",
      "p": 0.55,
      "reason": "Brent futures $94.62 on 4 Nov; EIA spot (RBRTE) ran ~$3.5 above futures on 3 Nov (107.03 vs 103.60 settle), so spot sits near the $100 line. Momentum and mediation vs tight products (US diesel lowest since 2003) and a pre-crash Goldman $105 call. Mine 0.55 noted before Fable; Fable independent 0.58.",
+     "models": {
+      "base": 0.3,
+      "signals": 0.55,
+      "second": 0.58
+     }
+    },
+    {
+     "date": "2026-11-10",
+     "p": 0.6,
+     "reason": "Brent ~2.6 on 9 Nov (from ~20 on 30 Oct), two weeks of decline on peace hopes and physical weakness (UBS); blockade and closed Hormuz keep upside risk for 31 Dec.",
      "models": {
       "base": 0.3,
       "signals": 0.55,
@@ -1914,7 +1924,7 @@
    "index": null,
    "opened": "2026-10-09",
    "status": "open",
-   "p": 0.29,
+   "p": 0.21,
    "base_rate": 0.25,
    "method": "base: his outgoing coalition averages 51.6 seats, 9.4 short of 61 (8-outlet average, 8 Oct; only Channel 14 shows 61+); reference class = Israeli elections where the incumbent bloc polled 5+ seats short three weeks out (2019 x2, 2021): the incumbent did not form a new government in any, but 2022 shows late shifts; judgmental 25%. signals: LR 1.1 Likud still the largest list; LR 1.3 the opposition needs Arab parties or Yisrael Beiteinu plus Haredi defections, which has failed before, and repeat elections would leave him as caretaker (NO here).",
    "history": [
@@ -1922,6 +1932,15 @@
      "date": "2026-10-09",
      "p": 0.29,
      "reason": "Opening: polls say no majority; coalition arithmetic on the other side is hard too.",
+     "models": {
+      "base": 0.25,
+      "signals": 0.32
+     }
+    },
+    {
+     "date": "2026-11-10",
+     "p": 0.21,
+     "reason": "Unchanged since 9 Oct, overdue. 27 Oct election: Likud 27; Eisenkot 67 recommendations vs Netanyahu 46, mandate 8 Nov (28+14 days). Timeline means Netanyahu must be sworn in from this Knesset; repeat elections would land after 30 Apr. Independent second model (Fable, without my number or crowd): 0.20. Crowd (~22%) was visible in the ledger before this update; noted.",
      "models": {
       "base": 0.25,
       "signals": 0.32
@@ -3116,7 +3135,7 @@
    "index": "pulse",
    "opened": "2026-10-24",
    "status": "open",
-   "p": 0.9,
+   "p": 0.96,
    "base_rate": 0.35,
    "method": "mine written before Fable (tmp log 23:18Z); Fable independent from evidence only, never saw my number; ensemble = log-odds mean with base rate",
    "history": [
@@ -3154,6 +3173,16 @@
      "date": "2026-11-08",
      "p": 0.9,
      "reason": "Both delegations named by 7–8 Nov (Russia: Medinsky, Ryabkov, Galuzin, Kostyukov, Zhigarlovsky per Peskov/Interfax; Ukraine: Umerov, Budanov, Arakhamia, Kyslytsia, Hnatov, Skibitsky per RBC-Ukraine); France says Europeans will attend. Two days out, the only remaining risk is a last-minute cancellation. LR x1.5",
+     "models": {
+      "base": 0.7,
+      "signals": 0.78,
+      "trend": 0.8
+     }
+    },
+    {
+     "date": "2026-11-10",
+     "p": 0.96,
+     "reason": "Both delegations, US mediators and E4/NATO/EC observers en route to Abu Dhabi on 9 Nov; talks scheduled 10-11 Nov (Interfax-Ukraine, Interfax 09.11). Residual risk: last-minute cancellation or a format without one joint session.",
      "models": {
       "base": 0.7,
       "signals": 0.78,
@@ -3350,7 +3379,7 @@
    "index": null,
    "opened": "2026-10-31",
    "status": "open",
-   "p": 0.11,
+   "p": 0.07,
    "base_rate": 0.35,
    "method": "mine written before Fable (tmp/my-fc-1031.txt 23:35Z); Fable independent from evidence only, never saw my number; ensemble = log-odds mean with base rate",
    "history": [
@@ -3368,6 +3397,16 @@
      "date": "2026-11-04",
      "p": 0.11,
      "reason": "Brent settled $94.62 on 4 Nov (-9% day, -17% week; MarketWatch/Dow Jones) after the Democratic sweep and Trump's 'no immediate plans' (FT); needs a ~27% rally within 26 days, i.e. a renewed campaign or full Hormuz halt. Mine 0.15 noted before Fable's answer; Fable independent (never saw my number) 0.08.",
+     "models": {
+      "base": 0.35,
+      "signals": 0.15,
+      "second": 0.08
+     }
+    },
+    {
+     "date": "2026-11-10",
+     "p": 0.07,
+     "reason": "Jan Brent fell 5.8% to ~2.6 on 9 Nov after Trump deferred strikes; needs a +30% spike in 3 weeks; tail kept for a Hormuz/Gulf escalation (Houthi strikes on Aramco continue).",
      "models": {
       "base": 0.35,
       "signals": 0.15,
@@ -3472,7 +3511,7 @@
    "index": "pulse",
    "opened": "2026-11-07",
    "status": "open",
-   "p": 0.12,
+   "p": 0.08,
    "base_rate": 0.25,
    "method": "base: in October there were days without household schedules between strike waves; signals: 07.11 strikes on NPP-to-Kyiv substations, DTEK says long repair; trend: winter load rising, strikes every 1-2 nights",
    "history": [
@@ -3490,6 +3529,16 @@
      "date": "2026-11-08",
      "p": 0.12,
      "reason": "8 Nov: Ukrenergo announced hourly schedules of 1.5–4 queues in all regions for 9 Nov after the Dnipro (600k) and Kharkiv (250k) outages; emergency outages in Kyiv, Dnipro, Kharkiv, Poltava, Sumy. Grid state widened, not narrowed; a schedule-free day by 30 Nov needs ~3 weeks without major hits. LR x0.7",
+     "models": {
+      "base": 0.25,
+      "signals": 0.08,
+      "trend": 0.1
+     }
+    },
+    {
+     "date": "2026-11-10",
+     "p": 0.08,
+     "reason": "9-10 Nov: Trypillia TPP hit again, Kyiv region 14-17 h schedules, outages in 12 regions; a day with no household schedules anywhere by 30 Nov needs an energy truce from Abu Dhabi and fast repairs.",
      "models": {
       "base": 0.25,
       "signals": 0.08,
