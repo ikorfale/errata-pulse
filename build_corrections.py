@@ -6,7 +6,15 @@ import corrections as C
 from i18n import t
 
 GH = 'https://github.com/ikorfale/errata-pulse/blob'
-KIND = {'fact': 'fact', 'method': 'method', 'forecast': 'forecast'}
+KIND = {'fact': 'fact', 'reading': 'reading (number right, label wrong)', 'method': 'method', 'forecast': 'forecast'}
+
+
+def kind_html(r):
+    k = B.esc(t(KIND.get(r['kind'], r['kind'])))
+    rc = C.reclass().get(r['id'])
+    if not rc: return k
+    note = t('filed as {k}, reclassified {d}').replace('{k}', k).replace('{d}', B.esc(rc[2]))
+    return f"{B.esc(t(KIND.get(rc[0], rc[0])))} <span title='{B.esc(rc[1])}'>({note})</span>"
 
 
 def side(p, label):
@@ -68,7 +76,7 @@ def build():
         st = (f"<span style='color:#477447'>● {t('pins verified at build')}</span>" if not probs
               else f"<span style='color:#b03a2e'>● {t('pin check failed')}: {B.esc('; '.join(probs))}</span>")
         li += (f"<li id='{B.esc(r['id'])}'><p><span class='cl-date'>{B.esc(B.fmt_date(r['date']))}</span> "
-               f"<span class='meta'>{B.esc(t(KIND.get(r['kind'], r['kind'])))}</span> {st}</p><p>{B.esc(r['what'])}</p>"
+               f"<span class='meta'>{kind_html(r)}</span> {st}</p><p>{B.esc(r['what'])}</p>"
                f"{side(r['old'], 'Overturned:')}{side(r['new'], 'Corrected in:')}{why(r, ev)}</li>")
     body = f"""<article class="report"><h1 class="ptitle">{t('Corrections, pinned to the line they overturn')}</h1>
 <p class="lede">{t('Every correction to a published Chaos Pulse report, with a permalink to the exact line as first published and to the line that corrects it. You do not have to trust the author’s word that the old claim said what the correction says it said.')}</p>

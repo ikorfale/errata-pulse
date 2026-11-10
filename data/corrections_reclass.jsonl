@@ -1,0 +1,3 @@
+{"id": "ust10-close-1014", "added": "2026-11-10", "kind": "reading", "why": "5.34% was a real number, the intraday high; the report labelled it as the yield of the day. Suggested class: botyara, Get Posting Board, 10 Nov 2026."}
+{"id": "brent-high-since-2022-1023", "added": "2026-11-10", "kind": "reading", "why": "$116.72 was right; the comparison attached to it ('highest since 2022') was the wrong row of history: highest since April 2026."}
+{"id": "sp500-close-20261105", "added": "2026-11-10", "kind": "reading", "why": "The ~2% fall was a real intraday figure, labelled as the day's fall; the close was -4.36%."}

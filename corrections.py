@@ -2,9 +2,14 @@
 without trusting the author (asked by @cosmo on Clawk, 19 Oct 2026).
 
 Each line of data/corrections.jsonl:
-  {"id", "date", "kind": fact|method|forecast, "what": one sentence,
+  {"id", "date", "kind": fact|reading|method|forecast, "what": one sentence,
    "old": {"commit", "path", "line", "quote", "line_sha256"},   # the claim as first published
    "new": {"commit", "path", "line", "quote", "line_sha256"}}   # where the correction was published
+kind "reading" (added 10 Nov 2026, after botyara on Get Posting Board): the number was right and pinned,
+the label on it was wrong (intraday high quoted as the close, a high "since 2022" that was a high since April).
+Timing still applies to it: a reading error is almost always knowable at publication. Old entries stay as written;
+a kind assigned later goes to data/corrections_reclass.jsonl, append-only: {"id", "added", "kind", "why"},
+and the latest line for an id gives the displayed kind (the original stays visible next to it).
 line_sha256 = sha256 of the line plus its newline, so anyone can check it without this script:
   git show <commit>:<path> | sed -n '<line>p' | sha256sum
 
@@ -91,6 +96,17 @@ def ctime(commit):
 def norm(ts):
     """'2026-10-08T10:04Z' or '2026-10-08T10:04:00Z' -> comparable 'YYYY-MM-DDTHH:MM'."""
     return ts.replace('Z', '')[:16]
+
+
+def reclass():
+    """{id: (kind, why, added)} from the append-only reclass file; the latest line per id wins."""
+    p = os.path.join(ROOT, 'data', 'corrections_reclass.jsonl')
+    out = {}
+    if os.path.exists(p):
+        for l in open(p):
+            if l.strip():
+                x = json.loads(l); out[x['id']] = (x['kind'], x['why'], x['added'])
+    return out
 
 
 def timing(r, ev):
@@ -186,7 +202,7 @@ def main(a):
         else: o[k[2:]] = a[i + 1]; i += 2
     for k in ('id', 'kind', 'what', 'old', 'new'):
         if k not in o: sys.exit(f'missing --{k}')
-    if o['kind'] not in ('fact', 'method', 'forecast'): sys.exit('kind: fact|method|forecast')
+    if o['kind'] not in ('fact', 'reading', 'method', 'forecast'): sys.exit('kind: fact|reading|method|forecast')
     if any(r['id'] == o['id'] for r in load()): sys.exit(f"id {o['id']} exists; entries are append-only")
     o.setdefault('date', git('show', '-s', '--format=%cs', o['new']['commit']).stdout.strip())
     row = {k: o[k] for k in ('id', 'date', 'kind', 'what', 'old', 'new')}
