@@ -1,0 +1,2600 @@
+{
+ "collected_at": 1794349962,
+ "signals": [
+  {
+   "family": "mobilisation",
+   "group": "analysis-ru",
+   "share": 0.0,
+   "baseline": 0.013,
+   "days": 14,
+   "anomaly": false
+  },
+  {
+   "family": "escalation",
+   "group": "analysis-ru",
+   "share": 0.0,
+   "baseline": 0.0,
+   "days": 14,
+   "anomaly": false
+  },
+  {
+   "family": "energy",
+   "group": "analysis-ru",
+   "share": 0.108,
+   "baseline": 0.098,
+   "days": 14,
+   "anomaly": false
+  },
+  {
+   "family": "control",
+   "group": "analysis-ru",
+   "share": 0.054,
+   "baseline": 0.04,
+   "days": 14,
+   "anomaly": false
+  },
+  {
+   "family": "mobilisation",
+   "group": "axis-media",
+   "share": 0.013,
+   "baseline": 0.0,
+   "days": 14,
+   "anomaly": false
+  },
+  {
+   "family": "escalation",
+   "group": "axis-media",
+   "share": 0.013,
+   "baseline": 0.025,
+   "days": 14,
+   "anomaly": false
+  },
+  {
+   "family": "energy",
+   "group": "axis-media",
+   "share": 0.075,
+   "baseline": 0.059,
+   "days": 14,
+   "anomaly": false
+  },
+  {
+   "family": "control",
+   "group": "axis-media",
+   "share": 0.0,
+   "baseline": 0.0,
+   "days": 14,
+   "anomaly": false
+  },
+  {
+   "family": "mobilisation",
+   "group": "border-relocation",
+   "share": 0.0,
+   "baseline": 0.0,
+   "days": 14,
+   "anomaly": false
+  },
+  {
+   "family": "escalation",
+   "group": "border-relocation",
+   "share": 0.0,
+   "baseline": 0.0,
+   "days": 14,
+   "anomaly": false
+  },
+  {
+   "family": "energy",
+   "group": "border-relocation",
+   "share": 0.0,
+   "baseline": 0.0,
+   "days": 14,
+   "anomaly": false
+  },
+  {
+   "family": "control",
+   "group": "border-relocation",
+   "share": 0.0,
+   "baseline": 0.0,
+   "days": 14,
+   "anomaly": false
+  },
+  {
+   "family": "mobilisation",
+   "group": "houthi-ye",
+   "share": 0.01,
+   "baseline": 0.004,
+   "days": 14,
+   "anomaly": false
+  },
+  {
+   "family": "escalation",
+   "group": "houthi-ye",
+   "share": 0.019,
+   "baseline": 0.02,
+   "days": 14,
+   "anomaly": false
+  },
+  {
+   "family": "energy",
+   "group": "houthi-ye",
+   "share": 0.067,
+   "baseline": 0.031,
+   "days": 14,
+   "anomaly": false
+  },
+  {
+   "family": "control",
+   "group": "houthi-ye",
+   "share": 0.0,
+   "baseline": 0.0,
+   "days": 14,
+   "anomaly": false
+  },
+  {
+   "family": "mobilisation",
+   "group": "independent-ru",
+   "share": 0.031,
+   "baseline": 0.019,
+   "days": 14,
+   "anomaly": false
+  },
+  {
+   "family": "escalation",
+   "group": "independent-ru",
+   "share": 0.094,
+   "baseline": 0.084,
+   "days": 14,
+   "anomaly": false
+  },
+  {
+   "family": "energy",
+   "group": "independent-ru",
+   "share": 0.119,
+   "baseline": 0.125,
+   "days": 14,
+   "anomaly": false
+  },
+  {
+   "family": "control",
+   "group": "independent-ru",
+   "share": 0.114,
+   "baseline": 0.079,
+   "days": 14,
+   "anomaly": false
+  },
+  {
+   "family": "mobilisation",
+   "group": "leaks-ru",
+   "share": 0.013,
+   "baseline": 0.009,
+   "days": 14,
+   "anomaly": false
+  },
+  {
+   "family": "escalation",
+   "group": "leaks-ru",
+   "share": 0.057,
+   "baseline": 0.044,
+   "days": 14,
+   "anomaly": false
+  },
+  {
+   "family": "energy",
+   "group": "leaks-ru",
+   "share": 0.038,
+   "baseline": 0.057,
+   "days": 14,
+   "anomaly": false
+  },
+  {
+   "family": "control",
+   "group": "leaks-ru",
+   "share": 0.025,
+   "baseline": 0.018,
+   "days": 14,
+   "anomaly": false
+  },
+  {
+   "family": "mobilisation",
+   "group": "media-il",
+   "share": 0.004,
+   "baseline": 0.008,
+   "days": 14,
+   "anomaly": false
+  },
+  {
+   "family": "escalation",
+   "group": "media-il",
+   "share": 0.017,
+   "baseline": 0.011,
+   "days": 14,
+   "anomaly": false
+  },
+  {
+   "family": "energy",
+   "group": "media-il",
+   "share": 0.009,
+   "baseline": 0.012,
+   "days": 14,
+   "anomaly": false
+  },
+  {
+   "family": "control",
+   "group": "media-il",
+   "share": 0.004,
+   "baseline": 0.0,
+   "days": 14,
+   "anomaly": false
+  },
+  {
+   "family": "mobilisation",
+   "group": "media-ua",
+   "share": 0.008,
+   "baseline": 0.01,
+   "days": 14,
+   "anomaly": false
+  },
+  {
+   "family": "escalation",
+   "group": "media-ua",
+   "share": 0.064,
+   "baseline": 0.084,
+   "days": 14,
+   "anomaly": false
+  },
+  {
+   "family": "energy",
+   "group": "media-ua",
+   "share": 0.076,
+   "baseline": 0.121,
+   "days": 14,
+   "anomaly": false
+  },
+  {
+   "family": "control",
+   "group": "media-ua",
+   "share": 0.0,
+   "baseline": 0.004,
+   "days": 14,
+   "anomaly": false
+  },
+  {
+   "family": "mobilisation",
+   "group": "milblog-ru",
+   "share": 0.021,
+   "baseline": 0.028,
+   "days": 14,
+   "anomaly": false
+  },
+  {
+   "family": "escalation",
+   "group": "milblog-ru",
+   "share": 0.129,
+   "baseline": 0.08,
+   "days": 14,
+   "anomaly": false
+  },
+  {
+   "family": "energy",
+   "group": "milblog-ru",
+   "share": 0.079,
+   "baseline": 0.15,
+   "days": 14,
+   "anomaly": false
+  },
+  {
+   "family": "control",
+   "group": "milblog-ru",
+   "share": 0.036,
+   "baseline": 0.014,
+   "days": 14,
+   "anomaly": false
+  },
+  {
+   "family": "mobilisation",
+   "group": "official-il",
+   "share": 0.0,
+   "baseline": 0.0,
+   "days": 9,
+   "anomaly": false
+  },
+  {
+   "family": "escalation",
+   "group": "official-il",
+   "share": 0.0,
+   "baseline": 0.0,
+   "days": 9,
+   "anomaly": false
+  },
+  {
+   "family": "energy",
+   "group": "official-il",
+   "share": 0.0,
+   "baseline": 0.0,
+   "days": 9,
+   "anomaly": false
+  },
+  {
+   "family": "control",
+   "group": "official-il",
+   "share": 0.0,
+   "baseline": 0.0,
+   "days": 9,
+   "anomaly": false
+  },
+  {
+   "family": "mobilisation",
+   "group": "official-ir",
+   "share": 0.0,
+   "baseline": 0.004,
+   "days": 14,
+   "anomaly": false
+  },
+  {
+   "family": "escalation",
+   "group": "official-ir",
+   "share": 0.032,
+   "baseline": 0.035,
+   "days": 14,
+   "anomaly": false
+  },
+  {
+   "family": "energy",
+   "group": "official-ir",
+   "share": 0.114,
+   "baseline": 0.091,
+   "days": 14,
+   "anomaly": false
+  },
+  {
+   "family": "control",
+   "group": "official-ir",
+   "share": 0.0,
+   "baseline": 0.0,
+   "days": 14,
+   "anomaly": false
+  },
+  {
+   "family": "mobilisation",
+   "group": "official-ru",
+   "share": 0.0,
+   "baseline": 0.008,
+   "days": 14,
+   "anomaly": false
+  },
+  {
+   "family": "escalation",
+   "group": "official-ru",
+   "share": 0.044,
+   "baseline": 0.034,
+   "days": 14,
+   "anomaly": false
+  },
+  {
+   "family": "energy",
+   "group": "official-ru",
+   "share": 0.035,
+   "baseline": 0.059,
+   "days": 14,
+   "anomaly": false
+  },
+  {
+   "family": "control",
+   "group": "official-ru",
+   "share": 0.009,
+   "baseline": 0.002,
+   "days": 14,
+   "anomaly": false
+  },
+  {
+   "family": "mobilisation",
+   "group": "official-ru-regional",
+   "share": 0.018,
+   "baseline": 0.0,
+   "days": 14,
+   "anomaly": false
+  },
+  {
+   "family": "escalation",
+   "group": "official-ru-regional",
+   "share": 0.054,
+   "baseline": 0.0,
+   "days": 14,
+   "anomaly": true
+  },
+  {
+   "family": "energy",
+   "group": "official-ru-regional",
+   "share": 0.071,
+   "baseline": 0.022,
+   "days": 14,
+   "anomaly": false
+  },
+  {
+   "family": "control",
+   "group": "official-ru-regional",
+   "share": 0.0,
+   "baseline": 0.0,
+   "days": 14,
+   "anomaly": false
+  },
+  {
+   "family": "mobilisation",
+   "group": "official-ua",
+   "share": 0.005,
+   "baseline": 0.0,
+   "days": 14,
+   "anomaly": false
+  },
+  {
+   "family": "escalation",
+   "group": "official-ua",
+   "share": 0.059,
+   "baseline": 0.031,
+   "days": 14,
+   "anomaly": false
+  },
+  {
+   "family": "energy",
+   "group": "official-ua",
+   "share": 0.01,
+   "baseline": 0.015,
+   "days": 14,
+   "anomaly": false
+  },
+  {
+   "family": "control",
+   "group": "official-ua",
+   "share": 0.005,
+   "baseline": 0.005,
+   "days": 14,
+   "anomaly": false
+  },
+  {
+   "family": "mobilisation",
+   "group": "opposition-ir",
+   "share": 0.0,
+   "baseline": 0.0,
+   "days": 14,
+   "anomaly": false
+  },
+  {
+   "family": "escalation",
+   "group": "opposition-ir",
+   "share": 0.105,
+   "baseline": 0.079,
+   "days": 14,
+   "anomaly": false
+  },
+  {
+   "family": "energy",
+   "group": "opposition-ir",
+   "share": 0.071,
+   "baseline": 0.076,
+   "days": 14,
+   "anomaly": false
+  },
+  {
+   "family": "control",
+   "group": "opposition-ir",
+   "share": 0.029,
+   "baseline": 0.03,
+   "days": 14,
+   "anomaly": false
+  },
+  {
+   "family": "mobilisation",
+   "group": "osint-ua",
+   "share": 0.0,
+   "baseline": 0.0,
+   "days": 14,
+   "anomaly": false
+  },
+  {
+   "family": "escalation",
+   "group": "osint-ua",
+   "share": 0.011,
+   "baseline": 0.02,
+   "days": 14,
+   "anomaly": false
+  },
+  {
+   "family": "energy",
+   "group": "osint-ua",
+   "share": 0.115,
+   "baseline": 0.184,
+   "days": 14,
+   "anomaly": false
+  },
+  {
+   "family": "control",
+   "group": "osint-ua",
+   "share": 0.011,
+   "baseline": 0.0,
+   "days": 14,
+   "anomaly": false
+  },
+  {
+   "family": "mobilisation",
+   "group": "regional-ru",
+   "share": 0.012,
+   "baseline": 0.006,
+   "days": 14,
+   "anomaly": false
+  },
+  {
+   "family": "escalation",
+   "group": "regional-ru",
+   "share": 0.012,
+   "baseline": 0.016,
+   "days": 14,
+   "anomaly": false
+  },
+  {
+   "family": "energy",
+   "group": "regional-ru",
+   "share": 0.036,
+   "baseline": 0.033,
+   "days": 14,
+   "anomaly": false
+  },
+  {
+   "family": "control",
+   "group": "regional-ru",
+   "share": 0.072,
+   "baseline": 0.029,
+   "days": 14,
+   "anomaly": false
+  }
+ ],
+ "volume": [
+  {
+   "group": "analysis-ru",
+   "posts_per_channel": 5.3,
+   "baseline": 3.2,
+   "anomaly": false
+  },
+  {
+   "group": "axis-media",
+   "posts_per_channel": 80.0,
+   "baseline": 89.2,
+   "anomaly": false
+  },
+  {
+   "group": "border-relocation",
+   "posts_per_channel": 0.5,
+   "baseline": 1.0,
+   "anomaly": false
+  },
+  {
+   "group": "houthi-ye",
+   "posts_per_channel": 69.3,
+   "baseline": 80.8,
+   "anomaly": false
+  },
+  {
+   "group": "independent-ru",
+   "posts_per_channel": 29.6,
+   "baseline": 29.0,
+   "anomaly": false
+  },
+  {
+   "group": "leaks-ru",
+   "posts_per_channel": 31.6,
+   "baseline": 29.6,
+   "anomaly": false
+  },
+  {
+   "group": "media-il",
+   "posts_per_channel": 78.3,
+   "baseline": 56.5,
+   "anomaly": false
+  },
+  {
+   "group": "media-ua",
+   "posts_per_channel": 49.8,
+   "baseline": 50.2,
+   "anomaly": false
+  },
+  {
+   "group": "milblog-ru",
+   "posts_per_channel": 28.0,
+   "baseline": 31.6,
+   "anomaly": false
+  },
+  {
+   "group": "official-il",
+   "posts_per_channel": 2.0,
+   "baseline": 1.0,
+   "anomaly": false
+  },
+  {
+   "group": "official-ir",
+   "posts_per_channel": 93.3,
+   "baseline": 90.8,
+   "anomaly": false
+  },
+  {
+   "group": "official-ru",
+   "posts_per_channel": 76.0,
+   "baseline": 74.3,
+   "anomaly": false
+  },
+  {
+   "group": "official-ru-regional",
+   "posts_per_channel": 5.6,
+   "baseline": 5.8,
+   "anomaly": false
+  },
+  {
+   "group": "official-ua",
+   "posts_per_channel": 28.9,
+   "baseline": 28.0,
+   "anomaly": false
+  },
+  {
+   "group": "opposition-ir",
+   "posts_per_channel": 79.7,
+   "baseline": 72.7,
+   "anomaly": false
+  },
+  {
+   "group": "osint-ua",
+   "posts_per_channel": 29.0,
+   "baseline": 34.5,
+   "anomaly": false
+  },
+  {
+   "group": "regional-ru",
+   "posts_per_channel": 27.7,
+   "baseline": 25.3,
+   "anomaly": false
+  }
+ ],
+ "channels": {
+  "rian_ru": {
+   "group": "official-ru",
+   "posts_24h": 47,
+   "counts": {
+    "mobilisation": 0,
+    "escalation": 2,
+    "energy": 1,
+    "control": 1
+   },
+   "subscribers": 3020000,
+   "views_24h": 7696900
+  },
+  "tass_agency": {
+   "group": "official-ru",
+   "posts_24h": 157,
+   "counts": {
+    "mobilisation": 0,
+    "escalation": 7,
+    "energy": 4,
+    "control": 1
+   },
+   "subscribers": 569000,
+   "views_24h": 3772473
+  },
+  "mod_russia": {
+   "group": "official-ru",
+   "posts_24h": 24,
+   "counts": {
+    "mobilisation": 0,
+    "escalation": 1,
+    "energy": 3,
+    "control": 0
+   },
+   "subscribers": 650000,
+   "views_24h": 547900
+  },
+  "aleksandr_shuvaev": {
+   "group": "official-ru-regional",
+   "posts_24h": 5,
+   "counts": {
+    "mobilisation": 0,
+    "escalation": 0,
+    "energy": 0,
+    "control": 0
+   },
+   "subscribers": 30500,
+   "views_24h": 18640,
+   "subscribers_exact": 30461
+  },
+  "kurskadm": {
+   "group": "official-ru-regional",
+   "posts_24h": 12,
+   "counts": {
+    "mobilisation": 0,
+    "escalation": 2,
+    "energy": 2,
+    "control": 0
+   },
+   "subscribers": 78400,
+   "views_24h": 16153,
+   "subscribers_exact": 78428
+  },
+  "bazabazon": {
+   "group": "leaks-ru",
+   "posts_24h": 22,
+   "counts": {
+    "mobilisation": 0,
+    "escalation": 0,
+    "energy": 1,
+    "control": 0
+   },
+   "subscribers": 1560000,
+   "views_24h": 3485600
+  },
+  "breakingmash": {
+   "group": "leaks-ru",
+   "posts_24h": 17,
+   "counts": {
+    "mobilisation": 0,
+    "escalation": 1,
+    "energy": 0,
+    "control": 0
+   },
+   "subscribers": 3140000,
+   "views_24h": 5262200
+  },
+  "shot_shot": {
+   "group": "leaks-ru",
+   "posts_24h": 20,
+   "counts": {
+    "mobilisation": 1,
+    "escalation": 1,
+    "energy": 1,
+    "control": 1
+   },
+   "subscribers": 1270000,
+   "views_24h": 2005700
+  },
+  "bbbreaking": {
+   "group": "leaks-ru",
+   "posts_24h": 82,
+   "counts": {
+    "mobilisation": 0,
+    "escalation": 6,
+    "energy": 2,
+    "control": 1
+   },
+   "subscribers": 1980000,
+   "views_24h": 17505200
+  },
+  "ostorozhno_novosti": {
+   "group": "leaks-ru",
+   "posts_24h": 17,
+   "counts": {
+    "mobilisation": 1,
+    "escalation": 1,
+    "energy": 2,
+    "control": 2
+   },
+   "subscribers": 1620000,
+   "views_24h": 2183290
+  },
+  "rybar": {
+   "group": "milblog-ru",
+   "posts_24h": 20,
+   "counts": {
+    "mobilisation": 1,
+    "escalation": 6,
+    "energy": 3,
+    "control": 0
+   },
+   "subscribers": 1510000,
+   "views_24h": 2498699
+  },
+  "dva_majors": {
+   "group": "milblog-ru",
+   "posts_24h": 28,
+   "counts": {
+    "mobilisation": 1,
+    "escalation": 2,
+    "energy": 3,
+    "control": 0
+   },
+   "subscribers": 1160000,
+   "views_24h": 1787500
+  },
+  "wargonzo": {
+   "group": "milblog-ru",
+   "posts_24h": 12,
+   "counts": {
+    "mobilisation": 1,
+    "escalation": 2,
+    "energy": 1,
+    "control": 0
+   },
+   "subscribers": 738000,
+   "views_24h": 208800
+  },
+  "boris_rozhin": {
+   "group": "milblog-ru",
+   "posts_24h": 61,
+   "counts": {
+    "mobilisation": 0,
+    "escalation": 6,
+    "energy": 3,
+    "control": 2
+   },
+   "subscribers": 751000,
+   "views_24h": 3144780
+  },
+  "meduzalive": {
+   "group": "independent-ru",
+   "posts_24h": 56,
+   "counts": {
+    "mobilisation": 3,
+    "escalation": 2,
+    "energy": 3,
+    "control": 3
+   },
+   "subscribers": 1120000,
+   "views_24h": 6715800
+  },
+  "mediazzzona": {
+   "group": "independent-ru",
+   "posts_24h": 21,
+   "counts": {
+    "mobilisation": 0,
+    "escalation": 0,
+    "energy": 4,
+    "control": 6
+   },
+   "subscribers": 165000,
+   "views_24h": 170029
+  },
+  "istories_media": {
+   "group": "independent-ru",
+   "posts_24h": 10,
+   "counts": {
+    "mobilisation": 1,
+    "escalation": 2,
+    "energy": 3,
+    "control": 0
+   },
+   "subscribers": 126000,
+   "views_24h": 127990
+  },
+  "thebell_io": {
+   "group": "independent-ru",
+   "posts_24h": 12,
+   "counts": {
+    "mobilisation": 0,
+    "escalation": 3,
+    "energy": 0,
+    "control": 2
+   },
+   "subscribers": 105000,
+   "views_24h": 144090
+  },
+  "agentstvonews": {
+   "group": "independent-ru",
+   "posts_24h": 11,
+   "counts": {
+    "mobilisation": 1,
+    "escalation": 2,
+    "energy": 2,
+    "control": 0
+   },
+   "subscribers": 104000,
+   "views_24h": 180360
+  },
+  "bbcrussian": {
+   "group": "independent-ru",
+   "posts_24h": 40,
+   "counts": {
+    "mobilisation": 0,
+    "escalation": 6,
+    "energy": 2,
+    "control": 3
+   },
+   "subscribers": 389000,
+   "views_24h": 1464500
+  },
+  "novaya_europe": {
+   "group": "independent-ru",
+   "posts_24h": 35,
+   "counts": {
+    "mobilisation": 1,
+    "escalation": 2,
+    "energy": 7,
+    "control": 6
+   },
+   "subscribers": 117000,
+   "views_24h": 280560
+  },
+  "radiosvoboda": {
+   "group": "independent-ru",
+   "posts_24h": 48,
+   "counts": {
+    "mobilisation": 0,
+    "escalation": 9,
+    "energy": 7,
+    "control": 6
+   },
+   "subscribers": 102000,
+   "views_24h": 272356
+  },
+  "astrapress": {
+   "group": "independent-ru",
+   "posts_24h": 42,
+   "counts": {
+    "mobilisation": 1,
+    "escalation": 5,
+    "energy": 4,
+    "control": 7
+   },
+   "subscribers": 350000,
+   "views_24h": 2235100
+  },
+  "sotaproject": {
+   "group": "independent-ru",
+   "posts_24h": 28,
+   "counts": {
+    "mobilisation": 0,
+    "escalation": 1,
+    "energy": 3,
+    "control": 5
+   },
+   "subscribers": 103000,
+   "views_24h": 145040
+  },
+  "holodmedia": {
+   "group": "independent-ru",
+   "posts_24h": 5,
+   "counts": {
+    "mobilisation": 0,
+    "escalation": 0,
+    "energy": 0,
+    "control": 0
+   },
+   "subscribers": 57900,
+   "views_24h": 14010
+  },
+  "tvrain": {
+   "group": "independent-ru",
+   "posts_24h": 55,
+   "counts": {
+    "mobilisation": 4,
+    "escalation": 3,
+    "energy": 7,
+    "control": 3
+   },
+   "subscribers": 468000,
+   "views_24h": 1700340
+  },
+  "currenttime": {
+   "group": "independent-ru",
+   "posts_24h": 22,
+   "counts": {
+    "mobilisation": 1,
+    "escalation": 1,
+    "energy": 4,
+    "control": 3
+   },
+   "subscribers": 144000,
+   "views_24h": 212029
+  },
+  "fontankaspb": {
+   "group": "regional-ru",
+   "posts_24h": 42,
+   "counts": {
+    "mobilisation": 0,
+    "escalation": 1,
+    "energy": 2,
+    "control": 2
+   },
+   "subscribers": 408000,
+   "views_24h": 1375940
+  },
+  "ngs_news": {
+   "group": "regional-ru",
+   "posts_24h": 38,
+   "counts": {
+    "mobilisation": 0,
+    "escalation": 0,
+    "energy": 0,
+    "control": 0
+   },
+   "subscribers": 111000,
+   "views_24h": 138039
+  },
+  "e1_news": {
+   "group": "regional-ru",
+   "posts_24h": 54,
+   "counts": {
+    "mobilisation": 0,
+    "escalation": 0,
+    "energy": 1,
+    "control": 1
+   },
+   "subscribers": 428000,
+   "views_24h": 1212496
+  },
+  "horizontal_russia": {
+   "group": "regional-ru",
+   "posts_24h": 15,
+   "counts": {
+    "mobilisation": 1,
+    "escalation": 0,
+    "energy": 0,
+    "control": 6
+   },
+   "subscribers": 41000,
+   "views_24h": 47479
+  },
+  "idelrealii": {
+   "group": "regional-ru",
+   "posts_24h": 10,
+   "counts": {
+    "mobilisation": 1,
+    "escalation": 0,
+    "energy": 3,
+    "control": 1
+   },
+   "subscribers": 10300,
+   "views_24h": 9106
+  },
+  "kavkazrealii": {
+   "group": "regional-ru",
+   "posts_24h": 7,
+   "counts": {
+    "mobilisation": 0,
+    "escalation": 1,
+    "energy": 0,
+    "control": 2
+   },
+   "subscribers": 8270,
+   "views_24h": 15090
+  },
+  "verhniy_lars": {
+   "group": "border-relocation",
+   "posts_24h": 0,
+   "counts": {
+    "mobilisation": 0,
+    "escalation": 0,
+    "energy": 0,
+    "control": 0
+   },
+   "subscribers": 97300,
+   "views_24h": 0
+  },
+  "fgku_rosgranstroy": {
+   "group": "border-relocation",
+   "posts_24h": 0,
+   "counts": {
+    "mobilisation": 0,
+    "escalation": 0,
+    "energy": 0,
+    "control": 0
+   },
+   "subscribers": 4240,
+   "views_24h": 0
+  },
+  "relokatz": {
+   "group": "border-relocation",
+   "posts_24h": 1,
+   "counts": {
+    "mobilisation": 0,
+    "escalation": 0,
+    "energy": 0,
+    "control": 0
+   },
+   "subscribers": 17700,
+   "views_24h": 2009
+  },
+  "tg_zagranka": {
+   "group": "border-relocation",
+   "posts_24h": 1,
+   "counts": {
+    "mobilisation": 0,
+    "escalation": 0,
+    "energy": 0,
+    "control": 0
+   },
+   "subscribers": 48700,
+   "views_24h": 8119
+  },
+  "V_Zelenskiy_official": {
+   "group": "official-ua",
+   "posts_24h": 14,
+   "counts": {
+    "mobilisation": 1,
+    "escalation": 3,
+    "energy": 2,
+    "control": 0
+   },
+   "subscribers": 666000,
+   "views_24h": 828399
+  },
+  "GeneralStaffZSU": {
+   "group": "official-ua",
+   "posts_24h": 7,
+   "counts": {
+    "mobilisation": 0,
+    "escalation": 1,
+    "energy": 0,
+    "control": 0
+   },
+   "subscribers": 64500,
+   "views_24h": 79690
+  },
+  "kpszsu": {
+   "group": "official-ua",
+   "posts_24h": 160,
+   "counts": {
+    "mobilisation": 0,
+    "escalation": 7,
+    "energy": 0,
+    "control": 0
+   },
+   "subscribers": 939000,
+   "views_24h": 14582200
+  },
+  "dsns_telegram": {
+   "group": "official-ua",
+   "posts_24h": 14,
+   "counts": {
+    "mobilisation": 0,
+    "escalation": 0,
+    "energy": 0,
+    "control": 0
+   },
+   "subscribers": 75600,
+   "views_24h": 208150
+  },
+  "UkrPravda_News": {
+   "group": "media-ua",
+   "posts_24h": 36,
+   "counts": {
+    "mobilisation": 0,
+    "escalation": 2,
+    "energy": 5,
+    "control": 0
+   },
+   "subscribers": 204000,
+   "views_24h": 1205800
+  },
+  "suspilnenews": {
+   "group": "media-ua",
+   "posts_24h": 45,
+   "counts": {
+    "mobilisation": 0,
+    "escalation": 4,
+    "energy": 5,
+    "control": 0
+   },
+   "subscribers": 263000,
+   "views_24h": 1682880
+  },
+  "hromadske_ua": {
+   "group": "media-ua",
+   "posts_24h": 39,
+   "counts": {
+    "mobilisation": 1,
+    "escalation": 2,
+    "energy": 1,
+    "control": 0
+   },
+   "subscribers": 104000,
+   "views_24h": 436120
+  },
+  "uniannet": {
+   "group": "media-ua",
+   "posts_24h": 73,
+   "counts": {
+    "mobilisation": 1,
+    "escalation": 6,
+    "energy": 7,
+    "control": 0
+   },
+   "subscribers": 701000,
+   "views_24h": 10286670
+  },
+  "truexanewsua": {
+   "group": "media-ua",
+   "posts_24h": 56,
+   "counts": {
+    "mobilisation": 0,
+    "escalation": 2,
+    "energy": 1,
+    "control": 0
+   },
+   "subscribers": 3170000,
+   "views_24h": 27475300
+  },
+  "idfofficial": {
+   "group": "official-il",
+   "posts_24h": 2,
+   "counts": {
+    "mobilisation": 0,
+    "escalation": 0,
+    "energy": 0,
+    "control": 0
+   },
+   "subscribers": 158000,
+   "views_24h": 9010
+  },
+  "ynetalerts": {
+   "group": "media-il",
+   "posts_24h": 101,
+   "counts": {
+    "mobilisation": 0,
+    "escalation": 2,
+    "energy": 1,
+    "control": 0
+   },
+   "subscribers": 113000,
+   "views_24h": 556157
+  },
+  "abualiexpress": {
+   "group": "media-il",
+   "posts_24h": 41,
+   "counts": {
+    "mobilisation": 0,
+    "escalation": 2,
+    "energy": 1,
+    "control": 1
+   },
+   "subscribers": 577000,
+   "views_24h": 2396699
+  },
+  "amitsegal": {
+   "group": "media-il",
+   "posts_24h": 93,
+   "counts": {
+    "mobilisation": 1,
+    "escalation": 0,
+    "energy": 0,
+    "control": 0
+   },
+   "subscribers": 373000,
+   "views_24h": 7066500
+  },
+  "presstv": {
+   "group": "official-ir",
+   "posts_24h": 122,
+   "counts": {
+    "mobilisation": 0,
+    "escalation": 4,
+    "energy": 12,
+    "control": 0
+   },
+   "subscribers": 92700,
+   "views_24h": 193311
+  },
+  "irna_en": {
+   "group": "official-ir",
+   "posts_24h": 38,
+   "counts": {
+    "mobilisation": 0,
+    "escalation": 2,
+    "energy": 6,
+    "control": 0
+   },
+   "subscribers": 25800,
+   "views_24h": 11586
+  },
+  "farsna": {
+   "group": "official-ir",
+   "posts_24h": 120,
+   "counts": {
+    "mobilisation": 0,
+    "escalation": 3,
+    "energy": 14,
+    "control": 0
+   },
+   "subscribers": 1710000,
+   "views_24h": 968625
+  },
+  "IranintlTV": {
+   "group": "opposition-ir",
+   "posts_24h": 160,
+   "counts": {
+    "mobilisation": 0,
+    "escalation": 14,
+    "energy": 12,
+    "control": 6
+   },
+   "subscribers": 1380000,
+   "views_24h": 7516930
+  },
+  "bbcpersian": {
+   "group": "opposition-ir",
+   "posts_24h": 53,
+   "counts": {
+    "mobilisation": 0,
+    "escalation": 8,
+    "energy": 4,
+    "control": 0
+   },
+   "subscribers": 771000,
+   "views_24h": 2116790
+  },
+  "radiofarda": {
+   "group": "opposition-ir",
+   "posts_24h": 26,
+   "counts": {
+    "mobilisation": 0,
+    "escalation": 3,
+    "energy": 1,
+    "control": 1
+   },
+   "subscribers": 110000,
+   "views_24h": 122630
+  },
+  "army21ye": {
+   "group": "houthi-ye",
+   "posts_24h": 9,
+   "counts": {
+    "mobilisation": 0,
+    "escalation": 2,
+    "energy": 1,
+    "control": 0
+   },
+   "subscribers": 267000,
+   "views_24h": 235300
+  },
+  "almasirah2": {
+   "group": "houthi-ye",
+   "posts_24h": 120,
+   "counts": {
+    "mobilisation": 0,
+    "escalation": 1,
+    "energy": 8,
+    "control": 0
+   },
+   "subscribers": 217000,
+   "views_24h": 1463612
+  },
+  "Almasirah_En": {
+   "group": "houthi-ye",
+   "posts_24h": 79,
+   "counts": {
+    "mobilisation": 2,
+    "escalation": 1,
+    "energy": 5,
+    "control": 0
+   },
+   "subscribers": 2250,
+   "views_24h": 2594
+  },
+  "mayadeenchannel": {
+   "group": "axis-media",
+   "posts_24h": 79,
+   "counts": {
+    "mobilisation": 0,
+    "escalation": 2,
+    "energy": 6,
+    "control": 0
+   },
+   "subscribers": 175000,
+   "views_24h": 227397
+  },
+  "SabrenNewss": {
+   "group": "axis-media",
+   "posts_24h": 81,
+   "counts": {
+    "mobilisation": 2,
+    "escalation": 0,
+    "energy": 6,
+    "control": 0
+   },
+   "subscribers": 1060000,
+   "views_24h": 4136800
+  },
+  "neoreshkins": {
+   "group": "analysis-ru",
+   "posts_24h": 15,
+   "counts": {
+    "mobilisation": 0,
+    "escalation": 0,
+    "energy": 4,
+    "control": 1
+   },
+   "subscribers": 28800,
+   "views_24h": 64200
+  },
+  "rerussia_org": {
+   "group": "analysis-ru",
+   "posts_24h": 0,
+   "counts": {
+    "mobilisation": 0,
+    "escalation": 0,
+    "energy": 0,
+    "control": 0
+   },
+   "subscribers": 18200,
+   "views_24h": 0
+  },
+  "stanovaya": {
+   "group": "analysis-ru",
+   "posts_24h": 0,
+   "counts": {
+    "mobilisation": 0,
+    "escalation": 0,
+    "energy": 0,
+    "control": 0
+   },
+   "subscribers": 25300,
+   "views_24h": 0
+  },
+  "abbasgallyamovpolitics": {
+   "group": "analysis-ru",
+   "posts_24h": 5,
+   "counts": {
+    "mobilisation": 0,
+    "escalation": 0,
+    "energy": 0,
+    "control": 0
+   },
+   "subscribers": 85100,
+   "views_24h": 86300
+  },
+  "prostoecon": {
+   "group": "analysis-ru",
+   "posts_24h": 0,
+   "counts": {
+    "mobilisation": 0,
+    "escalation": 0,
+    "energy": 0,
+    "control": 0
+   },
+   "subscribers": 303000,
+   "views_24h": 0
+  },
+  "Gromov_svodki": {
+   "group": "milblog-ru",
+   "posts_24h": 19,
+   "counts": {
+    "mobilisation": 0,
+    "escalation": 2,
+    "energy": 1,
+    "control": 3
+   },
+   "subscribers": 23900,
+   "views_24h": 99000
+  },
+  "SBUkr": {
+   "group": "official-ua",
+   "posts_24h": 3,
+   "counts": {
+    "mobilisation": 0,
+    "escalation": 1,
+    "energy": 0,
+    "control": 1
+   },
+   "subscribers": 294000,
+   "views_24h": 252100
+  },
+  "ukr_sof": {
+   "group": "official-ua",
+   "posts_24h": 2,
+   "counts": {
+    "mobilisation": 0,
+    "escalation": 0,
+    "energy": 0,
+    "control": 0
+   },
+   "subscribers": 137000,
+   "views_24h": 14010
+  },
+  "usf_army": {
+   "group": "official-ua",
+   "posts_24h": 2,
+   "counts": {
+    "mobilisation": 0,
+    "escalation": 0,
+    "energy": 0,
+    "control": 0
+   },
+   "subscribers": 33400,
+   "views_24h": 34280
+  },
+  "exilenova_plus": {
+   "group": "osint-ua",
+   "posts_24h": 24,
+   "counts": {
+    "mobilisation": 0,
+    "escalation": 0,
+    "energy": 1,
+    "control": 0
+   },
+   "subscribers": 324000,
+   "views_24h": 2174100
+  },
+  "supernova_plus": {
+   "group": "osint-ua",
+   "posts_24h": 16,
+   "counts": {
+    "mobilisation": 0,
+    "escalation": 0,
+    "energy": 3,
+    "control": 0
+   },
+   "subscribers": 361000,
+   "views_24h": 1065000
+  },
+  "crimeanwind": {
+   "group": "osint-ua",
+   "posts_24h": 47,
+   "counts": {
+    "mobilisation": 0,
+    "escalation": 1,
+    "energy": 6,
+    "control": 1
+   },
+   "subscribers": 223000,
+   "views_24h": 2228800
+  },
+  "zatelecom": {
+   "group": "analysis-ru",
+   "posts_24h": 17,
+   "counts": {
+    "mobilisation": 0,
+    "escalation": 0,
+    "energy": 0,
+    "control": 1
+   },
+   "subscribers": 64500,
+   "views_24h": 151280
+  },
+  "v_pastukhov": {
+   "group": "analysis-ru",
+   "posts_24h": 0,
+   "counts": {
+    "mobilisation": 0,
+    "escalation": 0,
+    "energy": 0,
+    "control": 0
+   },
+   "subscribers": 152000,
+   "views_24h": 0
+  },
+  "Yuri_Slusar": {
+   "group": "official-ru-regional",
+   "posts_24h": 4,
+   "counts": {
+    "mobilisation": 0,
+    "escalation": 0,
+    "energy": 1,
+    "control": 0
+   },
+   "subscribers": 164000,
+   "views_24h": 28360,
+   "subscribers_exact": 164416
+  },
+  "Klychkov_Andrey": {
+   "group": "official-ru-regional",
+   "posts_24h": 0,
+   "counts": {
+    "mobilisation": 0,
+    "escalation": 0,
+    "energy": 0,
+    "control": 0
+   },
+   "subscribers": 66400,
+   "views_24h": 0,
+   "subscribers_exact": 66421
+  },
+  "igor_artamonov48": {
+   "group": "official-ru-regional",
+   "posts_24h": 5,
+   "counts": {
+    "mobilisation": 0,
+    "escalation": 0,
+    "energy": 0,
+    "control": 0
+   },
+   "subscribers": 184000,
+   "views_24h": 45740,
+   "subscribers_exact": 184239
+  },
+  "anohin67": {
+   "group": "official-ru-regional",
+   "posts_24h": 9,
+   "counts": {
+    "mobilisation": 0,
+    "escalation": 0,
+    "energy": 0,
+    "control": 0
+   },
+   "subscribers": 41200,
+   "views_24h": 24740,
+   "subscribers_exact": 41196
+  },
+  "dmilyaev": {
+   "group": "official-ru-regional",
+   "posts_24h": 11,
+   "counts": {
+    "mobilisation": 0,
+    "escalation": 1,
+    "energy": 1,
+    "control": 0
+   },
+   "subscribers": 60400,
+   "views_24h": 17200,
+   "subscribers_exact": 60369
+  },
+  "Hinshtein": {
+   "group": "official-ru-regional",
+   "posts_24h": 0,
+   "counts": {
+    "mobilisation": 0,
+    "escalation": 0,
+    "energy": 0,
+    "control": 0
+   },
+   "subscribers": 213000,
+   "views_24h": 0,
+   "subscribers_exact": 213032
+  },
+  "gusev_36": {
+   "group": "official-ru-regional",
+   "posts_24h": 10,
+   "counts": {
+    "mobilisation": 1,
+    "escalation": 0,
+    "energy": 0,
+    "control": 0
+   },
+   "subscribers": 130000,
+   "views_24h": 82920,
+   "subscribers_exact": 130338
+  },
+  "opershtab23": {
+   "group": "official-ru-regional",
+   "posts_24h": 0,
+   "counts": {
+    "mobilisation": 0,
+    "escalation": 0,
+    "energy": 0,
+    "control": 0
+   },
+   "subscribers": 51600,
+   "views_24h": 0,
+   "subscribers_exact": 51565
+  }
+ },
+ "subscriber_growth": [
+  [
+   "rian_ru",
+   3020000,
+   -0.003
+  ],
+  [
+   "tass_agency",
+   569000,
+   0.0
+  ],
+  [
+   "mod_russia",
+   650000,
+   -0.003
+  ],
+  [
+   "aleksandr_shuvaev",
+   30500,
+   -0.007
+  ],
+  [
+   "kurskadm",
+   78400,
+   -0.005
+  ],
+  [
+   "bazabazon",
+   1560000,
+   0.0
+  ],
+  [
+   "breakingmash",
+   3140000,
+   -0.003
+  ],
+  [
+   "shot_shot",
+   1270000,
+   0.0
+  ],
+  [
+   "bbbreaking",
+   1980000,
+   0.0
+  ],
+  [
+   "ostorozhno_novosti",
+   1620000,
+   0.0
+  ],
+  [
+   "rybar",
+   1510000,
+   -0.019
+  ],
+  [
+   "dva_majors",
+   1160000,
+   0.0
+  ],
+  [
+   "wargonzo",
+   738000,
+   -0.003
+  ],
+  [
+   "boris_rozhin",
+   751000,
+   -0.004
+  ],
+  [
+   "meduzalive",
+   1120000,
+   0.0
+  ],
+  [
+   "mediazzzona",
+   165000,
+   0.0
+  ],
+  [
+   "istories_media",
+   126000,
+   0.0
+  ],
+  [
+   "thebell_io",
+   105000,
+   0.0
+  ],
+  [
+   "agentstvonews",
+   104000,
+   0.0
+  ],
+  [
+   "bbcrussian",
+   389000,
+   0.0
+  ],
+  [
+   "novaya_europe",
+   117000,
+   0.0
+  ],
+  [
+   "radiosvoboda",
+   102000,
+   0.0
+  ],
+  [
+   "astrapress",
+   350000,
+   0.0
+  ],
+  [
+   "sotaproject",
+   103000,
+   -0.01
+  ],
+  [
+   "holodmedia",
+   57900,
+   -0.002
+  ],
+  [
+   "tvrain",
+   468000,
+   -0.002
+  ],
+  [
+   "currenttime",
+   144000,
+   0.0
+  ],
+  [
+   "fontankaspb",
+   408000,
+   0.0
+  ],
+  [
+   "ngs_news",
+   111000,
+   0.0
+  ],
+  [
+   "e1_news",
+   428000,
+   -0.002
+  ],
+  [
+   "horizontal_russia",
+   41000,
+   0.0
+  ],
+  [
+   "idelrealii",
+   10300,
+   0.0
+  ],
+  [
+   "kavkazrealii",
+   8270,
+   -0.001
+  ],
+  [
+   "verhniy_lars",
+   97300,
+   0.0
+  ],
+  [
+   "fgku_rosgranstroy",
+   4240,
+   0.002
+  ],
+  [
+   "relokatz",
+   17700,
+   0.0
+  ],
+  [
+   "tg_zagranka",
+   48700,
+   0.004
+  ],
+  [
+   "V_Zelenskiy_official",
+   666000,
+   -0.003
+  ],
+  [
+   "GeneralStaffZSU",
+   64500,
+   0.008
+  ],
+  [
+   "kpszsu",
+   939000,
+   0.027
+  ],
+  [
+   "dsns_telegram",
+   75600,
+   0.02
+  ],
+  [
+   "UkrPravda_News",
+   204000,
+   0.005
+  ],
+  [
+   "suspilnenews",
+   263000,
+   0.004
+  ],
+  [
+   "hromadske_ua",
+   104000,
+   0.0
+  ],
+  [
+   "uniannet",
+   701000,
+   -0.001
+  ],
+  [
+   "truexanewsua",
+   3170000,
+   0.006
+  ],
+  [
+   "idfofficial",
+   158000,
+   0.0
+  ],
+  [
+   "ynetalerts",
+   113000,
+   0.0
+  ],
+  [
+   "abualiexpress",
+   577000,
+   -0.003
+  ],
+  [
+   "amitsegal",
+   373000,
+   0.005
+  ],
+  [
+   "presstv",
+   92700,
+   0.0
+  ],
+  [
+   "irna_en",
+   25800,
+   0.0
+  ],
+  [
+   "farsna",
+   1710000,
+   -0.012
+  ],
+  [
+   "IranintlTV",
+   1380000,
+   0.007
+  ],
+  [
+   "bbcpersian",
+   771000,
+   0.001
+  ],
+  [
+   "radiofarda",
+   110000,
+   0.0
+  ],
+  [
+   "army21ye",
+   267000,
+   -0.004
+  ],
+  [
+   "almasirah2",
+   217000,
+   0.0
+  ],
+  [
+   "Almasirah_En",
+   2250,
+   0.009
+  ],
+  [
+   "mayadeenchannel",
+   175000,
+   -0.011
+  ],
+  [
+   "SabrenNewss",
+   1060000,
+   -0.009
+  ],
+  [
+   "neoreshkins",
+   28800,
+   -0.007
+  ],
+  [
+   "rerussia_org",
+   18200,
+   0.0
+  ],
+  [
+   "stanovaya",
+   25300,
+   -0.004
+  ],
+  [
+   "abbasgallyamovpolitics",
+   85100,
+   -0.001
+  ],
+  [
+   "prostoecon",
+   303000,
+   0.003
+  ],
+  [
+   "Gromov_svodki",
+   23900,
+   0.044
+  ],
+  [
+   "SBUkr",
+   294000,
+   -0.003
+  ],
+  [
+   "ukr_sof",
+   137000,
+   0.0
+  ],
+  [
+   "usf_army",
+   33400,
+   -0.006
+  ],
+  [
+   "exilenova_plus",
+   324000,
+   0.012
+  ],
+  [
+   "supernova_plus",
+   361000,
+   0.006
+  ],
+  [
+   "crimeanwind",
+   223000,
+   -0.004
+  ],
+  [
+   "zatelecom",
+   64500,
+   0.0
+  ],
+  [
+   "v_pastukhov",
+   152000,
+   0.0
+  ],
+  [
+   "Yuri_Slusar",
+   164000,
+   -0.006
+  ],
+  [
+   "Klychkov_Andrey",
+   66400,
+   -0.004
+  ],
+  [
+   "igor_artamonov48",
+   184000,
+   -0.005
+  ],
+  [
+   "anohin67",
+   41200,
+   -0.002
+  ],
+  [
+   "dmilyaev",
+   60400,
+   -0.003
+  ],
+  [
+   "Hinshtein",
+   213000,
+   -0.005
+  ],
+  [
+   "gusev_36",
+   130000,
+   0.0
+  ],
+  [
+   "opershtab23",
+   51600,
+   -0.002
+  ]
+ ],
+ "stems_today": [
+  [
+   "escalation:нато",
+   54
+  ],
+  [
+   "energy:هرمز",
+   37
+  ],
+  [
+   "energy:дизел",
+   33
+  ],
+  [
+   "control:госизмен",
+   31
+  ],
+  [
+   "energy:энергетич",
+   28
+  ],
+  [
+   "energy:танкер",
+   25
+  ],
+  [
+   "energy:энергетик",
+   19
+  ],
+  [
+   "energy:hormuz",
+   19
+  ],
+  [
+   "escalation:هسته‌ای",
+   18
+  ],
+  [
+   "energy:нпз",
+   17
+  ],
+  [
+   "escalation:ядерн",
+   16
+  ],
+  [
+   "mobilisation:повестк",
+   15
+  ],
+  [
+   "control:дискредитац",
+   14
+  ],
+  [
+   "energy:tanker",
+   14
+  ],
+  [
+   "energy:نفتکش",
+   14
+  ],
+  [
+   "energy:бензин",
+   12
+  ],
+  [
+   "control:экстремист",
+   11
+  ],
+  [
+   "escalation:массированн",
+   11
+  ],
+  [
+   "escalation:балістичн",
+   11
+  ],
+  [
+   "escalation:эвакуац",
+   10
+  ],
+  [
+   "control:иноагент",
+   8
+  ],
+  [
+   "control:اعدام",
+   7
+  ],
+  [
+   "escalation:تخلیه",
+   6
+  ],
+  [
+   "energy:ناقلة",
+   6
+  ],
+  [
+   "energy:подстанц",
+   5
+  ],
+  [
+   "escalation:баллистическ",
+   5
+  ],
+  [
+   "energy:енергетик",
+   5
+  ],
+  [
+   "energy:відключен\\w* (?:світла|електр)",
+   5
+  ],
+  [
+   "energy:pipeline",
+   5
+  ],
+  [
+   "escalation:بالستیک",
+   5
+  ],
+  [
+   "energy:отключени\\w* (?:света|электр)",
+   4
+  ],
+  [
+   "control:нежелательн\\w* организац",
+   4
+  ],
+  [
+   "energy:цен\\w* на топлив",
+   4
+  ],
+  [
+   "control:цензур",
+   4
+  ],
+  [
+   "energy:электростанц",
+   4
+  ],
+  [
+   "energy:газопровод",
+   3
+  ],
+  [
+   "mobilisation:военкомат",
+   3
+  ],
+  [
+   "energy:без света",
+   3
+  ],
+  [
+   "control:белые списки",
+   3
+  ],
+  [
+   "escalation:פינוי",
+   3
+  ],
+  [
+   "escalation:nuclear",
+   3
+  ],
+  [
+   "escalation:ballistic",
+   3
+  ],
+  [
+   "energy:پالایشگاه",
+   3
+  ],
+  [
+   "escalation:باليستي",
+   3
+  ],
+  [
+   "control:фейк\\w* об армии",
+   2
+  ],
+  [
+   "energy:тэс",
+   2
+  ],
+  [
+   "energy:энергосистем",
+   2
+  ],
+  [
+   "mobilisation:мобилизац",
+   2
+  ],
+  [
+   "energy:аэс",
+   2
+  ],
+  [
+   "mobilisation:призывник",
+   2
+  ],
+  [
+   "control:режим\\w* чс",
+   2
+  ],
+  [
+   "escalation:масован",
+   2
+  ],
+  [
+   "energy:הורמוז",
+   2
+  ],
+  [
+   "escalation:evacuat",
+   2
+  ],
+  [
+   "energy:خط أنابيب",
+   2
+  ],
+  [
+   "mobilisation:mobiliz",
+   2
+  ],
+  [
+   "mobilisation:الاحتياط",
+   2
+  ],
+  [
+   "energy:ормуз",
+   1
+  ],
+  [
+   "escalation:nato",
+   1
+  ],
+  [
+   "control:шатдаун",
+   1
+  ],
+  [
+   "energy:тэц",
+   1
+  ],
+  [
+   "control:(?:блокировк|заблокир|замедлени|замедля)\\w* (?:\\w+ )?(?:telegram|телеграм|youtube|ютуб|whatsapp|ватсап|сайт|vpn|впн|мессендж|интернет|соцсет|signal)",
+   1
+  ],
+  [
+   "control:отключени\\w* (?:мобильного )?интернет",
+   1
+  ],
+  [
+   "mobilisation:мобілізац",
+   1
+  ],
+  [
+   "energy:підстанц",
+   1
+  ],
+  [
+   "escalation:евакуац",
+   1
+  ],
+  [
+   "mobilisation:тцк",
+   1
+  ],
+  [
+   "mobilisation:відстрочк",
+   1
+  ],
+  [
+   "energy:מכלית",
+   1
+  ],
+  [
+   "escalation:בליסטי",
+   1
+  ],
+  [
+   "control:עוצר",
+   1
+  ],
+  [
+   "mobilisation:גיוס",
+   1
+  ],
+  [
+   "energy:خط لوله",
+   1
+  ],
+  [
+   "escalation:نووي",
+   1
+  ],
+  [
+   "escalation:ядерк",
+   1
+  ],
+  [
+   "escalation:контрнаступ",
+   1
+  ],
+  [
+   "control:воєнн\\w* стан",
+   1
+  ],
+  [
+   "energy:нефтебаз",
+   1
+  ],
+  [
+   "energy:трубопровод",
+   1
+  ]
+ ],
+ "errors": [],
+ "baseline_days": 14,
+ "leads": {
+  "mobilisation": [
+   {
+    "group": "leaks-ru",
+    "channel": "ostorozhno_novosti",
+    "time": "2026-11-10T05:35",
+    "views": 174000,
+    "text": "Срочник из Биробиджана заболел в части, а затем впал в кому и скончался от «острого лейкоза». Близким четыре месяца не показывают его медкарту и анализы, а также отказывают в расследовании смерти. В ноябре 2025 года 18-летнего Илью К. из села Валдгейм под Биробиджаном призвали в ",
+    "url": "https://t.me/ostorozhno_novosti/57042"
+   },
+   {
+    "group": "media-ua",
+    "channel": "uniannet",
+    "time": "2026-11-10T07:29",
+    "views": 160000,
+    "text": "США, Китай и Россия не могут согласовать формат трехсторонней встречи Трампа, Путина и Си Цзиньпина на полях саммита АТЭС в Китае 18–19 ноября Как сообщает The Wall Street Journal, Пекин настаивает на строго регламентированном формате: каждый из лидеров должен зачитать заранее по",
+    "url": "https://t.me/uniannet/206657"
+   },
+   {
+    "group": "independent-ru",
+    "channel": "meduzalive",
+    "time": "2026-11-10T06:05",
+    "views": 159000,
+    "text": "США, Китай и Россия не могут договориться о формате встречи лидеров. Пекин хочет просто зачитать подготовленные заявления Между США и Китаем возникли разногласия по поводу формата и повестки трехсторонней встречи с участием России, которая планируется на полях саммита АТЭС 18–19 ",
+    "url": "https://t.me/meduzalive/150322"
+   },
+   {
+    "group": "independent-ru",
+    "channel": "meduzalive",
+    "time": "2026-11-10T05:27",
+    "views": 149000,
+    "text": "Трамп перед переговорами в Абу-Даби увидел «сильное стремление» завершить российско-украинскую войну Выступая перед журналистами в Белом доме, президент США заявил, что Россия и Украина «устали от боевых действий», сообщает Reuters. Трехсторонние переговоры между Россией, Украино",
+    "url": "https://t.me/meduzalive/150318"
+   },
+   {
+    "group": "milblog-ru",
+    "channel": "rybar",
+    "time": "2026-11-10T14:33",
+    "views": 136000,
+    "text": "📝 Мир все-таки не поделят? 📝 О новых инсайдах про встречу в Китае Трехсторонние переговоры закончились, не успев начаться. И нет, речь не о встрече в ОАЭ. Совсем скоро в китайском Шэньчжэне состоится саммит АТЭС, на котором должны пройти переговоры между китайским , российским и ",
+    "url": "https://t.me/rybar/84596"
+   },
+   {
+    "group": "leaks-ru",
+    "channel": "shot_shot",
+    "time": "2026-11-10T08:33",
+    "views": 112000,
+    "text": "Трёхсторонние переговоры России, США и Украины стартовали в Абу-Даби. Российскую делегацию возглавил Владимир Мединский На переговорах планируют обсудить, как будет устроена система безопасности на континенте после завершения конфликта, а также способы предотвращения новых угроз ",
+    "url": "https://t.me/shot_shot/101955"
+   }
+  ],
+  "escalation": [
+   {
+    "group": "media-ua",
+    "channel": "truexanewsua",
+    "time": "2026-11-10T07:37",
+    "views": 536000,
+    "text": "Українська делегація в Абу-Дабі почала зустріч з європейцями та посланцями Трампа. «Перша зустріч – з представниками Британії, Франції, Німеччини, Італії, НАТО та Єврокомісії, до яких також долучаться спецпредставники США – Віткофф та Кушнер. Звіримо позиції та скоординуємо кроки",
+    "url": "https://t.me/truexanewsua/148326"
+   },
+   {
+    "group": "leaks-ru",
+    "channel": "breakingmash",
+    "time": "2026-11-10T12:26",
+    "views": 328000,
+    "text": "Российский парапланерист два с половиной часа провисел на высоковольтных проводах в Индии. Алексей взлетел с Бир-Биллинга в индийском штате Химачал-Прадеш — самого популярного места для парапланеризма в Индии, и застрял на высоковольтных линиях электропередачи. Экстремал повис пр",
+    "url": "https://t.me/breakingmash/79257"
+   },
+   {
+    "group": "media-ua",
+    "channel": "truexanewsua",
+    "time": "2026-11-10T20:31",
+    "views": 283000,
+    "text": "❗️ русня масовано бʼє по енергетиці Кривого Рогу. Головна інформація для мешканців міста та області: https://t.me/+AQuwklD57Ag4OTFi",
+    "url": "https://t.me/truexanewsua/148381"
+   },
+   {
+    "group": "leaks-ru",
+    "channel": "bbbreaking",
+    "time": "2026-11-10T13:58",
+    "views": 223000,
+    "text": "Подготовка встречи Путина, Си Цзиньпина и Трампа идет, скоро могут быть хорошие новости на этот счет, заявил Рубио. США выступают за проведение встречи на полях саммита АТЭС, хотят обсуждать в том числе ядерное оружие, отметил он.",
+    "url": "https://t.me/bbbreaking/241980"
+   },
+   {
+    "group": "leaks-ru",
+    "channel": "bbbreaking",
+    "time": "2026-11-10T06:03",
+    "views": 217000,
+    "text": "❗️ США запросили позицию РФ по гарантиям безопасности Киеву, аналогичным пятой статье НАТО о принципе коллективной обороны, пишет FT со ссылкой на источники. Также Вашингтон запросил российскую позицию относительно аналогичных гарантий для Киева со стороны всего альянса в целом.",
+    "url": "https://t.me/bbbreaking/241920"
+   },
+   {
+    "group": "leaks-ru",
+    "channel": "bbbreaking",
+    "time": "2026-11-10T06:41",
+    "views": 208000,
+    "text": "❗️ Глава Минобороны Великобритании заявил о необходимости наладить прямые военные контакты с Россией Как сообщает Financial Times, министр обороны Великобритании Уэс Стритинг призвал создать дополнительные каналы связи с Москвой для снижения риска инцидентов и просчетов. «У нас е",
+    "url": "https://t.me/bbbreaking/241926"
+   }
+  ],
+  "energy": [
+   {
+    "group": "media-ua",
+    "channel": "truexanewsua",
+    "time": "2026-11-10T08:30",
+    "views": 509000,
+    "text": "Графіки не діють! Екстрені відключення світла введено у Києві, – ДТЕК. ТРУХА ⚡️ Україна | Надіслати новину",
+    "url": "https://t.me/truexanewsua/148330"
+   },
+   {
+    "group": "leaks-ru",
+    "channel": "bbbreaking",
+    "time": "2026-11-10T07:04",
+    "views": 207000,
+    "text": "❗️ Россия удвоила долю в поставках энергетического угля в Индию за десять месяцев 2026 года По данным «Коммерсанта», по итогам января—октября доля РФ на индийском рынке выросла до 8,2%. Объем экспорта увеличился на 63% год к году, достигнув 10,4 млн тонн. Россия заняла четвертое ",
+    "url": "https://t.me/bbbreaking/241929"
+   },
+   {
+    "group": "milblog-ru",
+    "channel": "rybar",
+    "time": "2026-11-10T09:14",
+    "views": 186000,
+    "text": "📝 Удары не кончаются 📝 Темна украинская ночь, и становится ещё темнее не только с приходом зимы. В ночь на 10 ноября «Герани» продолжили отрабатывать по объектам энергетической инфраструктуры. По предварительным данным, под ударами оказались Ладыжинская ТЭС в Винницкой области , ",
+    "url": "https://t.me/rybar/84585"
+   },
+   {
+    "group": "leaks-ru",
+    "channel": "bbbreaking",
+    "time": "2026-11-10T18:35",
+    "views": 175000,
+    "text": "Киев передал партнерам в Абу-Даби свои предложения по энергетическому и морскому перемирию и ждет ответа от Москвы, заявил глава МИД Украины Андрей Сибига.",
+    "url": "https://t.me/bbbreaking/241994"
+   },
+   {
+    "group": "official-ru",
+    "channel": "rian_ru",
+    "time": "2026-11-10T05:34",
+    "views": 174000,
+    "text": "Российские войска ударили по двум электроподстанциям в Киевской области, сообщили в Минобороны. Кроме того, поражены две электроподстанции в Днепропетровской и Полтавской областях, а также цели в Черном море: сухогруз с оружием и танкер, который доставлял топливо для ВСУ. 🔹 Подпи",
+    "url": "https://t.me/rian_ru/349479"
+   },
+   {
+    "group": "media-ua",
+    "channel": "uniannet",
+    "time": "2026-11-10T08:19",
+    "views": 159000,
+    "text": "Проясняются некоторые детали по предложениям на столе в Абу-Даби: США предложили изменить границы областей Украины Как пишет The Economist, американские переговорщики предложили изменить административные границы Украины так, чтобы Россия могла заявить о полном контроле Донецкой и",
+    "url": "https://t.me/uniannet/206662"
+   }
+  ],
+  "control": [
+   {
+    "group": "leaks-ru",
+    "channel": "bbbreaking",
+    "time": "2026-11-10T09:50",
+    "views": 219000,
+    "text": "❗️ Суд в Москве оштрафовал Telegram на 3 млн 800 тыс. рублей за неудаление запрещенной к распространению в РФ информации. Речь идет о фейках об армии и информации об анкетах военнослужащих. Суд также оштрафовал владельца «Википедии» на 15,2 млн рублей за отказ удалить запрещенную",
+    "url": "https://t.me/bbbreaking/241951"
+   },
+   {
+    "group": "official-ru",
+    "channel": "rian_ru",
+    "time": "2026-11-10T06:47",
+    "views": 175000,
+    "text": "Пожилого диверсанта поймала ФСБ в Краснодарском крае. Гражданин России 1957 года рождения имел ВНЖ на Украине, в Киеве он связался с сотрудниками украинской разведки. Его отправили на Кубань собирать данные о береговой линии Черного моря, а потом поставили задачу взорвать российс",
+    "url": "https://t.me/rian_ru/349483"
+   },
+   {
+    "group": "official-ua",
+    "channel": "SBUkr",
+    "time": "2026-11-10T08:00",
+    "views": 174000,
+    "text": "СБУ викрила ще одного агента фсб, який наводив атаки рашистів по центральних регіонах України Служба безпеки викрила ще одного агента фсб з Черкащини. Зловмисник коригував атаки рашистів по центральному регіону України. Як з’ясувало розслідування, потенційними «цілями» фігуранта ",
+    "url": "https://t.me/SBUkr/19031"
+   },
+   {
+    "group": "leaks-ru",
+    "channel": "ostorozhno_novosti",
+    "time": "2026-11-10T09:13",
+    "views": 160000,
+    "text": "«Википедию» оштрафовали на 15,2 млн рублей за отказ удалять статьи с «военной тайной» и пропагандой ЛГБТ*. Как передает корреспондент «Осторожно, новости», фонд Wikimedia признали виновным в отказе удалять из энциклопедии информацию военного характера — например, ГОСТы, которыми ",
+    "url": "https://t.me/ostorozhno_novosti/57054"
+   },
+   {
+    "group": "leaks-ru",
+    "channel": "ostorozhno_novosti",
+    "time": "2026-11-10T08:15",
+    "views": 147000,
+    "text": "В Подмосковье впервые составили протокол о «поиске экстремистских материалов». Как обнаружили «Осторожно, новости», 23 октября в судебный участок № 28 Дмитровского судебного района поступил протокол по делу о «поиске экстремистских материалов» (13.53 КоАП) в отношении 18-летнего ",
+    "url": "https://t.me/ostorozhno_novosti/57050"
+   },
+   {
+    "group": "independent-ru",
+    "channel": "meduzalive",
+    "time": "2026-11-10T11:05",
+    "views": 135000,
+    "text": "Комитет Госдумы одобрил законопроект о штрафах «за дискредитацию традиционных ценностей» В Госдуме подготовили законопроект о штрафах «за дискредитацию традиционных ценностей». Профильный комитет по уголовному и административному законодательству 9 ноября рекомендовал принять его",
+    "url": "https://t.me/meduzalive/150340"
+   }
+  ]
+ }
+}
