@@ -353,7 +353,7 @@ def page(path, title, desc, body, typ='WebPage', extra_ld=None, image='/og.png',
     ld = dict(ld, inLanguage=L)
     if ld.get('url', '').startswith(BASE) and not ld['url'].startswith(BASE + '/' + L + '/'): ld['url'] = BASE + i18n.lpath(ld['url'][len(BASE):])
     nav = ''.join(f'<a href="{h}"{" aria-current=page" if active == k else ""}>{t(n)}</a>' for k, h, n in
-                  [('home', '/', 'Index'), ('signals', '/signals/', 'Signals'), ('mobil', '/mobilization/', 'Mobilisation'), ('forecasts', '/forecasts/', 'Forecasts'), ('telegram', '/telegram/', 'Telegram'), ('alerts', '/alerts/', 'Alerts'), ('drones', '/drones/', 'Drones'), ('archive', '/archive/', 'Archive'), ('howto', '/how-to-read/', 'How to read'), ('method', '/methodology/', 'Methodology')])
+                  [('home', '/', 'Index'), ('signals', '/signals/', 'Signals'), ('mobil', '/mobilization/', 'Mobilisation'), ('forecasts', '/forecasts/', 'Forecasts'), ('telegram', '/telegram/', 'Telegram'), ('alerts', '/alerts/', 'Alerts'), ('drones', '/drones/', 'Drones'), ('mood', '/mood/', 'Mood'), ('archive', '/archive/', 'Archive'), ('howto', '/how-to-read/', 'How to read'), ('method', '/methodology/', 'Methodology')])
     alts = ''.join(f'<link rel="alternate" hreflang="{l}" href="{BASE}{i18n.lpath(path, l)}">' for l in i18n.LANGS) + f'<link rel="alternate" hreflang="x-default" href="{BASE}{"/" if path == "/" else i18n.lpath(path, "en")}">'
     langs = '<div class="langs" role="navigation" aria-label="' + t('Language') + '">' + ''.join(
         (f'<span aria-current="true" lang="{l}" title="{i18n.NATIVE[l]}">{i18n.LABEL[l]}</span>' if l == L else f'<a href="{i18n.lpath(path, l)}" hreflang="{l}" lang="{l}" title="{i18n.NATIVE[l]}" data-lang="{l}">{i18n.LABEL[l]}</a>')

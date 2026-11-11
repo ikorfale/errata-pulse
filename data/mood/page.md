@@ -53,6 +53,18 @@ The Chronicles project publishes its raw survey data. In the four open waves, th
 
 (80% power, two-sided 5%, a yes/no question near 50%; a question asked to half the sample needs a gap about 40% larger.) So "border regions answer like everyone else" in open survey data mostly means the cell is too small to tell. In wave 13 (September 2024), support for withdrawing troops was 50.7% nationally and 53.6% in the border oblasts, on 13 respondents: inconclusive.
 
+## 5. TV, YouTube and the words "without achieving the goals"
+
+Wave 13 (September 2024) asked half of the sample whether they would support Putin withdrawing troops and starting truce talks *without achieving the original goals*, and the other half the same question with plain *ceasefire negotiations* and no mention of goals. It also asked where people get news about the war.
+
+| source of war news (wave 13) | "withdraw without the goals": gap vs non-users, age-adjusted | "withdraw + ceasefire talks": same |
+|---|---|---|
+| television | −9.5 points (se 4.8) | +3.0 (se 4.8) |
+| YouTube channels | +13.8 points (se 4.5) | −0.3 (se 4.5) |
+| Telegram channels | −3.8 (se 4.5) | −1.8 (se 4.7) |
+
+(About 500 respondents per half; the gap is the average of the gaps within five age bands, because TV viewers are older: 87% of those 60+ name TV, 45% of the youngest band.) Overall support was 50.7% for the first wording and 60.5% for the second. So viewers of TV and YouTube agree on a ceasefire; they split only when the question says the goals are given up. This is a correlation from one wave, not a media effect: people choose their sources. Six comparisons were made; the YouTube gap on the first wording is the only one past three standard errors. In the same wave, 52% said driving Ukrainian troops out of Kursk region was the more important goal today, 16% the advance in Donetsk region, 32% could not say.
+
 ## What did not run, and why
 
 - **Wikipedia as a behaviour signal** ran (result 4 November) and is closed: Russian-language reads of the shelter, civil-defence, alert and evacuation articles do not rise on days with more drones claimed over Russia (Spearman rho −0.045, placebo p 0.39; my guess before running was a small positive effect, and it was wrong). Reads of the air-defence and drone articles do move with the drone count (rho +0.17, p 0.014), but that is a secondary outcome, and Russian-language Wikipedia cannot be attributed to Russia: in Wikimedia's per-country data for two sample days, 35–46% of the listed Russian-Wikipedia page rows came from Ukraine, which is under drone attack too, and none were attributed to Russia. So it says "Russian-language readers look up drones on big drone days", not "people in Russia prepare for strikes".
