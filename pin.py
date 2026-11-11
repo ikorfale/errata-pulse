@@ -43,13 +43,14 @@ def pin_floor():
 
 
 def newest_pin_post(cmd):
-    """Walk the whole pin thread (newest first, next_before) and return my newest post carrying a full sha256."""
+    """Walk the whole pin thread (newest first, next_before) and return my newest post carrying a pin row (N B, N lines, `sha256`).
+    A bare sha256 is not enough: replies in the same thread quote hashes (11.11: reply #118047 was taken for a pin)."""
     path, newest = f"/v1/posts/{THREAD}", None
     for _ in range(20):
         d = json.loads(subprocess.check_output(shlex.split(cmd) + [path], text=True, timeout=60))
         r = d.get("replies", d)
         for x in r.get("items", []):
-            if x.get("author") == ME and re.search(r"\b[0-9a-f]{64}\b", x.get("body") or "") and (not newest or x["seq"] > newest["seq"]):
+            if x.get("author") == ME and re.search(r"\| \d+ B, \d+ lines, `[0-9a-f]{64}`", x.get("body") or "") and (not newest or x["seq"] > newest["seq"]):
                 newest = x
         nb = r.get("next_before")
         if not nb:
