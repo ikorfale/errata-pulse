@@ -1,8 +1,8 @@
 {
- "generated": "2026-11-11T22:41:50.618237+00:00",
+ "generated": "2026-11-11T23:21:02.404750+00:00",
  "counts": {
-  "open": 33,
-  "resolved": 13,
+  "open": 32,
+  "resolved": 14,
   "annulled": 0
  },
  "selection": {
@@ -14,9 +14,9 @@
   "drafts_since": "2026-10-24"
  },
  "brier": {
-  "mine": 0.1882,
-  "final": 0.1475,
-  "base": 0.3018,
+  "mine": 0.1902,
+  "final": 0.137,
+  "base": 0.3105,
   "crowd": 0.0986
  },
  "calibration": [
@@ -76,19 +76,19 @@
   },
   {
    "bin": "90-100%",
-   "n": 1,
-   "mean_p": 0.96,
+   "n": 2,
+   "mean_p": 0.975,
    "freq_yes": 1.0
   }
  ],
  "models": {
-  "base": 0.3018,
-  "fable": 0.3025,
-  "signals": 0.2229,
-  "second": 0.04,
+  "signals": 0.2035,
+  "trend": 0.0973,
+  "base": 0.2992,
   "threshold": 0.0228,
-  "trend": 0.126,
-  "mine": 0.3499
+  "fable": 0.3225,
+  "second": 0.04,
+  "mine": 0.342
  },
  "questions": [
   {
@@ -568,7 +568,7 @@
    "index": "pulse",
    "opened": "2026-10-09",
    "status": "open",
-   "p": 0.04,
+   "p": 0.03,
    "base_rate": 0.04,
    "method": "base: one comparable Russian commitment (the 30-day energy moratorium of March 2025) in 4.6 years; Poisson +0.5 smoothing over 42 days. signals: LR 1.8 Zelensky's public offer of a reciprocal energy truce (22 Sep) and Trump's claim of agreement; LR 0.7 the strike campaign is widening, not narrowing (Omsk, Salavat refineries 8 Oct; Yandex data centres 8-9 Oct); LR 1.2 US-led talks under way.",
    "history": [
@@ -612,6 +612,15 @@
      "date": "2026-10-14",
      "p": 0.04,
      "reason": "14.10: mass strike on Ukraine's grid (39 ballistic, 26 energy sites, 600k without power) and Peskov: the truce 'was not specified, so Russia cannot be said to break it' — the opposite of a public commitment. LR x0.65.",
+     "models": {
+      "base": 0.04,
+      "signals": 0.05
+     }
+    },
+    {
+     "date": "2026-11-11",
+     "p": 0.03,
+     "reason": "Abu Dhabi round ended 11.11 without any energy-strike moratorium; Russia struck 8 Ukrainian regions the same nights; Lavrov rejected an immediate ceasefire. Next step is the Witkoff/Kushner visit to Putin on 12.11.",
      "models": {
       "base": 0.04,
       "signals": 0.05
@@ -3256,7 +3265,7 @@
    "category": "war",
    "index": "pulse",
    "opened": "2026-10-24",
-   "status": "open",
+   "status": "yes",
    "p": 0.99,
    "base_rate": 0.35,
    "method": "mine written before Fable (tmp log 23:18Z); Fable independent from evidence only, never saw my number; ensemble = log-odds mean with base rate",
@@ -3314,7 +3323,25 @@
    ],
    "crowd": [],
    "crowd_history": [],
-   "draft": "d3"
+   "draft": "d3",
+   "resolved_at": "2026-11-11",
+   "resolution_source": "https://meduza.io/en/feature/2026/11/11/russia-ukraine-peace-talks-conclude-in-abu-dhabi-with-prisoner-exchange-agreement-but-no-breakthrough-on-territory",
+   "resolution_note": "Trilateral US-Russia-Ukraine sessions held in Abu Dhabi 10 and 11 Nov (AP 10.11, Meduza/Xinhua 11.11)",
+   "scores": {
+    "brier": 0.21653684210526317,
+    "brier_final": 0.00010000000000000018,
+    "models": {
+     "base": 0.26500000000000007,
+     "trend": 0.03999999999999998,
+     "signals": 0.04839999999999999,
+     "fable": 0.4225000000000001,
+     "mine": 0.30250000000000005
+    },
+    "brier_base": 0.42250000000000004,
+    "brier_crowd": null,
+    "days": 19,
+    "outcome": 1.0
+   }
   },
   {
    "id": "36",
@@ -3681,7 +3708,7 @@
    "index": "pulse",
    "opened": "2026-11-07",
    "status": "open",
-   "p": 0.15,
+   "p": 0.2,
    "base_rate": 0.1,
    "method": "base: CENTCOM and UKMTO have not confirmed any IRGC mine claim in recent weeks; signals: IRGC claims mine hits almost daily 01-07.11; trend: UKMTO incidents are projectiles/limpets, not mines",
    "history": [
@@ -3689,6 +3716,16 @@
      "date": "2026-11-07",
      "p": 0.15,
      "reason": "second model independently 0.18; my 0.14",
+     "models": {
+      "base": 0.1,
+      "signals": 0.2,
+      "trend": 0.12
+     }
+    },
+    {
+     "date": "2026-11-11",
+     "p": 0.2,
+     "reason": "11.11 Iran's army says another tanker struck a mine and caught fire in eastern Hormuz; UKMTO reported a tanker incident but gave no cause. A second mine claim in 3 days raises the chance UKMTO/JMIC attribute one to a mine; still unconfirmed.",
      "models": {
       "base": 0.1,
       "signals": 0.2,
