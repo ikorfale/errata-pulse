@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-10T23:21:56.510265+00:00",
+ "generated": "2026-11-11T22:41:50.618237+00:00",
  "counts": {
   "open": 33,
   "resolved": 13,
@@ -82,13 +82,13 @@
   }
  ],
  "models": {
+  "base": 0.3018,
   "fable": 0.3025,
-  "threshold": 0.0228,
-  "trend": 0.126,
-  "mine": 0.3499,
   "signals": 0.2229,
   "second": 0.04,
-  "base": 0.3018
+  "threshold": 0.0228,
+  "trend": 0.126,
+  "mine": 0.3499
  },
  "questions": [
   {
@@ -548,6 +548,10 @@
     {
      "date": "2026-11-10",
      "p": 0.064
+    },
+    {
+     "date": "2026-11-11",
+     "p": 0.051
     }
    ],
    "crowd_urls": {
@@ -749,6 +753,10 @@
     {
      "date": "2026-11-10",
      "p": 0.058
+    },
+    {
+     "date": "2026-11-11",
+     "p": 0.071
     }
    ],
    "crowd_urls": {
@@ -990,6 +998,10 @@
     {
      "date": "2026-11-10",
      "p": 0.09
+    },
+    {
+     "date": "2026-11-11",
+     "p": 0.09
     }
    ],
    "crowd_urls": {
@@ -1102,7 +1114,7 @@
    "index": "pulse",
    "opened": "2026-10-09",
    "status": "open",
-   "p": 0.07,
+   "p": 0.03,
    "base_rate": 0.08,
    "method": "base: reference class = major chokepoint disruptions by an armed party (Bab el-Mandeb 2024-25, Hormuz 2026): a return to normal daily traffic within ~3 months of a still-active attack campaign is rare; judgmental 8%. signals: LR 0.8 Trump rejected Iran's 7-day reopening proposal; LR 0.7 IRGC attacks vessels nearly nightly (my transit signal: 2.7/day vs 3 baseline, Oct 8); LR 1.2 Iran says reopening would begin the day Washington accepts its plan, and Iran's economy is under acute strain.",
    "history": [
@@ -1110,6 +1122,15 @@
      "date": "2026-10-09",
      "p": 0.07,
      "reason": "Opening: traffic is ~3 ships a day; a deal would have to come fast and stick.",
+     "models": {
+      "base": 0.08,
+      "signals": 0.06
+     }
+    },
+    {
+     "date": "2026-11-11",
+     "p": 0.03,
+     "reason": "Re-check 11.11: my own Q20 puts even a 7-day average of 20 transits a day by 30 Nov at 12%; a single 100-ship day needs near pre-war traffic within seven weeks. 7% was too high; lowered to 3%.",
      "models": {
       "base": 0.08,
       "signals": 0.06
@@ -1250,6 +1271,10 @@
     },
     {
      "date": "2026-11-10",
+     "p": 0.01
+    },
+    {
+     "date": "2026-11-11",
      "p": 0.01
     }
    ],
@@ -1570,6 +1595,10 @@
     {
      "date": "2026-11-10",
      "p": 0.27
+    },
+    {
+     "date": "2026-11-11",
+     "p": 0.235
     }
    ],
    "crowd_urls": {
@@ -2103,6 +2132,10 @@
     {
      "date": "2026-11-10",
      "p": 0.189
+    },
+    {
+     "date": "2026-11-11",
+     "p": 0.181
     }
    ],
    "crowd_urls": {
@@ -2316,6 +2349,10 @@
     {
      "date": "2026-11-10",
      "p": 0.07
+    },
+    {
+     "date": "2026-11-11",
+     "p": 0.057
     }
    ],
    "crowd_urls": {
@@ -2654,7 +2691,7 @@
    "index": "mri",
    "opened": "2026-10-11",
    "status": "open",
-   "p": 0.55,
+   "p": 0.5,
    "base_rate": 0.55,
    "method": "base: reference class = government bills on military service introduced to the Duma, share passing first reading within about 7 weeks of introduction; my rough estimate from the 2023-2025 pattern of such bills (often fast-tracked) about 0.55, not a counted sample. signals: LR 1.2 government/MoD bill framed as social guarantees, uncontroversial in the Duma; LR 0.85 the autumn session is crowded with the 2027-2029 budget. No crowd market.",
    "history": [
@@ -2689,6 +2726,15 @@
      "date": "2026-11-01",
      "p": 0.55,
      "reason": "no change: comments due 03.11, bill on the November programme and the autumn priority list (22.10); no first-reading date yet",
+     "models": {
+      "base": 0.55,
+      "signals": 0.555
+     }
+    },
+    {
+     "date": "2026-11-11",
+     "p": 0.5,
+     "reason": "Not on the Duma agenda as of 11 Nov (SOZD); in the November programme, about three plenary weeks left",
      "models": {
       "base": 0.55,
       "signals": 0.555
@@ -2958,6 +3004,16 @@
       "signals": 0.14,
       "second": 0.1
      }
+    },
+    {
+     "date": "2026-11-11",
+     "p": 0.11,
+     "reason": "Re-check 11.11: October-November disclosures (OpenAI 9 Oct, Anthropic 9 Oct, Vals AI 27 Oct, Andon Labs, Fireworks breach 9 Nov) show sandbox escapes, test-data exfiltration and a criminal theft of weights, but no model copying its own weights out unprompted. Rate of new lab disclosures is up, which keeps the hazard where it was; unchanged.",
+     "models": {
+      "base": 0.1,
+      "signals": 0.14,
+      "second": 0.1
+     }
     }
    ],
    "crowd": [
@@ -3043,6 +3099,10 @@
     {
      "date": "2026-11-10",
      "p": 0.182
+    },
+    {
+     "date": "2026-11-11",
+     "p": 0.18
     }
    ],
    "crowd_urls": {
@@ -3058,7 +3118,7 @@
    "index": null,
    "opened": "2026-10-22",
    "status": "open",
-   "p": 0.04,
+   "p": 0.03,
    "base_rate": 0.04,
    "method": "base: about 4% of House bills that sit in subcommittee without markup three months after introduction pass the House within the same Congress (judgmental, method gap: no count yet). signals: LR 0.5 no markup and only the lame-duck weeks left; LR 1.3 bipartisan sponsorship (12 cosponsors from both parties) after the rogue-agent disclosures; LR 1.2 an NDAA conference report is a vehicle for AI provisions in December. second: independent probability from a second model (Claude Fable 5.1) given the evidence and criteria, never my number.",
    "history": [
@@ -3071,10 +3131,30 @@
       "signals": 0.03,
       "second": 0.04
      }
+    },
+    {
+     "date": "2026-11-11",
+     "p": 0.03,
+     "reason": "Re-check 11.11: congress.gov still shows only the 24 Jul subcommittee referral (13 cosponsors), no hearing or markup; Congress back from recess 9 Nov with ~20 House session days left; the House-passed NDAA text has no shutdown-capability duty. Bill dies on 3 Jan.",
+     "models": {
+      "base": 0.04,
+      "signals": 0.03,
+      "second": 0.04
+     }
     }
    ],
-   "crowd": [],
-   "crowd_history": []
+   "crowd": [
+    "manifold:will-the-ai-kill-switch-act-pass-th"
+   ],
+   "crowd_history": [
+    {
+     "date": "2026-11-11",
+     "p": 0.25
+    }
+   ],
+   "crowd_urls": {
+    "manifold:will-the-ai-kill-switch-act-pass-th": "https://manifold.markets/waterlilly/will-the-ai-kill-switch-act-pass-th"
+   }
   },
   {
    "id": "33",
