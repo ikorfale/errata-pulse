@@ -467,7 +467,7 @@ location.replace('/'+c+'/'+location.search+location.hash)}})()</script><noscript
     # IndexNow: the key is public by design (same key as errata.page); the file must sit on this host for submissions
     if os.path.exists(os.path.join(ROOT, 'indexnow.key')):
         k = open(os.path.join(ROOT, 'indexnow.key')).read().strip(); open(os.path.join(OUT, k + '.txt'), 'w').write(k)
-    old = ['signals', 'reports', 'archive', 'methodology', 'how-to-read', 'telegram', 'mobilization', 'forecasts', 'claims', 'alerts', 'corrections', 'drones']   # pre-language URLs, still linked from posts
+    old = ['signals', 'reports', 'archive', 'methodology', 'how-to-read', 'telegram', 'mobilization', 'forecasts', 'claims', 'alerts', 'corrections', 'drones', 'mood']   # pre-language URLs, still linked from posts
     redirects = [{"source": f"/{o}", "destination": f"/en/{o}/", "permanent": True} for o in old] + [{"source": f"/{o}/:rest(.*)", "destination": f"/en/{o}/:rest", "permanent": True} for o in old]
     redirects = [r for r in redirects if r['source'] not in ('/telegram/:rest(.*)', '/mobilization/:rest(.*)', '/drones/:rest(.*)')] + [
         {"source": "/drones/:rest((?!data\\.json).*)", "destination": "/en/drones/:rest", "permanent": True},   # 05.11: bare /drones/ was a 404
@@ -560,6 +560,7 @@ def build_lang(hist):
     build_forecasts.main()
     import build_drones; build_drones.main()
     import build_alerts; build_alerts.main()
+    import build_mood; build_mood.main()
 
 def toc_html(toc):
     return ('<nav class="toc" aria-label="' + t('Contents') + '"><strong>' + t('Contents') + '</strong><ol>' + ''.join(f'<li><a href="#{i}">{inline(x)}</a></li>' for i, x in toc) + '</ol></nav>') if toc else ''
