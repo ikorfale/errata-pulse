@@ -564,11 +564,57 @@ def build_lang(hist):
 
 def toc_html(toc):
     return ('<nav class="toc" aria-label="' + t('Contents') + '"><strong>' + t('Contents') + '</strong><ol>' + ''.join(f'<li><a href="#{i}">{inline(x)}</a></li>' for i, x in toc) + '</ol></nav>') if toc else ''
+_ALERT_KEYS = None
+# places reports name instead of their region (frequent strike targets)
+CITY_ALIAS = {'Leningrad': ['Ust-Luga', 'Усть-Луг', 'Primorsk\\b', 'Приморск[еау]?\\b', 'Kirishi', 'Кириш'], 'Krasnodar Krai': ['Tuapse', 'Туапсе', 'Novorossiysk', 'Новороссийск', 'Sochi', 'Сочи', 'Primorsko-Akhtarsk', 'Приморско-Ахтарск'],
+              'Saratov': ['Engels', 'Энгельс'], 'Nizhny Novgorod': ['Kstovo', 'Кстов'], 'Volgograd': ['Volgograd', 'Волгоград'],
+              'Republic of Tatarstan': ['Kazan\\b', 'Казан'], 'Bashkortostan': ['Ufa\\b', 'Уф[аеуы]\\b', 'Salavat', 'Салават'], 'Samara': ['Syzran', 'Сызран', 'Novokuybyshevsk', 'Новокуйбышевск']}
+def _alert_keys():
+    """Region -> regex of how a report names it (EN key word; RU adjective stem, any case ending). Ambiguous names
+    (Vladimir = Putin, Jewish, Moscow = the government) only match on explicit phrases. #703, 12.11."""
+    global _ALERT_KEYS
+    if _ALERT_KEYS is not None: return _ALERT_KEYS
+    R = json.load(open(os.path.join(ROOT, 'data', 'alerts_regions.json')))['regions']
+    special = {'Moscow': r'Sobyanin|(?:on|over) Moscow\b|Moscow airports|Собянин|(?:на|над) Москв|аэропорт\w* Москвы|Москву атак',
+               'Moscow Oblast': r'Moscow (?:region|oblast)|(?:near|outside) Moscow\b|Подмосков|Московск\w+ област',
+               'Vladimir': r'Vladimir (?:region|oblast)|Владимирск\w+ област', 'Jewish': r'Jewish Autonomous|Еврейск\w+ автоном',
+               'Saint Petersburg': r'\bSt\.? Petersburg|Saint Petersburg|Петербург',
+               'Novgorod': r'(?<!Nizhny )\bNovgorod|Новгородск|Великий Новгород|Великом Новгороде',
+               'Sakha Republic': r'\bSakha\b|\bYakutia|Якути', 'Crimea (occupied)': r'\bCrimea|Крым', 'Sevastopol (occupied)': r'Sevastopol|Севастопол',
+               'Primorsky Krai': r'Primorsky Krai|Приморск\w* кра|Приморь|Vladivostok|Владивосток'}
+    junk = {'Republic', 'of', 'Krai', 'Oblast', 'Autonomous', 'Okrug', 'область', 'край', 'Республика', 'автономный', 'округ', 'АО'}
+    out = {}
+    for iso, v in R.items():
+        en = v['en']
+        if en in special: out[iso] = re.compile(special[en]); continue
+        ew = [w for w in re.split(r'[\s()]+', en) if w and w not in junk]
+        rw = [w for w in re.split(r'[\s()]+', v['ru']) if w and w not in junk]
+        rk = max(rw, key=len) if rw else ''
+        if re.search(r'(ая|ий|ой|ое)$', rk): rk = rk[:-2]          # Белгородская -> Белгородск
+        elif re.search(r'[аяи]$', rk) and len(rk) > 5: rk = rk[:-1]  # Карелия -> Карели, Чувашия -> Чуваши
+        pats = [r'(?<![-\w])' + re.escape(' '.join(ew)) + r'\b'] if ew else []
+        if len(rk) >= 4: pats.append(r'(?<![А-Яа-яЁё])' + re.escape(rk))
+        pats += CITY_ALIAS.get(en, [])
+        out[iso] = re.compile('|'.join(pats))
+    _ALERT_KEYS = (R, out)
+    return _ALERT_KEYS
+def alert_links(text, limit=10):
+    """'Air-raid alerts' box under a report: the live map plus the alert pages of regions the report names."""
+    R, keys = _alert_keys(); plain = re.sub(r'<[^>]+>', ' ', text)
+    hits = sorted((m.start(), iso) for iso, rx in keys.items() for m in [rx.search(plain)] if m)
+    seen = []
+    for _, iso in hits:
+        if iso not in seen: seen.append(iso)
+    nm = lambda iso: R[iso]['ru'] if i18n.LANG == 'ru' else R[iso]['en']
+    sl = lambda iso: re.sub(r'[^a-z0-9]+', '-', R[iso]['en'].lower()).strip('-')
+    regs = ' · '.join(f'<a href="{i18n.lpath("/alerts/" + sl(i) + "/")}">{esc(nm(i))}</a>' for i in seen[:limit])
+    return (f'<aside class="note alert-links"><strong>{t("Air-raid alerts")}:</strong> <a href="{i18n.lpath("/alerts/")}">{t("live map of officially declared alerts by region")}</a>'
+            + (f'. {t("Regions in this report")}: {regs}' if regs else '') + '.</aside>')
 def report_html(r, content, notes, toc, kicker, footer, cover=None):
     fn = (f'<section class="fns"><h2 id="notes">{t("Notes")}</h2><ol>' + ''.join(f'<li id="fn{n}"><a href="{esc(u)}">{x}</a> <a href="#r{n}" class="back" aria-label="{t("back to text")}">↩</a></li>' for n, (x, u) in enumerate(notes, 1)) + '</ol></section>') if notes else ''
     img = f'<img class="cover" src="{cover}" alt="{t("Share card: Chaos Pulse gauge and five components for this report")}" width="1200" height="630">' if cover else ''
     return (f'<article class="report"><p class="kicker">{kicker}</p><h1 class="ptitle">{esc(r["title"])}</h1><p class="lede">{esc(r["summary"])}</p>{fallback_note(r)}'
-            f'{img}{toc_html(toc)}<div class="prose">{content}</div>{fn}<p class="meta">{footer}</p></article>')
+            f'{img}{toc_html(toc)}<div class="prose">{content}</div>{alert_links(content)}{fn}<p class="meta">{footer}</p></article>')
 def report_ld(r, path, image=None):
     ld = {"@context": "https://schema.org", "@type": "Article", "headline": r['title'], "datePublished": r['date'], "dateModified": r['date'], "description": r['summary'],
           "author": {"@type": "Organization", "name": "errata (an AI agent)", "url": "https://errata.page"}, "publisher": {"@type": "Organization", "name": "errata (an AI agent)", "url": "https://errata.page"},
