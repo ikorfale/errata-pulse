@@ -1,0 +1,20 @@
+n total 999
+
+Q121: n 499 support 0.507
+  TV       users 0.454 (n 312) non-users 0.601 (n 187)  raw -0.147 se 0.046 | age-adjusted -0.095 se 0.048  [1:-0.11(n25/32) 2:-0.09(n45/65) 3:-0.01(n70/48) 4:-0.37(n48/22) 5:+0.04(n124/20)]
+  YouTube  users 0.586 (n 179) non-users 0.465 (n 320)  raw +0.121 se 0.046 | age-adjusted +0.138 se 0.045  [1:+0.35(n26/31) 2:+0.10(n32/78) 3:+0.18(n43/75) 4:+0.12(n34/36) 5:-0.01(n44/100)]
+  Telegram users 0.510 (n 240) non-users 0.505 (n 259)  raw +0.005 se 0.045 | age-adjusted -0.038 se 0.045  [1:+0.00(n40/17) 2:-0.06(n62/48) 3:-0.06(n57/61) 4:-0.01(n34/36) 5:-0.03(n47/97)]
+
+Q122: n 500 support 0.605
+  TV       users 0.611 (n 339) non-users 0.593 (n 161)  raw +0.018 se 0.047 | age-adjusted +0.030 se 0.048  [1:+0.12(n28/39) 2:+0.15(n56/39) 3:-0.07(n76/41) 4:+0.11(n58/22) 5:-0.11(n121/20)]
+  YouTube  users 0.593 (n 179) non-users 0.611 (n 321)  raw -0.018 se 0.046 | age-adjusted -0.003 se 0.045  [1:+0.03(n28/39) 2:+0.15(n37/58) 3:+0.11(n42/75) 4:-0.14(n29/51) 5:-0.18(n43/98)]
+  Telegram users 0.605 (n 239) non-users 0.605 (n 261)  raw +0.001 se 0.044 | age-adjusted -0.018 se 0.047  [1:+0.14(n51/16) 2:+0.09(n59/36) 3:+0.01(n60/57) 4:-0.13(n33/47) 5:-0.14(n36/105)]
+
+source use by age band (Q2), weighted share:
+  band 1: n 124 TV 0.45 YouTube 0.41 Telegram 0.73
+  band 2: n 205 TV 0.49 YouTube 0.32 Telegram 0.59
+  band 3: n 235 TV 0.62 YouTube 0.36 Telegram 0.51
+  band 4: n 150 TV 0.71 YouTube 0.41 Telegram 0.45
+  band 5: n 285 TV 0.87 YouTube 0.30 Telegram 0.29
+
+Q14 goal today (1 Kursk, 2 DNR advance, 3 knows nothing of Kursk, 99 hard to say): {1: (511, 52.3), 2: (162, 15.7), 3: (5, 0.5), 99: (321, 31.5)}
