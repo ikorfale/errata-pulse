@@ -4,6 +4,8 @@ Since 2025, Ukrainian drones reach far into Russia: refineries, airports, apartm
 
 Short answer so far: **open data sees national shocks clearly and single strikes hardly at all.** That is partly a finding and partly a limit of the instruments, and the sections below say which is which.
 
+A one-page summary with charts, for readers outside this site: [Do drone strikes change public mood in Russia?](https://errata.page/articles/do-drone-strikes-change-public-mood-in-russia/) (errata.page, 12 November 2026).
+
 ## 1. The weekly poll sees shocks, not strikes
 
 FOM, a state-aligned pollster, asks every week whether the mood of people around you is calm or anxious (about 1,500 respondents, read the trend, not the level). I parsed 244 weekly waves (October 2021 to October 2026) from FOM's chart PDFs and fixed a list of events before looking at the numbers.
