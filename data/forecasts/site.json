@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-12T22:43:20.156601+00:00",
+ "generated": "2026-11-12T23:18:16.173459+00:00",
  "counts": {
   "open": 32,
   "resolved": 14,
@@ -82,13 +82,13 @@
   }
  ],
  "models": {
-  "trend": 0.0973,
-  "base": 0.2992,
-  "threshold": 0.0228,
-  "fable": 0.3225,
   "second": 0.04,
+  "fable": 0.3225,
+  "base": 0.2992,
   "signals": 0.2035,
-  "mine": 0.342
+  "trend": 0.0973,
+  "mine": 0.342,
+  "threshold": 0.0228
  },
  "questions": [
   {
@@ -1406,7 +1406,7 @@
    "index": "pulse",
    "opened": "2026-10-09",
    "status": "open",
-   "p": 0.6,
+   "p": 0.56,
    "base_rate": 0.25,
    "method": "trend: lognormal, zero drift, from $125.44, annual volatility 0.75, 83 days. base: judgmental 25%: a 20% fall needs a Hormuz reopening or demand destruction; in 2022 Brent fell from $120+ to under $100 within ~3 months of its peak. signals: LR 0.8 no reopening deal in sight, attacks continue; LR 1.2 demand destruction and IEA stock releases (~100 mb) plus Saudi East-West pipeline at 5.8 mb/d.",
    "history": [
@@ -1434,6 +1434,16 @@
      "date": "2026-11-10",
      "p": 0.6,
      "reason": "Brent ~2.6 on 9 Nov (from ~20 on 30 Oct), two weeks of decline on peace hopes and physical weakness (UBS); blockade and closed Hormuz keep upside risk for 31 Dec.",
+     "models": {
+      "base": 0.3,
+      "signals": 0.55,
+      "second": 0.58
+     }
+    },
+    {
+     "date": "2026-11-12",
+     "p": 0.56,
+     "reason": "12.11: Brent settled 95.82 (+3.3%, Reuters) after Trump closed the Iran deal track; less headroom under 100 for 31.12.",
      "models": {
       "base": 0.3,
       "signals": 0.55,
@@ -3444,7 +3454,7 @@
    "index": null,
    "opened": "2026-10-31",
    "status": "open",
-   "p": 0.212,
+   "p": 0.14,
    "base_rate": 0.15,
    "method": "mine written before Fable (tmp/my-fc-1031.txt 23:35Z); Fable independent from evidence only, never saw my number; ensemble = log-odds mean with base rate",
    "history": [
@@ -3452,6 +3462,16 @@
      "date": "2026-10-31",
      "p": 0.212,
      "reason": "Qatar shuttle with US coordination, Iranian team in Doha 31.10; both sides publicly refuse a direct format (Axios, Tasnim, Araghchi 31.10); strike window after 3.11",
+     "models": {
+      "base": 0.15,
+      "mine": 0.25,
+      "fable": 0.25
+     }
+    },
+    {
+     "date": "2026-11-12",
+     "p": 0.14,
+     "reason": "12.11: Trump 'we don't need a deal with Iran', Vance-led track effectively ended (Reuters, Semafor 12.11); Iran waits on its 7 conditions. Fewer paths to a confirmed direct meeting in 18 days.",
      "models": {
       "base": 0.15,
       "mine": 0.25,
