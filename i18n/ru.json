@@ -2373,5 +2373,8 @@
  "No missile danger declared in the last 12 hours.": "За последние 12 часов ракетную опасность не объявляли.",
  "None right now.": "Сейчас нет.",
  "all alerts": "все тревоги",
- "of them missile": "из них ракетные"
+ "of them missile": "из них ракетные",
+ "Hours per Moscow day under an officially declared UAV or missile danger (red: the part under missile danger), from this site’s own snapshots of the alert feed every 5 minutes since {f}. A lower bound: an alert with no update for 4 hours stops counting, and gaps in our recording count as no alert (faded bars: days we recorded only in part). Updated with the site, about once a day; this is history, not live status.": "Часы за московские сутки под официально объявленной беспилотной или ракетной опасностью (красным — часть под ракетной опасностью), по собственным снимкам ленты тревог каждые 5 минут с {f}. Оценка снизу: тревога без обновлений 4 часа перестаёт считаться, а пропуски в нашей записи считаются как отсутствие тревоги (бледные столбцы — дни, записанные частично). Обновляется вместе с сайтом примерно раз в день; это история, а не текущий статус.",
+ "{m} h of it under missile danger": "из них {m} ч — ракетная опасность",
+ "Of those, {m} hours under missile danger (red).": "Из них {m} ч — под ракетной опасностью (красным)."
 }

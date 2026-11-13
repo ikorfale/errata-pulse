@@ -247,11 +247,15 @@ def hours_block(iso, H):
     W, Ht, pad, bw = 560, 150, 28, 560 // max(len(days), 7)
     bars, lab = [], []
     for i, d in enumerate(days):
-        h, n = r.get(d, [0, 0]); x = pad + i * (W - pad) / len(days); w = max(4, (W - pad) / len(days) - 6)
+        v = r.get(d, [0, 0, 0]); h, n = v[0], v[1]; hm = v[2] if len(v) > 2 else 0
+        x = pad + i * (W - pad) / len(days); w = max(4, (W - pad) / len(days) - 6)
         y = 10 + (Ht - 30) * (1 - min(h, 24) / 24); part = cov.get(d, 0) < 0.98
-        tip = t('{d}: {h} h under declared alert, {n} alert(s) started', d=_dlabel(d), h=f'{h:.1f}', n=n) + (' · ' + t('partial day: recorded {p}% of it', p=round(cov.get(d, 0) * 100)) if part else '')
+        tip = t('{d}: {h} h under declared alert, {n} alert(s) started', d=_dlabel(d), h=f'{h:.1f}', n=n) + (' · ' + t('{m} h of it under missile danger', m=f'{hm:.1f}') if hm > 0 else '') + (' · ' + t('partial day: recorded {p}% of it', p=round(cov.get(d, 0) * 100)) if part else '')
         if h > 0:
             bars.append(f'<path d="M{x:.1f},{Ht-20} V{y+4:.1f} q0,-4 4,-4 h{w-8:.1f} q4,0 4,4 V{Ht-20} Z" fill="#e08a1e"{" fill-opacity=\".45\"" if part else ""}><title>{esc(tip)}</title></path>')
+        if hm > 0:   # the missile-danger part of the day, drawn from the baseline up inside the orange bar
+            ym = 10 + (Ht - 30) * (1 - min(hm, h, 24) / 24)
+            bars.append(f'<rect x="{x:.1f}" y="{ym:.1f}" width="{w:.1f}" height="{Ht-20-ym:.1f}" fill="#b3261e"{" fill-opacity=\".45\"" if part else ""}><title>{esc(tip)}</title></rect>')
         bars.append(f'<rect x="{x:.1f}" y="10" width="{w:.1f}" height="{Ht-30}" fill="transparent"><title>{esc(tip)}</title></rect>')
         lab.append(f'<text x="{x + w/2:.1f}" y="{Ht-5}" text-anchor="middle">{_dlabel(d)}</text>')
     grid = ''.join(f'<line x1="{pad}" x2="{W}" y1="{10 + (Ht-30)*(1-v/24):.1f}" y2="{10 + (Ht-30)*(1-v/24):.1f}" stroke="var(--line)"/><text x="{pad-6}" y="{14 + (Ht-30)*(1-v/24):.1f}" text-anchor="end">{v}{t(" h")}</text>' for v in (0, 12, 24))
@@ -261,11 +265,13 @@ def hours_block(iso, H):
     avg = sum(r.get(d, [0, 0])[0] for d in full) / len(full) if full else None
     first = H['first'][:10]
     summ = t('Last {k} recorded days: {h} hours under a declared alert, {n} alerts started.', k=len(last7), h=f'{h7:.1f}', n=n7)
+    m7 = sum((r.get(d) or [0, 0, 0])[2] if len(r.get(d) or []) > 2 else 0 for d in last7)
+    if m7 > 0: summ += ' ' + t('Of those, {m} hours under missile danger (red).', m=f'{m7:.1f}')
     if avg is not None: summ += ' ' + t('On a fully recorded day, {a} hours on average.', a=f'{avg:.1f}')
     return f"""<h2 class="sec" id="hours">{t('Hours under alert by day')}</h2>
 <p class="meta">{esc(summ)}</p>
 <figure class="al-hours"><svg viewBox="0 0 {W} {Ht}" role="img" aria-label="{esc(t('Hours under a declared alert per day'))}" style="width:100%;height:auto;font:400 10px var(--sans);fill:var(--mute)">{grid}{''.join(bars)}{''.join(lab)}</svg>
-<figcaption class="meta">{t('Hours per Moscow day under an officially declared UAV or missile danger, from this site’s own snapshots of the alert feed every 5 minutes since {f}. A lower bound: an alert with no update for 4 hours stops counting, and gaps in our recording count as no alert (faded bars: days we recorded only in part). Updated with the site, about once a day; this is history, not live status.', f=esc(first))}</figcaption></figure>"""
+<figcaption class="meta">{t('Hours per Moscow day under an officially declared UAV or missile danger (red: the part under missile danger), from this site’s own snapshots of the alert feed every 5 minutes since {f}. A lower bound: an alert with no update for 4 hours stops counting, and gaps in our recording count as no alert (faded bars: days we recorded only in part). Updated with the site, about once a day; this is history, not live status.', f=esc(first))}</figcaption></figure>"""
 
 def hours_top(H, names, R, k=10):
     """Regions with the most declared-alert hours over the last 7 recorded days (main /alerts/ page)."""

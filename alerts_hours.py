@@ -33,21 +33,25 @@ def split(t0, t1):
 def main(d):
     R = rows(d)
     if len(R) < 2: print(json.dumps({'regions': {}, 'days': []})); return
-    secs, starts, cov, prev = {}, {}, {}, None
+    secs, msecs, starts, cov, prev = {}, {}, {}, {}, None
     for (t0, a), (t1, _) in zip(R, R[1:]):
         gap = (t1 - t0).total_seconds(); credit = min(gap, CAP) if gap <= CAP else STEP
         live = {k for k, v in a.items() if not v.endswith('*')}
+        mis = {k for k in live if a[k][0] in 'mb'}             # missile danger (alone or with UAV)
         for k in (set(a) - prev if prev is not None else ()):   # present at all now, absent before; the first snapshot starts nothing
             day = t0.astimezone(MSK).date().isoformat(); starts.setdefault(k, {})[day] = starts.get(k, {}).get(day, 0) + 1
         for day, s in split(t0, t0 + timedelta(seconds=credit)):
             cov[day] = cov.get(day, 0) + s
             for k in live: secs.setdefault(k, {})[day] = secs.get(k, {}).get(day, 0) + s
+            for k in mis: msecs.setdefault(k, {})[day] = msecs.get(k, {}).get(day, 0) + s
         prev = set(a)
     days = sorted(cov)
     out = {'first': R[0][0].strftime('%Y-%m-%dT%H:%MZ'), 'last': R[-1][0].strftime('%Y-%m-%dT%H:%MZ'), 'days': days,
            # share of each Moscow day we have snapshots for (first and last days are partial by construction)
            'coverage': {k: round(v / 86400, 3) for k, v in cov.items()},
-           'regions': {k: {day: [round(secs.get(k, {}).get(day, 0) / 3600, 2), starts.get(k, {}).get(day, 0)] for day in days}
+           # [hours under any declared alert, alerts started, of those hours: under missile danger]
+           'regions': {k: {day: [round(secs.get(k, {}).get(day, 0) / 3600, 2), starts.get(k, {}).get(day, 0),
+                                 round(msecs.get(k, {}).get(day, 0) / 3600, 2)] for day in days}
                        for k in sorted(set(secs) | set(starts))}}
     json.dump(out, sys.stdout, ensure_ascii=False, separators=(',', ':'))
 
