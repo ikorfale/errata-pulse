@@ -58,7 +58,11 @@ def main():
         'cleared_list': 'All-clear in the last 3 hours', 'active_list': 'Under alert now (last update)', 'your': 'Your region',
         'pick': 'Choose your region', 'notify': 'Notify me while this tab is open', 'notify_on': 'Notifications on for', 'official': 'Official channels',
         'nochan': 'No verified official channel in our list yet: use the regional government site and MChS.',
-        'last': 'last update', 'feed': 'latest relayed report', 'n_uav': 'UAV', 'n_mis': 'missile', 'n_stale': 'more with no update for 4 h', 'tz': 'your time', 'chart': 'Regions under alert, last 12 hours (10-minute steps)'}.items()}
+        'last': 'last update', 'feed': 'latest relayed report', 'n_uav': 'UAV', 'n_mis': 'missile', 'n_stale': 'more with no update for 4 h', 'tz': 'your time', 'chart': 'Regions under alert, last 12 hours (10-minute steps)',
+        'stale_list': 'No update for 4 h or more: probably over, but no all-clear was relayed', 'stale_hint': 'Tap to show',
+        'mis_now': 'Missile danger declared now in', 'mis_go': 'Go to a shelter at once and follow your region’s official channels.',
+        'mis_recent': 'Missile danger declared in the last 12 hours', 'mis_none': 'No missile danger declared in the last 12 hours.',
+        'act_empty': 'None right now.', 'leg_uav': 'all alerts', 'leg_mis': 'of them missile'}.items()}
     todo = f"""<h2 class="sec" id="what-to-do">{t('What to do when an alert is declared')}</h2>
 <p class="meta">{t('A short summary of standard civil-protection advice (MChS of Russia and regional authorities). Your region’s instructions come first.')}</p>
 <div class="al-todo">
@@ -100,7 +104,10 @@ def main():
 .al-list li span:last-child{{color:var(--mute);white-space:nowrap;font-size:.8rem}}.al-list .k{{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:8px}}
 .al-me{{background:var(--card);border:1px solid var(--line);padding:16px 18px;font-family:var(--sans)}}.al-me select{{font:inherit;width:100%;padding:7px;margin:6px 0 10px;background:var(--bg);color:var(--ink);border:1px solid var(--line)}}
 .al-me .st{{font:500 1.35rem/1.25 var(--serif);margin:4px 0}}.al-me .meta a{{overflow-wrap:anywhere}}.al-me label{{font-size:.8rem;display:flex;gap:8px;align-items:center;margin-top:10px;cursor:pointer}}
-.al-spark{{width:100%;height:70px;display:block;margin-top:6px}}.al-spark path.a{{fill:#e08a1e;opacity:.25}}.al-spark path.l{{fill:none;stroke:#e08a1e;stroke-width:1.5}}
+.al-spark{{width:100%;height:70px;display:block;margin-top:6px}}.al-spark path.a{{fill:#e08a1e;opacity:.25}}.al-spark path.l{{fill:none;stroke:#e08a1e;stroke-width:1.5}}.al-spark path.m{{fill:#b3261e;opacity:.75}}
+.al-mis{{background:#b3261e;color:#fff;font:500 .95rem/1.45 var(--sans);padding:12px 16px;margin:12px 0 4px;border-radius:3px}}.al-mis b{{font-weight:600}}.al-mis span{{display:block;font-weight:400;font-size:.85rem;opacity:.92;margin-top:2px}}
+.al-side details{{margin-top:14px}}.al-side summary{{font:500 .72rem/1.5 var(--sans);letter-spacing:.08em;text-transform:uppercase;color:var(--mute);cursor:pointer;list-style-position:outside}}.al-side summary b{{color:var(--ink2)}}
+.al-list.dim li{{opacity:.62}}
 .al-todo{{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin:20px 0}}.al-todo section{{background:var(--card);border:1px solid var(--line);border-top:3px solid var(--c);padding:18px 20px;font:400 .9rem/1.6 var(--sans)}}
 .al-todo h3{{font:500 1.15rem/1.3 var(--serif);margin:0 0 10px}}.al-todo ul{{padding-left:1.1em;margin:0}}.al-todo li{{margin:.35em 0}}
 .al-off{{columns:2;column-gap:36px;font:400 .84rem/1.55 var(--sans);padding:0;list-style:none}}.al-off li{{break-inside:avoid;padding:6px 0;border-bottom:1px solid var(--line)}}.al-off b{{font-weight:500}}
@@ -113,12 +120,13 @@ def main():
 <p class="tg-cta">{t('Get each Chaos Pulse and mobilisation report on Telegram: <a href="https://t.me/chaos_pulse">@chaos_pulse</a> (no alerts spam, one post per report).')}</p>
 <div class="al-top"><div>
 <div class="al-live"><span class="al-dot" id="al-dot"></span><span id="al-upd">{t('Loading…')}</span></div>
+<div class="al-mis" id="al-mis" hidden></div>
 <div class="al-count" id="al-n">–<small>{S['now_n']}</small></div>
 <div class="al-split" id="al-split"></div>
 <div class="al-map" id="al-map"><div class="al-zoom"><button data-v="{west}" data-g="al-w" class="on">{t('West')}</button><button data-v="{full}" data-g="al-f">{t('All Russia')}</button></div>
 <svg id="al-svg" viewBox="{west}" role="img" aria-label="{t('Map of Russian regions coloured by declared alert')}"><defs>
 <pattern id="al-both" width="60" height="60" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="60" height="60" fill="#b3261e"/><rect width="30" height="60" fill="#e08a1e"/></pattern>
-<pattern id="al-stale" width="40" height="40" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="40" height="40" fill="var(--soft)"/><rect width="14" height="40" fill="#e08a1e" opacity=".55"/></pattern></defs>
+<pattern id="al-stale" width="40" height="40" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="40" height="40" fill="var(--soft)"/><rect width="10" height="40" fill="#e08a1e" opacity=".32"/></pattern></defs>
 {paths}</svg><div class="al-tip" id="al-tip"></div></div>
 <div class="al-leg"><span><i style="background:#e08a1e"></i>{S['uav']}</span><span><i style="background:#b3261e"></i>{S['missile']}</span><span><i style="background:repeating-linear-gradient(45deg,#b3261e 0 5px,#e08a1e 5px 10px)"></i>{t('Both')}</span><span><i style="background:repeating-linear-gradient(45deg,var(--soft) 0 4px,#e08a1e 4px 6px)"></i>{t('No update for 4 h')}</span><span><i style="background:#3f8f5a"></i>{t('All-clear, last hour')}</span></div>
 </div><aside class="al-side">
@@ -126,7 +134,9 @@ def main():
 <div id="al-mine" class="meta">{t('Pick your region to see its status and official channels here. The choice stays in this browser only.')}</div>
 <label><input type="checkbox" id="al-notify">{S['notify']}</label></div>
 <h3>{S['active_list']}</h3><ul class="al-list" id="al-act"></ul>
+<details id="al-std" hidden><summary><b id="al-stn"></b> · {S['stale_list']}</summary><ul class="al-list dim" id="al-stl"></ul></details>
 <h3>{S['cleared_list']}</h3><ul class="al-list" id="al-clr"></ul>
+<h3 style="color:#b3261e">{S['mis_recent']}</h3><ul class="al-list" id="al-mrec"></ul>
 <h3>{S['chart']}</h3><svg class="al-spark" id="al-spark" viewBox="0 0 300 70" preserveAspectRatio="none"></svg><div class="meta" id="al-spark-m"></div>
 </aside></div>
 <p class="note">{t('<strong>Not a siren.</strong> This page relays declared alerts with a delay of about one to three minutes and can miss or misread one. If you are in a region under threat, follow your region’s official channels, sirens and SMS from MChS, and do what they say. On purpose this map stays at region level: it shows no towns, no drone counts, no flight directions and no interceptions, because live details of that kind help the attacker more than they help anyone take cover.')}</p>
@@ -167,14 +177,23 @@ if(a){{p.classList.add(a.stale?'stale':kind(a));if(!a.stale)p.classList.add('on'
 else if(c&&Date.now()-new Date(c)<3600e3)p.classList.add('clear');if(r===mine)p.classList.add('mine')}});
 document.getElementById('al-n').firstChild.nodeValue=n;
 document.getElementById('al-split').innerHTML=n?'<b style="color:#e08a1e">'+u+'</b> '+S.n_uav+' · <b style="color:#b3261e">'+mi+'</b> '+S.n_mis+(st?' · <span style="color:var(--mute)">'+st+' '+S.n_stale+'</span>':''):S.none_now+(st?' <span style="color:var(--mute)">('+st+' '+S.n_stale+')</span>':'');
-var A=Object.keys(act).sort(function(a,b){{return act[a].stale-act[b].stale||(act[a].since<act[b].since?-1:1)}});
-document.getElementById('al-act').innerHTML=A.map(function(r){{var s=status(r);return '<li data-r="'+r+'"><span><span class="k" style="background:'+col(s.k)+(s.stale?';opacity:.45':'')+'"></span>'+N[r]+'</span><span title="'+s.sub+'"'+(s.stale?' style="opacity:.6"':'')+'>'+dur(act[r].last)+' '+S.ago+'</span></li>'}}).join('')||'<li>—</li>';
+var LI=function(r){{var s=status(r);return '<li data-r="'+r+'"><span><span class="k" style="background:'+col(s.k)+'"></span>'+N[r]+'</span><span title="'+s.sub+'">'+dur(act[r].last)+' '+S.ago+'</span></li>'}};
+var rk=function(a){{return a.missile?0:1}};
+var A=Object.keys(act).filter(function(r){{return !act[r].stale}}).sort(function(a,b){{return rk(act[a])-rk(act[b])||(act[a].last<act[b].last?1:-1)}});
+var Z=Object.keys(act).filter(function(r){{return act[r].stale}}).sort(function(a,b){{return act[a].last<act[b].last?1:-1}});
+document.getElementById('al-act').innerHTML=A.map(LI).join('')||'<li>'+S.act_empty+'</li>';
+document.getElementById('al-std').hidden=!Z.length;document.getElementById('al-stn').textContent=Z.length;document.getElementById('al-stl').innerHTML=Z.map(LI).join('');
+var MN=A.filter(function(r){{return act[r].missile}}),mb=document.getElementById('al-mis');mb.hidden=!MN.length;
+if(MN.length)mb.innerHTML='<b>'+S.mis_now+': '+MN.map(function(r){{return N[r]}}).join(', ')+'.</b><span>'+S.mis_go+'</span>';
+var MR=D.missile_recent||{{}},MK=Object.keys(MR).sort(function(a,b){{return MR[a]<MR[b]?1:-1}});
+document.getElementById('al-mrec').innerHTML=MK.map(function(r){{return '<li data-r="'+r+'"><span><span class="k" style="background:#b3261e"></span>'+N[r]+'</span><span>'+tm(MR[r])+'</span></li>'}}).join('')||'<li style="cursor:default;color:var(--mute)">'+S.mis_none+'</li>';
 var C=Object.keys(D.cleared).sort(function(a,b){{return D.cleared[a]<D.cleared[b]?1:-1}});
 document.getElementById('al-clr').innerHTML=C.map(function(r){{return '<li data-r="'+r+'"><span><span class="k" style="background:#3f8f5a"></span>'+N[r]+'</span><span>'+tm(D.cleared[r])+'</span></li>'}}).join('')||'<li>—</li>';
 document.querySelectorAll('.al-list li[data-r]').forEach(function(li){{li.onclick=function(){{pick(li.dataset.r)}}}});
 var v=D.series||[],mx=Math.max(1,Math.max.apply(null,v)),w=300/Math.max(1,v.length-1),pts=v.map(function(x,i){{return (i*w).toFixed(1)+','+(68-60*x/mx).toFixed(1)}});
-document.getElementById('al-spark').innerHTML=pts.length?'<path class="a" d="M0,68L'+pts.join('L')+'L300,68Z"/><path class="l" d="M'+pts.join('L')+'"/>':'';
-document.getElementById('al-spark-m').textContent=v.length?(LANG==='ru'?'максимум ':'peak ')+mx+(LANG==='ru'?' · сейчас ':' · now ')+v[v.length-1]:'';
+var mv=D.missile_series||[],mp=mv.map(function(x,i){{return (i*w).toFixed(1)+','+(68-60*x/mx).toFixed(1)}});
+document.getElementById('al-spark').innerHTML=pts.length?'<path class="a" d="M0,68L'+pts.join('L')+'L300,68Z"/><path class="l" d="M'+pts.join('L')+'"/>'+(Math.max.apply(null,mv.concat([0]))?'<path class="m" d="M0,68L'+mp.join('L')+'L300,68Z"/>':''):'';
+document.getElementById('al-spark-m').innerHTML=v.length?(LANG==='ru'?'максимум ':'peak ')+mx+(LANG==='ru'?' · сейчас ':' · now ')+v[v.length-1]+(Math.max.apply(null,mv.concat([0]))?' · <span style="color:#b3261e">■</span> '+S.leg_mis:''):'';
 me()}}
 function me(){{var el=document.getElementById('al-mine');if(!mine){{return}}var s=status(mine)||{{k:'none',txt:'…',sub:''}};
 el.innerHTML='<div class="st" style="color:'+(s.k==='none'?'inherit':col(s.k))+'">'+N[mine]+': '+s.txt+'</div>'+(s.sub?'<div>'+s.sub+'</div>':'')+(s.stale?'<div>'+S.stale.replace('{{h}}',D.stale_hours)+'</div>':'')+

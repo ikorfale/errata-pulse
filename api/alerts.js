@@ -92,9 +92,10 @@ async function channel(ch, since) {
 }
 // fold posts (oldest first) into region states; also a 10-minute series of how many regions were under alert
 function fold(posts, now) {
-  const st = {}, series = [], clears = {}; posts.sort((a, b) => a.ts - b.ts);
+  const st = {}, series = [], mseries = [], clears = {}, mrecent = {}; posts.sort((a, b) => a.ts - b.ts);
   const BIN = 600e3, t0 = now - WINDOW_H * 3600e3; let bin = Math.floor(t0 / BIN) * BIN, i = 0;
   const count = t => Object.values(st).filter(s => (s.uav || s.missile) && t - s.upd < STALE_H * 3600e3).length;
+  const mcount = t => Object.values(st).filter(s => s.missile && t - s.upd < STALE_H * 3600e3).length;
   // a post can carry several announcements in blank-line separated paragraphs ("Тульская - отбой ракетной опасности" /
   // "Курская, Орловская - ракетная опасность сохраняется"): read them apart when each one names a region and a status
   const parts = p => { const ch = p.text.split(/\n\s*\n/).filter(x => classify(x) && regions(x).length);
@@ -109,13 +110,13 @@ function fold(posts, now) {
     if (!rs.length) return;
     for (const iso of rs) {
       const s = st[iso] || (st[iso] = { uav: null, missile: null, upd: 0, by: new Set() });
-      if (c.set) { s.by.add(p.ch); for (const k of c.set) { if (!s[k]) s[k] = p.ts; } }
+      if (c.set) { s.by.add(p.ch); for (const k of c.set) { if (!s[k]) s[k] = p.ts; } if (c.set.includes('missile')) mrecent[iso] = p.ts; }
       if (c.clear) { let had = false; for (const k of c.clear) { if (s[k]) had = true; s[k] = null; } if (!s.uav && !s.missile) s.by.clear(); if (had) clears[iso] = p.ts; }
       else delete clears[iso];
       s.upd = p.ts;
     }
   };
-  for (; bin <= now; bin += BIN) { while (i < posts.length && posts[i].ts < bin + BIN) apply(posts[i++]); if (bin >= t0) series.push(count(bin + BIN)); }
+  for (; bin <= now; bin += BIN) { while (i < posts.length && posts[i].ts < bin + BIN) apply(posts[i++]); if (bin >= t0) { series.push(count(bin + BIN)); mseries.push(mcount(bin + BIN)); } }
   while (i < posts.length) apply(posts[i++]);
   const active = {};
   for (const [iso, s] of Object.entries(st)) if (s.uav || s.missile) {
@@ -124,7 +125,10 @@ function fold(posts, now) {
                     stale: now - s.upd > STALE_H * 3600e3 };
   }
   const cleared = {}; for (const [iso, ts] of Object.entries(clears)) if (!active[iso] && now - ts < 3 * 3600e3) cleared[iso] = new Date(ts).toISOString();
-  return { active, cleared, series };
+  // regions where missile danger was declared at any time in the window (latest declaration), so a short missile alert
+  // that already ended still shows on the page as "missile danger earlier tonight"
+  const missile_recent = {}; for (const [iso, ts] of Object.entries(mrecent)) if (ts >= t0) missile_recent[iso] = new Date(ts).toISOString();
+  return { active, cleared, series, missile_series: mseries, missile_recent };
 }
 async function build(now = Date.now()) {
   const since = now - WINDOW_H * 3600e3, got = await Promise.allSettled(CHANNELS.map(c => channel(c, since)));
