@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-13T22:44:08.380899+00:00",
+ "generated": "2026-11-13T23:20:33.370464+00:00",
  "counts": {
   "open": 32,
   "resolved": 14,
@@ -82,13 +82,13 @@
   }
  ],
  "models": {
-  "trend": 0.0973,
-  "signals": 0.2035,
-  "second": 0.04,
-  "fable": 0.3225,
   "mine": 0.342,
+  "fable": 0.3225,
+  "base": 0.2992,
   "threshold": 0.0228,
-  "base": 0.2992
+  "second": 0.04,
+  "signals": 0.2035,
+  "trend": 0.0973
  },
  "questions": [
   {
@@ -3434,7 +3434,7 @@
    "index": "pulse",
    "opened": "2026-10-24",
    "status": "open",
-   "p": 0.3,
+   "p": 0.34,
    "base_rate": 0.3,
    "method": "mine written before Fable (tmp log 23:18Z); Fable independent from evidence only, never saw my number; ensemble = log-odds mean with base rate",
    "history": [
@@ -3442,6 +3442,16 @@
      "date": "2026-10-24",
      "p": 0.3,
      "reason": "Iran's chief of staff 24.10: ready to fire on US warships; Trump 23.10 'another little Epic Fury' after midterms; no acknowledged exchange in October. Mine and Fable diverge widely (0.15 vs 0.50): hinges on post-3.11 US strikes.",
+     "models": {
+      "mine": 0.15,
+      "fable": 0.5,
+      "base": 0.3
+     }
+    },
+    {
+     "date": "2026-11-13",
+     "p": 0.34,
+     "reason": "13.11: IRGC drones at US radar in Bahrain (CENTCOM: 2 shot down) after strike on Sirik — first Iranian attack on a US military site in the Gulf since September; raises odds of a naval exchange, but a land radar is not a vessel (Al Jazeera 13.11)",
      "models": {
       "mine": 0.15,
       "fable": 0.5,
@@ -3620,7 +3630,7 @@
    "index": null,
    "opened": "2026-10-31",
    "status": "open",
-   "p": 0.07,
+   "p": 0.05,
    "base_rate": 0.35,
    "method": "mine written before Fable (tmp/my-fc-1031.txt 23:35Z); Fable independent from evidence only, never saw my number; ensemble = log-odds mean with base rate",
    "history": [
@@ -3648,6 +3658,16 @@
      "date": "2026-11-10",
      "p": 0.07,
      "reason": "Jan Brent fell 5.8% to ~2.6 on 9 Nov after Trump deferred strikes; needs a +30% spike in 3 weeks; tail kept for a Hormuz/Gulf escalation (Houthi strikes on Aramco continue).",
+     "models": {
+      "base": 0.35,
+      "signals": 0.15,
+      "second": 0.08
+     }
+    },
+    {
+     "date": "2026-11-13",
+     "p": 0.05,
+     "reason": "IEA OMR 13.11: Q4 surplus 1.7 mb/d, Brent flat at 95.84 despite Bahrain attack; 17 days left",
      "models": {
       "base": 0.35,
       "signals": 0.15,
