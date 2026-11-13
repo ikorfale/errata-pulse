@@ -48,7 +48,10 @@ def main():
     x0, y0, x1, y1 = reg['bbox']; pad = 40
     full = f'{x0 - pad:.0f} {y0 - pad:.0f} {x1 - x0 + 2 * pad:.0f} {y1 - y0 + 2 * pad:.0f}'
     west = '-1660 -1720 2880 3300'   # European Russia, the Urals and the North Caucasus in their own upright projection
-    paths = ('<g id="al-w">' + ''.join(f'<path data-r="{k}" d="{v["dw"]}"><title>{esc(names[k])}</title></path>' for k, v in R.items() if 'dw' in v) + '</g>'
+    # Phones: crop the west view to the x-range of every region with alert hours in 02-13.11 (60 regions, Murmansk to Dagestan);
+    # only Kaliningrad falls outside, so it is drawn as a framed inset in the empty space west of Kursk (bbox -1592..-1384, -288..-153).
+    west_m = '-1095 -1745 2300 3300'; kdx, kdy = 532, 688
+    paths = ('<g id="al-w">' + ''.join(f'<path data-r="{k}" d="{v["dw"]}"><title>{esc(names[k])}</title></path>' for k, v in R.items() if 'dw' in v) + '<rect class="al-kgdf" x="-1078" y="382" width="244" height="171" rx="8"></rect></g>'
              + '<g id="al-f" style="display:none">' + ''.join(f'<path data-r="{k}" d="{v["d"]}"><title>{esc(names[k])}</title></path>' for k, v in R.items()) + '</g>')
     S = {k: t(v) for k, v in {
         'uav': 'UAV danger', 'missile': 'Missile danger', 'both': 'UAV and missile danger', 'clear': 'All-clear', 'none': 'No alert reported',
@@ -113,6 +116,9 @@ def main():
 .al-off{{columns:2;column-gap:36px;font:400 .84rem/1.55 var(--sans);padding:0;list-style:none}}.al-off li{{break-inside:avoid;padding:6px 0;border-bottom:1px solid var(--line)}}.al-off b{{font-weight:500}}
 .al-tip{{position:absolute;pointer-events:none;background:var(--ink);color:var(--bg);font:400 .8rem/1.4 var(--sans);padding:7px 10px;border-radius:4px;max-width:260px;display:none;z-index:3}}
 @media(max-width:860px){{.al-top{{grid-template-columns:1fr}}.al-todo{{grid-template-columns:1fr}}.al-off{{columns:1}}}}
+@media(max-width:860px){{div.al-top{{display:flex;flex-direction:column}}div.al-top>div,.al-side{{display:contents}}.al-side>*{{order:2}}.al-me{{order:0;margin-top:14px}}.al-map,.al-leg{{order:1;width:100%;box-sizing:border-box}}}}
+.al-kgdf{{display:none}}
+@media(max-width:600px){{.ptitle{{font-size:2.1rem;margin:24px 0 12px}}.lede{{font-size:1.05rem;line-height:1.5}}.al-map{{margin-top:12px}}.al-kgdf{{display:inline;fill:none;stroke:var(--mute);stroke-width:3;stroke-dasharray:14 10}}#al-w path[data-r="RU-KGD"]{{transform:translate({kdx}px,{kdy}px)}}}}
 </style>
 <p class="kicker">{t('Live · region level · official announcements')}</p>
 <h1 class="ptitle">{t('Air-raid alerts in Russia, live')}</h1>
@@ -123,7 +129,7 @@ def main():
 <div class="al-mis" id="al-mis" hidden></div>
 <div class="al-count" id="al-n">–<small>{S['now_n']}</small></div>
 <div class="al-split" id="al-split"></div>
-<div class="al-map" id="al-map"><div class="al-zoom"><button data-v="{west}" data-g="al-w" class="on">{t('West')}</button><button data-v="{full}" data-g="al-f">{t('All Russia')}</button></div>
+<div class="al-map" id="al-map"><div class="al-zoom"><button data-v="{west}" data-m="{west_m}" data-g="al-w" class="on">{t('West')}</button><button data-v="{full}" data-g="al-f">{t('All Russia')}</button></div>
 <svg id="al-svg" viewBox="{west}" role="img" aria-label="{t('Map of Russian regions coloured by declared alert')}"><defs>
 <pattern id="al-both" width="60" height="60" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="60" height="60" fill="#b3261e"/><rect width="30" height="60" fill="#e08a1e"/></pattern>
 <pattern id="al-stale" width="40" height="40" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="40" height="40" fill="var(--soft)"/><rect width="10" height="40" fill="#e08a1e" opacity=".32"/></pattern></defs>
@@ -207,6 +213,7 @@ document.getElementById('al-dot').className='al-dot';document.getElementById('al
 svg.addEventListener('mousemove',function(e){{var p=e.target.closest('path');if(!p||!D){{tip.style.display='none';return}}var s=status(p.dataset.r),b=document.getElementById('al-map').getBoundingClientRect();
 tip.innerHTML='<b>'+N[p.dataset.r]+'</b><br>'+s.txt+(s.sub?'<br>'+s.sub:'');tip.style.display='block';tip.style.left=Math.min(e.clientX-b.left+12,b.width-200)+'px';tip.style.top=(e.clientY-b.top+12)+'px'}});
 svg.addEventListener('mouseleave',function(){{tip.style.display='none'}});svg.addEventListener('click',function(e){{var p=e.target.closest('path');if(p)pick(p.dataset.r)}});
+if(window.matchMedia&&matchMedia('(max-width:600px)').matches){{var wb=document.querySelector('.al-zoom button[data-m]');wb.dataset.v=wb.dataset.m;svg.setAttribute('viewBox',wb.dataset.v)}}
 document.querySelectorAll('.al-zoom button').forEach(function(b){{b.onclick=function(){{svg.setAttribute('viewBox',b.dataset.v);['al-w','al-f'].forEach(function(g){{document.getElementById(g).style.display=g===b.dataset.g?'':'none'}});document.querySelectorAll('.al-zoom button').forEach(function(x){{x.classList.toggle('on',x===b)}})}}}});
 var sel=document.getElementById('al-pick');sel.onchange=function(){{pick(sel.value)}};if(mine)sel.value=mine;
 var nb=document.getElementById('al-notify');nb.checked=notif;nb.onchange=function(){{notif=nb.checked;try{{localStorage.setItem('al-notify',notif?'1':'0')}}catch(e){{}}
