@@ -1,14 +1,14 @@
 {
- "generated": "2026-11-14T22:40:57.955819+00:00",
+ "generated": "2026-11-14T23:20:11.837294+00:00",
  "counts": {
-  "open": 32,
+  "open": 35,
   "resolved": 14,
   "annulled": 0
  },
  "selection": {
-  "candidates": 16,
-  "asked": 14,
-  "dropped": 2,
+  "candidates": 20,
+  "asked": 17,
+  "dropped": 3,
   "pending": 0,
   "asked_without_draft": 32,
   "drafts_since": "2026-10-24"
@@ -82,13 +82,13 @@
   }
  ],
  "models": {
-  "signals": 0.2035,
   "threshold": 0.0228,
-  "fable": 0.3225,
-  "base": 0.2992,
-  "second": 0.04,
+  "signals": 0.2035,
   "mine": 0.342,
-  "trend": 0.0973
+  "fable": 0.3225,
+  "second": 0.04,
+  "trend": 0.0973,
+  "base": 0.2992
  },
  "questions": [
   {
@@ -3856,7 +3856,7 @@
    "index": "pulse",
    "opened": "2026-11-07",
    "status": "open",
-   "p": 0.2,
+   "p": 0.22,
    "base_rate": 0.1,
    "method": "base: CENTCOM and UKMTO have not confirmed any IRGC mine claim in recent weeks; signals: IRGC claims mine hits almost daily 01-07.11; trend: UKMTO incidents are projectiles/limpets, not mines",
    "history": [
@@ -3879,11 +3879,106 @@
       "signals": 0.2,
       "trend": 0.12
      }
+    },
+    {
+     "date": "2026-11-14",
+     "p": 0.22,
+     "reason": "14.11: Iran (IRGC and regular navy) claims ~7 mine strikes in 24 h, none named; UKMTO/JMIC silent. More attempts raise odds of one verifiable case; no confirmation yet.",
+     "models": {
+      "base": 0.1,
+      "signals": 0.2,
+      "trend": 0.12
+     }
     }
    ],
    "crowd": [],
    "crowd_history": [],
    "draft": "d16"
+  },
+  {
+   "id": "47",
+   "title": "Will the Dutch TTF front-month gas futures settle above EUR 100/MWh on any day between 16 and 30 November 2026?",
+   "criteria": "YES if ICE Endex Dutch TTF front-month settles above 100.00 EUR/MWh on any trading day 16-30 Nov 2026 (ICE settlement, or Reuters/Bloomberg reporting the settlement). Intraday highs do not count.",
+   "deadline": "2026-11-30",
+   "category": "energy",
+   "index": null,
+   "opened": "2026-11-14",
+   "status": "open",
+   "p": 0.4,
+   "base_rate": 0.2,
+   "method": "base: one >100 episode in ~8.5 war months, 2-week window; signals: storage 72% lowest in a decade, cold snap, Norway -15%, Qatar FM to end-Dec, TTF 94.4 on 13.11; second: Fable blind",
+   "history": [
+    {
+     "date": "2026-11-14",
+     "p": 0.4,
+     "reason": "TTF 94.4 on 13.11 after +17% in 3 days; needs ~6% more; rallies retrace, IEA oil surplus cools sentiment. Mine 0.35 written before Fable (0.50); ensemble 0.40.",
+     "models": {
+      "base": 0.2,
+      "signals": 0.4,
+      "trend": 0.35,
+      "second": 0.5
+     }
+    }
+   ],
+   "crowd": [],
+   "crowd_history": [],
+   "draft": "d17"
+  },
+  {
+   "id": "48",
+   "title": "Will Russia and Ukraine carry out a prisoner exchange of at least 1,000 people from each side between 15 and 30 November 2026?",
+   "criteria": "YES if between 15 and 30 Nov 2026 an exchange (one day or a declared single staged operation) returns at least 1,000 people to each side, per Ukraine's Coordination HQ, Zelensky, or the Russian MoD; cumulative separate small swaps do not count.",
+   "deadline": "2026-11-30",
+   "category": "war",
+   "index": null,
+   "opened": "2026-11-14",
+   "status": "open",
+   "p": 0.5,
+   "base_rate": 0.5,
+   "method": "base: agreed large swaps executed within ~3 weeks about half the time; signals: Kushner says arrangements finalised, Zelensky 1000-1500 each; second: Fable blind",
+   "history": [
+    {
+     "date": "2026-11-14",
+     "p": 0.5,
+     "reason": "Agreed at Abu Dhabi 10-11.11, no date; list disputes often delay. Mine 0.55 before Fable 0.45; ensemble 0.50.",
+     "models": {
+      "base": 0.5,
+      "signals": 0.55,
+      "second": 0.45
+     }
+    }
+   ],
+   "crowd": [],
+   "crowd_history": [],
+   "draft": "d18"
+  },
+  {
+   "id": "49",
+   "title": "Will a Russia-Ukraine negotiating round with European government representatives at the table take place by 10 December 2026?",
+   "criteria": "YES if by 10 Dec 2026 an in-person round of talks with Russian and Ukrainian delegations in which officials of the EU or of at least one European state participate in the same session is held, per Reuters/AP/official statements. Separate parallel meetings without Russia do not count.",
+   "deadline": "2026-12-10",
+   "category": "war",
+   "index": null,
+   "opened": "2026-11-14",
+   "status": "open",
+   "p": 0.3,
+   "base_rate": 0.1,
+   "method": "base: no same-session round with Europeans and Russia since 2022; signals: Kushner says next week, EU named EU+5, against: Ushakov condition and Russian refusal on ceasefire; second: Fable blind",
+   "history": [
+    {
+     "date": "2026-11-14",
+     "p": 0.3,
+     "reason": "Organisational pieces exist, Kremlin condition blocks it. Mine 0.30 before Fable 0.35; held at 0.30.",
+     "models": {
+      "base": 0.1,
+      "signals": 0.35,
+      "second": 0.35
+     }
+    }
+   ],
+   "crowd": [],
+   "crowd_history": [],
+   "draft": "d19"
   }
  ]
 }
