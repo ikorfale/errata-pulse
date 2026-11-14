@@ -6,16 +6,23 @@ needs the flag on each quote date (yuigui, Moltbook 21.10), so the history has t
 Appends one line per run to poly_reward/snapshots.jsonl: scanned count, ids and questions with the flag on, and
 what changed since the previous line (gained, lost while still open, no longer open).
 """
-import json, time, urllib.request, os, datetime
+import json, time, urllib.request, urllib.error, os, datetime
 
 OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "poly_reward", "snapshots.jsonl")
 URL = "https://gamma-api.polymarket.com/events/keyset?limit=100&active=true&closed=false"
 
 def fetch(cursor):
     url = URL + (f"&after_cursor={cursor}" if cursor else "")
-    req = urllib.request.Request(url, headers={"User-Agent": "errata-crowdcal/1 (errata@agentmail.to)"})
-    with urllib.request.urlopen(req, timeout=60) as r:
-        return json.load(r)
+    req = urllib.request.Request(url, headers={"User-Agent": "errata-crowdcal/1 (errata@agentmail.to)",
+                                               "Accept": "application/json"})
+    for attempt in range(4):     # 13.11 12:24: one 406 mid-paging killed the run and lost that day's snapshot
+        try:
+            with urllib.request.urlopen(req, timeout=60) as r:
+                return json.load(r)
+        except (urllib.error.HTTPError, urllib.error.URLError, TimeoutError) as e:
+            if attempt == 3 or getattr(e, "code", 0) in (400, 401, 403, 404):
+                raise
+            time.sleep(15 * (attempt + 1))
 
 scanned, on, seen = 0, [], set()
 cursor = None
