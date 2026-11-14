@@ -5,6 +5,7 @@
 // Cached at the edge for 60 s, so Telegram sees at most a few requests a minute whatever the traffic.
 const CHANNELS = ['radarrussiia', 'locatorru'];
 const UA = 'errata-alerts/1.0 (AI agent; https://pulse.errata.page/alerts/; errata@agentmail.to)';
+const DOCS = 'https://pulse.errata.page/alerts/api/';
 const WINDOW_H = 12, STALE_H = 4, MAX_PAGES = 26, BATCH = 5;
 // region stems; M = needs a region word (область/край/...) in the same segment, so a town of the same name is skipped
 const REG = [
@@ -122,7 +123,7 @@ function fold(posts, now) {
   for (const [iso, s] of Object.entries(st)) if (s.uav || s.missile) {
     const since = Math.min(...[s.uav, s.missile].filter(Boolean));
     active[iso] = { uav: !!s.uav, missile: !!s.missile, since: new Date(since).toISOString(), last: new Date(s.upd).toISOString(),
-                    stale: now - s.upd > STALE_H * 3600e3 };
+                    stale: now - s.upd > STALE_H * 3600e3, source: 'relay', by: [...s.by].sort() };
   }
   const cleared = {}; for (const [iso, ts] of Object.entries(clears)) if (!active[iso] && now - ts < 3 * 3600e3) cleared[iso] = new Date(ts).toISOString();
   // regions where missile danger was declared at any time in the window (latest declaration), so a short missile alert
@@ -133,7 +134,7 @@ function fold(posts, now) {
 // Official layer (audit 14.11, lab/alerts_audit/stalecheck.py): the two relays add their own radar calls ("опасность по
 // БПЛА" for areas drones fly over) and missed or outlived official regimes; in Kursk they matched the regional HQ in
 // 59% of 50 h (Tula, Penza, Voronezh 96-97%). Where a region's own channel announces region-wide regimes in fixed words, it decides that region.
-// Each rule: set/clear patterns per kind (u = UAV, m = missile, a = aviation, shown on the UAV layer). Posts that match
+// Each rule: set/clear patterns per kind (u = UAV, m = missile, a = aviation, r = generic air-raid alert; a and r show on the UAV layer). Posts that match
 // neither (district-level "immediate threat", night summaries) are ignored. If the channel fails, the relays decide.
 const OFFICIAL = {
   'RU-KRS': { ch: 'gubernator_46', set: [['m', /курская область: ракетная опасность|ракетная опасность по курск/], ['a', /курская область: авиационная опасность/], ['u', /курская область: опасность атаки бпла/]],
@@ -144,6 +145,17 @@ const OFFICIAL = {
               clear: [['u', /пензенской области отменен\S* (план .ковер. и )?режим .беспилотная опасность/]] },
   'RU-VOR': { ch: 'gusev_36', set: [['m', /в регионе объявляется ракетная опасность/], ['u', /на территории региона объявлена опасность атаки бпла/]],
               clear: [['m', /отбой ракетной опасности в регионе/], ['u', /отбой опасности атаки бпла в регионе|^\W*отмена опасности атаки бпла в воронежской|\n\s*отмена опасности атаки бпла в воронежской/]] },
+  // added 14.11 after 10 days of posts (lab/alerts_audit/nov14d): each posts a region-wide set and a matching all-clear
+  'RU-STA': { ch: 'VVV5807', set: [['u', /на территории ставропольского края объявлена беспилотная опасность|беспилотная опасность объявлена на территории [а-я]+ского/], ['m', /на территории ставропольского края объявлена ракетная\s+опасность/]],
+              clear: [['u', /на территории ставропольского края отбой беспилотной опасности|отбой беспилотной опасности на территории [а-я]+ского/], ['m', /на территории ставропольского края отбой ракетной опасности/]] },
+  'RU-KB':  { ch: 'Kokov_Kazbek', set: [['u', /на территории кабардино-балкарии объявлена беспилотная опасность/], ['m', /на территории кабардино-балкарии объявлена ракетная опасность/]],
+              clear: [['u', /отбой беспилотной опасности на территории кабардино-балкар/], ['m', /отбой ракетной опасности на территории кабардино-балкар/]] },
+  'RU-ORE': { ch: 'solntsev_official', set: [['u', /на территории оренбургской области объявлена опасность атаки бпла/]],
+              clear: [['u', /отбой опасности атаки бпла на территории оренбургской/]] },
+  'RU-TYU': { ch: 'av_moor', set: [['u', /на территории тюменской области введен режим беспилотной опасности/]],
+              clear: [['u', /отмена беспилотной опасности в тюменской области/]] },
+  // Sevastopol declares one generic "air-raid alert" (r): shown on the UAV layer with air_raid: true
+  'UA-40':  { ch: 'razvozhaev', set: [['r', /внимание всем! воздушная тревога/]], clear: [['r', /отбой воздушной тревоги/]] },
 };
 // regime events of one official channel, oldest first: {ts, act: 'set'|'clear', kinds}
 function officialEvents(rule, posts) {
@@ -174,13 +186,13 @@ async function officialPosts(ch, now) {
   if (posts.length && Math.min(...posts.map(x => x.ts)) > back) posts = posts.concat(await page(ch, Math.min(...posts.map(x => x.id))));
   return posts.filter(p => p.ts <= now);
 }
-function applyOfficial(f, iso, s, now) {
+function applyOfficial(f, iso, s, now, ch) {
   delete f.active[iso]; delete f.cleared[iso];
   const kinds = Object.keys(s.on);
   if (kinds.length) {
     const since = Math.min(...Object.values(s.on));
-    f.active[iso] = { uav: !!(s.on.u || s.on.a), missile: !!s.on.m, since: new Date(since).toISOString(), last: new Date(s.last).toISOString(),
-                      stale: false, official: true, ...(s.on.a ? { aviation: true } : {}) };
+    f.active[iso] = { uav: !!(s.on.u || s.on.a || s.on.r), missile: !!s.on.m, since: new Date(since).toISOString(), last: new Date(s.last).toISOString(),
+                      stale: false, official: true, source: 'official', source_url: `https://t.me/${ch}`, ...(s.on.a ? { aviation: true } : {}), ...(s.on.r ? { air_raid: true } : {}) };
   } else if (s.clearedAt && now - s.clearedAt < 3 * 3600e3) f.cleared[iso] = new Date(s.clearedAt).toISOString();
 }
 async function build(now = Date.now()) {
@@ -191,15 +203,33 @@ async function build(now = Date.now()) {
   // only the window: a regime with no word for 12 h drops off (hatched as stale from 4 h), whatever the page boundary
   const f = fold(posts.filter(p => p.ts >= since && p.ts <= now), now);
   const offIso = Object.keys(OFFICIAL), offGot = await Promise.allSettled(offIso.map(iso => officialPosts(OFFICIAL[iso].ch, now)));
-  const official = [];
-  offGot.forEach((g, j) => { if (g.status !== 'fulfilled') return; const st = officialState(officialEvents(OFFICIAL[offIso[j]], g.value), now);
-                             if (st) { applyOfficial(f, offIso[j], st, now); official.push(offIso[j]); } });
-  return { updated: new Date(now).toISOString(), window_hours: WINDOW_H, stale_hours: STALE_H, bin_minutes: 10,
-           covered_from: new Date(Math.max(...cover)).toISOString(), sources: ok, official_regions: official, ...f };
+  const official = [], official_sources = {};
+  offGot.forEach((g, j) => {
+    const iso = offIso[j], ch = OFFICIAL[iso].ch, o = official_sources[iso] = { channel: ch, url: `https://t.me/${ch}` };
+    if (g.status !== 'fulfilled') { o.status = 'unreachable'; return; }
+    const ev = officialEvents(OFFICIAL[iso], g.value), st = officialState(ev, now);
+    if (ev.length) o.last_regime_post = new Date(ev[ev.length - 1].ts).toISOString();
+    // deciding = this channel sets the region's state; silent = no regime post for 24 h, the relays decide
+    if (st) { applyOfficial(f, iso, st, now, ch); official.push(iso); o.status = 'deciding'; } else o.status = 'silent';
+  });
+  return { schema: 2, docs: DOCS, updated: new Date(now).toISOString(), window_hours: WINDOW_H, stale_hours: STALE_H, bin_minutes: 10,
+           covered_from: new Date(Math.max(...cover)).toISOString(), sources: ok, official_regions: official, official_sources, ...f };
+}
+// ?region=RU-KRS,RU-TUL keeps only those regions (state, cleared, missile_recent; the series stay national);
+// ?series=0 drops the two 10-minute series for a lighter answer. Unknown codes are listed in "unknown_regions".
+function filter(out, q) {
+  if (q.get('series') === '0') { delete out.series; delete out.missile_series; }
+  const want = (q.get('region') || '').toUpperCase().split(',').map(x => x.trim()).filter(Boolean);
+  if (!want.length) return out;
+  const known = new Set(REG.map(r => r[0])), keep = want.filter(x => known.has(x)), unknown = want.filter(x => !known.has(x));
+  for (const k of ['active', 'cleared', 'missile_recent']) out[k] = Object.fromEntries(Object.entries(out[k]).filter(([iso]) => keep.includes(iso)));
+  out.regions = keep; if (unknown.length) out.unknown_regions = unknown;
+  return out;
 }
 module.exports = async (req, res) => {
   try {
-    const out = await build();
+    const q = new URL(req.url || '/', 'https://pulse.errata.page').searchParams;
+    const out = filter(await build(), q);
     res.setHeader('Content-Type', 'application/json; charset=utf-8');
     res.setHeader('Cache-Control', 'public, max-age=60, s-maxage=90, stale-while-revalidate=180');
     res.setHeader('Access-Control-Allow-Origin', '*');
@@ -210,4 +240,4 @@ module.exports = async (req, res) => {
   }
 };
 module.exports.classify = classify; module.exports.regions = regions; module.exports.fold = fold; module.exports.build = build; module.exports.parsePage = parsePage;
-module.exports.OFFICIAL = OFFICIAL; module.exports.officialEvents = officialEvents; module.exports.officialState = officialState;
+module.exports.filter = filter; module.exports.OFFICIAL = OFFICIAL; module.exports.officialEvents = officialEvents; module.exports.officialState = officialState;

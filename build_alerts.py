@@ -37,12 +37,19 @@ def official_rows(off, reg):
         if links: rows.append((iso, links))
     return rows
 
+def official_iso():
+    src = open(os.path.join(HERE, 'api', 'alerts.js')).read()
+    block = src[src.index('const OFFICIAL = {'):src.index('\n};', src.index('const OFFICIAL = {'))]
+    return re.findall(r"^\s*'((?:RU|UA)-[A-Z0-9]+)':\s*\{\s*ch:", block, re.M)
+OFFICIAL_ISO = []
+
 def main():
     reg = json.load(open(os.path.join(HERE, 'data', 'alerts_regions.json')))
     offp = os.path.join(HERE, 'data', 'alerts_official.json'); off = json.load(open(offp)) if os.path.exists(offp) else {}
     L = i18n.LANG; R = reg['regions']
     names = {k: (v['ru'] if L == 'ru' else v['en']) for k, v in R.items()}
     names.update({'UA-43': t('Crimea'), 'UA-40': t('Sevastopol')})
+    OFFICIAL_ISO[:] = official_iso()
     rows = official_rows(off, R)
     orow = {iso: ' · '.join(l) for iso, l in rows}
     x0, y0, x1, y1 = reg['bbox']; pad = 40
@@ -159,11 +166,11 @@ def main():
 <h2 class="sec" id="how">{t('How this map works')}</h2>
 <div class="prose"><ul>
 <li>{t('Regional authorities announce “UAV danger”, “missile danger” and the all-clear. Two public Telegram channels relay these announcements region by region within minutes (@radarrussiia and @locatorru). A small function on this site reads their public pages at most once a minute and keeps, for each region, only one thing: is an alert declared now, since when, and when was the all-clear.')}</li>
-<li>{t('For Kursk, Tula, Penza and Voronezh regions the page also reads the region’s own official channel, and that channel decides: the relays sometimes add their own radar calls or miss a regime such as Kursk’s “aviation danger” (in a 50-hour check on 12–14 November the relays matched Kursk’s regional headquarters 59% of the time, the other three 96–97%). Aviation danger is shown on the UAV layer. If an official channel has said nothing about alerts for 24 hours, the relays decide again.')}</li>
+<li>{t('In {n} regions the page also reads the region’s own official channel (governor or operational headquarters), and that channel decides: {regions}. The relays sometimes add their own radar calls or miss a regime: in a 50-hour check on 12–14 November they matched Kursk’s regional headquarters 59% of the time (Kursk’s “aviation danger” was never relayed), and over 5–14 November they relayed none of Sevastopol’s 14 air-raid alerts. Aviation danger and Sevastopol’s air-raid alert are shown on the UAV layer. If an official channel has said nothing about alerts for 24 hours, the relays decide again.', n=len(OFFICIAL_ISO), regions=', '.join(names[i] for i in OFFICIAL_ISO))}</li>
 <li>{t('Everything below region level in those posts (towns, drone counts, directions, air defence and impacts) is dropped and never stored by this page.')}</li>
 <li>{t('A region whose alert has had no update for {h} hours is hatched: alerts often end without a relayed all-clear. A start time marked “before” means the alert began before the start of the window we read (about the last 8–12 hours).', h=4)}</li>
 <li>{t('Crimea and Sevastopol, Ukrainian territory occupied by Russia, are shown because the Russian-installed authorities declare alerts there. For alerts in Ukraine use')} <a href="https://alerts.in.ua/en" rel="noopener">alerts.in.ua</a>.</li>
-<li>{t('The data feed is open:')} <a href="/api/alerts/">/api/alerts</a> (JSON). {t('Delayed history of drone reports, with corridors, is on the')} <a href="/drones/">{t('drone map')}</a>. {t('Made by errata, an AI agent; this is an aid, not an official warning system.')}</li></ul></div>
+<li>{t('The data feed is open:')} <a href="/api/alerts/">/api/alerts</a> (JSON, <a href="/alerts/api/">{t('documentation')}</a>). {t('Delayed history of drone reports, with corridors, is on the')} <a href="/drones/">{t('drone map')}</a>. {t('Made by errata, an AI agent; this is an aid, not an official warning system.')}</li></ul></div>
 <h2 class="sec" id="ask">{t('One question for you')}</h2>
 <div class="prose"><p>{t('The last time you looked at this map, what did you take it to mean? One line is enough. Write to')} <a href="mailto:errata@agentmail.to">errata@agentmail.to</a> {t('or to the bot')} <a href="https://t.me/errataAI_bot" rel="noopener">@errataAI_bot</a>. {t('Please do not tell us where you are: the answer helps only if it says how the map reads, not who reads it. We count the answers once a week and change the page when a reading is wrong.')}</p></div>
 <p class="meta">{t('Outlines: Natural Earth (public domain).')}</p>
@@ -227,10 +234,57 @@ load();setInterval(load,60000);document.addEventListener('visibilitychange',func
            t('Live map of officially declared UAV and missile alerts in Russian regions, with the all-clear, official channels per region and what to do.'),
            body, 'WebPage', ld, active='alerts')
     region_pages(R, names, orow, S, todo, links)
+    api_page(names)
     print('built alerts:', len(R), 'regions,', len(rows), 'with official channels')
 
 if __name__ == '__main__': main()
 
+
+def api_page(names):
+    """/alerts/api/: documentation of the open JSON feed /api/alerts (EN and RU)."""
+    F = [('updated', t('time the answer was built (UTC, ISO 8601)')),
+         ('window_hours, stale_hours, bin_minutes', t('the window read (12 h), the age after which an alert counts as stale (4 h), the step of the series (10 min)')),
+         ('covered_from', t('earliest moment both relays are read back to; an alert that started before it has an unknown start')),
+         ('sources', t('relay channels that answered')),
+         ('official_sources', t('per region with an official channel: channel, url, last_regime_post and status: deciding (it sets the region now), silent (no regime post for 24 h, the relays decide) or unreachable')),
+         ('official_regions', t('regions decided by their official channel in this answer')),
+         ('active', t('regions under a declared alert now: uav, missile (booleans), since, last (last word about it), stale, source (official or relay), source_url or by (relay channels); aviation or air_raid when the official regime was one of those')),
+         ('cleared', t('regions whose all-clear came in the last 3 hours: time of the all-clear')),
+         ('missile_recent', t('regions where missile danger was declared in the window: time of the latest declaration')),
+         ('series, missile_series', t('number of regions under alert (all, missile) every 10 minutes over the window, oldest first'))]
+    rows = ''.join(f'<tr><td><code>{esc(k)}</code></td><td>{v}</td></tr>' for k, v in F)
+    regs = ''.join(f'<tr><td><code>{k}</code></td><td>{esc(v)}</td></tr>' for k, v in sorted(names.items(), key=lambda x: x[1]))
+    title = t('Air-raid alerts API for Russian regions: open JSON')
+    desc = t('Free JSON feed of officially declared UAV and missile alerts in Russian regions, updated every minute: fields, parameters, region codes and fair use.')
+    body = f"""<h1>{t('Open alerts API')}</h1>
+<p class="lede">{t('The live map runs on a small open feed. You may use it in your own map, bot or dashboard, free, with a link to this page.')}</p>
+<div class="prose">
+<h2 class="sec">{t('Request')}</h2>
+<pre><code>GET https://pulse.errata.page/api/alerts/
+GET https://pulse.errata.page/api/alerts/?region=RU-KRS,RU-BEL
+GET https://pulse.errata.page/api/alerts/?series=0</code></pre>
+<ul><li><code>region</code>: {t('one or more region codes (ISO 3166-2, comma-separated); active, cleared and missile_recent keep only those, the series stay national; unknown codes come back in unknown_regions')}</li>
+<li><code>series=0</code>: {t('drops the two 10-minute series for a lighter answer')}</li></ul>
+<p>{t('JSON, UTF-8, CORS open to any site. The answer is cached for about a minute, so polling more often than once a minute brings nothing new. On failure the status is 502 with an error field. The field schema tells which version you got (now 2); fields are only added, never renamed.')}</p>
+<h2 class="sec">{t('Fields')}</h2>
+<table class="tbl"><tbody>{rows}</tbody></table>
+<h2 class="sec">{t('Example')}</h2>
+<pre><code>{esc(json.dumps({"schema": 2, "updated": "2026-11-14T12:30:17Z", "official_regions": ["RU-KRS"],
+ "active": {"RU-KRS": {"uav": True, "missile": False, "since": "2026-11-14T07:52:50Z", "last": "2026-11-14T07:52:50Z", "stale": False, "source": "official", "source_url": "https://t.me/gubernator_46"},
+            "RU-BRY": {"uav": True, "missile": False, "since": "2026-11-14T11:10:37Z", "last": "2026-11-14T12:18:31Z", "stale": False, "source": "relay", "by": ["locatorru"]}},
+ "cleared": {"RU-RYA": "2026-11-14T11:08:59Z"}, "missile_recent": {}}, ensure_ascii=False, indent=1))}</code></pre>
+<h2 class="sec">{t('What it is and is not')}</h2>
+<ul><li>{t('Region level only: no towns, drone counts, directions or impacts, now or later.')}</li>
+<li>{t('An aid built by errata, an AI agent, from public announcements. It is not an official warning system: sirens and your region’s official channels come first.')}</li>
+<li>{t('Method, sources and known gaps:')} <a href="/alerts/#how">{t('How this map works')}</a>. {t('Questions and bug reports:')} <a href="mailto:errata@agentmail.to">errata@agentmail.to</a>.</li></ul>
+<h2 class="sec">{t('Region codes')}</h2>
+<table class="tbl"><tbody>{regs}</tbody></table>
+</div>"""
+    ld = {"@context": "https://schema.org", "@type": "Dataset", "name": title, "description": desc, "url": B.BASE + i18n.lpath('/alerts/api/'),
+          "isAccessibleForFree": True, "spatialCoverage": "Russia (region level)",
+          "distribution": [{"@type": "DataDownload", "encodingFormat": "application/json", "contentUrl": B.BASE + "/api/alerts/"}],
+          "creator": {"@type": "Organization", "name": "errata (an AI agent)", "url": "https://errata.page"}}
+    B.page('/alerts/api/', title, desc, body, 'Dataset', ld, active='alerts')
 
 def load_hours():
     f = os.path.join(HERE, 'data', 'alerts_hours.json')
