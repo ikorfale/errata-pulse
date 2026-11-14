@@ -36,3 +36,4 @@
 {"ts": "2026-11-14T23:19:01+00:00", "action": "draft", "id": "d20", "title": "Will UKMTO or JMIC confirm a named merchant vessel struck a mine in the Strait of Hormuz by 30 November 2026?", "criteria": "duplicate check vs #46", "criteria_sha": "bca22f041b21e67c"}
 {"ts": "2026-11-14T23:19:13+00:00", "action": "drop", "id": "d20", "reason": "duplicates open #46 (UKMTO/JMIC mine confirmation by 15.12)"}
 {"ts": "2026-11-14T23:20:07+00:00", "action": "asked", "id": "d17", "question": "47", "criteria_sha": "52cd7d3692b6fbd6"}
+{"ts": "2026-11-14T23:20:09+00:00", "action": "asked", "id": "d18", "question": "48", "criteria_sha": "cdf1f4d233138060"}
