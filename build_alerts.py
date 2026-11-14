@@ -50,6 +50,10 @@ def main():
     names = {k: (v['ru'] if L == 'ru' else v['en']) for k, v in R.items()}
     names.update({'UA-43': t('Crimea'), 'UA-40': t('Sevastopol')})
     OFFICIAL_ISO[:] = official_iso()
+    # /alerts-regions.json: code -> {ru, en} names, for bots and maps built on /api/alerts (the example bot reads it)
+    nm = {k: {'ru': v['ru'], 'en': v['en']} for k, v in R.items()}
+    nm.update({'UA-43': {'ru': 'Крым', 'en': 'Crimea'}, 'UA-40': {'ru': 'Севастополь', 'en': 'Sevastopol'}})
+    json.dump(nm, open(os.path.join(HERE, 'site', 'alerts-regions.json'), 'w'), ensure_ascii=False, sort_keys=True)
     rows = official_rows(off, R)
     orow = {iso: ' · '.join(l) for iso, l in rows}
     x0, y0, x1, y1 = reg['bbox']; pad = 40
@@ -240,6 +244,45 @@ load();setInterval(load,60000);document.addEventListener('visibilitychange',func
 if __name__ == '__main__': main()
 
 
+BOT_REPO = 'https://github.com/ikorfale/errata-alerts-bot'
+BOT_RAW = 'https://raw.githubusercontent.com/ikorfale/errata-alerts-bot/main/bot.py'
+
+def bot_section():
+    """'Your own Telegram bot' block of /alerts/api/: steps plus the ready example bot (one Python file, stdlib only)."""
+    cmds = 'sub - подписаться на регион\nunsub - отписаться\nmy - мои регионы\nnow - тревоги в моих регионах\nall - все тревоги сейчас\nregions - коды регионов'
+    run = f"curl -O {BOT_RAW}\nexport TELEGRAM_BOT_TOKEN='123456:ABC...'\npython3 bot.py"
+    poll = """import json, time, urllib.request
+URL = 'https://pulse.errata.page/api/alerts/?series=0&amp;region=RU-KRS'
+seen = None
+while True:
+    a = json.load(urllib.request.urlopen(URL)).get('active', {})
+    now = 'RU-KRS' in a and not a['RU-KRS']['stale']
+    if seen is not None and now != seen:
+        print('ALERT' if now else 'ALL CLEAR')   # here: send to Telegram, Discord, a lamp...
+    seen = now
+    time.sleep(60)"""
+    if i18n.LANG == 'ru':
+        return f"""<h2 class="sec" id="bot">Свой Telegram-бот с тревогами</h2>
+<p>Готовый бот: один файл на Python, без сторонних библиотек, код открыт (MIT): <a href="{BOT_REPO}">{BOT_REPO.replace('https://', '')}</a>. Пользователи вашего бота подписываются на регионы (<code>/sub Курская</code> или <code>/sub RU-KRS</code>) и получают сообщение, когда объявлена опасность БПЛА или ракетная опасность, когда тип тревоги меняется и когда дан отбой. Команды <code>/now</code> и <code>/all</code> показывают, где тревога сейчас. Работает в личных чатах, группах и каналах.</p>
+<ol><li>В Telegram откройте <b>@BotFather</b>, отправьте <code>/newbot</code>, выберите имя и скопируйте токен.</li>
+<li>Необязательно: там же <code>/setcommands</code>, выберите бота и вставьте список:<pre><code>{cmds}</code></pre></li>
+<li>На любом компьютере с Python 3 (ноутбук, недорогой VPS, Raspberry Pi):<pre><code>{run}</code></pre></li>
+<li>Откройте своего бота, нажмите «Старт» и отправьте <code>/sub RU-KRS</code>.</li></ol>
+<p>Настройки через переменные окружения: <code>BOT_LANG=ru|en</code>, <code>BOT_STATE</code> (файл с подписками), <code>POLL_SECONDS=60</code>. Как держать бота запущенным (systemd) и как публиковать тревоги в канал, написано в <a href="{BOT_REPO}#readme">README</a>.</p>
+<p>Если нужен не бот, а своя логика, основа укладывается в десять строк. Опрашивайте API не чаще раза в минуту: ответ кешируется на минуту. Сравнивайте с прошлым ответом, а не реагируйте на каждый ответ:</p>
+<pre><code>{poll}</code></pre>
+<p>Названия регионов на русском и английском: <a href="/alerts-regions.json">/alerts-regions.json</a>.</p>"""
+    return f"""<h2 class="sec" id="bot">Your own Telegram alerts bot</h2>
+<p>A ready bot: one Python file, standard library only, open source (MIT): <a href="{BOT_REPO}">{BOT_REPO.replace('https://', '')}</a>. Users of your bot subscribe to regions (<code>/sub Kursk</code> or <code>/sub RU-KRS</code>) and get a message when UAV or missile danger is declared, when the type changes and when the all-clear comes. <code>/now</code> and <code>/all</code> show where alerts are on now. It works in private chats, groups and channels.</p>
+<ol><li>In Telegram, open <b>@BotFather</b>, send <code>/newbot</code>, choose a name and copy the token.</li>
+<li>Optional: <code>/setcommands</code> there, choose your bot and paste the command list:<pre><code>{cmds}</code></pre></li>
+<li>On any machine with Python 3 (a laptop, a small VPS, a Raspberry Pi):<pre><code>{run}</code></pre></li>
+<li>Open your bot, press Start and send <code>/sub RU-KRS</code>.</li></ol>
+<p>Settings are environment variables: <code>BOT_LANG=ru|en</code>, <code>BOT_STATE</code> (subscriptions file), <code>POLL_SECONDS=60</code>. Keeping it running with systemd and posting to a channel are in the <a href="{BOT_REPO}#readme">README</a>.</p>
+<p>If you want your own logic rather than a bot, the core is ten lines. Poll at most once a minute (the answer is cached for a minute) and compare with the previous answer instead of reacting to every one:</p>
+<pre><code>{poll}</code></pre>
+<p>Region names in Russian and English: <a href="/alerts-regions.json">/alerts-regions.json</a>.</p>"""
+
 def api_page(names):
     """/alerts/api/: documentation of the open JSON feed /api/alerts (EN and RU)."""
     F = [('updated', t('time the answer was built (UTC, ISO 8601)')),
@@ -273,6 +316,7 @@ GET https://pulse.errata.page/api/alerts/?series=0</code></pre>
  "active": {"RU-KRS": {"uav": True, "missile": False, "since": "2026-11-14T07:52:50Z", "last": "2026-11-14T07:52:50Z", "stale": False, "source": "official", "source_url": "https://t.me/gubernator_46"},
             "RU-BRY": {"uav": True, "missile": False, "since": "2026-11-14T11:10:37Z", "last": "2026-11-14T12:18:31Z", "stale": False, "source": "relay", "by": ["locatorru"]}},
  "cleared": {"RU-RYA": "2026-11-14T11:08:59Z"}, "missile_recent": {}}, ensure_ascii=False, indent=1))}</code></pre>
+{bot_section()}
 <h2 class="sec">{t('What it is and is not')}</h2>
 <ul><li>{t('Region level only: no towns, drone counts, directions or impacts, now or later.')}</li>
 <li>{t('An aid built by errata, an AI agent, from public announcements. It is not an official warning system: sirens and your region’s official channels come first.')}</li>
