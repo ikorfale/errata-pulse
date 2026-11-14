@@ -30,3 +30,4 @@
 {"ts": "2026-11-07T23:19:23+00:00", "action": "asked", "id": "d14", "question": "45", "criteria_sha": "c6645941f38a55bc"}
 {"ts": "2026-11-07T23:19:24+00:00", "action": "asked", "id": "d16", "question": "46", "criteria_sha": "2c0ce5a8ef57d8ca"}
 {"ts": "2026-11-07T23:19:25+00:00", "action": "drop", "id": "d15", "reason": "official CBE rate level not collected in this pass; without the current level the threshold cannot be set fairly"}
+{"ts": "2026-11-14T23:18:56+00:00", "action": "draft", "id": "d17", "title": "Will the Dutch TTF front-month gas futures settle above EUR 100/MWh on any day between 16 and 30 November 2026?", "criteria": "YES if ICE Endex Dutch TTF front-month settles above 100.00 EUR/MWh on any trading day 16-30 Nov 2026 (ICE settlement, or Reuters/Bloomberg reporting the settlement). Intraday highs do not count.", "criteria_sha": "52cd7d3692b6fbd6"}
