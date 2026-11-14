@@ -130,6 +130,59 @@ function fold(posts, now) {
   const missile_recent = {}; for (const [iso, ts] of Object.entries(mrecent)) if (ts >= t0) missile_recent[iso] = new Date(ts).toISOString();
   return { active, cleared, series, missile_series: mseries, missile_recent };
 }
+// Official layer (audit 14.11, lab/alerts_audit/stalecheck.py): the two relays add their own radar calls ("опасность по
+// БПЛА" for areas drones fly over) and missed or outlived official regimes; in Kursk they matched the regional HQ in
+// 59% of 50 h (Tula, Penza, Voronezh 96-97%). Where a region's own channel announces region-wide regimes in fixed words, it decides that region.
+// Each rule: set/clear patterns per kind (u = UAV, m = missile, a = aviation, shown on the UAV layer). Posts that match
+// neither (district-level "immediate threat", night summaries) are ignored. If the channel fails, the relays decide.
+const OFFICIAL = {
+  'RU-KRS': { ch: 'gubernator_46', set: [['m', /курская область: ракетная опасность|ракетная опасность по курск/], ['a', /курская область: авиационная опасность/], ['u', /курская область: опасность атаки бпла/]],
+              clear: [['m', /отбой ракетной опасности/], ['a', /отбой авиационной опасности/], ['u', /отбой опасности атаки бпла/]] },
+  'RU-TUL': { ch: 'dmilyaev', set: [['u', /^\W*беспилотная опасность в тульской области/], ['m', /^\W*ракетная опасность в тульской области/]],
+              clear: [['u', /^\W*отбой беспилотной опасности в тульской/], ['m', /^\W*отбой ракетной опасности в тульской/]] },
+  'RU-PNZ': { ch: 'omelnichenko', set: [['u', /пензенской области введен режим .беспилотная опасность/]],
+              clear: [['u', /пензенской области отменен\S* (план .ковер. и )?режим .беспилотная опасность/]] },
+  'RU-VOR': { ch: 'gusev_36', set: [['m', /в регионе объявляется ракетная опасность/], ['u', /на территории региона объявлена опасность атаки бпла/]],
+              clear: [['m', /отбой ракетной опасности в регионе/], ['u', /отбой опасности атаки бпла в регионе|^\W*отмена опасности атаки бпла в воронежской|\n\s*отмена опасности атаки бпла в воронежской/]] },
+};
+// regime events of one official channel, oldest first: {ts, act: 'set'|'clear', kinds}
+function officialEvents(rule, posts) {
+  const ev = [];
+  for (const p of [...posts].sort((a, b) => a.ts - b.ts)) {
+    const t = p.text.toLowerCase().replace(/ё/g, 'е').replace(/&#33;/g, '!');
+    const cl = rule.clear.filter(([, rx]) => rx.test(t)).map(([k]) => k);
+    const se = rule.set.filter(([, rx]) => rx.test(t)).map(([k]) => k);
+    if (cl.length) ev.push({ ts: p.ts, act: 'clear', kinds: cl });
+    if (se.length && !cl.length) ev.push({ ts: p.ts, act: 'set', kinds: se });
+  }
+  return ev;
+}
+// state now from events: {on: {kind: since}, last, clearedAt}; null when the channel said nothing usable
+function officialState(ev, now) {
+  // a channel silent on regimes for 24 h may have moved to MAX: then it decides nothing, the relays do
+  if (!ev.length || now - ev[ev.length - 1].ts > 24 * 3600e3) return null;
+  const on = {}; let clearedAt = null;
+  for (const e of ev) {
+    if (e.act === 'set') { for (const k of e.kinds) if (!on[k]) on[k] = e.ts; }
+    else { let had = false; for (const k of e.kinds) { if (on[k]) had = true; delete on[k]; } if (had && !Object.keys(on).length) clearedAt = e.ts; }
+  }
+  return { on, last: ev[ev.length - 1].ts, clearedAt };
+}
+// one or two pages back (a regime declared a day ago may still be on): stop once a page reaches 36 h back
+async function officialPosts(ch, now) {
+  let posts = await page(ch); const back = now - 36 * 3600e3;
+  if (posts.length && Math.min(...posts.map(x => x.ts)) > back) posts = posts.concat(await page(ch, Math.min(...posts.map(x => x.id))));
+  return posts.filter(p => p.ts <= now);
+}
+function applyOfficial(f, iso, s, now) {
+  delete f.active[iso]; delete f.cleared[iso];
+  const kinds = Object.keys(s.on);
+  if (kinds.length) {
+    const since = Math.min(...Object.values(s.on));
+    f.active[iso] = { uav: !!(s.on.u || s.on.a), missile: !!s.on.m, since: new Date(since).toISOString(), last: new Date(s.last).toISOString(),
+                      stale: false, official: true, ...(s.on.a ? { aviation: true } : {}) };
+  } else if (s.clearedAt && now - s.clearedAt < 3 * 3600e3) f.cleared[iso] = new Date(s.clearedAt).toISOString();
+}
 async function build(now = Date.now()) {
   const since = now - WINDOW_H * 3600e3, got = await Promise.allSettled(CHANNELS.map(c => channel(c, since)));
   const posts = [], ok = [], cover = [];
@@ -137,8 +190,12 @@ async function build(now = Date.now()) {
   if (!ok.length) throw new Error('no source answered');
   // only the window: a regime with no word for 12 h drops off (hatched as stale from 4 h), whatever the page boundary
   const f = fold(posts.filter(p => p.ts >= since && p.ts <= now), now);
+  const offIso = Object.keys(OFFICIAL), offGot = await Promise.allSettled(offIso.map(iso => officialPosts(OFFICIAL[iso].ch, now)));
+  const official = [];
+  offGot.forEach((g, j) => { if (g.status !== 'fulfilled') return; const st = officialState(officialEvents(OFFICIAL[offIso[j]], g.value), now);
+                             if (st) { applyOfficial(f, offIso[j], st, now); official.push(offIso[j]); } });
   return { updated: new Date(now).toISOString(), window_hours: WINDOW_H, stale_hours: STALE_H, bin_minutes: 10,
-           covered_from: new Date(Math.max(...cover)).toISOString(), sources: ok, ...f };
+           covered_from: new Date(Math.max(...cover)).toISOString(), sources: ok, official_regions: official, ...f };
 }
 module.exports = async (req, res) => {
   try {
@@ -153,3 +210,4 @@ module.exports = async (req, res) => {
   }
 };
 module.exports.classify = classify; module.exports.regions = regions; module.exports.fold = fold; module.exports.build = build; module.exports.parsePage = parsePage;
+module.exports.OFFICIAL = OFFICIAL; module.exports.officialEvents = officialEvents; module.exports.officialState = officialState;
