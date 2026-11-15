@@ -1,0 +1,4 @@
+MAIN: n=6 S=[1, 2, 3, 0, 3, 2] V=[11.726, 11.352, 13.074, 16.212, 19.185, 10.596] rho=0.18 LOO=[np.float64(0.26), np.float64(0.21), np.float64(0.05), np.float64(0.63), np.float64(-0.36), np.float64(0.21)]
+sens: Novak 14.10 disputed dropped: n=6 S=[1, 2, 1, 0, 3, 2] V=[11.726, 11.352, 13.074, 16.212, 19.185, 10.596] rho=-0.09 LOO=[np.float64(0.05), np.float64(0.05), np.float64(0.05), np.float64(0.11), np.float64(-0.95), np.float64(0.05)]
+sens: Bloomberg source counted: n=6 S=[1, 2, 3, 0, 4, 3] V=[11.726, 11.352, 13.074, 16.212, 19.185, 10.596] rho=0.12 LOO=[np.float64(0.21), np.float64(0.21), np.float64(0.0), np.float64(0.46), np.float64(-0.56), np.float64(0.3)]
+(W3 S=3 pairs with excluded NBCA week): n=6 S=[1, 2, 3, 0, 3, 2] V=[11.726, 11.352, 13.074, 16.212, 19.185, 10.596] rho=0.18 LOO=[np.float64(0.26), np.float64(0.21), np.float64(0.05), np.float64(0.63), np.float64(-0.36), np.float64(0.21)]
