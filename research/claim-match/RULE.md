@@ -61,3 +61,9 @@ Any tie-break for ambiguous cases is judged on **all** no-incident claims, ambig
 decisive matches. Baseline on 2024-25: 26 no-incident claims → 19 none, 1 false match (Ocean Jazz), 6 ambiguous;
 worst case under a tie-break 7/26. Four of the six have a single candidate shared with another claim, so a
 "nearest entry wins" tie-break would very likely confirm false claims.
+
+## v2 matcher committed before its test data (2026-11-15)
+`match_rule_v2.py` = v1 plus one condition: E must report an attack on a vessel (`ukmto_event == "attack"`), not a
+sighting, an approach or other. Committed before `validation_2026.jsonl` (Houthi named claims and every UKMTO entry,
+June-November 2026, Saudi-blockade campaign) is collected; the collector does not see the matcher. Use only with 0
+wrong; report how many of the no-incident claims v2 leaves as none vs ambiguous vs wrong, next to v1 on the same data.
