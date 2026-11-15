@@ -1,16 +1,16 @@
 {
- "generated": "2026-11-14T23:20:11.837294+00:00",
+ "generated": "2026-11-15T22:39:53.093511+00:00",
  "counts": {
-  "open": 35,
+  "open": 41,
   "resolved": 14,
   "annulled": 0
  },
  "selection": {
-  "candidates": 20,
-  "asked": 17,
+  "candidates": 23,
+  "asked": 20,
   "dropped": 3,
   "pending": 0,
-  "asked_without_draft": 32,
+  "asked_without_draft": 35,
   "drafts_since": "2026-10-24"
  },
  "brier": {
@@ -82,13 +82,13 @@
   }
  ],
  "models": {
-  "threshold": 0.0228,
-  "signals": 0.2035,
-  "mine": 0.342,
-  "fable": 0.3225,
   "second": 0.04,
-  "trend": 0.0973,
-  "base": 0.2992
+  "fable": 0.3225,
+  "threshold": 0.0228,
+  "base": 0.2992,
+  "mine": 0.342,
+  "signals": 0.2035,
+  "trend": 0.0973
  },
  "questions": [
   {
@@ -564,6 +564,10 @@
     {
      "date": "2026-11-14",
      "p": 0.057
+    },
+    {
+     "date": "2026-11-15",
+     "p": 0.056
     }
    ],
    "crowd_urls": {
@@ -789,6 +793,10 @@
     },
     {
      "date": "2026-11-14",
+     "p": 0.059
+    },
+    {
+     "date": "2026-11-15",
      "p": 0.059
     }
    ],
@@ -1046,6 +1054,10 @@
     },
     {
      "date": "2026-11-14",
+     "p": 0.095
+    },
+    {
+     "date": "2026-11-15",
      "p": 0.095
     }
    ],
@@ -1332,6 +1344,10 @@
     },
     {
      "date": "2026-11-14",
+     "p": 0.01
+    },
+    {
+     "date": "2026-11-15",
      "p": 0.01
     }
    ],
@@ -1678,6 +1694,10 @@
     {
      "date": "2026-11-14",
      "p": 0.215
+    },
+    {
+     "date": "2026-11-15",
+     "p": 0.135
     }
    ],
    "crowd_urls": {
@@ -2227,6 +2247,10 @@
     {
      "date": "2026-11-14",
      "p": 0.163
+    },
+    {
+     "date": "2026-11-15",
+     "p": 0.165
     }
    ],
    "crowd_urls": {
@@ -2456,6 +2480,10 @@
     {
      "date": "2026-11-14",
      "p": 0.061
+    },
+    {
+     "date": "2026-11-15",
+     "p": 0.066
     }
    ],
    "crowd_urls": {
@@ -2794,7 +2822,7 @@
    "index": "mri",
    "opened": "2026-10-11",
    "status": "open",
-   "p": 0.5,
+   "p": 0.85,
    "base_rate": 0.55,
    "method": "base: reference class = government bills on military service introduced to the Duma, share passing first reading within about 7 weeks of introduction; my rough estimate from the 2023-2025 pattern of such bills (often fast-tracked) about 0.55, not a counted sample. signals: LR 1.2 government/MoD bill framed as social guarantees, uncontroversial in the Duma; LR 0.85 the autumn session is crowded with the 2027-2029 budget. No crowd market.",
    "history": [
@@ -2841,6 +2869,16 @@
      "models": {
       "base": 0.55,
       "signals": 0.555
+     }
+    },
+    {
+     "date": "2026-11-15",
+     "p": 0.85,
+     "reason": "Defence committee recommended first reading on 11.11; plenary listed for 17.11 (SOZD, ConsultantPlus calendar). Remaining risk: removal from the agenda or slip past 30.11.",
+     "models": {
+      "base": 0.8,
+      "signals": 0.88,
+      "trend": 0.85
      }
     }
    ],
@@ -3218,6 +3256,10 @@
     {
      "date": "2026-11-14",
      "p": 0.172
+    },
+    {
+     "date": "2026-11-15",
+     "p": 0.166
     }
    ],
    "crowd_urls": {
@@ -3277,6 +3319,10 @@
     {
      "date": "2026-11-14",
      "p": 0.099
+    },
+    {
+     "date": "2026-11-15",
+     "p": 0.075
     }
    ],
    "crowd_urls": {
@@ -3979,6 +4025,201 @@
    "crowd": [],
    "crowd_history": [],
    "draft": "d19"
+  },
+  {
+   "id": "50",
+   "title": "Will Ukraine officially schedule a nationwide election (date set) by 31 December 2026?",
+   "criteria": "YES if by 2026-12-31 23:59 UTC the Rada, the President or the CEC enacts an act that sets a calendar date for a nationwide presidential or parliamentary election (vote may be later). Matches Manifold elections-in-ukraine-called-before.",
+   "deadline": "2026-12-31",
+   "category": "politics",
+   "index": null,
+   "opened": "2026-11-15",
+   "status": "open",
+   "p": 0.04,
+   "base_rate": 0.013,
+   "method": "base: 0 elections called in 4.7 years of martial law (calc rate); signals: Abu Dhabi talks 10-11.11 and US pressure for elections, but no ceasefire and martial law in force; trend: talks stall-and-restart pattern",
+   "history": [
+    {
+     "date": "2026-11-15",
+     "p": 0.04,
+     "reason": "Calling a dated election needs martial law lifted or a law change within 6 weeks; no ceasefire exists. Born from a Manifold title, price not seen.",
+     "models": {
+      "base": 0.013,
+      "signals": 0.06,
+      "trend": 0.03
+     }
+    }
+   ],
+   "crowd": [
+    "manifold:elections-in-ukraine-called-before"
+   ],
+   "crowd_history": [
+    {
+     "date": "2026-11-15",
+     "p": 0.134
+    }
+   ],
+   "draft": "d21",
+   "crowd_urls": {
+    "manifold:elections-in-ukraine-called-before": "https://manifold.markets/Avesoller/elections-in-ukraine-called-before"
+   }
+  },
+  {
+   "id": "51",
+   "title": "Will Russia and Ukraine agree a mutual halt of strikes on energy targets that holds 7+ days by 31 December 2026?",
+   "criteria": "YES if by 2026-12-31 both governments agree (directly or via a mediator) to halt strikes on each other's energy infrastructure and the halt lasts 7 consecutive days. Matches Manifold will-russia-and-ukraine-agree-to-st.",
+   "deadline": "2026-12-31",
+   "category": "war",
+   "index": null,
+   "opened": "2026-11-15",
+   "status": "open",
+   "p": 0.03,
+   "base_rate": 0.039,
+   "method": "base: 1 such agreement (Mar 2025) in 4.7 years, 46 days (calc rate); signals: this week near-daily energy strikes both ways (Naftogaz Poltava, Samara, Volgograd); trend: talks continue. Correlated with #5.",
+   "history": [
+    {
+     "date": "2026-11-15",
+     "p": 0.03,
+     "reason": "Energy strikes intensified this week; an agreement plus 7 clean days in 6 weeks is unlikely. Born from a Manifold title, price not seen.",
+     "models": {
+      "base": 0.039,
+      "signals": 0.025,
+      "trend": 0.03
+     }
+    }
+   ],
+   "crowd": [
+    "manifold:will-russia-and-ukraine-agree-to-st"
+   ],
+   "crowd_history": [
+    {
+     "date": "2026-11-15",
+     "p": 0.11
+    }
+   ],
+   "draft": "d22",
+   "crowd_urls": {
+    "manifold:will-russia-and-ukraine-agree-to-st": "https://manifold.markets/Egor/will-russia-and-ukraine-agree-to-st"
+   }
+  },
+  {
+   "id": "52",
+   "title": "Will most Russian internet users pay at least twice as much for 30 GB of international traffic as for 30 GB domestic by 31 December 2026?",
+   "criteria": "YES if by 2026-12-31 for the majority of Russian mobile and landline users the price of 30 GB/month international traffic is >=2x that of 30 GB domestic, per major ISP tariffs or reputable reports. Matches Manifold will-russian-isps-require-additiona.",
+   "deadline": "2026-12-31",
+   "category": "politics",
+   "index": null,
+   "opened": "2026-11-15",
+   "status": "open",
+   "p": 0.02,
+   "base_rate": 0.013,
+   "method": "base: no such tariff ever (calc rate, 0 events); signals: Kommersant 05.10.2026 scheme is 50 GB international in 5G only (would not bind at 30 GB nor reach most users), operators say technically impossible; Mintsifry 07.07 denied; trend: control measures do keep returning",
+   "history": [
+    {
+     "date": "2026-11-15",
+     "p": 0.02,
+     "reason": "The live proposal (50 GB, 5G-only) cannot meet a 30 GB majority-of-users criterion even if adopted. Born from a Manifold title, price not seen.",
+     "models": {
+      "base": 0.013,
+      "signals": 0.01,
+      "trend": 0.03
+     }
+    }
+   ],
+   "crowd": [
+    "manifold:will-russian-isps-require-additiona"
+   ],
+   "crowd_history": [
+    {
+     "date": "2026-11-15",
+     "p": 0.171
+    }
+   ],
+   "draft": "d23",
+   "crowd_urls": {
+    "manifold:will-russian-isps-require-additiona": "https://manifold.markets/Egor/will-russian-isps-require-additiona"
+   }
+  },
+  {
+   "id": "53",
+   "title": "Russia retail gasoline: Rosstat weekly index rises in at least one of the weeks to 16, 23 or 30 Nov 2026?",
+   "criteria": "YES if Rosstat's weekly consumer price index for automotive gasoline (vs previous registration date) is above 100.00 in at least one of the three releases covering the weeks ending 16, 23 or 30 November 2026. NO if all three are at or below 100.00. Source: Rosstat release or Interfax/Reuters report of it.",
+   "deadline": "2026-12-04",
+   "category": "energy",
+   "index": "pulse",
+   "opened": "2026-11-15",
+   "status": "open",
+   "p": 0.7,
+   "base_rate": 0.9,
+   "method": "base = share of 2024-2025 weeks with a rise, >=1 of 3; trend = momentum of the 4 falling weeks; signals = volumes, limits, regional split; log-odds mean 0.73, rounded down for held prices",
+   "history": [
+    {
+     "date": "2026-11-15",
+     "p": 0.7,
+     "reason": "4 weekly declines to 9 Nov, but shrinking (-2.04 to -0.78); 40 regions already rose that week; exchange volumes -45%, per-car limits back since 8-9 Nov; held VINK prices and seasonal demand pull the average down",
+     "models": {
+      "base": 0.9,
+      "trend": 0.5,
+      "signals": 0.7
+     }
+    }
+   ],
+   "crowd": [],
+   "crowd_history": []
+  },
+  {
+   "id": "54",
+   "title": "Russia exchange AI-92 above the 74,760 rub/t damper trigger by 31 Dec 2026?",
+   "criteria": "YES if the SPIMEX AI-92 territorial index for European Russia closes above 74,760 rubles per tonne on any trading day from 16 November to 31 December 2026, per the exchange or Interfax/RIA/Neftegaz reports. NO otherwise.",
+   "deadline": "2026-12-31",
+   "category": "energy",
+   "index": "pulse",
+   "opened": "2026-11-15",
+   "status": "open",
+   "p": 0.12,
+   "base_rate": 0.08,
+   "method": "threshold = lognormal touch probability (2x close-above 0.097, vol 30%, 46 days); base = no crossing in the 2026 crisis peak; signals = bid caps, falling price, refinery losses up",
+   "history": [
+    {
+     "date": "2026-11-15",
+     "p": 0.12,
+     "reason": "Now ~65.5k (9-13 Nov avg), falling; daily bid limits are built to prevent this; even the September 2026 peak stayed near 69.6k",
+     "models": {
+      "threshold": 0.19,
+      "base": 0.08,
+      "signals": 0.1
+     }
+    }
+   ],
+   "crowd": [],
+   "crowd_history": []
+  },
+  {
+   "id": "55",
+   "title": "Russia extends the gasoline export ban beyond 31 January 2027?",
+   "criteria": "YES if by 31 January 2027 the Russian government publishes a decision extending the temporary ban on gasoline exports (covering at least producers) past 31 January 2027. NO if the ban is allowed to lapse.",
+   "deadline": "2027-01-31",
+   "category": "energy",
+   "index": "pulse",
+   "opened": "2026-11-15",
+   "status": "open",
+   "p": 0.85,
+   "base_rate": 0.8,
+   "method": "base = share of 2025-2026 expiries of fuel export bans that were extended; signals = refinery strikes, imports, rationing; log-odds mean 0.855",
+   "history": [
+    {
+     "date": "2026-11-15",
+     "p": 0.85,
+     "reason": "Ban in force since April 2026, extended repeatedly; refining down ~30% since late Oct (Reuters 10.11), imports 10-18% of supply; Novak: decision for early 2027 depends on the situation",
+     "models": {
+      "base": 0.8,
+      "signals": 0.9,
+      "trend": 0.85
+     }
+    }
+   ],
+   "crowd": [],
+   "crowd_history": []
   }
  ]
 }
