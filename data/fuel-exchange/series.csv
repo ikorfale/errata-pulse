@@ -1,0 +1,29 @@
+period,kind,sessions,ai92_t_per_session,ai95_t_per_session,total_t_per_session,diesel_t_week,source
+2025-01,month,,31627,21808,53435,,https://ru.themoscowtimes.com/2026/09/08/birzhevye-tseny-na-benzin-v-rf-vopreki-defitsitu-snizhayutsya-iz-za-narusheniy-srokov-postavki-a205558
+2025-02,month,,23171,16943,40114,,same
+2025-03,month,,24677,16457,41134,,same
+2025-04,month,,21905,16053,37958,,same
+2025-05,month,,23730,18497,42227,,same
+2025-06,month,,21363,17533,38896,,same
+2025-07,month,,21827,14663,36490,,same
+2025-08,month,,22671,16014,38686,,same
+2025-09,month,,17937,12990,30927,,same
+2025-10,month,,17348,12209,29557,,same
+2025-11,month,,19929,14728,34658,,same
+2025-12,month,,23318,18153,41471,,same
+2026-01,month,,25216,22136,47352,,same
+2026-02,month,,21411,16014,37424,,same
+2026-03,month,,21160,15834,36994,,same
+2026-04,month,,17932,12008,29940,,same
+2026-05,month,,18120,10854,28974,,same
+2026-06,month,,12023,9111,21134,,same
+2026-07,month,,8121,4325,12446,,same
+2026-08,month,,8397,5314,13711,,same
+2026-09-01..08,partial,,7910,5160,13070,,same
+2026-09-07..11,week,5,7226,4500,11726,,"derived: 14-18 Sep AI-92 +1.3%, AI-95 -10.4% vs this week (https://ru.themoscowtimes.com/2026/09/18/birzhevye-optovye-prodazhi-benzina-ai-95-i-diztopliva-v-rf-snizilis-na-10-29-za-nedelyu-a206470); forward derivation from 11.09 article gives 12160 (+4%)"
+2026-09-14..18,week,5,7320,4032,11352,,https://ru.themoscowtimes.com/2026/09/18/birzhevye-optovye-prodazhi-benzina-ai-95-i-diztopliva-v-rf-snizilis-na-10-29-za-nedelyu-a206470
+2026-09-21..25,week,5,,,7840,,"DIFFERENT DEFINITION: NBCA via Kommersant 12.10, all Euro-5 gasoline 39.2 kt/5 sessions; plus 16.68 kt Euro-2/3/4 gasoline not counted (https://www.kommersant.ru/doc/9024988)"
+2026-10-19..23,week,5,,,13074,107038,derived: 26-30 Oct total is +24% and diesel +39% vs this week (https://ru.themoscowtimes.com/2026/10/30/birzhevye-optovye-prodazhi-benzina-i-diztopliva-v-rf-na-tekuschey-nedele-suschestvenno-vyrosli-a210171)
+2026-10-26..30,week,5,10896,5316,16212,148793,https://ru.themoscowtimes.com/2026/10/30/birzhevye-optovye-prodazhi-benzina-i-diztopliva-v-rf-na-tekuschey-nedele-suschestvenno-vyrosli-a210171
+2026-11-02..06,week,4,12795,6390,19185,140270,https://ru.themoscowtimes.com/2026/11/06/birzhevye-optovye-prodazhi-benzina-i-diztopliva-v-rf-za-nedelyu-snizilis-na-53-57-a210692
+2026-11-09..13,week,5,6852,3744,10596,125580,https://ru.themoscowtimes.com/2026/11/13/birzhevye-optovye-prodazhi-benzina-v-rf-za-nedelyu-upali-na-31-diztopliva-na-10-a211324
