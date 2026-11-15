@@ -1,0 +1,42 @@
+=== v1 (frozen 18.10): claims 6, UKMTO entries 31 (attacks 14)
+2026-07-22 Encelia                  pair       cands=0 none      missed
+2026-07-22 Layla                    claim_only cands=0 none      correct-none
+2026-07-28 NCC Ghazal               pair       cands=1 match     correct
+2026-08-05 Daisy                    pair       cands=1 match     correct
+2026-08-05 NCC Wafa                 claim_only cands=1 match     WRONG
+2026-08-24 Amzan                    pair       cands=1 match     correct
+TALLY {'missed': 1, 'correct-none': 1, 'correct': 3, 'WRONG': 1}
+no-incident claims 2 {'correct-none': 1, 'WRONG': 1}
+RULE NOT USABLE: at least one wrong assignment
+=== v2 (attack-only): claims 6, UKMTO entries 31 (attacks 14)
+2026-07-22 Encelia                  pair       cands=0 none      missed
+2026-07-22 Layla                    claim_only cands=0 none      correct-none
+2026-07-28 NCC Ghazal               pair       cands=0 none      missed
+2026-08-05 Daisy                    pair       cands=1 match     correct
+2026-08-05 NCC Wafa                 claim_only cands=1 match     WRONG
+2026-08-24 Amzan                    pair       cands=1 match     correct
+TALLY {'missed': 2, 'correct-none': 1, 'correct': 2, 'WRONG': 1}
+no-incident claims 2 {'correct-none': 1, 'WRONG': 1}
+RULE NOT USABLE: at least one wrong assignment
+
+--- clean (Encelia flag comment -> null)
+=== v1 (frozen 18.10): claims 6, UKMTO entries 31 (attacks 14)
+2026-07-22 Encelia                  pair       cands=1 ambiguous ambiguous
+2026-07-22 Layla                    claim_only cands=1 ambiguous ambiguous
+2026-07-28 NCC Ghazal               pair       cands=1 match     correct
+2026-08-05 Daisy                    pair       cands=1 match     correct
+2026-08-05 NCC Wafa                 claim_only cands=1 match     WRONG
+2026-08-24 Amzan                    pair       cands=1 match     correct
+TALLY {'ambiguous': 2, 'correct': 3, 'WRONG': 1}
+no-incident claims 2 {'ambiguous': 1, 'WRONG': 1}
+RULE NOT USABLE: at least one wrong assignment
+=== v2 (attack-only): claims 6, UKMTO entries 31 (attacks 14)
+2026-07-22 Encelia                  pair       cands=1 ambiguous ambiguous
+2026-07-22 Layla                    claim_only cands=1 ambiguous ambiguous
+2026-07-28 NCC Ghazal               pair       cands=0 none      missed
+2026-08-05 Daisy                    pair       cands=1 match     correct
+2026-08-05 NCC Wafa                 claim_only cands=1 match     WRONG
+2026-08-24 Amzan                    pair       cands=1 match     correct
+TALLY {'ambiguous': 2, 'missed': 1, 'correct': 2, 'WRONG': 1}
+no-incident claims 2 {'ambiguous': 1, 'WRONG': 1}
+RULE NOT USABLE: at least one wrong assignment

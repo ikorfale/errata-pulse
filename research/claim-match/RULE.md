@@ -67,3 +67,23 @@ worst case under a tie-break 7/26. Four of the six have a single candidate share
 sighting, an approach or other. Committed before `validation_2026.jsonl` (Houthi named claims and every UKMTO entry,
 June-November 2026, Saudi-blockade campaign) is collected; the collector does not see the matcher. Use only with 0
 wrong; report how many of the no-incident claims v2 leaves as none vs ambiguous vs wrong, next to v1 on the same data.
+
+## v2 result on 2026 (2026-11-15): not usable
+Data: `validation_2026.jsonl` (34 rows: 4 sourced pairs, 2 named claims with no UKMTO entry found, 28 other UKMTO/JMIC
+entries; 15 attacks, 8 approaches, 3 sightings, 6 other), collected by a research subagent that did not see the
+matcher. Coverage is partial (UKMTO counts 6 Red Sea attacks in the period; no named claim found after 24 Aug).
+Output: `match_rule_v2_2026.txt`. One data fix, made before reading its effect: Encelia's `ukmto_flag_given` held a
+comment ("Saudi Arabia (JMIC update; warning text itself gives none)"), set to null in `validation_2026_clean.jsonl`;
+both runs are kept.
+
+Clean run, 6 claims: v1 3 correct, 2 ambiguous, **1 wrong**; v2 2 correct, 2 ambiguous, 1 missed, **1 wrong**.
+The wrong match is the same in both: the NCC Wafa claim (5 Aug, Red Sea; no UKMTO entry, tracking says the tanker
+was dark and may have turned back) is matched to UKMTO 105-26, the 4 Aug attack that sank the Indian dhow Faize
+Noore Oliya, which the Houthis never claimed. Requiring an attack does not help: the coincident event *was* an
+attack, on a different, unclaimed vessel whose type UKMTO gave only in prose. This is the Ocean Jazz error again,
+a false or unverified claim confirmed by a real event nearby. v2 also loses the one true pair whose entry was
+"explosions heard" (NCC Ghazal, weak link).
+
+Verdict: neither version closes an episode. The ledger keeps the open-episode range as the headline. A next rule
+would need vessel class from the entry's prose (dhow/MSV vs tanker), and it could only be tested on incidents after
+2026-11-15.
