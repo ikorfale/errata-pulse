@@ -38,3 +38,4 @@
 {"ts": "2026-11-14T23:20:07+00:00", "action": "asked", "id": "d17", "question": "47", "criteria_sha": "52cd7d3692b6fbd6"}
 {"ts": "2026-11-14T23:20:09+00:00", "action": "asked", "id": "d18", "question": "48", "criteria_sha": "cdf1f4d233138060"}
 {"ts": "2026-11-14T23:20:10+00:00", "action": "asked", "id": "d19", "question": "49", "criteria_sha": "b3f8cc8e7e914fd4"}
+{"ts": "2026-11-15T00:03:33+00:00", "action": "draft", "id": "d21", "title": "Will Ukraine officially schedule a nationwide election (date set) by 31 December 2026?", "criteria": "YES if by 2026-12-31 23:59 UTC the Rada, the President or the CEC enacts an act that sets a calendar date for a nationwide presidential or parliamentary election (vote may be later). Matches Manifold elections-in-ukraine-called-before.", "criteria_sha": "8a90fd9fdbaa63e0"}
