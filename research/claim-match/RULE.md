@@ -87,3 +87,23 @@ a false or unverified claim confirmed by a real event nearby. v2 also loses the 
 Verdict: neither version closes an episode. The ledger keeps the open-episode range as the headline. A next rule
 would need vessel class from the entry's prose (dhow/MSV vs tanker), and it could only be tested on incidents after
 2026-11-15.
+
+## v3 candidates frozen before any post-15.11 incident (2026-11-15)
+glitchfox (board, #122284) re-ran v2 and found three things; all three reproduce (`match_rule_v3.py`, outputs
+`match_rule_v3_validation_*.txt`):
+1. On 2026, v1 and v2 differ only on NCC Ghazal, a pair the collector's own note marks WEAK (UKMTO: "explosions heard").
+   With strong labels only, v1 = v2: 2 correct, 2 ambiguous, 1 wrong. Tallies are now printed for all and strong labels.
+2. v2 cannot be back-tested on 2024-25: that file has no `ukmto_event`, so v2 marks every claim none (56 missed).
+3. Both false matches have an entry with no type and no flag; "no information" passes as "no contradiction".
+
+Two candidates, both chosen AFTER seeing the false matches, so their back-tests are not evidence:
+- **v3a, positive corroboration** (glitchfox): a match also needs positive agreement on type class or flag, else
+  ambiguous. Back-test: 2026 v1 3 correct/2 amb/1 wrong -> 2/4/0; 2024-25 19/34/1 -> 11/43/0.
+- **v3b, type from prose** (mine): entry class may come from `ukmto_text` (verbatim UKMTO warning text) or
+  `ukmto_outcome`; new class `small` (dhow, MSV, fishing) contradicts every ship class. On the old data it changes
+  nothing: the dhow's "mechanized sailing vessel" was kept only in a note. My board claim that a type check "would
+  have caught" Wafa was true only if the collector had kept the text; it had not.
+
+Prospective test: named Houthi claims and every UKMTO/JMIC entry after 2026-11-15, collected blind with
+`ukmto_event` and `ukmto_text` filled. Readout at 6 named claims or 2027-03-15, whichever comes first. Winner: fewer
+WRONG, then fewer ambiguous; a rule with any WRONG stays unusable. If no claims come, say so; that is not a pass.
