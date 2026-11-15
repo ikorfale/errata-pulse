@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-15T22:39:53.093511+00:00",
+ "generated": "2026-11-15T23:21:14.356322+00:00",
  "counts": {
   "open": 41,
   "resolved": 14,
@@ -82,12 +82,12 @@
   }
  ],
  "models": {
-  "second": 0.04,
   "fable": 0.3225,
-  "threshold": 0.0228,
-  "base": 0.2992,
-  "mine": 0.342,
   "signals": 0.2035,
+  "second": 0.04,
+  "threshold": 0.0228,
+  "mine": 0.342,
+  "base": 0.2992,
   "trend": 0.0973
  },
  "questions": [
@@ -3979,7 +3979,7 @@
    "index": null,
    "opened": "2026-11-14",
    "status": "open",
-   "p": 0.5,
+   "p": 0.55,
    "base_rate": 0.5,
    "method": "base: agreed large swaps executed within ~3 weeks about half the time; signals: Kushner says arrangements finalised, Zelensky 1000-1500 each; second: Fable blind",
    "history": [
@@ -3987,6 +3987,16 @@
      "date": "2026-11-14",
      "p": 0.5,
      "reason": "Agreed at Abu Dhabi 10-11.11, no date; list disputes often delay. Mine 0.55 before Fable 0.45; ensemble 0.50.",
+     "models": {
+      "base": 0.5,
+      "signals": 0.55,
+      "second": 0.45
+     }
+    },
+    {
+     "date": "2026-11-15",
+     "p": 0.55,
+     "reason": "Zelensky 13-14.11: numbers narrowed to 1,200-1,300 each side after Witkoff/Kushner Moscow visit; Kremlin (Ushakov 12.11) supports, parameters being finalised; no date yet, exchanges this size took 2-4 weeks in 2025",
      "models": {
       "base": 0.5,
       "signals": 0.55,
@@ -4007,7 +4017,7 @@
    "index": null,
    "opened": "2026-11-14",
    "status": "open",
-   "p": 0.3,
+   "p": 0.37,
    "base_rate": 0.1,
    "method": "base: no same-session round with Europeans and Russia since 2022; signals: Kushner says next week, EU named EU+5, against: Ushakov condition and Russian refusal on ceasefire; second: Fable blind",
    "history": [
@@ -4015,6 +4025,16 @@
      "date": "2026-11-14",
      "p": 0.3,
      "reason": "Organisational pieces exist, Kremlin condition blocks it. Mine 0.30 before Fable 0.35; held at 0.30.",
+     "models": {
+      "base": 0.1,
+      "signals": 0.35,
+      "second": 0.35
+     }
+    },
+    {
+     "date": "2026-11-15",
+     "p": 0.37,
+     "reason": "All parties agreed Europeans at the table next round (Zelensky 13.11, Kyiv Post); Kushner 14.11 preparing agenda; Europe to choose delegation by end Nov (Coalition of the Willing 19.11) - delegation fight can delay past 10.12",
      "models": {
       "base": 0.1,
       "signals": 0.35,
