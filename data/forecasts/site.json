@@ -1,8 +1,8 @@
 {
- "generated": "2026-11-16T22:43:16.178721+00:00",
+ "generated": "2026-11-16T23:18:54.898415+00:00",
  "counts": {
-  "open": 41,
-  "resolved": 14,
+  "open": 39,
+  "resolved": 16,
   "annulled": 0
  },
  "selection": {
@@ -14,9 +14,9 @@
   "drafts_since": "2026-10-24"
  },
  "brier": {
-  "mine": 0.1902,
-  "final": 0.137,
-  "base": 0.3105,
+  "mine": 0.1937,
+  "final": 0.1746,
+  "base": 0.2882,
   "crowd": 0.0986
  },
  "calibration": [
@@ -46,7 +46,7 @@
   },
   {
    "bin": "40-50%",
-   "n": 1,
+   "n": 2,
    "mean_p": 0.45,
    "freq_yes": 0.0
   },
@@ -70,9 +70,9 @@
   },
   {
    "bin": "80-90%",
-   "n": 1,
-   "mean_p": 0.85,
-   "freq_yes": 1.0
+   "n": 2,
+   "mean_p": 0.835,
+   "freq_yes": 0.5
   },
   {
    "bin": "90-100%",
@@ -82,13 +82,13 @@
   }
  ],
  "models": {
-  "mine": 0.342,
-  "fable": 0.3225,
+  "base": 0.2784,
   "signals": 0.2035,
-  "base": 0.2992,
   "second": 0.04,
+  "mine": 0.2984,
+  "trend": 0.0973,
   "threshold": 0.0228,
-  "trend": 0.0973
+  "fable": 0.3145
  },
  "questions": [
   {
@@ -1470,7 +1470,7 @@
    "index": "pulse",
    "opened": "2026-10-09",
    "status": "open",
-   "p": 0.56,
+   "p": 0.6,
    "base_rate": 0.25,
    "method": "trend: lognormal, zero drift, from $125.44, annual volatility 0.75, 83 days. base: judgmental 25%: a 20% fall needs a Hormuz reopening or demand destruction; in 2022 Brent fell from $120+ to under $100 within ~3 months of its peak. signals: LR 0.8 no reopening deal in sight, attacks continue; LR 1.2 demand destruction and IEA stock releases (~100 mb) plus Saudi East-West pipeline at 5.8 mb/d.",
    "history": [
@@ -1508,6 +1508,16 @@
      "date": "2026-11-12",
      "p": 0.56,
      "reason": "12.11: Brent settled 95.82 (+3.3%, Reuters) after Trump closed the Iran deal track; less headroom under 100 for 31.12.",
+     "models": {
+      "base": 0.3,
+      "signals": 0.55,
+      "second": 0.58
+     }
+    },
+    {
+     "date": "2026-11-16",
+     "p": 0.6,
+     "reason": "Brent front-month fell ~3.5% to ~92.4 on 16.11 (WSJ) despite confirmed tanker strikes; IEA Q4 surplus 1.7 mb/d and Hormuz exports near pre-war (Reuters 16.11).",
      "models": {
       "base": 0.3,
       "signals": 0.55,
@@ -2528,7 +2538,7 @@
    "index": "pulse",
    "opened": "2026-10-09",
    "status": "open",
-   "p": 0.85,
+   "p": 0.92,
    "base_rate": 0.15,
    "method": "signals: prior 0.32 x LR1.4 (State Dept ordered departure from Saudi Arabia 21.10, an action) x LR1.2 (NYT 21.10: detailed US-Israel plans for after 3 Nov; plans themselves known since 8.10, so small LR); second: Fable independent estimate from the evidence alone, without my number; ensemble log-odds weights 1,2,2",
    "history": [
@@ -2566,6 +2576,16 @@
      "date": "2026-11-03",
      "p": 0.85,
      "reason": "US officials (CNN/NBC/NYT/AP 02-03.11) confirm a limited strike on a Qeshm launcher on 2 Nov and say such self-defence strikes on launchers recur when the IRGC fires at US aircraft; IRGC keeps firing; 58-day window. The 2 Nov strike itself is before the window. Trump's 'no' refers to a campaign. Fable independent: 0.90",
+     "models": {
+      "base": 0.75,
+      "signals": 0.9,
+      "trend": 0.85
+     }
+    },
+    {
+     "date": "2026-11-16",
+     "p": 0.92,
+     "reason": "BBC 15.11: US officials (to CBS) described strikes on Qeshm this week as limited and defensive; Euronews/agencies 16.11 report US strikes on launchers at Bandar Lengeh and Sirik overnight 15-16.11. Not yet a US government statement or two wires on record, so not resolved.",
      "models": {
       "base": 0.75,
       "signals": 0.9,
@@ -2994,7 +3014,7 @@
    "category": "war",
    "index": "pulse",
    "opened": "2026-10-17",
-   "status": "open",
+   "status": "no",
    "p": 0.45,
    "base_rate": 0.45,
    "method": "Batch 17.10: my number written before asking Claude Fable blind (it never saw mine); ensemble = log-odds mean of base and the two judgements.",
@@ -3011,7 +3031,23 @@
     }
    ],
    "crowd": [],
-   "crowd_history": []
+   "crowd_history": [],
+   "resolved_at": "2026-11-16",
+   "resolution_source": "https://www.ukmto.org/",
+   "resolution_note": "No government (KSA, US/CENTCOM, UK, flag state) publicly attributed either 16.10 Jubail tanker attack to a named state or group by 15.11; searched through 16.11.",
+   "scores": {
+    "brier": 0.2025,
+    "brier_final": 0.2025,
+    "models": {
+     "mine": 0.12249999999999998,
+     "base": 0.2025,
+     "fable": 0.30250000000000005
+    },
+    "brier_base": 0.2025,
+    "brier_crowd": null,
+    "days": 30,
+    "outcome": 0.0
+   }
   },
   {
    "id": "28",
@@ -3373,7 +3409,7 @@
    "category": "energy",
    "index": "pulse",
    "opened": "2026-10-24",
-   "status": "open",
+   "status": "no",
    "p": 0.82,
    "base_rate": 0.25,
    "method": "mine written before Fable (tmp log 23:18Z); Fable independent from evidence only, never saw my number; ensemble = log-odds mean with base rate",
@@ -3401,7 +3437,23 @@
    ],
    "crowd": [],
    "crowd_history": [],
-   "draft": "d1"
+   "draft": "d1",
+   "resolved_at": "2026-11-16",
+   "resolution_source": "https://www.spa.gov.sa/en/N2722235",
+   "resolution_note": "SPA 09.11 confirmed pipeline hit without naming the Houthis; coalition blamed Houthis only for 10.11 Riyadh missiles; Houthis denied the Madinah strike. My 10.11 raise to 82% misread the attribution.",
+   "scores": {
+    "brier": 0.2333565217391304,
+    "brier_final": 0.6723999999999999,
+    "models": {
+     "fable": 0.27902173913043476,
+     "mine": 0.2131521739130435,
+     "base": 0.0625
+    },
+    "brier_base": 0.0625,
+    "brier_crowd": null,
+    "days": 23,
+    "outcome": 0.0
+   }
   },
   {
    "id": "34",
@@ -3748,7 +3800,7 @@
    "index": null,
    "opened": "2026-10-31",
    "status": "open",
-   "p": 0.05,
+   "p": 0.03,
    "base_rate": 0.35,
    "method": "mine written before Fable (tmp/my-fc-1031.txt 23:35Z); Fable independent from evidence only, never saw my number; ensemble = log-odds mean with base rate",
    "history": [
@@ -3786,6 +3838,16 @@
      "date": "2026-11-13",
      "p": 0.05,
      "reason": "IEA OMR 13.11: Q4 surplus 1.7 mb/d, Brent flat at 95.84 despite Bahrain attack; 17 days left",
+     "models": {
+      "base": 0.35,
+      "signals": 0.15,
+      "second": 0.08
+     }
+    },
+    {
+     "date": "2026-11-16",
+     "p": 0.03,
+     "reason": "Brent ~92.4 on 16.11 with IEA surplus; >120 would need a new class of supply loss within 14 days.",
      "models": {
       "base": 0.35,
       "signals": 0.15,
