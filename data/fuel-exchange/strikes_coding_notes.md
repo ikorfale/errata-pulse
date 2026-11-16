@@ -30,3 +30,13 @@ Rules as given; no fuel-volume data looked at. Date = local morning date of the 
 
 ## Coverage limits
 roshlopok.com and Reuters' "What has been hit" page were not walked date by date (budget). Small refineries (mini-refineries) may be missing in any week. Sources used: deepstrike.info, energywar.net, bne Missile War Monitor ledger, uk.wikipedia list (partial).
+
+## C coding (PREREG v2, amendment 3) — 2026-11-16
+- halts.csv: 27 strike rows 06.09–16.11 (23 from the v1 list + 4 halts found on the way: Kuibyshev 22.09, Perm 25.09,
+  Novoshakhtinsk 25.09, Volgograd 02.10). Gathered by a research subagent, every halt row's source checked by me
+  for the two contested calls (Ryazan restart, YANOS 03.11 Bloomberg).
+- Only one restart in any source (Ryazan, as a "running by 16.10" fact) and it is not a reported restart date, so
+  every halt counts to the end of its own calendar week. C is therefore a floor; "no halt report" is the state of
+  the press, not of the plants (bne IntelliNews: up to 45% of nameplate offline "if earlier halts still hold").
+- 9–15 Nov: five strikes (Kirishi, Omsk, Volgograd, Nizhnekamsk, plus Ilsky 16.11), no halt report → C = 0, S_hit = 4.
+- capacity_weekly.csv is the predictor; the pairing with V (lag 1) and the test run wait for n >= 8. Not run.
