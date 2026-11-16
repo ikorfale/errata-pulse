@@ -65,3 +65,10 @@ and matched amendment 1. Three things pinned down, none changing the test:
    UNTESTABLE_AT_N. Checked against just-nik's table for C = (0×6, 4, 4): untied 1440/40320; tie inside a block
    1440/40320; tie straddling the 2nd/3rd lowest V 2880/40320 = 0.0714; triple at the three lowest 4320/40320 =
    0.1071. The current series (7 Reuters-definition weeks) has no tied per-session values.
+
+## Amendment 3 (2026-11-16T14:14Z, before any value of C was computed or any halt row was read)
+Coding rules the v2 text left open, fixed in capacity_offline.py: kt/d = Mt/yr x 1000/365; a unit halt uses the
+unit's reported capacity (capped at the plant), else the plant figure. A halt runs from its start through the day
+before a reported restart; with no reported restart it runs only to the end of that calendar week (silence is not a
+continued halt; this biases C down, never up). Overlapping halts at one plant are merged by day. Halt rows are
+gathered in halts.csv (sources per row); General Staff "units hit" claims are not halt reports.
