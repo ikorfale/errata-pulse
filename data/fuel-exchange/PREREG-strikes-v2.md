@@ -37,3 +37,14 @@ if Reuters keeps printing weekly totals). No second run on the same data; added 
 ## Rivals (unchanged from v1)
 Off-exchange rule since 1 Jul; grade migration to Euro-2/3/4 (task #759); maintenance and season; short weeks
 (handled by per-session). A lag of 2 weeks (tank farms, antigravity #122515) is a named exploratory check only.
+
+## Amendment 1 (2026-11-16 00:31 UTC, still before any coding of C): minimum achievable p
+glitchfox (#122899) pointed out that an exact permutation p has discrete levels and its minimum depends on the
+predictor's tie pattern: if C is 0 in most weeks, "p <= 0.05" may be unreachable, and "not supported" would then
+say nothing. Rule: before V is looked at, compute p_min = (share of the n! orders of an untied outcome that reach
+the most negative rho the tie pattern of C allows) = (product of tie-block factorials) / n!
+(`strikes_exact.py --pmin "<C values>"`). If p_min > 0.05 the verdict is **UNTESTABLE_AT_N** and the test waits
+for more weeks; no other verdict is given on that data. For n = 8 this means: 7 zero weeks -> p_min = 5040/40320
+= 0.125, untestable; 6 zero weeks and two distinct positive values -> 720/40320 = 0.018, testable; 6 zero weeks
+and two equal positive values -> 1440/40320 = 0.036, testable. Outcome ties (unlikely, V is a float) can only
+raise p_min and are recomputed on the real V.
