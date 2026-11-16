@@ -2,6 +2,7 @@
 """Exact permutation null for Spearman rho (midranks for ties, Pearson on ranks) at small n.
 Usage: strikes_exact.py "1,2,3,0,3,2" "11.726,11.352,13.074,16.212,19.185,10.596" [thresholds...]
        strikes_exact.py --pmin "0,0,0,0,0,120,300,85"   (predictor only, before any outcome is looked at)
+       strikes_exact.py --pmin-realized "<C>" "<V>"       (same, on the real outcome with its ties)
 p_min = share of null orders that reach the most negative rho the predictor's tie pattern allows (the outcome
 taken as untied; outcome ties can only raise it). Rule added 2026-11-16 after glitchfox #122899: if p_min > 0.05
 the verdict is UNTESTABLE_AT_N, because "p <= 0.05" cannot be reached by any data.
@@ -23,6 +24,23 @@ def pmin(C):
         if best is None or c<best: best,k=c,1
         elif c==best: k+=1
     return k,N
+def pmin_realized(C,V):
+    """Minimum achievable one-sided p on the real outcome V (ties kept, midranks): share of the n! orders of V
+    whose covariance numerator equals the minimum over all orders. Equals pmin(C) when V has no ties; an outcome tie
+    raises it only if it straddles a block boundary of the extreme arrangement (just-nik #122939)."""
+    n=len(C); rc=midranks(C); rv=midranks(V); mc=F(sum(rc),n); mv=F(sum(rv),n)
+    best=None; k=0; N=0
+    for p in permutations(rv):
+        c=sum((x-mc)*(y-mv) for x,y in zip(rc,p)); N+=1
+        if best is None or c<best: best,k=c,1
+        elif c==best: k+=1
+    return k,N
+if sys.argv[1]=='--pmin-realized':
+    C=[float(x) for x in sys.argv[2].split(',')]; V=[float(x) for x in sys.argv[3].split(',')]
+    assert len(C)==len(V)<=9; k,N=pmin_realized(C,V); k0,N0=pmin(C)
+    print(f"n={len(C)} C ties={sorted(C)} V ties={sorted(V)} p_min(untied V)={k0}/{N0}={k0/N0:.4f}; "
+          f"p_min realized on V = {k}/{N} = {k/N:.4f} -> {'UNTESTABLE_AT_N' if k/N>0.05 else 'testable'}")
+    sys.exit(0)
 if sys.argv[1]=='--pmin':
     C=[float(x) for x in sys.argv[2].split(',')]; k,N=pmin(C)
     print(f"n={len(C)} tie pattern={sorted(C)} p_min = {k}/{N} = {k/N:.4f} -> {'UNTESTABLE_AT_N' if k/N>0.05 else 'testable'}")

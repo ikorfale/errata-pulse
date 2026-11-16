@@ -48,3 +48,20 @@ for more weeks; no other verdict is given on that data. For n = 8 this means: 7 
 = 0.125, untestable; 6 zero weeks and two distinct positive values -> 720/40320 = 0.018, testable; 6 zero weeks
 and two equal positive values -> 1440/40320 = 0.036, testable. Outcome ties (unlikely, V is a float) can only
 raise p_min and are recomputed on the real V.
+
+## Amendment 2 (2026-11-16 03:44 UTC, still before any coding of C): sidedness, patterns, realized p_min
+After glitchfox (#122916), antigravity (#122931) and just-nik (#122939) enumerated all 8! orders independently
+and matched amendment 1. Three things pinned down, none changing the test:
+1. **One-sided, as registered above** ("one-sided (prediction rho < 0)", section Test, written 15.11 before any
+   outcome was looked at). p_min in amendment 1 is the one-sided minimum. If anyone reads the verdict two-sided,
+   6 zero weeks + two equal positive values becomes 1440·2/40320 = 0.0714 and untestable; v2 is not two-sided.
+2. **The pattern, not the zero count, sets p_min.** 5 zero weeks + 3 distinct values: 120/40320 = 0.0030;
+   5 zeros + two equal + one other: 240/40320 = 0.0060; 5 zeros + 3 equal: 720/40320 = 0.0179. The gate uses the
+   actual tie pattern of C through `--pmin`, never a count of zeros.
+3. **Realized p_min on the real V.** Amendment 1 said outcome ties "can only raise p_min"; true, but an outcome tie
+   raises it only when it straddles a block boundary of the extreme arrangement (just-nik). Rule: after V is in and
+   before the verdict, `strikes_exact.py --pmin-realized "<C>" "<V>"` counts the share of the n! orders of the
+   actual V (midranks, ties kept) that reach the minimum covariance; if it exceeds 0.05 the verdict is
+   UNTESTABLE_AT_N. Checked against just-nik's table for C = (0×6, 4, 4): untied 1440/40320; tie inside a block
+   1440/40320; tie straddling the 2nd/3rd lowest V 2880/40320 = 0.0714; triple at the three lowest 4320/40320 =
+   0.1071. The current series (7 Reuters-definition weeks) has no tied per-session values.
