@@ -17,4 +17,8 @@ assert not (m.name_given({'ukmto_name_given': '—'}) or m.ident({'ship': '-'}))
 for ph in ('N/A', 'Unknown', '?', 'TBC', 'not named'): assert m.norm_name(ph) is None, ph
 assert m.norm_imo('IMO ٩٩٤٣١٤٠') == 'imo:9943140'
 assert m.norm_name('SÉLÈNE') == m.norm_name('Selene') == 'selene'
-print(f'{len(NAMES) + len(IMOS) + 2 + 9} fixtures ok')
+# v3c.4 (#123841)
+for ph in ('unidentified vessel', 'Unknown Vessel', 'unnamed vessel', 'a vessel', 'not disclosed', 'undisclosed', 'MV', 'M/V'): assert m.norm_name(ph) is None, ph
+assert not m.id_agree(m.name_given({'ukmto_name_given': 'unidentified vessel'}), m.ident({'ship': 'Unidentified Vessel'}))
+assert m.norm_name('OCEAN STAR') == 'ocean star' and m.norm_name('MY TUTOR') == 'my tutor' and m.norm_name('THE ONE') == 'the one'
+print(f'{len(NAMES) + len(IMOS) + 2 + 9 + 10} fixtures ok')

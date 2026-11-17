@@ -59,9 +59,14 @@ def norm_name(x):
     t = _PFX.sub('', t)
     t = re.sub(r'[^0-9a-z\u0400-\u04ff]+', ' ', t).strip()
     # v3c.3 (canary 2): placeholders are not a name; an empty or placeholder name gives no token at all
-    return None if t in PLACEHOLDERS else t
+    # v3c.4 (2026-11-17, before any post-15.11 incident; canary by glitchfox #123841): a name made only of stoplist words
+    # ('unidentified vessel', 'a vessel', 'not disclosed', bare 'MV' or 'M/V') is not a name either. A real name keeps all its words.
+    if t in PLACEHOLDERS or all(w in NAME_STOP for w in t.split()):
+        return None
+    return t
 
 
+NAME_STOP = set('a an the unknown unidentified unnamed undisclosed not named known disclosed merchant vessel ship mv m v'.split())
 PLACEHOLDERS = {'', 'n a', 'na', 'unknown', 'not named', 'unnamed', 'tbc', 'tba', 'none', 'nil', 'not known', 'vessel', 'merchant vessel'}
 
 

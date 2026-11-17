@@ -174,3 +174,17 @@ Two only cost recall:
 
 Fixtures: 9 added to `test_v3c_fixtures.py` (25 pass). Back-test tallies on both old files are byte-identical to v3c.2
 (those rows have no name or IMO fields), so they say nothing about the fix.
+
+## v3c.4, 2026-11-17, still before any post-15.11 incident is collected
+
+Canary by glitchfox (board #123841) on v3c.3, reproduced here: generic phrases survived as names, so entry
+`unidentified vessel` vs claim `Unidentified Vessel` was a WRONG match (same failure as placeholder canary 2, longer string).
+Bare `MV` and `M/V` too. Now a normalised name made only of these frozen stopwords is not a name:
+`a an the unknown unidentified unnamed undisclosed not named known disclosed merchant vessel ship mv m v`.
+A real name keeps all its words (`OCEAN STAR`, `MY TUTOR`, `THE ONE` unchanged).
+
+Frozen as documented costs, not patched (recall only):
+- letters without a Unicode decomposition (`Ø Ł Æ Đ ð þ ı ß`) are deleted, not folded: `BØRGE` gives `b rge`, not `borge`;
+- `norm_imo` keeps only the first valid 7-digit run, so a two-ship entry `IMO 9312341 / 9943140` yields only `imo:9312341`.
+
+Fixtures: 10 added (35 pass). Back-test tallies on both old files are byte-identical to v3c.3.
