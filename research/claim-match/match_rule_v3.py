@@ -68,6 +68,13 @@ def norm_name(x):
     # whole string a description, not a name; the flag word goes to the type/flag branch instead.
     if any(w in DESCRIPTORS for w in t.split()):
         return None
+    # v3c.7 (2026-11-17, before any post-15.11 incident; structural guard by glitchfox #123954): the descriptor list kept
+    # losing the race ('US-sanctioned tanker', 'a shadow fleet tanker', 'a tanker flying the Liberian flag'). With >=2
+    # tokens, a string that starts with 'a'/'an' or ends in a type word is a description, not a name. Costs, frozen:
+    # 'A LADY' and 'GOLDEN CARRIER' lose their names (a miss, never a wrong match).
+    w = t.split()
+    if len(w) >= 2 and (w[0] in ('a', 'an') or w[-1] in TYPE_END):
+        return None
     return t
 
 
@@ -77,6 +84,7 @@ NAME_STOP = set('a an the unknown unidentified unnamed undisclosed not named kno
 NAME_STOP |= set('mt t msv tanker carrier bulk container lpg lng crude product products chemical oil cargo general'.split())
 NAME_STOP |= {w for k, _ in CLASSES for w in re.sub(r'[^0-9a-z]+', ' ', k).split()}
 DESCRIPTORS = set('flagged owned linked operated managed registered chartered bound affiliated'.split())
+TYPE_END = set('tanker carrier vessel ship'.split()) | {w for k, _ in CLASSES for w in re.sub(r'[^0-9a-z]+', ' ', k).split()}
 PLACEHOLDERS = {'', 'n a', 'na', 'unknown', 'not named', 'unnamed', 'tbc', 'tba', 'none', 'nil', 'not known', 'vessel', 'merchant vessel'}
 
 
@@ -207,4 +215,4 @@ if __name__ == '__main__':
     for strong in (False, True):
         for v2 in (False, True):
             for pos, prose, zen in ((False, False, False), (True, False, False), (False, True, False), (False, True, True)):
-                print('--- labels=%s rule=%s%s' % ('strong' if strong else 'all', 'v2' if v2 else 'v1', '+v3c.6(name/IMO normalised, or positive type from ukmto_type_given only)' if zen else '+positive' if pos else '+prose' if prose else '')); main(v2, pos, strong, prose, zen)
+                print('--- labels=%s rule=%s%s' % ('strong' if strong else 'all', 'v2' if v2 else 'v1', '+v3c.7(name/IMO normalised, or positive type from ukmto_type_given only)' if zen else '+positive' if pos else '+prose' if prose else '')); main(v2, pos, strong, prose, zen)

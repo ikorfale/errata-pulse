@@ -211,3 +211,17 @@ managed registered chartered bound affiliated` is a description, not a name (Non
 branch. `oil` was already stopped in v3c.5. Frozen recall cost, not fixed: stopwords inside a real name are not stripped
 (`the tanker MT OCEAN STAR` != `ocean star`), a miss, never a wrong match.
 Fixtures: 8 added (57 pass). Back-test tallies on both old files identical to v3c.5 except the rule label line.
+
+## v3c.7, 2026-11-17, still before any post-15.11 incident is collected
+
+Canary by glitchfox (board #123954), reproduced on v3c.6: the descriptor list keeps losing the race. `US-sanctioned
+tanker`, `a Chinese-built tanker`, `an Iranian-crewed tanker`, `a Greek-controlled tanker`, `a shadow fleet tanker`,
+`a Liberian flag tanker`, `a tanker flying the Liberian flag` all survived as names, so two sources using the same
+description would agree as if on a vessel name: a wrong match. Fix (structural guard proposed by glitchfox, layered
+after v3c.6): with 2 or more tokens, a normalised string that starts with `a`/`an`, or ends in a type word (`tanker
+carrier vessel ship` plus every CLASSES token), is a description, not a name (None).
+Frozen recall costs, all misses, never wrong matches: `A LADY`, `GOLDEN CARRIER` (this guard); `BOUND STAR`,
+`MANAGED RISK` (v3c.6 descriptor list); and the common press form `the Panama-flagged LPG tanker Tara Gas`, whose real
+name is lost because the whole string is read as a description (v3c.6). Names then come only from the entry's own name
+field, never from prose.
+Fixtures: 19 added (76 pass). Back-test tallies on both old files identical to v3c.6 except the rule label line.

@@ -30,4 +30,9 @@ assert m.norm_name('OCEAN STAR') == 'ocean star' and m.norm_name('MY TUTOR') == 
 for ph in ('a Liberian-flagged tanker', 'Marshall Islands-flagged bulk carrier', 'UK-flagged LPG carrier', 'Greek-owned tanker', 'an Israeli-linked vessel', 'oil tanker'): assert m.norm_name(ph) is None, ph
 assert not m.id_agree(m.name_given({'ukmto_name_given': 'Liberian-flagged tanker'}), m.ident({'ship': 'Liberian-Flagged Tanker'}))
 assert m.norm_name('the tanker MT OCEAN STAR') == 'the tanker mt ocean star'  # frozen recall cost: a miss, not a wrong match
-print(f'{len(NAMES) + len(IMOS) + 2 + 9 + 10 + 14 + 8} fixtures ok')
+# v3c.7 (#123954)
+for ph in ('a Chinese-built tanker', 'an Iranian-crewed tanker', 'US-sanctioned tanker', 'a Greek-controlled tanker', 'a shadow fleet tanker', 'a Liberian flag tanker', 'a tanker flying the Liberian flag'): assert m.norm_name(ph) is None, ph
+assert not m.id_agree(m.name_given({'ukmto_name_given': 'US-sanctioned tanker'}), m.ident({'ship': 'US-Sanctioned Tanker'}))
+for cost in ('A LADY', 'GOLDEN CARRIER', 'BOUND STAR', 'MANAGED RISK', 'the Panama-flagged LPG tanker Tara Gas'): assert m.norm_name(cost) is None, cost  # frozen recall costs
+for keep, want in (('OCEAN STAR', 'ocean star'), ('MY TUTOR', 'my tutor'), ('TANKER OCEAN', 'tanker ocean'), ('LIBERIAN STAR', 'liberian star'), ('Selene', 'selene'), ('the tanker MT OCEAN STAR', 'the tanker mt ocean star')): assert m.norm_name(keep) == want, keep
+print(f'{len(NAMES) + len(IMOS) + 2 + 9 + 10 + 14 + 8 + 19} fixtures ok')
