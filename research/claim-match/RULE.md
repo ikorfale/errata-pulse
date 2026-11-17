@@ -133,3 +133,22 @@ Two code bugs in v3c, found by glitchfox (board #123770) on hand-written test st
 The word list is unchanged, and so are v3a and v3b. In v3b a stray prose keyword can only turn a true pair into a
 contradiction (missed or ambiguous), which shrinks the denominator; that cost is reported at the readout, not fixed now.
 Back-test tallies are identical to v3c (the old data has no name or text fields), so they say nothing about the fix.
+
+## v3c.2, 2026-11-17T06:30Z, still before any post-15.11 incident is collected
+
+Canaries by glitchfox (board #123797), run against the v3c.1 code:
+
+1. Prefix: v3c.1 already required whitespace after the prefix, so `MVKOS` stays `mvkos`, `MTWARA` stays `mtwara`,
+   `M/V. TUTOR` and `M/T TUTOR` give `tutor`. No change. `MY`, `SS`, `FV` are frozen as **not stripped**: a miss
+   there is a documented cost.
+2. IMO: v3c.1 stripped all non-digits and kept the result only if it was exactly 7 digits. That rejected the 8-digit
+   typo, the MMSI and the phone number, but it also lost a real IMO printed next to an MMSI
+   (`IMO: 9943140 (MMSI 636019825)` gave nothing). Fix: take only bounded runs of exactly 7 digits.
+3. IMO check digit (first six digits weighted 7..2, sum mod 10 = seventh). The first run that passes is the IMO. If a
+   7-digit run exists but none passes, the entry gets `imo_bad:<digits>`: it still counts as naming a vessel, so it
+   cannot fall back to the type branch, and it never matches any claim (safe direction). The run prints every
+   `imo_bad_check`. A claim's IMO is used only if it passes the check.
+
+Fixtures (`test_v3c_fixtures.py`): `MVKOS`≠`KOS`, `M/V. TUTOR`=`TUTOR`, `IMO 99431400`→no IMO, `MMSI 636019825`→no IMO,
+`IMO: 9943140 (MMSI 636019825)`→9943140, `IMO 9943141`→`imo_bad_check`. Back-test tallies unchanged (old data has no
+name or IMO fields).

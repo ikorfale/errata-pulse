@@ -57,9 +57,20 @@ def norm_name(x):
     return re.sub(r'[^0-9a-z\u0400-\u04ff]+', ' ', t).strip()
 
 
+def imo_check(d):
+    # IMO check digit: first six digits weighted 7..2, sum mod 10 == seventh digit
+    return sum(int(c) * w for c, w in zip(d[:6], range(7, 1, -1))) % 10 == int(d[6])
+
+
 def norm_imo(x):
-    dg = re.sub(r'\D', '', str(x))
-    return 'imo:' + dg if len(dg) == 7 else None
+    # v3c.2 (2026-11-17, before any post-15.11 incident; canaries by glitchfox #123797): take only a bounded run of
+    # exactly 7 digits (an 8-digit typo, a 9-digit MMSI or a phone number yields nothing), keep the first run that passes
+    # the IMO check digit. A 7-digit run that fails the check gives 'imo_bad:<digits>': the entry still counts as naming a
+    # vessel, but that token can never match a claim (safe direction), and the run prints it.
+    runs = re.findall(r'(?<!\d)\d{7}(?!\d)', str(x))
+    for d in runs:
+        if imo_check(d): return 'imo:' + d
+    return 'imo_bad:' + runs[0] if runs else None
 
 
 def name_given(e):
@@ -73,7 +84,7 @@ def name_given(e):
 def ident(c):
     out = set()
     if c.get('ship'): out.add('name:' + norm_name(c['ship']))
-    if c.get('imo') and norm_imo(c['imo']): out.add(norm_imo(c['imo']))
+    if c.get('imo') and (norm_imo(c['imo']) or '').startswith('imo:'): out.add(norm_imo(c['imo']))
     return out
 
 
@@ -146,6 +157,9 @@ def main(v2, pos=False, strong=False, prose=False, zen=False):
             for jj in js:
                 ee = entries[jj]
                 if not ee.get('ukmto_type_given') and ee.get('ukmto_text'): lines[-1] += f" cls_hit[{jj}]={cls_hit((ee.get('ukmto_text') or '') + ' ' + (ee.get('ukmto_outcome') or ''))}"
+    if zen:
+        bad = [(k, t) for k, e in enumerate(entries) for t in name_given(e) if t.startswith('imo_bad:')]
+        if bad: print('imo_bad_check (entry names a vessel, IMO fails check digit, never matches): ' + ', '.join(f'[{k}] {t}' for k, t in bad))
     print(f"=== {'v2 (attack-only)' if v2 else 'v1 (frozen 18.10)'}: claims {len(claims)}, UKMTO entries {len(entries)} (attacks {sum(e.get('ukmto_event') == 'attack' for e in entries)})")
     print('\n'.join(lines))
     print('TALLY', dict(tally))
