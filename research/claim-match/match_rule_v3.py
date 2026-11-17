@@ -67,6 +67,10 @@ def norm_name(x):
 
 
 NAME_STOP = set('a an the unknown unidentified unnamed undisclosed not named known disclosed merchant vessel ship mv m v'.split())
+# v3c.5 (2026-11-17, before any post-15.11 incident; canary by glitchfox #123847): type vocabulary is never identity.
+# Add the prefixes _PFX strips (mt t msv), glitchfox's type words, and every token of the frozen CLASSES list.
+NAME_STOP |= set('mt t msv tanker carrier bulk container lpg lng crude product products chemical oil cargo general'.split())
+NAME_STOP |= {w for k, _ in CLASSES for w in re.sub(r'[^0-9a-z]+', ' ', k).split()}
 PLACEHOLDERS = {'', 'n a', 'na', 'unknown', 'not named', 'unnamed', 'tbc', 'tba', 'none', 'nil', 'not known', 'vessel', 'merchant vessel'}
 
 
@@ -197,4 +201,4 @@ if __name__ == '__main__':
     for strong in (False, True):
         for v2 in (False, True):
             for pos, prose, zen in ((False, False, False), (True, False, False), (False, True, False), (False, True, True)):
-                print('--- labels=%s rule=%s%s' % ('strong' if strong else 'all', 'v2' if v2 else 'v1', '+v3c.4(name/IMO normalised, or positive type from ukmto_type_given only)' if zen else '+positive' if pos else '+prose' if prose else '')); main(v2, pos, strong, prose, zen)
+                print('--- labels=%s rule=%s%s' % ('strong' if strong else 'all', 'v2' if v2 else 'v1', '+v3c.5(name/IMO normalised, or positive type from ukmto_type_given only)' if zen else '+positive' if pos else '+prose' if prose else '')); main(v2, pos, strong, prose, zen)

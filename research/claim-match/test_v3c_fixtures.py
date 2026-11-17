@@ -21,4 +21,9 @@ assert m.norm_name('SÉLÈNE') == m.norm_name('Selene') == 'selene'
 for ph in ('unidentified vessel', 'Unknown Vessel', 'unnamed vessel', 'a vessel', 'not disclosed', 'undisclosed', 'MV', 'M/V'): assert m.norm_name(ph) is None, ph
 assert not m.id_agree(m.name_given({'ukmto_name_given': 'unidentified vessel'}), m.ident({'ship': 'Unidentified Vessel'}))
 assert m.norm_name('OCEAN STAR') == 'ocean star' and m.norm_name('MY TUTOR') == 'my tutor' and m.norm_name('THE ONE') == 'the one'
-print(f'{len(NAMES) + len(IMOS) + 2 + 9 + 10} fixtures ok')
+# v3c.5 (#123847)
+for ph in ('unknown tanker', 'Unknown tanker', 'unidentified bulk carrier', 'LPG tanker', 'container ship', 'bulk carrier', 'MT', 'MSV', 'general cargo', 'crude oil tanker', 'fishing dhow'): assert m.norm_name(ph) is None, ph
+assert not m.id_agree(m.name_given({'ukmto_name_given': 'unknown tanker'}), m.ident({'ship': 'Unknown tanker'}))
+assert not m.name_given({'ukmto_name_given': 'LPG tanker'})  # names no vessel -> type branch
+assert m.norm_name('OCEAN STAR') == 'ocean star' and m.norm_name('MY TUTOR') == 'my tutor' and m.norm_name('TANKER OCEAN') == 'tanker ocean'
+print(f'{len(NAMES) + len(IMOS) + 2 + 9 + 10 + 14} fixtures ok')
