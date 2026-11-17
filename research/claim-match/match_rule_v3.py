@@ -45,16 +45,24 @@ def cls(t):
     return None
 
 
-import re
+import re, unicodedata
 _PFX = re.compile(r'^(m\.?\s*/?\s*[vt]\.?|mv|mt|msv)\s+')
 
 
 def norm_name(x):
     # v3c.1 (2026-11-17, before any post-15.11 incident; bug found by glitchfox #123770): casefold, drop MV/MT/M/V/M.V./MSV
     # prefix and punctuation. Former names and transliterations are NOT matched (frozen as "does not match").
-    t = str(x).casefold().strip()
+    # v3c.3 (2026-11-17, before any post-15.11 incident; canary 4 by glitchfox #123814): NFKD and drop combining marks
+    # first, so SELENE with accents equals Selene (it used to split into 's l ne').
+    t = unicodedata.normalize('NFKD', str(x))
+    t = ''.join(ch for ch in t if not unicodedata.combining(ch)).casefold().strip()
     t = _PFX.sub('', t)
-    return re.sub(r'[^0-9a-z\u0400-\u04ff]+', ' ', t).strip()
+    t = re.sub(r'[^0-9a-z\u0400-\u04ff]+', ' ', t).strip()
+    # v3c.3 (canary 2): placeholders are not a name; an empty or placeholder name gives no token at all
+    return None if t in PLACEHOLDERS else t
+
+
+PLACEHOLDERS = {'', 'n a', 'na', 'unknown', 'not named', 'unnamed', 'tbc', 'tba', 'none', 'nil', 'not known', 'vessel', 'merchant vessel'}
 
 
 def imo_check(d):
@@ -67,7 +75,10 @@ def norm_imo(x):
     # exactly 7 digits (an 8-digit typo, a 9-digit MMSI or a phone number yields nothing), keep the first run that passes
     # the IMO check digit. A 7-digit run that fails the check gives 'imo_bad:<digits>': the entry still counts as naming a
     # vessel, but that token can never match a claim (safe direction), and the run prints it.
-    runs = re.findall(r'(?<!\d)\d{7}(?!\d)', str(x))
+    # v3c.3 (canary 3): NFKC + ASCII-only digits, after mapping any Unicode decimal digit (Arabic-Indic etc.) to ASCII
+    t = unicodedata.normalize('NFKC', str(x))
+    t = ''.join(str(unicodedata.decimal(ch)) if ch.isdecimal() else ch for ch in t)
+    runs = re.findall(r'(?<!\d)\d{7}(?!\d)', t, flags=re.ASCII)
     for d in runs:
         if imo_check(d): return 'imo:' + d
     return 'imo_bad:' + runs[0] if runs else None
@@ -76,16 +87,24 @@ def norm_imo(x):
 def name_given(e):
     # v3c: vessel name / IMO as the verifier entry prints it (fields filled by the post-15.11 collector), normalised (v3c.1)
     out = set()
-    if e.get('ukmto_name_given'): out.add('name:' + norm_name(e['ukmto_name_given']))
+    if e.get('ukmto_name_given') and norm_name(e['ukmto_name_given']): out.add('name:' + norm_name(e['ukmto_name_given']))
     if e.get('ukmto_imo_given') and norm_imo(e['ukmto_imo_given']): out.add(norm_imo(e['ukmto_imo_given']))
     return out
 
 
 def ident(c):
     out = set()
-    if c.get('ship'): out.add('name:' + norm_name(c['ship']))
+    if c.get('ship') and norm_name(c['ship']): out.add('name:' + norm_name(c['ship']))
     if c.get('imo') and (norm_imo(c['imo']) or '').startswith('imo:'): out.add(norm_imo(c['imo']))
     return out
+
+
+def id_agree(en, ci):
+    # v3c.3 (canary 1, glitchfox #123814): a valid IMO is unique, a name is not. If both sides carry a valid IMO and they
+    # differ, that is a contradiction whatever the name says; otherwise any shared token (name or IMO) agrees.
+    ei = {t for t in en if t.startswith('imo:')}; cimo = {t for t in ci if t.startswith('imo:')}
+    if ei and cimo and not (ei & cimo): return False
+    return bool(en & ci)
 
 
 def cls_hit(t):
@@ -127,7 +146,7 @@ def main(v2, pos=False, strong=False, prose=False, zen=False):
             et = etype(e, prose)
             en = name_given(e)
             if zen and en:  # v3c: a vessel name/IMO in the verifier entry decides alone
-                if en & ident(c): out.append(j)
+                if id_agree(en, ident(c)): out.append(j)
                 continue
             if ct and et and ct != et: continue
             ef = e.get('ukmto_flag_given'); cf = c.get('flag')
@@ -139,7 +158,7 @@ def main(v2, pos=False, strong=False, prose=False, zen=False):
             posok[(i, j)] = bool((ct and et and ct == et) or (ef and cf and ef.lower() == cf.lower()))
             if zen:  # flag alone is not enough; v3c.1: a class read from prose may only contradict, never corroborate
                 tg = cls(e.get('ukmto_type_given'))
-                posok[(i, j)] = bool(name_given(e) & ident(c)) or bool(ct and tg and ct == tg)
+                posok[(i, j)] = id_agree(name_given(e), ident(c)) or bool(ct and tg and ct == tg)
     claimed_by = collections.Counter(j for js in cand.values() for j in js)
     tally = collections.Counter(); lines = []
     for i, c in enumerate(claims):
@@ -173,4 +192,4 @@ if __name__ == '__main__':
     for strong in (False, True):
         for v2 in (False, True):
             for pos, prose, zen in ((False, False, False), (True, False, False), (False, True, False), (False, True, True)):
-                print('--- labels=%s rule=%s%s' % ('strong' if strong else 'all', 'v2' if v2 else 'v1', '+v3c.1(name/IMO normalised, or positive type from ukmto_type_given only)' if zen else '+positive' if pos else '+prose' if prose else '')); main(v2, pos, strong, prose, zen)
+                print('--- labels=%s rule=%s%s' % ('strong' if strong else 'all', 'v2' if v2 else 'v1', '+v3c.3(name/IMO normalised, or positive type from ukmto_type_given only)' if zen else '+positive' if pos else '+prose' if prose else '')); main(v2, pos, strong, prose, zen)

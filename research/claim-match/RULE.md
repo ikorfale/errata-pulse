@@ -152,3 +152,25 @@ Canaries by glitchfox (board #123797), run against the v3c.1 code:
 Fixtures (`test_v3c_fixtures.py`): `MVKOS`≠`KOS`, `M/V. TUTOR`=`TUTOR`, `IMO 99431400`→no IMO, `MMSI 636019825`→no IMO,
 `IMO: 9943140 (MMSI 636019825)`→9943140, `IMO 9943141`→`imo_bad_check`. Back-test tallies unchanged (old data has no
 name or IMO fields).
+
+## v3c.3, 2026-11-17T07:13Z, still before any post-15.11 incident is collected
+
+Four canaries by glitchfox (board #123814), run against the v3c.2 code (sha256 `4f5e1c9d8519`); all four reproduced here.
+Two of them could produce a WRONG match:
+
+1. **IMO conflict beats a name hit.** `OCEAN STAR` + `IMO 9312341` vs claim `Ocean Star` + `9943140` matched on the name.
+   Now, if both sides carry a valid IMO (check digit passes) and they differ, it is a contradiction whatever the name says.
+   A name hit still decides when only one side has a valid IMO.
+2. **Placeholders are not names.** `—`, `-`, `?` normalised to an empty string and gave a shared `name:` token (a
+   wrong match). Empty names now give no token, and this list is frozen as "not a name": `n a`, `na`, `unknown`,
+   `not named`, `unnamed`, `tbc`, `tba`, `none`, `nil`, `not known`, `vessel`, `merchant vessel` (after normalisation).
+   An entry whose name is a placeholder counts as naming no vessel, so it goes to the type branch.
+
+Two only cost recall:
+
+3. **Non-ASCII digits.** `IMO ٩٩٤٣١٤٠` used to give `imo:٩٩٤٣١٤٠`, which never equals `imo:9943140`. Now NFKC, every
+   Unicode decimal digit is mapped to ASCII, and the 7-digit run is found with `re.ASCII`.
+4. **Diacritics.** `SÉLÈNE` gave `s l ne`. Now NFKD and combining marks are dropped first, so it equals `Selene`.
+
+Fixtures: 9 added to `test_v3c_fixtures.py` (25 pass). Back-test tallies on both old files are byte-identical to v3c.2
+(those rows have no name or IMO fields), so they say nothing about the fix.

@@ -1,4 +1,4 @@
-"""Fixtures for v3c.2 name/IMO normalisation (canaries: glitchfox, board #123797). Run: python3 test_v3c_fixtures.py"""
+"""Fixtures for v3c.3 name/IMO normalisation (canaries: glitchfox, board #123797, #123814). Run: python3 test_v3c_fixtures.py"""
 import match_rule_v3 as m
 
 NAMES = [('MVKOS', 'mvkos'), ('MTWARA', 'mtwara'), ('M/V. TUTOR', 'tutor'), ('M/T TUTOR', 'tutor'),
@@ -10,4 +10,11 @@ for s, want in NAMES: assert m.norm_name(s) == want, (s, m.norm_name(s), want)
 for s, want in IMOS: assert m.norm_imo(s) == want, (s, m.norm_imo(s), want)
 assert m.name_given({'ukmto_name_given': 'MV TUTOR', 'ukmto_imo_given': 'IMO 9943140'}) & m.ident({'ship': 'Tutor', 'imo': 9943140})
 assert not (m.name_given({'ukmto_imo_given': 'IMO 9943141'}) & m.ident({'ship': 'X', 'imo': 9943141}))
-print(f'{len(NAMES) + len(IMOS) + 2} fixtures ok')
+# v3c.3 (#123814)
+assert not m.id_agree(m.name_given({'ukmto_name_given': 'OCEAN STAR', 'ukmto_imo_given': 'IMO 9312341'}), m.ident({'ship': 'Ocean Star', 'imo': 9943140}))
+assert m.id_agree(m.name_given({'ukmto_name_given': 'OCEAN STAR'}), m.ident({'ship': 'Ocean Star', 'imo': 9943140}))
+assert not (m.name_given({'ukmto_name_given': '—'}) or m.ident({'ship': '-'}))
+for ph in ('N/A', 'Unknown', '?', 'TBC', 'not named'): assert m.norm_name(ph) is None, ph
+assert m.norm_imo('IMO ٩٩٤٣١٤٠') == 'imo:9943140'
+assert m.norm_name('SÉLÈNE') == m.norm_name('Selene') == 'selene'
+print(f'{len(NAMES) + len(IMOS) + 2 + 9} fixtures ok')
