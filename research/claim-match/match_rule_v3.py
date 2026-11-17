@@ -45,6 +45,15 @@ def cls(t):
     return None
 
 
+def name_given(e):
+    # v3c only: vessel name / IMO exactly as the verifier entry prints it (fields filled by the post-15.11 collector)
+    return {x.strip().lower() for x in (e.get('ukmto_name_given'), e.get('ukmto_imo_given')) if x}
+
+
+def ident(c):
+    return {str(x).strip().lower() for x in (c.get('ship'), c.get('imo')) if x}
+
+
 def area_ok(claim_area, e_area):
     if not claim_area: return e_area in RED
     if claim_area == e_area: return True
@@ -58,7 +67,7 @@ def etype(e, prose):
     return cls(e.get('ukmto_type_given')) or (cls((e.get('ukmto_text') or '') + ' ' + (e.get('ukmto_outcome') or '')) if prose else None)
 
 
-def main(v2, pos=False, strong=False, prose=False):
+def main(v2, pos=False, strong=False, prose=False, zen=False):
     rows = [json.loads(l) for l in open(F) if l.strip()]
     if strong: rows = [r for r in rows if not (r.get('kind') == 'pair' and (r.get('note') or '').upper().startswith('WEAK'))]
     claims = [r for r in rows if r.get('kind') in ('pair', 'claim_only') and r.get('claim_date')]
@@ -73,6 +82,10 @@ def main(v2, pos=False, strong=False, prose=False):
             if not (dc - dt.timedelta(days=2) <= de <= dc + dt.timedelta(days=1)): continue
             if not area_ok(c.get('claim_area'), e.get('ukmto_area')): continue
             et = etype(e, prose)
+            en = name_given(e)
+            if zen and en:  # v3c: a vessel name/IMO in the verifier entry decides alone
+                if en & ident(c): out.append(j)
+                continue
             if ct and et and ct != et: continue
             ef = e.get('ukmto_flag_given'); cf = c.get('flag')
             if ef and cf and ef.lower() != cf.lower(): continue
@@ -81,11 +94,12 @@ def main(v2, pos=False, strong=False, prose=False):
         for j in out:
             e = entries[j]; et = etype(e, prose); ef = e.get('ukmto_flag_given'); cf = c.get('flag')
             posok[(i, j)] = bool((ct and et and ct == et) or (ef and cf and ef.lower() == cf.lower()))
+            if zen: posok[(i, j)] = bool(name_given(e) & ident(c)) or bool(ct and et and ct == et)  # flag alone is not enough
     claimed_by = collections.Counter(j for js in cand.values() for j in js)
     tally = collections.Counter(); lines = []
     for i, c in enumerate(claims):
         js = cand[i]
-        if len(js) == 1 and claimed_by[js[0]] == 1 and not (pos and not posok[(i, js[0])]): verdict, j = 'match', js[0]
+        if len(js) == 1 and claimed_by[js[0]] == 1 and not ((pos or zen) and not posok[(i, js[0])]): verdict, j = 'match', js[0]
         elif not js: verdict, j = 'none', None
         else: verdict, j = 'ambiguous', None
         truth = entries.index(c) if c.get('kind') == 'pair' and c in entries else None
@@ -106,5 +120,5 @@ def main(v2, pos=False, strong=False, prose=False):
 if __name__ == '__main__':
     for strong in (False, True):
         for v2 in (False, True):
-            for pos, prose in ((False, False), (True, False), (False, True)):
-                print('--- labels=%s rule=%s%s' % ('strong' if strong else 'all', 'v2' if v2 else 'v1', '+positive' if pos else '+prose' if prose else '')); main(v2, pos, strong, prose)
+            for pos, prose, zen in ((False, False, False), (True, False, False), (False, True, False), (False, True, True)):
+                print('--- labels=%s rule=%s%s' % ('strong' if strong else 'all', 'v2' if v2 else 'v1', '+v3c(name or positive type)' if zen else '+positive' if pos else '+prose' if prose else '')); main(v2, pos, strong, prose, zen)

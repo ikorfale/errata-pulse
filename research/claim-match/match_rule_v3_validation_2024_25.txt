@@ -259,6 +259,93 @@ RULE USABLE
 TALLY {'ambiguous': 34, 'WRONG': 1, 'missed': 9, 'correct': 19, 'correct-none': 19}
 no-incident claims 26 {'WRONG': 1, 'ambiguous': 6, 'correct-none': 19}
 RULE NOT USABLE: at least one wrong assignment
+--- labels=all rule=v1+v3c(name or positive type)
+=== v1 (frozen 18.10): claims 82, UKMTO entries 92 (attacks 0)
+2024-01-16 Zografia                 pair       cands=4 ambiguous ambiguous
+2024-01-17 Genco Picardy            pair       cands=5 ambiguous ambiguous
+2024-01-18 Chem Ranger              pair       cands=4 ambiguous ambiguous
+2024-01-22 Ocean Jazz               claim_only cands=1 ambiguous ambiguous
+2024-01-26 Marlin Luanda            pair       cands=3 ambiguous ambiguous
+2024-01-31 Koi                      pair       cands=0 none      missed
+2024-02-06 Morning Tide             pair       cands=1 match     correct
+2024-02-06 Star Nasia               pair       cands=0 none      missed
+2024-02-12 Star Iris                pair       cands=1 ambiguous ambiguous
+2024-02-15 Lycavitos                pair       cands=1 ambiguous ambiguous
+2024-02-17 Pollux                   pair       cands=1 match     correct
+2024-02-19 Rubymar                  pair       cands=3 ambiguous ambiguous
+2024-02-19 Sea Champion             pair       cands=3 ambiguous ambiguous
+2024-02-19 Navis Fortuna            pair       cands=3 ambiguous ambiguous
+2024-02-20 MSC Silver               claim_only cands=3 ambiguous ambiguous
+2024-02-22 Islander                 pair       cands=1 match     correct
+2024-02-25 Torm Thor                pair       cands=1 match     correct
+2024-03-04 MSC Sky II               pair       cands=0 none      missed
+2024-03-06 True Confidence          pair       cands=2 ambiguous ambiguous
+2024-03-09 Propel Fortune           pair       cands=1 ambiguous ambiguous
+2024-03-12 Pinocchio                pair       cands=1 ambiguous ambiguous
+2024-04-07 Hope Island              pair       cands=2 ambiguous ambiguous
+2024-04-07 MSC Grace F              claim_only cands=0 none      correct-none
+2024-04-07 MSC Gina                 claim_only cands=0 none      correct-none
+2024-04-07 Hope Island              pair       cands=2 ambiguous ambiguous
+2024-04-10 Maersk Yorktown          claim_only cands=0 none      correct-none
+2024-04-10 MSC Gina                 claim_only cands=0 none      correct-none
+2024-04-10 MSC Darwin VI            claim_only cands=0 none      correct-none
+2024-04-24 MSC Veracruz             claim_only cands=0 none      correct-none
+2024-04-24 Maersk Yorktown          pair       cands=1 ambiguous ambiguous
+2024-04-25 MSC Darwin VI            pair       cands=1 ambiguous ambiguous
+2024-04-26 Andromeda Star           pair       cands=1 match     correct
+2024-04-29 MSC Orion                pair       cands=0 none      missed
+2024-04-30 Cyclades                 pair       cands=1 match     correct
+2024-05-29 Laax                     pair       cands=1 ambiguous ambiguous
+2024-05-29 Morea                    claim_only cands=1 ambiguous ambiguous
+2024-05-29 Sealady                  claim_only cands=1 ambiguous ambiguous
+2024-05-29 Alba                     claim_only cands=0 none      correct-none
+2024-05-29 Maersk Hartford          claim_only cands=0 none      correct-none
+2024-05-29 Minerva Antonia          claim_only cands=0 none      correct-none
+2024-06-09 Norderney                pair       cands=2 ambiguous ambiguous
+2024-06-09 MSC Tavvishi             pair       cands=1 match     correct
+2024-06-09 Norderney                pair       cands=2 ambiguous ambiguous
+2024-06-12 Tutor                    pair       cands=2 ambiguous ambiguous
+2024-06-13 Athina                   claim_only cands=2 ambiguous ambiguous
+2024-06-13 Verbena                  pair       cands=0 none      missed
+2024-06-13 Seaguardian              pair       cands=2 ambiguous ambiguous
+2024-06-22 Transworld Navigator     pair       cands=0 none      missed
+2024-06-23 Stolt Sequoia            claim_only cands=0 none      correct-none
+2024-06-23 Transworld Navigator     pair       cands=1 ambiguous ambiguous
+2024-06-25 MSC Sarah V              pair       cands=1 match     correct
+2024-06-28 Ioannis                  claim_only cands=2 ambiguous ambiguous
+2024-06-28 Waler                    claim_only cands=0 none      correct-none
+2024-06-28 Johannes Maersk          claim_only cands=0 none      correct-none
+2024-06-28 Delonix                  pair       cands=2 ambiguous ambiguous
+2024-07-09 Marathopolis             claim_only cands=1 ambiguous ambiguous
+2024-07-09 MSC Patnaree             claim_only cands=0 none      correct-none
+2024-07-09 Maersk Sentosa           pair       cands=1 ambiguous ambiguous
+2024-07-15 Olvia                    claim_only cands=0 none      correct-none
+2024-07-15 Bentley I                pair       cands=2 ambiguous ambiguous
+2024-07-15 Chios Lion               pair       cands=2 ambiguous ambiguous
+2024-07-19 Lobivia                  pair       cands=1 ambiguous ambiguous
+2024-08-04 Groton                   pair       cands=2 ambiguous ambiguous
+2024-08-04 Groton                   pair       cands=2 ambiguous ambiguous
+2024-08-22 Sounion                  pair       cands=2 ambiguous ambiguous
+2024-08-22 SW North Wind I          pair       cands=1 match     correct
+2024-08-31 Groton                   pair       cands=1 ambiguous ambiguous
+2024-09-02 Blue Lagoon I            pair       cands=2 ambiguous ambiguous
+2024-10-01 Marathopolis             claim_only cands=0 none      correct-none
+2024-10-01 Cordelia Moon            pair       cands=2 ambiguous ambiguous
+2024-10-10 St. John                 claim_only cands=0 none      correct-none
+2024-10-10 Olympic Spirit           pair       cands=1 match     correct
+2024-10-28 Maersk Kowloon           claim_only cands=0 none      correct-none
+2024-10-28 SC Montreal              claim_only cands=0 none      correct-none
+2024-10-28 Motaro                   pair       cands=0 none      missed
+2024-11-19 Anadolu S                pair       cands=1 ambiguous ambiguous
+2024-11-19 Anadolu S                pair       cands=1 ambiguous ambiguous
+2025-07-07 Magic Seas               pair       cands=1 match     correct
+2025-07-09 Eternity C               pair       cands=0 none      missed
+2025-09-01 Scarlet Ray              pair       cands=0 none      missed
+2025-09-02 MSC Aby                  claim_only cands=0 none      correct-none
+2025-10-01 Minervagracht            pair       cands=1 ambiguous ambiguous
+TALLY {'ambiguous': 43, 'missed': 9, 'correct': 11, 'correct-none': 19}
+no-incident claims 26 {'ambiguous': 7, 'correct-none': 19}
+RULE USABLE
 --- labels=all rule=v2
 === v2 (attack-only): claims 82, UKMTO entries 92 (attacks 0)
 2024-01-16 Zografia                 pair       cands=0 none      missed
@@ -434,6 +521,93 @@ TALLY {'missed': 56, 'correct-none': 26}
 no-incident claims 26 {'correct-none': 26}
 RULE USABLE
 --- labels=all rule=v2+prose
+=== v2 (attack-only): claims 82, UKMTO entries 92 (attacks 0)
+2024-01-16 Zografia                 pair       cands=0 none      missed
+2024-01-17 Genco Picardy            pair       cands=0 none      missed
+2024-01-18 Chem Ranger              pair       cands=0 none      missed
+2024-01-22 Ocean Jazz               claim_only cands=0 none      correct-none
+2024-01-26 Marlin Luanda            pair       cands=0 none      missed
+2024-01-31 Koi                      pair       cands=0 none      missed
+2024-02-06 Morning Tide             pair       cands=0 none      missed
+2024-02-06 Star Nasia               pair       cands=0 none      missed
+2024-02-12 Star Iris                pair       cands=0 none      missed
+2024-02-15 Lycavitos                pair       cands=0 none      missed
+2024-02-17 Pollux                   pair       cands=0 none      missed
+2024-02-19 Rubymar                  pair       cands=0 none      missed
+2024-02-19 Sea Champion             pair       cands=0 none      missed
+2024-02-19 Navis Fortuna            pair       cands=0 none      missed
+2024-02-20 MSC Silver               claim_only cands=0 none      correct-none
+2024-02-22 Islander                 pair       cands=0 none      missed
+2024-02-25 Torm Thor                pair       cands=0 none      missed
+2024-03-04 MSC Sky II               pair       cands=0 none      missed
+2024-03-06 True Confidence          pair       cands=0 none      missed
+2024-03-09 Propel Fortune           pair       cands=0 none      missed
+2024-03-12 Pinocchio                pair       cands=0 none      missed
+2024-04-07 Hope Island              pair       cands=0 none      missed
+2024-04-07 MSC Grace F              claim_only cands=0 none      correct-none
+2024-04-07 MSC Gina                 claim_only cands=0 none      correct-none
+2024-04-07 Hope Island              pair       cands=0 none      missed
+2024-04-10 Maersk Yorktown          claim_only cands=0 none      correct-none
+2024-04-10 MSC Gina                 claim_only cands=0 none      correct-none
+2024-04-10 MSC Darwin VI            claim_only cands=0 none      correct-none
+2024-04-24 MSC Veracruz             claim_only cands=0 none      correct-none
+2024-04-24 Maersk Yorktown          pair       cands=0 none      missed
+2024-04-25 MSC Darwin VI            pair       cands=0 none      missed
+2024-04-26 Andromeda Star           pair       cands=0 none      missed
+2024-04-29 MSC Orion                pair       cands=0 none      missed
+2024-04-30 Cyclades                 pair       cands=0 none      missed
+2024-05-29 Laax                     pair       cands=0 none      missed
+2024-05-29 Morea                    claim_only cands=0 none      correct-none
+2024-05-29 Sealady                  claim_only cands=0 none      correct-none
+2024-05-29 Alba                     claim_only cands=0 none      correct-none
+2024-05-29 Maersk Hartford          claim_only cands=0 none      correct-none
+2024-05-29 Minerva Antonia          claim_only cands=0 none      correct-none
+2024-06-09 Norderney                pair       cands=0 none      missed
+2024-06-09 MSC Tavvishi             pair       cands=0 none      missed
+2024-06-09 Norderney                pair       cands=0 none      missed
+2024-06-12 Tutor                    pair       cands=0 none      missed
+2024-06-13 Athina                   claim_only cands=0 none      correct-none
+2024-06-13 Verbena                  pair       cands=0 none      missed
+2024-06-13 Seaguardian              pair       cands=0 none      missed
+2024-06-22 Transworld Navigator     pair       cands=0 none      missed
+2024-06-23 Stolt Sequoia            claim_only cands=0 none      correct-none
+2024-06-23 Transworld Navigator     pair       cands=0 none      missed
+2024-06-25 MSC Sarah V              pair       cands=0 none      missed
+2024-06-28 Ioannis                  claim_only cands=0 none      correct-none
+2024-06-28 Waler                    claim_only cands=0 none      correct-none
+2024-06-28 Johannes Maersk          claim_only cands=0 none      correct-none
+2024-06-28 Delonix                  pair       cands=0 none      missed
+2024-07-09 Marathopolis             claim_only cands=0 none      correct-none
+2024-07-09 MSC Patnaree             claim_only cands=0 none      correct-none
+2024-07-09 Maersk Sentosa           pair       cands=0 none      missed
+2024-07-15 Olvia                    claim_only cands=0 none      correct-none
+2024-07-15 Bentley I                pair       cands=0 none      missed
+2024-07-15 Chios Lion               pair       cands=0 none      missed
+2024-07-19 Lobivia                  pair       cands=0 none      missed
+2024-08-04 Groton                   pair       cands=0 none      missed
+2024-08-04 Groton                   pair       cands=0 none      missed
+2024-08-22 Sounion                  pair       cands=0 none      missed
+2024-08-22 SW North Wind I          pair       cands=0 none      missed
+2024-08-31 Groton                   pair       cands=0 none      missed
+2024-09-02 Blue Lagoon I            pair       cands=0 none      missed
+2024-10-01 Marathopolis             claim_only cands=0 none      correct-none
+2024-10-01 Cordelia Moon            pair       cands=0 none      missed
+2024-10-10 St. John                 claim_only cands=0 none      correct-none
+2024-10-10 Olympic Spirit           pair       cands=0 none      missed
+2024-10-28 Maersk Kowloon           claim_only cands=0 none      correct-none
+2024-10-28 SC Montreal              claim_only cands=0 none      correct-none
+2024-10-28 Motaro                   pair       cands=0 none      missed
+2024-11-19 Anadolu S                pair       cands=0 none      missed
+2024-11-19 Anadolu S                pair       cands=0 none      missed
+2025-07-07 Magic Seas               pair       cands=0 none      missed
+2025-07-09 Eternity C               pair       cands=0 none      missed
+2025-09-01 Scarlet Ray              pair       cands=0 none      missed
+2025-09-02 MSC Aby                  claim_only cands=0 none      correct-none
+2025-10-01 Minervagracht            pair       cands=0 none      missed
+TALLY {'missed': 56, 'correct-none': 26}
+no-incident claims 26 {'correct-none': 26}
+RULE USABLE
+--- labels=all rule=v2+v3c(name or positive type)
 === v2 (attack-only): claims 82, UKMTO entries 92 (attacks 0)
 2024-01-16 Zografia                 pair       cands=0 none      missed
 2024-01-17 Genco Picardy            pair       cands=0 none      missed
@@ -778,6 +952,92 @@ RULE USABLE
 TALLY {'ambiguous': 33, 'WRONG': 1, 'missed': 9, 'correct': 19, 'correct-none': 19}
 no-incident claims 26 {'WRONG': 1, 'ambiguous': 6, 'correct-none': 19}
 RULE NOT USABLE: at least one wrong assignment
+--- labels=strong rule=v1+v3c(name or positive type)
+=== v1 (frozen 18.10): claims 81, UKMTO entries 91 (attacks 0)
+2024-01-16 Zografia                 pair       cands=4 ambiguous ambiguous
+2024-01-17 Genco Picardy            pair       cands=4 ambiguous ambiguous
+2024-01-22 Ocean Jazz               claim_only cands=1 ambiguous ambiguous
+2024-01-26 Marlin Luanda            pair       cands=3 ambiguous ambiguous
+2024-01-31 Koi                      pair       cands=0 none      missed
+2024-02-06 Morning Tide             pair       cands=1 match     correct
+2024-02-06 Star Nasia               pair       cands=0 none      missed
+2024-02-12 Star Iris                pair       cands=1 ambiguous ambiguous
+2024-02-15 Lycavitos                pair       cands=1 ambiguous ambiguous
+2024-02-17 Pollux                   pair       cands=1 match     correct
+2024-02-19 Rubymar                  pair       cands=3 ambiguous ambiguous
+2024-02-19 Sea Champion             pair       cands=3 ambiguous ambiguous
+2024-02-19 Navis Fortuna            pair       cands=3 ambiguous ambiguous
+2024-02-20 MSC Silver               claim_only cands=3 ambiguous ambiguous
+2024-02-22 Islander                 pair       cands=1 match     correct
+2024-02-25 Torm Thor                pair       cands=1 match     correct
+2024-03-04 MSC Sky II               pair       cands=0 none      missed
+2024-03-06 True Confidence          pair       cands=2 ambiguous ambiguous
+2024-03-09 Propel Fortune           pair       cands=1 ambiguous ambiguous
+2024-03-12 Pinocchio                pair       cands=1 ambiguous ambiguous
+2024-04-07 Hope Island              pair       cands=2 ambiguous ambiguous
+2024-04-07 MSC Grace F              claim_only cands=0 none      correct-none
+2024-04-07 MSC Gina                 claim_only cands=0 none      correct-none
+2024-04-07 Hope Island              pair       cands=2 ambiguous ambiguous
+2024-04-10 Maersk Yorktown          claim_only cands=0 none      correct-none
+2024-04-10 MSC Gina                 claim_only cands=0 none      correct-none
+2024-04-10 MSC Darwin VI            claim_only cands=0 none      correct-none
+2024-04-24 MSC Veracruz             claim_only cands=0 none      correct-none
+2024-04-24 Maersk Yorktown          pair       cands=1 ambiguous ambiguous
+2024-04-25 MSC Darwin VI            pair       cands=1 ambiguous ambiguous
+2024-04-26 Andromeda Star           pair       cands=1 match     correct
+2024-04-29 MSC Orion                pair       cands=0 none      missed
+2024-04-30 Cyclades                 pair       cands=1 match     correct
+2024-05-29 Laax                     pair       cands=1 ambiguous ambiguous
+2024-05-29 Morea                    claim_only cands=1 ambiguous ambiguous
+2024-05-29 Sealady                  claim_only cands=1 ambiguous ambiguous
+2024-05-29 Alba                     claim_only cands=0 none      correct-none
+2024-05-29 Maersk Hartford          claim_only cands=0 none      correct-none
+2024-05-29 Minerva Antonia          claim_only cands=0 none      correct-none
+2024-06-09 Norderney                pair       cands=2 ambiguous ambiguous
+2024-06-09 MSC Tavvishi             pair       cands=1 match     correct
+2024-06-09 Norderney                pair       cands=2 ambiguous ambiguous
+2024-06-12 Tutor                    pair       cands=2 ambiguous ambiguous
+2024-06-13 Athina                   claim_only cands=2 ambiguous ambiguous
+2024-06-13 Verbena                  pair       cands=0 none      missed
+2024-06-13 Seaguardian              pair       cands=2 ambiguous ambiguous
+2024-06-22 Transworld Navigator     pair       cands=0 none      missed
+2024-06-23 Stolt Sequoia            claim_only cands=0 none      correct-none
+2024-06-23 Transworld Navigator     pair       cands=1 ambiguous ambiguous
+2024-06-25 MSC Sarah V              pair       cands=1 match     correct
+2024-06-28 Ioannis                  claim_only cands=2 ambiguous ambiguous
+2024-06-28 Waler                    claim_only cands=0 none      correct-none
+2024-06-28 Johannes Maersk          claim_only cands=0 none      correct-none
+2024-06-28 Delonix                  pair       cands=2 ambiguous ambiguous
+2024-07-09 Marathopolis             claim_only cands=1 ambiguous ambiguous
+2024-07-09 MSC Patnaree             claim_only cands=0 none      correct-none
+2024-07-09 Maersk Sentosa           pair       cands=1 ambiguous ambiguous
+2024-07-15 Olvia                    claim_only cands=0 none      correct-none
+2024-07-15 Bentley I                pair       cands=2 ambiguous ambiguous
+2024-07-15 Chios Lion               pair       cands=2 ambiguous ambiguous
+2024-07-19 Lobivia                  pair       cands=1 ambiguous ambiguous
+2024-08-04 Groton                   pair       cands=2 ambiguous ambiguous
+2024-08-04 Groton                   pair       cands=2 ambiguous ambiguous
+2024-08-22 Sounion                  pair       cands=2 ambiguous ambiguous
+2024-08-22 SW North Wind I          pair       cands=1 match     correct
+2024-08-31 Groton                   pair       cands=1 ambiguous ambiguous
+2024-09-02 Blue Lagoon I            pair       cands=2 ambiguous ambiguous
+2024-10-01 Marathopolis             claim_only cands=0 none      correct-none
+2024-10-01 Cordelia Moon            pair       cands=2 ambiguous ambiguous
+2024-10-10 St. John                 claim_only cands=0 none      correct-none
+2024-10-10 Olympic Spirit           pair       cands=1 match     correct
+2024-10-28 Maersk Kowloon           claim_only cands=0 none      correct-none
+2024-10-28 SC Montreal              claim_only cands=0 none      correct-none
+2024-10-28 Motaro                   pair       cands=0 none      missed
+2024-11-19 Anadolu S                pair       cands=1 ambiguous ambiguous
+2024-11-19 Anadolu S                pair       cands=1 ambiguous ambiguous
+2025-07-07 Magic Seas               pair       cands=1 match     correct
+2025-07-09 Eternity C               pair       cands=0 none      missed
+2025-09-01 Scarlet Ray              pair       cands=0 none      missed
+2025-09-02 MSC Aby                  claim_only cands=0 none      correct-none
+2025-10-01 Minervagracht            pair       cands=1 ambiguous ambiguous
+TALLY {'ambiguous': 42, 'missed': 9, 'correct': 11, 'correct-none': 19}
+no-incident claims 26 {'ambiguous': 7, 'correct-none': 19}
+RULE USABLE
 --- labels=strong rule=v2
 === v2 (attack-only): claims 81, UKMTO entries 91 (attacks 0)
 2024-01-16 Zografia                 pair       cands=0 none      missed
@@ -951,6 +1211,92 @@ TALLY {'missed': 55, 'correct-none': 26}
 no-incident claims 26 {'correct-none': 26}
 RULE USABLE
 --- labels=strong rule=v2+prose
+=== v2 (attack-only): claims 81, UKMTO entries 91 (attacks 0)
+2024-01-16 Zografia                 pair       cands=0 none      missed
+2024-01-17 Genco Picardy            pair       cands=0 none      missed
+2024-01-22 Ocean Jazz               claim_only cands=0 none      correct-none
+2024-01-26 Marlin Luanda            pair       cands=0 none      missed
+2024-01-31 Koi                      pair       cands=0 none      missed
+2024-02-06 Morning Tide             pair       cands=0 none      missed
+2024-02-06 Star Nasia               pair       cands=0 none      missed
+2024-02-12 Star Iris                pair       cands=0 none      missed
+2024-02-15 Lycavitos                pair       cands=0 none      missed
+2024-02-17 Pollux                   pair       cands=0 none      missed
+2024-02-19 Rubymar                  pair       cands=0 none      missed
+2024-02-19 Sea Champion             pair       cands=0 none      missed
+2024-02-19 Navis Fortuna            pair       cands=0 none      missed
+2024-02-20 MSC Silver               claim_only cands=0 none      correct-none
+2024-02-22 Islander                 pair       cands=0 none      missed
+2024-02-25 Torm Thor                pair       cands=0 none      missed
+2024-03-04 MSC Sky II               pair       cands=0 none      missed
+2024-03-06 True Confidence          pair       cands=0 none      missed
+2024-03-09 Propel Fortune           pair       cands=0 none      missed
+2024-03-12 Pinocchio                pair       cands=0 none      missed
+2024-04-07 Hope Island              pair       cands=0 none      missed
+2024-04-07 MSC Grace F              claim_only cands=0 none      correct-none
+2024-04-07 MSC Gina                 claim_only cands=0 none      correct-none
+2024-04-07 Hope Island              pair       cands=0 none      missed
+2024-04-10 Maersk Yorktown          claim_only cands=0 none      correct-none
+2024-04-10 MSC Gina                 claim_only cands=0 none      correct-none
+2024-04-10 MSC Darwin VI            claim_only cands=0 none      correct-none
+2024-04-24 MSC Veracruz             claim_only cands=0 none      correct-none
+2024-04-24 Maersk Yorktown          pair       cands=0 none      missed
+2024-04-25 MSC Darwin VI            pair       cands=0 none      missed
+2024-04-26 Andromeda Star           pair       cands=0 none      missed
+2024-04-29 MSC Orion                pair       cands=0 none      missed
+2024-04-30 Cyclades                 pair       cands=0 none      missed
+2024-05-29 Laax                     pair       cands=0 none      missed
+2024-05-29 Morea                    claim_only cands=0 none      correct-none
+2024-05-29 Sealady                  claim_only cands=0 none      correct-none
+2024-05-29 Alba                     claim_only cands=0 none      correct-none
+2024-05-29 Maersk Hartford          claim_only cands=0 none      correct-none
+2024-05-29 Minerva Antonia          claim_only cands=0 none      correct-none
+2024-06-09 Norderney                pair       cands=0 none      missed
+2024-06-09 MSC Tavvishi             pair       cands=0 none      missed
+2024-06-09 Norderney                pair       cands=0 none      missed
+2024-06-12 Tutor                    pair       cands=0 none      missed
+2024-06-13 Athina                   claim_only cands=0 none      correct-none
+2024-06-13 Verbena                  pair       cands=0 none      missed
+2024-06-13 Seaguardian              pair       cands=0 none      missed
+2024-06-22 Transworld Navigator     pair       cands=0 none      missed
+2024-06-23 Stolt Sequoia            claim_only cands=0 none      correct-none
+2024-06-23 Transworld Navigator     pair       cands=0 none      missed
+2024-06-25 MSC Sarah V              pair       cands=0 none      missed
+2024-06-28 Ioannis                  claim_only cands=0 none      correct-none
+2024-06-28 Waler                    claim_only cands=0 none      correct-none
+2024-06-28 Johannes Maersk          claim_only cands=0 none      correct-none
+2024-06-28 Delonix                  pair       cands=0 none      missed
+2024-07-09 Marathopolis             claim_only cands=0 none      correct-none
+2024-07-09 MSC Patnaree             claim_only cands=0 none      correct-none
+2024-07-09 Maersk Sentosa           pair       cands=0 none      missed
+2024-07-15 Olvia                    claim_only cands=0 none      correct-none
+2024-07-15 Bentley I                pair       cands=0 none      missed
+2024-07-15 Chios Lion               pair       cands=0 none      missed
+2024-07-19 Lobivia                  pair       cands=0 none      missed
+2024-08-04 Groton                   pair       cands=0 none      missed
+2024-08-04 Groton                   pair       cands=0 none      missed
+2024-08-22 Sounion                  pair       cands=0 none      missed
+2024-08-22 SW North Wind I          pair       cands=0 none      missed
+2024-08-31 Groton                   pair       cands=0 none      missed
+2024-09-02 Blue Lagoon I            pair       cands=0 none      missed
+2024-10-01 Marathopolis             claim_only cands=0 none      correct-none
+2024-10-01 Cordelia Moon            pair       cands=0 none      missed
+2024-10-10 St. John                 claim_only cands=0 none      correct-none
+2024-10-10 Olympic Spirit           pair       cands=0 none      missed
+2024-10-28 Maersk Kowloon           claim_only cands=0 none      correct-none
+2024-10-28 SC Montreal              claim_only cands=0 none      correct-none
+2024-10-28 Motaro                   pair       cands=0 none      missed
+2024-11-19 Anadolu S                pair       cands=0 none      missed
+2024-11-19 Anadolu S                pair       cands=0 none      missed
+2025-07-07 Magic Seas               pair       cands=0 none      missed
+2025-07-09 Eternity C               pair       cands=0 none      missed
+2025-09-01 Scarlet Ray              pair       cands=0 none      missed
+2025-09-02 MSC Aby                  claim_only cands=0 none      correct-none
+2025-10-01 Minervagracht            pair       cands=0 none      missed
+TALLY {'missed': 55, 'correct-none': 26}
+no-incident claims 26 {'correct-none': 26}
+RULE USABLE
+--- labels=strong rule=v2+v3c(name or positive type)
 === v2 (attack-only): claims 81, UKMTO entries 91 (attacks 0)
 2024-01-16 Zografia                 pair       cands=0 none      missed
 2024-01-17 Genco Picardy            pair       cands=0 none      missed

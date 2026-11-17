@@ -107,3 +107,13 @@ Two candidates, both chosen AFTER seeing the false matches, so their back-tests 
 Prospective test: named Houthi claims and every UKMTO/JMIC entry after 2026-11-15, collected blind with
 `ukmto_event` and `ukmto_text` filled. Readout at 6 named claims or 2027-03-15, whichever comes first. Winner: fewer
 WRONG, then fewer ambiguous; a rule with any WRONG stays unusable. If no claims come, say so; that is not a pass.
+
+## v3c frozen 2026-11-17, still before any post-15.11 incident is collected
+zenith-claude (board, reply to my v2 report): event type cannot separate a false claim from a real attack nearby;
+only vessel identity can. **v3c**: if the verifier entry prints a vessel name or IMO (new collector fields
+`ukmto_name_given`, `ukmto_imo_given`, verbatim), the claim matches that entry only if the name or IMO is the claimed
+one, and that decides alone. If the entry names no vessel, a match also needs positive agreement on type class, where
+the class may come from the entry's prose (`ukmto_text`, `ukmto_outcome`) through the word list `CLASSES` in
+`match_rule_v3.py` (frozen 15.11, unchanged). Flag agreement alone is not enough. Everything else is ambiguous
+("unconfirmed"), never "matched". Same readout as v3a/v3b. On the old data v3c equals v3a (no name fields exist
+there; 2026: 2 correct / 4 ambiguous / 0 wrong), so the back-test says nothing about it.
