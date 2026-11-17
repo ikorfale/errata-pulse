@@ -341,7 +341,7 @@ def signals_html(sig, per_family=None, heading=3):
 
 # ---------- page shell ----------
 # Links that stay at the site root in every language: data files, images, fonts, the analytics script.
-SHARED = re.compile(r'(href|src)="/(?!(?:en|ru|uk)/|assets/|og/|og\.png|favicon|history\.jsonl|signals\.json|claims\.jsonl|badge[^/]*\.svg|_vercel|mobilization/history\.jsonl|telegram/latest\.json|drones/data\.json|forecasts\.json|api/)')
+SHARED = re.compile(r'(href|src)="/(?!(?:en|ru|uk)/|assets/|og/|og\.png|favicon|history\.jsonl|signals\.json|claims\.jsonl|badge[^/]*\.svg|_vercel|mobilization/history\.jsonl|telegram/latest\.json|drones/data\.json|forecasts\.json|api/|data/outages/)')
 PAGES = {}   # path -> lastmod, for the sitemap (every path exists in every language)
 def page(path, title, desc, body, typ='WebPage', extra_ld=None, image='/og.png', active='', lastmod=None):
     """Write one page of the current language to site/<lang><path>; internal links get the language prefix."""
@@ -353,7 +353,7 @@ def page(path, title, desc, body, typ='WebPage', extra_ld=None, image='/og.png',
     ld = dict(ld, inLanguage=L)
     if ld.get('url', '').startswith(BASE) and not ld['url'].startswith(BASE + '/' + L + '/'): ld['url'] = BASE + i18n.lpath(ld['url'][len(BASE):])
     nav = ''.join(f'<a href="{h}"{" aria-current=page" if active == k else ""}>{t(n)}</a>' for k, h, n in
-                  [('home', '/', 'Index'), ('signals', '/signals/', 'Signals'), ('mobil', '/mobilization/', 'Mobilisation'), ('forecasts', '/forecasts/', 'Forecasts'), ('telegram', '/telegram/', 'Telegram'), ('alerts', '/alerts/', 'Alerts'), ('drones', '/drones/', 'Drones'), ('mood', '/mood/', 'Mood'), ('archive', '/archive/', 'Archive'), ('howto', '/how-to-read/', 'How to read'), ('method', '/methodology/', 'Methodology')])
+                  [('home', '/', 'Index'), ('signals', '/signals/', 'Signals'), ('mobil', '/mobilization/', 'Mobilisation'), ('forecasts', '/forecasts/', 'Forecasts'), ('telegram', '/telegram/', 'Telegram'), ('alerts', '/alerts/', 'Alerts'), ('outages', '/outages/', 'Outages'), ('drones', '/drones/', 'Drones'), ('mood', '/mood/', 'Mood'), ('archive', '/archive/', 'Archive'), ('howto', '/how-to-read/', 'How to read'), ('method', '/methodology/', 'Methodology')])
     alts = ''.join(f'<link rel="alternate" hreflang="{l}" href="{BASE}{i18n.lpath(path, l)}">' for l in i18n.LANGS) + f'<link rel="alternate" hreflang="x-default" href="{BASE}{"/" if path == "/" else i18n.lpath(path, "en")}">'
     langs = '<div class="langs" role="navigation" aria-label="' + t('Language') + '">' + ''.join(
         (f'<span aria-current="true" lang="{l}" title="{i18n.NATIVE[l]}">{i18n.LABEL[l]}</span>' if l == L else f'<a href="{i18n.lpath(path, l)}" hreflang="{l}" lang="{l}" title="{i18n.NATIVE[l]}" data-lang="{l}">{i18n.LABEL[l]}</a>')
@@ -467,8 +467,9 @@ location.replace('/'+c+'/'+location.search+location.hash)}})()</script><noscript
     # IndexNow: the key is public by design (same key as errata.page); the file must sit on this host for submissions
     if os.path.exists(os.path.join(ROOT, 'indexnow.key')):
         k = open(os.path.join(ROOT, 'indexnow.key')).read().strip(); open(os.path.join(OUT, k + '.txt'), 'w').write(k)
-    old = ['signals', 'reports', 'archive', 'methodology', 'how-to-read', 'telegram', 'mobilization', 'forecasts', 'claims', 'alerts', 'corrections', 'drones', 'mood']   # pre-language URLs, still linked from posts
+    old = ['signals', 'reports', 'archive', 'methodology', 'how-to-read', 'telegram', 'mobilization', 'forecasts', 'claims', 'alerts', 'corrections', 'drones', 'mood', 'outages']   # pre-language URLs, still linked from posts
     redirects = [{"source": f"/{o}", "destination": f"/en/{o}/", "permanent": True} for o in old] + [{"source": f"/{o}/:rest(.*)", "destination": f"/en/{o}/:rest", "permanent": True} for o in old]
+    redirects = [{"source": "/(.*)", "has": [{"type": "host", "value": "outages.errata.page"}], "destination": "https://pulse.errata.page/ru/outages/", "permanent": False}] + redirects   # 17.11 alias
     redirects = [r for r in redirects if r['source'] not in ('/telegram/:rest(.*)', '/mobilization/:rest(.*)', '/drones/:rest(.*)')] + [
         {"source": "/drones/:rest((?!data\\.json).*)", "destination": "/en/drones/:rest", "permanent": True},   # 05.11: bare /drones/ was a 404
         {"source": "/telegram/:rest((?!latest\\.json).*)", "destination": "/en/telegram/:rest", "permanent": True},
@@ -561,6 +562,7 @@ def build_lang(hist):
     import build_drones; build_drones.main()
     import build_alerts; build_alerts.main()
     import build_mood; build_mood.main()
+    import build_outages; build_outages.main()
 
 def toc_html(toc):
     return ('<nav class="toc" aria-label="' + t('Contents') + '"><strong>' + t('Contents') + '</strong><ol>' + ''.join(f'<li><a href="#{i}">{inline(x)}</a></li>' for i, x in toc) + '</ol></nav>') if toc else ''
