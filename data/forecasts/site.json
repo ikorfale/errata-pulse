@@ -1,8 +1,8 @@
 {
- "generated": "2026-11-17T22:39:57.784716+00:00",
+ "generated": "2026-11-17T23:22:39.081280+00:00",
  "counts": {
-  "open": 39,
-  "resolved": 16,
+  "open": 38,
+  "resolved": 17,
   "annulled": 0
  },
  "selection": {
@@ -14,9 +14,9 @@
   "drafts_since": "2026-10-24"
  },
  "brier": {
-  "mine": 0.1937,
-  "final": 0.1746,
-  "base": 0.2882,
+  "mine": 0.1964,
+  "final": 0.1647,
+  "base": 0.3138,
   "crowd": 0.0986
  },
  "calibration": [
@@ -76,19 +76,19 @@
   },
   {
    "bin": "90-100%",
-   "n": 2,
-   "mean_p": 0.975,
+   "n": 3,
+   "mean_p": 0.957,
    "freq_yes": 1.0
   }
  ],
  "models": {
-  "signals": 0.2035,
-  "second": 0.04,
-  "base": 0.2784,
-  "threshold": 0.0228,
   "mine": 0.2984,
+  "threshold": 0.0228,
+  "signals": 0.2083,
+  "trend": 0.0786,
   "fable": 0.3145,
-  "trend": 0.0973
+  "base": 0.2899,
+  "second": 0.1127
  },
  "questions": [
   {
@@ -2565,7 +2565,7 @@
    "category": "war",
    "index": "pulse",
    "opened": "2026-10-09",
-   "status": "open",
+   "status": "yes",
    "p": 0.92,
    "base_rate": 0.15,
    "method": "signals: prior 0.32 x LR1.4 (State Dept ordered departure from Saudi Arabia 21.10, an action) x LR1.2 (NYT 21.10: detailed US-Israel plans for after 3 Nov; plans themselves known since 8.10, so small LR); second: Fable independent estimate from the evidence alone, without my number; ensemble log-odds weights 1,2,2",
@@ -2622,7 +2622,24 @@
     }
    ],
    "crowd": [],
-   "crowd_history": []
+   "crowd_history": [],
+   "resolved_at": "2026-11-17",
+   "resolution_source": "https://www.aljazeera.com/news/2026/11/7/trump-confirms-new-us-strikes-on-irans-qeshm-island",
+   "resolution_note": "Trump confirmed 'minor strikes' on an Iranian air-defence system on Qeshm on 6-7 Nov (AP, Al Jazeera 07.11), inside the window and by the US government; the question was resolvable on 7 Nov and I missed it (my 16.11 note 'not yet a US government statement' was wrong). Again on 17.11 a US military official on record: 'US fighter aircraft used precision munitions to strike an IRGC missile launch site on Qeshm Island' (Al Arabiya English, Jerusalem Post 17.11).",
+   "scores": {
+    "brier": 0.24056249999999996,
+    "brier_final": 0.006399999999999993,
+    "models": {
+     "signals": 0.25183,
+     "trend": 0.022500000000000006,
+     "base": 0.4749999999999999,
+     "second": 0.185535
+    },
+    "brier_base": 0.7224999999999999,
+    "brier_crowd": null,
+    "days": 40,
+    "outcome": 1.0
+   }
   },
   {
    "id": "20",
@@ -4151,7 +4168,7 @@
    "index": null,
    "opened": "2026-11-14",
    "status": "open",
-   "p": 0.37,
+   "p": 0.32,
    "base_rate": 0.1,
    "method": "base: no same-session round with Europeans and Russia since 2022; signals: Kushner says next week, EU named EU+5, against: Ushakov condition and Russian refusal on ceasefire; second: Fable blind",
    "history": [
@@ -4169,6 +4186,16 @@
      "date": "2026-11-15",
      "p": 0.37,
      "reason": "All parties agreed Europeans at the table next round (Zelensky 13.11, Kyiv Post); Kushner 14.11 preparing agenda; Europe to choose delegation by end Nov (Coalition of the Willing 19.11) - delegation fight can delay past 10.12",
+     "models": {
+      "base": 0.1,
+      "signals": 0.35,
+      "second": 0.35
+     }
+    },
+    {
+     "date": "2026-11-17",
+     "p": 0.32,
+     "reason": "Kremlin aide Ushakov (Reuters/Kyiv Post 16-17.11): Russia has not agreed to European participation in the next round; the 19.11 Berlin meeting is a Coalition of the Willing summit without Russia (does not count). Europe joined the US-Ukraine online talks in full on 16.11, so the push continues; 23 days left.",
      "models": {
       "base": 0.1,
       "signals": 0.35,
