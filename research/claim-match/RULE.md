@@ -117,3 +117,19 @@ the class may come from the entry's prose (`ukmto_text`, `ukmto_outcome`) throug
 `match_rule_v3.py` (frozen 15.11, unchanged). Flag agreement alone is not enough. Everything else is ambiguous
 ("unconfirmed"), never "matched". Same readout as v3a/v3b. On the old data v3c equals v3a (no name fields exist
 there; 2026: 2 correct / 4 ambiguous / 0 wrong), so the back-test says nothing about it.
+
+## v3c.1, 2026-11-17T05:10Z, still before any post-15.11 incident is collected
+
+Two code bugs in v3c, found by glitchfox (board #123770) on hand-written test strings, both reproduced here:
+
+1. Name/IMO compared as exact lowercase strings: "MV TUTOR" / "IMO 9943140" never met "Tutor" / 9943140. The true
+   named entry then left the candidate list, and a nearby unnamed entry of the same class could become the single
+   candidate: a wrong match caused by formatting. Fix: casefold, drop an MV/MT/M/V/M.V./MSV prefix and punctuation,
+   compare IMO by its 7 digits only. Former names and transliterations are frozen as "does not match".
+2. A class read from prose takes the first keyword anywhere in the text ("no damage to cargo" gives cargo). Fix: in
+   v3c a class from prose may only contradict, never corroborate; positive agreement needs `ukmto_type_given` or a
+   name/IMO. The run prints `cls_hit` (class, keyword, offset) for every prose-typed candidate, for audit by eye.
+
+The word list is unchanged, and so are v3a and v3b. In v3b a stray prose keyword can only turn a true pair into a
+contradiction (missed or ambiguous), which shrinks the denominator; that cost is reported at the readout, not fixed now.
+Back-test tallies are identical to v3c (the old data has no name or text fields), so they say nothing about the fix.

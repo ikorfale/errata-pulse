@@ -45,13 +45,45 @@ def cls(t):
     return None
 
 
+import re
+_PFX = re.compile(r'^(m\.?\s*/?\s*[vt]\.?|mv|mt|msv)\s+')
+
+
+def norm_name(x):
+    # v3c.1 (2026-11-17, before any post-15.11 incident; bug found by glitchfox #123770): casefold, drop MV/MT/M/V/M.V./MSV
+    # prefix and punctuation. Former names and transliterations are NOT matched (frozen as "does not match").
+    t = str(x).casefold().strip()
+    t = _PFX.sub('', t)
+    return re.sub(r'[^0-9a-z\u0400-\u04ff]+', ' ', t).strip()
+
+
+def norm_imo(x):
+    dg = re.sub(r'\D', '', str(x))
+    return 'imo:' + dg if len(dg) == 7 else None
+
+
 def name_given(e):
-    # v3c only: vessel name / IMO exactly as the verifier entry prints it (fields filled by the post-15.11 collector)
-    return {x.strip().lower() for x in (e.get('ukmto_name_given'), e.get('ukmto_imo_given')) if x}
+    # v3c: vessel name / IMO as the verifier entry prints it (fields filled by the post-15.11 collector), normalised (v3c.1)
+    out = set()
+    if e.get('ukmto_name_given'): out.add('name:' + norm_name(e['ukmto_name_given']))
+    if e.get('ukmto_imo_given') and norm_imo(e['ukmto_imo_given']): out.add(norm_imo(e['ukmto_imo_given']))
+    return out
 
 
 def ident(c):
-    return {str(x).strip().lower() for x in (c.get('ship'), c.get('imo')) if x}
+    out = set()
+    if c.get('ship'): out.add('name:' + norm_name(c['ship']))
+    if c.get('imo') and norm_imo(c['imo']): out.add(norm_imo(c['imo']))
+    return out
+
+
+def cls_hit(t):
+    # which keyword fired and at what offset, so every prose class at the readout can be audited by eye (v3c.1)
+    t = (t or '').lower()
+    for k, c in CLASSES:
+        i = t.find(k)
+        if i >= 0: return (c, k, i)
+    return None
 
 
 def area_ok(claim_area, e_area):
@@ -94,7 +126,9 @@ def main(v2, pos=False, strong=False, prose=False, zen=False):
         for j in out:
             e = entries[j]; et = etype(e, prose); ef = e.get('ukmto_flag_given'); cf = c.get('flag')
             posok[(i, j)] = bool((ct and et and ct == et) or (ef and cf and ef.lower() == cf.lower()))
-            if zen: posok[(i, j)] = bool(name_given(e) & ident(c)) or bool(ct and et and ct == et)  # flag alone is not enough
+            if zen:  # flag alone is not enough; v3c.1: a class read from prose may only contradict, never corroborate
+                tg = cls(e.get('ukmto_type_given'))
+                posok[(i, j)] = bool(name_given(e) & ident(c)) or bool(ct and tg and ct == tg)
     claimed_by = collections.Counter(j for js in cand.values() for j in js)
     tally = collections.Counter(); lines = []
     for i, c in enumerate(claims):
@@ -108,6 +142,10 @@ def main(v2, pos=False, strong=False, prose=False, zen=False):
         else: score = 'ambiguous'
         tally[score] += 1
         lines.append(f"{c['claim_date']} {c.get('ship')!s:<24} {c.get('kind'):<10} cands={len(js)} {verdict:<9} {score}")
+        if zen and prose:
+            for jj in js:
+                ee = entries[jj]
+                if not ee.get('ukmto_type_given') and ee.get('ukmto_text'): lines[-1] += f" cls_hit[{jj}]={cls_hit((ee.get('ukmto_text') or '') + ' ' + (ee.get('ukmto_outcome') or ''))}"
     print(f"=== {'v2 (attack-only)' if v2 else 'v1 (frozen 18.10)'}: claims {len(claims)}, UKMTO entries {len(entries)} (attacks {sum(e.get('ukmto_event') == 'attack' for e in entries)})")
     print('\n'.join(lines))
     print('TALLY', dict(tally))
@@ -121,4 +159,4 @@ if __name__ == '__main__':
     for strong in (False, True):
         for v2 in (False, True):
             for pos, prose, zen in ((False, False, False), (True, False, False), (False, True, False), (False, True, True)):
-                print('--- labels=%s rule=%s%s' % ('strong' if strong else 'all', 'v2' if v2 else 'v1', '+v3c(name or positive type)' if zen else '+positive' if pos else '+prose' if prose else '')); main(v2, pos, strong, prose, zen)
+                print('--- labels=%s rule=%s%s' % ('strong' if strong else 'all', 'v2' if v2 else 'v1', '+v3c.1(name/IMO normalised, or positive type from ukmto_type_given only)' if zen else '+positive' if pos else '+prose' if prose else '')); main(v2, pos, strong, prose, zen)
