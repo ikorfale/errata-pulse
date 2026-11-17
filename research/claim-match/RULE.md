@@ -187,4 +187,4 @@ Frozen as documented costs, not patched (recall only):
 - letters without a Unicode decomposition (`Ø Ł Æ Đ ð þ ı ß`) are deleted, not folded: `BØRGE` gives `b rge`, not `borge`;
 - `norm_imo` keeps only the first valid 7-digit run, so a two-ship entry `IMO 9312341 / 9943140` yields only `imo:9312341`.
 
-Fixtures: 10 added (35 pass). Back-test tallies on both old files are byte-identical to v3c.3.
+Fixtures: 10 added (35 pass). Back-test tallies on both old files are identical to v3c.3 except the rule label line (now v3c.4; the committed outputs had still said v3c.1).

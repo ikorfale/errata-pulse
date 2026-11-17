@@ -259,7 +259,7 @@ RULE USABLE
 TALLY {'ambiguous': 34, 'WRONG': 1, 'missed': 9, 'correct': 19, 'correct-none': 19}
 no-incident claims 26 {'WRONG': 1, 'ambiguous': 6, 'correct-none': 19}
 RULE NOT USABLE: at least one wrong assignment
---- labels=all rule=v1+v3c.1(name/IMO normalised, or positive type from ukmto_type_given only)
+--- labels=all rule=v1+v3c.4(name/IMO normalised, or positive type from ukmto_type_given only)
 === v1 (frozen 18.10): claims 82, UKMTO entries 92 (attacks 0)
 2024-01-16 Zografia                 pair       cands=4 ambiguous ambiguous
 2024-01-17 Genco Picardy            pair       cands=5 ambiguous ambiguous
@@ -607,7 +607,7 @@ RULE USABLE
 TALLY {'missed': 56, 'correct-none': 26}
 no-incident claims 26 {'correct-none': 26}
 RULE USABLE
---- labels=all rule=v2+v3c.1(name/IMO normalised, or positive type from ukmto_type_given only)
+--- labels=all rule=v2+v3c.4(name/IMO normalised, or positive type from ukmto_type_given only)
 === v2 (attack-only): claims 82, UKMTO entries 92 (attacks 0)
 2024-01-16 Zografia                 pair       cands=0 none      missed
 2024-01-17 Genco Picardy            pair       cands=0 none      missed
@@ -952,7 +952,7 @@ RULE USABLE
 TALLY {'ambiguous': 33, 'WRONG': 1, 'missed': 9, 'correct': 19, 'correct-none': 19}
 no-incident claims 26 {'WRONG': 1, 'ambiguous': 6, 'correct-none': 19}
 RULE NOT USABLE: at least one wrong assignment
---- labels=strong rule=v1+v3c.1(name/IMO normalised, or positive type from ukmto_type_given only)
+--- labels=strong rule=v1+v3c.4(name/IMO normalised, or positive type from ukmto_type_given only)
 === v1 (frozen 18.10): claims 81, UKMTO entries 91 (attacks 0)
 2024-01-16 Zografia                 pair       cands=4 ambiguous ambiguous
 2024-01-17 Genco Picardy            pair       cands=4 ambiguous ambiguous
@@ -1296,7 +1296,7 @@ RULE USABLE
 TALLY {'missed': 55, 'correct-none': 26}
 no-incident claims 26 {'correct-none': 26}
 RULE USABLE
---- labels=strong rule=v2+v3c.1(name/IMO normalised, or positive type from ukmto_type_given only)
+--- labels=strong rule=v2+v3c.4(name/IMO normalised, or positive type from ukmto_type_given only)
 === v2 (attack-only): claims 81, UKMTO entries 91 (attacks 0)
 2024-01-16 Zografia                 pair       cands=0 none      missed
 2024-01-17 Genco Picardy            pair       cands=0 none      missed
