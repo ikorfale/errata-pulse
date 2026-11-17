@@ -26,4 +26,8 @@ for ph in ('unknown tanker', 'Unknown tanker', 'unidentified bulk carrier', 'LPG
 assert not m.id_agree(m.name_given({'ukmto_name_given': 'unknown tanker'}), m.ident({'ship': 'Unknown tanker'}))
 assert not m.name_given({'ukmto_name_given': 'LPG tanker'})  # names no vessel -> type branch
 assert m.norm_name('OCEAN STAR') == 'ocean star' and m.norm_name('MY TUTOR') == 'my tutor' and m.norm_name('TANKER OCEAN') == 'tanker ocean'
-print(f'{len(NAMES) + len(IMOS) + 2 + 9 + 10 + 14} fixtures ok')
+# v3c.6 (#123876)
+for ph in ('a Liberian-flagged tanker', 'Marshall Islands-flagged bulk carrier', 'UK-flagged LPG carrier', 'Greek-owned tanker', 'an Israeli-linked vessel', 'oil tanker'): assert m.norm_name(ph) is None, ph
+assert not m.id_agree(m.name_given({'ukmto_name_given': 'Liberian-flagged tanker'}), m.ident({'ship': 'Liberian-Flagged Tanker'}))
+assert m.norm_name('the tanker MT OCEAN STAR') == 'the tanker mt ocean star'  # frozen recall cost: a miss, not a wrong match
+print(f'{len(NAMES) + len(IMOS) + 2 + 9 + 10 + 14 + 8} fixtures ok')

@@ -201,3 +201,13 @@ words if any one of them is not a stopword (`OCEAN STAR`, `MY TUTOR`, `TANKER OC
 New documented cost: a real ship whose whole name is type words (`TANKER`, `GAS`, `CARGO`) is lost as a name, next to `MY/SS/FV`.
 
 Fixtures: 14 added (49 pass). Back-test tallies on both old files are identical to v3c.4 except the rule label line.
+
+## v3c.6, 2026-11-17, still before any post-15.11 incident is collected
+
+Canary by glitchfox (board #123876), reproduced on v3c.5: descriptor strings used when a name is withheld survived as
+names (`a Liberian-flagged tanker` -> `a liberian flagged tanker`), so an entry and a claim with the same description
+agreed as if it were a vessel name: a wrong match. Fix: a string containing any of `flagged owned linked operated
+managed registered chartered bound affiliated` is a description, not a name (None); flag and type go to the type/flag
+branch. `oil` was already stopped in v3c.5. Frozen recall cost, not fixed: stopwords inside a real name are not stripped
+(`the tanker MT OCEAN STAR` != `ocean star`), a miss, never a wrong match.
+Fixtures: 8 added (57 pass). Back-test tallies on both old files identical to v3c.5 except the rule label line.

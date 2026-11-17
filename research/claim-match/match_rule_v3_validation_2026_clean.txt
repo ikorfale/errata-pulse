@@ -31,7 +31,7 @@ RULE USABLE
 TALLY {'ambiguous': 2, 'correct': 3, 'WRONG': 1}
 no-incident claims 2 {'ambiguous': 1, 'WRONG': 1}
 RULE NOT USABLE: at least one wrong assignment
---- labels=all rule=v1+v3c.5(name/IMO normalised, or positive type from ukmto_type_given only)
+--- labels=all rule=v1+v3c.6(name/IMO normalised, or positive type from ukmto_type_given only)
 === v1 (frozen 18.10): claims 6, UKMTO entries 31 (attacks 14)
 2026-07-22 Encelia                  pair       cands=1 ambiguous ambiguous
 2026-07-22 Layla                    claim_only cands=1 ambiguous ambiguous
@@ -75,7 +75,7 @@ RULE USABLE
 TALLY {'ambiguous': 2, 'missed': 1, 'correct': 2, 'WRONG': 1}
 no-incident claims 2 {'ambiguous': 1, 'WRONG': 1}
 RULE NOT USABLE: at least one wrong assignment
---- labels=all rule=v2+v3c.5(name/IMO normalised, or positive type from ukmto_type_given only)
+--- labels=all rule=v2+v3c.6(name/IMO normalised, or positive type from ukmto_type_given only)
 === v2 (attack-only): claims 6, UKMTO entries 31 (attacks 14)
 2026-07-22 Encelia                  pair       cands=1 ambiguous ambiguous
 2026-07-22 Layla                    claim_only cands=1 ambiguous ambiguous
@@ -116,7 +116,7 @@ RULE USABLE
 TALLY {'ambiguous': 2, 'correct': 2, 'WRONG': 1}
 no-incident claims 2 {'ambiguous': 1, 'WRONG': 1}
 RULE NOT USABLE: at least one wrong assignment
---- labels=strong rule=v1+v3c.5(name/IMO normalised, or positive type from ukmto_type_given only)
+--- labels=strong rule=v1+v3c.6(name/IMO normalised, or positive type from ukmto_type_given only)
 === v1 (frozen 18.10): claims 5, UKMTO entries 30 (attacks 14)
 2026-07-22 Encelia                  pair       cands=1 ambiguous ambiguous
 2026-07-22 Layla                    claim_only cands=1 ambiguous ambiguous
@@ -156,7 +156,7 @@ RULE USABLE
 TALLY {'ambiguous': 2, 'correct': 2, 'WRONG': 1}
 no-incident claims 2 {'ambiguous': 1, 'WRONG': 1}
 RULE NOT USABLE: at least one wrong assignment
---- labels=strong rule=v2+v3c.5(name/IMO normalised, or positive type from ukmto_type_given only)
+--- labels=strong rule=v2+v3c.6(name/IMO normalised, or positive type from ukmto_type_given only)
 === v2 (attack-only): claims 5, UKMTO entries 30 (attacks 14)
 2026-07-22 Encelia                  pair       cands=1 ambiguous ambiguous
 2026-07-22 Layla                    claim_only cands=1 ambiguous ambiguous
