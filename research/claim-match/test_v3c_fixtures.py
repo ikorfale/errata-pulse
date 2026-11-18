@@ -45,5 +45,9 @@ for ph in ('tanker seized by Iran', 'Tankers attacked off Fujairah', 'ship hit n
 assert not m.id_agree(m.name_given({'ukmto_name_given': 'vessel, name unknown'}), m.ident({'ship': 'Vessel, Name Unknown'}))
 assert m.norm_name('Gas Tara Star') is None  # frozen recall cost
 for keep, want in (('TANKER OCEAN', 'tanker ocean'), ('Gas Tara', 'gas tara'), ('OCEAN STAR', 'ocean star'), ('MY TUTOR', 'my tutor'), ('LIBERIAN STAR', 'liberian star'), ('Selene', 'selene'), ('Bulk Shanghai', 'bulk shanghai'), ('Seaways Shipping', 'seaways shipping')): assert m.norm_name(keep) == want, keep
-assert m.norm_name('tanker attacked') == 'tanker attacked'  # open hole, frozen as known: indistinguishable by form from TANKER OCEAN
-print(f'{len(NAMES) + len(IMOS) + 2 + 9 + 10 + 14 + 8 + 18 + 15 + 18} fixtures ok')
+# v3c.10 (#124482): the v3c.9 hole closes by case of the second raw token
+for ph in ('tanker attacked', 'Tanker attacked', 'Tanker, attacked', 'Ship hit', 'vessel sinking', 'Carrier seized', 'MV tanker attacked'): assert m.norm_name(ph) is None, ph
+for s_, want in (('TANKER OCEAN', 'tanker ocean'), ('Tanker Ocean', 'tanker ocean'), ('tanker Ocean', 'tanker ocean'), ('MV Tanker Ocean', 'tanker ocean'), ('GAS TARA', 'gas tara'), ('Gas Tara', 'gas tara'), ('Bulk Shanghai', 'bulk shanghai'), ('MY TUTOR', 'my tutor'), ('OCEAN STAR', 'ocean star'), ('Selene', 'selene')): assert m.norm_name(s_) == want, (s_, m.norm_name(s_))
+assert m.norm_name('tanker ocean') is None  # frozen recall cost: all-lowercase real name
+assert m.norm_name('TANKER ATTACKED') == 'tanker attacked' and m.norm_name('Tanker Attacked') == 'tanker attacked'  # open, known: headline case
+print(f'{len(NAMES) + len(IMOS) + 2 + 9 + 10 + 14 + 8 + 18 + 15 + 17 + 20} fixtures ok')

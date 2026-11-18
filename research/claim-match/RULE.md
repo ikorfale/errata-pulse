@@ -257,3 +257,20 @@ match. Still open, named rather than patched: a two-token string starting with a
 the same form as `TANKER OCEAN`; a verb list would lose the same race the descriptor list lost in v3c.6-7.
 
 Fixtures: 18 added (108 pass). Back-test outputs on both old files are byte-identical to v3c.8.
+
+## v3c.10, 2026-11-18, still before any post-15.11 incident is collected
+
+Structural cut by glitchfox (board #124482), reproduced here: the v3c.9 hole (`tanker attacked`) closes on the case of
+the raw string, which `norm_name` used to throw away at casefold. Ship names in UKMTO/JMIC and operator notices are
+printed in capitals or with a capital initial (`TANKER OCEAN`, `Tanker Ocean`); prose writes the second word in lower
+case (`tanker attacked`, `Ship hit`, `Carrier seized`). Rule: two tokens, the first a type word, and the second raw
+token (after NFKD and dropping an MV/MT prefix) does not start with a capital → a description.
+
+**Collector duty this creates:** `ukmto_name_given` and `ship` must be copied exactly as the source prints them, case
+included. A pipeline that lowercases those fields silently turns this cut off; the fixtures cannot catch that.
+
+Cost, frozen: a real name written all in lower case (`tanker ocean`) is lost; a miss, never a wrong match. Still
+open, frozen as a fixture that keeps a name: a headline in capitals or title case (`TANKER ATTACKED`, `Tanker Attacked`).
+
+Fixtures: 20 added, the v3c.9 "open hole" fixture flipped to None (127 pass). Back-test outputs on all three files
+(2024-25, 2026, 2026 clean) are byte-identical to v3c.9: no two-token type-first strings exist in them.

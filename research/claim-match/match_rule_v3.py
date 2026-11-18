@@ -90,6 +90,19 @@ def norm_name(x):
     # Still open, by design: two tokens starting with a type word ('tanker attacked') look exactly like 'TANKER OCEAN'.
     if (len(w) >= 3 and w[0] in TYPE_ANY) or (len(w) == 1 and w[0] in TYPE_ANY | WITHHELD) or any(x in NOT_A_NAME for x in w):
         return None
+    # v3c.10 (2026-11-18, before any post-15.11 incident; structural cut by glitchfox #124482): two tokens starting with a
+    # type word. Ship names in UKMTO/JMIC and operator notices are written in capitals or with a capital initial
+    # ('TANKER OCEAN', 'Tanker Ocean'); prose writes the second word in lower case ('tanker attacked', 'Ship hit'). The
+    # case lives only in the verbatim field (RULE.md: ukmto_name_given / ship are kept as the source prints them), so it is
+    # read from the raw string before casefold. Costs, frozen: an all-lowercase real name ('tanker ocean') is lost, a miss.
+    # Still open, by design: a headline in capitals or title case ('TANKER ATTACKED', 'Tanker Attacked') keeps a name.
+    if len(w) == 2 and w[0] in TYPE_ANY:
+        r = unicodedata.normalize('NFKD', str(x))
+        r = ''.join(ch for ch in r if not unicodedata.combining(ch)).strip()
+        r = re.sub(r'^(m\.?\s*/?\s*[vt]\.?|mv|mt|msv)\s+', '', r, flags=re.I)
+        rw = re.sub(r'[^0-9A-Za-z\u0400-\u04ff]+', ' ', r).split()
+        if len(rw) == 2 and not rw[1][:1].isupper():
+            return None
     return t
 
 
