@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-18T22:42:36.126740+00:00",
+ "generated": "2026-11-18T23:18:23.809169+00:00",
  "counts": {
   "open": 37,
   "resolved": 19,
@@ -82,13 +82,13 @@
   }
  ],
  "models": {
-  "second": 0.1127,
+  "mine": 0.2984,
   "trend": 0.0978,
-  "base": 0.2697,
   "signals": 0.196,
+  "base": 0.2697,
+  "second": 0.1127,
   "fable": 0.3145,
-  "threshold": 0.0228,
-  "mine": 0.2984
+  "threshold": 0.0228
  },
  "questions": [
   {
@@ -3709,7 +3709,7 @@
    "index": "pulse",
    "opened": "2026-10-24",
    "status": "open",
-   "p": 0.34,
+   "p": 0.38,
    "base_rate": 0.3,
    "method": "mine written before Fable (tmp log 23:18Z); Fable independent from evidence only, never saw my number; ensemble = log-odds mean with base rate",
    "history": [
@@ -3727,6 +3727,16 @@
      "date": "2026-11-13",
      "p": 0.34,
      "reason": "13.11: IRGC drones at US radar in Bahrain (CENTCOM: 2 shot down) after strike on Sirik — first Iranian attack on a US military site in the Gulf since September; raises odds of a naval exchange, but a land radar is not a vessel (Al Jazeera 13.11)",
+     "models": {
+      "mine": 0.15,
+      "fable": 0.5,
+      "base": 0.3
+     }
+    },
+    {
+     "date": "2026-11-18",
+     "p": 0.38,
+     "reason": "18.11: Iran army hit Kuwait base and IRGC Bahrain again; NBC: near-daily US-Iran strikes incl. Iranian targeting of US Navy vessels, most undisclosed; acknowledgement by CENTCOM/Iran still needed",
      "models": {
       "mine": 0.15,
       "fable": 0.5,
@@ -4192,7 +4202,7 @@
    "index": null,
    "opened": "2026-11-14",
    "status": "open",
-   "p": 0.55,
+   "p": 0.47,
    "base_rate": 0.5,
    "method": "base: agreed large swaps executed within ~3 weeks about half the time; signals: Kushner says arrangements finalised, Zelensky 1000-1500 each; second: Fable blind",
    "history": [
@@ -4210,6 +4220,16 @@
      "date": "2026-11-15",
      "p": 0.55,
      "reason": "Zelensky 13-14.11: numbers narrowed to 1,200-1,300 each side after Witkoff/Kushner Moscow visit; Kremlin (Ushakov 12.11) supports, parameters being finalised; no date yet, exchanges this size took 2-4 weeks in 2025",
+     "models": {
+      "base": 0.5,
+      "signals": 0.55,
+      "second": 0.45
+     }
+    },
+    {
+     "date": "2026-11-18",
+     "p": 0.47,
+     "reason": "18.11: exchange agreed 11.11 still being coordinated (Kyiv Independent/Ukrinform: 'more than 1,000 people', final number not set); no date; 12 days left and the total may be under 1,000 per side",
      "models": {
       "base": 0.5,
       "signals": 0.55,
