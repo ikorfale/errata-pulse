@@ -71,8 +71,8 @@ def main():
     body += f"<h2 class='sec' id='how'>{L('Sources and rules', 'Источники и правила')}</h2><div class='prose'><p>{L('Official: status pages of about 25 payment, banking-infrastructure, crypto, cloud, communications and AI providers; Google Cloud, AWS and Azure status feeds; IODA country signals. News: hourly web monitors for bank and payment outages and for government and public-sector network failures worldwide, including Russian-language media. A news lead appears here only in the daily digest, after two independent sources, with the date of the event and of the publication. Russian services without public status pages (Gosuslugi, Sber, SBP) are covered through the news monitors.', 'Официальные: страницы статуса примерно 25 платёжных, банковских инфраструктурных, криптовалютных, облачных, коммуникационных и ИИ-сервисов; ленты статуса Google Cloud, AWS и Azure; сигналы IODA по странам. Новости: ежечасные веб-мониторы сбоев банков и платёжных систем и отказов госсетей и госсервисов по всему миру, включая русскоязычные СМИ. Новостной сигнал попадает сюда только в сводку дня, после двух независимых источников, с датой события и публикации. Российские сервисы без публичных страниц статуса (Госуслуги, Сбер, СБП) отслеживаются через новостные мониторы.')}</p><p>{L('Large systemic outages also feed the institutions and economy components of the', 'Крупные системные сбои также учитываются в компонентах «институты» и «экономика»')} <a href='/'>{L('Chaos Pulse index', 'индекса Пульса хаоса')}</a>. <a href='/data/outages/latest.json'>JSON</a>.</p></div>"
     if len(digs) > 1:
         body += f"<h2 class='sec' id='archive'>{L('Earlier digests', 'Прошлые сводки')}</h2><ul class='arch'>" + ''.join(
-            f"<li><a href='/outages/{os.path.basename(g)[:10]}/'><span><strong>{B.esc(B.fmt_date(os.path.basename(g)[:10]))}</strong></span></a></li>" for g in reversed(digs[:-1])) + '</ul>'
-    body += f"<p class='meta'><a href='/outages/feed.xml'>RSS</a> · {L('one item per daily digest', 'одна запись на сводку дня')}</p>"
+            f"<li><a href='{i18n.lpath("/outages/" + os.path.basename(g)[:10] + "/")}'><span><strong>{B.esc(B.fmt_date(os.path.basename(g)[:10]))}</strong></span></a></li>" for g in reversed(digs[:-1])) + '</ul>'
+    body += f"<p class='meta'><a href='{i18n.lpath("/outages/feed.xml")}'>RSS</a> · {L('one item per daily digest', 'одна запись на сводку дня')}</p>"
     B.page('/outages/', title, desc, body, 'CollectionPage', active='outages', lastmod=(d.get('checked') or '')[:10] or None)
     # 18.11 (#769): one page per daily digest and an RSS feed of digests
     items = ''
@@ -80,7 +80,7 @@ def main():
         day = os.path.basename(g)[:10]; lf, native = B.localized(g); html = B.md(open(lf).read())
         t2 = L(f'Outage Watch digest, {day}', f'Сводка сбоев, {day}')
         pb = f"<h1 class='ptitle'>{B.esc(t2)}</h1>" + ('' if native else f"<p class='note'>{B.t('This page is available in English only for now.')}</p>")
-        pb += f"<div class='prose'>{html}</div><p class='meta'><a href='/outages/'>{L('← Outage Watch', '← Сбои')}</a></p>"
+        pb += f"<div class='prose'>{html}</div><p class='meta'><a href='{i18n.lpath("/outages/")}'>{L('← Outage Watch', '← Сбои')}</a></p>"
         B.page(f'/outages/{day}/', t2, L(f'Verified outages of banks, payment systems, government networks and clouds on {day}, with sources.', f'Проверенные сбои банков, платёжных систем, госсетей и облаков за {day}, с источниками.'), pb, 'Article', active='outages', lastmod=day)
         url = B.BASE + i18n.lpath(f'/outages/{day}/')
         items = f"<item><title>{B.esc(t2)}</title><link>{url}</link><guid>{url}</guid><pubDate>{__import__('email.utils').utils.format_datetime(__import__('datetime').datetime.fromisoformat(day + 'T23:30:00+00:00'))}</pubDate><description>{B.esc(html)}</description></item>" + items
