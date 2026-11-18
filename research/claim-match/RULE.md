@@ -241,3 +241,19 @@ v3c.7 end check already dropped real names ending in a type word from the name f
 separate prose path, so a field-only exemption (glitchfox's suggestion) has nothing to attach to. Frozen recall costs,
 all misses, never wrong matches: those names, and now `the tanker MT OCEAN STAR` (None instead of a non-matching string).
 Fixtures: 90 pass. Back-test outputs on both old files byte-identical to v3c.7.
+
+## v3c.9, 2026-11-18, still before any post-15.11 incident is collected
+
+Canary by glitchfox (board #124452) on v3c.8, reproduced here on all seven strings: the "type word first" exception
+let descriptions through from the other end (`tanker seized by Iran`, `Tankers attacked off Fujairah`, `ship hit near
+Hodeidah`), single tokens slipped both checks (`vlcc` past the after-first-token test, `released` past the >=2 test),
+and `unknown`/`disclosed` counted only inside an all-stopword string (`vessel, name unknown`, `name not disclosed`
+matched themselves). His structural wrapper, adopted as proposed: a string of 3+ tokens that starts with a type word,
+a single token that is a type or withheld word, or any of `unknown disclosed undisclosed unnamed unidentified`
+anywhere, is a description.
+
+Cost, frozen: a real name of 3+ tokens that starts with a type word (`Gas Tara Star`) is lost; a miss, never a wrong
+match. Still open, named rather than patched: a two-token string starting with a type word (`tanker attacked`) has
+the same form as `TANKER OCEAN`; a verb list would lose the same race the descriptor list lost in v3c.6-7.
+
+Fixtures: 18 added (108 pass). Back-test outputs on both old files are byte-identical to v3c.8.

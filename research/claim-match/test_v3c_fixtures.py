@@ -40,4 +40,10 @@ for ph in ('US-sanctioned tankers', 'two Iranian tankers', 'Liberian tanker hit'
 assert not m.id_agree(m.name_given({'ukmto_name_given': 'two Iranian tankers'}), m.ident({'ship': 'Two Iranian Tankers'}))
 for cost in ('Tara Gas', 'Star Bulk', 'Ocean Container', 'the tanker MT OCEAN STAR'): assert m.norm_name(cost) is None, cost  # frozen: lost from the name field too
 for keep, want in (('Gas Tara', 'gas tara'), ('Front Crude', 'front crude'), ('TANKER OCEAN', 'tanker ocean'), ('LIBERIAN STAR', 'liberian star')): assert m.norm_name(keep) == want, keep
-print(f'{len(NAMES) + len(IMOS) + 2 + 9 + 10 + 14 + 8 + 18 + 15} fixtures ok')
+# v3c.9 (#124452)
+for ph in ('tanker seized by Iran', 'Tankers attacked off Fujairah', 'ship hit near Hodeidah', 'vessel, name unknown', 'name not disclosed', 'vlcc', 'released'): assert m.norm_name(ph) is None, ph
+assert not m.id_agree(m.name_given({'ukmto_name_given': 'vessel, name unknown'}), m.ident({'ship': 'Vessel, Name Unknown'}))
+assert m.norm_name('Gas Tara Star') is None  # frozen recall cost
+for keep, want in (('TANKER OCEAN', 'tanker ocean'), ('Gas Tara', 'gas tara'), ('OCEAN STAR', 'ocean star'), ('MY TUTOR', 'my tutor'), ('LIBERIAN STAR', 'liberian star'), ('Selene', 'selene'), ('Bulk Shanghai', 'bulk shanghai'), ('Seaways Shipping', 'seaways shipping')): assert m.norm_name(keep) == want, keep
+assert m.norm_name('tanker attacked') == 'tanker attacked'  # open hole, frozen as known: indistinguishable by form from TANKER OCEAN
+print(f'{len(NAMES) + len(IMOS) + 2 + 9 + 10 + 14 + 8 + 18 + 15 + 18} fixtures ok')

@@ -82,6 +82,14 @@ def norm_name(x):
     # the first token ('Tara Gas', 'Star Bulk') were already lost in v3c.7, from the name field too; a miss, never a wrong match.
     if len(w) >= 2 and (any(x in TYPE_ANY for x in w[1:]) or any(x in WITHHELD for x in w)):
         return None
+    # v3c.9 (2026-11-18, before any post-15.11 incident; canary by glitchfox #124452): the 'type word first' exception
+    # opened the other end ('tanker seized by Iran', 'ship hit near Hodeidah'), single tokens slipped both checks
+    # ('vlcc', 'released'), and 'unknown'/'disclosed' outside an all-stopword string kept 'vessel, name unknown'.
+    # Three structural cuts: >=3 tokens starting with a type word; one token that is a type or withheld word; any
+    # not-a-name word anywhere. Costs, frozen: a real 3+ token name starting with a type word ('Gas Tara Star') is lost.
+    # Still open, by design: two tokens starting with a type word ('tanker attacked') look exactly like 'TANKER OCEAN'.
+    if (len(w) >= 3 and w[0] in TYPE_ANY) or (len(w) == 1 and w[0] in TYPE_ANY | WITHHELD) or any(x in NOT_A_NAME for x in w):
+        return None
     return t
 
 
@@ -94,6 +102,7 @@ DESCRIPTORS = set('flagged owned linked operated managed registered chartered bo
 TYPE_END = set('tanker carrier vessel ship'.split()) | {w for k, _ in CLASSES for w in re.sub(r'[^0-9a-z]+', ' ', k).split()}
 TYPE_ANY = TYPE_END | {x + 's' for x in TYPE_END} | set('vlcc vlccs ulcc ulccs suezmax aframax panamax handysize'.split())
 WITHHELD = set('withheld released redacted'.split())
+NOT_A_NAME = set('unknown disclosed undisclosed unnamed unidentified'.split())
 PLACEHOLDERS = {'', 'n a', 'na', 'unknown', 'not named', 'unnamed', 'tbc', 'tba', 'none', 'nil', 'not known', 'vessel', 'merchant vessel'}
 
 
