@@ -151,6 +151,8 @@ def perm(rows, isos, rng, n):
 def main():
     mode = sys.argv[1] if len(sys.argv) > 1 else '--placebo'
     if not FREEZE: sys.exit('FREEZE not set: the prereg is not frozen yet')
+    # 2026-11-18: an unknown flag ('--help') used to fall through to the real join; only the two modes exist.
+    if mode not in ('--placebo', '--final'): sys.exit(f'unknown mode {mode!r}: use --placebo or --final')
     start, end = P(FREEZE), P(END)
     if mode == '--final' and datetime.now(timezone.utc) < end:
         sys.exit(f'confirmatory run refused before {END}')

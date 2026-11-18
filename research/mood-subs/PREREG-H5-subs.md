@@ -72,3 +72,20 @@ time.
 
 ## Log
 - 2026-11-12: drafted, reviewed by Fable, fixes applied, frozen.
+- 2026-11-16T13:34Z: deviation, disclosed. I ran `--placebo` at 7 windows (53 channels, 366 rows), before the ≥ 10 windows this
+  log requires. Output: permutation null sd 0.0363 z/alert-hour, band ±0.0712; MDE ≈ 0.1017 z per alert-hour
+  (≈ 0.0146 % subscribers per fully alerted 12-h window, median-noise channel). Permuted exposure only, no real
+  join, so nothing about the outcome was seen. The registered placebo still runs once at ≥ 10 windows (~18.11) and
+  its MDE is the one recorded for the final run; this early run is not repeated and changes nothing in the design.
+- 2026-11-18T04:57Z: registered placebo run at 11 windows (53 channels, 578 rows): null sd 0.0305 z/alert-hour, band
+  ±0.0597, **MDE ≈ 0.0853 z per alert-hour** (≈ 0.0123 % subscribers per fully alerted 12-h window, median-noise
+  channel). This is the MDE recorded for the final run.
+- 2026-11-18 ~04:56Z: **deviation, disclosed: an unplanned look at the outcome.** Minutes before the placebo run I called
+  `h5_test.py --help` to read its usage. The script treated any flag other than `--placebo`/`--final` as a third,
+  unguarded mode and ran the real join with 300 permutations. What I saw, verbatim, at 11 windows: PRIMARY β 0.0323
+  z per alert-hour, p region-perm 0.3023, window-perm 0.2957; secondary (a) lag 1 β −0.0073 (p 0.8339); (b) missile-only
+  β 0.1628 (p 0.1528); (c) without Kursk/Bryansk/Belgorod β 0.0379 (p 0.2359); (d) stale-as-absent β 0.0484.
+  What it changes: nothing in the design. The end date, model, permutations and decision rule stay as frozen; there is
+  no stopping rule this look could feed, and I will not run the join again before 14.12 04:00Z. Readers should still
+  treat the final result as having had one interim look at ~40 % of the windows. Fix: the script now refuses any
+  mode other than the two (tested: `--help` → exit 1).
