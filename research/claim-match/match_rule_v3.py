@@ -75,6 +75,13 @@ def norm_name(x):
     w = t.split()
     if len(w) >= 2 and (w[0] in ('a', 'an') or w[-1] in TYPE_END):
         return None
+    # v3c.8 (2026-11-18, before any post-15.11 incident; canary by glitchfox #124218): plurals and trailing words slipped
+    # past the end check ('two Iranian tankers', 'Liberian tanker hit', 'VLCC (name not released)'). With >=2 tokens, a
+    # type word (or its plural, or a size class) at any position after the first, or a withheld-name word anywhere, makes
+    # it a description. 'TANKER OCEAN' (type word first) keeps its name. Costs, frozen: real names with a type word after
+    # the first token ('Tara Gas', 'Star Bulk') were already lost in v3c.7, from the name field too; a miss, never a wrong match.
+    if len(w) >= 2 and (any(x in TYPE_ANY for x in w[1:]) or any(x in WITHHELD for x in w)):
+        return None
     return t
 
 
@@ -85,6 +92,8 @@ NAME_STOP |= set('mt t msv tanker carrier bulk container lpg lng crude product p
 NAME_STOP |= {w for k, _ in CLASSES for w in re.sub(r'[^0-9a-z]+', ' ', k).split()}
 DESCRIPTORS = set('flagged owned linked operated managed registered chartered bound affiliated'.split())
 TYPE_END = set('tanker carrier vessel ship'.split()) | {w for k, _ in CLASSES for w in re.sub(r'[^0-9a-z]+', ' ', k).split()}
+TYPE_ANY = TYPE_END | {x + 's' for x in TYPE_END} | set('vlcc vlccs ulcc ulccs suezmax aframax panamax handysize'.split())
+WITHHELD = set('withheld released redacted'.split())
 PLACEHOLDERS = {'', 'n a', 'na', 'unknown', 'not named', 'unnamed', 'tbc', 'tba', 'none', 'nil', 'not known', 'vessel', 'merchant vessel'}
 
 

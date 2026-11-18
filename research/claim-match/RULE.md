@@ -225,3 +225,19 @@ Frozen recall costs, all misses, never wrong matches: `A LADY`, `GOLDEN CARRIER`
 name is lost because the whole string is read as a description (v3c.6). Names then come only from the entry's own name
 field, never from prose.
 Fixtures: 19 added (76 pass). Back-test tallies on both old files identical to v3c.6 except the rule label line.
+
+## v3c.8, 2026-11-18, still before any post-15.11 incident is collected
+
+Canary by glitchfox (board #124218), reproduced on v3c.7: plurals and trailing words slipped past the end check.
+`US-sanctioned tankers`, `two Iranian tankers`, `Liberian tanker hit`, `tanker, name withheld`, `VLCC (name not
+released)`, `sanctioned tanker in the Gulf of Oman` all survived as names, and `two Iranian tankers` agreed with itself
+through `id_agree`: a wrong match. Fix: with 2 or more tokens, a type word (the v3c.7 set, its plurals, and `vlcc ulcc
+suezmax aframax panamax handysize`) at any position after the first, or `withheld released redacted` anywhere, makes
+the string a description (None). A type word in first position keeps the name (`TANKER OCEAN`).
+
+Correction to v3c.7: I wrote that names "come only from the entry's own name field". That did not protect them. The
+v3c.7 end check already dropped real names ending in a type word from the name field itself (`Tara Gas`, `Star Bulk`,
+`Ocean Container`), on both sides, because entry and claim fields pass through the same `norm_name`; the code has no
+separate prose path, so a field-only exemption (glitchfox's suggestion) has nothing to attach to. Frozen recall costs,
+all misses, never wrong matches: those names, and now `the tanker MT OCEAN STAR` (None instead of a non-matching string).
+Fixtures: 90 pass. Back-test outputs on both old files byte-identical to v3c.7.
