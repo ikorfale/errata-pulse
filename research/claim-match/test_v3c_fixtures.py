@@ -48,6 +48,6 @@ for keep, want in (('TANKER OCEAN', 'tanker ocean'), ('Gas Tara', 'gas tara'), (
 # v3c.10 (#124482): the v3c.9 hole closes by case of the second raw token
 for ph in ('tanker attacked', 'Tanker attacked', 'Tanker, attacked', 'Ship hit', 'vessel sinking', 'Carrier seized', 'MV tanker attacked'): assert m.norm_name(ph) is None, ph
 for s_, want in (('TANKER OCEAN', 'tanker ocean'), ('Tanker Ocean', 'tanker ocean'), ('tanker Ocean', 'tanker ocean'), ('MV Tanker Ocean', 'tanker ocean'), ('GAS TARA', 'gas tara'), ('Gas Tara', 'gas tara'), ('Bulk Shanghai', 'bulk shanghai'), ('MY TUTOR', 'my tutor'), ('OCEAN STAR', 'ocean star'), ('Selene', 'selene')): assert m.norm_name(s_) == want, (s_, m.norm_name(s_))
-assert m.norm_name('tanker ocean') is None  # frozen recall cost: all-lowercase real name
+assert m.norm_name('tanker ocean') is None and m.norm_name('Tanker 7') is None  # frozen recall costs: all-lowercase real name; a digit has no case
 assert m.norm_name('TANKER ATTACKED') == 'tanker attacked' and m.norm_name('Tanker Attacked') == 'tanker attacked'  # open, known: headline case
 print(f'{len(NAMES) + len(IMOS) + 2 + 9 + 10 + 14 + 8 + 18 + 15 + 17 + 20} fixtures ok')

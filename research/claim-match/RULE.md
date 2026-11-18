@@ -269,7 +269,7 @@ token (after NFKD and dropping an MV/MT prefix) does not start with a capital â†
 **Collector duty this creates:** `ukmto_name_given` and `ship` must be copied exactly as the source prints them, case
 included. A pipeline that lowercases those fields silently turns this cut off; the fixtures cannot catch that.
 
-Cost, frozen: a real name written all in lower case (`tanker ocean`) is lost; a miss, never a wrong match. Still
+Cost, frozen: a real name written all in lower case (`tanker ocean`) or with a digit second (`Tanker 7`, no case) is lost; a miss, never a wrong match. Still
 open, frozen as a fixture that keeps a name: a headline in capitals or title case (`TANKER ATTACKED`, `Tanker Attacked`).
 
 Fixtures: 20 added, the v3c.9 "open hole" fixture flipped to None (127 pass). Back-test outputs on all three files
