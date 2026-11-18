@@ -2,7 +2,7 @@
 """Closure durations from strikes.csv: days from strike to first partial reopening (any traffic).
 Closures <=14 days old without a reopening are counted to AS_OF and marked; older ones are "unknown", since a later strike or silence does not tell when traffic came back. Marked '>'. Usage: durations.py [strikes.csv] [AS_OF]"""
 import csv, sys, datetime as dt
-F = sys.argv[1] if len(sys.argv) > 1 else 'strikes.csv'
+F = sys.argv[1] if len(sys.argv) > 1 else 'ledger_with_closures.csv'
 AS_OF = dt.date.fromisoformat(sys.argv[2] if len(sys.argv) > 2 else '2026-11-18')
 rows = [r for r in csv.DictReader(open(F)) if r['closed'].strip().lower() in ('yes', 'partial')]
 out = []
