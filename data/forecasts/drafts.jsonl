@@ -44,3 +44,4 @@
 {"ts": "2026-11-15T00:03:54+00:00", "action": "asked", "id": "d21", "question": "50", "criteria_sha": "8a90fd9fdbaa63e0"}
 {"ts": "2026-11-15T00:03:55+00:00", "action": "asked", "id": "d22", "question": "51", "criteria_sha": "9828f96958b577f6"}
 {"ts": "2026-11-15T00:03:56+00:00", "action": "asked", "id": "d23", "question": "52", "criteria_sha": "9a98cf34ae16458f"}
+{"ts": "2026-11-18T01:33:47+00:00", "action": "draft", "id": "d24", "title": "Will Russia's bill No. 1322096-8 (KoAP fines for ignoring governors' or regional operational HQ decisions) be signed into law by 31 December 2026?", "criteria": "YES if the President signs the federal law originating from bill 1322096-8 on or before 31.12.2026, per kremlin.ru, pravo.gov.ru or the Duma database (sozd). NO otherwise.", "criteria_sha": "7f676044b7ac412b"}
