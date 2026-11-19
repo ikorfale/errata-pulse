@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-19T22:40:06.638075+00:00",
+ "generated": "2026-11-19T23:21:35.849815+00:00",
  "counts": {
   "open": 37,
   "resolved": 19,
@@ -82,13 +82,13 @@
   }
  ],
  "models": {
-  "base": 0.2697,
-  "threshold": 0.0228,
-  "second": 0.1127,
-  "fable": 0.3145,
-  "signals": 0.196,
   "mine": 0.2984,
-  "trend": 0.0978
+  "signals": 0.196,
+  "fable": 0.3145,
+  "second": 0.1127,
+  "trend": 0.0978,
+  "threshold": 0.0228,
+  "base": 0.2697
  },
  "questions": [
   {
@@ -600,7 +600,7 @@
    "index": "pulse",
    "opened": "2026-10-09",
    "status": "open",
-   "p": 0.03,
+   "p": 0.01,
    "base_rate": 0.04,
    "method": "base: one comparable Russian commitment (the 30-day energy moratorium of March 2025) in 4.6 years; Poisson +0.5 smoothing over 42 days. signals: LR 1.8 Zelensky's public offer of a reciprocal energy truce (22 Sep) and Trump's claim of agreement; LR 0.7 the strike campaign is widening, not narrowing (Omsk, Salavat refineries 8 Oct; Yandex data centres 8-9 Oct); LR 1.2 US-led talks under way.",
    "history": [
@@ -653,6 +653,15 @@
      "date": "2026-11-11",
      "p": 0.03,
      "reason": "Abu Dhabi round ended 11.11 without any energy-strike moratorium; Russia struck 8 Ukrainian regions the same nights; Lavrov rejected an immediate ceasefire. Next step is the Witkoff/Kushner visit to Putin on 12.11.",
+     "models": {
+      "base": 0.04,
+      "signals": 0.05
+     }
+    },
+    {
+     "date": "2026-11-19",
+     "p": 0.01,
+     "reason": "19.11 Putin after Shenzhen: discussed a partial ceasefire with the Security Council but 'after the strikes on the Crimean bridge we will not negotiate' (TASS via CBS 19.11); one day left",
      "models": {
       "base": 0.04,
       "signals": 0.05
@@ -3923,7 +3932,7 @@
    "index": null,
    "opened": "2026-10-31",
    "status": "open",
-   "p": 0.176,
+   "p": 0.15,
    "base_rate": 0.15,
    "method": "mine written before Fable (tmp/my-fc-1031.txt 23:35Z); Fable independent from evidence only, never saw my number; ensemble = log-odds mean with base rate",
    "history": [
@@ -3931,6 +3940,16 @@
      "date": "2026-10-31",
      "p": 0.176,
      "reason": "Rubio 31.10: interest, not momentum; Lavrov unchanged; March 2025 deal stalled on Russian conditions",
+     "models": {
+      "base": 0.15,
+      "mine": 0.18,
+      "fable": 0.2
+     }
+    },
+    {
+     "date": "2026-11-19",
+     "p": 0.15,
+     "reason": "19.11 Berlin coalition called for a Black Sea ceasefire; same day Putin ruled out partial-ceasefire deals after the bridge strikes",
      "models": {
       "base": 0.15,
       "mine": 0.18,
@@ -4286,7 +4305,7 @@
    "index": null,
    "opened": "2026-11-14",
    "status": "open",
-   "p": 0.32,
+   "p": 0.28,
    "base_rate": 0.1,
    "method": "base: no same-session round with Europeans and Russia since 2022; signals: Kushner says next week, EU named EU+5, against: Ushakov condition and Russian refusal on ceasefire; second: Fable blind",
    "history": [
@@ -4314,6 +4333,16 @@
      "date": "2026-11-17",
      "p": 0.32,
      "reason": "Kremlin aide Ushakov (Reuters/Kyiv Post 16-17.11): Russia has not agreed to European participation in the next round; the 19.11 Berlin meeting is a Coalition of the Willing summit without Russia (does not count). Europe joined the US-Ukraine online talks in full on 16.11, so the push continues; 23 days left.",
+     "models": {
+      "base": 0.1,
+      "signals": 0.35,
+      "second": 0.35
+     }
+    },
+    {
+     "date": "2026-11-19",
+     "p": 0.28,
+     "reason": "19.11 Putin: no negotiations after the Crimean bridge strikes, promises retaliation; Berlin coalition backs direct talks but no date (bundesregierung.de 19.11)",
      "models": {
       "base": 0.1,
       "signals": 0.35,
@@ -4388,7 +4417,7 @@
    "index": null,
    "opened": "2026-11-15",
    "status": "open",
-   "p": 0.03,
+   "p": 0.02,
    "base_rate": 0.039,
    "method": "base: 1 such agreement (Mar 2025) in 4.7 years, 46 days (calc rate); signals: this week near-daily energy strikes both ways (Naftogaz Poltava, Samara, Volgograd); trend: talks continue. Correlated with #5.",
    "history": [
@@ -4396,6 +4425,16 @@
      "date": "2026-11-15",
      "p": 0.03,
      "reason": "Energy strikes intensified this week; an agreement plus 7 clean days in 6 weeks is unlikely. Born from a Manifold title, price not seen.",
+     "models": {
+      "base": 0.039,
+      "signals": 0.025,
+      "trend": 0.03
+     }
+    },
+    {
+     "date": "2026-11-19",
+     "p": 0.02,
+     "reason": "19.11 Putin dropped partial ceasefire talks after the Crimean bridge strikes (TASS via CBS)",
      "models": {
       "base": 0.039,
       "signals": 0.025,
