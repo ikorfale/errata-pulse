@@ -1,0 +1,10 @@
+RU: baseline weeks 39, mean 0.67, variance 0.99, var/mean 1.49 (1 = Poisson); max week 4
+   cutoff 2026-09-01 (week of 2026-08-31): late 12 wk, ratio 4.61, week-permutation P = 0.000
+   cutoff 2026-09-15 (week of 2026-09-14): late 10 wk, ratio 3.27, week-permutation P = 0.001
+   cutoff 2026-09-28 (week of 2026-09-28): late 8 wk, ratio 4.31, week-permutation P = 0.000
+   cutoff 2026-10-06 (week of 2026-10-05): late 7 wk, ratio 3.62, week-permutation P = 0.000
+UA: baseline weeks 39, mean 1.36, variance 6.85, var/mean 5.04 (1 = Poisson); max week 11
+   cutoff 2026-09-01 (week of 2026-08-31): late 12 wk, ratio 1.01, week-permutation P = 0.495
+   cutoff 2026-09-15 (week of 2026-09-14): late 10 wk, ratio 1.19, week-permutation P = 0.384
+   cutoff 2026-09-28 (week of 2026-09-28): late 8 wk, ratio 1.56, week-permutation P = 0.239
+   cutoff 2026-10-06 (week of 2026-10-05): late 7 wk, ratio 1.43, week-permutation P = 0.298
