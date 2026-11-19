@@ -1,0 +1,10 @@
+Russian strikes, cutoff week of 2026-09-28, 47 weeks, 20000 draws
+all rows: rows 49 (early 26 in 39 wk, late 23 in 8 wk), ratio 4.31, permutation P = 0.0000, bootstrap 95% [2.61, 7.92]
+(a) without Kyiv city: rows 40 (early 26 in 39 wk, late 14 in 8 wk), ratio 2.62, permutation P = 0.0160, bootstrap 95% [1.29, 5.25]
+(b) without Kyiv, Zaporizhzhia, Dnipro city: rows 29 (early 23 in 39 wk, late 6 in 8 wk), ratio 1.27, permutation P = 0.3835, bootstrap 95% [0.27, 3.25]
+(c) claimed rows only: rows 37 (early 25 in 39 wk, late 12 in 8 wk), ratio 2.34, permutation P = 0.0348, bootstrap 95% [1.22, 4.60]
+Sources per row in the blind recount (URLs):
+   Kyiv: rows 9, mean 1.67, max 2, rows with 3+ 0
+   Zaporizhzhia: rows 9, mean 1.78, max 3, rows with 3+ 2
+   Dnipro: rows 2, mean 2.00, max 3, rows with 3+ 1
+   other: rows 29, mean 1.34, max 4, rows with 3+ 1
