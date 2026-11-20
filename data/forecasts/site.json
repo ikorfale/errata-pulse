@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-20T22:40:57.942293+00:00",
+ "generated": "2026-11-20T23:31:04.609629+00:00",
  "counts": {
   "open": 37,
   "resolved": 19,
@@ -82,13 +82,13 @@
   }
  ],
  "models": {
-  "signals": 0.196,
-  "fable": 0.3145,
-  "second": 0.1127,
-  "trend": 0.0978,
-  "base": 0.2697,
   "mine": 0.2984,
-  "threshold": 0.0228
+  "fable": 0.3145,
+  "base": 0.2697,
+  "trend": 0.0978,
+  "second": 0.1127,
+  "threshold": 0.0228,
+  "signals": 0.196
  },
  "questions": [
   {
@@ -903,7 +903,7 @@
    "index": "pulse",
    "opened": "2026-10-09",
    "status": "open",
-   "p": 0.28,
+   "p": 0.42,
    "base_rate": 0.16,
    "method": "base: Article 4 requests since Feb 2022 counted as 3 in 4.7 years (Feb 2022; Poland Sep 2025; Estonia Sep 2025); Poisson +0.5 smoothing over 83 days. Checked: NATO's own list ends with Estonia, 23 Sep 2025; none in 2026 so far. signals: LR 1.5 pressure on NATO's eastern flank moved from rhetoric to incidents (Latvia 6 Oct, Lithuania moving troops towards Kaliningrad, Danish PET warnings); LR 1.2 the military component of the Chaos Pulse at 71; LR 0.8 the 2026 incidents so far (German grid sabotage and airport drones, Aug-Sep) were handled bilaterally, without Article 4, so the bar for a request is high.",
    "history": [
@@ -950,6 +950,16 @@
      "models": {
       "base": 0.12,
       "signals": 0.3
+     }
+    },
+    {
+     "date": "2026-11-20",
+     "p": 0.42,
+     "reason": "20.11: Kh-101 and two more Russian objects fell in Poland during the mass attack, one exploded; Tusk: 'intentional provocation'; defence minister will ask Rutte (Warsaw 21.11) for Eastern Sentry assets and an extraordinary allied meeting; no Article 4 request yet, and the July 2026 Kh-101 crash was handled without one. Independent second model (Fable, evidence only): 0.50",
+     "models": {
+      "base": 0.16,
+      "signals": 0.45,
+      "second": 0.5
      }
     }
    ],
@@ -1543,7 +1553,7 @@
    "index": "pulse",
    "opened": "2026-10-09",
    "status": "open",
-   "p": 0.6,
+   "p": 0.66,
    "base_rate": 0.25,
    "method": "trend: lognormal, zero drift, from $125.44, annual volatility 0.75, 83 days. base: judgmental 25%: a 20% fall needs a Hormuz reopening or demand destruction; in 2022 Brent fell from $120+ to under $100 within ~3 months of its peak. signals: LR 0.8 no reopening deal in sight, attacks continue; LR 1.2 demand destruction and IEA stock releases (~100 mb) plus Saudi East-West pipeline at 5.8 mb/d.",
    "history": [
@@ -1591,6 +1601,16 @@
      "date": "2026-11-16",
      "p": 0.6,
      "reason": "Brent front-month fell ~3.5% to ~92.4 on 16.11 (WSJ) despite confirmed tanker strikes; IEA Q4 surplus 1.7 mb/d and Hormuz exports near pre-war (Reuters 16.11).",
+     "models": {
+      "base": 0.3,
+      "signals": 0.55,
+      "second": 0.58
+     }
+    },
+    {
+     "date": "2026-11-20",
+     "p": 0.66,
+     "reason": "20.11: Brent ~$92, third weekly decline, IEA sees a ~2 mb/d surplus this quarter, US energy secretary says Hormuz flows at record; upside risks (Iranian convoy clash, Houthi strikes on Saudi ports) remain",
      "models": {
       "base": 0.3,
       "signals": 0.55,
@@ -3790,7 +3810,7 @@
    "index": "pulse",
    "opened": "2026-10-24",
    "status": "open",
-   "p": 0.38,
+   "p": 0.42,
    "base_rate": 0.3,
    "method": "mine written before Fable (tmp log 23:18Z); Fable independent from evidence only, never saw my number; ensemble = log-odds mean with base rate",
    "history": [
@@ -3818,6 +3838,16 @@
      "date": "2026-11-18",
      "p": 0.38,
      "reason": "18.11: Iran army hit Kuwait base and IRGC Bahrain again; NBC: near-daily US-Iran strikes incl. Iranian targeting of US Navy vessels, most undisclosed; acknowledgement by CENTCOM/Iran still needed",
+     "models": {
+      "mine": 0.15,
+      "fable": 0.5,
+      "base": 0.3
+     }
+    },
+    {
+     "date": "2026-11-20",
+     "p": 0.42,
+     "reason": "18-20.11: CENTCOM extended the blockade to ship-to-ship transfers; Araghchi says the blockade must be broken; IRGC-linked media, MPs and Friday prayer leaders call for a tanker convoy with threats to Gulf oil if fired on; a convoy intercepted by force is the likeliest path to Iranian fire on a US ship, but no official convoy decision yet",
      "models": {
       "mine": 0.15,
       "fable": 0.5,
@@ -4140,7 +4170,7 @@
    "index": "pulse",
    "opened": "2026-11-07",
    "status": "open",
-   "p": 0.2,
+   "p": 0.45,
    "base_rate": 0.25,
    "method": "base: lognormal threshold from 3.48, annual vol 0.45, 54 days: end-above 0.19, touch ~0.3; signals: CCC OAS ~13% (99th pct since 2023), AI credit stress (CoreWeave >16%); trend: oil -13% and EM spreads tightening",
    "history": [
@@ -4152,6 +4182,17 @@
       "base": 0.25,
       "signals": 0.3,
       "trend": 0.18
+     }
+    },
+    {
+     "date": "2026-11-20",
+     "p": 0.45,
+     "reason": "20.11: HY OAS 3.52 on 19.11 after a week of widening; S&P 500 −3.7% into correction, VIX closed 35.89, Nvidia −14%; from a likely ~3.75 print the lognormal touch probability of 4.00 over 41 days is ~0.5–0.6; Fed hike pricing adds; independent second model (Fable, evidence only): 0.62",
+     "models": {
+      "base": 0.3,
+      "signals": 0.45,
+      "trend": 0.4,
+      "second": 0.62
      }
     }
    ],
@@ -4216,7 +4257,7 @@
    "index": "pulse",
    "opened": "2026-11-07",
    "status": "open",
-   "p": 0.22,
+   "p": 0.24,
    "base_rate": 0.1,
    "method": "base: CENTCOM and UKMTO have not confirmed any IRGC mine claim in recent weeks; signals: IRGC claims mine hits almost daily 01-07.11; trend: UKMTO incidents are projectiles/limpets, not mines",
    "history": [
@@ -4244,6 +4285,16 @@
      "date": "2026-11-14",
      "p": 0.22,
      "reason": "14.11: Iran (IRGC and regular navy) claims ~7 mine strikes in 24 h, none named; UKMTO/JMIC silent. More attempts raise odds of one verifiable case; no confirmation yet.",
+     "models": {
+      "base": 0.1,
+      "signals": 0.2,
+      "trend": 0.12
+     }
+    },
+    {
+     "date": "2026-11-20",
+     "p": 0.24,
+     "reason": "20.11: IRGC says the tanker hit 8 NM north of Khasab 'hit a mine'; UKMTO 214-26 says unknown projectile on the port bow; neither UKMTO nor JMIC has confirmed a mine; slight rise because mine claims now come with specific incidents",
      "models": {
       "base": 0.1,
       "signals": 0.2,
@@ -4293,7 +4344,7 @@
    "index": null,
    "opened": "2026-11-14",
    "status": "open",
-   "p": 0.47,
+   "p": 0.52,
    "base_rate": 0.5,
    "method": "base: agreed large swaps executed within ~3 weeks about half the time; signals: Kushner says arrangements finalised, Zelensky 1000-1500 each; second: Fable blind",
    "history": [
@@ -4326,6 +4377,16 @@
       "signals": 0.55,
       "second": 0.45
      }
+    },
+    {
+     "date": "2026-11-20",
+     "p": 0.52,
+     "reason": "19-20.11: Peskov says the exchange is 'in the final stage of coordination', services checking lists; still no date, and Putin's retaliation vow adds friction",
+     "models": {
+      "base": 0.5,
+      "signals": 0.55,
+      "second": 0.45
+     }
     }
    ],
    "crowd": [],
@@ -4341,7 +4402,7 @@
    "index": null,
    "opened": "2026-11-14",
    "status": "open",
-   "p": 0.28,
+   "p": 0.3,
    "base_rate": 0.1,
    "method": "base: no same-session round with Europeans and Russia since 2022; signals: Kushner says next week, EU named EU+5, against: Ushakov condition and Russian refusal on ceasefire; second: Fable blind",
    "history": [
@@ -4379,6 +4440,16 @@
      "date": "2026-11-19",
      "p": 0.28,
      "reason": "19.11 Putin: no negotiations after the Crimean bridge strikes, promises retaliation; Berlin coalition backs direct talks but no date (bundesregierung.de 19.11)",
+     "models": {
+      "base": 0.1,
+      "signals": 0.35,
+      "second": 0.35
+     }
+    },
+    {
+     "date": "2026-11-20",
+     "p": 0.3,
+     "reason": "20.11: Putin invited the E3 to Moscow and Ryabkov confirms the visit is being prepared, but says it is not part of the trilateral format and no next round is agreed; FT: US pushes for a deal by early January, which would need a round with Europeans; slight rise",
      "models": {
       "base": 0.1,
       "signals": 0.35,
