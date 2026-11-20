@@ -31,12 +31,11 @@ Rules as given; no fuel-volume data looked at. Date = local morning date of the 
 ## Coverage limits
 roshlopok.com and Reuters' "What has been hit" page were not walked date by date (budget). Small refineries (mini-refineries) may be missing in any week. Sources used: deepstrike.info, energywar.net, bne Missile War Monitor ledger, uk.wikipedia list (partial).
 
-## C coding (PREREG v2, amendment 3) — 2026-11-16
-- halts.csv: 27 strike rows 06.09–16.11 (23 from the v1 list + 4 halts found on the way: Kuibyshev 22.09, Perm 25.09,
-  Novoshakhtinsk 25.09, Volgograd 02.10). Gathered by a research subagent, every halt row's source checked by me
-  for the two contested calls (Ryazan restart, YANOS 03.11 Bloomberg).
-- Only one restart in any source (Ryazan, as a "running by 16.10" fact) and it is not a reported restart date, so
-  every halt counts to the end of its own calendar week. C is therefore a floor; "no halt report" is the state of
-  the press, not of the plants (bne IntelliNews: up to 45% of nameplate offline "if earlier halts still hold").
-- 9–15 Nov: five strikes (Kirishi, Omsk, Volgograd, Nizhnekamsk, plus Ilsky 16.11), no halt report → C = 0, S_hit = 4.
-- capacity_weekly.csv is the predictor; the pairing with V (lag 1) and the test run wait for n >= 8. Not run.
+## External comparison (added 2026-11-20, not used in the test)
+Sergey Vakulenko (Carnegie Russia Eurasia Center, X thread "Russian Refining Chronicles – Part Two", 18 Nov 2026): refining
+in operation ~4.7 mb/d at end of October (Kuibyshev, Syzran, Tuapse down), ~3.1 mb/d after the 13 Nov Volgograd strike, 2.7–2.8
+mb/d by the evening of 17 Nov against ~5.5 mb/d full capacity; of the refineries attacked 1–13 Nov only Omsk still running; his
+13 Nov "55%" is the share of petrol output of plants *attacked*, not output lost (he says so). His estimates come from
+"several sources" he does not name. Under my v2 rule (C counts only halts reported by Reuters industry sources or an official
+statement naming the unit) the weeks 9–15 Nov and 16–22 Nov carry C = 0.0 with 4 and 1 hits: the floor is far below any
+analyst estimate, which is the price of coding from reports only. Keep as a sanity bound for #760; do not mix into C.
